@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="en" datatype="plaintext" original="file.ext" target-language="sq">
+    <body>
+      <trans-unit id="1" approved="yes">
+        <source><![CDATA[menu.download]]></source>
+        <target><![CDATA[Shkarko]]></target>
+      </trans-unit>
+      <trans-unit id="2" approved="yes">
+        <source><![CDATA[menu.screenshots]]></source>
+        <target><![CDATA[Figurativ]]></target>
+      </trans-unit>
+      <trans-unit id="3" approved="yes">
+        <source><![CDATA[menu.donate]]></source>
+        <target><![CDATA[Ndihmo MediaInfo]]></target>
+      </trans-unit>
+      <trans-unit id="4" approved="yes">
+        <source><![CDATA[menu.support]]></source>
+        <target><![CDATA[Përkrahje]]></target>
+      </trans-unit>
+      <trans-unit id="5" approved="yes">
+        <source><![CDATA[menu.testimonials]]></source>
+        <target><![CDATA[Ata flasin për MediaInfo]]></target>
+      </trans-unit>
+      <trans-unit id="6" approved="yes">
+        <source><![CDATA[about.page.description]]></source>
+        <target><![CDATA[MediaInfo paraqet paraqet informacione teknike dhe etiketuese për skedat filmike dhe zanore. Ky softuer jepet falas (pa pagesë dhe me akses të lirë te kodi burimor)]]></target>
+      </trans-unit>
+      <trans-unit id="7" approved="yes">
+        <source><![CDATA[about.page.keywords]]></source>
+        <target><![CDATA[MediaInfo Media Info DLL informacion etikete kodek video audio titra kapitull AVI MKV OGM falas]]></target>
+      </trans-unit>
+      <trans-unit id="8" approved="yes">
+        <source><![CDATA[about.what.title]]></source>
+        <target><![CDATA[Ç'është MediaInfo?]]></target>
+      </trans-unit>
+      <trans-unit id="9" approved="yes">
+        <source><![CDATA[about.screenshot_img.title]]></source>
+        <target><![CDATA[Screenshot - Ndërfaqe kryesore]]></target>
+      </trans-unit>
+      <trans-unit id="10" approved="yes">
+        <source><![CDATA[about.screenshot_img.alt]]></source>
+        <target><![CDATA[Ndërfaqe kryesore]]></target>
+      </trans-unit>
+      <trans-unit id="11" approved="yes">
+        <source><![CDATA[about.what.content]]></source>
+        <target><![CDATA[<strong>MediaInfo</strong> paraqet informacione teknike dhe etiketuese për skedat filmike e zanore.<br/>     Ky softuer jepet falas (pa pagesë dhe me akses të lirë në kodin burimor: licenca <a href="%licenseRoute%">BSD</a>)]]></target>
+      </trans-unit>
+      <trans-unit id="12" approved="yes">
+        <source><![CDATA[about.data.title]]></source>
+        <target><![CDATA[Ç'informacione mund të marr nga MediaInfo?]]></target>
+      </trans-unit>
+      <trans-unit id="13" approved="yes">
+        <source><![CDATA[about.data.content]]></source>
+        <target><![CDATA[<ul>  <li>Kryesore: titulli, autori, regjisori, albumi, numri i kolonës, data, kohëzgjatja...</li>  <li>Video: kodeku, aspekti, fps, raporti i bitit...</li>  <li>Audio: kodeku, raporti i shëmbëllimit, kanale, gjuha, raporti i bitit...</li>  <li>Tekst: gjuha e titrave</li>  <li>Kapituj: numri i kapitujve, lista e kapitujve</li> </ul>]]></target>
+      </trans-unit>
+      <trans-unit id="14" approved="yes">
+        <source><![CDATA[about.analyticals.title]]></source>
+        <target><![CDATA[Ç'formate (mbajtës) përkrah MediaInfo?]]></target>
+      </trans-unit>
+      <trans-unit id="15" approved="yes">
+        <source><![CDATA[about.analyticals.content]]></source>
+        <target><![CDATA[<ul>  <li>Video: MKV, OGM, AVI, DivX, WMV, QuickTime, Real, MPEG-1, MPEG-2, MPEG-4, DVD (VOB)...<br/>      (Kodekë: DivX, XviD, MSMPEG4, ASP, H.264/AVC, H.265/HEVC, FFV1...)</li>  <li>Audio: OGG, MP3, WAV, RA, AC3, DTS, AAC, M4A, AU, AIFF...</li>  <li>Titra: SRT, SSA, ASS, SAMI...</li> </ul>]]></target>
+      </trans-unit>
+      <trans-unit id="16" approved="yes">
+        <source><![CDATA[about.features.title]]></source>
+        <target><![CDATA[Ç'mund të bëj me të?]]></target>
+      </trans-unit>
+      <trans-unit id="17" approved="yes">
+        <source><![CDATA[about.features.content]]></source>
+        <target><![CDATA[<ul>  <li>Lexon <a href="%supportFormatRoute%"> formatet e shumë skedave filmike e zanore</a></li>  <li>Paraqet informacione me metoda të ndryshme (tekst, fletë, pemë, HTML...)</li>  <li>Pamja mund të porositet</li>  <li>Eksporton informacionet si tekst, CSV, HTML...</li>  <li>Ndërfaqe Grafike, Vijë Komande ose DLL</li>  <li>Integrim me bazën e MS-Windows (kap e hidh, konteksti i menysë)</li>  <li>Ndërkombëtar: çdo gjuhë shfaqet sipas versionit të Sistemit Operativ</li>  <li>Me aftësi për t'u lokalizuar (por nevojiten vullnetarë)</li> </ul>]]></target>
+      </trans-unit>
+      <trans-unit id="18" approved="yes">
+        <source><![CDATA[about.download.button.text]]></source>
+        <target><![CDATA[Shkarkoje]]></target>
+      </trans-unit>
+      <trans-unit id="19" approved="yes">
+        <source><![CDATA[about.download.version]]></source>
+        <target><![CDATA[versioni]]></target>
+      </trans-unit>
+      <trans-unit id="20" approved="yes">
+        <source><![CDATA[about.download.installer]]></source>
+        <target><![CDATA[Ndërfaqe Grafike, me Instalues]]></target>
+      </trans-unit>
+      <trans-unit id="21" approved="yes">
+        <source><![CDATA[about.download.for]]></source>
+        <target><![CDATA[për]]></target>
+      </trans-unit>
+      <trans-unit id="22" approved="yes">
+        <source><![CDATA[about.download.other]]></source>
+        <target><![CDATA[Edhe versionet e tjera (OS, ndërfaqe...) janë <a href="%downloadRoute%">këtu</a>]]></target>
+      </trans-unit>
+      <trans-unit id="23" approved="yes">
+        <source><![CDATA[about.what.changelog]]></source>
+        <target><![CDATA[<a href="%changelogRoute%">Monitoro</a>]]></target>
+      </trans-unit>
+      <trans-unit id="24" approved="yes">
+        <source><![CDATA[about.what.donate]]></source>
+        <target><![CDATA[Mund të <a href="%donateRoute%">kontribuosh</a> për të përkrahur zhvillimin e mëtejshëm]]></target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

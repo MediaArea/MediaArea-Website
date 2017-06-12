@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="en" datatype="plaintext" original="file.ext" target-language="ka">
+    <body>
+      <trans-unit id="1" approved="yes">
+        <source><![CDATA[menu.about]]></source>
+        <target><![CDATA[ჩვენს შესახებ]]></target>
+      </trans-unit>
+      <trans-unit id="2" approved="yes">
+        <source><![CDATA[menu.download]]></source>
+        <target><![CDATA[გადმოწერა]]></target>
+      </trans-unit>
+      <trans-unit id="3" approved="yes">
+        <source><![CDATA[menu.screenshots]]></source>
+        <target><![CDATA[სქრინები]]></target>
+      </trans-unit>
+      <trans-unit id="4" approved="yes">
+        <source><![CDATA[menu.donate]]></source>
+        <target><![CDATA[შემოწირულობა]]></target>
+      </trans-unit>
+      <trans-unit id="5" approved="yes">
+        <source><![CDATA[menu.support]]></source>
+        <target><![CDATA[კონტაქტი]]></target>
+      </trans-unit>
+      <trans-unit id="6" approved="yes">
+        <source><![CDATA[menu.testimonials]]></source>
+        <target><![CDATA[ისინი საუბრობენ MediaInfo-ზე]]></target>
+      </trans-unit>
+      <trans-unit id="7" approved="yes">
+        <source><![CDATA[about.page.description]]></source>
+        <target><![CDATA[MediaInfo  განკუთვნილია აუდიო ან  ვიდეო ფაილების ტექნიკური და ტეგური  ინფორმაციის მისაღებათ.ეს არუს უფასო პროგრამა( უსასყიდლო და ხელმისაწვდომი)]]></target>
+      </trans-unit>
+      <trans-unit id="8" approved="yes">
+        <source><![CDATA[about.screenshot_img.title]]></source>
+        <target><![CDATA[სქრინშოტები - მთავარი ინტერფეისი]]></target>
+      </trans-unit>
+      <trans-unit id="9" approved="yes">
+        <source><![CDATA[about.what.title]]></source>
+        <target><![CDATA[რა არის MediaInfo?]]></target>
+      </trans-unit>
+      <trans-unit id="10" approved="yes">
+        <source><![CDATA[about.what.content]]></source>
+        <target><![CDATA[<strong>MediaInfo</strong> განკუთვნილია აუდიო ან  ვიდეო ფაილების ტექნიკური და ტეგური  ინფორმაციის მისაღებათ.<br/>     ეს არუს უფასო პროგრამა( უსასყიდლო და ხელმისაწვდომი)]]></target>
+      </trans-unit>
+      <trans-unit id="11" approved="yes">
+        <source><![CDATA[about.data.title]]></source>
+        <target><![CDATA[რა ინფორმაციას მივიღებ MediaInfo-სგან?]]></target>
+      </trans-unit>
+      <trans-unit id="12" approved="yes">
+        <source><![CDATA[about.data.content]]></source>
+        <target><![CDATA[<ul>  <li>საწყისად: სათაურს, ავტორს, რეჟისორს, ალბომს, ტრეკების რაოდენობას, გამოსვლის თარიღს, ხანგრძლივობას...</li>  <li>ვიდეოდან: კოდეკს, ასფექტს, ფპს, ბიტრეიტს...</li>  <li>აუდიოდან: კოდეკს, ნიმუშის რეიტს, არხები(კანლებს), ენის ინტერფეის, ბიტრეიტს...</li>  <li>ტექსტიდან: სუბტიტრების ენას</li>  <li>თავებიდან: თავების რიცხვს და სიას</li> </ul>]]></target>
+      </trans-unit>
+      <trans-unit id="13" approved="yes">
+        <source><![CDATA[about.analyticals.title]]></source>
+        <target><![CDATA[რომელი ფორტამების (კონტეინერი) მხარდაჭერა აქვს MediaInfo-ს?]]></target>
+      </trans-unit>
+      <trans-unit id="14" approved="yes">
+        <source><![CDATA[about.analyticals.content]]></source>
+        <target><![CDATA[<ul>  <li>ვიდეო: MKV, OGM, AVI, DivX, WMV, QuickTime, Real, MPEG-1, MPEG-2, MPEG-4, DVD (VOB)...<br/>      (კოდეკები: DivX, XviD, MSMPEG4, ASP, H.264/AVC, H.265/HEVC, FFV1...)</li>  <li>აუდიო: OGG, MP3, WAV, RA, AC3, DTS, AAC, M4A, AU, AIFF...</li>  <li>სუბტიტრები: SRT, SSA, ASS, SAMI...</li> </ul>]]></target>
+      </trans-unit>
+      <trans-unit id="15" approved="yes">
+        <source><![CDATA[about.features.title]]></source>
+        <target><![CDATA[რისი გაგება შემიძლია?]]></target>
+      </trans-unit>
+      <trans-unit id="16" approved="yes">
+        <source><![CDATA[about.features.content]]></source>
+        <target><![CDATA[<ul>  <li>ბევრი <a href="%supportFormatRoute%"> ვიდეო და აუდიო ფაილების ფორმატების ნახვა</a></li>  <li>ინფორმაციის ნახვა სხვადასხვა ხედვით (text, sheet, tree, HTML...)</li>  <li>ხედვის ტიპის შეცვლა</li>  <li>ინფორმაციი შემოტანა როგორც ტექსტი, CSV, HTML...</li>  <li>გრაფიკული ინტერფეისის, ბრძანებთა სტრიქონის, ან  DLL-ს ვერსიები ხელმისაწვდომია</li>  <li>შესაძლებელია ინტერგრაცია MS-Windows shell-თან (drag 'n' drop, და კონტექსტ მენიუ)</li>  <li>ნებისმიერი ენის და ოპერაციული სისტემის ჩვენება</li>  <li>ლოკალიზაცია შესაძლებელია(მხოლოდ მოხალისეებისთვის)</li> </ul>]]></target>
+      </trans-unit>
+      <trans-unit id="17" approved="yes">
+        <source><![CDATA[about.download.button.text]]></source>
+        <target><![CDATA[გადმოწერეთ MediaInfo]]></target>
+      </trans-unit>
+      <trans-unit id="18" approved="yes">
+        <source><![CDATA[about.what.changelog]]></source>
+        <target><![CDATA[შენ შეგიძლია <a href="%changelogRoute%">ნახო ცვლილებები</a>]]></target>
+      </trans-unit>
+      <trans-unit id="19" approved="yes">
+        <source><![CDATA[about.what.donate]]></source>
+        <target><![CDATA[შენ შეგიძლია <a href="%donateRoute%">შემოწირო</a> ,რათა დაეხმარო შემდეგი განვითარებისთვის]]></target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

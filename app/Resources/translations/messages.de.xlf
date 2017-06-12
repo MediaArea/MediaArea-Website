@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="en" datatype="plaintext" original="file.ext" target-language="de">
+    <body>
+      <trans-unit id="1" approved="yes">
+        <source><![CDATA[menu.about]]></source>
+        <target><![CDATA[Über das Programm]]></target>
+      </trans-unit>
+      <trans-unit id="2" approved="yes">
+        <source><![CDATA[menu.donate]]></source>
+        <target><![CDATA[MediaInfo unterstützen]]></target>
+      </trans-unit>
+      <trans-unit id="3" approved="yes">
+        <source><![CDATA[menu.testimonials]]></source>
+        <target><![CDATA[Berichte über MediaInfo]]></target>
+      </trans-unit>
+      <trans-unit id="4" approved="yes">
+        <source><![CDATA[about.page.description]]></source>
+        <target><![CDATA[MediaInfo liefert technische und zus&auml;tzliche Tag-Informationen &uuml;ber Ihre Video- oder Audiodateien. Es ist freie Software (kostenlos und freier Zugriff auf den Quellcode)]]></target>
+      </trans-unit>
+      <trans-unit id="5" approved="yes">
+        <source><![CDATA[about.page.keywords]]></source>
+        <target><![CDATA[MediaInfo Media Info DLL Informationen tag codec video audio Untertitel Kapitel AVI MKV OGM kostenlos frei]]></target>
+      </trans-unit>
+      <trans-unit id="6" approved="yes">
+        <source><![CDATA[about.screenshot_img.alt]]></source>
+        <target><![CDATA[Das Hauptfenster]]></target>
+      </trans-unit>
+      <trans-unit id="7" approved="yes">
+        <source><![CDATA[about.screenshot_img.title]]></source>
+        <target><![CDATA[Screenshot - Das Hauptfenster]]></target>
+      </trans-unit>
+      <trans-unit id="8" approved="yes">
+        <source><![CDATA[about.what.title]]></source>
+        <target><![CDATA[Was ist MediaInfo?]]></target>
+      </trans-unit>
+      <trans-unit id="9" approved="yes">
+        <source><![CDATA[about.what.content]]></source>
+        <target><![CDATA[<strong>MediaInfo</strong> liefert technische und zusätzliche Tag-Informationen über Video- und Audiodateien.]]></target>
+      </trans-unit>
+      <trans-unit id="10" approved="yes">
+        <source><![CDATA[about.data.title]]></source>
+        <target><![CDATA[Welche Informationen liefert MediaInfo?]]></target>
+      </trans-unit>
+      <trans-unit id="11" approved="yes">
+        <source><![CDATA[about.data.content]]></source>
+        <target><![CDATA[<ul>  <li>Grundsätzliches: Titel, Autor, Regisseur, Album, Titelnummer, Datum, Spieldauer...</li>  <li>Video: Codec, Bildseitenverhältnis, Bildfrequenz, Bitrate...</li>  <li>Audio: Codec, Samplingrate, Kanäle, Sprache, Bitrate...</li>  <li>Text: Sprache der Untertitel</li>  <li>Kapitel: Anzahl der Kapitel, Kapitelübersicht</li> </ul>]]></target>
+      </trans-unit>
+      <trans-unit id="12" approved="yes">
+        <source><![CDATA[about.analyticals.title]]></source>
+        <target><![CDATA[Welche Formate (Container) unterstützt MediaInfo?]]></target>
+      </trans-unit>
+      <trans-unit id="13" approved="yes">
+        <source><![CDATA[about.analyticals.content]]></source>
+        <target><![CDATA[<ul>  <li>Video: MKV, OGM, AVI, DivX, WMV, QuickTime, Real, MPEG-1, MPEG-2, MPEG-4, DVD (VOB)...<br/>      (Codecs: DivX, XviD, MSMPEG4, ASP, H.264/AVC, H.265/HEVC, FFV1...)</li>  <li>Audio: OGG, MP3, WAV, RA, AC3, DTS, AAC, M4A, AU, AIFF...</li>  <li>Untertitel: SRT, SSA, ASS, SAMI...</li> </ul>]]></target>
+      </trans-unit>
+      <trans-unit id="14" approved="yes">
+        <source><![CDATA[about.features.title]]></source>
+        <target><![CDATA[Was kann das Programm?]]></target>
+      </trans-unit>
+      <trans-unit id="15" approved="yes">
+        <source><![CDATA[about.features.content]]></source>
+        <target><![CDATA[<ul>  <li>Liest viele <a href="%supportFormatRoute%"> Video- und Audioformate</a></li>  <li>Verschiedene Darstellungsmöglichkeiten der Informationen (Text, Tabelle, Baumstruktur, HTML...)</li>  <li>Diese Darstellungen können selbst angepasst werden</li>  <li>Informationen können als Text, CSV, HTML... ausgegeben werden</li>  <li>Grafische Benutzeroberfläche, Aufruf per Kommandozeile, oder über die DLL</li>  <li>Integration in MS-Windows (Drag'n'Drop, Kontextmenü)</li>  <li>Internationalisierung : Jede Sprache wird unter jedem Betriebssystem unterstützt</li>  <li>Lokalisierbar (<a href="mailto:info@mediaarea.net">Übersetzer gesucht!</a>)</li> </ul>]]></target>
+      </trans-unit>
+      <trans-unit id="16" approved="yes">
+        <source><![CDATA[about.license.content]]></source>
+        <target><![CDATA[Dies ist ein <a href="https://de.wikipedia.org/wiki/Open_Source">Open-Source</a>-Software - mit Ausnahme der GUI für Mac - das heißt, die Möglichkeit, die kostenlose Verteilung des Quellcodes und abgeleitete Werke (<a href="%licenseRoute%">BSD-artigen Lizenz</a>).]]></target>
+      </trans-unit>
+      <trans-unit id="17" approved="yes">
+        <source><![CDATA[about.license.title]]></source>
+        <target><![CDATA[Lizenz]]></target>
+      </trans-unit>
+      <trans-unit id="18" approved="yes">
+        <source><![CDATA[about.download.button.text]]></source>
+        <target><![CDATA[MediaInfo herunterladen]]></target>
+      </trans-unit>
+      <trans-unit id="19" approved="yes">
+        <source><![CDATA[about.download.installer]]></source>
+        <target><![CDATA[Grafische Benutzeroberfläche, mit Installationsroutine]]></target>
+      </trans-unit>
+      <trans-unit id="20" approved="yes">
+        <source><![CDATA[about.download.for]]></source>
+        <target><![CDATA[für]]></target>
+      </trans-unit>
+      <trans-unit id="21" approved="yes">
+        <source><![CDATA[about.download.other]]></source>
+        <target><![CDATA[Andere Versionen (Betriebssystem, Benutzeroberfläche...) sind ebenfalls <a href="%downloadRoute%">verfügbar</a>]]></target>
+      </trans-unit>
+      <trans-unit id="22" approved="yes">
+        <source><![CDATA[about.what.changelog]]></source>
+        <target><![CDATA[Sie können die Versionsinformationen auf <a href="%changelogRoute%">Neuigkeiten</a> überwachen]]></target>
+      </trans-unit>
+      <trans-unit id="23" approved="yes">
+        <source><![CDATA[about.what.donate]]></source>
+        <target><![CDATA[Sie können <a href="%donateRoute%">spenden</a>, um die Weiterentwicklung unterstützen]]></target>
+      </trans-unit>
+      <trans-unit id="24" approved="yes">
+        <source><![CDATA[donate.page.title]]></source>
+        <target><![CDATA[MediaInfo - Unterstützen]]></target>
+      </trans-unit>
+      <trans-unit id="25" approved="yes">
+        <source><![CDATA[donate.title]]></source>
+        <target><![CDATA[Spenden]]></target>
+      </trans-unit>
+      <trans-unit id="26" approved="yes">
+        <source><![CDATA[donate.why.title]]></source>
+        <target><![CDATA[Warum spenden?]]></target>
+      </trans-unit>
+      <trans-unit id="27" approved="yes">
+        <source><![CDATA[donate.why.content]]></source>
+        <target><![CDATA[MediaInfo ist freie, kostenlose Software.<br/>
+Also warum dafür bezahlen? Als Dank, als Unterstützung oder um zu helfen. Das entscheiden Sie.]]></target>
+      </trans-unit>
+      <trans-unit id="28" approved="yes">
+        <source><![CDATA[donate.paypal.title]]></source>
+        <target><![CDATA[Spenden via Kreditkarte oder Paypal (International)]]></target>
+      </trans-unit>
+      <trans-unit id="29">
+        <source><![CDATA[donate.paypal.content]]></source>
+        <target><![CDATA[]]></target>
+      </trans-unit>
+      <trans-unit id="30" approved="yes">
+        <source><![CDATA[donate.bank.title]]></source>
+        <target><![CDATA[Spenden via Überweisung (<a href="https://de.wikipedia.org/wiki/Eurozone">Eurozone</a>)]]></target>
+      </trans-unit>
+      <trans-unit id="31" approved="yes">
+        <source><![CDATA[donate.bank.content]]></source>
+        <target><![CDATA[
+<div class="address">
+Empfänger: Jérôme Martinez<br/>
+Konto-Nr.: 1000356406<br/>
+Bankleitzahl : 13050000<br/>
+IBAN : DE97 1305 0000 1000 3564 06<br/>
+BIC-/SWIFT-Code : NOLADE21ROS<br/>
+</div>]]></target>
+      </trans-unit>
+      <trans-unit id="32" approved="yes">
+        <source><![CDATA[donate.other.title]]></source>
+        <target><![CDATA[Kein Geld? Na und? Gehen Sie nicht! ;-)]]></target>
+      </trans-unit>
+      <trans-unit id="33" approved="yes">
+        <source><![CDATA[donate.other.content]]></source>
+        <target><![CDATA[Nichts, wofür man sich schämen müsste.<br/>
+Sie können MediaInfo auch noch auf folgende Weise unterstützen:
+<ul>
+ <li>Übersetzen Sie MediaInfo in Ihre Muttersprache, oder verbessern Sie die Übersetzung.</li>
+ <li>Übersetzen Sie diese Webseite in Ihre Muttersprache, oder verbessern Sie die Übersetzung.</li>
+ <li>Erstellen Sie schöne HTML-Vorlagen für die Ausgabe von MediaInfo.</li>
+ <li>Erstellen Sie schöne Icons für MediaInfo.</li>
+ <li>Schicken Sie mir Multimediadateien, die MediaInfo nicht korrekt erkennt.</li>
+ <li>Schicken Sie mir Details zu Container-Formaten; wohlmöglich kann ich sie dadurch noch besser implementieren.</li>
+ <li>Programmieren Sie ein paar nützliche Funktionen (verwenden Sie bitte die neueste SVN-Version). MediaInfo ist in C++ geschrieben.</li>
+ <li>Helfen Sie, noch nicht unterstützte Betriebssysteme zu unterstützen (Linux, Win64...)</li>
+ <li>...</li>
+</ul>
+Zögern Sie nicht mir zu <a href="mailto:info@mediaarea.net">schreiben</a>!]]></target>
+      </trans-unit>
+      <trans-unit id="34" approved="yes">
+        <source><![CDATA[paypal.donation]]></source>
+        <target><![CDATA[Spenden für MediaInfo]]></target>
+      </trans-unit>
+      <trans-unit id="35" approved="yes">
+        <source><![CDATA[paypal.submit.alt]]></source>
+        <target><![CDATA[Jetzt einfach, schnell und sicher online bezahlen – mit PayPal.]]></target>
+      </trans-unit>
+      <trans-unit id="36" approved="yes">
+        <source><![CDATA[paypal.subscribe.or]]></source>
+        <target><![CDATA[oder]]></target>
+      </trans-unit>
+      <trans-unit id="37" approved="yes">
+        <source><![CDATA[paypal.subscribe.month]]></source>
+        <target><![CDATA[Monat]]></target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

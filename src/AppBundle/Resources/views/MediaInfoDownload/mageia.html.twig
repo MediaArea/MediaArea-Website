@@ -1,0 +1,70 @@
+{% extends 'AppBundle::base.html.twig' %}
+
+{% block title %}{% trans %}download.mageia.page.title{% endtrans %}{% endblock %}
+{% block description %}{% trans %}about.page.description{% endtrans %}{% endblock %}
+{% block keywords %}{% trans %}about.page.keywords{% endtrans %}{% endblock %}
+
+{% block body %}
+<h1>{% trans %}download.mageia.title{% endtrans %}</h1>
+{% image '@AppBundle/Resources/public/img/OS/Mageia.png' %}
+<img src="{{ asset_url }}" alt="Mageia" title="Mageia" width="250" height="89"><br />
+{% endimage %}
+
+<table border="1" class="download">
+<thead>
+<tr class="table-header">
+    <th>Version</th>
+    <th>Architecture</th>
+    <th>Interface</th>
+    <td>Version</td>
+    <td>Comment</td>
+</tr>
+</thead>
+<tbody>
+
+<tr>
+    <th rowspan="8" id="5_standard">5</th>
+    <th rowspan="4" id="5_standard.x86_64">x86_64</th>
+    <th><abbr title="Graphical User Interface">GUI</abbr></th>
+    <td><a href="//mediaarea.net/download/binary/mediainfo-gui/0.7.96/mediainfo-gui-0.7.96.x86_64.Mageia_5_standard.rpm">v0.7.96</a></td>
+    <td>requires libmediainfo0</td>
+</tr>
+<tr>
+    <th><abbr title="Command Line Interface">CLI</abbr></th>
+    <td><a href="//mediaarea.net/download/binary/mediainfo/0.7.96/mediainfo-0.7.96.x86_64.Mageia_5_standard.rpm">v0.7.96</a></td>
+    <td>requires libmediainfo0</td>
+</tr>
+<tr>
+    <th>libmediainfo0</th>
+    <td><a href="//mediaarea.net/download/binary/libmediainfo0/0.7.96/libmediainfo0-0.7.96.x86_64.Mageia_5_standard.rpm">v0.7.96</a> <small>(<a href="//mediaarea.net/download/binary/libmediainfo0/0.7.96/libmediainfo-devel-0.7.96.x86_64.Mageia_5_standard.rpm">devel</a>, <a href="//mediaarea.net/download/binary/libmediainfo0/0.7.96/libmediainfo-doc-0.7.96.x86_64.Mageia_5_standard.rpm">doc</a>)</small></td>
+    <td>requires libzen0</td>
+</tr>
+<tr>
+    <th>libzen0</th>
+    <td><a href="//mediaarea.net/download/binary/libzen0/0.4.35/libzen0-0.4.35.x86_64.Mageia_5_standard.rpm">v0.4.35</a> <small>(<a href="//mediaarea.net/download/binary/libzen0/0.4.35/libzen-devel-0.4.35.x86_64.Mageia_5_standard.rpm">devel</a>, <a href="//mediaarea.net/download/binary/libzen0/0.4.35/libzen-doc-0.4.35.x86_64.Mageia_5_standard.rpm">doc</a>)</small></td>
+    <td>&nbsp;</td>
+</tr>
+<tr>
+    <th rowspan="4" id="5_standard.i586">i586</th>
+    <th><abbr title="Graphical User Interface">GUI</abbr></th>
+    <td><a href="//mediaarea.net/download/binary/mediainfo-gui/0.7.96/mediainfo-gui-0.7.96.i586.Mageia_5_standard.rpm">v0.7.96</a></td>
+    <td>requires libmediainfo0</td>
+</tr>
+<tr>
+    <th><abbr title="Command Line Interface">CLI</abbr></th>
+    <td><a href="//mediaarea.net/download/binary/mediainfo/0.7.96/mediainfo-0.7.96.i586.Mageia_5_standard.rpm">v0.7.96</a></td>
+    <td>requires libmediainfo0</td>
+</tr>
+<tr>
+    <th>libmediainfo0</th>
+    <td><a href="//mediaarea.net/download/binary/libmediainfo0/0.7.96/libmediainfo0-0.7.96.i586.Mageia_5_standard.rpm">v0.7.96</a> <small>(<a href="//mediaarea.net/download/binary/libmediainfo0/0.7.96/libmediainfo-devel-0.7.96.i586.Mageia_5_standard.rpm">devel</a>, <a href="//mediaarea.net/download/binary/libmediainfo0/0.7.96/libmediainfo-doc-0.7.96.i586.Mageia_5_standard.rpm">doc</a>)</small></td>
+    <td>requires libzen0</td>
+</tr>
+<tr>
+    <th>libzen0</th>
+    <td><a href="//mediaarea.net/download/binary/libzen0/0.4.35/libzen0-0.4.35.i586.Mageia_5_standard.rpm">v0.4.35</a> <small>(<a href="//mediaarea.net/download/binary/libzen0/0.4.35/libzen-devel-0.4.35.i586.Mageia_5_standard.rpm">devel</a>, <a href="//mediaarea.net/download/binary/libzen0/0.4.35/libzen-doc-0.4.35.i586.Mageia_5_standard.rpm">doc</a>)</small></td>
+    <td>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+{% endblock %}

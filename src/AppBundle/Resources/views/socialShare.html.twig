@@ -1,0 +1,50 @@
+{% set language = app.request.locale %}
+{% if 'de' == language %}
+    {% javascripts
+        '@AppBundle/Resources/public/js/jquery.socialshareprivacy.min.de.js'
+     %}
+        <script src="{{ asset_url }}"></script>
+    {% endjavascripts %}
+{% elseif 'es' == language %}
+    {% javascripts
+        '@AppBundle/Resources/public/js/jquery.socialshareprivacy.min.es.js'
+     %}
+        <script src="{{ asset_url }}"></script>
+    {% endjavascripts %}
+{% elseif 'fr' == language %}
+    {% javascripts
+        '@AppBundle/Resources/public/js/jquery.socialshareprivacy.min.fr.js'
+     %}
+        <script src="{{ asset_url }}"></script>
+    {% endjavascripts %}
+{% elseif 'it' == language %}
+    {% javascripts
+        '@AppBundle/Resources/public/js/jquery.socialshareprivacy.min.it.js'
+     %}
+        <script src="{{ asset_url }}"></script>
+    {% endjavascripts %}
+{% elseif 'nl' == language %}
+    {% javascripts
+        '@AppBundle/Resources/public/js/jquery.socialshareprivacy.min.nl.js'
+     %}
+        <script src="{{ asset_url }}"></script>
+    {% endjavascripts %}
+{% elseif 'pl' == language %}
+    {% javascripts
+        '@AppBundle/Resources/public/js/jquery.socialshareprivacy.min.pl.js'
+     %}
+        <script src="{{ asset_url }}"></script>
+    {% endjavascripts %}
+{% elseif 'pt' == language %}
+    {% javascripts
+        '@AppBundle/Resources/public/js/jquery.socialshareprivacy.min.pt.js'
+     %}
+        <script src="{{ asset_url }}"></script>
+    {% endjavascripts %}
+{% elseif 'ru' == language %}
+    {% javascripts
+        '@AppBundle/Resources/public/js/jquery.socialshareprivacy.min.ru.js'
+     %}
+        <script src="{{ asset_url }}"></script>
+    {% endjavascripts %}
+{% endif %}

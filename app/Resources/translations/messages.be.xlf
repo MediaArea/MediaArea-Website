@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="en" datatype="plaintext" original="file.ext" target-language="be">
+    <body>
+      <trans-unit id="1" approved="yes">
+        <source><![CDATA[about.page.description]]></source>
+        <target><![CDATA[MediaInfo дазваляе атрымліваць тэхнічныя дадзеныя і тэгі з відэа- або аўдыё- файлаў.]]></target>
+      </trans-unit>
+      <trans-unit id="2" approved="yes">
+        <source><![CDATA[about.what.title]]></source>
+        <target><![CDATA[Што такое MediaInfo?]]></target>
+      </trans-unit>
+      <trans-unit id="3" approved="yes">
+        <source><![CDATA[about.what.content]]></source>
+        <target><![CDATA[MediaInfo дазваляе атрымліваць тэхнічныя дадзеныя і тэгі з відэа- або аўдыё- файлаў.<br/>     Гэта - бясплатнае праграмнае забеспячэнне (без усякай аплаты і з вольным доступам да зыходнага кода, ліцэнзіі <a href="%licenseRoute%">BSD</a>)]]></target>
+      </trans-unit>
+      <trans-unit id="4" approved="yes">
+        <source><![CDATA[about.data.title]]></source>
+        <target><![CDATA[Якую інфармацыю я магу атрымаць ад MediaInfo?]]></target>
+      </trans-unit>
+      <trans-unit id="5" approved="yes">
+        <source><![CDATA[about.data.content]]></source>
+        <target><![CDATA[<ul>  <li>Асноўная : назва, аўтар, рэжысёр, альбом, нумар гукавой дарожкі, дата, працягласць... </li>  <li>Відэа : кодэк, суадносіны бакоў, частата кадраў, бітрэйт...</li>  <li>Аўдыё : кодэк, каналы, мова, бітрэйт...</li>  <li>Тэкст : мова субтытраў</li>  <li>Часткі : колькасць частак, спіс частак</li> </ul>]]></target>
+      </trans-unit>
+      <trans-unit id="6" approved="yes">
+        <source><![CDATA[about.analyticals.title]]></source>
+        <target><![CDATA[Якія фарматы (кантэйнеры) падтрымлівае MediaInfo?]]></target>
+      </trans-unit>
+      <trans-unit id="7" approved="yes">
+        <source><![CDATA[about.analyticals.content]]></source>
+        <target><![CDATA[<ul> <li>Відэа : MKV, OGM, AVI, DivX, WMV, QuickTime, Real, MPEG-1, MPEG-2, MPEG-4, DVD (VOB)...<br/> (Кодэкі: DivX, XviD, MSMPEG4, ASP, H.264/AVC, H.265/HEVC, FFV1...)</li> <li>Аўдыё : OGG, MP3, WAV, RA, AC3, DTS, AAC, M4A, AU, AIFF...</li> <li>Субтытры: SRT, SSA, ASS, SAMI...</li> </ul>]]></target>
+      </trans-unit>
+      <trans-unit id="8" approved="yes">
+        <source><![CDATA[about.features.title]]></source>
+        <target><![CDATA[І што я магу зрабіць з гэтым?]]></target>
+      </trans-unit>
+      <trans-unit id="9" approved="yes">
+        <source><![CDATA[about.features.content]]></source>
+        <target><![CDATA[<ul> <li>Чытаць мноства <a href="%supportFormatRoute%" target="_blank"> відэа- і аўдыё- фарматаў</a></li> <li>Мноства выглядаў падання атрыманай інфармацыі (тэкст, ліст, дрэва, HTML...)</li> <li>Вы можаце мадыфікаваць гэтыя выгляды падання</li> <li>Магчымасці экспарту інфармацыі : тэкст, CSV, HTML...</li> <li>Графічны інтэрфейс, камандны радок або DLL</li> <li>Інтэграцыя ў абалонку MS-Windows (drag'n'drop і кантэкстнае меню)</li> <li>Інтэрнацыянальная : любая мова адлюстроўваецца на любым варыянце вашай аперацыйнай сістэмы</li> <li>Магчымасць лакалізацыі (але неабходныя добраахвотнікі)</li> </ul>]]></target>
+      </trans-unit>
+      <trans-unit id="10" approved="yes">
+        <source><![CDATA[about.download.button.text]]></source>
+        <target><![CDATA[Загрузіць]]></target>
+      </trans-unit>
+      <trans-unit id="11" approved="yes">
+        <source><![CDATA[about.download.version]]></source>
+        <target><![CDATA[версія]]></target>
+      </trans-unit>
+      <trans-unit id="12" approved="yes">
+        <source><![CDATA[about.download.other]]></source>
+        <target><![CDATA[Іншыя версіі (АС, інтэрфейс...) таксама <a href="%downloadRoute%">даступныя</a>]]></target>
+      </trans-unit>
+      <trans-unit id="13" approved="yes">
+        <source><![CDATA[about.what.changelog]]></source>
+        <target><![CDATA[Вы можаце <a href="%changelogRoute%">адсочваць</a>]]></target>
+      </trans-unit>
+      <trans-unit id="14" approved="yes">
+        <source><![CDATA[about.what.donate]]></source>
+        <target><![CDATA[Вы маеце магчымаcць зрабіць <a href="%donateRoute%">ахвяраванне</a> для падтрымкі наступнай распрацоўкі]]></target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

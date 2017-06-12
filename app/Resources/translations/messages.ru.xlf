@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="en" datatype="plaintext" original="file.ext" target-language="ru">
+    <body>
+      <trans-unit id="1" approved="yes">
+        <source><![CDATA[menu.about]]></source>
+        <target><![CDATA[О проекте]]></target>
+      </trans-unit>
+      <trans-unit id="2" approved="yes">
+        <source><![CDATA[menu.download]]></source>
+        <target><![CDATA[Загрузка]]></target>
+      </trans-unit>
+      <trans-unit id="3" approved="yes">
+        <source><![CDATA[menu.screenshots]]></source>
+        <target><![CDATA[Скриншоты]]></target>
+      </trans-unit>
+      <trans-unit id="4" approved="yes">
+        <source><![CDATA[menu.donate]]></source>
+        <target><![CDATA[Помочь MediaInfo]]></target>
+      </trans-unit>
+      <trans-unit id="5" approved="yes">
+        <source><![CDATA[menu.support]]></source>
+        <target><![CDATA[Поддержка]]></target>
+      </trans-unit>
+      <trans-unit id="6" approved="yes">
+        <source><![CDATA[menu.testimonials]]></source>
+        <target><![CDATA[Они говорят о MediaInfo]]></target>
+      </trans-unit>
+      <trans-unit id="7" approved="yes">
+        <source><![CDATA[about.page.description]]></source>
+        <target><![CDATA[MediaInfo позволяет получать технические данные и тэги из видео- или аудио- файлов. Это - бесплатное программное обеспечение (без всякой оплаты и со свободным доступом к исходному коду, лицензии BSD)]]></target>
+      </trans-unit>
+      <trans-unit id="8" approved="yes">
+        <source><![CDATA[about.page.keywords]]></source>
+        <target><![CDATA[MediaInfo Media Info DLL информация тэги кодеки видео аудио субтитры главы AVI MKV OGM free свободно]]></target>
+      </trans-unit>
+      <trans-unit id="9" approved="yes">
+        <source><![CDATA[about.what.title]]></source>
+        <target><![CDATA[Что такое MediaInfo?]]></target>
+      </trans-unit>
+      <trans-unit id="10" approved="yes">
+        <source><![CDATA[about.what.content]]></source>
+        <target><![CDATA[<strong>MediaInfo</strong> позволяет получать техническую информацию из видео- или аудио- файлов.<br/>     Это - свободное программное обеспечение (распространяется бесплатно и с исходным кодом, доступным по лицензии <a href="%licenseRoute%">BSD</a>)]]></target>
+      </trans-unit>
+      <trans-unit id="11" approved="yes">
+        <source><![CDATA[about.data.title]]></source>
+        <target><![CDATA[Какую информацию я могу получить с помощью MediaInfo?]]></target>
+      </trans-unit>
+      <trans-unit id="12" approved="yes">
+        <source><![CDATA[about.data.content]]></source>
+        <target><![CDATA[<ul>  <li>Основная: название, автор, режиссер, альбом, номер звуковой дорожки, дата, продолжительность...</li>  <li>Видео: кодек, отношение сторон, частота кадров, скорость потока...</li>  <li>Аудио: кодек, каналы, язык, скорость потока...</li>  <li>Текст: язык субтитров</li>  <li>Части: количество частей, список частей</li> </ul>]]></target>
+      </trans-unit>
+      <trans-unit id="13" approved="yes">
+        <source><![CDATA[about.analyticals.title]]></source>
+        <target><![CDATA[Какие форматы (контейнеры) поддерживает MediaInfo?]]></target>
+      </trans-unit>
+      <trans-unit id="14" approved="yes">
+        <source><![CDATA[about.analyticals.content]]></source>
+        <target><![CDATA[<ul>  <li>Видео:  MKV, OGM, AVI, DivX, WMV, QuickTime, Real, MPEG-1, MPEG-2, MPEG-4, DVD (VOB)...<br/>  (Кодеки: DivX, XviD, MSMPEG4, ASP, H.264/AVC, H.265/HEVC, FFV1...)</li>  <li>Аудио: OGG, MP3, WAV, RA, AC3, DTS, AAC, M4A, AU, AIFF...</li>  <li>Субтитры: SRT, SSA, ASS, SAMI...</li> </ul>]]></target>
+      </trans-unit>
+      <trans-unit id="15" approved="yes">
+        <source><![CDATA[about.features.title]]></source>
+        <target><![CDATA[И что я могу делать с помощью MediaInfo?]]></target>
+      </trans-unit>
+      <trans-unit id="16" approved="yes">
+        <source><![CDATA[about.features.content]]></source>
+        <target><![CDATA[<ul>  <li>Анализировать множество <a href="%supportFormatRoute%"> видео- и аудио- форматов</a></li>  <li>Использовать разные методы представления полученной информации (текст, лист, дерево, HTML...)</li>  <li>Изменять эти методы представления</li>  <li>Возможности экспорта информации в: текст, CSV, HTML...</li>  <li>Использовать для работы графический интерфейс, командную строку или DLL</li>  <li>Интеграция в оболочку MS-Windows (drag'n'drop и контекстное меню)</li>  <li>Интернационализация: любой язык отображается на любом варианте вашей операционной системы</li>  <li>Возможность локализации (ищутся добровольцы)</li> </ul>]]></target>
+      </trans-unit>
+      <trans-unit id="17" approved="yes">
+        <source><![CDATA[about.download.button.text]]></source>
+        <target><![CDATA[Загрузить]]></target>
+      </trans-unit>
+      <trans-unit id="18" approved="yes">
+        <source><![CDATA[about.download.version]]></source>
+        <target><![CDATA[версия]]></target>
+      </trans-unit>
+      <trans-unit id="19" approved="yes">
+        <source><![CDATA[about.download.installer]]></source>
+        <target><![CDATA[Графический интерфейс, с установщиком]]></target>
+      </trans-unit>
+      <trans-unit id="20" approved="yes">
+        <source><![CDATA[about.download.for]]></source>
+        <target><![CDATA[для]]></target>
+      </trans-unit>
+      <trans-unit id="21" approved="yes">
+        <source><![CDATA[about.download.other]]></source>
+        <target><![CDATA[Другие версии (ОС, интерфейс...) также <a href="%downloadRoute%">доступны</a>]]></target>
+      </trans-unit>
+      <trans-unit id="22" approved="yes">
+        <source><![CDATA[about.what.changelog]]></source>
+        <target><![CDATA[Вы можете <a href="%changelogRoute%">отслеживать</a>]]></target>
+      </trans-unit>
+      <trans-unit id="23" approved="yes">
+        <source><![CDATA[about.what.donate]]></source>
+        <target><![CDATA[Вы можете внести <a href="%donateRoute%">пожертвование</a> для поддержки дальнейшей разработки]]></target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

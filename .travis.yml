@@ -1,0 +1,11 @@
+language: php
+
+php:
+  - '7.0'
+  - '7.1'
+
+install:
+  - composer update --optimize-autoloader
+  - php bin/console cache:clear --env=test
+
+script: phpunit -v

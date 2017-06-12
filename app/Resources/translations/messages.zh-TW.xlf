@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="en" datatype="plaintext" original="file.ext">
+    <body>
+      <trans-unit id="1" approved="yes">
+        <source><![CDATA[menu.about]]></source>
+        <target><![CDATA[關於 MediaInfo]]></target>
+      </trans-unit>
+      <trans-unit id="2" approved="yes">
+        <source><![CDATA[menu.download]]></source>
+        <target><![CDATA[下載]]></target>
+      </trans-unit>
+      <trans-unit id="3" approved="yes">
+        <source><![CDATA[menu.screenshots]]></source>
+        <target><![CDATA[螢幕截圖]]></target>
+      </trans-unit>
+      <trans-unit id="4" approved="yes">
+        <source><![CDATA[menu.donate]]></source>
+        <target><![CDATA[幫助 MediaInfo]]></target>
+      </trans-unit>
+      <trans-unit id="5" approved="yes">
+        <source><![CDATA[menu.support]]></source>
+        <target><![CDATA[支援]]></target>
+      </trans-unit>
+      <trans-unit id="6" approved="yes">
+        <source><![CDATA[menu.testimonials]]></source>
+        <target><![CDATA[他們用 MediaInfo]]></target>
+      </trans-unit>
+      <trans-unit id="7" approved="yes">
+        <source><![CDATA[about.page.description]]></source>
+        <target><![CDATA[MediaInfo 提供了提供影音檔案有關技術上與標籤的資訊. 這是自由軟體 (無須花費, 且也可以自由存取原始碼)]]></target>
+      </trans-unit>
+      <trans-unit id="8" approved="yes">
+        <source><![CDATA[about.what.title]]></source>
+        <target><![CDATA[MediaInfo 是什麼?]]></target>
+      </trans-unit>
+      <trans-unit id="9" approved="yes">
+        <source><![CDATA[about.what.content]]></source>
+        <target><![CDATA[<strong>MediaInfo</strong> 提供影音檔案有關技術上與標籤的資訊.<br/>     這是自由軟體 (無須花費, 且也可以自由存取原始碼, 為 <a href="%licenseRoute%">BSD</a> 授權)]]></target>
+      </trans-unit>
+      <trans-unit id="10" approved="yes">
+        <source><![CDATA[about.data.title]]></source>
+        <target><![CDATA[我能從 MediaInfo 獲得哪些資訊?]]></target>
+      </trans-unit>
+      <trans-unit id="11" approved="yes">
+        <source><![CDATA[about.data.content]]></source>
+        <target><![CDATA[<ul>  <li>一般: 標題, 作者, 導演, 專輯, 曲目, 日期, 播放長度...</li>  <li>視訊: 編解碼器 (CODECs), 畫面比例, 每秒影格數, 流量...</li>  <li>音訊: 編解碼器, 取樣率, 聲道數, 語言, 流量...</li>  <li>文字: 字幕語言</li>  <li>章節: 章節總數, 章節列表</li> </ul>]]></target>
+      </trans-unit>
+      <trans-unit id="12" approved="yes">
+        <source><![CDATA[about.analyticals.title]]></source>
+        <target><![CDATA[MediaInfo 支援哪些 (容器) 格式?]]></target>
+      </trans-unit>
+      <trans-unit id="13" approved="yes">
+        <source><![CDATA[about.analyticals.content]]></source>
+        <target><![CDATA[<ul>  <li>視訊: MKV, OGM, AVI, DivX, WMV, QuickTime, Real, MPEG-1, MPEG-2, MPEG-4, DVD (VOB)...<br/>      (編碼內容: DivX, XviD, MSMPEG4, ASP, H.264/AVC, H.265/HEVC, FFV1...)</li>  <li>音訊: OGG, MP3, WAV, RA, AC3, DTS, AAC, M4A, AU, AIFF...</li>  <li>字幕: SRT, SSA, ASS, SAMI...</li> </ul>]]></target>
+      </trans-unit>
+      <trans-unit id="14" approved="yes">
+        <source><![CDATA[about.features.title]]></source>
+        <target><![CDATA[我可以用它來做什麼?]]></target>
+      </trans-unit>
+      <trans-unit id="15" approved="yes">
+        <source><![CDATA[about.features.content]]></source>
+        <target><![CDATA[<ul>  <li>讀取許多<a href="%supportFormatRoute%">音視訊檔案格式</a></li>  <li>多重檢視資訊的方法 (純文字, 表格, 樹狀圖, 網頁...)</li>  <li>您可以自訂這些檢視方法</li>  <li>匯出資訊為純文字檔, CSV, 網頁...</li>  <li>圖形介面, 命令列, 或是 .DLL 檔案</li>  <li>與 MS-Windows 檔案總管整合 (拖曳功能, 快顯功能表)</li>  <li>國際化: 可在各種作業系統上顯示各種語言</li>  <li>相容本地翻譯 (但需要自願者)</li> </ul>]]></target>
+      </trans-unit>
+      <trans-unit id="16" approved="yes">
+        <source><![CDATA[about.download.button.text]]></source>
+        <target><![CDATA[立刻下載]]></target>
+      </trans-unit>
+      <trans-unit id="17" approved="yes">
+        <source><![CDATA[about.download.version]]></source>
+        <target><![CDATA[版本]]></target>
+      </trans-unit>
+      <trans-unit id="18" approved="yes">
+        <source><![CDATA[about.download.installer]]></source>
+        <target><![CDATA[圖形介面安裝版]]></target>
+      </trans-unit>
+      <trans-unit id="19" approved="yes">
+        <source><![CDATA[about.download.for]]></source>
+        <target><![CDATA[適用]]></target>
+      </trans-unit>
+      <trans-unit id="20" approved="yes">
+        <source><![CDATA[about.download.other]]></source>
+        <target><![CDATA[其它版本 (如作業系統, 介面...) <a href="%downloadRoute%">在此</a>]]></target>
+      </trans-unit>
+      <trans-unit id="21" approved="yes">
+        <source><![CDATA[about.what.changelog]]></source>
+        <target><![CDATA[<a href="%changelogRoute%">檢視</a>]]></target>
+      </trans-unit>
+      <trans-unit id="22" approved="yes">
+        <source><![CDATA[about.what.donate]]></source>
+        <target><![CDATA[您可以<a href="%donateRoute%">贊助</a>來支援往後的發展]]></target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

@@ -1,0 +1,12 @@
+/* Made by Furu systems - furusystems.com */
+<public:component lightWeight="true">
+<public:attach event="oncontentready" onevent="setWidth()" />
+<public:attach for="window" event="onresize" onevent="setWidth()" />
+<public:method name="setWidth" />
+<script>
+        function setWidth(){
+                var windowWidth = element.document.compatMode == 'CSS1Compat' ? element.document.documentElement.clientWidth : element.document.body.clientWidth;
+                element.runtimeStyle.width = windowWidth < 780 ? 780 : 86+'%';
+        }
+</script>
+</public:component>

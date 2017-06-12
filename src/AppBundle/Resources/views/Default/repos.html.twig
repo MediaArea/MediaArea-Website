@@ -1,0 +1,301 @@
+{% extends 'AppBundle::base.html.twig' %}
+
+{% block title %}{% trans %}repos.page.title{% endtrans %}{% endblock %}
+{% block description %}{% trans %}about.page.description{% endtrans %}{% endblock %}
+{% block keywords %}{% trans %}about.page.keywords{% endtrans %}{% endblock %}
+
+{% block body %}
+<h1>{% trans %}repos.title{% endtrans %}</h1>
+
+<p>MediaArea softwares repositories are available for automatic update of our softwares for the distributions listed below.<br />
+</p>
+
+<p>You can also enable snapshots repository to get the latest development builds of our softwares.</p>
+<p>Repositories key fingerprint is: C5CD F62C 7AE0 5CC8 4765 7390 C10E 1109 0EC0 E438</p>
+<p>Up to date packages are: mediainfo, mediainfo-gui, mediaconch, mediaconch-gui, qctools.</p>
+
+<div id='rpm'>
+<h2>Commands for rpm based distributions</h2>
+<p>For releases repository, download and install <a href='https://mediaarea.net/repo/rpm/releases/repo-MediaArea-1.0-2.noarch.rpm'>this package</a><br/>or type the following command in a root terminal:</p>
+<table class="download">
+<thead>
+  <tr class="table-header">
+    <th style='width: 8%'>Repository</th>
+    <th>Command</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <th>Releases</th>
+    <td><pre>rpm -Uvh https://mediaarea.net/repo/rpm/releases/repo-MediaArea-1.0-2.noarch.rpm</pre></td>
+  </tr>
+  <tr>
+    <th>Snapshots</th>
+    <td><pre>rpm -Uvh https://mediaarea.net/repo/rpm/snapshots/repo-MediaArea-snapshots-1.0-2.noarch.rpm</pre></td>
+  </tr>
+</tbody>
+</table>
+</div>
+
+<div id='deb'>
+<h2>Commands for deb based distributions</h2>
+<p>For releases repository, download and install <a href='https://mediaarea.net/repo/deb/repo-mediaarea-1.0-2_all.deb'>this package</a> (don't forget to do 'apt-get update' before trying to install something)<br/>or type the following command in a root terminal:</p>
+<table class="download">
+<thead>
+<tr class="table-header">
+    <th style='width: 8%'>Repository</th>
+    <th>Command</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+    <th>Releases</th>
+    <td><pre>wget https://mediaarea.net/repo/deb/repo-mediaarea-1.0-2_all.deb && dpkg -i repo-mediaarea-1.0-2_all.deb && apt-get update</pre></td>
+</tr>
+<tr>
+    <th>Snapshots</th>
+    <td><pre>wget https://mediaarea.net/repo/deb/repo-mediaarea-snapshots-1.0-2_all.deb && dpkg -i repo-mediaarea-snapshots-1.0-2_all.deb</pre></td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<h2>Supported distributions versions and architectures</h2>
+<div id='Debian'>
+<h3>Debian</h3>
+<table class="download">
+<thead>
+<tr class="table-header">
+    <th style='width: 20%'>Version</th>
+    <th>Architecture</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>8 (Jessie)</td>
+<td>x86_64, i586</td>
+</tr>
+<tr>
+<td>7 (Wheezy)</td>
+<td>x86_64, i586</td>
+</tr>
+<tr>
+<td>6 (Squeeze)</td>
+<td>x86_64, i586</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<div id='Ubuntu/LinuxMint'>
+<h3>Ubuntu/LinuxMint</h3>
+<table class="download">
+<thead>
+<tr class="table-header">
+    <th style='width: 20%'>Version</th>
+    <th>Architecture</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Ubuntu 16.10 (Yakkety Yak)</td>
+<td>i586, x86_64</td>
+</tr>
+<tr>
+<td>Ubuntu 16.04 (Xenial Xerus)</td>
+<td>i586, x86_64</td>
+</tr>
+<tr>
+<td>Ubuntu 15.10 (Wily Werewolf)</td>
+<td>x86_64, i586</td>
+</tr>
+<tr>
+<td>Ubuntu 15.04 (Vivid Vervet)</td>
+<td>x86_64, i586</td>
+</tr>
+<tr>
+<td>Ubuntu 14.10 (Utopic Unicorn)</td>
+<td>x86_64, i586</td>
+</tr>
+<tr>
+<td>Ubuntu 14.04 (Trusty Tahr)<br />Linux Mint 17 (Qiana)<br />Linux Mint 17.1 (Rebecca)<br />Linux Mint 17.2 (Rafaela)<br />Linux Mint 17.3 (Rosa)</td>
+<td>x86_64, i586</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<div id='CentOS'>
+<h3>CentOS</h3>
+<table class="download">
+<thead>
+<tr class="table-header">
+    <th style='width: 20%'>Version</th>
+    <th>Architecture</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>7</td>
+<td>x86_64</td>
+</tr>
+<tr>
+<td>6</td>
+<td>x86_64, i586</td>
+</tr>
+<tr>
+<td>5</td>
+<td>x86_64, i586</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<div id='RHEL'>
+<h3>RHEL</h3>
+<table class="download">
+<thead>
+<tr class="table-header">
+    <th style='width: 20%'>Version</th>
+    <th>Architecture</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>7</td>
+<td>ppc64, x86_64</td>
+</tr>
+<tr>
+<td>6</td>
+<td>i586, x86_64</td>
+</tr>
+<tr>
+<td>5</td>
+<td>i586, x86_64</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<div id='Fedora'>
+<h3>Fedora</h3>
+<table class="download">
+<thead>
+<tr class="table-header">
+    <th style='width: 20%'>Version</th>
+    <th>Architecture</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>25</td>
+<td>i586, x86_64</td>
+</tr>
+<tr>
+<td>24</td>
+<td>x86_64, i586</td>
+</tr>
+<tr>
+<td>23</td>
+<td>x86_64, i586</td>
+</tr>
+<tr>
+<td>22</td>
+<td>x86_64, i586</td>
+</tr>
+<tr>
+<td>21</td>
+<td>x86_64, i586</td>
+</tr>
+<tr>
+<td>20 (Heisenbug)</td>
+<td>x86_64, i586</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<div id='SLE'>
+<h3>SLE</h3>
+<table class="download">
+<thead>
+<tr class="table-header">
+    <th style='width: 20%'>Version</th>
+    <th>Architecture</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>12 SP2</td>
+<td>x86_64</td>
+</tr>
+<tr>
+<td>12 SP1</td>
+<td>x86_64</td>
+</tr>
+<tr>
+<td>12</td>
+<td>x86_64</td>
+</tr>
+<tr>
+<td>11 SP4</td>
+<td>x86_64, i586</td>
+</tr>
+<tr>
+<td>11 SP3</td>
+<td>x86_64, i586</td>
+</tr>
+<tr>
+<td>11 SP2</td>
+<td>x86_64, ppc64, i586</td>
+</tr>
+<tr>
+<td>11 SP1</td>
+<td>x86_64, i586</td>
+</tr>
+<tr>
+<td>11</td>
+<td>x86_64, i586</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<div id='openSUSE'>
+<h3>openSUSE</h3>
+<table class="download">
+<thead>
+<tr class="table-header">
+    <th style='width: 20%'>Version</th>
+    <th>Architecture</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Tumbleweed</td>
+<td>x86_64, i586</td>
+</tr>
+<tr>
+<td>Leap 42.2</td>
+<td>x86_64</td>
+</tr>
+<tr>
+<td>Leap 42.1</td>
+<td>x86_64</td>
+</tr>
+<tr>
+<td>13.2</td>
+<td>x86_64, i586</td>
+</tr>
+<tr>
+<td>13.1</td>
+<td>x86_64, i586</td>
+</tr>
+<tr>
+<td>11.4</td>
+<td>x86_64, i586</td>
+</tr>
+</tbody>
+</table>
+</div>
+{% endblock %}

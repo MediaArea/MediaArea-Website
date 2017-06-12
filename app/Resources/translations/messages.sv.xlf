@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="en" datatype="plaintext" original="file.ext" target-language="sv">
+    <body>
+      <trans-unit id="1" approved="yes">
+        <source><![CDATA[menu.about]]></source>
+        <target><![CDATA[Om programmet]]></target>
+      </trans-unit>
+      <trans-unit id="2" approved="yes">
+        <source><![CDATA[menu.download]]></source>
+        <target><![CDATA[Ladda ner]]></target>
+      </trans-unit>
+      <trans-unit id="3" approved="yes">
+        <source><![CDATA[menu.donate]]></source>
+        <target><![CDATA[MediaInfo hjälp]]></target>
+      </trans-unit>
+      <trans-unit id="4" approved="yes">
+        <source><![CDATA[menu.testimonials]]></source>
+        <target><![CDATA[Dom talar om MediaInfo]]></target>
+      </trans-unit>
+      <trans-unit id="5" approved="yes">
+        <source><![CDATA[about.page.description]]></source>
+        <target><![CDATA[MediaInfo supplies technical and tag information about your video or audio files. This is a free software (free of charge and free for access to source code)]]></target>
+      </trans-unit>
+      <trans-unit id="6" approved="yes">
+        <source><![CDATA[about.what.title]]></source>
+        <target><![CDATA[Vad är  MediaInfo?]]></target>
+      </trans-unit>
+      <trans-unit id="7" approved="yes">
+        <source><![CDATA[about.what.content]]></source>
+        <target><![CDATA[<strong>MediaInfo </strong>tillhandahåller teknisk information om video och ljudfiler.<br/>     Detta är ett gratis program (gratis att användas och gratis att använda källkoden, <a href="%licenseRoute%">BSD</a> licens)]]></target>
+      </trans-unit>
+      <trans-unit id="8" approved="yes">
+        <source><![CDATA[about.data.title]]></source>
+        <target><![CDATA[Vilken information kan jag få från MediaInfo?]]></target>
+      </trans-unit>
+      <trans-unit id="9" approved="yes">
+        <source><![CDATA[about.data.content]]></source>
+        <target><![CDATA[<ul>  <li>Allmäna: titel, författare, regissör, album, spår-nummer, datum, längd...</li>  <li>Video: codec, aspect,  fps, bitrate...</li>  <li>Ljud: codec, samplingshastighet, kanaler, språk, bitrate...</li>  <li>Text: språk på undertexten</li>  <li>Kapitel: antal kapitel, kapitellista</li> </ul>]]></target>
+      </trans-unit>
+      <trans-unit id="10" approved="yes">
+        <source><![CDATA[about.analyticals.title]]></source>
+        <target><![CDATA[Vilka format stödjer MediaInfo?]]></target>
+      </trans-unit>
+      <trans-unit id="11" approved="yes">
+        <source><![CDATA[about.analyticals.content]]></source>
+        <target><![CDATA[<ul>  <li>Video: MKV, OGM, AVI, DivX, WMV, QuickTime, Real, MPEG-1, MPEG-2, MPEG-4, DVD (VOB)...<br/>      (Codecs: DivX, XviD, MSMPEG4, ASP, H.264/AVC, H.265/HEVC, FFV1...)</li>  <li>Ljud: OGG, MP3, WAV, RA, AC3, DTS, AAC, M4A, AU, AIFF...</li>  <li>Undertexter: SRT, SSA, ASS, SAMI...</li> </ul>]]></target>
+      </trans-unit>
+      <trans-unit id="12" approved="yes">
+        <source><![CDATA[about.features.title]]></source>
+        <target><![CDATA[Vad kan jag göra med den här?]]></target>
+      </trans-unit>
+      <trans-unit id="13" approved="yes">
+        <source><![CDATA[about.features.content]]></source>
+        <target><![CDATA[<ul>  <li>Läsa många <a href="%supportFormatRoute%">video och ljudformat</a> </li>  <li>Mångfald betyder sättet att visa informationen( text, blad, träd, HTML...)</li>  <li>Du  kan skräddarsy dessa sätt</li>  <li>Möjlighet att exportera: text, CSV, HTML...</li>  <li>Användargränsnitt,  command line eller DLL</li>  <li>Integrera med MS-Windows shell(drag'n' drop och Context meny) </li>  <li>Internationell: Visa vilket språk som helst på vilken OS version som helst</li>  <li>Lokala språk (men frivilliga behövs)</li> </ul>]]></target>
+      </trans-unit>
+      <trans-unit id="14" approved="yes">
+        <source><![CDATA[about.download.button.text]]></source>
+        <target><![CDATA[Ladda ner]]></target>
+      </trans-unit>
+      <trans-unit id="15" approved="yes">
+        <source><![CDATA[about.download.installer]]></source>
+        <target><![CDATA[Användargränsnitt, med installation]]></target>
+      </trans-unit>
+      <trans-unit id="16" approved="yes">
+        <source><![CDATA[about.download.for]]></source>
+        <target><![CDATA[för]]></target>
+      </trans-unit>
+      <trans-unit id="17" approved="yes">
+        <source><![CDATA[about.download.other]]></source>
+        <target><![CDATA[Andra versioner (OS, gränsnitt...) finns <a href="%downloadRoute%">här</a>]]></target>
+      </trans-unit>
+      <trans-unit id="18" approved="yes">
+        <source><![CDATA[about.what.changelog]]></source>
+        <target><![CDATA[Du kan <a href="%changelogRoute%">följa</a>]]></target>
+      </trans-unit>
+      <trans-unit id="19" approved="yes">
+        <source><![CDATA[about.what.donate]]></source>
+        <target><![CDATA[Du kan <a href="%donateRoute%">donera</a> för att stödja en fortsatt utveckling]]></target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

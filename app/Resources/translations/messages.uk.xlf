@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="en" datatype="plaintext" original="file.ext" target-language="uk">
+    <body>
+      <trans-unit id="1" approved="yes">
+        <source><![CDATA[menu.about]]></source>
+        <target><![CDATA[Про проект]]></target>
+      </trans-unit>
+      <trans-unit id="2" approved="yes">
+        <source><![CDATA[menu.download]]></source>
+        <target><![CDATA[Загрузка]]></target>
+      </trans-unit>
+      <trans-unit id="3" approved="yes">
+        <source><![CDATA[menu.screenshots]]></source>
+        <target><![CDATA[Скріншоти]]></target>
+      </trans-unit>
+      <trans-unit id="4" approved="yes">
+        <source><![CDATA[menu.donate]]></source>
+        <target><![CDATA[Допомога MediaInfo]]></target>
+      </trans-unit>
+      <trans-unit id="5" approved="yes">
+        <source><![CDATA[menu.support]]></source>
+        <target><![CDATA[Підтримка]]></target>
+      </trans-unit>
+      <trans-unit id="6" approved="yes">
+        <source><![CDATA[menu.testimonials]]></source>
+        <target><![CDATA[Вони говорять про MediaInfo]]></target>
+      </trans-unit>
+      <trans-unit id="7" approved="yes">
+        <source><![CDATA[about.page.description]]></source>
+        <target><![CDATA[MediaInfo дозволяє отримувати технічні дані і теги із ваших відео- чи аудіо фійлів. Це - безкоштовне програмне забезпечення (безкоштовний та вільного доступ до вихідного коду)]]></target>
+      </trans-unit>
+      <trans-unit id="8" approved="yes">
+        <source><![CDATA[about.page.keywords]]></source>
+        <target><![CDATA[MediaInfo Media Info DLL інформація теги кодеки відео аудіо субтри глави AVI MKV OGM безкоштовно]]></target>
+      </trans-unit>
+      <trans-unit id="9" approved="yes">
+        <source><![CDATA[about.what.title]]></source>
+        <target><![CDATA[Що таке MediaInfo?]]></target>
+      </trans-unit>
+      <trans-unit id="10" approved="yes">
+        <source><![CDATA[about.what.content]]></source>
+        <target><![CDATA[<strong>MediaInfo</strong> дозволяє отримувати     технічну та тегову інформацію з ваших відео і аудіо файлів.<br/>     Це є вільне програмне забезпечення (безкоштовний та вільний доступ до вихідного коду: <a href="%licenseRoute%">BSD</a> ліцензії)]]></target>
+      </trans-unit>
+      <trans-unit id="11" approved="yes">
+        <source><![CDATA[about.data.title]]></source>
+        <target><![CDATA[Яку інформацію я можу отримати за допомогою MediaInfo?]]></target>
+      </trans-unit>
+      <trans-unit id="12" approved="yes">
+        <source><![CDATA[about.data.content]]></source>
+        <target><![CDATA[<ul>  <li>Основна: назва, автор, режисер, альбом, номер звукової дорожки, дата, тривалість...</li>  <li>Відео: кодек, співвідношення сторін, частота кадрів, швидкість потоку...</li>  <li>Аудіо: кодек, частота дискретизації, канали, мову, швидкість потоку...</li>  <li>Текст: мова субтитрів</li>  <li>Частини: намерація частин, список частин</li> </ul>]]></target>
+      </trans-unit>
+      <trans-unit id="13" approved="yes">
+        <source><![CDATA[about.analyticals.title]]></source>
+        <target><![CDATA[Які формати (контейнери) підтримує MediaInfo?]]></target>
+      </trans-unit>
+      <trans-unit id="14" approved="yes">
+        <source><![CDATA[about.analyticals.content]]></source>
+        <target><![CDATA[<ul>  <li>Відео: MKV, OGM, AVI, DivX, WMV, QuickTime, Real, MPEG-1, MPEG-2, MPEG-4, DVD (VOB)...<br/>      (Кодеки: DivX, XviD, MSMPEG4, ASP, H.264/AVC, H.265/HEVC, FFV1...)</li>  <li>Аудіо: OGG, MP3, WAV, RA, AC3, DTS, AAC, M4A, AU, AIFF...</li>  <li>Субтитри: SRT, SSA, ASS, SAMI...</li> </ul>]]></target>
+      </trans-unit>
+      <trans-unit id="15" approved="yes">
+        <source><![CDATA[about.features.title]]></source>
+        <target><![CDATA[Що я можу робити з MediaInfo?]]></target>
+      </trans-unit>
+      <trans-unit id="16" approved="yes">
+        <source><![CDATA[about.features.content]]></source>
+        <target><![CDATA[<ul>  <li>Аналізувати безліч <a href="%supportFormatRoute%"> форматів відео- і аудіо- фалів</a></li>  <li>Різні методи відображення інформації (текст, таблиця, дерево, HTML...)</li>  <li>Ви можете змінювати відображення</li>  <li>Експорт інформації у текст, CSV, HTML...</li>  <li>Використовувати графічний інтерфейс, командну строку, чи DLL</li>  <li>Інтеграція в оболонку MS-Windows (drag 'n' drop і контекстне меню)</li>  <li>Інтернаціоналізація: Будь-яка мова відображується в будь-якій операційній системі</li>  <li>Можливість локалізації (але необхідні добровольці)</li> </ul>]]></target>
+      </trans-unit>
+      <trans-unit id="17" approved="yes">
+        <source><![CDATA[about.download.button.text]]></source>
+        <target><![CDATA[Загрузити]]></target>
+      </trans-unit>
+      <trans-unit id="18" approved="yes">
+        <source><![CDATA[about.download.version]]></source>
+        <target><![CDATA[версія]]></target>
+      </trans-unit>
+      <trans-unit id="19" approved="yes">
+        <source><![CDATA[about.download.installer]]></source>
+        <target><![CDATA[Графічний інтерфейс, з установщиком]]></target>
+      </trans-unit>
+      <trans-unit id="20" approved="yes">
+        <source><![CDATA[about.download.other]]></source>
+        <target><![CDATA[Інші версії (ОС, інтерфейс...) також <a href="%downloadRoute%">доступні</a>]]></target>
+      </trans-unit>
+      <trans-unit id="21" approved="yes">
+        <source><![CDATA[about.what.changelog]]></source>
+        <target><![CDATA[Ви можете <a href="%changelogRoute%">відслідковувати</a>]]></target>
+      </trans-unit>
+      <trans-unit id="22" approved="yes">
+        <source><![CDATA[about.what.donate]]></source>
+        <target><![CDATA[Ви можете <a href="%donateRoute%">пожертвувати</a> для підтримки подальших розробок]]></target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

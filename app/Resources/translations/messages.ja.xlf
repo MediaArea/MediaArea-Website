@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="en" datatype="plaintext" original="file.ext" target-language="ja">
+    <body>
+      <trans-unit id="1" approved="yes">
+        <source><![CDATA[about.screenshot_img.title]]></source>
+        <target><![CDATA[スクリーン ショット - メイン インターフェイス]]></target>
+      </trans-unit>
+      <trans-unit id="2" approved="yes">
+        <source><![CDATA[about.what.title]]></source>
+        <target><![CDATA[MediaInfo とは?]]></target>
+      </trans-unit>
+      <trans-unit id="3" approved="yes">
+        <source><![CDATA[about.what.content]]></source>
+        <target><![CDATA[<strong>MediaInfo</strong> はビデオ、オーディオ ファイルが使用するコーデックについてのタグ及び技術的な詳細情報を調査し見易くフレンドリーな形式でイクスポートできるツールです<br/>     MediaInfo は<strong>フリー</strong>です ( <strong>無料</strong>で使用できて     <strong>自由</strong>にソースコードへアクセスできることを意味します: 適用ライセンスは <a href="%licenseRoute%">BSD</a> です )]]></target>
+      </trans-unit>
+      <trans-unit id="4" approved="yes">
+        <source><![CDATA[about.data.title]]></source>
+        <target><![CDATA[MediaInfo で調査できる情報は？]]></target>
+      </trans-unit>
+      <trans-unit id="5" approved="yes">
+        <source><![CDATA[about.data.content]]></source>
+        <target><![CDATA[<ul>  <li>全般情報: タイトル, 製作者, ディレクター, アルバム, トラック番号, 日付, プレイ時間...</li>  <li>ビデオ: コーデック, 解像度, fps, ビットレート...</li>  <li>オーディオ: コーデック, サンプル レート, チャンネル, 言語, ビット レート...</li>  <li>テキスト: 字幕の言語</li>  <li>チャプター: チャプター番号、チャプターリスト</li> </ul>]]></target>
+      </trans-unit>
+      <trans-unit id="6" approved="yes">
+        <source><![CDATA[about.analyticals.title]]></source>
+        <target><![CDATA[MediaInfo がサポートするフォーマット（コンテナ）は？]]></target>
+      </trans-unit>
+      <trans-unit id="7" approved="yes">
+        <source><![CDATA[about.analyticals.content]]></source>
+        <target><![CDATA[<ul>  <li>ビデオ: MKV, OGM, AVI, DivX, WMV, QuickTime, Real, MPEG-1, MPEG-2, MPEG-4, DVD (VOB)...<br/>      (Codecs: DivX, XviD, MSMPEG4, ASP, H.264/AVC, H.265/HEVC, FFV1...)</li>  <li>オーディオ: OGG, MP3, WAV, RA, AC3, DTS, AAC, M4A, AU, AIFF...</li>  <li>字幕: SRT, SSA, ASS, SAMI...</li> </ul>]]></target>
+      </trans-unit>
+      <trans-unit id="8" approved="yes">
+        <source><![CDATA[about.features.title]]></source>
+        <target><![CDATA[その他、特長はありますか？]]></target>
+      </trans-unit>
+      <trans-unit id="9" approved="yes">
+        <source><![CDATA[about.features.content]]></source>
+        <target><![CDATA[<ul>  <li>多彩な<a href="%supportFormatRoute%"> ビデオ、オーディオフォーマット</a>を読み込むことが出来ます</li>  <li>異なるメソッドにて好みのビューで閲覧 （テキスト、 シート、 ツリー、 HTML...）</li>  <li>ビューはカスタマイズ可能です</li>  <li>閲覧情報をテキスト、 CSV、 HTML でイクスポート</li>  <li>グラフィカル インターフェイス、コマンド ライン、DLL を用意</li>  <li>MS-Windows のシェルに統合できます （ドラッグ 'n' ドロップとコンテキスト メニュー）</li>  <li>国際化: あなたの OS 言語に併せた表示が可能です</li>  <li>ローカリゼーション（ボランティア募集中）</li> </ul>]]></target>
+      </trans-unit>
+      <trans-unit id="10" approved="yes">
+        <source><![CDATA[about.download.button.text]]></source>
+        <target><![CDATA[ダウンロード]]></target>
+      </trans-unit>
+      <trans-unit id="11" approved="yes">
+        <source><![CDATA[about.download.version]]></source>
+        <target><![CDATA[バージョン]]></target>
+      </trans-unit>
+      <trans-unit id="12" approved="yes">
+        <source><![CDATA[about.download.installer]]></source>
+        <target><![CDATA[GUI グラフィカル ユーザー インターフェイス, インストーラ付き]]></target>
+      </trans-unit>
+      <trans-unit id="13">
+        <source><![CDATA[about.download.for]]></source>
+        <target><![CDATA[]]></target>
+      </trans-unit>
+      <trans-unit id="14" approved="yes">
+        <source><![CDATA[about.download.other]]></source>
+        <target><![CDATA[全てのバージョン (OS, インターフェイス...) は <a href="%downloadRoute%">こちら</a> へどうぞ]]></target>
+      </trans-unit>
+      <trans-unit id="15" approved="yes">
+        <source><![CDATA[about.what.changelog]]></source>
+        <target><![CDATA[<a href="%changelogRoute%">モニター</a>]]></target>
+      </trans-unit>
+      <trans-unit id="16" approved="yes">
+        <source><![CDATA[about.what.donate]]></source>
+        <target><![CDATA[開発を加速させる <a href="%donateRoute%">寄付</a> 歓迎いたします]]></target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

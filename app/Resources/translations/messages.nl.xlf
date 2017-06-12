@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="en" datatype="plaintext" original="file.ext" target-language="nl">
+    <body>
+      <trans-unit id="1" approved="yes">
+        <source><![CDATA[menu.screenshots]]></source>
+        <target><![CDATA[Schermafdrukken]]></target>
+      </trans-unit>
+      <trans-unit id="2" approved="yes">
+        <source><![CDATA[menu.support]]></source>
+        <target><![CDATA[Ondersteuning]]></target>
+      </trans-unit>
+      <trans-unit id="3" approved="yes">
+        <source><![CDATA[menu.testimonials]]></source>
+        <target><![CDATA[Zij spreken over MediaInfo]]></target>
+      </trans-unit>
+      <trans-unit id="4" approved="yes">
+        <source><![CDATA[about.page.description]]></source>
+        <target><![CDATA[MediaInfo levert technische en tag-informatie over een video- of audiobestand. Dit is gratis software (gratis gebruik en gratis toegang tot broncode, BSD licentie)]]></target>
+      </trans-unit>
+      <trans-unit id="5" approved="yes">
+        <source><![CDATA[about.page.keywords]]></source>
+        <target><![CDATA[MediaInfo Media Info DLL informatie tag codec video audio ondertiteling hoofdstukken AVI MKV OGM gratis]]></target>
+      </trans-unit>
+      <trans-unit id="6" approved="yes">
+        <source><![CDATA[about.what.title]]></source>
+        <target><![CDATA[Wat is MediaInfo?]]></target>
+      </trans-unit>
+      <trans-unit id="7" approved="yes">
+        <source><![CDATA[about.what.content]]></source>
+        <target><![CDATA[<strong>MediaInfo</strong> levert technische en  tag-informatie over een video- of audiobestand.<br/>     Dit is gratis software (gratis gebruik en gratis toegang tot broncode, <a href="MediaInfo/License">BSD</a> licentie)]]></target>
+      </trans-unit>
+      <trans-unit id="8" approved="yes">
+        <source><![CDATA[about.data.title]]></source>
+        <target><![CDATA[Wat voor informatie kan ik van MediaInfo krijgen?]]></target>
+      </trans-unit>
+      <trans-unit id="9" approved="yes">
+        <source><![CDATA[about.data.content]]></source>
+        <target><![CDATA[<ul>  <li>Algemeen: titel, auteur, regisseur, album, tracknummer, datum, tijdsduur...</li>  <li>Video: codec, aspect, fps, bitrate...</li>  <li>Audio: codec, samplerate, kanalen, taal, bitrate...</li>  <li>Tekst: taal van ondertiteling</li>  <li>Hoofdstukken: telling van hoofdstukken, lijst van hoofstukken</li> </ul>]]></target>
+      </trans-unit>
+      <trans-unit id="10" approved="yes">
+        <source><![CDATA[about.analyticals.title]]></source>
+        <target><![CDATA[Welk formaat (container) wordt door MediaInfo ondersteund?]]></target>
+      </trans-unit>
+      <trans-unit id="11" approved="yes">
+        <source><![CDATA[about.analyticals.content]]></source>
+        <target><![CDATA[<ul>  <li>Video: MKV, OGM, AVI, DivX, WMV, QuickTime, Real, MPEG-1, MPEG-2, MPEG-4, DVD (VOB)...<br/>      (Codecs: DivX, XviD, MSMPEG4, ASP, H.264/AVC, H.265/HEVC, FFV1...)</li>  <li>Audio: OGG, MP3, WAV, RA, AC3, DTS, AAC, M4A, AU, AIFF...</li>  <li>Ondertiteling: SRT, SSA, ASS, SAMI...</li> </ul>]]></target>
+      </trans-unit>
+      <trans-unit id="12" approved="yes">
+        <source><![CDATA[about.features.title]]></source>
+        <target><![CDATA[Wat kan ik er mee doen?]]></target>
+      </trans-unit>
+      <trans-unit id="13" approved="yes">
+        <source><![CDATA[about.features.content]]></source>
+        <target><![CDATA[<ul>  <li>Lees vele <a href="%supportFormatRoute%"> video en audio bestandsformaten</a></li>  <li>Meerdere manieren om de informatie te bekijken (tekst, blad, boomstructuur, HTML...)</li>  <li>U kunt bovenstaande manieren aanpassen</li>  <li>Exportmogelijkheden: tekst, CSV, HTML...</li>  <li>Grafische Interface, of Commandoregel, of DLL</li>  <li>Integratie met  MS-Windows shell (slepen naar, en Contextmenu)</li>  <li>Internationalisatie: elke taal getoond op elke versie van uw Besturingssysteem</li>  <li>Lokalisatie is mogelijk (maar vrijwilligers nodig)</li> </ul>]]></target>
+      </trans-unit>
+      <trans-unit id="14" approved="yes">
+        <source><![CDATA[about.download.button.text]]></source>
+        <target><![CDATA[Download het]]></target>
+      </trans-unit>
+      <trans-unit id="15" approved="yes">
+        <source><![CDATA[about.download.version]]></source>
+        <target><![CDATA[versie]]></target>
+      </trans-unit>
+      <trans-unit id="16" approved="yes">
+        <source><![CDATA[about.download.installer]]></source>
+        <target><![CDATA[Grafische Interface, met Installatieprogramma]]></target>
+      </trans-unit>
+      <trans-unit id="17" approved="yes">
+        <source><![CDATA[about.download.for]]></source>
+        <target><![CDATA[voor]]></target>
+      </trans-unit>
+      <trans-unit id="18" approved="yes">
+        <source><![CDATA[about.download.other]]></source>
+        <target><![CDATA[Andere versies (OS, interface...) zijn <a href="%downloadRoute%">beschikbaar</a>]]></target>
+      </trans-unit>
+      <trans-unit id="19" approved="yes">
+        <source><![CDATA[about.what.changelog]]></source>
+        <target><![CDATA[U kunt release notes <a href="%changelogRoute%">volgen</a>]]></target>
+      </trans-unit>
+      <trans-unit id="20" approved="yes">
+        <source><![CDATA[about.what.donate]]></source>
+        <target><![CDATA[U kunt <a href="%donateRoute%">doneren</a> om verdere ontwikkeling te ondersteunen]]></target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

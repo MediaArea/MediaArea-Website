@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="en" datatype="plaintext" original="file.ext" target-language="ko">
+    <body>
+      <trans-unit id="1" approved="yes">
+        <source><![CDATA[menu.about]]></source>
+        <target><![CDATA[정보]]></target>
+      </trans-unit>
+      <trans-unit id="2" approved="yes">
+        <source><![CDATA[menu.download]]></source>
+        <target><![CDATA[다운로드]]></target>
+      </trans-unit>
+      <trans-unit id="3" approved="yes">
+        <source><![CDATA[menu.screenshots]]></source>
+        <target><![CDATA[스크린샷]]></target>
+      </trans-unit>
+      <trans-unit id="4" approved="yes">
+        <source><![CDATA[menu.donate]]></source>
+        <target><![CDATA[MediaInfo를 도움]]></target>
+      </trans-unit>
+      <trans-unit id="5" approved="yes">
+        <source><![CDATA[menu.support]]></source>
+        <target><![CDATA[지원]]></target>
+      </trans-unit>
+      <trans-unit id="6" approved="yes">
+        <source><![CDATA[menu.testimonials]]></source>
+        <target><![CDATA[MediaInfo에 대한 이야기들]]></target>
+      </trans-unit>
+      <trans-unit id="7" approved="yes">
+        <source><![CDATA[about.page.description]]></source>
+        <target><![CDATA[MediaInfo는 비디오나 오디오 파일에 대한 태그 정보와 기술 정보를 제공해주는 무료 소프트웨어입니다. (공개 소프트웨어: BSD 라이센스)]]></target>
+      </trans-unit>
+      <trans-unit id="8" approved="yes">
+        <source><![CDATA[about.page.keywords]]></source>
+        <target><![CDATA[MediaInfo Media Info DLL 정보 태그 코덱 비디오 오디오 자막 챕터 AVI MKV OGM 무료]]></target>
+      </trans-unit>
+      <trans-unit id="9" approved="yes">
+        <source><![CDATA[about.what.title]]></source>
+        <target><![CDATA[MediaInfo가 뭐죠?]]></target>
+      </trans-unit>
+      <trans-unit id="10" approved="yes">
+        <source><![CDATA[about.what.content]]></source>
+        <target><![CDATA[<strong>MediaInfo</strong>는 비디오나 오디오 파일에 대한 태그 정보와 기술 정보를 제공해주는 무료 소프트웨어입니다.<br/>     (공개 소프트웨어: <a href="%licenseRoute%">BSD</a> 라이센스)]]></target>
+      </trans-unit>
+      <trans-unit id="11" approved="yes">
+        <source><![CDATA[about.data.title]]></source>
+        <target><![CDATA[MediaInfo에서 어떤 정보를 얻을 수 있나요?]]></target>
+      </trans-unit>
+      <trans-unit id="12" approved="yes">
+        <source><![CDATA[about.data.content]]></source>
+        <target><![CDATA[<ul>  <li>일반: 제목, 작가, 디렉터, 앨범, 트랙 개수, 날짜, 재생 시간...</li>  <li>비디오: 코덱, 종횡비, fps, 비트레이트...</li>  <li>오디오: 코덱, 샘플레이트, 채널, 언어, 비트레이트...</li>  <li>텍스트: 자막의 언어</li>  <li>챕터: 챕터 개수, 챕터 리스트</li> </ul>]]></target>
+      </trans-unit>
+      <trans-unit id="13" approved="yes">
+        <source><![CDATA[about.analyticals.title]]></source>
+        <target><![CDATA[MediaInfo는 어떤 포맷(컨테이너)을 지원하나요?]]></target>
+      </trans-unit>
+      <trans-unit id="14" approved="yes">
+        <source><![CDATA[about.analyticals.content]]></source>
+        <target><![CDATA[<ul>  <li>비디오: MKV, OGM, AVI, DivX, WMV, 퀵타임, 리얼, MPEG-1, MPEG-2, MPEG-4, DVD (VOB)...<br/>      (코덱: DivX, XviD, MSMPEG4, ASP, H.264/AVC, H.265/HEVC, FFV1...)</li>  <li>오디오: OGG, MP3, WAV, RA, AC3, DTS, AAC, M4A, AU, AIFF...</li>  <li>자막: SRT, SSA, ASS, SAMI...</li> </ul>]]></target>
+      </trans-unit>
+      <trans-unit id="15" approved="yes">
+        <source><![CDATA[about.features.title]]></source>
+        <target><![CDATA[MediaInfo로 뭘 할 수 있나요?]]></target>
+      </trans-unit>
+      <trans-unit id="16" approved="yes">
+        <source><![CDATA[about.features.content]]></source>
+        <target><![CDATA[<ul>  <li>다양한 <a href="%supportFormatRoute%">비디오와 오디오 파일</a>을 읽을 수 있습니다</li>  <li>정보를 보는 다른 방법 (텍스트, 시트, 트리, HTML...)</li>  <li>각각의 뷰를 커스터마이즈할 수 있습니다</li>  <li>텍스트, CSV, HTML...로 정보 내보내기</li>  <li>그래픽 인터페이스, 커맨드 라인, DLL</li>  <li>MS-Windows 탐색기와 통합(드래그앤드롭, 컨텍스트 메뉴)</li>  <li>국제화: 운영체제의 모든 버전에서 모든 언어 표시</li>  <li>다국어 지원 가능 (지원자 필요)</li> </ul>]]></target>
+      </trans-unit>
+      <trans-unit id="17" approved="yes">
+        <source><![CDATA[about.download.button.text]]></source>
+        <target><![CDATA[다운로드하세요]]></target>
+      </trans-unit>
+      <trans-unit id="18" approved="yes">
+        <source><![CDATA[about.download.version]]></source>
+        <target><![CDATA[버전]]></target>
+      </trans-unit>
+      <trans-unit id="19" approved="yes">
+        <source><![CDATA[about.download.installer]]></source>
+        <target><![CDATA[픽 인터페이스, 설치 프로그램]]></target>
+      </trans-unit>
+      <trans-unit id="20">
+        <source><![CDATA[about.download.for]]></source>
+        <target><![CDATA[]]></target>
+      </trans-unit>
+      <trans-unit id="21" approved="yes">
+        <source><![CDATA[about.download.other]]></source>
+        <target><![CDATA[다른 버전(OS, 인터페이스...)도  <a href="%downloadRoute%">제공</a> 합니다]]></target>
+      </trans-unit>
+      <trans-unit id="22" approved="yes">
+        <source><![CDATA[about.what.changelog]]></source>
+        <target><![CDATA[<a href="%changelogRoute%">상태를 체크</a>]]></target>
+      </trans-unit>
+      <trans-unit id="23" approved="yes">
+        <source><![CDATA[about.what.donate]]></source>
+        <target><![CDATA[개발을 지원하기 위해 <a href="%donateRoute%">기부</a> 하실 수 있습니다]]></target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

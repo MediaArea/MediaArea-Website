@@ -1,0 +1,17 @@
+/* Made by Furu systems - furusystems.com */
+<public:component lightWeight="true">
+<public:attach event="oncontentready" onevent="png()" />
+<public:method name="png" />
+<script>
+    function png(){
+      if(parentNode.className != "DXImageTransformed"){ 
+        try{       
+          runtimeStyle.filter = "progid:DXImageTransform.Microsoft.Alpha(opacity='0');";
+          applyElement(element.document.createElement("span"));
+          parentNode.runtimeStyle.filter = "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='"+src+"',sizingMethod='scale');";
+          parentNode.className ="DXImageTransformed";
+        } catch(e){ return; }
+      }
+    }
+</script>
+</public:component>

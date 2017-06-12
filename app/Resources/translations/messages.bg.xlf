@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="en" datatype="plaintext" original="file.ext" target-language="bg">
+    <body>
+      <trans-unit id="1" approved="yes">
+        <source><![CDATA[menu.about]]></source>
+        <target><![CDATA[Описание на програмата]]></target>
+      </trans-unit>
+      <trans-unit id="2" approved="yes">
+        <source><![CDATA[menu.download]]></source>
+        <target><![CDATA[Изтегляне]]></target>
+      </trans-unit>
+      <trans-unit id="3" approved="yes">
+        <source><![CDATA[menu.screenshots]]></source>
+        <target><![CDATA[Екрани от програмата]]></target>
+      </trans-unit>
+      <trans-unit id="4" approved="yes">
+        <source><![CDATA[menu.donate]]></source>
+        <target><![CDATA[Помогнете на MediaInfo]]></target>
+      </trans-unit>
+      <trans-unit id="5" approved="yes">
+        <source><![CDATA[menu.support]]></source>
+        <target><![CDATA[Поддръжка]]></target>
+      </trans-unit>
+      <trans-unit id="6" approved="yes">
+        <source><![CDATA[menu.testimonials]]></source>
+        <target><![CDATA[Те пишат за MediaInfo]]></target>
+      </trans-unit>
+      <trans-unit id="7" approved="yes">
+        <source><![CDATA[about.page.description]]></source>
+        <target><![CDATA[MediaInfo предоставя подробна техническа и tag информация за даден видео или аудио файл. Програмата е с безплатен лиценз (без такси и със свободен достъп до сорс кода: BSD лиценз)]]></target>
+      </trans-unit>
+      <trans-unit id="8" approved="yes">
+        <source><![CDATA[about.what.title]]></source>
+        <target><![CDATA[Какво е MediaInfo?]]></target>
+      </trans-unit>
+      <trans-unit id="9" approved="yes">
+        <source><![CDATA[about.what.content]]></source>
+        <target><![CDATA[<strong>MediaInfo</strong> предоставя подробна техническа информация и инфромазия за таговете на даден видео или аудио файл.<br/>     Програмата е с безплатен лиценз (без такси и със свободен достъп до сорс кода: <a href="%licenseRoute%">BSD</a> лиценз)]]></target>
+      </trans-unit>
+      <trans-unit id="10" approved="yes">
+        <source><![CDATA[about.data.title]]></source>
+        <target><![CDATA[Каква информация можете да получите чрез MediaInfo?]]></target>
+      </trans-unit>
+      <trans-unit id="11" approved="yes">
+        <source><![CDATA[about.data.content]]></source>
+        <target><![CDATA[<ul>  <li>Обща: заглавие, автор, продуцент, албум, номер на песента, дата, продължителност...</li>  <li>Видео: кодек, мащаб, кадри в секунда, bitrate...</li>  <li>Аудио: кодек, честота, канали, език, bitrate...</li>  <li>Текст: език на субтитрите</li>  <li>Глави: брой глави в DVD филм, списък на главите</li> </ul>]]></target>
+      </trans-unit>
+      <trans-unit id="12" approved="yes">
+        <source><![CDATA[about.analyticals.title]]></source>
+        <target><![CDATA[Какви формати поддържа MediaInfo?]]></target>
+      </trans-unit>
+      <trans-unit id="13" approved="yes">
+        <source><![CDATA[about.analyticals.content]]></source>
+        <target><![CDATA[<ul>  <li>Видео: MKV, OGM, AVI, DivX, WMV, QuickTime, Real, MPEG-1, MPEG-2, MPEG-4, DVD (VOB)...<br/>      (Кодеци: DivX, XviD, MSMPEG4, ASP, H.264/AVC, H.265/HEVC, FFV1...)</li>  <li>Аудио: OGG, MP3, WAV, RA, AC3, DTS, AAC, M4A, AU, AIFF...</li>  <li>Субтитри: SRT, SSA, ASS, SAMI...</li> </ul>]]></target>
+      </trans-unit>
+      <trans-unit id="14" approved="yes">
+        <source><![CDATA[about.features.title]]></source>
+        <target><![CDATA[Какви възможности Ви предоставя MediaInfo?]]></target>
+      </trans-unit>
+      <trans-unit id="15" approved="yes">
+        <source><![CDATA[about.features.content]]></source>
+        <target><![CDATA[<ul>  <li>Да преглеждате множество <a href="%supportFormatRoute%">видео и аудио формати</a></li>  <li>Различни методи за преглеждане на информацията (текстови, на отделни страници, дървовиден, като HTML...)</li>  <li>Можете да настройвате тези изгледи според нуждите си</li>  <li>Да изнасяте информацията като текст, CSV, HTML...</li>  <li>Да използвате програмата с графичен интерфейс, команден ред или DLL</li>  <li>Интеграция в контекстните менюта на Windows и поддръжка на влачене-и-пускане</li>  <li>Поддръжка на множество езици</li>  <li>Възможност за превеждане на други езици от доброволци</li> </ul>]]></target>
+      </trans-unit>
+      <trans-unit id="16" approved="yes">
+        <source><![CDATA[about.download.installer]]></source>
+        <target><![CDATA[Графичен интерфейс с инсталатор]]></target>
+      </trans-unit>
+      <trans-unit id="17" approved="yes">
+        <source><![CDATA[about.download.for]]></source>
+        <target><![CDATA[за]]></target>
+      </trans-unit>
+      <trans-unit id="18" approved="yes">
+        <source><![CDATA[about.download.other]]></source>
+        <target><![CDATA[Достъпни са и други версии (за различни операционни системи и с различни интерфейси на <a href="%downloadRoute%">страницата за изтегляне</a>]]></target>
+      </trans-unit>
+      <trans-unit id="19" approved="yes">
+        <source><![CDATA[about.what.changelog]]></source>
+        <target><![CDATA[Можете да <a href="%changelogRoute%">следите</a>]]></target>
+      </trans-unit>
+      <trans-unit id="20" approved="yes">
+        <source><![CDATA[about.what.donate]]></source>
+        <target><![CDATA[Можете да <a href="%donateRoute%">направите дарение</a>, за да подкрепите по-нататъшното дарение]]></target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

@@ -1,0 +1,158 @@
+{% extends 'AppBundle::base.html.twig' %}
+
+{% block title %}MediaInfo - Quick start{% endblock %}
+{% block description %}{% trans %}about.page.description{% endtrans %}{% endblock %}
+{% block keywords %}{% trans %}about.page.keywords{% endtrans %}{% endblock %}
+
+{% block body %}
+<ul>
+ <li><a href="#Quick_Start">How to begin quickly with MediaInfo</a>
+  <ul>
+   <li><a href="#Example">Example</a>
+    <ul>
+     <li><a href="#Example_Normal">What you should do</a></li>
+     <li><a href="#Example_Short">Too long? Try this!</a></li>
+    </ul>
+   </li>
+   <li><a href="#Unicode">Unicode?</a></li>
+   <li><a href="#Init">Init the library</a>
+    <ul>
+     <li><a href="#Internet">Internet connection</a></li>
+     <li><a href="#Version">The version of the library</a></li>
+     <li><a href="#Language">Set the language of the library</a></li>
+    </ul>
+   </li>
+   <li><a href="#NewHandle">Create a new Handle</a></li>
+   <li><a href="#Open">Open one or multiple files</a></li>
+   <li><a href="#Info">Get information</a>
+    <ul>
+     <li><a href="#Output">Get a pre-formated text</a>
+      <ul>
+       <li><a href="#Output_Normal">Standart output</a></li>
+       <li><a href="#Output_Custom">Customize it</a></li>
+      </ul>
+     </li>
+     <li><a href="#Get">Get a piece of information</a></li>
+    </ul>
+   </li>
+   <li><a href="#Release">Release memory</a></li>
+  </ul>
+ </li>
+</ul>
+
+<a name="Quick_Start"></a><h1>How to begin quickly with MediaInfo</h1>
+<a name="Example"></a><h2>Example</h2>
+<a name="Example_Normal"></a><h3>What you should do</h3>
+A quick example, explained line per line in the next chapters (note : with the DLL, and you must adapt it to your language):<br/>
+<ul>
+     <li>
+          Init (only one time):<br/>
+          <code>MediaInfo::Options("Info_Version",&nbsp;"<abbr title="Version of MediaInfo you have tested. Example : &quot;0.7.0.0&quot;, &quot;0.7.0.1&quot;, &quot;0.8.0.0&quot;">**VERSION**</abbr>;<abbr title="Unique name of your application. Examples : &quot;MediaInfoGUI&quot;, &quot;MediaInfoCmd&quot;">**APP_NAME**</abbr>;<abbr title="Version of your application. Example : &quot;0.7.0.0&quot;, &quot;1.2&quot;, &quot;1.26beta1&quot;">**APP_VERSION**</abbr>")</code><br/>
+          <code>MediaInfo Handle</code> (for DLL : <code>void* Handle=MediaInfo::New()</code>)<br/>
+     </li>
+     <li>
+          For each file:<br/>
+          <code>MediaInfo::Open("**FILENAME**")</code><br/>
+          <code>MediaInfo::Inform()</code><br/>
+          <code>...</code><br/>
+          (for DLL only: <code>MediaInfo::Delete(Handle)</code>)<br/>
+     </li>
+</ul>
+
+<a name="Example_Short"></a><h3>Too long? Try this!</h3>
+This should be use only if you don't expect all error messages (there will be only one error message for all possible errors) and want to open only one file:<br/>
+<code>void* Hande=MediaInfo::OpenQuick("**FILENAME**", "<abbr title="Version of MediaInfo you have tested. Example : &quot;0.7.0.0&quot;, &quot;0.7.0.1&quot;, &quot;0.8.0.0&quot;">**VERSION**</abbr>;<abbr title="Unique name of your application. Examples : &quot;MediaInfoGUI&quot;, &quot;MediaInfoCmd&quot;">**APP_NAME**</abbr>;<abbr title="Version of your application. Example : &quot;0.7.0.0&quot;, &quot;1.2&quot;, &quot;1.26beta1&quot;">**APP_VERSION**</abbr>")</code><br/>
+<code>MediaInfo::Inform()</code><br/>
+<code>...</code><br/>
+(for DLL only: <code>MediaInfo::Delete(Handle)</code>)<br/>
+
+<a name="Unicode"></a><h2>Unicode?</h2>
+As for every modern library, MediaInfo(Lib) support <a href="http://www.unicode.org/standard/WhatIsUnicode.html">Unicode</a>. With this, you don't mind of the location of your program to show text. This is <a href="https://www.w3.org/International/">internationalization (I18N)</a>, and you can show to the user multiple alphabets (Greek, russian, french...) without coding problems!<br/>
+You should use the Unicode enabled library and make your program Unicode ready if you start a new program.<br/>
+Exception : Microsoft Windows command line does not support Unicode, so if you use command line, let use MediaInfo without Unicode.<br/>
+<br/>
+For the DLL, because only one version of it is released, you have:
+<ul>
+     <li>MediaInfo::XXX methods. They are Unicode enabled (2 or 4 bytes character).</li>
+     <li>
+          MediaInfoA_XXX methods. Legacy version of above, with ANSI (one byte per character) characters in place of Unicode. The <a href="https://en.wikipedia.org/wiki/Codepage">local codepage</a> is used.<br/>
+          Note : in the DLL only, you can use <a href="https://en.wikipedia.org/wiki/UTF-8">UTF-8</a> codepage: <code>MediaInfoA_Options("CodePage", "UTF-8")</code>
+     </li>
+</ul>
+
+<a name="Init"></a><h2>Init the library</h2>
+<a name="Internet"></a><h3>Internet connection</h3>
+MediaInfoLib tries to connect to an Internet server for availability of newer software, <span style="text-decoration: underline;">anonymous</span> statistics and retrieving information about a file (Later... To be done)<br/>
+If for some reasons you don't want this connection, deactivate it.<br/>
+<code>MediaInfo::Options("Internet", "No")</code>
+
+<a name="Version"></a><h3>The version of the library</h3>
+First, you need to know the version of the DLL.<br/>
+Because if you have a newer version, you can have crash or unwanted behaviour...<br/>
+<code>MediaInfo::Options("Info_Version", "<abbr title="Version of MediaInfo you have tested. Example : &quot;0.7.0.0&quot;, &quot;0.7.0.1&quot;, &quot;0.8.0.0&quot;">**VERSION**</abbr>;<abbr title="Unique name of your application. Examples : &quot;MediaInfoGUI&quot;, &quot;MediaInfoCmd&quot;">**APP_NAME**</abbr>;<abbr title="Version of your application. Example : &quot;0.7.0.0&quot;, &quot;1.2&quot;, &quot;1.26beta1&quot;">**APP_VERSION**</abbr>")</code><br/>
+**VERSION** is the version of MediaInfo you have tested. Must be like this : "A.B.C.D" (example : "0.7.0.0")<br/>
+**APP_NAME** is the unique name of your application. Examples : "MediaInfoGUI", "MediaInfoCmd".<br/>
+**APP_VERSION** is the version of your application. Example : "0.7.0.0", "1.2", "1.26beta1".<br/>
+Note : if during beta tests, you detect incompatibilities between the library and an old application, contact the MediaInfo developer, he will put the application version in a black list.<br/>
+The returned string is:
+<ul>
+    <li>"MediaInfoLib - vA.B.C.D xxx" if there is no incompatibilities beween the version in the command and the version of the library (xxx may be URL, modification information of the DLL...).</li>
+    <li>"" (empty string) if there is incompatibility between the version in the command and the version of the library. In this case you should exit the application (with a message "MediaInfo.dll is not compatible with this version, you must use MediaInfo.dll vX.X.X.X"</li>
+</ul>
+
+<a name="Language"></a><h3>Set the language of the library</h3>
+The library is by default set in English.<br/>
+You can change the language with a language string.<br/>
+<code>MediaInfo::Options("Language", "**LANGUAGE_STRING**")</code><br/>
+**LANGUAGE_STRING** is CSV-like string :<br/>
+<pre>
+Internal name1;translation1
+Internal name2;translation2
+</pre>
+Note : when developing, you can&nbsp;have internal names list with :<br/>
+<code>MediaInfo::Options("Language_Get")</code><br/>
+
+<a name="NewHandle"></a><h2>Create a new Handle</h2>
+A Handle must be created before using MediaInfoLib :<br/>
+"C++" : <code>MediaInfo Handle;</code><br/>
+"C" (DLL...) : <code>void* Handle=MediaInfo::New();</code>
+
+<a name="Open"></a><h2>Open one or multiple files</h2>
+Before retrieving information about one or multiples files, you must open them :<br/>
+<code>MediaInfo::Open("**FILENAME**")</code><br/>
+or<br/>
+<code>MediaInfoList::Open("**FILENAMES**")</code><br/>
+
+<a name="Information"></a><h2>Get information</h2>
+<a name="Output"></a><h3>Get a pre-formated text</h3>
+<a name="Output_Normal"></a><h4>Standart output</h4>
+If you want a text output:<br/>
+<code>MediaInfo::Inform(InformOption_Nothing)</code><br/>
+<br/>
+If you want a HTML output :<br/>
+<code>MediaInfo::Inform(InformOption_HTML)</code><br/>
+
+<a name="Output_Custom"></a><h4>Customize it</h4>
+Default is a list of most used pieces of information. But you can customize it :<br/>
+<code>MediaInfo::Option("Inform", "**YOUR_TEXT**")</code><br/>
+<code>MediaInfo::Inform(InformOption_Custom)</code><br/>
+**YOUR_TEXT** is a list of items. you can have more information about <a href="{{ path('mi_support_sdk_more_info') }}#Format">Inform method</a>
+
+<a name="Get"></a><h4>Get a piece of information</h4>
+You can access directly to one wanted piece of information:<br/>
+<code>MediaInfo::Get ("**StreamKind**", "**StreamNumber**", "**Parameter**", "**InfoKind**")</code><br/>
+**StreamKind** can be : Stream_General, Stream_Video, Stream_Audio,&nbsp;Stream_Text, Stream_Chapters<br/>
+**StreamNumber** is the position of the stream you want. example for Audio : 0 if you want the first Audio, 1 if you want the second Audio.<br/>
+**Parameter** is the name of the piece of information you want. example : "BitRate", "Width"...<br/>
+**InfoKind** should be set to MediaInfo::Info_Text, except if you want a <a href="{{ path('mi_support_sdk_more_info') }}#Get">more advanced interface</a><br/>
+<br/>
+Note : when developing, you can have parameters list with:<br/>
+<code>MediaInfo::Options("Info_Parameters")</code>
+
+<a name="Release"></a><h2>Release memory</h2>
+To release memory, you must delete the handle:<br/>
+"C++" : Nothing to do, will be deleted at the end of the method<br/>
+"C" (DLL...) : <code>MediaInfo::Delete(Handle);</code><br/>
+<br/>
+Note : You can re-use the Handle for another <code>MediaInfo::Open("**FILENAME**")</code> call without deleting something.
+{% endblock %}

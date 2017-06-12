@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="en" datatype="plaintext" original="file.ext" target-language="hu">
+    <body>
+      <trans-unit id="1" approved="yes">
+        <source><![CDATA[menu.about]]></source>
+        <target><![CDATA[Névjegy]]></target>
+      </trans-unit>
+      <trans-unit id="2" approved="yes">
+        <source><![CDATA[menu.download]]></source>
+        <target><![CDATA[Letöltés]]></target>
+      </trans-unit>
+      <trans-unit id="3" approved="yes">
+        <source><![CDATA[menu.screenshots]]></source>
+        <target><![CDATA[Képernyőképek]]></target>
+      </trans-unit>
+      <trans-unit id="4" approved="yes">
+        <source><![CDATA[menu.donate]]></source>
+        <target><![CDATA[A MediaInfo segítése]]></target>
+      </trans-unit>
+      <trans-unit id="5" approved="yes">
+        <source><![CDATA[menu.support]]></source>
+        <target><![CDATA[Támogatás]]></target>
+      </trans-unit>
+      <trans-unit id="6" approved="yes">
+        <source><![CDATA[menu.testimonials]]></source>
+        <target><![CDATA[Vélemények a MediaInfóról]]></target>
+      </trans-unit>
+      <trans-unit id="7" approved="yes">
+        <source><![CDATA[about.page.description]]></source>
+        <target><![CDATA[A MediaInfo műszaki és jelölési (tag) adatokat szolgáltat mozgókép- és hangfájlokról. A program szabad szoftver (ingyenes, forráskódja szabadon elérhető BSD engedéllyel)]]></target>
+      </trans-unit>
+      <trans-unit id="8" approved="yes">
+        <source><![CDATA[about.what.title]]></source>
+        <target><![CDATA[Mi a MediaInfo?]]></target>
+      </trans-unit>
+      <trans-unit id="9" approved="yes">
+        <source><![CDATA[about.what.content]]></source>
+        <target><![CDATA[A <strong>MediaInfo</strong> műszaki és jelölési (tag) adatokat szolgáltat mozgókép- és hangfájlokról.<br/>     A program szabad szoftver (ingyenes, forráskódja szabadon elérhető <a href="%licenseRoute%">BSD</a> engedéllyel).]]></target>
+      </trans-unit>
+      <trans-unit id="10" approved="yes">
+        <source><![CDATA[about.data.title]]></source>
+        <target><![CDATA[Milyen adatokat szolgáltat a MediaInfo?]]></target>
+      </trans-unit>
+      <trans-unit id="11" approved="yes">
+        <source><![CDATA[about.data.content]]></source>
+        <target><![CDATA[<ul>  <li>Általános: cím, szerző, rendező, album, sáv szám, dátum, hossz...</li>  <li>Mozgókép: kódek, képarány, képsebesség, adatsebesség...</li>  <li>Hang: kódek, mintavételezési gyakoriság, csatornák, nyelv, adatsebesség...</li>  <li>Szöveg: a feliratozás nyelve</li>  <li>Fejezet: fejezetek száma, fejezetek listája</li> </ul>]]></target>
+      </trans-unit>
+      <trans-unit id="12" approved="yes">
+        <source><![CDATA[about.analyticals.title]]></source>
+        <target><![CDATA[Milyen formátumokat (gyűjtőket) ismer a MediaInfo?]]></target>
+      </trans-unit>
+      <trans-unit id="13" approved="yes">
+        <source><![CDATA[about.features.content]]></source>
+        <target><![CDATA[<ul>  <li>Sokféle mozgókép- és hangfájl <a href="%supportFormatRoute%">formátumot</a> olvas</li>  <li>Többféle adat megjelenítési mód (szöveges, táblázatos, fa, HTML...)</li>  <li>Ezek a módok testreszabhatók</li>  <li>Exportálási képességek: szöveg, CSV, HTML...</li>  <li>Grafikus kezelőfelület, parancssor vagy DLL</li>  <li>Beépül a Windows rendszerhéjba (fogd-és-vidd, helyi menü)</li>  <li>Nemzetközi: bármely nyelv, bármely operációs rendszeren</li>  <li>Honosítási lehetőség (önkénteseket várunk)</li> </ul>]]></target>
+      </trans-unit>
+      <trans-unit id="14" approved="yes">
+        <source><![CDATA[about.features.title]]></source>
+        <target><![CDATA[Mire használható?]]></target>
+      </trans-unit>
+      <trans-unit id="15" approved="yes">
+        <source><![CDATA[about.analyticals.content]]></source>
+        <target><![CDATA[<ul>  <li>Mozgókép: MKV, OGM, AVI, DivX, WMV, QuickTime, Real, MPEG-1, MPEG-2, MPEG-4, DVD (VOB)...<br/>      (Kódekek: DivX, XviD, MSMPEG4, ASP, H.264/AVC, H.265/HEVC, FFV1...)</li>  <li>Hang: OGG, MP3, WAV, RA, AC3, DTS, AAC, M4A, AU, AIFF...</li>  <li>Felirat: SRT, SSA, ASS, SAMI...</li> </ul>]]></target>
+      </trans-unit>
+      <trans-unit id="16" approved="yes">
+        <source><![CDATA[about.download.button.text]]></source>
+        <target><![CDATA[Töltse le]]></target>
+      </trans-unit>
+      <trans-unit id="17" approved="yes">
+        <source><![CDATA[about.download.installer]]></source>
+        <target><![CDATA[grafikus kezelőfelület, telepítővel]]></target>
+      </trans-unit>
+      <trans-unit id="18">
+        <source><![CDATA[about.download.for]]></source>
+        <target><![CDATA[]]></target>
+      </trans-unit>
+      <trans-unit id="19" approved="yes">
+        <source><![CDATA[about.download.other]]></source>
+        <target><![CDATA[egyéb változatok (operációs rendszer, kezelőfelület...) is <a href="%downloadRoute%">elérhetők</a>]]></target>
+      </trans-unit>
+      <trans-unit id="20" approved="yes">
+        <source><![CDATA[about.what.changelog]]></source>
+        <target><![CDATA[<a href="%changelogRoute%">változások listája</a>]]></target>
+      </trans-unit>
+      <trans-unit id="21" approved="yes">
+        <source><![CDATA[about.what.donate]]></source>
+        <target><![CDATA[<a href="%donateRoute%">Adományokkal</a> támogathatja a további fejlesztést]]></target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

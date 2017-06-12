@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="en" datatype="plaintext" original="file.ext" target-language="hr">
+    <body>
+      <trans-unit id="1" approved="yes">
+        <source><![CDATA[menu.about]]></source>
+        <target><![CDATA[O MediaInfo]]></target>
+      </trans-unit>
+      <trans-unit id="2" approved="yes">
+        <source><![CDATA[menu.download]]></source>
+        <target><![CDATA[Preuzimanje]]></target>
+      </trans-unit>
+      <trans-unit id="3" approved="yes">
+        <source><![CDATA[menu.screenshots]]></source>
+        <target><![CDATA[Zaslonske snimke]]></target>
+      </trans-unit>
+      <trans-unit id="4" approved="yes">
+        <source><![CDATA[menu.donate]]></source>
+        <target><![CDATA[Podržite MediaInfo]]></target>
+      </trans-unit>
+      <trans-unit id="5" approved="yes">
+        <source><![CDATA[menu.support]]></source>
+        <target><![CDATA[Podrška korisnicima]]></target>
+      </trans-unit>
+      <trans-unit id="6" approved="yes">
+        <source><![CDATA[menu.testimonials]]></source>
+        <target><![CDATA[Drugi o MediaInfo]]></target>
+      </trans-unit>
+      <trans-unit id="7" approved="yes">
+        <source><![CDATA[about.page.description]]></source>
+        <target><![CDATA[MediaInfo je program koji korisnika opskrbljuje tehničkim i tagovnim informacijama o nekoj video- ili audio-datoteci.]]></target>
+      </trans-unit>
+      <trans-unit id="8" approved="yes">
+        <source><![CDATA[about.what.title]]></source>
+        <target><![CDATA[Što je to MediaInfo?]]></target>
+      </trans-unit>
+      <trans-unit id="9" approved="yes">
+        <source><![CDATA[about.what.content]]></source>
+        <target><![CDATA[<strong>MediaInfo</strong> je program koji korisnika opskrbljuje tehničkim i tagovnim informacijama o nekoj video- ili audio-datoteci.<br/>     Radi se o slobodnom softveru (slobodan plaćanja i slobodan u pristupu izvorskom kôdu sukladno <a href="%licenseRoute%">BSD</a> dopuštenjima)]]></target>
+      </trans-unit>
+      <trans-unit id="10" approved="yes">
+        <source><![CDATA[about.data.title]]></source>
+        <target><![CDATA[Koje informacije mogu dobiti pomoću MediaInfo?]]></target>
+      </trans-unit>
+      <trans-unit id="11" approved="yes">
+        <source><![CDATA[about.data.content]]></source>
+        <target><![CDATA[<ul>  <li>Općenito: naslov, autor, redatelj, album, redni broj snimka, nadnevak, trajanje...</li>  <li>Video: kôdek, razmjere, fps, tempo protoka...</li>  <li>Audio: kôdek, učestalost uzorkovanja, kanali, jezik, tempo protoka...</li>  <li>Tekst: jezik prijevoda podnaslova</li>  <li>Poglavlja: broj poglavlja, spisak poglavlja</li> </ul>]]></target>
+      </trans-unit>
+      <trans-unit id="12" approved="yes">
+        <source><![CDATA[about.analyticals.title]]></source>
+        <target><![CDATA[Koje oblike datoteka (spremnika) podržava MediaInfo?]]></target>
+      </trans-unit>
+      <trans-unit id="13" approved="yes">
+        <source><![CDATA[about.analyticals.content]]></source>
+        <target><![CDATA[<ul>  <li>Video: MKV, OGM, AVI, DivX, WMV, QuickTime, Real, MPEG-1, MPEG-2, MPEG-4, DVD (VOB)...<br/>      (Kôdeki: DivX, XviD, MSMPEG4, ASP, H.264/AVC, H.265/HEVC, FFV1...)</li>  <li>Audio: OGG, MP3, WAV, RA, AC3, DTS, AAC, M4A, AU, AIFF...</li>  <li>Podnaslovi: SRT, SSA, ASS, SAMI...</li> </ul>]]></target>
+      </trans-unit>
+      <trans-unit id="14" approved="yes">
+        <source><![CDATA[about.features.title]]></source>
+        <target><![CDATA[Što sve mogu učiniti s tim?]]></target>
+      </trans-unit>
+      <trans-unit id="15" approved="yes">
+        <source><![CDATA[about.features.content]]></source>
+        <target><![CDATA[<ul>  <li>Očitavati <a href="%supportFormatRoute%">mnoge oblike video-i audio-datoteka</a></li>  <li>Koristiti različite metode prikazivanja informacija (tekst, tablica, stablo, HTML...)</li>  <li>Moguća je vlastita prilagodba prikaza istih</li>  <li>Izvoz informacije u obliku teksta, CSV, HTML...</li>  <li>Koristiti grafičko sučelje, zapovjedni redak ili  DLL</li>  <li>Integracija s ljuskom sustava MS-Windows (povući-i-ispustiti, kontekstualni izbornik)</li>  <li>Internacionalizacija: prikaz svakog jezičnog prijevoda na bilo kojoj inačici Vašeg operativnog sustava</li>  <li>Sudjelovanje u lokalizaciji (dakako temeljem volonterstva)</li> </ul>]]></target>
+      </trans-unit>
+      <trans-unit id="16" approved="yes">
+        <source><![CDATA[about.download.button.text]]></source>
+        <target><![CDATA[Preuzmite je]]></target>
+      </trans-unit>
+      <trans-unit id="17" approved="yes">
+        <source><![CDATA[about.download.version]]></source>
+        <target><![CDATA[inačica]]></target>
+      </trans-unit>
+      <trans-unit id="18" approved="yes">
+        <source><![CDATA[about.download.other]]></source>
+        <target><![CDATA[<a href="%downloadRoute%">Raspoložive</a> su i druge inačice (OS, sučelje...)]]></target>
+      </trans-unit>
+      <trans-unit id="19" approved="yes">
+        <source><![CDATA[about.what.changelog]]></source>
+        <target><![CDATA[Možete i <a href="%changelogRoute%">pratiti</a>]]></target>
+      </trans-unit>
+      <trans-unit id="20" approved="yes">
+        <source><![CDATA[about.what.donate]]></source>
+        <target><![CDATA[Unaprijed zahvaljujemo ukoliko se odlučite <a href="%donateRoute%">donirati prilog</a> potpore daljnjem razvoju projekta]]></target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

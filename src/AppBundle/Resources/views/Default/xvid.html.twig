@@ -1,0 +1,28 @@
+{% extends 'AppBundle::base.html.twig' %}
+
+{% block title %}{% trans %}xvid.page.title{% endtrans %}{% endblock %}
+{% block description %}{% trans %}about.page.description{% endtrans %}{% endblock %}
+{% block keywords %}{% trans %}about.page.keywords{% endtrans %}{% endblock %}
+
+{% block body %}
+<h1>{% trans %}xvid.title{% endtrans %}</h1>
+
+<h2>Downloads</h2>
+<h3>Microsoft Windows</h3>
+The following packages can handle this codec identifier:
+<ul>
+    <li>Official decoder from <a href="https://www.xvid.org">XviD community</a>: download <a href="https://download.mediaarea.net/XviD_1.3.2.exe">Xvid 1.3.2</a> (10.2 MB)</li>
+</ul>
+
+<h2>About</h2>
+The codec identifier name comes from the brand name of the encoder library.<br/>
+The name of the video compression technology is <a href="https://en.wikipedia.org/wiki/MPEG-4_Part_2">MPEG-4 Visual</a>.<br/>
+
+<h2>More info</h2>
+{% image '@AppBundle/Resources/public/img/Xvid_logo.png' %}
+<img src="{{ asset_url }}" width="250" height="90" alt="XviD logo"><br/>
+{% endimage %}
+Developed by: <a href="https://www.xvid.org">XviD community</a><br/>
+Latest release: 1.3.2<br/>
+License: <a href="https://www.gnu.org/licenses/old-licenses/gpl-2.0.txt">GNU General Public License</a>
+{% endblock %}

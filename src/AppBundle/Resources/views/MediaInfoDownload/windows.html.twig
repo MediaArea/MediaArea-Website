@@ -1,0 +1,94 @@
+{% extends 'AppBundle::base.html.twig' %}
+
+{% block title %}{% trans %}download.windows.page.title{% endtrans %}{% endblock %}
+{% block description %}{% trans %}about.page.description{% endtrans %}{% endblock %}
+{% block keywords %}{% trans %}about.page.keywords{% endtrans %}{% endblock %}
+
+{% block body %}
+<h1>{% trans %}download.windows.title{% endtrans %}</h1>
+{% image '@AppBundle/Resources/public/img/OS/Windows.png' %}
+<img src="{{ asset_url }}" alt="Windows logo" title="Windows logo" width="288" height="76"><br />
+{% endimage %}
+
+{% if 'Y' == app.request.attributes.get('donated') %}
+    {% set downloadLink = '//mediaarea.net/download/donors/0.7.96/MediaInfo_GUI_0.7.96_Windows.exe' %}
+{% elseif 1 <= app.request.attributes.get('donated', -1) %}
+    {% set downloadLink = '//mediaarea.net/download/current/MediaInfo_GUI_0.7.96_Windows.exe' %}
+{% else %}
+    {% set downloadLink = '//mediaarea.net/download/binary/mediainfo-gui/0.7.96/MediaInfo_GUI_0.7.96_Windows.exe' %}
+{% endif %}
+
+<table border="1" class="download">
+<thead>
+<tr class="table-header">
+    <th>Version</th>
+    <th>Architecture</th>
+    <th>Interface</th>
+    <th>Version</th>
+    <th>Comment</th>
+</tr>
+</thead>
+<tbody>
+
+<tr>
+    <th rowspan="7">XP, Vista, 7, 8, 10</th>
+    <th>Universal installer (32/64 bit)</th>
+    <th><abbr title="Graphical User Interface">GUI</abbr></th>
+    <td><a href="{{ downloadLink }}">v0.7.96</a></td>
+    <td>If you don't know which one to download, download this one</td>
+</tr>
+<tr>
+    <th rowspan="3">64 bit</th>
+    <th><abbr title="Graphical User Interface">GUI</abbr></th>
+    <td><a href="{{ downloadLink }}">v0.7.96 Universal (32/64 bit)</a> <small>(<a href="//mediaarea.net/download/binary/mediainfo-gui/0.7.96/MediaInfo_GUI_0.7.96_Windows_x64_WithoutInstaller.7z">64 bit only without installer</a>)</small></td>
+    <td></td>
+</tr>
+<tr>
+    <th><abbr title="Command Line Interface">CLI</abbr></th>
+    <td><a href="//mediaarea.net/download/binary/mediainfo/0.7.96/MediaInfo_CLI_0.7.96_Windows_x64.zip">v0.7.96</a></td>
+    <td>&nbsp;</td>
+</tr>
+<tr>
+    <th><abbr title="Dynamic Link Library">DLL</abbr></th>
+    <td><a href="//mediaarea.net/download/binary/libmediainfo0/0.7.96/MediaInfo_DLL_0.7.96_Windows_x64.exe">v0.7.96</a><small> (<a href="//mediaarea.net/download/binary/libmediainfo0/0.7.96/MediaInfo_DLL_0.7.96_Windows_x64_WithoutInstaller.7z">without installer</a>)</small></td>
+    <td>&nbsp;</td>
+</tr>
+
+<tr>
+    <th rowspan="3">32 bit</th>
+    <th><abbr title="Graphical User Interface">GUI</abbr></th>
+    <td><a href="{{ downloadLink }}">v0.7.96 Universal (32/64 bit)</a> <small> (<a href="//mediaarea.net/download/binary/mediainfo-gui/0.7.96/MediaInfo_GUI_0.7.96_Windows_i386_WithoutInstaller.7z">32 bit only without installer</a>)</small></td>
+    <td></td>
+</tr>
+<tr>
+    <th><abbr title="Command Line Interface">CLI</abbr></th>
+    <td><a href="//mediaarea.net/download/binary/mediainfo/0.7.96/MediaInfo_CLI_0.7.96_Windows_i386.zip">v0.7.96</a></td>
+    <td>&nbsp;</td>
+</tr>
+<tr>
+    <th><abbr title="Dynamic Link Library">DLL</abbr></th>
+    <td><a href="//mediaarea.net/download/binary/libmediainfo0/0.7.96/MediaInfo_DLL_0.7.96_Windows_i386.exe">v0.7.96</a><small> (<a href="//mediaarea.net/download/binary/libmediainfo0/0.7.96/MediaInfo_DLL_0.7.96_Windows_i386_WithoutInstaller.7z">without installer</a>)</small></td>
+    <td>&nbsp;</td>
+</tr>
+
+<tr class="old-files">
+    <th rowspan="3">Windows 95 to 2000</th>
+    <th rowspan="3">32 bit</th>
+    <th><abbr title="Graphical User Interface">GUI</abbr></th>
+    <td><a href="//mediaarea.net/download/binary/mediainfo-gui/0.7.60/MediaInfo_GUI_0.7.60_Windows_i386.exe">v0.7.60</a> <small> (<a href="//mediaarea.net/download/binary/mediainfo-gui/0.7.60/MediaInfo_GUI_0.7.60_Windows_i386_WithoutInstaller.7z">without installer</a>)</small></td>
+    <td></td>
+</tr>
+<tr class="old-files">
+    <th><abbr title="Command Line Interface">CLI</abbr></th>
+    <td><a href="//mediaarea.net/download/binary/mediainfo/0.7.60/MediaInfo_CLI_0.7.60_Windows_i386.zip">v0.7.60</a></td>
+    <td>&nbsp;</td>
+</tr>
+<tr class="old-files">
+    <th><abbr title="Dynamic Link Library">DLL</abbr></th>
+    <td><a href="//mediaarea.net/download/binary/libmediainfo0/0.7.60/MediaInfo_DLL_0.7.60_Windows_i386.exe">v0.7.60</a><small> (<a href="//mediaarea.net/download/binary/libmediainfo0/0.7.60/MediaInfo_DLL_0.7.60_Windows_i386_WithoutInstaller.7z">without installer</a>)</small></td>
+    <td>&nbsp;</td>
+</tr>
+
+</tbody>
+</table>
+{% endblock %}

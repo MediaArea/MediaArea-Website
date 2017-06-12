@@ -1,0 +1,307 @@
+{% extends 'AppBundle::base.html.twig' %}
+
+{% block title %}MediaArea{% endblock %}
+{% block description %}{% trans %}about.page.description{% endtrans %}{% endblock %}
+{% block keywords %}{% trans %}about.page.keywords{% endtrans %}{% endblock %}
+
+{% block body %}
+<section id="intro">
+    <h1>MediaArea</h1>
+    <p>MediaArea is an open source software company focused on digital media analysis. We develop and support tools that aid developers in integrating digital media file investigation into their work.</p>
+    <p>We do mostly open source code, without rejecting proprietary code on request.</p>
+    <p><a href="{{ path('mi_home') }}">MediaInfo</a> is our flagship product with 4 000 downloads per day, we also currently work on <a href="/MediaConch">MediaConch</a>, and we worked in the past on <a href="/QCTools">QCTools</a>, <a href="/BWFMetaEdit">BWF MetaEdit</a> and some other <a href="#projects">projects</a>.</p>
+</section>
+
+<section id="team">
+	<h2>The team</h2>
+    <p>Each member of the team is unique and commits code under their own name. Their work is visible via their respective accounts listed below.</p>
+    <div class="col-xs-12 col-sm-6">
+        <div class="featureBox">
+            <header>
+                <h3>Jérôme Martinez<br/> (Digital Media Specialist)</h3>
+                <span class="featureDescription">Technical design, implementation of the bytestream/bitstream analyzer, extraction of metadata</span>
+            </header>
+            <p class="featureInfos">
+                <a href="mailto:info@mediaarea.net">{% image '@AppBundle/Resources/public/img/Email16.png' %}<img src="{{ asset_url }}" alt="E-mail" />{% endimage %}</a>
+                <a href="https://fr.linkedin.com/in/jermartinez" target="_blank">{% image '@AppBundle/Resources/public/img/LinkedIn16.png' %}<img src="{{ asset_url }}" alt="LinkedIn" />{% endimage %}</a>
+                <a href="https://twitter.com/MediaArea_Net" target="_blank">{% image '@AppBundle/Resources/public/img/Twitter16.png' %}<img src="{{ asset_url }}" alt="Twitter" />{% endimage %}</a>
+                <a href="https://plus.google.com/u/0/+MediaAreaNetOfficial" target="_blank">{% image '@AppBundle/Resources/public/img/GooglePlus16.png' %}<img src="{{ asset_url }}" alt="Google Plus" />{% endimage %}</a>
+                <a href="https://github.com/JeromeMartinez" target="_blank">{% image '@AppBundle/Resources/public/img/GitHub16.png' %}<img src="{{ asset_url }}" alt="GitHub" />{% endimage %}</a>
+                <a href="https://www.openhub.net/accounts/JeromeMartinez" target="_blank">{% image '@AppBundle/Resources/public/img/OpenHub16.png' %}<img src="{{ asset_url }}" alt="Open Hub" />{% endimage %}</a>
+            </p>
+        </div>
+    </div>
+    <div class="col-xs-12 col-sm-6">
+        <div class="featureBox">
+            <header>
+                <h3>Dave Rice<br/> (Archivist)</h3>
+                <span class="featureDescription">Communication with memory institutions, definition of tests, documentation</span>
+            </header>
+            <p class="featureInfos">
+                <a href="http://dericed.com" target="_blank">{% image '@AppBundle/Resources/public/img/Website16.png' %}<img src="{{ asset_url }}" alt="Website" />{% endimage %}</a>
+                <a href="https://twitter.com/dericed" target="_blank">{% image '@AppBundle/Resources/public/img/Twitter16.png' %}<img src="{{ asset_url }}" alt="Twitter" />{% endimage %}</a>
+                <a href="https://github.com/dericed" target="_blank">{% image '@AppBundle/Resources/public/img/GitHub16.png' %}<img src="{{ asset_url }}" alt="GitHub" />{% endimage %}</a>
+            </p>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+    <div class="col-xs-12 col-sm-6">
+        <div class="featureBox">
+            <header>
+                <h3>Guillaume Roques<br/> (Senior Developer)</h3>
+                <span class="featureDescription">Database management, automation, performance optimization, shell, website maintenance</span>
+            </header>
+            <p class="featureInfos">
+                <a href="mailto:info@mediaarea.net" target="_blank">{% image '@AppBundle/Resources/public/img/Email16.png' %}<img src="{{ asset_url }}" alt="E-mail" />{% endimage %}</a>
+                <a href="https://www.linkedin.com/in/guillaume-roques-3a962899/" target="_blank">{% image '@AppBundle/Resources/public/img/LinkedIn16.png' %}<img src="{{ asset_url }}" alt="LinkedIn" />{% endimage %}</a>
+                <a href="https://github.com/GuillaumeRoques" target="_blank">{% image '@AppBundle/Resources/public/img/GitHub16.png' %}<img src="{{ asset_url }}" alt="GitHub" />{% endimage %}</a>
+            </p>
+        </div>
+    </div>
+    <div class="col-xs-12 col-sm-6">
+        <div class="featureBox">
+            <header>
+                <h3>Maxime Gervais<br/> (Junior Developer)</h3>
+                <span class="featureDescription">Release manager, scripting, bug fixes</span>
+            </header>
+            <p class="featureInfos">
+                <a href="mailto:info@mediaarea.net" target="_blank">{% image '@AppBundle/Resources/public/img/Email16.png' %}<img src="{{ asset_url }}" alt="E-mail" />{% endimage %}</a>
+                <a href="https://github.com/g-maxime" target="_blank">{% image '@AppBundle/Resources/public/img/GitHub16.png' %}<img src="{{ asset_url }}" alt="GitHub" />{% endimage %}</a>
+            </p>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+</section>
+
+<section id="projects">
+	<h2>Our projects</h2>
+    <p>Different levels of involvment, from self-funding, self-management, and full development to external funding, external management, and partial development.</p>
+    <p>These projects are open source, you can participate too; additionnally, if you don't like what we do of these projects, just fork and offer a better version.</p>
+    <div class="col-xs-12 col-sm-6">
+        <div class="featureBox">
+            <header>
+                <h3><a href="{{ path('mi_home') }}">MediaInfo</a></h3>
+                <span class="featureDescription">MediaInfo is a convenient unified display of the most relevant technical and tag data for video and audio files.</span>
+                <span class="featureDescription">Self funded, self managed, fully developed by us.</span>
+            </header>
+            <div class="featureInfos row">
+                <a href="{{ path('mi_home') }}" class="btn btn-default">Learn more</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-xs-12 col-sm-6">
+        <div class="featureBox">
+            <header>
+                <h3><a href="/MediaConch/">MediaConch</a></h3>
+                <span class="featureDescription">Implementation checker, policy checker, & reporter.</span>
+                <span class="featureDescription">MediaConch is funded by <a href="http://www.preforma-project.eu/" target="_blank">PREFORMA</a> project co-funded by the <a href="http://europa.eu/" target="_blank">European Commission</a>.</span>
+            </header>
+            <div class="featureInfos row">
+                <a href="/MediaConch/" class="btn btn-default">Learn more</a>
+            </div>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+    <div class="col-xs-12 col-sm-6">
+        <div class="featureBox">
+            <header>
+                <h3><a href="/QCTools">QCTools</a></h3>
+                <span class="featureDescription">QCTools (Quality Control Tools for Video Preservation) is a software tool that helps users analyze and understand their digitized video files through use of audiovisual analytics and filtering.</span>
+                <span class="featureDescription">QCTools is funded by the <a href="https://www.neh.gov/" target="_blank">National Endowment for the Humanities</a> and the <a href="http://www.knightfoundation.org" target="_blank">Knight Foundation</a>, and is managed by the <a href="https://www.bavc.org/" target="_blank">Bay Area Video Coalition</a>.</span>
+            </header>
+            <div class="featureInfos row">
+                <a href="/QCTools" class="btn btn-default">Learn more</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-xs-12 col-sm-6">
+        <div class="featureBox">
+            <header>
+                <h3><a href="/BWFMetaEdit">BWF MetaEdit</a></h3>
+                <span class="featureDescription">BWF MetaEdit is a tool that supports embedding, validating, and exporting of metadata in Broadcast WAVE Format (BWF) files. It supports the <a href="http://www.digitizationguidelines.gov/" target="_blank">FADGI (Federal Agencies Digitization Guidelines Initiative)</a> for embedded metadata in the bext and INFO chunks.</span>
+                <span class="featureDescription">Initial funding of BWF MetaEdit was provided by the <a href="http://www.digitizationguidelines.gov/" target="_blank">FADGI</a>, with project management from <a href="http://avpreserve.com/" target="_blank">AVPreserve</a>.</span>
+            </header>
+            <div class="featureInfos row">
+                <a href="/BWFMetaEdit" class="btn btn-default">Learn more</a>
+            </div>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+    <div class="col-xs-12 col-sm-6">
+        <div class="featureBox">
+            <header>
+                <h3><a href="/AVIMetaEdit">AVI MetaEdit</a></h3>
+                <span class="featureDescription">AVI MetaEdit is a tool that supports embedding, validating, and exporting of metadata in AVI (Standard and OpenDML) files. This tool can also enforce file structure and metadata recommendations and specifications from U.S. National Archives, Microsoft, and IBM.</span>
+                <span class="featureDescription">Initial funding of AVI MetaEdit was provided by <a href="http://www.archives.gov/preservation/products/" target="_blank">NARA (National Archives and Records Administration)</a> supported by the <a href="http://www.digitizationguidelines.gov/" target="_blank">FADGI</a>, with project management from <a href="http://avpreserve.com/" target="_blank">AVPreserve</a>.</span>
+            </header>
+            <div class="featureInfos row">
+                <a href="/AVIMetaEdit" class="btn btn-default">Learn more</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-xs-12 col-sm-6">
+        <div class="featureBox">
+            <header>
+                <h3><a href="/DVAnalyzer">DV Analyzer</a></h3>
+                <span class="featureDescription">DV Analyzer is a technical quality control and reporting tool that  examines DV streams in order to report errors in the tape-to-file  transfer process, such as video error concealment information, invalid  audio samples, timecode inconsistency, inconsistent use of arbitrary  bits in video DIF blocks, and DIF structural problems.</span>
+                <span class="featureDescription">DV Analyzer was managed by <a href="https://www.avpreserve.com/dvanalyzer/" target="_blank">AVPreserve</a>.</span>
+            </header>
+            <div class="featureInfos row">
+                <a href="/DVAnalyzer" class="btn btn-default">Learn more</a>
+            </div>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+</section>
+
+<section id="others">
+	<h2>Other projects</h2>
+    <p>We are not directly involved in these projects but we use them for A/V analysis, and we sometimes send patches to these projects.</p>
+    <div class="col-xs-12 col-sm-6">
+        <div class="featureBox">
+            <header>
+                <h3><a href="https://datatracker.ietf.org/wg/cellar/about/" target="_blank">CELLAR</a></h3>
+                <span class="featureDescription">Standardization of open source formats focused on lossless storage.</span>
+                <span class="featureDescription">Matroska / FFV1 / FLAC.</span>
+            </header>
+            <div class="featureInfos row">
+                <a href="https://datatracker.ietf.org/wg/cellar/about/" class="btn btn-default" target="_blank">Learn more</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-xs-12 col-sm-6">
+        <div class="featureBox">
+            <header>
+                <h3><a href="https://github.com/amiaopensource/vrecord" target="_blank">vrecord</a></h3>
+                <span class="featureDescription">Vrecord is open source software for capturing a video signal and turning it into a digital file.</span>
+            </header>
+            <div class="featureInfos row">
+                <a href="https://github.com/amiaopensource/vrecord" class="btn btn-default" target="_blank">Learn more</a>
+            </div>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+    <div class="col-xs-12 col-sm-6">
+        <div class="featureBox">
+            <header>
+                <h3><a href="https://github.com/bavc/signalserver" target="_blank">signalserver</a></h3>
+                <span class="featureDescription">SignalServer is intended to become a web app to accompany QCTools.</span>
+            </header>
+            <div class="featureInfos row">
+                <a href="https://github.com/bavc/signalserver" class="btn btn-default" target="_blank">Learn more</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-xs-12 col-sm-6">
+        <div class="featureBox">
+            <header>
+                <h3><a href="https://ffmpeg.org/" target="_blank">FFmpeg</a></h3>
+                <span class="featureDescription">A lot used by ourselves for A/V analysis, used by QCTools.</span>
+            </header>
+            <div class="featureInfos row">
+                <a href="https://ffmpeg.org/" class="btn btn-default" target="_blank">Learn more</a>
+            </div>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+    <div class="col-xs-12 col-sm-6">
+        <div class="featureBox">
+            <header>
+                <h3><a href="https://amiaopensource.github.io/ffmprovisr/" target="_blank">ffmprovisr</a></h3>
+                <span class="featureDescription">This app helps users through the command generation process so that more people can reap the benefits of FFmpeg.</span>
+            </header>
+            <div class="featureInfos row">
+                <a href="https://amiaopensource.github.io/ffmprovisr/" class="btn btn-default" target="_blank">Learn more</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-xs-12 col-sm-6">
+        <div class="featureBox hidden">
+            <header>
+            </header>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+</section>
+
+<section id="events">
+    <h2>Events</h2>
+    <p>We also organize or participate to several A/V related <a href="{{ path('ma_events') }}">events.</a></p>
+</section>
+
+<section id="contact">
+    <h2>Get in touch</h2>
+    <p>We can contract worldwide, with business entities in Europe (France) and in North America (New York).</p>
+    <div class="container">
+        <div class="row vertical-divider">
+            <div class="col-sm-6">
+                <h4>E-mail (prefered method)</h4>
+                <a href="mailto:info@mediaarea.net">info@mediaarea.net</a>
+              </div>
+            <div class="col-sm-6">
+                <h4>Social</h4>
+                <ul class="icons">
+                    <li><a href="https://github.com/MediaArea" target="_blank">{% image '@AppBundle/Resources/public/img/GitHub16.png' %}<img src="{{ asset_url }}" alt="GitHub" />{% endimage %}</a></li>
+                    <li><a href="https://www.linkedin.com/company/mediaarea-net" target="_blank">{% image '@AppBundle/Resources/public/img/LinkedIn16.png' %}<img src="{{ asset_url }}" alt="LinkedIn" />{% endimage %}</a></li>
+                    <li><a href="https://twitter.com/MediaArea_Net" target="_blank">{% image '@AppBundle/Resources/public/img/Twitter16.png' %}<img src="{{ asset_url }}" alt="Twitter" />{% endimage %}</a></li>
+                    <li><a href="https://www.facebook.com/MediaAreaNet" target="_blank">f</a></li>
+                    <li><a href="https://plus.google.com/u/0/+MediaAreaNetOfficial" target="_blank">{% image '@AppBundle/Resources/public/img/GooglePlus16.png' %}<img src="{{ asset_url }}" alt="Google Plus" />{% endimage %}</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <h4>Physical adresses</h4>
+        <div class="row vertical-divider">
+            <div class="col-sm-6">
+                Europe:<br />
+                MediaArea.net SARL<br />
+                Chemin du Vernay<br />
+                73190 Curienne<br />
+                France
+              </div>
+            <div class="col-sm-6">
+                North America:<br />
+                RiceCapades LLC<br />
+                545 45th Street, 3rd Fl.<br />
+                Brooklyn, NY 11220<br />
+                USA
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block javascripts %}
+<script type="text/javascript">
+    $(document).ready(function() {
+        // Adapt height of featureBox header to have buttons on the same line
+        var featureBoxHeight = function() {
+            var previousElem;
+            // Apply only on medium screen and up
+            if ($(window).width() >= 768) {
+                $('.featureBox header').each(function(index, elem) {
+                    if (index % 2) {
+                        if (previousElem.clientHeight > elem.clientHeight) {
+                            $(elem).height(previousElem.clientHeight);
+                        }
+                        else if (elem.clientHeight > previousElem.clientHeight) {
+                            $(previousElem).height(elem.clientHeight);
+                        }
+                    }
+                    else {
+                        previousElem = elem;
+                    }
+                });
+            }
+            else {
+                $('.featureBox header').each(function(index, elem) {
+                    $(elem).height('auto');
+                });
+            }
+        };
+
+        featureBoxHeight();
+    });
+</script>
+{% endblock %}

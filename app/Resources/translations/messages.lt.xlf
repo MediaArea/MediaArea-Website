@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="en" datatype="plaintext" original="file.ext" target-language="lt">
+    <body>
+      <trans-unit id="1" approved="yes">
+        <source><![CDATA[menu.about]]></source>
+        <target><![CDATA[Apie]]></target>
+      </trans-unit>
+      <trans-unit id="2" approved="yes">
+        <source><![CDATA[menu.download]]></source>
+        <target><![CDATA[Parsisiųsti]]></target>
+      </trans-unit>
+      <trans-unit id="3" approved="yes">
+        <source><![CDATA[menu.screenshots]]></source>
+        <target><![CDATA[Programos nuotraukos]]></target>
+      </trans-unit>
+      <trans-unit id="4" approved="yes">
+        <source><![CDATA[menu.donate]]></source>
+        <target><![CDATA[Padėti MediaInfo]]></target>
+      </trans-unit>
+      <trans-unit id="5" approved="yes">
+        <source><![CDATA[menu.support]]></source>
+        <target><![CDATA[Palaikymas]]></target>
+      </trans-unit>
+      <trans-unit id="6" approved="yes">
+        <source><![CDATA[menu.testimonials]]></source>
+        <target><![CDATA[Jie kalba apie MediaInfo]]></target>
+      </trans-unit>
+      <trans-unit id="7" approved="yes">
+        <source><![CDATA[about.page.description]]></source>
+        <target><![CDATA[MediaInfo teikia techninę ir papildomą informaciją apie video arba audio failus. yra laisva programinė įranga (nemokama ir su leidimu prieiti prie programos pirminio teksto: GPL arba LGPL licencija)]]></target>
+      </trans-unit>
+      <trans-unit id="8" approved="yes">
+        <source><![CDATA[about.what.title]]></source>
+        <target><![CDATA[Kas yra MediaInfo?]]></target>
+      </trans-unit>
+      <trans-unit id="9" approved="yes">
+        <source><![CDATA[about.what.content]]></source>
+        <target><![CDATA[<strong>MediaInfo</strong> teikia techninę ir papildomą informaciją apie video arba audio failus.<br/>     Tai yra laisva programinė įranga (nemokama ir su leidimu prieiti prie programos pirminio teksto: <a href="%licenseRoute%">BSD</a> licencija)]]></target>
+      </trans-unit>
+      <trans-unit id="10" approved="yes">
+        <source><![CDATA[about.data.title]]></source>
+        <target><![CDATA[Kokią informaciją aš gausiu iš MediaInfo?]]></target>
+      </trans-unit>
+      <trans-unit id="11" approved="yes">
+        <source><![CDATA[about.data.content]]></source>
+        <target><![CDATA[<ul>  <li>Bendra: antraštė, autorius, direktorius, albumas, takelio numeris, data, trukmė...</li>  <li>Video: kodekas, aspektas, kps, bitreitas...</li>  <li>Audio: kodekas, atrankos tempą, kanalai, kalba, bitreitas...</li>  <li>Tekstas: subtitrų kalba</li>  <li>Skyrius: skyrių skaičius, skyrių sąrašas</li> </ul>]]></target>
+      </trans-unit>
+      <trans-unit id="12" approved="yes">
+        <source><![CDATA[about.analyticals.title]]></source>
+        <target><![CDATA[Kokį formatą (talpyklą) palaiko MediaInfo?]]></target>
+      </trans-unit>
+      <trans-unit id="13" approved="yes">
+        <source><![CDATA[about.analyticals.content]]></source>
+        <target><![CDATA[<ul>  <li>Video: MKV, OGM, AVI, DivX, WMV, QuickTime, Real, MPEG-1, MPEG-2, MPEG-4, DVD (VOB)...<br/>      (Kodekai: DivX, XviD, MSMPEG4, ASP, H.264/AVC, H.265/HEVC, FFV1...)</li>  <li>Audio: OGG, MP3, WAV, RA, AC3, DTS, AAC, M4A, AU, AIFF...</li>  <li>Subtitrai: SRT, SSA, ASS, SAMI...</li> </ul>]]></target>
+      </trans-unit>
+      <trans-unit id="14" approved="yes">
+        <source><![CDATA[about.features.title]]></source>
+        <target><![CDATA[Kas aš galiu daryti?]]></target>
+      </trans-unit>
+      <trans-unit id="15" approved="yes">
+        <source><![CDATA[about.features.content]]></source>
+        <target><![CDATA[<ul>  <li>Nuskaityti daug <a href="%supportFormatRoute%"> video ir audio failų formatų</a></li>  <li>Skirtingi informacijos peržiūros metodai (tekstas, lapas, medis, HTML...)</li>  <li>Šias peržiūras galite nustatyti pagal save</li>  <li>Informacijos eksportavimas kaip tekstas, CSV, HTML...</li>  <li>Grafinė sąsaja, arba Komandinė eilutė, arba DLL</li>  <li>Integraciją į MS-Windows apvalkalą (“nutemk ir įmesk”, ir Kontekstinis meniu)</li>  <li>Internacionalizacija: bet kurios kalbos rodymas bet kurioje Jūsų Operacinės Sistemos versijoje</li>  <li>Lokalizavimo galimybė (bet reikalingi savanoriai)</li> </ul>]]></target>
+      </trans-unit>
+      <trans-unit id="16" approved="yes">
+        <source><![CDATA[about.download.button.text]]></source>
+        <target><![CDATA[Parsisiųsk]]></target>
+      </trans-unit>
+      <trans-unit id="17" approved="yes">
+        <source><![CDATA[about.download.version]]></source>
+        <target><![CDATA[versija]]></target>
+      </trans-unit>
+      <trans-unit id="18" approved="yes">
+        <source><![CDATA[about.download.installer]]></source>
+        <target><![CDATA[Grafinė aplinka, su diegikliu]]></target>
+      </trans-unit>
+      <trans-unit id="19">
+        <source><![CDATA[about.download.for]]></source>
+        <target><![CDATA[]]></target>
+      </trans-unit>
+      <trans-unit id="20" approved="yes">
+        <source><![CDATA[about.download.other]]></source>
+        <target><![CDATA[Kitos versijos (OS, sąsaja...) yra <a href="%downloadRoute%">prieinamos</a>]]></target>
+      </trans-unit>
+      <trans-unit id="21" approved="yes">
+        <source><![CDATA[about.what.changelog]]></source>
+        <target><![CDATA[Jūs galite <a href="%changelogRoute%">tikrinti</a>]]></target>
+      </trans-unit>
+      <trans-unit id="22" approved="yes">
+        <source><![CDATA[about.what.donate]]></source>
+        <target><![CDATA[Jūs galite <a href="%donateRoute%">aukoti</a> tolimesnio plėtojimo palaikymui]]></target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

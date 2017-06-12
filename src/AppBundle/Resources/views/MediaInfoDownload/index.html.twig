@@ -1,0 +1,134 @@
+{% extends 'AppBundle::base.html.twig' %}
+
+{% block title %}{% trans %}download.page.title{% endtrans %}{% endblock %}
+{% block description %}{% trans %}about.page.description{% endtrans %}{% endblock %}
+{% block keywords %}{% trans %}about.page.keywords{% endtrans %}{% endblock %}
+
+{% block body %}
+<h1>{% trans %}download.title{% endtrans %}</h1>
+
+<table border="1" class="download">
+<tr class="table-header">
+    <th>{% trans %}download.table.os{% endtrans %}</th>
+    <td>{% trans %}download.table.link{% endtrans %}</td>
+</tr>
+<tr>
+    {% image '@AppBundle/Resources/public/img/OS/Windows.png' %}
+    <th><a href="{{ path('mi_download_windows') }}"><img src="{{ asset_url }}" width="288" height="76" alt="Microsoft Windows" title="Microsoft Windows"></a></th>
+    {% endimage %}
+    <td><a href="{{ path('mi_download_windows') }}">{% trans %}download.table.official_release{% endtrans %}</a></td>
+</tr>
+<tr>
+    {% image '@AppBundle/Resources/public/img/OS/Mac_OS.png' %}
+    <th><a href="{{ path('mi_download_mac') }}"><img src="{{ asset_url }}" width="250" height="100" alt="Mac OS" title="Mac OS"></a></th>
+    {% endimage %}
+    <td><a href="{{ path('mi_download_mac') }}">{% trans %}download.table.official_release{% endtrans %}</a></td>
+</tr>
+<tr>
+    {% image '@AppBundle/Resources/public/img/OS/AppImage.png' %}
+    <th><a href="{{ path('mi_download_appimage') }}"><img src="{{ asset_url }}" width="250" height="76" alt="AppImage" title="AppImage"></a></th>
+    {% endimage %}
+    <td><a href="{{ path('mi_download_appimage') }}">{% trans %}download.table.official_release{% endtrans %}</a></td>
+</tr>
+<tr>
+    {% image '@AppBundle/Resources/public/img/OS/Debian.png' %}
+    <th><a href="{{ path('mi_download_debian') }}"><img src="{{ asset_url }}" width="229" height="61" alt="Debian" title="Debian"></a></th>
+    {% endimage %}
+    <td><a href="https://packages.debian.org/search?keywords=mediainfo&searchon=names" target="_blank"><abbr title="{% trans %}download.table.apt_install{% endtrans %}">{% trans %}download.table.distro_release{% endtrans %}</abbr></a><br/><br/><a href="{{ path('mi_download_debian') }}">{% trans %}download.table.official_release{% endtrans %}</a></td>
+</tr>
+<tr>
+    {% image '@AppBundle/Resources/public/img/OS/Ubuntu.png' %}
+    <th><a href="{{ path('mi_download_ubuntu') }}"><img src="{{ asset_url }}" width="304" height="79" alt="Ubuntu" title="Ubuntu"></a></th>
+    {% endimage %}
+    <td><a href="http://packages.ubuntu.com/search?keywords=MediaInfo&searchon=names" target="_blank"><abbr title="{% trans %}download.table.apt_install{% endtrans %}">{% trans %}download.table.distro_release{% endtrans %}</abbr></a><br/><br/><a href="{{ path('mi_download_ubuntu') }}">{% trans %}download.table.official_release{% endtrans %}</a></td>
+</tr>
+<tr>
+    {% image '@AppBundle/Resources/public/img/OS/Linux_Mint.png' %}
+    <th><a href="{{ path('mi_download_ubuntu') }}"><img src="{{ asset_url }}" width="256" height="75" alt="Linux Mint" title="Linux Mint"></a></th>
+    {% endimage %}
+    <td><a href="{{ path('mi_download_ubuntu') }}">{% trans %}download.table.official_release{% endtrans %}</a></td>
+</tr>
+<tr>
+    {% image '@AppBundle/Resources/public/img/OS/RedHat.png' %}
+    <th><a href="{{ path('mi_download_rhel') }}"><img src="{{ asset_url }}" width="200" height="61" alt="RedHat Entreprise Linux" title="RedHat Entreprise Linux"></a></th>
+    {% endimage %}
+    <td><a href="https://fedoraproject.org/wiki/EPEL" target="_blank"><abbr title="{% trans %}download.table.yum_install{% endtrans %}">{% trans %}download.table.epel_release{% endtrans %}</abbr></a><br/><br/><a href="{{ path('mi_download_rhel') }}">{% trans %}download.table.official_release{% endtrans %}</a></td>
+</tr>
+<tr>
+    {% image '@AppBundle/Resources/public/img/OS/CentOS.png' %}
+    <th><a href="{{ path('mi_download_centos') }}"><img src="{{ asset_url }}" width="271" height="60" alt="CentOS" title="CentOS"></a></th>
+    {% endimage %}
+    <td><a href="https://fedoraproject.org/wiki/EPEL" target="_blank"><abbr title="{% trans %}download.table.yum_install{% endtrans %}">{% trans %}download.table.epel_release{% endtrans %}</abbr></a><br/><br/><a href="{{ path('mi_download_centos') }}">{% trans %}download.table.official_release{% endtrans %}</a></td>
+</tr>
+<tr>
+    {% image '@AppBundle/Resources/public/img/OS/Fedora.png' %}
+    <th><a href="{{ path('mi_download_fedora') }}"><img src="{{ asset_url }}" width="250" height="89" alt="Fedora" title="Fedora"></a></th>
+    {% endimage %}
+    <td><a href="https://koji.fedoraproject.org/koji/packageinfo?packageID=18110" target="_blank"><abbr title="{% trans %}download.table.dnf_install{% endtrans %}">{% trans %}download.table.distro_release{% endtrans %}</abbr></a><br/><br/><a href="{{ path('mi_download_fedora') }}">{% trans %}download.table.official_release{% endtrans %}</a></td>
+</tr>
+<tr>
+    {% image '@AppBundle/Resources/public/img/OS/openSUSE.png' %}
+    <th><a href="{{ path('mi_download_opensuse') }}"><img src="{{ asset_url }}" width="155" height="100" alt="openSUSE" title="openSUSE"></a></th>
+    {% endimage %}
+    <td><a href="http://packman.links2linux.org/package/mediainfo" target="_blank">{% trans %}download.table.packman_release{% endtrans %}</a><br/><br/><a href="{{ path('mi_download_opensuse') }}">{% trans %}download.table.official_release{% endtrans %}</a></td>
+</tr>
+<tr>
+    {% image '@AppBundle/Resources/public/img/OS/Suse.png' %}
+    <th><a href="{{ path('mi_download_sle') }}"><img src="{{ asset_url }}" width="165" height="100" alt="SLE" title="SUSE Linux Enterprise"></a></th>
+    {% endimage %}
+    <td><a href="{{ path('mi_download_sle') }}">{% trans %}download.table.official_release{% endtrans %}</a></td>
+</tr>
+<tr>
+    {% image '@AppBundle/Resources/public/img/OS/Mandriva.png' %}
+    <th><a href="{{ path('mi_download_mandriva') }}"><img src="{{ asset_url }}" width="238" height="60" alt="Mandriva" title="Mandriva"></a></th>
+    {% endimage %}
+    <td><a href="{{ path('mi_download_mandriva') }}">{% trans %}download.table.official_release{% endtrans %}</a></td>
+</tr>
+<tr>
+    {% image '@AppBundle/Resources/public/img/OS/Solaris.png' %}
+    <th><a href="{{ path('mi_download_solaris') }}"><img src="{{ asset_url }}" width="220" height="108" alt="Solaris" title="Solaris"></a></th>
+    {% endimage %}
+    <td><a href="{{ path('mi_download_solaris') }}">{% trans %}download.table.official_release{% endtrans %}</a></td>
+</tr>
+<tr>
+    {% image '@AppBundle/Resources/public/img/OS/Mageia.png' %}
+    <th><a href="{{ path('mi_download_mageia') }}"><img src="{{ asset_url }}" width="250" height="89" alt="Mageia" title="Mageia"></a></th>
+    {% endimage %}
+    <td><a href="{{ path('mi_download_mageia') }}">{% trans %}download.table.official_release{% endtrans %}</a></td>
+</tr>
+<tr>
+    {% image '@AppBundle/Resources/public/img/OS/ArchLinux.png' %}
+    <th><a href="{{ path('mi_download_archlinux') }}"><img src="{{ asset_url }}" width="350" height="103" alt="ArchLinux" title="ArchLinux"></a></th>
+    {% endimage %}
+    <td><a href="{{ path('mi_download_archlinux') }}">{% trans %}download.table.official_release{% endtrans %}</a></td>
+</tr>
+<tr>
+    {% image '@AppBundle/Resources/public/img/OS/Manjaro.png' %}
+    <th><a href="{{ path('mi_download_manjaro') }}"><img src="{{ asset_url }}" width="180" height="39" alt="Manjaro" title="Manjaro"></a></th>
+    {% endimage %}
+    <td><a href="{{ path('mi_download_manjaro') }}">{% trans %}download.table.distro_release{% endtrans %} ({% trans %}download.table.unsupported_release{% endtrans %})</a></td>
+</tr>
+<tr>
+    {% image '@AppBundle/Resources/public/img/OS/PCLinuxOS.png' %}
+    <th><a href="{{ path('mi_download_pclinuxos') }}"><img src="{{ asset_url }}" width="65" height="65" alt="PCLinuxOS" title="PCLinuxOS"></a></th>
+    {% endimage %}
+    <td><a href="{{ path('mi_download_pclinuxos') }}">{% trans %}download.table.unofficial_release{% endtrans %} ({% trans %}download.table.unsupported_release{% endtrans %})</a></td>
+</tr>
+<tr>
+    {% image '@AppBundle/Resources/public/img/OS/Slackware.png' %}
+    <th><a href="{{ path('mi_download_slackware') }}"><img src="{{ asset_url }}" width="238" height="67" alt="Slackware" title="Slackware"></a></th>
+    {% endimage %}
+    <td><a href="{{ path('mi_download_slackware') }}">{% trans %}download.table.unofficial_release{% endtrans %} ({% trans %}download.table.unsupported_release{% endtrans %})</a></td>
+</tr>
+<tr>
+    {% image '@AppBundle/Resources/public/img/OS/FreeBSD.png' %}
+    <th><a href="https://www.freshports.org/multimedia/mediainfo/"><img src="{{ asset_url }}" width="260" height="104" alt="FreeBSD" title="FreeBSD"></a></th>
+    {% endimage %}
+    <td><a href="https://www.freshports.org/multimedia/mediainfo/">{% trans %}download.table.freshports_release{% endtrans %} ({% trans %}download.table.unsupported_release{% endtrans %})</a></td>
+</tr>
+<tr>
+    <th><a href="{{ path('mi_download_source') }}">{% trans %}download.table.source_release{% endtrans %}</a></th>
+    <td><a href="{{ path('mi_download_source') }}">{% trans %}download.table.official_release{% endtrans %}</a></td>
+</tr>
+</table>
+{% endblock %}

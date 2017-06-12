@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="en" datatype="plaintext" original="file.ext" target-language="it">
+    <body>
+      <trans-unit id="1" approved="yes">
+        <source><![CDATA[menu.about]]></source>
+        <target><![CDATA[Informazioni]]></target>
+      </trans-unit>
+      <trans-unit id="2" approved="yes">
+        <source><![CDATA[menu.download]]></source>
+        <target><![CDATA[Scarica]]></target>
+      </trans-unit>
+      <trans-unit id="3" approved="yes">
+        <source><![CDATA[menu.screenshots]]></source>
+        <target><![CDATA[Immagini]]></target>
+      </trans-unit>
+      <trans-unit id="4" approved="yes">
+        <source><![CDATA[menu.donate]]></source>
+        <target><![CDATA[Aiutami]]></target>
+      </trans-unit>
+      <trans-unit id="5" approved="yes">
+        <source><![CDATA[menu.support]]></source>
+        <target><![CDATA[Supporto]]></target>
+      </trans-unit>
+      <trans-unit id="6" approved="yes">
+        <source><![CDATA[menu.testimonials]]></source>
+        <target><![CDATA[Cosa dicono di MediaInfo]]></target>
+      </trans-unit>
+      <trans-unit id="7" approved="yes">
+        <source><![CDATA[about.page.description]]></source>
+        <target><![CDATA[MediaInfo dà informazioni tecniche su file audio o video. E' un programma gratuito (non necessita pagamento ed è possibile accedere al codice sorgente gratuitamente)]]></target>
+      </trans-unit>
+      <trans-unit id="8" approved="yes">
+        <source><![CDATA[about.page.keywords]]></source>
+        <target><![CDATA[MediaInfo Media Info DLL informazioni codec video audio sottotitoli capitoli AVI MKV OGM gratuito gratis]]></target>
+      </trans-unit>
+      <trans-unit id="9" approved="yes">
+        <source><![CDATA[about.what.title]]></source>
+        <target><![CDATA[Cos'&egrave; MediaInfo?]]></target>
+      </trans-unit>
+      <trans-unit id="10" approved="yes">
+        <source><![CDATA[about.what.content]]></source>
+        <target><![CDATA[<strong>MediaInfo</strong> da informazioni tecniche       su file video o audio.<br/>       E' un programma gratuito (non necessita pagamento ed &egrave; possibile       accedere al codice sorgente gratuitamente, licenza <a href="%licenseRoute%">BSD</a>)]]></target>
+      </trans-unit>
+      <trans-unit id="11" approved="yes">
+        <source><![CDATA[about.data.title]]></source>
+        <target><![CDATA[Quali informazioni posso ottenere con MediaInfo?]]></target>
+      </trans-unit>
+      <trans-unit id="12" approved="yes">
+        <source><![CDATA[about.data.content]]></source>
+        <target><![CDATA[<ul>   <li>Generali : titolo, autore, regista, album, numero della traccia, data, durata...</li>   <li>Video : codec, aspect ratio, fps, bitrate...</li>   <li>Audio : codec, sample rate, canali, lingua, bitrate...</li>   <li>Sottotitoli : lingua del sottotitolo</li>   <li>Capitoli : numero dei capitoli, lista dei capitoli</li> </ul>]]></target>
+      </trans-unit>
+      <trans-unit id="13" approved="yes">
+        <source><![CDATA[about.analyticals.title]]></source>
+        <target><![CDATA[Che tipo di formato (contenitore) &egrave; supportato da MediaInfo?]]></target>
+      </trans-unit>
+      <trans-unit id="14" approved="yes">
+        <source><![CDATA[about.analyticals.content]]></source>
+        <target><![CDATA[<ul>  <li>Video : MKV, OGM, AVI, DivX, WMV, QuickTime, Real, MPEG-1, MPEG-2, MPEG-4, DVD (VOB)...<br/>      (Codec: DivX, XviD, MSMPEG4, ASP, H.264/AVC, H.265/HEVC, FFV1...)</li>  <li>Audio: OGG, MP3, WAV, RA, AC3, DTS, AAC, M4A, AU, AIFF...</li>  <li>Sottotitoli: SRT, SSA, ASS, SAMI...</li> </ul>]]></target>
+      </trans-unit>
+      <trans-unit id="15" approved="yes">
+        <source><![CDATA[about.features.title]]></source>
+        <target><![CDATA[Cosa posso farci?]]></target>
+      </trans-unit>
+      <trans-unit id="16" approved="yes">
+        <source><![CDATA[about.features.content]]></source>
+        <target><![CDATA[<ul>   <li>Leggere pi&ugrave; <a href="%supportFormatRoute%"> formati video e audio</a></li>   <li>Diversi modi di visualizzazione (testo, sheet, albero, HTML...)</li>   <li>Puoi personalizzare la visualizzazione</li>   <li>Puoi esportare : testo, CSV, HTML...</li>   <li>Interfaccia Grafica, o Riga di Comando, o DLL</li>   <li>Integrazione con MS-Windows (drag'n' drop, e Men&ugrave; Contestuale)</li>   <li>Internazionale : funziona indipendentemente dalla lingua o dalla versione     del vostro Sistema Operativo</li>   <li>Pu&ograve; essere tradotto in qualsiasi lingua (da parte di volontari)</li> </ul>]]></target>
+      </trans-unit>
+      <trans-unit id="17" approved="yes">
+        <source><![CDATA[about.download.button.text]]></source>
+        <target><![CDATA[Scaricalo]]></target>
+      </trans-unit>
+      <trans-unit id="18" approved="yes">
+        <source><![CDATA[about.download.version]]></source>
+        <target><![CDATA[versione]]></target>
+      </trans-unit>
+      <trans-unit id="19" approved="yes">
+        <source><![CDATA[about.download.installer]]></source>
+        <target><![CDATA[Interfaccia grafica, con installazione]]></target>
+      </trans-unit>
+      <trans-unit id="20" approved="yes">
+        <source><![CDATA[about.download.for]]></source>
+        <target><![CDATA[per]]></target>
+      </trans-unit>
+      <trans-unit id="21" approved="yes">
+        <source><![CDATA[about.download.other]]></source>
+        <target><![CDATA[altre versioni (OS, interfacce...) sono disponibili <a href="%downloadRoute%">qui</a>]]></target>
+      </trans-unit>
+      <trans-unit id="22" approved="yes">
+        <source><![CDATA[about.what.changelog]]></source>
+        <target><![CDATA[<a href="%changelogRoute%">monitorare</a>]]></target>
+      </trans-unit>
+      <trans-unit id="23" approved="yes">
+        <source><![CDATA[about.what.donate]]></source>
+        <target><![CDATA[Puoi <a href="%donateRoute%">donare</a> per supportare lo sviluppo di questo programma]]></target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

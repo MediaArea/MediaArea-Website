@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="en" datatype="plaintext" original="file.ext" target-language="pl">
+    <body>
+      <trans-unit id="1" approved="yes">
+        <source><![CDATA[menu.about]]></source>
+        <target><![CDATA[O programie]]></target>
+      </trans-unit>
+      <trans-unit id="2" approved="yes">
+        <source><![CDATA[menu.download]]></source>
+        <target><![CDATA[Pobierz]]></target>
+      </trans-unit>
+      <trans-unit id="3" approved="yes">
+        <source><![CDATA[menu.screenshots]]></source>
+        <target><![CDATA[Zrzuty ekranów]]></target>
+      </trans-unit>
+      <trans-unit id="4" approved="yes">
+        <source><![CDATA[menu.donate]]></source>
+        <target><![CDATA[Wspomóż MediaInfo]]></target>
+      </trans-unit>
+      <trans-unit id="5" approved="yes">
+        <source><![CDATA[menu.support]]></source>
+        <target><![CDATA[Wsparcie]]></target>
+      </trans-unit>
+      <trans-unit id="6" approved="yes">
+        <source><![CDATA[menu.testimonials]]></source>
+        <target><![CDATA[O MediaInfo mówią]]></target>
+      </trans-unit>
+      <trans-unit id="7" approved="yes">
+        <source><![CDATA[about.page.description]]></source>
+        <target><![CDATA[MediaInfo dostarcza informacji, technicznych i pochądzących ze znaczników, o plikach audio i wideo. Jest programem darmowym (bezpłatnym i z otwartym kodem źródłowym na licencji BSD)]]></target>
+      </trans-unit>
+      <trans-unit id="8" approved="yes">
+        <source><![CDATA[about.page.keywords]]></source>
+        <target><![CDATA[MediaInfo Media Info DLL informacje tag znacznik codec kodek video wideo audio subtitle napisy chapters rozdziały AVI MKV OGM darmowy]]></target>
+      </trans-unit>
+      <trans-unit id="9" approved="yes">
+        <source><![CDATA[about.what.title]]></source>
+        <target><![CDATA[Co to jest MediaInfo?]]></target>
+      </trans-unit>
+      <trans-unit id="10" approved="yes">
+        <source><![CDATA[about.what.content]]></source>
+        <target><![CDATA[<strong>MediaInfo</strong> dostarcza informacji technicznych i pochodzących ze znaczników o plikach audio i wideo.<br/>     Jest programem darmowym (bezpłatnym i z otwartym kodem źródłowym na licencji <a href="%licenseRoute%">BSD</a>)]]></target>
+      </trans-unit>
+      <trans-unit id="11" approved="yes">
+        <source><![CDATA[about.data.title]]></source>
+        <target><![CDATA[Czego można się dowiedzieć z pomocą MediaInfo?]]></target>
+      </trans-unit>
+      <trans-unit id="12" approved="yes">
+        <source><![CDATA[about.data.content]]></source>
+        <target><![CDATA[<ul>  <li>Ogólne: tytuł, autor, reżyser, album, numer nagrania, data, czas trwania...</li>  <li>Wideo: kodek, proporcje obrazu, ilość klatek na sekundę, przypływność bitów...</li>  <li>Audio: kodek, częstotliwość próbkowania, liczba kanałów, język, przypływność bitów...</li>  <li>Tekst: język napisów</li>  <li>Rozdziały: liczba rozdziałów, lista rozdziałów</li> </ul>]]></target>
+      </trans-unit>
+      <trans-unit id="13" approved="yes">
+        <source><![CDATA[about.analyticals.title]]></source>
+        <target><![CDATA[Jakie formaty (zawartość) obsługuje MediaInfo?]]></target>
+      </trans-unit>
+      <trans-unit id="14" approved="yes">
+        <source><![CDATA[about.analyticals.content]]></source>
+        <target><![CDATA[<ul>  <li>Wideo: MKV, OGM, AVI, DivX, WMV, QuickTime, Real, MPEG-1, MPEG-2, MPEG-4, DVD (VOB)...<br/>      (kodeki: DivX, XviD, MSMPEG4, ASP, H.264/AVC, H.265/HEVC, FFV1...)</li>  <li>Audio: OGG, MP3, WAV, RA, AC3, DTS, AAC, M4A, AU, AIFF...</li>  <li>Napisy: SRT, SSA, ASS, SAMI...</li> </ul>]]></target>
+      </trans-unit>
+      <trans-unit id="15" approved="yes">
+        <source><![CDATA[about.features.title]]></source>
+        <target><![CDATA[Jakie możliwości oferuje program?]]></target>
+      </trans-unit>
+      <trans-unit id="16" approved="yes">
+        <source><![CDATA[about.features.content]]></source>
+        <target><![CDATA[<ul>  <li>Odczyt plików w wielu <a href="%supportFormatRoute%">formatach wideo i audio</a></li>  <li>Przeglądanie informacji na wiele sposobów (w postaci tekstu, drzewa, karty, HTML...)</li>  <li>Możliwość dostosowania sposobu prezentacji wyników do własnych upodobań</li>  <li>Eksport informacji w postaci tekstu, CSV, HTML...</li>  <li>Interfejs graficzny, wiersz poleceń, względnie biblioteka DLL</li>  <li>Integracja z powłoką Windows (przeciągnij i upuść, menu kontekstowe)</li>  <li>Umiędzynarodowienie: dowolny język wyświetlany w dowolnej wersji systemu operacyjnego</li>  <li>Lokalizację (wymaga ochotników)</li> </ul>]]></target>
+      </trans-unit>
+      <trans-unit id="17" approved="yes">
+        <source><![CDATA[about.download.button.text]]></source>
+        <target><![CDATA[Pobierz]]></target>
+      </trans-unit>
+      <trans-unit id="18" approved="yes">
+        <source><![CDATA[about.download.version]]></source>
+        <target><![CDATA[wersja]]></target>
+      </trans-unit>
+      <trans-unit id="19" approved="yes">
+        <source><![CDATA[about.download.installer]]></source>
+        <target><![CDATA[interfejs graficzny wraz z programem instalacyjnym]]></target>
+      </trans-unit>
+      <trans-unit id="20" approved="yes">
+        <source><![CDATA[about.download.for]]></source>
+        <target><![CDATA[dla]]></target>
+      </trans-unit>
+      <trans-unit id="21" approved="yes">
+        <source><![CDATA[about.download.other]]></source>
+        <target><![CDATA[<a href="%downloadRoute%">Dostępne</a> są inne wersje (alternatywne systemy operacyjne, interfejsy...)]]></target>
+      </trans-unit>
+      <trans-unit id="22" approved="yes">
+        <source><![CDATA[about.what.changelog]]></source>
+        <target><![CDATA[Możesz <a href="%changelogRoute%">śledzić</a>]]></target>
+      </trans-unit>
+      <trans-unit id="23" approved="yes">
+        <source><![CDATA[about.what.donate]]></source>
+        <target><![CDATA[Możesz zmotywować autora do dalszej pracy <a href="%donateRoute%">dowolną kwotą</a>]]></target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
