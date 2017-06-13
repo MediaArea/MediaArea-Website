@@ -1,0 +1,44 @@
+{% set languages = {
+    'be': {'title': 'Беларуская', 'sprite': 'Belarus'},
+    'bg': {'title': 'Bulgarian', 'sprite': 'Bulgaria'},
+    'ca': {'title': 'Català', 'sprite': 'Catalonia'},
+    'de': {'title': 'Deutsch', 'sprite': 'Germany'},
+    'en': {'title': 'English', 'sprite': 'UK'},
+    'es': {'title': 'Spanish', 'sprite': 'Spain'},
+    'fa': {'title': 'Farsi', 'sprite': 'Iran'},
+    'fr': {'title': 'Français', 'sprite': 'France'},
+    'hr': {'title': 'Hrvatski', 'sprite': 'Croatia'},
+    'hu': {'title': 'Magyar', 'sprite': 'Hungary'},
+    'it': {'title': 'Italiano', 'sprite': 'Italy'},
+    'ja': {'title': '日本語', 'sprite': 'Japan'},
+    'ka': {'title': 'Georgian', 'sprite': 'Georgia'},
+    'ko': {'title': 'Korean', 'sprite': 'Korea'},
+    'lt': {'title': 'Lithuanian', 'sprite': 'Lithuania'},
+    'nl': {'title': 'Netherlands', 'sprite': 'Netherlands'},
+    'pl': {'title': 'Polish', 'sprite': 'Belarus'},
+    'pt': {'title': 'Portuguese', 'sprite': 'Portugal'},
+    'pt-BR': {'title': 'Portuguese (Brazil)', 'sprite': 'Brazil'},
+    'ru': {'title': 'Русский', 'sprite': 'Russia'},
+    'sq': {'title': 'Shqip', 'sprite': 'Albania'},
+    'sv': {'title': 'Sverige', 'sprite': 'Sweden'},
+    'th': {'title': 'Thailandish', 'sprite': 'Thailand'},
+    'uk': {'title': 'Ukrainian', 'sprite': 'Ukraine'},
+    'zh-CN': {'title': 'Chinese (Simplified)', 'sprite': 'China'},
+    'zh-HK': {'title': 'Cantonese (Hong Kong)', 'sprite': 'HongKong'},
+    'zh-TW': {'title': 'Chinese (Traditional)', 'sprite': 'Taiwan'},
+    }
+%}
+{% set currentLocale = app.request.attributes.get('_locale') %}
+<ul class="nav navbar-nav navbar-right hidden-xs">
+	<div class="map">
+		<ul class="map scrollable-menu">
+            {% set routeParams = app.request.attributes.get('_route_params')|merge(app.request.query.all()) %}
+            {% set routeCurrent = app.request.get('_route') == "" ? 'homepage' : app.request.get('_route') %}
+            {% image '@AppBundle/Resources/public/img/blank.gif' %}
+            {% for language in languages|keys %}
+                <li><a href="{{ path((routeCurrent), (routeParams|merge({'_locale': language}))) }}" title="{{ languages[language].title }}"><img src="{{ asset_url }}" width="25" height="15" title="{{ languages[language].title }}" alt="{{ languages[language].title }}" class="sprite {{ languages[language].sprite }}"> {{ languages[language].title }}</a></li>
+            {% endfor %}
+            {% endimage %}
+		</ul>
+	</div>
+</ul>

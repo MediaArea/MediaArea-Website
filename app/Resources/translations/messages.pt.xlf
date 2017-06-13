@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="en" datatype="plaintext" original="file.ext" target-language="pt">
+    <body>
+      <trans-unit id="1" approved="yes">
+        <source><![CDATA[menu.about]]></source>
+        <target><![CDATA[Sobre]]></target>
+      </trans-unit>
+      <trans-unit id="2" approved="yes">
+        <source><![CDATA[menu.screenshots]]></source>
+        <target><![CDATA[Imagens]]></target>
+      </trans-unit>
+      <trans-unit id="3" approved="yes">
+        <source><![CDATA[menu.donate]]></source>
+        <target><![CDATA[Ajude o MediaInfo]]></target>
+      </trans-unit>
+      <trans-unit id="4" approved="yes">
+        <source><![CDATA[menu.support]]></source>
+        <target><![CDATA[Suporte]]></target>
+      </trans-unit>
+      <trans-unit id="5" approved="yes">
+        <source><![CDATA[menu.testimonials]]></source>
+        <target><![CDATA[Eles falaram sobre o MediaInfo]]></target>
+      </trans-unit>
+      <trans-unit id="6" approved="yes">
+        <source><![CDATA[about.what.title]]></source>
+        <target><![CDATA[O que é o MediaInfo?]]></target>
+      </trans-unit>
+      <trans-unit id="7" approved="yes">
+        <source><![CDATA[about.what.content]]></source>
+        <target><![CDATA[<strong>O MediaInfo</strong> fornece informação técnica e de etiqueta sobre um arquivo de vídeo ou áudio.<br/>     Este programa é gratuito (livre de custo e de acesso ao código fonte: licença <a href="%licenseRoute%">BSD</a>)]]></target>
+      </trans-unit>
+      <trans-unit id="8" approved="yes">
+        <source><![CDATA[about.data.title]]></source>
+        <target><![CDATA[Que tipo de informação eu consigo com o MediaInfo?]]></target>
+      </trans-unit>
+      <trans-unit id="9" approved="yes">
+        <source><![CDATA[about.data.content]]></source>
+        <target><![CDATA[<ul>  <li>Geral: título, autor, diretor, álbum, número da faixa, data, duração...</li>  <li>Vídeo: codec, resolução, fps, taxa de bits...</li>  <li>Áudio: codec, taxa de amostragem, canais, idioma, taxa de bits...</li>  <li>Texto: idioma da legenda</li>  <li>Capítulos: número de capítulos, lista de capítulos</li> </ul>]]></target>
+      </trans-unit>
+      <trans-unit id="10" approved="yes">
+        <source><![CDATA[about.analyticals.title]]></source>
+        <target><![CDATA[Quais formatos (container) o MediaInfo suporta?]]></target>
+      </trans-unit>
+      <trans-unit id="11" approved="yes">
+        <source><![CDATA[about.analyticals.content]]></source>
+        <target><![CDATA[<ul>  <li>Vídeo: MKV, OGM, AVI, DivX, WMV, QuickTime, Real, MPEG-1, MPEG-2, MPEG-4, DVD (VOB)...<br/>      (Codecs: DivX, XviD, MSMPEG4, ASP, H.264/AVC, H.265/HEVC, FFV1...)</li>  <li>Áudio: OGG, MP3, WAV, RA, AC3, DTS, AAC, M4A, AU, AIFF...</li>  <li>Legendas: SRT, SSA, ASS, SAMI...</li> </ul>]]></target>
+      </trans-unit>
+      <trans-unit id="12" approved="yes">
+        <source><![CDATA[about.features.title]]></source>
+        <target><![CDATA[O que posso fazer com ele?]]></target>
+      </trans-unit>
+      <trans-unit id="13" approved="yes">
+        <source><![CDATA[about.features.content]]></source>
+        <target><![CDATA[<ul>  <li>Ler muitos <a href="%supportFormatRoute%"> formatos de arquivo de vídeo e áudio</a></li>  <li>Exibir a informação de diferentes maneiras (texto, formulário, árvore, HTML ...)</li>  <li>Você pode personalizar a exibição</li>  <li>Exportar a informação como texto, CSV, HTML...</li>  <li>Interface Gráfica, Linha de Comando, ou DLL</li>  <li>Integração com o shell do MS-WINDOWS (arrastar e soltar, e menu de contexto)</li>  <li>Internacionalização: exibe qualquer idioma em qualquer versão do seu Sistema Operacional</li>  <li>Pode-se traduzir a interface para qualquer idioma (mas é necessário voluntários)</li> </ul>]]></target>
+      </trans-unit>
+      <trans-unit id="14" approved="yes">
+        <source><![CDATA[about.page.description]]></source>
+        <target><![CDATA[MediaInfo proporciona informações técnicas e informações sobre tags de seus arquivos de áudio ou vídeo. Esse programa é grátis (livre de cobranças e de código fonte livre).]]></target>
+      </trans-unit>
+      <trans-unit id="15" approved="yes">
+        <source><![CDATA[about.page.keywords]]></source>
+        <target><![CDATA[MediaInfo Media Info DLL mídia informações tags codec vídeo áudio legendas capítulos AVI MKV OGM grátis]]></target>
+      </trans-unit>
+      <trans-unit id="16" approved="yes">
+        <source><![CDATA[about.download.button.text]]></source>
+        <target><![CDATA[Baixa-lo]]></target>
+      </trans-unit>
+      <trans-unit id="17" approved="yes">
+        <source><![CDATA[about.download.version]]></source>
+        <target><![CDATA[versão]]></target>
+      </trans-unit>
+      <trans-unit id="18" approved="yes">
+        <source><![CDATA[about.download.installer]]></source>
+        <target><![CDATA[Interface Gráfica, com Instalador]]></target>
+      </trans-unit>
+      <trans-unit id="19" approved="yes">
+        <source><![CDATA[about.download.for]]></source>
+        <target><![CDATA[para]]></target>
+      </trans-unit>
+      <trans-unit id="20" approved="yes">
+        <source><![CDATA[about.download.other]]></source>
+        <target><![CDATA[Outras versões (OS, interface ...) estão <a href="%downloadRoute%">disponíveis</a>]]></target>
+      </trans-unit>
+      <trans-unit id="21" approved="yes">
+        <source><![CDATA[about.what.changelog]]></source>
+        <target><![CDATA[Você pode <a href="%changelogRoute%">acompanhar</a>]]></target>
+      </trans-unit>
+      <trans-unit id="22" approved="yes">
+        <source><![CDATA[about.what.donate]]></source>
+        <target><![CDATA[Faça uma <a href="%donateRoute%">doação</a> para apoiar o desenvolvimento contínuo]]></target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

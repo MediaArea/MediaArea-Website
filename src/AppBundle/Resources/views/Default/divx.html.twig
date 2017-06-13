@@ -1,0 +1,29 @@
+{% extends 'AppBundle::base.html.twig' %}
+
+{% block title %}{% trans %}divx.page.title{% endtrans %}{% endblock %}
+{% block description %}{% trans %}about.page.description{% endtrans %}{% endblock %}
+{% block keywords %}{% trans %}about.page.keywords{% endtrans %}{% endblock %}
+
+{% block body %}
+<h1>{% trans %}divx.title{% endtrans %}</h1>
+
+<h2>Downloads</h2>
+<h3>Microsoft Windows</h3>
+The following packages can handle this codec identifier:
+<ul>
+    <li>Alternate decoder from <a href="https://www.xvid.org">XviD community</a>: download <a href="https://download.mediaarea.net/XviD_1.3.2.exe">Xvid 1.3.2</a> (10.2 MB)</li>
+    <li>Official decoder from <a href="http://www.divx.com">DivX, Inc.</a>: download <a href="https://download.mediaarea.net/DivX_2.3.1.2.exe">DivX 2.3.1.2</a> (18.2 MB)</li>
+</ul>
+
+<h2>About</h2>
+The codec identifier name comes from the brand name of the encoder library.<br/>
+The name of the video compression technology is <a href="https://en.wikipedia.org/wiki/MPEG-4_Part_2">MPEG-4 Visual</a>.<br/>
+
+<h2>More info</h2>
+{% image '@AppBundle/Resources/public/img/Divx_logo.png' %}
+<img src="{{ asset_url }}" alt="DivX logo" width="232" height="60"><br/>
+{% endimage %}
+Developed by: <a href="http://www.divx.com" title="DivX, Inc.">DivX, Inc.</a><br/>
+Latest release: 2.3.1.2<br/>
+License: Proprietary
+{% endblock %}

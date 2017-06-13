@@ -1,0 +1,1047 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="en" datatype="plaintext" original="file.ext" target-language="en">
+    <body>
+      <trans-unit id="1" approved="yes">
+        <source><![CDATA[menu.about]]></source>
+        <target><![CDATA[About]]></target>
+      </trans-unit>
+      <trans-unit id="2" approved="yes">
+        <source><![CDATA[menu.download]]></source>
+        <target><![CDATA[Download]]></target>
+      </trans-unit>
+      <trans-unit id="3" approved="yes">
+        <source><![CDATA[menu.screenshots]]></source>
+        <target><![CDATA[Screenshots]]></target>
+      </trans-unit>
+      <trans-unit id="4" approved="yes">
+        <source><![CDATA[menu.donate]]></source>
+        <target><![CDATA[Donate to MediaInfo]]></target>
+      </trans-unit>
+      <trans-unit id="5" approved="yes">
+        <source><![CDATA[menu.support]]></source>
+        <target><![CDATA[Support]]></target>
+      </trans-unit>
+      <trans-unit id="6" approved="yes">
+        <source><![CDATA[menu.testimonials]]></source>
+        <target><![CDATA[What MediaInfo users say]]></target>
+      </trans-unit>
+      <trans-unit id="7" approved="yes">
+        <source><![CDATA[about.page.title]]></source>
+        <target><![CDATA[MediaInfo]]></target>
+      </trans-unit>
+      <trans-unit id="8" approved="yes">
+        <source><![CDATA[about.page.description]]></source>
+        <target><![CDATA[MediaInfo is a convenient unified display of the most relevant technical and tag data for video and audio files]]></target>
+      </trans-unit>
+      <trans-unit id="9" approved="yes">
+        <source><![CDATA[about.page.keywords]]></source>
+        <target><![CDATA[MediaInfo Media Info DLL information tag codec video audio subtitle chapters AVI MKV OGM free]]></target>
+      </trans-unit>
+      <trans-unit id="10" approved="yes">
+        <source><![CDATA[about.what.title]]></source>
+        <target><![CDATA[What is MediaInfo?]]></target>
+      </trans-unit>
+      <trans-unit id="11" approved="yes">
+        <source><![CDATA[about.what.content]]></source>
+        <target><![CDATA[<strong>MediaInfo</strong> is a convenient unified display of the most relevant technical and tag data for video and audio files.]]></target>
+      </trans-unit>
+      <trans-unit id="12" approved="yes">
+        <source><![CDATA[about.data.title]]></source>
+        <target><![CDATA[The MediaInfo data display includes:]]></target>
+      </trans-unit>
+      <trans-unit id="13" approved="yes">
+        <source><![CDATA[about.data.content]]></source>
+        <target><![CDATA[<ul>
+    <li>Container: format, profile, commercial name of the format, duration, overall bit rate, writing application and library, title, author, director, album, track number, date, duration...</li>
+    <li>Video: format, codec id, aspect, frame rate, bit rate, color space, chroma subsampling, bit depth, scan type, scan order...</li>
+    <li>Audio: format, codec id, sample rate, channels, bit depth, language, bit rate...</li>
+    <li>Text: format, codec id, language of subtitle...</li>
+    <li>Chapters: count of chapters, list of chapters...</li>
+</ul>]]></target>
+      </trans-unit>
+      <trans-unit id="14" approved="yes">
+        <source><![CDATA[about.analyticals.title]]></source>
+        <target><![CDATA[MediaInfo analyticals include:]]></target>
+      </trans-unit>
+      <trans-unit id="15" approved="yes">
+        <source><![CDATA[about.analyticals.content]]></source>
+        <target><![CDATA[<ul>
+    <li>Container: MPEG-4, QuickTime, Matroska, AVI, MPEG-PS (including unprotected DVD), MPEG-TS (including unprotected Blu-ray), MXF, GXF, LXF, WMV, FLV, Real...</li>
+    <li>Tags: Id3v1, Id3v2, Vorbis comments, APE tags...</li>
+    <li>Video: MPEG-1/2 Video, H.263, MPEG-4 Visual (including DivX, XviD), H.264/AVC, H.265/HEVC, FFV1...</li>
+    <li>Audio: MPEG Audio (including MP3), AC3, DTS, AAC, Dolby E, AES3, FLAC...</li>
+    <li>Subtitles: CEA-608, CEA-708, DTVCC, SCTE-20, SCTE-128, ATSC/53, CDP, DVB Subtitle, Teletext, SRT, SSA, ASS, SAMI...</li>
+</ul>]]></target>
+      </trans-unit>
+      <trans-unit id="16" approved="yes">
+        <source><![CDATA[about.features.title]]></source>
+        <target><![CDATA[MediaInfo features include:]]></target>
+      </trans-unit>
+      <trans-unit id="17" approved="yes">
+        <source><![CDATA[about.features.content]]></source>
+        <target><![CDATA[<ul>    <li>Read many <a href="%supportFormatRoute%"> video and audio file formats</a></li>    <li>View information in different formats (text, sheet, tree, HTML...)</li>    <li>Customise these viewing formats</li>    <li>Export information as text, CSV, HTML...</li>    <li>Graphical user interface, command line interface, or library (.dll/.so/.dylib) versions available</li>    <li>Integrate with the shell (drag 'n' drop, and Context menu)</li>    <li>Internationalisation: display any language on any operating system</li>    <li>Localisation capability (for which volunteers are needed - please <a href="mailto:info@mediaarea.net">contact us</a>!)</li></ul>]]></target>
+      </trans-unit>
+      <trans-unit id="18" approved="yes">
+        <source><![CDATA[about.license.title]]></source>
+        <target><![CDATA[License:]]></target>
+      </trans-unit>
+      <trans-unit id="19" approved="yes">
+        <source><![CDATA[about.license.content]]></source>
+        <target><![CDATA[It is <a href="https://en.wikipedia.org/wiki/Open_source">Open-Source</a> software which means that end users and developers have freedom to study, to improve and to redistribute the program (<a href="%licenseRoute%">BSD-style license</a>).]]></target>
+      </trans-unit>
+      <trans-unit id="22" approved="yes">
+        <source><![CDATA[about.screenshot_img.alt]]></source>
+        <target><![CDATA[Main Interface]]></target>
+      </trans-unit>
+      <trans-unit id="23" approved="yes">
+        <source><![CDATA[about.screenshot_img.title]]></source>
+        <target><![CDATA[Screenshot - The main interface]]></target>
+      </trans-unit>
+      <trans-unit id="24" approved="yes">
+        <source><![CDATA[support.page.title]]></source>
+        <target><![CDATA[MediaInfo - Support]]></target>
+      </trans-unit>
+      <trans-unit id="25" approved="yes">
+        <source><![CDATA[support.title]]></source>
+        <target><![CDATA[Support]]></target>
+      </trans-unit>
+      <trans-unit id="26" approved="yes">
+        <source><![CDATA[support.content]]></source>
+        <target><![CDATA[For users:
+<ul>
+    <li>Read the <a href="%supportFaqRoute%">Frequently Asked Questions</a> first, please.</li>
+    <li>If this doesn't help, you can submit a <a href="https://sourceforge.net/p/mediainfo/bugs/">bug report</a>
+    or a <a href="https://sourceforge.net/p/mediainfo/feature-requests/">feature request</a>.</li>
+    <li>Also, there is a <a href="https://sourceforge.net/p/mediainfo/discussion/">forum</a> for other questions.</li>
+</ul>
+You can find more detailed information here:
+<ul>
+    <li>List of <a href="%supportFormatRoute%">supported formats</a></li>
+    <li>List of <a href="%supportTagsRoute%">supported tags</a></li>
+</ul>
+For developers:
+<ul>
+    <li>A <a href="%supportSdkRoute%">Software Developement Kit</a> for developers who would like to use MediaInfo.dll.</li>
+    <li><a href="%supportBuildRoute%">How to build from source</a> for developers who would like to build MediaInfo.dll or MediaInfo themselves.</li>
+</ul>]]></target>
+      </trans-unit>
+      <trans-unit id="27" approved="yes">
+        <source><![CDATA[support.pro.title]]></source>
+        <target><![CDATA[Additional Professional services]]></target>
+      </trans-unit>
+      <trans-unit id="28" approved="yes">
+        <source><![CDATA[support.pro.content]]></source>
+        <target><![CDATA[<a href="http://societe.com/societe/mediaarea-net-500291844.html">MediaArea.net</a> <a href="https://en.wikipedia.org/wiki/Societe_a_responsabilite_limitee">SARL</a> (French for limited liability company) is at your disposal for any request concerning MediaInfo.<br/>
+Non-exhaustive list of possible services:
+<ul>
+ <li>Integration of MediaInfo or MediaInfo.dll in your information system </li>
+ <li>Third Party Maintenance (corrective or adaptive) </li>
+ <li>Acceleration of Development of a request for specific changes (not a priority or rejected by the free support) </li>
+ <li>Customized support (help using the API...)</li>
+ <li>...</li>
+</ul>
+Feel free to <a href="mailto:info@mediaarea.net">contact us</a> with any questions or requests - but please, check the FAQ first]]></target>
+      </trans-unit>
+      <trans-unit id="29" approved="yes">
+        <source><![CDATA[support.faq.page.title]]></source>
+        <target><![CDATA[MediaInfo - FAQ]]></target>
+      </trans-unit>
+      <trans-unit id="30" approved="yes">
+        <source><![CDATA[support.faq.title]]></source>
+        <target><![CDATA[Frequently Asked Questions (FAQ)]]></target>
+      </trans-unit>
+      <trans-unit id="31" approved="yes">
+        <source><![CDATA[support.faq.analysis]]></source>
+        <target><![CDATA[Analysis]]></target>
+      </trans-unit>
+      <trans-unit id="32" approved="yes">
+        <source><![CDATA[support.faq.analysis.BFF_TFF.title]]></source>
+        <target><![CDATA[MediaInfo states video is Bottom Filed First when it is actually Top Field First]]></target>
+      </trans-unit>
+      <trans-unit id="33" approved="yes">
+        <source><![CDATA[support.faq.analysis.BFF_TFF.content]]></source>
+        <target><![CDATA[Most of such comments come from ProRes having displayed and stored order inverted, for a reason I ignore.<br/>
+MediaInfo shows how displayed order is wanted by the container, and sometimes the container says that stored order is TFF and displayed order is BFF ('fiel' atom in QuickTime header).<br/>
+In that case, display of MediaInfo is:]]></target>
+      </trans-unit>
+      <trans-unit id="34" approved="yes">
+        <source><![CDATA[support.faq.analysis.BFF_TFF.content2]]></source>
+        <target><![CDATA[Meaning that displayed order is BFF but raw stream stored order is TFF. Some player do not obey the inversion metadata from the QuickTime container so you can sometimes see TFF.
+Update: <a href="https://sourceforge.net/p/mediainfo/bugs/841/">There is a discussion about a technical report</a> and the output may change in the future]]></target>
+      </trans-unit>
+      <trans-unit id="35" approved="yes">
+        <source><![CDATA[support.faq.general]]></source>
+        <target><![CDATA[General]]></target>
+      </trans-unit>
+      <trans-unit id="36" approved="yes">
+        <source><![CDATA[support.faq.general.URL.title]]></source>
+        <target><![CDATA[What is the canonical URL of the website?]]></target>
+      </trans-unit>
+      <trans-unit id="37" approved="yes">
+        <source><![CDATA[support.faq.general.Internet.title]]></source>
+        <target><![CDATA[MediaInfo tries to connect to the Internet!]]></target>
+      </trans-unit>
+      <trans-unit id="38" approved="yes">
+        <source><![CDATA[support.faq.general.Internet.content]]></source>
+        <target><![CDATA[Yes, it tries (if "Check for newest version" is checked).<br/>
+When this checkbox is checked, MediaInfo connects to mediaarea.net website too for <strong>anonymous</strong> statistics. (how often MediaInfo is used, which OS/Language/Country is the most used...)<br/>
+If you don't want to autorize anonymous statistics, uncheck the "Check for newest version" checkbox.]]></target>
+      </trans-unit>
+      <trans-unit id="39" approved="yes">
+        <source><![CDATA[support.faq.general.MultipleNames.title]]></source>
+        <target><![CDATA[In the SourceForge repository, there are multiple filenames. Which one should I download?]]></target>
+      </trans-unit>
+      <trans-unit id="40" approved="yes">
+        <source><![CDATA[support.faq.general.MultipleNames.content]]></source>
+        <target><![CDATA[It depends on what you require:
+<ul>
+ <li>A graphical interface : MediaInfo GUI</li>
+ <li>A Command line interface : MediaInfo CLI</li>
+ <li>A DLL to interface with other software : MediaInfo DLL</li>
+</ul>
+<br/>
+After this, you must select your operating system:
+<ul>
+ <li>Win : Windows 95 to Windows XP</li>
+ <li>Lin : Linux distribution</li>
+</ul>
+<br/>
+And your platform:
+<ul>
+ <li>686 : Intel Pentium, AMD Athlon</li>
+ <li>AMD64 : Intel EMT64  enabled CPU, AMD Athlon64</li>
+</ul>]]></target>
+      </trans-unit>
+      <trans-unit id="41" approved="yes">
+        <source><![CDATA[support.faq.general.MultipleVersions.title]]></source>
+        <target><![CDATA[In the SourceForge repository, there are multiple file versions. Which one should I download?]]></target>
+      </trans-unit>
+      <trans-unit id="42" approved="yes">
+        <source><![CDATA[support.faq.general.MultipleVersions.content]]></source>
+        <target><![CDATA[Always the latest version, except if:
+<ul>
+ <li>The version is tagged "beta". You can download this, but be warned, this is not a stable version.</li>
+ <li>The person who asked you to download specified the version. Download this version, as the developer may not have tested the latest version</li>
+</ul>]]></target>
+      </trans-unit>
+      <trans-unit id="43" approved="yes">
+        <source><![CDATA[support.faq.general.NoSupport.title]]></source>
+        <target><![CDATA[Why is <em>format</em> not supported?]]></target>
+      </trans-unit>
+      <trans-unit id="44" approved="yes">
+        <source><![CDATA[support.faq.general.NoSupport.content]]></source>
+        <target><![CDATA[First, maybe I don't have specifications for it.<br/>
+If you have documentation about the format, please <a href="mailto:info@mediaarea.net">contact us</a>.<br/>
+Second, maybe we don't have the time on free support for implementing it.<br/>
+If you desire to accelerate the development, don't hesitate to <a href="mailto:info@mediaarea.net">contact us</a> for a quotation.]]></target>
+      </trans-unit>
+      <trans-unit id="45" approved="yes">
+        <source><![CDATA[support.faq.general.YouShould.title]]></source>
+        <target><![CDATA[Really, <em>format</em> should be supported because <em>a motive</em>]]></target>
+      </trans-unit>
+      <trans-unit id="46" approved="yes">
+        <source><![CDATA[support.faq.general.YouShould.content]]></source>
+        <target><![CDATA[I have no problem for accepting a (good) patch for the support of <em>format</em>, don't hesitate to <a href="https://sourceforge.net/p/mediainfo/patches/">propose a patch</a>.<br />
+You are not a programmer? If you really think that <em>a motive</em> is true, I guess you'll have no problem for finding someone else ready for implementing this feature if you think that the rate of the main developer (see "<a href="#NoSupport">Why is <em>format</em> not supported?</a>", but you already asked for the quotation, right?) is too high.<br/>
+You don't succeed to find the funds for the development? Maybe it is because <em>a motive</em> is not true...<br/>
+Note: on my side I think that you should work for me for free, this product needs you, you should be part of the project. If you are not ready to work for me for free, please don't be upset if I don't work for you for free.]]></target>
+      </trans-unit>
+      <trans-unit id="47" approved="yes">
+        <source><![CDATA[support.faq.general.NoDetection.title]]></source>
+        <target><![CDATA[A file is not properly detected. What should I do?]]></target>
+      </trans-unit>
+      <trans-unit id="48" approved="yes">
+        <source><![CDATA[support.faq.general.NoDetection.content]]></source>
+        <target><![CDATA[Please <a href="https://sourceforge.net/p/mediainfo/bugs/">open a ticket</a>. I'd like a copy of your file.]]></target>
+      </trans-unit>
+      <trans-unit id="49" approved="yes">
+        <source><![CDATA[support.faq.general.NoTranslation.title]]></source>
+        <target><![CDATA[I would like to have MediaInfo translated into my language. Why don't you translate it into my language?]]></target>
+      </trans-unit>
+      <trans-unit id="50" approved="yes">
+        <source><![CDATA[support.faq.general.NoTranslation.content]]></source>
+        <target><![CDATA[Because I don't speak your language! ;-)<br/>
+If you have an hour, you can translate it (in the options dialog box), and send me the file (from ./plugins/ directory). This is not difficult; you only need some knowledge of English.]]></target>
+      </trans-unit>
+      <trans-unit id="51" approved="yes">
+        <source><![CDATA[support.faq.general.BinaryPrefix.title]]></source>
+        <target><![CDATA[What's KiB, MiB, GiB?]]></target>
+      </trans-unit>
+      <trans-unit id="52" approved="yes">
+        <source><![CDATA[support.faq.general.BinaryPrefix.content]]></source>
+        <target><![CDATA[These are <a href="https://en.wikipedia.org/wiki/Binary_prefix">binary prefixes</a>.<br/>
+For example, 1 KiB is 1024 bytes, 1 KB is 1000 bytes.<br/>
+The difference is not important with small files (only 2.4% for "K"), but becomes more and more important with bigger numbers (1 GB is only ~0.93 GiB, 1 TB is only 0.90 TiB!).<br/>
+MediaInfo makes every attempt to be precise and does not tolerate errors of such magnitude when posting numbers even though Microsoft continues to confuse the issue in its operating system.<br/>
+See the <a href="https://en.wikipedia.org/wiki/Binary_prefix#IEC_standard_prefixes">Binary prefix Wikipedia page</a> for more information.<br/>
+Anyway you can:
+<ul>
+ <li>use the complete output with raw values (-f in the CLI or "advanced mode" in the GUI) --> "File size: 4700000000" instead of "File size: 4.37 GiB"</li>
+ <li>use your own language file (--Language=file://xxx.csv in the CLI, choose your own language file in the GUI). Language files are in the GUI package, you can edit " GiB" and other fields as you desire).</li>
+</ul>]]></target>
+      </trans-unit>
+      <trans-unit id="53" approved="yes">
+        <source><![CDATA[support.faq.general.ThousandSeparator.title]]></source>
+        <target><![CDATA[Why are there spaces in numbers?]]></target>
+      </trans-unit>
+      <trans-unit id="54" approved="yes">
+        <source><![CDATA[support.faq.general.ThousandSeparator.content]]></source>
+        <target><![CDATA[Yes, there is a space in "1 920 pixels" for example.<br/>
+This is the <a href="https://en.wikipedia.org/wiki/Thousands_separator#Examples_of_use">international standard</a> ("SI style").<br/>
+This standard is the official one for 96% of the world population (<a href="https://en.wikipedia.org/wiki/SI">All countries except U.S.A.</a>).
+I currently don't plan to change this default display although you can:
+<ul>
+ <li>use the complete output with raw values (-f in the CLI or "advanced mode" in the GUI) --> "Width: 1920"</li>
+ <li>use your own language file (--Language=file://xxx.csv in the CLI, choose your own language file in the GUI). Language files are in the GUI package, you can edit the "Thousand_Separator" field as you desire).</li>
+</ul>]]></target>
+      </trans-unit>
+      <trans-unit id="55" approved="yes">
+        <source><![CDATA[support.faq.general.NoQuestion.title]]></source>
+        <target><![CDATA[My question is not here. What should I do?]]></target>
+      </trans-unit>
+      <trans-unit id="56" approved="yes">
+        <source><![CDATA[support.faq.general.NoQuestion.content]]></source>
+        <target><![CDATA[You might get help on the <a href="https://sourceforge.net/p/mediainfo/discussion/">forums</a>.]]></target>
+      </trans-unit>
+      <trans-unit id="57" approved="yes">
+        <source><![CDATA[support.faq.gui]]></source>
+        <target><![CDATA[MediaInfo Graphical Interface (GUI)]]></target>
+      </trans-unit>
+      <trans-unit id="58" approved="yes">
+        <source><![CDATA[support.faq.gui.License_GUI.title]]></source>
+        <target><![CDATA[What is the license?]]></target>
+      </trans-unit>
+      <trans-unit id="59" approved="yes">
+        <source><![CDATA[support.faq.gui.License_GUI.content]]></source>
+        <target><![CDATA[MediaInfoGUI is governed by a <a href="%licenseRoute%">BSD-style license</a>.]]></target>
+      </trans-unit>
+      <trans-unit id="60" approved="yes">
+        <source><![CDATA[support.faq.gui.BuildFromSources_GUI.title]]></source>
+        <target><![CDATA[How do I compile from source?]]></target>
+      </trans-unit>
+      <trans-unit id="61" approved="yes">
+        <source><![CDATA[support.faq.gui.BuildFromSources_GUI.content]]></source>
+        <target><![CDATA[The source code can be downloaded <a href="%downloadSourceRoute%">here</a>.<br/>You need Borland C++ 6 to compile it.]]></target>
+      </trans-unit>
+      <trans-unit id="62" approved="yes">
+        <source><![CDATA[support.faq.cli]]></source>
+        <target><![CDATA[MediaInfo Command Line Interface (CLI)]]></target>
+      </trans-unit>
+      <trans-unit id="63" approved="yes">
+        <source><![CDATA[support.faq.cli.License_Cmd.title]]></source>
+        <target><![CDATA[What is the license?]]></target>
+      </trans-unit>
+      <trans-unit id="64" approved="yes">
+        <source><![CDATA[support.faq.cli.License_Cmd.content]]></source>
+        <target><![CDATA[MediaInfoCmd is governed by a <a href="%licenseRoute%">BSD-style license</a>.]]></target>
+      </trans-unit>
+      <trans-unit id="65" approved="yes">
+        <source><![CDATA[support.faq.cli.Cmd_Options.title]]></source>
+        <target><![CDATA[Why aren't there more options for the command line?]]></target>
+      </trans-unit>
+      <trans-unit id="66" approved="yes">
+        <source><![CDATA[support.faq.cli.Cmd_Options.content]]></source>
+        <target><![CDATA[I didn't spend much time coding it, due to less interest from users.<br/>
+You can add a <a href="https://sourceforge.net/p/mediainfo/feature-requests/">feature request</a>.]]></target>
+      </trans-unit>
+      <trans-unit id="67" approved="yes">
+        <source><![CDATA[support.faq.cli.BuildFromSources_Cmd.title]]></source>
+        <target><![CDATA[How do I compile from source?]]></target>
+      </trans-unit>
+      <trans-unit id="68" approved="yes">
+        <source><![CDATA[support.faq.cli.BuildFromSources_Cmd.content]]></source>
+        <target><![CDATA[The source code can be downloaded <a href="%downloadSourceRoute%">here</a>]]></target>
+      </trans-unit>
+      <trans-unit id="69" approved="yes">
+        <source><![CDATA[support.faq.dll]]></source>
+        <target><![CDATA[MediaInfo Library (DLL)]]></target>
+      </trans-unit>
+      <trans-unit id="70" approved="yes">
+        <source><![CDATA[support.faq.dll.License_Dll.title]]></source>
+        <target><![CDATA[What is the license?]]></target>
+      </trans-unit>
+      <trans-unit id="71" approved="yes">
+        <source><![CDATA[support.faq.dll.License_Dll.content]]></source>
+        <target><![CDATA[MediaInfoDLL is governed by a <a href=".%licenseRoute%">BSD-style license</a>.]]></target>
+      </trans-unit>
+      <trans-unit id="72" approved="yes">
+        <source><![CDATA[support.faq.dll.NoSoftware.title]]></source>
+        <target><![CDATA[Why doesn't the DLL work with <em>software name</em>?]]></target>
+      </trans-unit>
+      <trans-unit id="73" approved="yes">
+        <source><![CDATA[support.faq.dll.NoSoftware.content]]></source>
+        <target><![CDATA[Maybe the software doesn't support the latest version of the DLL.<br/>
+<ul>
+ <li>Try asking the software developer to modify his software</li>
+ <li>Try downloading an older version of the DLL</li>
+</ul>]]></target>
+      </trans-unit>
+      <trans-unit id="74" approved="yes">
+        <source><![CDATA[support.faq.dll.SDK.title]]></source>
+        <target><![CDATA[How do I import data from your DLL?]]></target>
+      </trans-unit>
+      <trans-unit id="75" approved="yes">
+        <source><![CDATA[support.faq.dll.SDK.content]]></source>
+        <target><![CDATA[Download the DLL package. There are some examples, in many different languages (standard C, standard C++, GCC, MinGW, Borland C++ Builder, Microsoft Visual C++, Microsoft Visual Basic, Microsoft C#, Microsoft J#)<br/>
+There is also an <a href="%supportSdkRoute%">SDK</a>.]]></target>
+      </trans-unit>
+      <trans-unit id="76" approved="yes">
+        <source><![CDATA[support.faq.dll.StaticLib.title]]></source>
+        <target><![CDATA[I'd rather have static libraries]]></target>
+      </trans-unit>
+      <trans-unit id="77" approved="yes">
+        <source><![CDATA[support.faq.dll.StaticLib.content]]></source>
+        <target><![CDATA[This is only possible with C++.<br/>
+On the download page, there is package with:
+<ul>
+ <li>Library compiled with Borland C++ builder 6</li>
+ <li>Library compiled with Microsoft Visual C++ 9 (aka 2005). Warning : the project is statically linked to the multithreaded C++ library, and options are C++ compliant (Be careful. In standard C++, wchar_t is a type, not a short int).</li>
+</ul>
+If you want to use other compilers or options, you must <a href="%buildFromSourceRoute%">compile from source</a>.]]></target>
+      </trans-unit>
+      <trans-unit id="78" approved="yes">
+        <source><![CDATA[support.faq.dll.BuildFromSources_DLL.title]]></source>
+        <target><![CDATA[How do I compile from source?]]></target>
+      </trans-unit>
+      <trans-unit id="79" approved="yes">
+        <source><![CDATA[support.faq.dll.BuildFromSources_DLL.content]]></source>
+        <target><![CDATA[The source code can be downloaded <a href="%downloadSourceRoute%">here</a>.]]></target>
+      </trans-unit>
+      <trans-unit id="80" approved="yes">
+        <source><![CDATA[support.faq.dll.AccessIsDenied.title]]></source>
+        <target><![CDATA[I have the message "Access is denied" on the production server]]></target>
+      </trans-unit>
+      <trans-unit id="81" approved="yes">
+        <source><![CDATA[support.faq.dll.AccessIsDenied.content]]></source>
+        <target><![CDATA[On some production servers, users have this message:
+<pre>Unable to load DLL 'MediaInfo.dll': Access is denied. (Exception from HRESULT: 0x80070005 (E_ACCESSDENIED))</pre>
+For certain strict server setups, the Local Service account that is executing the DLL is only allowed read permission. However, for personal development machine, it is sometimes less strict and given full access and works fine for the developer.<br/>
+You need to set "Read &amp; execute" rights for MediaInfo.dll when deploying.<br/>
+If you want to access HTTP(S)/FTP(S) files, you also need to set the same rights for the sidecar libcurl.dll file.<br/>
+If you use IIS, <code>IIS_IUSRS</code> user must have the "Read &amp; execute" rights on these files.]]></target>
+      </trans-unit>
+      <trans-unit id="82" approved="yes">
+        <source><![CDATA[support.wip.warning]]></source>
+        <target><![CDATA[WARNING : WORK IN PROGRESS, SOME DETAILS MAY BE WRONG]]></target>
+      </trans-unit>
+      <trans-unit id="83" approved="yes">
+        <source><![CDATA[support.formats.page.title]]></source>
+        <target><![CDATA[MediaInfo - Supported formats]]></target>
+      </trans-unit>
+      <trans-unit id="84" approved="yes">
+        <source><![CDATA[support.formats.title]]></source>
+        <target><![CDATA[Supported formats]]></target>
+      </trans-unit>
+      <trans-unit id="85" approved="yes">
+        <source><![CDATA[support.formats.containers]]></source>
+        <target><![CDATA[Containers]]></target>
+      </trans-unit>
+      <trans-unit id="86" approved="yes">
+        <source><![CDATA[support.formats.information]]></source>
+        <target><![CDATA[Information]]></target>
+      </trans-unit>
+      <trans-unit id="87" approved="yes">
+        <source><![CDATA[support.formats.table.yes]]></source>
+        <target><![CDATA[Yes]]></target>
+      </trans-unit>
+      <trans-unit id="88" approved="yes">
+        <source><![CDATA[support.formats.table.no]]></source>
+        <target><![CDATA[No]]></target>
+      </trans-unit>
+      <trans-unit id="89" approved="yes">
+        <source><![CDATA[support.formats.table.partial]]></source>
+        <target><![CDATA[Partial]]></target>
+      </trans-unit>
+      <trans-unit id="90" approved="yes">
+        <source><![CDATA[support.formats.supported]]></source>
+        <target><![CDATA[If you know how to obtain information which is currently not supported, please <a href="mailto:info@mediaarea.net">write to us</a> (French or English only)]]></target>
+      </trans-unit>
+      <trans-unit id="91" approved="yes">
+        <source><![CDATA[support.tags.page.title]]></source>
+        <target><![CDATA[MediaInfo - Tags]]></target>
+      </trans-unit>
+      <trans-unit id="92" approved="yes">
+        <source><![CDATA[support.tags.title]]></source>
+        <target><![CDATA[Tags]]></target>
+      </trans-unit>
+      <trans-unit id="93" approved="yes">
+        <source><![CDATA[support.tags.how]]></source>
+        <target><![CDATA[How this works:
+<ul>
+    <li>Click on a column header ("MediaInfo"...) to hide it</li>
+    <li>Click on a group header ("Titles"...) to hide it</li>
+    <li><a onclick="Col_Show_All()">Expand all columns</a></li>
+    <li><a onclick="Col_Hide_All()">Collapse all columns</a></li>
+    <li><a onclick="Line_Show_All()">Expand all groups</a></li>
+    <li><a onclick="Line_Hide_All()">Collapse all groups</a></li>
+</ul>]]></target>
+      </trans-unit>
+      <trans-unit id="94" approved="yes">
+        <source><![CDATA[support.tags.hidden]]></source>
+        <target><![CDATA[Hidden columns: ]]></target>
+      </trans-unit>
+      <trans-unit id="95" approved="yes">
+        <source><![CDATA[support.tags.several]]></source>
+        <target><![CDATA[Several pieces of information in this tag]]></target>
+      </trans-unit>
+      <trans-unit id="96" approved="yes">
+        <source><![CDATA[support.sdk.page.title]]></source>
+        <target><![CDATA[MediaInfo - SDK]]></target>
+      </trans-unit>
+      <trans-unit id="97" approved="yes">
+        <source><![CDATA[support.sdk.title]]></source>
+        <target><![CDATA[Software Development Kit]]></target>
+      </trans-unit>
+      <trans-unit id="98" approved="yes">
+        <source><![CDATA[support.sdk.what.title]]></source>
+        <target><![CDATA[What is it?]]></target>
+      </trans-unit>
+      <trans-unit id="99" approved="yes">
+        <source><![CDATA[support.sdk.what.content]]></source>
+        <target><![CDATA[MediaInfo (GUI or Cmd) is an user interface and a proof of concept for MediaInfo library (Lib or Dll).<br/>
+MediaInfo can be used in your own program without any difficulties, with a static or dynamic library interface.]]></target>
+      </trans-unit>
+      <trans-unit id="100" approved="yes">
+        <source><![CDATA[support.sdk.contents.title]]></source>
+        <target><![CDATA[Contents]]></target>
+      </trans-unit>
+      <trans-unit id="101" approved="yes">
+        <source><![CDATA[support.sdk.contents.ReadFirst]]></source>
+        <target><![CDATA[Read this first (supported languages, versioning, conventions)]]></target>
+      </trans-unit>
+      <trans-unit id="102" approved="yes">
+        <source><![CDATA[support.sdk.contents.Means]]></source>
+        <target><![CDATA[Different ways of using the library]]></target>
+      </trans-unit>
+      <trans-unit id="103" approved="yes">
+        <source><![CDATA[support.sdk.contents.Quick_Start]]></source>
+        <target><![CDATA[How to begin quickly with MediaInfo]]></target>
+      </trans-unit>
+      <trans-unit id="104" approved="yes">
+        <source><![CDATA[support.sdk.contents.More_Info]]></source>
+        <target><![CDATA[More information about the programming interface]]></target>
+      </trans-unit>
+      <trans-unit id="105" approved="yes">
+        <source><![CDATA[support.sdk.advanced.title]]></source>
+        <target><![CDATA[Advanced features]]></target>
+      </trans-unit>
+      <trans-unit id="106" approved="yes">
+        <source><![CDATA[support.sdk.advanced.note]]></source>
+        <target><![CDATA[Note: these API features may change without notification. Status=Beta.]]></target>
+      </trans-unit>
+      <trans-unit id="107" approved="yes">
+        <source><![CDATA[support.sdk.advanced.Buffers]]></source>
+        <target><![CDATA[Using a buffer instead of a file name]]></target>
+      </trans-unit>
+      <trans-unit id="108" approved="yes">
+        <source><![CDATA[support.sdk.advanced.Duplicate]]></source>
+        <target><![CDATA[Duplication of streams]]></target>
+      </trans-unit>
+      <trans-unit id="109" approved="yes">
+        <source><![CDATA[support.sdk.advanced.Filtering]]></source>
+        <target><![CDATA[Filtering of streams]]></target>
+      </trans-unit>
+      <trans-unit id="110" approved="yes">
+        <source><![CDATA[support.build.page.title]]></source>
+        <target><![CDATA[MediaInfo - Building from source]]></target>
+      </trans-unit>
+      <trans-unit id="111" approved="yes">
+        <source><![CDATA[support.build.title]]></source>
+        <target><![CDATA[Building from source]]></target>
+      </trans-unit>
+      <trans-unit id="112" approved="yes">
+        <source><![CDATA[support.buildThirdParty.page.title]]></source>
+        <target><![CDATA[MediaInfo - Third Party]]></target>
+      </trans-unit>
+      <trans-unit id="113" approved="yes">
+        <source><![CDATA[support.buildThirdParty.title]]></source>
+        <target><![CDATA[ThirdParty libraries]]></target>
+      </trans-unit>
+      <trans-unit id="114" approved="yes">
+        <source><![CDATA[support.buildMil.page.title]]></source>
+        <target><![CDATA[MediaInfo - MediaInfoLib]]></target>
+      </trans-unit>
+      <trans-unit id="115" approved="yes">
+        <source><![CDATA[support.buildMil.title]]></source>
+        <target><![CDATA[Build MediaInfoLib]]></target>
+      </trans-unit>
+      <trans-unit id="116" approved="yes">
+        <source><![CDATA[download.page.title]]></source>
+        <target><![CDATA[MediaInfo - Download]]></target>
+      </trans-unit>
+      <trans-unit id="117" approved="yes">
+        <source><![CDATA[download.title]]></source>
+        <target><![CDATA[Download]]></target>
+      </trans-unit>
+      <trans-unit id="118" approved="yes">
+        <source><![CDATA[download.table.os]]></source>
+        <target><![CDATA[Operating system]]></target>
+      </trans-unit>
+      <trans-unit id="119" approved="yes">
+        <source><![CDATA[download.table.link]]></source>
+        <target><![CDATA[Link]]></target>
+      </trans-unit>
+      <trans-unit id="120" approved="yes">
+        <source><![CDATA[download.table.official_release]]></source>
+        <target><![CDATA[Official releases]]></target>
+      </trans-unit>
+      <trans-unit id="121" approved="yes">
+        <source><![CDATA[download.table.distro_release]]></source>
+        <target><![CDATA[Distro repo releases]]></target>
+      </trans-unit>
+      <trans-unit id="122" approved="yes">
+        <source><![CDATA[download.table.epel_release]]></source>
+        <target><![CDATA[EPEL repo releases]]></target>
+      </trans-unit>
+      <trans-unit id="123" approved="yes">
+        <source><![CDATA[download.table.packman_release]]></source>
+        <target><![CDATA[Packman releases]]></target>
+      </trans-unit>
+      <trans-unit id="124" approved="yes">
+        <source><![CDATA[download.table.unofficial_release]]></source>
+        <target><![CDATA[Unofficial releases]]></target>
+      </trans-unit>
+      <trans-unit id="125" approved="yes">
+        <source><![CDATA[download.table.freshports_release]]></source>
+        <target><![CDATA[FreshPorts releases]]></target>
+      </trans-unit>
+      <trans-unit id="126" approved="yes">
+        <source><![CDATA[download.table.unsupported_release]]></source>
+        <target><![CDATA[unsupported]]></target>
+      </trans-unit>
+      <trans-unit id="127" approved="yes">
+        <source><![CDATA[download.table.source_release]]></source>
+        <target><![CDATA[From source<br/>(for other distributions or/and CPU)]]></target>
+      </trans-unit>
+      <trans-unit id="128" approved="yes">
+        <source><![CDATA[download.table.apt_install]]></source>
+        <target><![CDATA['apt-get install mediainfo-gui' (for GUI) or 'apt-get install mediainfo' (for CLI)]]></target>
+      </trans-unit>
+      <trans-unit id="129" approved="yes">
+        <source><![CDATA[download.table.yum_install]]></source>
+        <target><![CDATA['yum install mediainfo-gui' (for GUI) or 'yum install mediainfo' (for CLI) after having installed EPEL]]></target>
+      </trans-unit>
+      <trans-unit id="130" approved="yes">
+        <source><![CDATA[download.table.dnf_install]]></source>
+        <target><![CDATA['dnf install mediainfo-gui' (for GUI) or 'dnf install mediainfo' (for CLI)]]></target>
+      </trans-unit>
+      <trans-unit id="131" approved="yes">
+        <source><![CDATA[download.appimage.page.title]]></source>
+        <target><![CDATA[MediaInfo - Download MediaInfo AppImage]]></target>
+      </trans-unit>
+      <trans-unit id="132" approved="yes">
+        <source><![CDATA[download.appimage.title]]></source>
+        <target><![CDATA[Download - AppImage]]></target>
+      </trans-unit>
+      <trans-unit id="133" approved="yes">
+        <source><![CDATA[download.arch.page.title]]></source>
+        <target><![CDATA[MediaInfo - Download MediaInfo for Arch Linux]]></target>
+      </trans-unit>
+      <trans-unit id="134" approved="yes">
+        <source><![CDATA[download.arch.title]]></source>
+        <target><![CDATA[Download - Arch Linux]]></target>
+      </trans-unit>
+      <trans-unit id="135" approved="yes">
+        <source><![CDATA[download.centos.page.title]]></source>
+        <target><![CDATA[MediaInfo - Download MediaInfo for CentOS]]></target>
+      </trans-unit>
+      <trans-unit id="136" approved="yes">
+        <source><![CDATA[download.centos.title]]></source>
+        <target><![CDATA[Download - CentOS]]></target>
+      </trans-unit>
+      <trans-unit id="137" approved="yes">
+        <source><![CDATA[download.debian.page.title]]></source>
+        <target><![CDATA[MediaInfo - Download MediaInfo for Debian]]></target>
+      </trans-unit>
+      <trans-unit id="138" approved="yes">
+        <source><![CDATA[download.debian.title]]></source>
+        <target><![CDATA[Download - Debian]]></target>
+      </trans-unit>
+      <trans-unit id="139" approved="yes">
+        <source><![CDATA[download.fedora.page.title]]></source>
+        <target><![CDATA[MediaInfo - Download MediaInfo for Fedora]]></target>
+      </trans-unit>
+      <trans-unit id="140" approved="yes">
+        <source><![CDATA[download.fedora.title]]></source>
+        <target><![CDATA[Download - Fedora]]></target>
+      </trans-unit>
+      <trans-unit id="141" approved="yes">
+        <source><![CDATA[download.mac.page.title]]></source>
+        <target><![CDATA[MediaInfo - Download MediaInfo for Mac OS]]></target>
+      </trans-unit>
+      <trans-unit id="142" approved="yes">
+        <source><![CDATA[download.mac.title]]></source>
+        <target><![CDATA[Download - Mac OS]]></target>
+      </trans-unit>
+      <trans-unit id="143" approved="yes">
+        <source><![CDATA[download.mageia.page.title]]></source>
+        <target><![CDATA[MediaInfo - Download MediaInfo for Mageia]]></target>
+      </trans-unit>
+      <trans-unit id="144" approved="yes">
+        <source><![CDATA[download.mageia.title]]></source>
+        <target><![CDATA[Download - Mageia]]></target>
+      </trans-unit>
+      <trans-unit id="145" approved="yes">
+        <source><![CDATA[download.mandriva.page.title]]></source>
+        <target><![CDATA[MediaInfo - Download MediaInfo for Mandriva]]></target>
+      </trans-unit>
+      <trans-unit id="146" approved="yes">
+        <source><![CDATA[download.mandriva.title]]></source>
+        <target><![CDATA[Download - Mandriva]]></target>
+      </trans-unit>
+      <trans-unit id="147" approved="yes">
+        <source><![CDATA[download.manjaro.page.title]]></source>
+        <target><![CDATA[MediaInfo - Download MediaInfo for Manjaro]]></target>
+      </trans-unit>
+      <trans-unit id="148" approved="yes">
+        <source><![CDATA[download.manjaro.title]]></source>
+        <target><![CDATA[Download - Manjaro]]></target>
+      </trans-unit>
+      <trans-unit id="149" approved="yes">
+        <source><![CDATA[download.opensuse.page.title]]></source>
+        <target><![CDATA[MediaInfo - Download MediaInfo for openSUSE]]></target>
+      </trans-unit>
+      <trans-unit id="150" approved="yes">
+        <source><![CDATA[download.opensuse.title]]></source>
+        <target><![CDATA[Download - openSUSE]]></target>
+      </trans-unit>
+      <trans-unit id="151" approved="yes">
+        <source><![CDATA[download.pclinuxos.page.title]]></source>
+        <target><![CDATA[MediaInfo - Download MediaInfo for PCLinuxOS]]></target>
+      </trans-unit>
+      <trans-unit id="152" approved="yes">
+        <source><![CDATA[download.pclinuxos.title]]></source>
+        <target><![CDATA[Download - PCLinuxOS]]></target>
+      </trans-unit>
+      <trans-unit id="153" approved="yes">
+        <source><![CDATA[download.redhat.page.title]]></source>
+        <target><![CDATA[MediaInfo - Download MediaInfo for RHEL]]></target>
+      </trans-unit>
+      <trans-unit id="154" approved="yes">
+        <source><![CDATA[download.redhat.title]]></source>
+        <target><![CDATA[Download - RHEL]]></target>
+      </trans-unit>
+      <trans-unit id="155" approved="yes">
+        <source><![CDATA[download.slackware.page.title]]></source>
+        <target><![CDATA[MediaInfo - Download MediaInfo for Slackware]]></target>
+      </trans-unit>
+      <trans-unit id="156" approved="yes">
+        <source><![CDATA[download.slackware.title]]></source>
+        <target><![CDATA[Download - Slackware]]></target>
+      </trans-unit>
+      <trans-unit id="157" approved="yes">
+        <source><![CDATA[download.sle.page.title]]></source>
+        <target><![CDATA[MediaInfo - Download MediaInfo for SLE]]></target>
+      </trans-unit>
+      <trans-unit id="158" approved="yes">
+        <source><![CDATA[download.sle.title]]></source>
+        <target><![CDATA[Download - SLE]]></target>
+      </trans-unit>
+      <trans-unit id="159" approved="yes">
+        <source><![CDATA[download.solaris.page.title]]></source>
+        <target><![CDATA[MediaInfo - Download MediaInfo for Solaris]]></target>
+      </trans-unit>
+      <trans-unit id="160" approved="yes">
+        <source><![CDATA[download.solaris.title]]></source>
+        <target><![CDATA[Download - Solaris]]></target>
+      </trans-unit>
+      <trans-unit id="161" approved="yes">
+        <source><![CDATA[download.source.page.title]]></source>
+        <target><![CDATA[MediaInfo - Download MediaInfo Sources]]></target>
+      </trans-unit>
+      <trans-unit id="162" approved="yes">
+        <source><![CDATA[download.source.title]]></source>
+        <target><![CDATA[Download - Sources]]></target>
+      </trans-unit>
+      <trans-unit id="163" approved="yes">
+        <source><![CDATA[download.snapshots.page.title]]></source>
+        <target><![CDATA[MediaInfo - Download MediaInfo Snapshots]]></target>
+      </trans-unit>
+      <trans-unit id="164" approved="yes">
+        <source><![CDATA[download.snapshots.title]]></source>
+        <target><![CDATA[Download - Snapshots]]></target>
+      </trans-unit>
+      <trans-unit id="165" approved="yes">
+        <source><![CDATA[download.ubuntu.page.title]]></source>
+        <target><![CDATA[MediaInfo - Download MediaInfo for Ubuntu (Ubuntu, Kubuntu, Xbuntu...) and Linux Mint]]></target>
+      </trans-unit>
+      <trans-unit id="166" approved="yes">
+        <source><![CDATA[download.ubuntu.title]]></source>
+        <target><![CDATA[Download - Ubuntu (Ubuntu, Kubuntu, Xbuntu...) and Linux Mint]]></target>
+      </trans-unit>
+      <trans-unit id="167" approved="yes">
+        <source><![CDATA[download.windows.page.title]]></source>
+        <target><![CDATA[MediaInfo - Download MediaInfo for Microsoft Windows]]></target>
+      </trans-unit>
+      <trans-unit id="168" approved="yes">
+        <source><![CDATA[download.windows.title]]></source>
+        <target><![CDATA[Download - Microsoft Windows]]></target>
+      </trans-unit>
+      <trans-unit id="169" approved="yes">
+        <source><![CDATA[screenshots.page.title]]></source>
+        <target><![CDATA[MediaInfo - Screenshots]]></target>
+      </trans-unit>
+      <trans-unit id="170" approved="yes">
+        <source><![CDATA[screenshots.title]]></source>
+        <target><![CDATA[Screenshots]]></target>
+      </trans-unit>
+      <trans-unit id="171" approved="yes">
+        <source><![CDATA[donate.page.title]]></source>
+        <target><![CDATA[MediaInfo - Donate to MediaInfo]]></target>
+      </trans-unit>
+      <trans-unit id="172" approved="yes">
+        <source><![CDATA[donate.title]]></source>
+        <target><![CDATA[Donate to MediaInfo - Please!]]></target>
+      </trans-unit>
+      <trans-unit id="173" approved="yes">
+        <source><![CDATA[donate.why.title]]></source>
+        <target><![CDATA[MediaInfo is free software, so why donate?]]></target>
+      </trans-unit>
+      <trans-unit id="174" approved="yes">
+        <source><![CDATA[donate.why.content]]></source>
+        <target><![CDATA[Since MediaInfo is freeware, there are no sales or other revenues;
+thus your donation is the best way to encourage the author and
+to enable him to continue developing the project.<br/>
+In order for MediaInfo to continue in full-time development your support is requested,
+and your help will be greatly appreciated.]]></target>
+      </trans-unit>
+      <trans-unit id="175" approved="yes">
+        <source><![CDATA[donate.paypal.title]]></source>
+        <target><![CDATA[Via Credit Cards or Paypal]]></target>
+      </trans-unit>
+      <trans-unit id="176" approved="yes">
+        <source><![CDATA[donate.paypal.content]]></source>
+        <target><![CDATA[Donations can be made via Credit Cards or Paypal - once off or as a monthly subscription.<br/>
+Please choose your preferred method below.]]></target>
+      </trans-unit>
+      <trans-unit id="177" approved="yes">
+        <source><![CDATA[donate.flattr.title]]></source>
+        <target><![CDATA[Via Flattr]]></target>
+      </trans-unit>
+      <trans-unit id="178" approved="yes">
+        <source><![CDATA[donate.liberapay.title]]></source>
+        <target><![CDATA[Via Liberapay]]></target>
+      </trans-unit>
+      <trans-unit id="179" approved="yes">
+        <source><![CDATA[donate.patreon.title]]></source>
+        <target><![CDATA[Support us on Patreon]]></target>
+      </trans-unit>
+      <trans-unit id="180" approved="yes">
+        <source><![CDATA[donate.bank.title]]></source>
+        <target><![CDATA[Via wire transfer (<a href="https://en.wikipedia.org/wiki/Eurozone" target="_blank">Eurozone</a> only)]]></target>
+      </trans-unit>
+      <trans-unit id="181" approved="yes">
+        <source><![CDATA[donate.bank.content]]></source>
+        <target><![CDATA[Donations can be made within Eurozone via wire transfer.
+<br/>My Bank information -
+<div class="address">
+Name : Jérôme Martinez<br/>
+IBAN : FR76 3000 3038 4500 0502 5346 889<br/>
+BIC/SWIFT : SOGEFRPP<br/>
+</div>
+Don't forget to put your e-mail address in the wire transfer description!]]></target>
+      </trans-unit>
+      <trans-unit id="182" approved="yes">
+        <source><![CDATA[donate.other.title]]></source>
+        <target><![CDATA[Financially embarrassed? Nothing in your pockets except your fingers? You can still contribute! ;-)]]></target>
+      </trans-unit>
+      <trans-unit id="183" approved="yes">
+        <source><![CDATA[donate.other.content]]></source>
+        <target><![CDATA[You can participate in a worthwhile way in the MediaInfo project without needing cash through such activities as:
+<ul>
+    <li>Translating MediaInfo into your native language or make improvements to the existing translations,</li>
+    <li>Translating this website into your native language or make improvements to the existing translations,</li>
+    <li>Creating beautiful HTML templates for MediaInfo's output,</li>
+    <li>Creating beautiful icons for MediaInfo,</li>
+    <li>Sending me multimedia files which are not well handled by MediaInfo,</li>
+    <li>Sending me formats of multimedia containers - I might be able to implement them better,</li>
+    <li>Programming some useful functions (use the latest version of SVN please). MediaInfo is written in C++,</li>
+    <li>Helping to support currently non-supported platforms (Linux, Win64...),</li>
+    <li>What else can you think of?</li>
+</ul>
+Don't hesitate to <a href="mailto:info@mediaarea.net">contact us</a> if you're interested in contributing in any way!]]></target>
+      </trans-unit>
+      <trans-unit id="184" approved="yes">
+        <source><![CDATA[paypal.donation]]></source>
+        <target><![CDATA[Donation for MediaInfo]]></target>
+      </trans-unit>
+      <trans-unit id="185" approved="yes">
+        <source><![CDATA[paypal.submit.alt]]></source>
+        <target><![CDATA[PayPal - The safer, easier way to pay online!]]></target>
+      </trans-unit>
+      <trans-unit id="186" approved="yes">
+        <source><![CDATA[paypal.subscribe.or]]></source>
+        <target><![CDATA[or]]></target>
+      </trans-unit>
+      <trans-unit id="187" approved="yes">
+        <source><![CDATA[paypal.subscribe.month]]></source>
+        <target><![CDATA[month]]></target>
+      </trans-unit>
+      <trans-unit id="188" approved="yes">
+        <source><![CDATA[testimonials.page.title]]></source>
+        <target><![CDATA[MediaInfo - Testimonials]]></target>
+      </trans-unit>
+      <trans-unit id="189" approved="yes">
+        <source><![CDATA[testimonials.title]]></source>
+        <target><![CDATA[What MediaInfo users say]]></target>
+      </trans-unit>
+      <trans-unit id="190" approved="yes">
+        <source><![CDATA[testimonials.technology.title]]></source>
+        <target><![CDATA[Technology]]></target>
+      </trans-unit>
+      <trans-unit id="191" approved="yes">
+        <source><![CDATA[testimonials.broadcasting.title]]></source>
+        <target><![CDATA[Broadcasting]]></target>
+      </trans-unit>
+      <trans-unit id="192" approved="yes">
+        <source><![CDATA[testimonials.libraries.title]]></source>
+        <target><![CDATA[Libraries / Museums]]></target>
+      </trans-unit>
+      <trans-unit id="193" approved="yes">
+        <source><![CDATA[testimonials.education.title]]></source>
+        <target><![CDATA[Education]]></target>
+      </trans-unit>
+      <trans-unit id="194" approved="yes">
+        <source><![CDATA[testimonials.other.title]]></source>
+        <target><![CDATA[Other MediaInfo users]]></target>
+      </trans-unit>
+      <trans-unit id="195" approved="yes">
+        <source><![CDATA[license.page.title]]></source>
+        <target><![CDATA[MediaInfo - MediaInfo(Lib) License]]></target>
+      </trans-unit>
+      <trans-unit id="196" approved="yes">
+        <source><![CDATA[license.title]]></source>
+        <target><![CDATA[MediaInfo(Lib) License]]></target>
+      </trans-unit>
+      <trans-unit id="197" approved="yes">
+        <source><![CDATA[prices.page.title]]></source>
+        <target><![CDATA[MediaInfo - Prices]]></target>
+      </trans-unit>
+      <trans-unit id="198" approved="yes">
+        <source><![CDATA[prices.title]]></source>
+        <target><![CDATA[MediaInfo development and support prices]]></target>
+      </trans-unit>
+      <trans-unit id="199" approved="yes">
+        <source><![CDATA[repos.page.title]]></source>
+        <target><![CDATA[MediaInfo - Repositories]]></target>
+      </trans-unit>
+      <trans-unit id="200" approved="yes">
+        <source><![CDATA[repos.title]]></source>
+        <target><![CDATA[Softwares Repositories]]></target>
+      </trans-unit>
+      <trans-unit id="201" approved="yes">
+        <source><![CDATA[divx.page.title]]></source>
+        <target><![CDATA[MediaInfo - CodecID - DIVX]]></target>
+      </trans-unit>
+      <trans-unit id="202" approved="yes">
+        <source><![CDATA[divx.title]]></source>
+        <target><![CDATA[DIVX codec identifier: DivX]]></target>
+      </trans-unit>
+      <trans-unit id="203" approved="yes">
+        <source><![CDATA[dx50.page.title]]></source>
+        <target><![CDATA[MediaInfo - CodecID - DX50]]></target>
+      </trans-unit>
+      <trans-unit id="204" approved="yes">
+        <source><![CDATA[dx50.title]]></source>
+        <target><![CDATA[DX50 codec identifier: DivX]]></target>
+      </trans-unit>
+      <trans-unit id="205" approved="yes">
+        <source><![CDATA[xvid.page.title]]></source>
+        <target><![CDATA[MediaInfo - CodecID - XVID]]></target>
+      </trans-unit>
+      <trans-unit id="206" approved="yes">
+        <source><![CDATA[xvid.title]]></source>
+        <target><![CDATA[XVID codec identifier: XviD]]></target>
+      </trans-unit>
+      <trans-unit id="207" approved="yes">
+        <source><![CDATA[about.download.button.text]]></source>
+        <target><![CDATA[Download MediaInfo]]></target>
+      </trans-unit>
+      <trans-unit id="208" approved="yes">
+        <source><![CDATA[about.download.version]]></source>
+        <target><![CDATA[version]]></target>
+      </trans-unit>
+      <trans-unit id="209" approved="yes">
+        <source><![CDATA[about.download.installer]]></source>
+        <target><![CDATA[Graphical User Interface with installer]]></target>
+      </trans-unit>
+      <trans-unit id="210" approved="yes">
+        <source><![CDATA[about.download.for]]></source>
+        <target><![CDATA[for]]></target>
+      </trans-unit>
+      <trans-unit id="211" approved="yes">
+        <source><![CDATA[about.download.other]]></source>
+        <target><![CDATA[Other versions (packaging, OS, interface...) are also <a href="%downloadRoute%">available</a>]]></target>
+      </trans-unit>
+      <trans-unit id="212" approved="yes">
+        <source><![CDATA[about.what.changelog]]></source>
+        <target><![CDATA[See <a href="%changelogRoute%">change log</a>]]></target>
+      </trans-unit>
+      <trans-unit id="213" approved="yes">
+        <source><![CDATA[about.what.donate]]></source>
+        <target><![CDATA[Please <a href="%donateRoute%">donate</a> to support further development]]></target>
+      </trans-unit>
+      <trans-unit id="214" approved="yes">
+        <source><![CDATA[menu.mediaarea]]></source>
+        <target><![CDATA[MediaArea]]></target>
+      </trans-unit>
+      <trans-unit id="215" approved="yes">
+        <source><![CDATA[menu.mediaarea.about]]></source>
+        <target><![CDATA[About]]></target>
+      </trans-unit>
+      <trans-unit id="216" approved="yes">
+        <source><![CDATA[menu.mediaarea.pro]]></source>
+        <target><![CDATA[Professional services]]></target>
+      </trans-unit>
+      <trans-unit id="217" approved="yes">
+        <source><![CDATA[menu.mediaarea.events]]></source>
+        <target><![CDATA[Events]]></target>
+      </trans-unit>
+      <trans-unit id="218" approved="yes">
+        <source><![CDATA[menu.mediaarea.legal]]></source>
+        <target><![CDATA[Legal]]></target>
+      </trans-unit>
+      <trans-unit id="219" approved="yes">
+        <source><![CDATA[menu.mediainfo]]></source>
+        <target><![CDATA[MediaInfo]]></target>
+      </trans-unit>
+      <trans-unit id="220" approved="yes">
+        <source><![CDATA[menu.projects]]></source>
+        <target><![CDATA[Projects]]></target>
+      </trans-unit>
+      <trans-unit id="221" approved="yes">
+        <source><![CDATA[menu.projects.mediainfo]]></source>
+        <target><![CDATA[MediaInfo]]></target>
+      </trans-unit>
+      <trans-unit id="222" approved="yes">
+        <source><![CDATA[menu.projects.mediaconch]]></source>
+        <target><![CDATA[MediaConch]]></target>
+      </trans-unit>
+      <trans-unit id="223" approved="yes">
+        <source><![CDATA[menu.projects.mediatrace]]></source>
+        <target><![CDATA[MediaTrace]]></target>
+      </trans-unit>
+      <trans-unit id="224" approved="yes">
+        <source><![CDATA[menu.projects.qctools]]></source>
+        <target><![CDATA[QCTools]]></target>
+      </trans-unit>
+      <trans-unit id="225" approved="yes">
+        <source><![CDATA[menu.projects.bwfmetaedit]]></source>
+        <target><![CDATA[BWF MetaEdit]]></target>
+      </trans-unit>
+      <trans-unit id="226" approved="yes">
+        <source><![CDATA[menu.projects.dvanalyzer]]></source>
+        <target><![CDATA[DV Analyzer]]></target>
+      </trans-unit>
+      <trans-unit id="227" approved="yes">
+        <source><![CDATA[footer.projects]]></source>
+        <target><![CDATA[Projects]]></target>
+      </trans-unit>
+      <trans-unit id="228" approved="yes">
+        <source><![CDATA[about.download.bundled]]></source>
+        <target><![CDATA[(the installer is bundled with a software distribution network. <a href="%bundledRoute%">Learn more</a>.)]]></target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

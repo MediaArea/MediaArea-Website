@@ -1,0 +1,67 @@
+{% extends 'AppBundle::base.html.twig' %}
+
+{% block title %}MediaInfo - SDK, Read this first{% endblock %}
+{% block description %}{% trans %}about.page.description{% endtrans %}{% endblock %}
+{% block keywords %}{% trans %}about.page.keywords{% endtrans %}{% endblock %}
+
+{% block body %}
+<h1>Software Development Kit, Read this first</h1>
+
+<h2>Supported languages</h2>
+<h3>Static library (.lib)</h3>
+MediaInfo is written in standart C++.<br/>
+Some binaries are released (take a look to the <a href="{{ path('mi_download') }}">download page</a>):
+<ul>
+    <li>MSVC : Microsoft Visual C++ (static Multitreaded linked to C library)</li>
+    <li>BCB : Borland C++ Builder</li>
+</ul>
+For others compilers, you must <a href="{{ path('mi_support_build') }}">build from sources</a>.
+
+<h3>Dynamic library (.Dll)</h3>
+DLL is available as a dynamic link from other languages (or C++ compilers users who wants to use a DLL).<br/>
+Any language compatible with standart DLLs are compatible with MediaInfo DLL.<br/>
+Some examples are included in the DLL release (take a look to the <a href="{{ path('mi_download') }}">download page</a>):
+<ul>
+    <li>MSVC : Microsoft Visual C++ 9 (aka 2005)</li>
+    <li>MSCS : Microsoft C# 9 (aka 2005)</li>
+    <li>MSJS : Microsoft J# 9 (aka 2005)</li>
+    <li>MSVB : Microsoft Visual Basic 9 (aka 2005)</li>
+    <li>BCB : Borland C++ Builder 6</li>
+    <li>Delphi : Borland Delphi 7</li>
+</ul>
+Note: for Visual Studio 7 (aka 2002) or 8 (aka 2003), you can edit .sln and .xxproj to be compatible.<br/>
+- .sln : "...Format Version 9.00" to 7.00<br/>
+- .xxproj : "Version="8.00" or  "Version="7.10" to 7.00<br/>
+This is not always tested, but you should easily adapt them to your compiler)<br/>
+<br/>
+There are contributions (in the "Contrib" directory), with no support:
+<ul>
+    <li>MSVB5 : Microsoft Visual Basic 5 and 6 example, from Ingo Brueckl</li>
+    <li>ActiveX : ActiveX wrapper for MediaInfoDLL, with Internet Explorer and VB Script examples, from Ingo Brueckl</li>
+</ul>
+<br/>
+Don't forget to put MediaInfo.dll and Example.ogg in your executable folder.<br/>
+
+<h2>Versioning method</h2>
+<ul>
+    <li>if one of 2 first numbers change, there is no guaranties that the DLL is compatible with old one. You should verify with MediaInfo_Option("Version") if you are compatible</li>
+    <li>if one of 2 last numbers change, there is a guaranty that the DLL is compatible with old one.</li>
+</ul>
+So you should test the version of MediaInfo, and if one of the 2 first numbers change, disable it.<br/>
+
+<h2>Conventions</h2>
+Code is shown with C++ view:<br/>
+<code>ClassName::MethodName (Variables)</code><br/>
+<br/>
+If you use the "C" interface (for example, if you use the DLL), you should map with:<br/>
+<code>ClassName_MethodName (Handle, Variables)</code><br/>
+"Handle" is a unique identifier of the object you use (created by <code>Handle=ClassName_New()</code>)<br/>
+Because of the lack of namespaces in C language, you must change constants too:<br/>
+<code>XXX --&gt; MediaInfo_XXX</code><br/>
+<br/>
+If you use the "C++" interface, don't forget that all classes and typedefs are in the MediaInfoLib namespace:<br/>
+<code>use namespace MediaInfoLib;</code><br/>
+<br/>
+Note : language specific formating (";" at the end of line, "L" for Unicode strings...) are not in this explaination.<br/>
+Note : some languages permit more cutomization of constants, take a look in the header file to know exact names.
+{% endblock %}

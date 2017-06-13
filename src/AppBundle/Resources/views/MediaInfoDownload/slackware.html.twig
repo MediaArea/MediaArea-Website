@@ -1,0 +1,74 @@
+{% extends 'AppBundle::base.html.twig' %}
+
+{% block title %}{% trans %}download.slackware.page.title{% endtrans %}{% endblock %}
+{% block description %}{% trans %}about.page.description{% endtrans %}{% endblock %}
+{% block keywords %}{% trans %}about.page.keywords{% endtrans %}{% endblock %}
+
+{% block body %}
+<h1>{% trans %}download.slackware.title{% endtrans %}</h1>
+{% image '@AppBundle/Resources/public/img/OS/Slackware.png' %}
+<img src="{{ asset_url }}" alt="Slackware" title="Slackware" width="238" height="67"><br />
+{% endimage %}
+
+<table border="1" class="download">
+<tr class="table-header">
+    <th>Version</th>
+    <th>CPU</th>
+    <th>Interface</th>
+    <td>Version</td>
+    <td>Comment</td>
+</tr>
+<tr>
+    <td colspan="5">Note: these packages are unofficial, no support is provided</td>
+</tr>
+<tr class="old-files">
+    <th rowspan="10">12.2</th>
+    <th rowspan="5">i686</th>
+    <td class="table-OS" colspan="3" id="5.i386">Slackware, i686</td>
+</tr>
+<tr class="old-files">
+    <th><abbr title="Graphical User Interface">GUI</abbr></th>
+    <td><a href="http://sourceforge.net/projects/mediainfo/files/binary/mediainfo-gui/0.7.27/mediainfo-gui-0.7.27-1.i686.Slackware_12.2.tgz/download">v0.7.27</a></td>
+    <td>All in one (mediainfo-gui, libmediainfo0, libzen0)</td>
+</tr>
+<tr class="old-files">
+    <th><abbr title="Command Line Interface">CLI</abbr></th>
+    <td>Not available</td>
+    <td>&nbsp;</td>
+</tr>
+<tr class="old-files">
+    <th>libmediainfo0</th>
+    <td>Not available</td>
+    <td>&nbsp;</td>
+</tr>
+<tr class="old-files">
+    <th>libzen0</th>
+    <td>Not available</td>
+    <td>&nbsp;</td>
+</tr>
+<tr class="old-files">
+    <th rowspan="5">x86_64</th>
+    <td class="table-OS" colspan="3" id="5.x86_64">Slackware, x86_64</td>
+</tr>
+<tr class="old-files">
+    <th><abbr title="Graphical User Interface">GUI</abbr></th>
+    <td><a href="https://sourceforge.net/projects/mediainfo/files/binary/mediainfo-gui/0.7.27/mediainfo-gui-0.7.27-1.x86_64.Slackware_12.2.tgz/download">v0.7.27</a></td>
+    <td>All in one (mediainfo-gui, libmediainfo0, libzen0)</td>
+</tr>
+<tr class="old-files">
+    <th><abbr title="Command Line Interface">CLI</abbr></th>
+    <td>Not available</td>
+    <td>&nbsp;</td>
+</tr>
+<tr class="old-files">
+    <th>libmediainfo0</th>
+    <td>Not available</td>
+    <td>&nbsp;</td>
+</tr>
+<tr class="old-files">
+    <th>libzen0</th>
+    <td>Not available</td>
+    <td>&nbsp;</td>
+</tr>
+</table>
+{% endblock %}

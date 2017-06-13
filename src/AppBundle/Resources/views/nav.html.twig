@@ -1,0 +1,23 @@
+<nav id="nav" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="{{ path('mi_home') }}">
+                {% image '@AppBundle/Resources/public/img/MediaInfo_menu.png' %}
+                <img src='{{ asset_url }}' alt='MediaInfo' />
+                {% endimage %}
+            </a>
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-navbar" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <div id="main-navbar" class="navbar-collapse collapse">
+            {{ knp_menu_render('main', {compressed: true, currentClass: 'active', ancestorClass: 'active', template: 'AppBundle::knp_menu.html.twig'}) }}
+            {% if app.request.get('_locale') %}
+                {% include 'AppBundle::languageSwitcher.html.twig' %}
+            {% endif %}
+        </div>
+    </div>
+</nav>

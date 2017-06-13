@@ -1,0 +1,903 @@
+{% extends 'AppBundle::base.html.twig' %}
+
+{% block title %}{% trans %}download.ubuntu.page.title{% endtrans %}{% endblock %}
+{% block description %}{% trans %}about.page.description{% endtrans %}{% endblock %}
+{% block keywords %}{% trans %}about.page.keywords{% endtrans %}{% endblock %}
+
+{% block body %}
+<h1>{% trans %}download.ubuntu.title{% endtrans %}</h1>
+{% image '@AppBundle/Resources/public/img/OS/Ubuntu.png' %}
+<img src="{{ asset_url }}" alt="Ubuntu" title="Ubuntu" width="304" height="79">
+{% endimage %}
+{% image '@AppBundle/Resources/public/img/OS/Linux_Mint.png' %}
+<img src="{{ asset_url }}" alt="Linux Mint" title="Linux Mint" width="256" height="75"><br />
+{% endimage %}
+
+<table border="1" class="download">
+<thead>
+<tr class="table-header">
+    <th>Version</th>
+    <th>Architecture</th>
+    <th>Interface</th>
+    <td>Version</td>
+    <td>Comment</td>
+</tr>
+</thead>
+<tbody>
+
+<tr>
+    <th colspan="4">For automatic update and easiest installation, enable MediaArea softwares repository for Ubuntu<br />Search for "MediaInfo" in your package manager<br />or "apt-get install mediainfo-gui" (for GUI)<br /> or "apt-get install mediainfo" (for CLI)</th></th>
+    <td><a href='{{ path('ma_repos') }}'>Activate MediaArea Repository</a></td>
+</tr>
+<tr>
+    <th colspan="4">Official distribution packages (Starting from Ubuntu 12.04)<br />Search for "MediaInfo" in your package manager<br />or "apt-get install mediainfo-gui" (for GUI)<br /> or "apt-get install mediainfo" (for CLI)</th>
+    <td><a href="http://packages.ubuntu.com/search?searchon=names&amp;keywords=mediainfo">Ubuntu packages search</a></td>
+</tr>
+
+<tr>
+    <th colspan="5"><br />Notes for installing the packages below:<br />"sudo dpkg -i *deb"<br /><br />If you get an error message, use:<br />"sudo apt-get -f install"<br /><br /></th>
+</tr>
+
+<tr>
+    <th rowspan="8" id="17.04">Ubuntu 17.04 (Zesty Zapus)</th>
+    <th rowspan="4" id="17.04.amd64">amd64</th>
+    <th><abbr title="Graphical User Interface">GUI</abbr></th>
+    <td><a href="//mediaarea.net/download/binary/mediainfo-gui/0.7.96/mediainfo-gui_0.7.96-1_amd64.xUbuntu_17.04.deb">v0.7.96</a></td>
+    <td>requires libmediainfo0</td>
+</tr>
+<tr>
+    <th><abbr title="Command Line Interface">CLI</abbr></th>
+    <td><a href="//mediaarea.net/download/binary/mediainfo/0.7.96/mediainfo_0.7.96-1_amd64.xUbuntu_17.04.deb">v0.7.96</a></td>
+    <td>requires libmediainfo0</td>
+</tr>
+<tr>
+    <th>libmediainfo0</th>
+    <td><a href="//mediaarea.net/download/binary/libmediainfo0/0.7.96/libmediainfo0v5_0.7.96-1_amd64.xUbuntu_17.04.deb">v0.7.96</a> <small>(<a href="//mediaarea.net/download/binary/libmediainfo0/0.7.96/libmediainfo-dev_0.7.96-1_amd64.xUbuntu_17.04.deb">devel</a>, <a href="//mediaarea.net/download/binary/libmediainfo0/0.7.96/libmediainfo-doc_0.7.96-1_amd64.xUbuntu_17.04.deb">doc</a>)</small></td>
+    <td>requires libzen0</td>
+</tr>
+<tr>
+    <th>libzen0</th>
+    <td><a href="//mediaarea.net/download/binary/libzen0/0.4.35/libzen0v5_0.4.35-1_amd64.xUbuntu_17.04.deb">v0.4.35</a> <small>(<a href="//mediaarea.net/download/binary/libzen0/0.4.35/libzen-dev_0.4.35-1_amd64.xUbuntu_17.04.deb">devel</a>, <a href="//mediaarea.net/download/binary/libzen0/0.4.35/libzen-doc_0.4.35-1_amd64.xUbuntu_17.04.deb">doc</a>)</small></td>
+    <td>&nbsp;</td>
+</tr>
+<tr>
+    <th rowspan="4" id="17.04.i386">i386</th>
+    <th><abbr title="Graphical User Interface">GUI</abbr></th>
+    <td><a href="//mediaarea.net/download/binary/mediainfo-gui/0.7.96/mediainfo-gui_0.7.96-1_i386.xUbuntu_17.04.deb">v0.7.96</a></td>
+    <td>requires libmediainfo0</td>
+</tr>
+<tr>
+    <th><abbr title="Command Line Interface">CLI</abbr></th>
+    <td><a href="//mediaarea.net/download/binary/mediainfo/0.7.96/mediainfo_0.7.96-1_i386.xUbuntu_17.04.deb">v0.7.96</a></td>
+    <td>requires libmediainfo0</td>
+</tr>
+<tr>
+    <th>libmediainfo0</th>
+    <td><a href="//mediaarea.net/download/binary/libmediainfo0/0.7.96/libmediainfo0v5_0.7.96-1_i386.xUbuntu_17.04.deb">v0.7.96</a> <small>(<a href="//mediaarea.net/download/binary/libmediainfo0/0.7.96/libmediainfo-dev_0.7.96-1_i386.xUbuntu_17.04.deb">devel</a>, <a href="//mediaarea.net/download/binary/libmediainfo0/0.7.96/libmediainfo-doc_0.7.96-1_i386.xUbuntu_17.04.deb">doc</a>)</small></td>
+    <td>requires libzen0</td>
+</tr>
+<tr>
+    <th>libzen0</th>
+    <td><a href="//mediaarea.net/download/binary/libzen0/0.4.35/libzen0v5_0.4.35-1_i386.xUbuntu_17.04.deb">v0.4.35</a> <small>(<a href="//mediaarea.net/download/binary/libzen0/0.4.35/libzen-dev_0.4.35-1_i386.xUbuntu_17.04.deb">devel</a>, <a href="//mediaarea.net/download/binary/libzen0/0.4.35/libzen-doc_0.4.35-1_i386.xUbuntu_17.04.deb">doc</a>)</small></td>
+    <td>&nbsp;</td>
+</tr>
+<tr>
+    <th rowspan="8" id="16.10">Ubuntu 16.10 (Yakkety Yak)</th>
+    <th rowspan="4" id="16.10.amd64">amd64</th>
+    <th><abbr title="Graphical User Interface">GUI</abbr></th>
+    <td><a href="//mediaarea.net/download/binary/mediainfo-gui/0.7.96/mediainfo-gui_0.7.96-1_amd64.xUbuntu_16.10.deb">v0.7.96</a></td>
+    <td>requires libmediainfo0</td>
+</tr>
+<tr>
+    <th><abbr title="Command Line Interface">CLI</abbr></th>
+    <td><a href="//mediaarea.net/download/binary/mediainfo/0.7.96/mediainfo_0.7.96-1_amd64.xUbuntu_16.10.deb">v0.7.96</a></td>
+    <td>requires libmediainfo0</td>
+</tr>
+<tr>
+    <th>libmediainfo0</th>
+    <td><a href="//mediaarea.net/download/binary/libmediainfo0/0.7.96/libmediainfo0v5_0.7.96-1_amd64.xUbuntu_16.10.deb">v0.7.96</a> <small>(<a href="//mediaarea.net/download/binary/libmediainfo0/0.7.96/libmediainfo-dev_0.7.96-1_amd64.xUbuntu_16.10.deb">devel</a>, <a href="//mediaarea.net/download/binary/libmediainfo0/0.7.96/libmediainfo-doc_0.7.96-1_amd64.xUbuntu_16.10.deb">doc</a>)</small></td>
+    <td>requires libzen0</td>
+</tr>
+<tr>
+    <th>libzen0</th>
+    <td><a href="//mediaarea.net/download/binary/libzen0/0.4.35/libzen0v5_0.4.35-1_amd64.xUbuntu_16.10.deb">v0.4.35</a> <small>(<a href="//mediaarea.net/download/binary/libzen0/0.4.35/libzen-dev_0.4.35-1_amd64.xUbuntu_16.10.deb">devel</a>, <a href="//mediaarea.net/download/binary/libzen0/0.4.35/libzen-doc_0.4.35-1_amd64.xUbuntu_16.10.deb">doc</a>)</small></td>
+    <td>&nbsp;</td>
+</tr>
+<tr>
+    <th rowspan="4" id="16.10.i386">i386</th>
+    <th><abbr title="Graphical User Interface">GUI</abbr></th>
+    <td><a href="//mediaarea.net/download/binary/mediainfo-gui/0.7.96/mediainfo-gui_0.7.96-1_i386.xUbuntu_16.10.deb">v0.7.96</a></td>
+    <td>requires libmediainfo0</td>
+</tr>
+<tr>
+    <th><abbr title="Command Line Interface">CLI</abbr></th>
+    <td><a href="//mediaarea.net/download/binary/mediainfo/0.7.96/mediainfo_0.7.96-1_i386.xUbuntu_16.10.deb">v0.7.96</a></td>
+    <td>requires libmediainfo0</td>
+</tr>
+<tr>
+    <th>libmediainfo0</th>
+    <td><a href="//mediaarea.net/download/binary/libmediainfo0/0.7.96/libmediainfo0v5_0.7.96-1_i386.xUbuntu_16.10.deb">v0.7.96</a> <small>(<a href="//mediaarea.net/download/binary/libmediainfo0/0.7.96/libmediainfo-dev_0.7.96-1_i386.xUbuntu_16.10.deb">devel</a>, <a href="//mediaarea.net/download/binary/libmediainfo0/0.7.96/libmediainfo-doc_0.7.96-1_i386.xUbuntu_16.10.deb">doc</a>)</small></td>
+    <td>requires libzen0</td>
+</tr>
+<tr>
+    <th>libzen0</th>
+    <td><a href="//mediaarea.net/download/binary/libzen0/0.4.35/libzen0v5_0.4.35-1_i386.xUbuntu_16.10.deb">v0.4.35</a> <small>(<a href="//mediaarea.net/download/binary/libzen0/0.4.35/libzen-dev_0.4.35-1_i386.xUbuntu_16.10.deb">devel</a>, <a href="//mediaarea.net/download/binary/libzen0/0.4.35/libzen-doc_0.4.35-1_i386.xUbuntu_16.10.deb">doc</a>)</small></td>
+    <td>&nbsp;</td>
+</tr>
+<tr>
+    <th rowspan="8" id="16.04">Ubuntu 16.04 (Xenial Xerus)</th>
+    <th rowspan="4" id="16.04.amd64">amd64</th>
+    <th><abbr title="Graphical User Interface">GUI</abbr></th>
+    <td><a href="//mediaarea.net/download/binary/mediainfo-gui/0.7.96/mediainfo-gui_0.7.96-1_amd64.xUbuntu_16.04.deb">v0.7.96</a></td>
+    <td>requires libmediainfo0</td>
+</tr>
+<tr>
+    <th><abbr title="Command Line Interface">CLI</abbr></th>
+    <td><a href="//mediaarea.net/download/binary/mediainfo/0.7.96/mediainfo_0.7.96-1_amd64.xUbuntu_16.04.deb">v0.7.96</a></td>
+    <td>requires libmediainfo0</td>
+</tr>
+<tr>
+    <th>libmediainfo0</th>
+    <td><a href="//mediaarea.net/download/binary/libmediainfo0/0.7.96/libmediainfo0v5_0.7.96-1_amd64.xUbuntu_16.04.deb">v0.7.96</a> <small>(<a href="//mediaarea.net/download/binary/libmediainfo0/0.7.96/libmediainfo-dev_0.7.96-1_amd64.xUbuntu_16.04.deb">devel</a>, <a href="//mediaarea.net/download/binary/libmediainfo0/0.7.96/libmediainfo-doc_0.7.96-1_amd64.xUbuntu_16.04.deb">doc</a>)</small></td>
+    <td>requires libzen0</td>
+</tr>
+<tr>
+    <th>libzen0</th>
+    <td><a href="//mediaarea.net/download/binary/libzen0/0.4.35/libzen0v5_0.4.35-1_amd64.xUbuntu_16.04.deb">v0.4.35</a> <small>(<a href="//mediaarea.net/download/binary/libzen0/0.4.35/libzen-dev_0.4.35-1_amd64.xUbuntu_16.04.deb">devel</a>, <a href="//mediaarea.net/download/binary/libzen0/0.4.35/libzen-doc_0.4.35-1_amd64.xUbuntu_16.04.deb">doc</a>)</small></td>
+    <td>&nbsp;</td>
+</tr>
+<tr>
+    <th rowspan="4" id="16.04.i386">i386</th>
+    <th><abbr title="Graphical User Interface">GUI</abbr></th>
+    <td><a href="//mediaarea.net/download/binary/mediainfo-gui/0.7.96/mediainfo-gui_0.7.96-1_i386.xUbuntu_16.04.deb">v0.7.96</a></td>
+    <td>requires libmediainfo0</td>
+</tr>
+<tr>
+    <th><abbr title="Command Line Interface">CLI</abbr></th>
+    <td><a href="//mediaarea.net/download/binary/mediainfo/0.7.96/mediainfo_0.7.96-1_i386.xUbuntu_16.04.deb">v0.7.96</a></td>
+    <td>requires libmediainfo0</td>
+</tr>
+<tr>
+    <th>libmediainfo0</th>
+    <td><a href="//mediaarea.net/download/binary/libmediainfo0/0.7.96/libmediainfo0v5_0.7.96-1_i386.xUbuntu_16.04.deb">v0.7.96</a> <small>(<a href="//mediaarea.net/download/binary/libmediainfo0/0.7.96/libmediainfo-dev_0.7.96-1_i386.xUbuntu_16.04.deb">devel</a>, <a href="//mediaarea.net/download/binary/libmediainfo0/0.7.96/libmediainfo-doc_0.7.96-1_i386.xUbuntu_16.04.deb">doc</a>)</small></td>
+    <td>requires libzen0</td>
+</tr>
+<tr>
+    <th>libzen0</th>
+    <td><a href="//mediaarea.net/download/binary/libzen0/0.4.35/libzen0v5_0.4.35-1_i386.xUbuntu_16.04.deb">v0.4.35</a> <small>(<a href="//mediaarea.net/download/binary/libzen0/0.4.35/libzen-dev_0.4.35-1_i386.xUbuntu_16.04.deb">devel</a>, <a href="//mediaarea.net/download/binary/libzen0/0.4.35/libzen-doc_0.4.35-1_i386.xUbuntu_16.04.deb">doc</a>)</small></td>
+    <td>&nbsp;</td>
+</tr>
+<tr class="old-files">
+    <th rowspan="8" id="15.10">Ubuntu 15.10 (Wily Werewolf)</th>
+    <th rowspan="4" id="15.10.amd64">amd64</th>
+    <th><abbr title="Graphical User Interface">GUI</abbr></th>
+    <td><a href="//mediaarea.net/download/binary/mediainfo-gui/0.7.94/mediainfo-gui_0.7.94-1_amd64.xUbuntu_15.10.deb">v0.7.94</a></td>
+    <td>requires libmediainfo0</td>
+</tr>
+<tr class="old-files">
+    <th><abbr title="Command Line Interface">CLI</abbr></th>
+    <td><a href="//mediaarea.net/download/binary/mediainfo/0.7.94/mediainfo_0.7.94-1_amd64.xUbuntu_15.10.deb">v0.7.94</a></td>
+    <td>requires libmediainfo0</td>
+</tr>
+<tr class="old-files">
+    <th>libmediainfo0</th>
+    <td><a href="//mediaarea.net/download/binary/libmediainfo0/0.7.94/libmediainfo0v5_0.7.94-1_amd64.xUbuntu_15.10.deb">v0.7.94</a> <small>(<a href="//mediaarea.net/download/binary/libmediainfo0/0.7.94/libmediainfo-dev_0.7.94-1_amd64.xUbuntu_15.10.deb">devel</a>, <a href="//mediaarea.net/download/binary/libmediainfo0/0.7.94/libmediainfo-doc_0.7.94-1_amd64.xUbuntu_15.10.deb">doc</a>)</small></td>
+    <td>requires libzen0</td>
+</tr>
+<tr class="old-files">
+    <th>libzen0</th>
+    <td><a href="//mediaarea.net/download/binary/libzen0/0.4.35/libzen0v5_0.4.35-1_amd64.xUbuntu_15.10.deb">v0.4.35</a> <small>(<a href="//mediaarea.net/download/binary/libzen0/0.4.35/libzen-dev_0.4.35-1_amd64.xUbuntu_15.10.deb">devel</a>, <a href="//mediaarea.net/download/binary/libzen0/0.4.35/libzen-doc_0.4.35-1_amd64.xUbuntu_15.10.deb">doc</a>)</small></td>
+    <td>&nbsp;</td>
+</tr>
+<tr class="old-files">
+    <th rowspan="4" id="15.10.i386">i386</th>
+    <th><abbr title="Graphical User Interface">GUI</abbr></th>
+    <td><a href="//mediaarea.net/download/binary/mediainfo-gui/0.7.94/mediainfo-gui_0.7.94-1_i386.xUbuntu_15.10.deb">v0.7.94</a></td>
+    <td>requires libmediainfo0</td>
+</tr>
+<tr class="old-files">
+    <th><abbr title="Command Line Interface">CLI</abbr></th>
+    <td><a href="//mediaarea.net/download/binary/mediainfo/0.7.94/mediainfo_0.7.94-1_i386.xUbuntu_15.10.deb">v0.7.94</a></td>
+    <td>requires libmediainfo0</td>
+</tr>
+<tr class="old-files">
+    <th>libmediainfo0</th>
+    <td><a href="//mediaarea.net/download/binary/libmediainfo0/0.7.94/libmediainfo0v5_0.7.94-1_i386.xUbuntu_15.10.deb">v0.7.94</a> <small>(<a href="//mediaarea.net/download/binary/libmediainfo0/0.7.94/libmediainfo-dev_0.7.94-1_i386.xUbuntu_15.10.deb">devel</a>, <a href="//mediaarea.net/download/binary/libmediainfo0/0.7.94/libmediainfo-doc_0.7.94-1_i386.xUbuntu_15.10.deb">doc</a>)</small></td>
+    <td>requires libzen0</td>
+</tr>
+<tr class="old-files">
+    <th>libzen0</th>
+    <td><a href="//mediaarea.net/download/binary/libzen0/0.4.35/libzen0v5_0.4.35-1_i386.xUbuntu_15.10.deb">v0.4.35</a> <small>(<a href="//mediaarea.net/download/binary/libzen0/0.4.35/libzen-dev_0.4.35-1_i386.xUbuntu_15.10.deb">devel</a>, <a href="//mediaarea.net/download/binary/libzen0/0.4.35/libzen-doc_0.4.35-1_i386.xUbuntu_15.10.deb">doc</a>)</small></td>
+    <td>&nbsp;</td>
+</tr>
+<tr class="old-files">
+    <th rowspan="8" id="15.04">Ubuntu 15.04 (Vivid Vervet)</th>
+    <th rowspan="4" id="15.04.amd64">amd64</th>
+    <th><abbr title="Graphical User Interface">GUI</abbr></th>
+    <td><a href="//mediaarea.net/download/binary/mediainfo-gui/0.7.94/mediainfo-gui_0.7.94-1_amd64.xUbuntu_15.04.deb">v0.7.94</a></td>
+    <td>requires libmediainfo0</td>
+</tr>
+<tr class="old-files">
+    <th><abbr title="Command Line Interface">CLI</abbr></th>
+    <td><a href="//mediaarea.net/download/binary/mediainfo/0.7.94/mediainfo_0.7.94-1_amd64.xUbuntu_15.04.deb">v0.7.94</a></td>
+    <td>requires libmediainfo0</td>
+</tr>
+<tr class="old-files">
+    <th>libmediainfo0</th>
+    <td><a href="//mediaarea.net/download/binary/libmediainfo0/0.7.94/libmediainfo0_0.7.94-1_amd64.xUbuntu_15.04.deb">v0.7.94</a> <small>(<a href="//mediaarea.net/download/binary/libmediainfo0/0.7.94/libmediainfo-dev_0.7.94-1_amd64.xUbuntu_15.04.deb">devel</a>, <a href="//mediaarea.net/download/binary/libmediainfo0/0.7.94/libmediainfo-doc_0.7.94-1_amd64.xUbuntu_15.04.deb">doc</a>)</small></td>
+    <td>requires libzen0</td>
+</tr>
+<tr class="old-files">
+    <th>libzen0</th>
+    <td><a href="//mediaarea.net/download/binary/libzen0/0.4.35/libzen0_0.4.35-1_amd64.xUbuntu_15.04.deb">v0.4.35</a> <small>(<a href="//mediaarea.net/download/binary/libzen0/0.4.35/libzen-dev_0.4.35-1_amd64.xUbuntu_15.04.deb">devel</a>, <a href="//mediaarea.net/download/binary/libzen0/0.4.35/libzen-doc_0.4.35-1_amd64.xUbuntu_15.04.deb">doc</a>)</small></td>
+    <td>&nbsp;</td>
+</tr>
+<tr class="old-files">
+    <th rowspan="4" id="15.04.i386">i386</th>
+    <th><abbr title="Graphical User Interface">GUI</abbr></th>
+    <td><a href="//mediaarea.net/download/binary/mediainfo-gui/0.7.94/mediainfo-gui_0.7.94-1_i386.xUbuntu_15.04.deb">v0.7.94</a></td>
+    <td>requires libmediainfo0</td>
+</tr>
+<tr class="old-files">
+    <th><abbr title="Command Line Interface">CLI</abbr></th>
+    <td><a href="//mediaarea.net/download/binary/mediainfo/0.7.94/mediainfo_0.7.94-1_i386.xUbuntu_15.04.deb">v0.7.94</a></td>
+    <td>requires libmediainfo0</td>
+</tr>
+<tr class="old-files">
+    <th>libmediainfo0</th>
+    <td><a href="//mediaarea.net/download/binary/libmediainfo0/0.7.94/libmediainfo0_0.7.94-1_i386.xUbuntu_15.04.deb">v0.7.94</a> <small>(<a href="//mediaarea.net/download/binary/libmediainfo0/0.7.94/libmediainfo-dev_0.7.94-1_i386.xUbuntu_15.04.deb">devel</a>, <a href="//mediaarea.net/download/binary/libmediainfo0/0.7.94/libmediainfo-doc_0.7.94-1_i386.xUbuntu_15.04.deb">doc</a>)</small></td>
+    <td>requires libzen0</td>
+</tr>
+<tr class="old-files">
+    <th>libzen0</th>
+    <td><a href="//mediaarea.net/download/binary/libzen0/0.4.35/libzen0_0.4.35-1_i386.xUbuntu_15.04.deb">v0.4.35</a> <small>(<a href="//mediaarea.net/download/binary/libzen0/0.4.35/libzen-dev_0.4.35-1_i386.xUbuntu_15.04.deb">devel</a>, <a href="//mediaarea.net/download/binary/libzen0/0.4.35/libzen-doc_0.4.35-1_i386.xUbuntu_15.04.deb">doc</a>)</small></td>
+    <td>&nbsp;</td>
+</tr>
+<tr class="old-files">
+    <th rowspan="8" id="14.10">Ubuntu 14.10 (Utopic Unicorn)</th>
+    <th rowspan="4" id="14.10.amd64">amd64</th>
+    <th><abbr title="Graphical User Interface">GUI</abbr></th>
+    <td><a href="//mediaarea.net/download/binary/mediainfo-gui/0.7.94/mediainfo-gui_0.7.94-1_amd64.xUbuntu_14.10.deb">v0.7.94</a></td>
+    <td>requires libmediainfo0</td>
+</tr>
+<tr class="old-files">
+    <th><abbr title="Command Line Interface">CLI</abbr></th>
+    <td><a href="//mediaarea.net/download/binary/mediainfo/0.7.94/mediainfo_0.7.94-1_amd64.xUbuntu_14.10.deb">v0.7.94</a></td>
+    <td>requires libmediainfo0</td>
+</tr>
+<tr class="old-files">
+    <th>libmediainfo0</th>
+    <td><a href="//mediaarea.net/download/binary/libmediainfo0/0.7.94/libmediainfo0_0.7.94-1_amd64.xUbuntu_14.10.deb">v0.7.94</a> <small>(<a href="//mediaarea.net/download/binary/libmediainfo0/0.7.94/libmediainfo-dev_0.7.94-1_amd64.xUbuntu_14.10.deb">devel</a>, <a href="//mediaarea.net/download/binary/libmediainfo0/0.7.94/libmediainfo-doc_0.7.94-1_amd64.xUbuntu_14.10.deb">doc</a>)</small></td>
+    <td>requires libzen0</td>
+</tr>
+<tr class="old-files">
+    <th>libzen0</th>
+    <td><a href="//mediaarea.net/download/binary/libzen0/0.4.35/libzen0_0.4.35-1_amd64.xUbuntu_14.10.deb">v0.4.35</a> <small>(<a href="//mediaarea.net/download/binary/libzen0/0.4.35/libzen-dev_0.4.35-1_amd64.xUbuntu_14.10.deb">devel</a>, <a href="//mediaarea.net/download/binary/libzen0/0.4.35/libzen-doc_0.4.35-1_amd64.xUbuntu_14.10.deb">doc</a>)</small></td>
+    <td>&nbsp;</td>
+</tr>
+<tr class="old-files">
+    <th rowspan="4" id="14.10.i386">i386</th>
+    <th><abbr title="Graphical User Interface">GUI</abbr></th>
+    <td><a href="//mediaarea.net/download/binary/mediainfo-gui/0.7.94/mediainfo-gui_0.7.94-1_i386.xUbuntu_14.10.deb">v0.7.94</a></td>
+    <td>requires libmediainfo0</td>
+</tr>
+<tr class="old-files">
+    <th><abbr title="Command Line Interface">CLI</abbr></th>
+    <td><a href="//mediaarea.net/download/binary/mediainfo/0.7.94/mediainfo_0.7.94-1_i386.xUbuntu_14.10.deb">v0.7.94</a></td>
+    <td>requires libmediainfo0</td>
+</tr>
+<tr class="old-files">
+    <th>libmediainfo0</th>
+    <td><a href="//mediaarea.net/download/binary/libmediainfo0/0.7.94/libmediainfo0_0.7.94-1_i386.xUbuntu_14.10.deb">v0.7.94</a> <small>(<a href="//mediaarea.net/download/binary/libmediainfo0/0.7.94/libmediainfo-dev_0.7.94-1_i386.xUbuntu_14.10.deb">devel</a>, <a href="//mediaarea.net/download/binary/libmediainfo0/0.7.94/libmediainfo-doc_0.7.94-1_i386.xUbuntu_14.10.deb">doc</a>)</small></td>
+    <td>requires libzen0</td>
+</tr>
+<tr class="old-files">
+    <th>libzen0</th>
+    <td><a href="//mediaarea.net/download/binary/libzen0/0.4.35/libzen0_0.4.35-1_i386.xUbuntu_14.10.deb">v0.4.35</a> <small>(<a href="//mediaarea.net/download/binary/libzen0/0.4.35/libzen-dev_0.4.35-1_i386.xUbuntu_14.10.deb">devel</a>, <a href="//mediaarea.net/download/binary/libzen0/0.4.35/libzen-doc_0.4.35-1_i386.xUbuntu_14.10.deb">doc</a>)</small></td>
+    <td>&nbsp;</td>
+</tr>
+<tr>
+    <th rowspan="8" id="14.04">Ubuntu 14.04 (Trusty Tahr)<br /><br />Linux Mint 17 (Qiana)<br /><br />Linux Mint 17.1 (Rebecca)<br /><br />Linux Mint 17.2 (Rafaela)<br /><br />Linux Mint 17.3 (Rosa)</th>
+    <th rowspan="4" id="14.04.amd64">amd64</th>
+    <th><abbr title="Graphical User Interface">GUI</abbr></th>
+    <td><a href="//mediaarea.net/download/binary/mediainfo-gui/0.7.96/mediainfo-gui_0.7.96-1_amd64.xUbuntu_14.04.deb">v0.7.96</a></td>
+    <td>requires libmediainfo0</td>
+</tr>
+<tr>
+    <th><abbr title="Command Line Interface">CLI</abbr></th>
+    <td><a href="//mediaarea.net/download/binary/mediainfo/0.7.96/mediainfo_0.7.96-1_amd64.xUbuntu_14.04.deb">v0.7.96</a></td>
+    <td>requires libmediainfo0</td>
+</tr>
+<tr>
+    <th>libmediainfo0</th>
+    <td><a href="//mediaarea.net/download/binary/libmediainfo0/0.7.96/libmediainfo0_0.7.96-1_amd64.xUbuntu_14.04.deb">v0.7.96</a> <small>(<a href="//mediaarea.net/download/binary/libmediainfo0/0.7.96/libmediainfo-dev_0.7.96-1_amd64.xUbuntu_14.04.deb">devel</a>, <a href="//mediaarea.net/download/binary/libmediainfo0/0.7.96/libmediainfo-doc_0.7.96-1_amd64.xUbuntu_14.04.deb">doc</a>)</small></td>
+    <td>requires libzen0</td>
+</tr>
+<tr>
+    <th>libzen0</th>
+    <td><a href="//mediaarea.net/download/binary/libzen0/0.4.35/libzen0_0.4.35-1_amd64.xUbuntu_14.04.deb">v0.4.35</a> <small>(<a href="//mediaarea.net/download/binary/libzen0/0.4.35/libzen-dev_0.4.35-1_amd64.xUbuntu_14.04.deb">devel</a>, <a href="//mediaarea.net/download/binary/libzen0/0.4.35/libzen-doc_0.4.35-1_amd64.xUbuntu_14.04.deb">doc</a>)</small></td>
+    <td>&nbsp;</td>
+</tr>
+<tr>
+    <th rowspan="4" id="14.04.i386">i386</th>
+    <th><abbr title="Graphical User Interface">GUI</abbr></th>
+    <td><a href="//mediaarea.net/download/binary/mediainfo-gui/0.7.96/mediainfo-gui_0.7.96-1_i386.xUbuntu_14.04.deb">v0.7.96</a></td>
+    <td>requires libmediainfo0</td>
+</tr>
+<tr>
+    <th><abbr title="Command Line Interface">CLI</abbr></th>
+    <td><a href="//mediaarea.net/download/binary/mediainfo/0.7.96/mediainfo_0.7.96-1_i386.xUbuntu_14.04.deb">v0.7.96</a></td>
+    <td>requires libmediainfo0</td>
+</tr>
+<tr>
+    <th>libmediainfo0</th>
+    <td><a href="//mediaarea.net/download/binary/libmediainfo0/0.7.96/libmediainfo0_0.7.96-1_i386.xUbuntu_14.04.deb">v0.7.96</a> <small>(<a href="//mediaarea.net/download/binary/libmediainfo0/0.7.96/libmediainfo-dev_0.7.96-1_i386.xUbuntu_14.04.deb">devel</a>, <a href="//mediaarea.net/download/binary/libmediainfo0/0.7.96/libmediainfo-doc_0.7.96-1_i386.xUbuntu_14.04.deb">doc</a>)</small></td>
+    <td>requires libzen0</td>
+</tr>
+<tr>
+    <th>libzen0</th>
+    <td><a href="//mediaarea.net/download/binary/libzen0/0.4.35/libzen0_0.4.35-1_i386.xUbuntu_14.04.deb">v0.4.35</a> <small>(<a href="//mediaarea.net/download/binary/libzen0/0.4.35/libzen-dev_0.4.35-1_i386.xUbuntu_14.04.deb">devel</a>, <a href="//mediaarea.net/download/binary/libzen0/0.4.35/libzen-doc_0.4.35-1_i386.xUbuntu_14.04.deb">doc</a>)</small></td>
+    <td>&nbsp;</td>
+</tr>
+<tr class="old-files">
+    <th rowspan="8">Ubuntu 13.10<br/>(Saucy Salamander)<br/><br/>Linux Mint 16<br/>(Petra)</th>
+    <th rowspan="4">amd64</th>
+    <th><abbr title="Graphical User Interface">GUI</abbr></th>
+    <td><a href="//mediaarea.net/download/binary/mediainfo-gui/0.7.73/mediainfo-gui_0.7.73-1_amd64.Debian_7.0.deb">v0.7.73</a><small> (Debian 7.0 package)</small></td>
+    <td>requires libmediainfo0</td>
+</tr>
+<tr class="old-files">
+    <th><abbr title="Command Line Interface">CLI</abbr></th>
+    <td><a href="//mediaarea.net/download/binary/mediainfo/0.7.73/mediainfo_0.7.73-1_amd64.Debian_7.0.deb">v0.7.73</a><small> (Debian 7.0 package)</small></td>
+    <td>requires libmediainfo0</td>
+</tr>
+<tr class="old-files">
+    <th>libmediainfo0</th>
+    <td><a href="//mediaarea.net/download/binary/libmediainfo0/0.7.73/libmediainfo0_0.7.73-1_amd64.xUbuntu_13.10.deb">v0.7.73</a><small> (<a href="//mediaarea.net/download/binary/libmediainfo0/0.7.73/libmediainfo-dev_0.7.73-1_amd64.xUbuntu_13.10.deb">devel</a>)</small></td>
+    <td>requires libzen0</td>
+<tr class="old-files">
+    <th>libzen0</th>
+    <td><a href="//mediaarea.net/download/binary/libzen0/0.4.31/libzen0_0.4.31-1_amd64.xUbuntu_13.10.deb">v0.4.31</a><small> (<a href="//mediaarea.net/download/binary/libzen0/0.4.31/libzen-dev_0.4.31-1_amd64.xUbuntu_13.10.deb">devel</a>)</small></td>
+    <td>&nbsp;</td>
+</tr>
+</tr>
+<tr class="old-files">
+    <th rowspan="4">i386</th>
+    <th><abbr title="Graphical User Interface">GUI</abbr></th>
+    <td><a href="//mediaarea.net/download/binary/mediainfo-gui/0.7.73/mediainfo-gui_0.7.73-1_i386.Debian_7.0.deb">v0.7.73</a><small> (Debian 7.0 package)</small></td>
+    <td>requires libmediainfo0</td>
+</tr>
+<tr class="old-files">
+    <th><abbr title="Command Line Interface">CLI</abbr></th>
+    <td><a href="//mediaarea.net/download/binary/mediainfo/0.7.73/mediainfo_0.7.73-1_i386.Debian_7.0.deb">v0.7.73</a><small> (Debian 7.0 package)</small></td>
+    <td>requires libmediainfo0</td>
+</tr>
+<tr class="old-files">
+    <th>libmediainfo0</th>
+    <td><a href="//mediaarea.net/download/binary/libmediainfo0/0.7.73/libmediainfo0_0.7.73-1_i386.xUbuntu_13.10.deb">v0.7.73</a><small> (<a href="//mediaarea.net/download/binary/libmediainfo0/0.7.73/libmediainfo-dev_0.7.73-1_i386.xUbuntu_13.10.deb">devel</a>)</small></td>
+    <td>requires libzen0</td>
+</tr>
+<tr class="old-files">
+    <th>libzen0</th>
+    <td><a href="//mediaarea.net/download/binary/libzen0/0.4.31/libzen0_0.4.31-1_i386.xUbuntu_13.10.deb">v0.4.31</a><small> (<a href="//mediaarea.net/download/binary/libzen0/0.4.31/libzen-dev_0.4.31-1_i386.xUbuntu_13.10.deb">devel</a>)</small></td>
+    <td>&nbsp;</td>
+</tr>
+<tr class="old-files">
+    <th rowspan="8">Ubuntu 13.04<br/>(Raring Ringtail)<br/><br/>Linux Mint 15<br/>(Olivia)</th>
+    <th rowspan="4">amd64</th>
+    <th><abbr title="Graphical User Interface">GUI</abbr></th>
+    <td><a href="//mediaarea.net/download/binary/mediainfo-gui/0.7.73/mediainfo-gui_0.7.73-1_amd64.Debian_7.0.deb">v0.7.73</a><small> (Debian 7.0 package)</small></td>
+    <td>requires libmediainfo0</td>
+</tr>
+<tr class="old-files">
+    <th><abbr title="Command Line Interface">CLI</abbr></th>
+    <td><a href="//mediaarea.net/download/binary/mediainfo/0.7.73/mediainfo_0.7.73-1_amd64.Debian_7.0.deb">v0.7.73</a><small> (Debian 7.0 package)</small></td>
+    <td>requires libmediainfo0</td>
+</tr>
+<tr class="old-files">
+    <th>libmediainfo0</th>
+    <td><a href="//mediaarea.net/download/binary/libmediainfo0/0.7.73/libmediainfo0_0.7.73-1_amd64.xUbuntu_13.04.deb">v0.7.73</a><small> (<a href="//mediaarea.net/download/binary/libmediainfo0/0.7.73/libmediainfo-dev_0.7.73-1_amd64.xUbuntu_13.04.deb">devel</a>)</small></td>
+    <td>requires libzen0</td>
+</tr>
+<tr class="old-files">
+    <th>libzen0</th>
+    <td><a href="//mediaarea.net/download/binary/libzen0/0.4.31/libzen0_0.4.31-1_amd64.xUbuntu_13.04.deb">v0.4.31</a><small> (<a href="//mediaarea.net/download/binary/libzen0/0.4.31/libzen-dev_0.4.31-1_amd64.xUbuntu_13.04.deb">devel</a>)</small></td>
+    <td>&nbsp;</td>
+</tr>
+<tr class="old-files">à)0
+    <th rowspan="4">i386</th>
+    <th><abbr title="Graphical User Interface">GUI</abbr></th>
+    <td><a href="//mediaarea.net/download/binary/mediainfo-gui/0.7.73/mediainfo-gui_0.7.73-1_i386.Debian_7.0.deb">v0.7.73</a><small> (Debian 7.0 package)</small></td>
+    <td>requires libmediainfo0</td>
+</tr>
+<tr class="old-files">
+    <th><abbr title="Command Line Interface">CLI</abbr></th>
+    <td><a href="//mediaarea.net/download/binary/mediainfo/0.7.73/mediainfo_0.7.73-1_i386.Debian_7.0.deb">v0.7.73</a><small> (Debian 7.0 package)</small></td>
+    <td>requires libmediainfo0</td>
+</tr>
+<tr class="old-files">
+    <th>libmediainfo0</th>
+    <td><a href="//mediaarea.net/download/binary/libmediainfo0/0.7.73/libmediainfo0_0.7.73-1_i386.xUbuntu_13.04.deb">v0.7.73</a><small> (<a href="//mediaarea.net/download/binary/libmediainfo0/0.7.73/libmediainfo-dev_0.7.73-1_i386.xUbuntu_13.04.deb">devel</a>)</small></td>
+    <td>requires libzen0</td>
+</tr>
+<tr class="old-files">
+    <th>libzen0</th>
+    <td><a href="//mediaarea.net/download/binary/libzen0/0.4.31/libzen0_0.4.31-1_i386.xUbuntu_13.04.deb">v0.4.31</a><small> (<a href="//mediaarea.net/download/binary/libzen0/0.4.31/libzen-dev_0.4.31-1_i386.xUbuntu_13.04.deb">devel</a>)</small></td>
+    <td>&nbsp;</td>
+</tr>
+<tr class="old-files">
+    <th rowspan="8">Ubuntu 12.10<br/>(Quantal Quetzal)<br/><br/>Linux Mint 14<br/>(Nadia)</th>
+    <th rowspan="4">amd64</th>
+    <th><abbr title="Graphical User Interface">GUI</abbr></th>
+    <td><a href="//mediaarea.net/download/binary/mediainfo-gui/0.7.73/mediainfo-gui_0.7.73-1_amd64.Debian_6.0.deb">v0.7.73</a><small> (Debian 6.0 package)</small></td>
+    <td>requires libmediainfo0</td>
+</tr>
+<tr class="old-files">
+    <th><abbr title="Command Line Interface">CLI</abbr></th>
+    <td><a href="//mediaarea.net/download/binary/mediainfo/0.7.73/mediainfo_0.7.73-1_amd64.Debian_6.0.deb">v0.7.73</a><small> (Debian 6.0 package)</small></td>
+    <td>requires libmediainfo0</td>
+</tr>
+<tr class="old-files">
+    <th>libmediainfo0</th>
+    <td><a href="//mediaarea.net/download/binary/libmediainfo0/0.7.73/libmediainfo0_0.7.73-1_amd64.xUbuntu_12.10.deb">v0.7.73</a><small> (<a href="//mediaarea.net/download/binary/libmediainfo0/0.7.73/libmediainfo-dev_0.7.73-1_amd64.xUbuntu_12.10.deb">devel</a>)</small></td>
+    <td>requires libzen0</td>
+</tr>
+<tr class="old-files">
+    <th>libzen0</th>
+    <td><a href="//mediaarea.net/download/binary/libzen0/0.4.31/libzen0_0.4.31-1_amd64.xUbuntu_12.10.deb">v0.4.31</a><small> (<a href="//mediaarea.net/download/binary/libzen0/0.4.31/libzen-dev_0.4.31-1_amd64.xUbuntu_12.10.deb">devel</a>)</small></td>
+    <td>&nbsp;</td>
+</tr>
+<tr class="old-files">
+    <th rowspan="4">i386</th>
+    <th><abbr title="Graphical User Interface">GUI</abbr></th>
+    <td><a href="//mediaarea.net/download/binary/mediainfo-gui/0.7.73/mediainfo-gui_0.7.73-1_i386.Debian_6.0.deb">v0.7.73</a><small> (Debian 6.0 package)</small></td>
+    <td>requires libmediainfo0</td>
+</tr>
+<tr class="old-files">
+    <th><abbr title="Command Line Interface">CLI</abbr></th>
+    <td><a href="//mediaarea.net/download/binary/mediainfo/0.7.73/mediainfo_0.7.73-1_i386.Debian_6.0.deb">v0.7.73</a><small> (Debian 6.0 package)</small></td>
+    <td>requires libmediainfo0</td>
+</tr>
+<tr class="old-files">
+    <th>libmediainfo0</th>
+    <td><a href="//mediaarea.net/download/binary/libmediainfo0/0.7.73/libmediainfo0_0.7.73-1_i386.xUbuntu_12.10.deb">v0.7.73</a><small> (<a href="//mediaarea.net/download/binary/libmediainfo0/0.7.73/libmediainfo-dev_0.7.73-1_i386.xUbuntu_12.10.deb">devel</a>)</small></td>
+    <td>requires libzen0</td>
+</tr>
+<tr class="old-files">
+    <th>libzen0</th>
+    <td><a href="//mediaarea.net/download/binary/libzen0/0.4.31/libzen0_0.4.31-1_i386.xUbuntu_12.10.deb">v0.4.31</a><small> (<a href="//mediaarea.net/download/binary/libzen0/0.4.31/libzen-dev_0.4.31-1_i386.xUbuntu_12.10.deb">devel</a>)</small></td>
+    <td>&nbsp;</td>
+</tr>
+<tr>
+    <th rowspan="8">Ubuntu 12.04<br/>(Precise Pangolin)<br/><br/>Linux Mint 13<br/>(Maya)</th>
+    <th rowspan="4">amd64</th>
+    <th><abbr title="Graphical User Interface">GUI</abbr></th>
+    <td><a href="//mediaarea.net/download/binary/mediainfo-gui/0.7.94/mediainfo-gui_0.7.94-1_amd64.Debian_6.0.deb">v0.7.94</a><small> (Debian 6.0 package)</small></td>
+    <td>requires libmediainfo0</td>
+</tr>
+<tr>
+    <th><abbr title="Command Line Interface">CLI</abbr></th>
+    <td><a href="//mediaarea.net/download/binary/mediainfo/0.7.94/mediainfo_0.7.94-1_amd64.Debian_6.0.deb">v0.7.94</a><small> (Debian 6.0 package)</small></td>
+    <td>requires libmediainfo0</td>
+</tr>
+<tr>
+    <th>libmediainfo0</th>
+    <td><a href="//mediaarea.net/download/binary/libmediainfo0/0.7.94/libmediainfo0_0.7.94-1_amd64.xUbuntu_12.04.deb">v0.7.94</a><small> (<a href="//mediaarea.net/download/binary/libmediainfo0/0.7.94/libmediainfo-dev_0.7.94-1_amd64.xUbuntu_12.04.deb">devel</a>)</small></td>
+    <td>requires libzen0</td>
+</tr>
+<tr>
+    <th>libzen0</th>
+    <td><a href="//mediaarea.net/download/binary/libzen0/0.4.35/libzen0_0.4.35-1_amd64.xUbuntu_12.04.deb">v0.4.35</a><small> (<a href="//mediaarea.net/download/binary/libzen0/0.4.35/libzen-dev_0.4.35-1_amd64.xUbuntu_12.04.deb">devel</a>)</small></td>
+    <td>&nbsp;</td>
+</tr>
+<tr class="old-files">
+    <th rowspan="4">i386</th>
+    <th><abbr title="Graphical User Interface">GUI</abbr></th>
+    <td><a href="//mediaarea.net/download/binary/mediainfo-gui/0.7.94/mediainfo-gui_0.7.94-1_i386.Debian_6.0.deb">v0.7.94</a><small> (Debian 6.0 package)</small></td>
+    <td>requires libmediainfo0</td>
+</tr>
+<tr>
+    <th><abbr title="Command Line Interface">CLI</abbr></th>
+    <td><a href="//mediaarea.net/download/binary/mediainfo/0.7.94/mediainfo_0.7.94-1_i386.Debian_6.0.deb">v0.7.94</a><small> (Debian 6.0 package)</small></td>
+    <td>requires libmediainfo0</td>
+</tr>
+<tr>
+    <th>libmediainfo0</th>
+    <td><a href="//mediaarea.net/download/binary/libmediainfo0/0.7.94/libmediainfo0_0.7.94-1_i386.xUbuntu_12.04.deb">v0.7.94</a><small> (<a href="//mediaarea.net/download/binary/libmediainfo0/0.7.94/libmediainfo-dev_0.7.94-1_i386.xUbuntu_12.04.deb">devel</a>)</small></td>
+    <td>requires libzen0</td>
+</tr>
+<tr>
+    <th>libzen0</th>
+    <td><a href="//mediaarea.net/download/binary/libzen0/0.4.35/libzen0_0.4.35-1_i386.xUbuntu_12.04.deb">v0.4.35</a><small> (<a href="//mediaarea.net/download/binary/libzen0/0.4.35/libzen-dev_0.4.35-1_i386.xUbuntu_12.04.deb">devel</a>)</small></td>
+    <td>&nbsp;</td>
+</tr>
+<tr class="old-files">
+    <th rowspan="8">Ubuntu 11.10<br/>(Oneiric Ocelot)<br/><br/>Linux Mint 12<br/>(Lisa)</th>
+    <th rowspan="4">amd64</th>
+    <th><abbr title="Graphical User Interface">GUI</abbr></th>
+    <td><a href="//mediaarea.net/download/binary/mediainfo-gui/0.7.73/mediainfo-gui_0.7.73-1_amd64.Debian_6.0.deb">v0.7.73</a><small> (Debian 6.0 package)</small></td>
+    <td>requires libmediainfo0</td>
+</tr>
+<tr class="old-files">
+    <th><abbr title="Command Line Interface">CLI</abbr></th>
+    <td><a href="//mediaarea.net/download/binary/mediainfo/0.7.73/mediainfo_0.7.73-1_amd64.Debian_6.0.deb">v0.7.73</a><small> (Debian 6.0 package)</small></td>
+    <td>requires libmediainfo0</td>
+</tr>
+<tr class="old-files">
+    <th>libmediainfo0</th>
+    <td><a href="//mediaarea.net/download/binary/libmediainfo0/0.7.73/libmediainfo0_0.7.73-1_amd64.xUbuntu_11.10.deb">v0.7.73</a><small> (<a href="//mediaarea.net/download/binary/libmediainfo0/0.7.73/libmediainfo-dev_0.7.73-1_amd64.xUbuntu_11.10.deb">devel</a>)</small></td>
+    <td>requires libzen0</td>
+</tr>
+<tr class="old-files">
+    <th>libzen0</th>
+    <td><a href="//mediaarea.net/download/binary/libzen0/0.4.31/libzen0_0.4.31-1_amd64.xUbuntu_11.10.deb">v0.4.31</a><small> (<a href="//mediaarea.net/download/binary/libzen0/0.4.31/libzen-dev_0.4.31-1_amd64.xUbuntu_11.10.deb">devel</a>)</small></td>
+    <td>&nbsp;</td>
+</tr>
+<tr class="old-files">
+    <th rowspan="4">i386</th>
+    <th><abbr title="Graphical User Interface">GUI</abbr></th>
+    <td><a href="//mediaarea.net/download/binary/mediainfo-gui/0.7.73/mediainfo-gui_0.7.73-1_i386.Debian_6.0.deb">v0.7.73</a><small> (Debian 6.0 package)</small></td>
+    <td>requires libmediainfo0</td>
+</tr>
+<tr class="old-files">
+    <th><abbr title="Command Line Interface">CLI</abbr></th>
+    <td><a href="//mediaarea.net/download/binary/mediainfo/0.7.73/mediainfo_0.7.73-1_i386.Debian_6.0.deb">v0.7.73</a><small> (Debian 6.0 package)</small></td>
+    <td>requires libmediainfo0</td>
+</tr>
+<tr class="old-files">
+    <th>libmediainfo0</th>
+    <td><a href="//mediaarea.net/download/binary/libmediainfo0/0.7.73/libmediainfo0_0.7.73-1_i386.xUbuntu_11.10.deb">v0.7.73</a><small> (<a href="//mediaarea.net/download/binary/libmediainfo0/0.7.73/libmediainfo-dev_0.7.73-1_i386.xUbuntu_11.10.deb">devel</a>)</small></td>
+    <td>requires libzen0</td>
+</tr>
+<tr class="old-files">
+    <th>libzen0</th>
+    <td><a href="//mediaarea.net/download/binary/libzen0/0.4.31/libzen0_0.4.31-1_i386.xUbuntu_11.10.deb">v0.4.31</a><small> (<a href="//mediaarea.net/download/binary/libzen0/0.4.31/libzen-dev_0.4.31-1_i386.xUbuntu_11.10.deb">devel</a>)</small></td>
+    <td>&nbsp;</td>
+</tr>
+<tr class="old-files">
+    <th rowspan="8">Ubuntu 11.04<br/>(Natty)<br/><br/>Linux Mint 11<br/>(Katya)</th>
+    <th rowspan="4">amd64</th>
+    <th><abbr title="Graphical User Interface">GUI</abbr></th>
+    <td><a href="//mediaarea.net/download/binary/mediainfo-gui/0.7.62/mediainfo-gui_0.7.62-1_amd64.Debian_5.deb">v0.7.62</a><small> (Debian 5 package)</small></td>
+    <td>requires libmediainfo0</td>
+</tr>
+<tr class="old-files">
+    <th><abbr title="Command Line Interface">CLI</abbr></th>
+    <td><a href="//mediaarea.net/download/binary/mediainfo/0.7.62/mediainfo_0.7.62-1_amd64.Debian_5.deb">v0.7.62</a><small> (Debian 5 package)</small></td>
+    <td>requires libmediainfo0</td>
+</tr>
+<tr class="old-files">
+    <th>libmediainfo0</th>
+    <td><a href="//mediaarea.net/download/binary/libmediainfo0/0.7.62/libmediainfo0_0.7.62-1_amd64.Ubuntu_11.04.deb">v0.7.62</a><small> (<a href="//mediaarea.net/download/binary/libmediainfo0/0.7.62/libmediainfo-dev_0.7.62-1_amd64.Ubuntu_11.04.deb">devel</a>)</small></td>
+    <td>requires libzen0</td>
+</tr>
+<tr class="old-files">
+    <th>libzen0</th>
+    <td><a href="//mediaarea.net/download/binary/libzen0/0.4.28/libzen0_0.4.28-1_amd64.Ubuntu_11.04.deb">v0.4.28</a><small> (<a href="//mediaarea.net/download/binary/libzen0/0.4.28/libzen-dev_0.4.28-1_amd64.Ubuntu_11.04.deb">devel</a>)</small></td>
+    <td>&nbsp;</td>
+</tr>
+<tr class="old-files">
+    <th rowspan="4">i386</th>
+    <th><abbr title="Graphical User Interface">GUI</abbr></th>
+    <td><a href="//mediaarea.net/download/binary/mediainfo-gui/0.7.62/mediainfo-gui_0.7.62-1_i386.Debian_5.deb">v0.7.62</a><small> (Debian 5 package)</small></td>
+    <td>requires libmediainfo0</td>
+</tr>
+<tr class="old-files">
+    <th><abbr title="Command Line Interface">CLI</abbr></th>
+    <td><a href="//mediaarea.net/download/binary/mediainfo/0.7.62/mediainfo_0.7.62-1_i386.Debian_5.deb">v0.7.62</a><small> (Debian 5 package)</small></td>
+    <td>requires libmediainfo0</td>
+</tr>
+<tr class="old-files">
+    <th>libmediainfo0</th>
+    <td><a href="//mediaarea.net/download/binary/libmediainfo0/0.7.62/libmediainfo0_0.7.62-1_i386.Ubuntu_11.04.deb">v0.7.62</a><small> (<a href="//mediaarea.net/download/binary/libmediainfo0/0.7.62/libmediainfo-dev_0.7.62-1_i386.Ubuntu_11.04.deb">devel</a>)</small></td>
+    <td>requires libzen0</td>
+</tr>
+<tr class="old-files">
+    <th>libzen0</th>
+    <td><a href="//mediaarea.net/download/binary/libzen0/0.4.28/libzen0_0.4.28-1_i386.Ubuntu_11.04.deb">v0.4.28</a><small> (<a href="//mediaarea.net/download/binary/libzen0/0.4.28/libzen-dev_0.4.28-1_i386.Ubuntu_11.04.deb">devel</a>)</small></td>
+    <td>&nbsp;</td>
+</tr>
+<tr class="old-files">
+    <th rowspan="8">Ubuntu 10.10<br/>(Maverick)<br/><br/>Linux Mint 10<br/>(Julia)</th>
+    <th rowspan="4">amd64</th>
+    <th><abbr title="Graphical User Interface">GUI</abbr></th>
+    <td><a href="//mediaarea.net/download/binary/mediainfo-gui/0.7.62/mediainfo-gui_0.7.62-1_amd64.Debian_5.deb">v0.7.62</a><small> (Debian 5 package)</small></td>
+    <td>requires libmediainfo0</td>
+</tr>
+<tr class="old-files">
+    <th><abbr title="Command Line Interface">CLI</abbr></th>
+    <td><a href="//mediaarea.net/download/binary/mediainfo/0.7.62/mediainfo_0.7.62-1_amd64.Debian_5.deb">v0.7.62</a><small> (Debian 5 package)</small></td>
+    <td>requires libmediainfo0</td>
+</tr>
+<tr class="old-files">
+    <th>libmediainfo0</th>
+    <td><a href="//mediaarea.net/download/binary/libmediainfo0/0.7.62/libmediainfo0_0.7.62-1_amd64.Ubuntu_10.10.deb">v0.7.62</a><small> (<a href="//mediaarea.net/download/binary/libmediainfo0/0.7.62/libmediainfo-dev_0.7.62-1_i386.Ubuntu_10.10.deb">devel</a>)</small></td>
+    <td>requires libzen0</td>
+</tr>
+<tr class="old-files">
+    <th>libzen0</th>
+    <td><a href="//mediaarea.net/download/binary/libzen0/0.4.28/libzen0_0.4.28-1_amd64.Ubuntu_10.10.deb">v0.4.28</a><small> (<a href="//mediaarea.net/download/binary/libzen0/0.4.28/libzen-dev_0.4.28-1_i386.Ubuntu_10.10.deb">devel</a>)</small></td>
+    <td>&nbsp;</td>
+</tr>
+<tr class="old-files">
+    <th rowspan="4">i386</th>
+    <th><abbr title="Graphical User Interface">GUI</abbr></th>
+    <td><a href="//mediaarea.net/download/binary/mediainfo-gui/0.7.62/mediainfo-gui_0.7.62-1_i386.Debian_5.deb">v0.7.62</a><small> (Debian 5 package)</small></td>
+    <td>requires libmediainfo0</td>
+</tr>
+<tr class="old-files">
+    <th><abbr title="Command Line Interface">CLI</abbr></th>
+    <td><a href="//mediaarea.net/download/binary/mediainfo/0.7.62/mediainfo_0.7.62-1_i386.Debian_5.deb">v0.7.62</a><small> (Debian 5 package)</small></td>
+    <td>requires libmediainfo0</td>
+</tr>
+<tr class="old-files">
+    <th>libmediainfo0</th>
+    <td><a href="//mediaarea.net/download/binary/libmediainfo0/0.7.62/libmediainfo0_0.7.62-1_i386.Ubuntu_10.10.deb">v0.7.62</a><small> (<a href="//mediaarea.net/download/binary/libmediainfo0/0.7.62/libmediainfo-dev_0.7.62-1_i386.Ubuntu_10.10.deb">devel</a>)</small></td>
+    <td>requires libzen0</td>
+</tr>
+<tr class="old-files">
+    <th>libzen0</th>
+    <td><a href="//mediaarea.net/download/binary/libzen0/0.4.28/libzen0_0.4.28-1_i386.Ubuntu_10.10.deb">v0.4.28</a><small> (<a href="//mediaarea.net/download/binary/libzen0/0.4.28/libzen-dev_0.4.28-1_i386.Ubuntu_10.10.deb">devel</a>)</small></td>
+    <td>&nbsp;</td>
+</tr>
+<tr class="old-files">
+    <th rowspan="8">Ubuntu 10.04<br/>(Lucid)<br/><br/>Linux Mint 9<br/>(Isadora)</th>
+    <th rowspan="4">amd64</th>
+    <th><abbr title="Graphical User Interface">GUI</abbr></th>
+    <td><a href="//mediaarea.net/download/binary/mediainfo-gui/0.7.74/mediainfo-gui_0.7.74-1_amd64.Debian_6.0.deb">v0.7.74</a><small> (Debian 6.0 package)</small></td>
+    <td>requires libmediainfo0</td>
+</tr>
+<tr class="old-files">
+    <th><abbr title="Command Line Interface">CLI</abbr></th>
+    <td><a href="//mediaarea.net/download/binary/mediainfo/0.7.74/mediainfo_0.7.74-1_amd64.Debian_6.0.deb">v0.7.74</a><small> (Debian 6.0 package)</small></td>
+    <td>requires libmediainfo0</td>
+</tr>
+<tr class="old-files">
+    <th>libmediainfo0</th>
+    <td><a href="//mediaarea.net/download/binary/libmediainfo0/0.7.74/libmediainfo0_0.7.74-1_amd64.xUbuntu_10.04.deb">v0.7.74</a><small> (<a href="//mediaarea.net/download/binary/libmediainfo0/0.7.74/libmediainfo-dev_0.7.74-1_i386.xUbuntu_10.04.deb">devel</a>)</small></td>
+    <td>requires libzen0</td>
+</tr>
+<tr class="old-files">
+    <th>libzen0</th>
+    <td><a href="//mediaarea.net/download/binary/libzen0/0.4.31/libzen0_0.4.31-1_amd64.xUbuntu_10.04.deb">v0.4.31</a><small> (<a href="//mediaarea.net/download/binary/libzen0/0.4.31/libzen-dev_0.4.31-1_i386.xUbuntu_10.04.deb">devel</a>)</small></td>
+    <td>&nbsp;</td>
+</tr>
+<tr class="old-files">
+    <th rowspan="4">i386</th>
+    <th><abbr title="Graphical User Interface">GUI</abbr></th>
+    <td><a href="//mediaarea.net/download/binary/mediainfo-gui/0.7.74/mediainfo-gui_0.7.74-1_i386.Debian_6.0.deb">v0.7.74</a><small> (Debian 6.0 package)</small></td>
+    <td>requires libmediainfo0</td>
+</tr>
+<tr class="old-files">
+    <th><abbr title="Command Line Interface">CLI</abbr></th>
+    <td><a href="//mediaarea.net/download/binary/mediainfo/0.7.74/mediainfo_0.7.74-1_i386.Debian_6.0.deb">v0.7.74</a><small> (Debian 6.0 package)</small></td>
+    <td>requires libmediainfo0</td>
+</tr>
+<tr class="old-files">
+    <th>libmediainfo0</th>
+    <td><a href="//mediaarea.net/download/binary/libmediainfo0/0.7.74/libmediainfo0_0.7.74-1_i386.xUbuntu_10.04.deb">v0.7.74</a><small> (<a href="//mediaarea.net/download/binary/libmediainfo0/0.7.74/libmediainfo-dev_0.7.74-1_i386.xUbuntu_10.04.deb">devel</a>)</small></td>
+    <td>requires libzen0</td>
+</tr>
+<tr class="old-files">
+    <th>libzen0</th>
+    <td><a href="//mediaarea.net/download/binary/libzen0/0.4.31/libzen0_0.4.31-1_i386.xUbuntu_10.04.deb">v0.4.31</a><small> (<a href="//mediaarea.net/download/binary/libzen0/0.4.31/libzen-dev_0.4.31-1_i386.xUbuntu_10.04.deb">devel</a>)</small></td>
+    <td>&nbsp;</td>
+</tr>
+<tr class="old-files">
+    <th rowspan="8">Ubuntu 9.10<br/>(Karmic)<br/><br/>Linux Mint 8<br/>(Helena)</th>
+    <th rowspan="4">amd64</th>
+    <th><abbr title="Graphical User Interface">GUI</abbr></th>
+    <td><a href="//mediaarea.net/download/binary/mediainfo-gui/0.7.62/mediainfo-gui_0.7.62-1_amd64.Debian_5.deb">v0.7.62</a><small> (Debian 5 package)</small></td>
+    <td>requires libmediainfo0</td>
+</tr>
+<tr class="old-files">
+    <th><abbr title="Command Line Interface">CLI</abbr></th>
+    <td><a href="//mediaarea.net/download/binary/mediainfo/0.7.62/mediainfo_0.7.62-1_amd64.Debian_5.deb">v0.7.62</a><small> (Debian 5 package)</small></td>
+    <td>requires libmediainfo0</td>
+</tr>
+<tr class="old-files">
+    <th>libmediainfo0</th>
+    <td><a href="//mediaarea.net/download/binary/libmediainfo0/0.7.62/libmediainfo0_0.7.62-1_amd64.Ubuntu_9.10.deb">v0.7.62</a><small> (<a href="//mediaarea.net/download/binary/libmediainfo0/0.7.62/libmediainfo-dev_0.7.62-1_i386.Ubuntu_9.10.deb">devel</a>)</small></td>
+    <td>requires libzen0</td>
+</tr>
+<tr class="old-files">
+    <th>libzen0</th>
+    <td><a href="//mediaarea.net/download/binary/libzen0/0.4.28/libzen0_0.4.28-1_amd64.Ubuntu_9.10.deb">v0.4.28</a><small> (<a href="//mediaarea.net/download/binary/libzen0/0.4.28/libzen-dev_0.4.28-1_i386.Ubuntu_9.10.deb">devel</a>)</small></td>
+    <td>&nbsp;</td>
+</tr>
+<tr class="old-files">
+    <th rowspan="4">i386</th>
+    <th><abbr title="Graphical User Interface">GUI</abbr></th>
+    <td><a href="//mediaarea.net/download/binary/mediainfo-gui/0.7.62/mediainfo-gui_0.7.62-1_i386.Debian_5.deb">v0.7.62</a><small> (Debian 5 package)</small></td>
+    <td>requires libmediainfo0</td>
+</tr>
+<tr class="old-files">
+    <th><abbr title="Command Line Interface">CLI</abbr></th>
+    <td><a href="//mediaarea.net/download/binary/mediainfo/0.7.62/mediainfo_0.7.62-1_i386.Debian_5.deb">v0.7.62</a><small> (Debian 5 package)</small></td>
+    <td>requires libmediainfo0</td>
+</tr>
+<tr class="old-files">
+    <th>libmediainfo0</th>
+    <td><a href="//mediaarea.net/download/binary/libmediainfo0/0.7.62/libmediainfo0_0.7.62-1_i386.Ubuntu_9.10.deb">v0.7.62</a><small> (<a href="//mediaarea.net/download/binary/libmediainfo0/0.7.62/libmediainfo-dev_0.7.62-1_i386.Ubuntu_9.10.deb">devel</a>)</small></td>
+    <td>requires libzen0</td>
+</tr>
+<tr class="old-files">
+    <th>libzen0</th>
+    <td><a href="//mediaarea.net/download/binary/libzen0/0.4.28/libzen0_0.4.28-1_i386.Ubuntu_9.10.deb">v0.4.28</a><small> (<a href="//mediaarea.net/download/binary/libzen0/0.4.28/libzen-dev_0.4.28-1_i386.Ubuntu_9.10.deb">devel</a>)</small></td>
+    <td>&nbsp;</td>
+</tr>
+<tr class="old-files">
+    <th rowspan="8">Ubuntu 9.04<br/>(Jaunty)<br/><br/>Linux Mint 7<br/>(Gloria)</th>
+    <th rowspan="4">amd64</th>
+    <th><abbr title="Graphical User Interface">GUI</abbr></th>
+    <td><a href="//mediaarea.net/download/binary/mediainfo-gui/0.7.62/mediainfo-gui_0.7.62-1_amd64.Debian_5.deb">v0.7.62</a><small> (Debian 5 package)</small></td>
+    <td>requires libmediainfo0</td>
+</tr>
+<tr class="old-files">
+    <th><abbr title="Command Line Interface">CLI</abbr></th>
+    <td><a href="//mediaarea.net/download/binary/mediainfo/0.7.62/mediainfo_0.7.62-1_amd64.Debian_5.deb">v0.7.62</a><small> (Debian 5 package)</small></td>
+    <td>requires libmediainfo0</td>
+</tr>
+<tr class="old-files">
+    <th>libmediainfo0</th>
+    <td><a href="//mediaarea.net/download/binary/libmediainfo0/0.7.62/libmediainfo0_0.7.62-1_amd64.Ubuntu_9.04.deb">v0.7.62</a><small> (<a href="//mediaarea.net/download/binary/libmediainfo0/0.7.62/libmediainfo-dev_0.7.62-1_i386.Ubuntu_9.04.deb">devel</a>)</small></td>
+    <td>requires libzen0</td>
+</tr>
+<tr class="old-files">
+    <th>libzen0</th>
+    <td><a href="http://downloads.sourceforge.net/zenlib/libzen0_0.4.26-1_amd64.Ubuntu_9.04.deb">v0.4.26</a><small> (<a href="http://downloads.sourceforge.net/zenlib/libzen-dev_0.4.26-1_i386.Ubuntu_9.04.deb">devel</a>)</small></td>
+    <td>&nbsp;</td>
+</tr>
+<tr class="old-files">
+    <th rowspan="4">i386</th>
+    <th><abbr title="Graphical User Interface">GUI</abbr></th>
+    <td><a href="//mediaarea.net/download/binary/mediainfo-gui/0.7.62/mediainfo-gui_0.7.62-1_i386.Debian_5.deb">v0.7.62</a><small> (Debian 5 package)</small></td>
+    <td>requires libmediainfo0</td>
+</tr>
+<tr class="old-files">
+    <th><abbr title="Command Line Interface">CLI</abbr></th>
+    <td><a href="//mediaarea.net/download/binary/mediainfo/0.7.62/mediainfo_0.7.62-1_i386.Debian_5.deb">v0.7.62</a><small> (Debian 5 package)</small></td>
+    <td>requires libmediainfo0</td>
+</tr>
+<tr class="old-files">
+    <th>libmediainfo0</th>
+    <td><a href="//mediaarea.net/download/binary/libmediainfo0/0.7.62/libmediainfo0_0.7.62-1_i386.Ubuntu_9.04.deb">v0.7.62</a><small> (<a href="//mediaarea.net/download/binary/libmediainfo0/0.7.62/libmediainfo-dev_0.7.62-1_i386.Ubuntu_9.04.deb">devel</a>)</small></td>
+    <td>requires libzen0</td>
+</tr>
+<tr class="old-files">
+    <th>libzen0</th>
+    <td><a href="//mediaarea.net/download/binary/libzen0/0.4.28/libzen0_0.4.28-1_i386.Ubuntu_9.04.deb">v0.4.28</a><small> (<a href="//mediaarea.net/download/binary/libzen0/0.4.28/libzen-dev_0.4.28-1_i386.Ubuntu_9.04.deb">devel</a>)</small></td>
+    <td>&nbsp;</td>
+</tr>
+<tr class="old-files">
+    <th rowspan="8">Ubuntu 8.10<br/>(Intrepid)</th>
+    <th rowspan="4">amd64</th>
+    <th><abbr title="Graphical User Interface">GUI</abbr></th>
+    <td><a href="http://downloads.sourceforge.net/mediainfo/mediainfo-gui_0.7.28-1_amd64.Debian_5.deb">v0.7.28</a><small> (Debian 5 package)</small></td>
+    <td>requires libmediainfo0</td>
+</tr>
+<tr class="old-files">
+    <th><abbr title="Command Line Interface">CLI</abbr></th>
+    <td><a href="http://downloads.sourceforge.net/mediainfo/mediainfo_0.7.28-1_amd64.Debian_5.deb">v0.7.28</a><small> (Debian 5 package)</small></td>
+    <td>requires libmediainfo0</td>
+</tr>
+<tr class="old-files">
+    <th>libmediainfo0</th>
+    <td><a href="http://downloads.sourceforge.net/mediainfo/libmediainfo0_0.7.28-1_amd64.Ubuntu_8.10.deb">v0.7.28</a><small> (<a href="http://downloads.sourceforge.net/mediainfo/libmediainfo-dev_0.7.28-1_i386.Ubuntu_8.10.deb">devel</a>)</small></td>
+    <td>requires libzen0</td>
+</tr>
+<tr class="old-files">
+    <th>libzen0</th>
+    <td><a href="http://downloads.sourceforge.net/zenlib/libzen0_0.4.14-1_amd64.Ubuntu_8.10.deb">v0.4.14</a><small> (<a href="http://downloads.sourceforge.net/zenlib/libzen-dev_0.4.14-1_i386.Ubuntu_8.10.deb">devel</a>)</small></td>
+    <td>&nbsp;</td>
+</tr>
+<tr class="old-files">
+    <th rowspan="4">i386</th>
+    <th><abbr title="Graphical User Interface">GUI</abbr></th>
+    <td><a href="http://downloads.sourceforge.net/mediainfo/mediainfo-gui_0.7.28-1_i386.Debian_5.deb">v0.7.28</a><small> (Debian 5 package)</small></td>
+    <td>requires libmediainfo0</td>
+</tr>
+<tr class="old-files">
+    <th><abbr title="Command Line Interface">CLI</abbr></th>
+    <td><a href="http://downloads.sourceforge.net/mediainfo/mediainfo_0.7.28-1_i386.Debian_5.deb">v0.7.28</a><small> (Debian 5 package)</small></td>
+    <td>requires libmediainfo0</td>
+</tr>
+<tr class="old-files">
+    <th>libmediainfo0</th>
+    <td><a href="http://downloads.sourceforge.net/mediainfo/libmediainfo0_0.7.28-1_i386.Ubuntu_8.10.deb">v0.7.28</a><small> (<a href="http://downloads.sourceforge.net/mediainfo/libmediainfo-dev_0.7.28-1_i386.Ubuntu_8.10.deb">devel</a>)</small></td>
+    <td>requires libzen0</td>
+</tr>
+<tr class="old-files">
+    <th>libzen0</th>
+    <td><a href="http://downloads.sourceforge.net/zenlib/libzen0_0.4.14-1_i386.Ubuntu_8.10.deb">v0.4.14</a><small> (<a href="http://downloads.sourceforge.net/zenlib/libzen-dev_0.4.14-1_i386.Ubuntu_8.10.deb">devel</a>)</small></td>
+    <td>&nbsp;</td>
+</tr>
+<tr class="old-files">
+    <th rowspan="8">Ubuntu 8.04<br/>(Hardy)</th>
+    <th rowspan="4">amd64</th>
+    <th><abbr title="Graphical User Interface">GUI</abbr></th>
+    <td><a href="http://downloads.sourceforge.net/mediainfo/mediainfo-gui_0.7.58-1_amd64.Debian_4.deb">v0.7.58</a><small> (Debian 4 package)</small></td>
+    <td>requires libmediainfo0</td>
+</tr>
+<tr class="old-files">
+    <th><abbr title="Command Line Interface">CLI</abbr></th>
+    <td><a href="http://downloads.sourceforge.net/mediainfo/mediainfo_0.7.58-1_amd64.Debian_4.deb">v0.7.58</a><small> (Debian 4 package)</small></td>
+    <td>requires libmediainfo0</td>
+</tr>
+<tr class="old-files">
+    <th>libmediainfo0</th>
+    <td><a href="http://downloads.sourceforge.net/mediainfo/libmediainfo0_0.7.58-1_amd64.Ubuntu_8.04.deb">v0.7.58</a><small> (<a href="http://downloads.sourceforge.net/mediainfo/libmediainfo-dev_0.7.58-1_amd64.Ubuntu_8.04.deb">devel</a>)</small></td>
+    <td>requires libzen0</td>
+</tr>
+<tr class="old-files">
+    <th>libzen0</th>
+    <td><a href="http://downloads.sourceforge.net/zenlib/libzen0_0.4.26-1_amd64.Ubuntu_8.04.deb">v0.4.26</a><small> (<a href="http://downloads.sourceforge.net/zenlib/libzen-dev_0.4.26-1_amd64.Ubuntu_8.04.deb">devel</a>)</small></td>
+    <td>&nbsp;</td>
+</tr>
+<tr class="old-files">
+    <th rowspan="4">i386</th>
+    <th><abbr title="Graphical User Interface">GUI</abbr></th>
+    <td><a href="http://downloads.sourceforge.net/mediainfo/mediainfo-gui_0.7.58-1_i386.Debian_4.deb">v0.7.58</a><small> (Debian 4 package)</small></td>
+    <td>requires libmediainfo0</td>
+</tr>
+<tr class="old-files">
+    <th><abbr title="Command Line Interface">CLI</abbr></th>
+    <td><a href="http://downloads.sourceforge.net/mediainfo/mediainfo_0.7.58-1_i386.Debian_4.deb">v0.7.58</a><small> (Debian 4 package)</small></td>
+    <td>requires libmediainfo0</td>
+</tr>
+<tr class="old-files">
+    <th>libmediainfo0</th>
+    <td><a href="http://downloads.sourceforge.net/mediainfo/libmediainfo0_0.7.58-1_i386.Ubuntu_8.04.deb">v0.7.58</a><small> (<a href="http://downloads.sourceforge.net/mediainfo/libmediainfo-dev_0.7.58-1_i386.Ubuntu_8.04.deb">devel</a>)</small></td>
+    <td>requires libzen0</td>
+</tr>
+<tr class="old-files">
+    <th>libzen0</th>
+    <td><a href="http://downloads.sourceforge.net/zenlib/libzen0_0.4.26-1_i386.Ubuntu_8.04.deb">v0.4.26</a><small> (<a href="http://downloads.sourceforge.net/zenlib/libzen-dev_0.4.26-1_i386.Ubuntu_8.04.deb">devel</a>)</small></td>
+    <td>&nbsp;</td>
+</tr>
+<tr class="old-files">
+    <th rowspan="8">Ubuntu 7.10<br/>(Gusty)</th>
+    <th rowspan="4">amd64</th>
+    <th><abbr title="Graphical User Interface">GUI</abbr></th>
+    <td><a href="http://downloads.sourceforge.net/mediainfo/mediainfo-gui_0.7.28-1_amd64.Debian_4.deb">v0.7.28</a><small> (Debian 4 package)</small></td>
+    <td>requires libmediainfo0</td>
+</tr>
+<tr class="old-files">
+    <th><abbr title="Command Line Interface">CLI</abbr></th>
+    <td><a href="http://downloads.sourceforge.net/mediainfo/mediainfo_0.7.28-1_amd64.Debian_4.deb">v0.7.28</a><small> (Debian 4 package)</small></td>
+    <td>requires libmediainfo0</td>
+</tr>
+<tr class="old-files">
+    <th>libmediainfo0</th>
+    <td><a href="http://downloads.sourceforge.net/mediainfo/libmediainfo0_0.7.28-1_amd64.Debian_4.deb">v0.7.28</a><small> (<a href="http://downloads.sourceforge.net/mediainfo/libmediainfo-dev_0.7.28-1_amd64.Debian_4.deb">devel</a>)</small><small> (Debian 4 package)</small></td>
+    <td>requires libzen0</td>
+</tr>
+<tr class="old-files">
+    <th>libzen0</th>
+    <td><a href="http://downloads.sourceforge.net/zenlib/libzen0_0.4.14-1_amd64.Debian_4.deb">v0.4.14</a><small> (<a href="http://downloads.sourceforge.net/zenlib/libzen-dev_0.4.14-1_amd64.Debian_4.deb">devel</a>)</small><small> (Debian 4 package)</small></td>
+    <td>&nbsp;</td>
+</tr>
+<tr class="old-files">
+    <th rowspan="4">i386</th>
+    <th><abbr title="Graphical User Interface">GUI</abbr></th>
+    <td><a href="http://downloads.sourceforge.net/mediainfo/mediainfo-gui_0.7.28-1_i386.Debian_4.deb">v0.7.28</a><small> (Debian 4 package)</small></td>
+    <td>requires libmediainfo0</td>
+</tr>
+<tr class="old-files">
+    <th><abbr title="Command Line Interface">CLI</abbr></th>
+    <td><a href="http://downloads.sourceforge.net/mediainfo/mediainfo_0.7.28-1_i386.Debian_4.deb">v0.7.28</a><small> (Debian 4 package)</small></td>
+    <td>requires libmediainfo0</td>
+</tr>
+<tr class="old-files">
+    <th>libmediainfo0</th>
+    <td><a href="http://downloads.sourceforge.net/mediainfo/libmediainfo0_0.7.28-1_i386.Debian_4.deb">v0.7.28</a><small> (<a href="http://downloads.sourceforge.net/mediainfo/libmediainfo-dev_0.7.28-1_i386.Debian_4.deb">devel</a>)</small><small> (Debian 4 package)</small></td>
+    <td>requires libzen0</td>
+</tr>
+<tr class="old-files">
+    <th>libzen0</th>
+    <td><a href="http://downloads.sourceforge.net/zenlib/libzen0_0.4.14-1_i386.Debian_4.deb">v0.4.14</a><small> (<a href="http://downloads.sourceforge.net/zenlib/libzen-dev_0.4.14-1_i386.Debian_4.deb">devel</a>)</small><small> (Debian 4 package)</small></td>
+    <td>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+{% endblock %}

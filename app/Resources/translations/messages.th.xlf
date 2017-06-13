@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="en" datatype="plaintext" original="file.ext" target-language="th">
+    <body>
+      <trans-unit id="1" approved="yes">
+        <source><![CDATA[menu.about]]></source>
+        <target><![CDATA[เกี่ยวกับ]]></target>
+      </trans-unit>
+      <trans-unit id="2" approved="yes">
+        <source><![CDATA[menu.download]]></source>
+        <target><![CDATA[ดาวน์โหลด]]></target>
+      </trans-unit>
+      <trans-unit id="3" approved="yes">
+        <source><![CDATA[menu.screenshots]]></source>
+        <target><![CDATA[ภาพหน้าจอ]]></target>
+      </trans-unit>
+      <trans-unit id="4" approved="yes">
+        <source><![CDATA[menu.donate]]></source>
+        <target><![CDATA[วิธีใช้ MediaInfo]]></target>
+      </trans-unit>
+      <trans-unit id="5" approved="yes">
+        <source><![CDATA[menu.support]]></source>
+        <target><![CDATA[สนับสนุน]]></target>
+      </trans-unit>
+      <trans-unit id="6" approved="yes">
+        <source><![CDATA[menu.testimonials]]></source>
+        <target><![CDATA[พวกเขาพูดเกี่ยวกับ MediaInfo]]></target>
+      </trans-unit>
+      <trans-unit id="7" approved="yes">
+        <source><![CDATA[about.page.description]]></source>
+        <target><![CDATA[MediaInfo แสดงข้อมูลด้านเทคนิคและข้อมูลเกี่ยวกับ tag ของไฟล์วีดีโอหรือเสียงของคุณ นี่เป็นโปรแกรมฟรี (ฟรีทั้งราคาและฟรีสำหรับการเข้าถึงซอร์สโค้ด)]]></target>
+      </trans-unit>
+      <trans-unit id="8" approved="yes">
+        <source><![CDATA[about.what.title]]></source>
+        <target><![CDATA[MediaInfo คืออะไร?]]></target>
+      </trans-unit>
+      <trans-unit id="9" approved="yes">
+        <source><![CDATA[about.what.content]]></source>
+        <target><![CDATA[<strong>MediaInfo</strong> เป็นโปรแกรมที่ใช้แสดงข้อมูลด้านเทคนิคและข้อมูล tag ของไฟล์วีดีโอและไฟล์เสียง<br/>     นี่เป็นโปรแกรมฟรี ฟรีทั้งราคาและฟรีสำหรับการเข้าถึงซอร์สโค้ด: <a href="%licenseRoute%">BSD</a> licence)]]></target>
+      </trans-unit>
+      <trans-unit id="10" approved="yes">
+        <source><![CDATA[about.data.title]]></source>
+        <target><![CDATA[ข้อมูลอะไรที่ฉันจะได้จาก MediaInfo?]]></target>
+      </trans-unit>
+      <trans-unit id="11" approved="yes">
+        <source><![CDATA[about.data.content]]></source>
+        <target><![CDATA[<ul>  <li>ทั่วไป: ชื่อเพลงหรือชื่อเรื่อง, ผู้เขียน, director, อัลบัม, เลขที่แทร็ค, วันที่, ระยะเวลา...</li>  <li>วีดีโอ: codec, aspect, fps, บิตเรต...</li>  <li>เสียง: codec, แซมเปิลเรต, ช่องสัญญาณ, ภาษา, บิตเรต...</li>  <li>ข้อความ: ภาษาของคำบรรยาย</li>  <li>เชปเตอร์: เลขที่เชปเตอร์, รายการของเชปเตอร์</li> </ul>]]></target>
+      </trans-unit>
+      <trans-unit id="12" approved="yes">
+        <source><![CDATA[about.analyticals.title]]></source>
+        <target><![CDATA[รูปแบบ (container) อะไรบ้างที่ MediaInfo สนับสนุน?]]></target>
+      </trans-unit>
+      <trans-unit id="13" approved="yes">
+        <source><![CDATA[about.analyticals.content]]></source>
+        <target><![CDATA[<ul>  <li>วีดีโอ: MKV, OGM, AVI, DivX, WMV, QuickTime, Real, MPEG-1, MPEG-2, MPEG-4, DVD (VOB)...<br/>      (Codecs: DivX, XviD, MSMPEG4, ASP, H.264/AVC, H.265/HEVC, FFV1...)</li>  <li>เสียง: OGG, MP3, WAV, RA, AC3, DTS, AAC, M4A, AU, AIFF...</li>  <li>คำบรรยาย: SRT, SSA, ASS, SAMI...</li> </ul>]]></target>
+      </trans-unit>
+      <trans-unit id="14" approved="yes">
+        <source><![CDATA[about.features.title]]></source>
+        <target><![CDATA[ฉันจะสามารถทำอะไรกับโปรแกรมนี้ได้บ้าง?]]></target>
+      </trans-unit>
+      <trans-unit id="15" approved="yes">
+        <source><![CDATA[about.features.content]]></source>
+        <target><![CDATA[<ul>  <li>อ่านข้อมูลของ <a href="%supportFormatRoute%"> ไฟล์วีดีโอและไฟล์เสียง</a></li>  <li>เลือกวิธีการแสดงผลข้อมูล (ข้อความ, ชีต, tree, HTML...)</li>  <li>คุณสามารถกำหนดวิธีการแสดงผลเองได้</li>  <li>ส่งออกข้อมูลเป็นข้อความ, CSV, HTML...</li>  <li>เลือกใช้โปรแกรมแบบกราฟฟิก หรือ บรรทัดคำสั่ง(Command Line), หรือ DLL</li>  <li>ใช้งานร่วมกับ MS-Windows(ลากไปปล่อย(drag 'n' drop), และ Context menu)</li>  <li>Internationalisation: สนับสนุนการแสดงผลภาษาต่างๆ ที่มีในระบบปฏิบัติการของคุณ</li>  <li>มีระบบหลายภาษา ทั้งในเมนูโปรแกรมและเว็บไซต์(แต่เรายังต้องการอาสาสมัครในภาษาต่างๆ อยู่นะครับ)</li> </ul>]]></target>
+      </trans-unit>
+      <trans-unit id="16" approved="yes">
+        <source><![CDATA[about.download.button.text]]></source>
+        <target><![CDATA[ดาวน์โหลด]]></target>
+      </trans-unit>
+      <trans-unit id="17" approved="yes">
+        <source><![CDATA[about.download.version]]></source>
+        <target><![CDATA[เวอร์ชัน]]></target>
+      </trans-unit>
+      <trans-unit id="18" approved="yes">
+        <source><![CDATA[about.download.installer]]></source>
+        <target><![CDATA[กราฟฟิกอินเทอร์เฟซพร้อมชุดติดตั้ง]]></target>
+      </trans-unit>
+      <trans-unit id="19" approved="yes">
+        <source><![CDATA[about.download.for]]></source>
+        <target><![CDATA[สำหรับ]]></target>
+      </trans-unit>
+      <trans-unit id="20" approved="yes">
+        <source><![CDATA[about.download.other]]></source>
+        <target><![CDATA[เวอร์ชันอื่นๆ (ระบบปฏิบัติการ, อินเทอร์เฟซ...) <a href="%downloadRoute%">ก็มีนะครับ</a>]]></target>
+      </trans-unit>
+      <trans-unit id="21" approved="yes">
+        <source><![CDATA[about.what.changelog]]></source>
+        <target><![CDATA[คุณสามารถ <a href="%changelogRoute%">ติดตามผล</a>]]></target>
+      </trans-unit>
+      <trans-unit id="22" approved="yes">
+        <source><![CDATA[about.what.donate]]></source>
+        <target><![CDATA[คุณสามารถ <a href="%donateRoute%">บริจาค</a> เพื่อช่วยสนับสนุนการพัฒนาได้นะครับ]]></target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

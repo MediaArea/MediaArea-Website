@@ -1,0 +1,826 @@
+{% extends 'AppBundle::base.html.twig' %}
+
+{% block title %}{% trans %}support.formats.page.title{% endtrans %}{% endblock %}
+{% block description %}{% trans %}about.page.description{% endtrans %}{% endblock %}
+{% block keywords %}{% trans %}about.page.keywords{% endtrans %}{% endblock %}
+
+{% block body %}
+({% trans %}support.wip.warning{% endtrans %})
+<h1>{% trans %}support.formats.title{% endtrans %}</h1>
+
+<h2>{% trans %}support.formats.containers{% endtrans %}</h2>
+Matroska (mkv/mka/mks)<br/>
+Ogg (ogg/ogm)<br/>
+Riff (avi/wav)<br/>
+Mpeg 1&amp;2 container (mpeg/mpg/vob)<br/>
+Mpeg 4 container (mp4)<br/>
+Mpeg video specific (mpgv/mpv/m1v/m2v)<br/>
+Mpeg audio specific (mp2/mp3)<br/>
+Windows Media (asf/wma/wmv)<br/>
+Quicktime (qt/mov)<br/>
+Real (rm/rmvb/ra)<br/>
+DVD-Video (ifo)<br/>
+AC3 (ac3)<br/>
+DTS (dts)<br/>
+AAC (aac)<br/>
+Monkey's Audio (ape/mac)<br/>
+Flac (flac)<br/>
+CDXA, like Video-CD (dat)<br/>
+Apple/SGI (aiff/aifc)<br/>
+Sun/NeXT (au)<br/>
+Amiga IFF/SVX8/SV16 (iff)<br/>
+Ensoniq PARIS (paf)<br/>
+Sound Designer 2 (sd2)<br/>
+Berkeley/IRCAM/CARL (irca)<br/>
+SoundFoundry WAVE 64 (w64)<br/>
+Matlab (mat)<br/>
+Portable Voice format (pvf)<br/>
+FastTracker2 Extanded (xi)<br/>
+Midi Sample dump Format (sds)<br/>
+Audio Visual Research (avr)<br/>
+
+<h2>{% trans %}support.formats.information{% endtrans %}</h2>
+<table class="download">
+    <tr class="table-header">
+        <td><div>&nbsp;</div></td>
+        <td><div class="center">mkv</div></td>
+        <td><div class="center">ogg<br/>ogm</div></td>
+        <td><div class="center">Riff</div></td>
+        <td><div class="center">mpeg<br/>1/2</div></td>
+        <td><div class="center">Mpeg4<br/>M4a</div></td>
+        <td><div class="center">mp2<br/>/mp3</div></td>
+        <td><div class="center">Wm</div></td>
+        <td><div class="center">Qt</div></td>
+        <td><div class="center">Real</div></td>
+        <td><div class="center">Ifo</div></td>
+        <td><div class="center">AC3</div></td>
+        <td><div class="center">DTS</div></td>
+        <td><div class="center">AAC</div></td>
+        <td><div class="center">MAC</div></td>
+        <td><div class="center">Flac</div></td>
+        <td><div class="center">Other<br/>Audio</div></td>
+    </tr>
+    <tr>
+        <td><div><u>General</u> </div></td>
+        <td><div class="center">{% trans %}support.formats.table.partial{% endtrans %}</div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+        <td><div class="center">{% trans %}support.formats.table.partial{% endtrans %}</div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+        <td><div class="center">Yes </div></td>
+        <td><div class="center">{% trans %}support.formats.table.partial{% endtrans %}</div></td>
+        <td><div class="center">{% trans %}support.formats.table.partial{% endtrans %}</div></td>
+        <td><div class="center">{% trans %}support.formats.table.partial{% endtrans %}</div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+    </tr>
+    <tr>
+        <td><div>Duration</div></td>
+        <td><div class="center">{% trans %}support.formats.table.no{% endtrans %}</div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+        <td><div class="center">{% trans %}support.formats.table.no{% endtrans %}</div></td>
+        <td><div class="center">{% trans %}support.formats.table.no{% endtrans %}</div></td>
+        <td><div class="center">{% trans %}support.formats.table.no{% endtrans %}</div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+    </tr>
+    <tr>
+        <td><div>Author</div></td>
+        <td><div class="center">{% trans %}support.formats.table.no{% endtrans %}</div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+        <td><div class="center">{% trans %}support.formats.table.no{% endtrans %}</div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+    </tr>
+    <tr>
+        <td><div>Title</div></td>
+        <td><div class="center">{% trans %}support.formats.table.no{% endtrans %}</div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+        <td><div class="center">{% trans %}support.formats.table.no{% endtrans %}</div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+    </tr>
+    <tr>
+        <td><div>Subtitle</div></td>
+        <td><div class="center">{% trans %}support.formats.table.no{% endtrans %}</div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+    </tr>
+    <tr>
+        <td><div>Location</div></td>
+        <td><div class="center">{% trans %}support.formats.table.no{% endtrans %}</div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+    </tr>
+    <tr>
+        <td><div>Album</div></td>
+        <td><div class="center">{% trans %}support.formats.table.no{% endtrans %}</div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+        <td><div class="center"></div></td>
+    </tr>
+    <tr>
+        <td><div>Track number</div></td>
+        <td><div class="center">{% trans %}support.formats.table.no{% endtrans %}</div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+        <td><div class="center"></div></td>
+    </tr>
+    <tr>
+        <td><div>Track count</div></td>
+        <td><div class="center">{% trans %}support.formats.table.no{% endtrans %}</div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+    </tr>
+    <tr>
+        <td><div>Set number</div></td>
+        <td><div class="center">{% trans %}support.formats.table.no{% endtrans %}</div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+    </tr>
+    <tr>
+        <td><div>Set count</div></td>
+        <td><div class="center">{% trans %}support.formats.table.no{% endtrans %}</div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+    </tr>
+    <tr>
+        <td><div>Date</div></td>
+        <td><div class="center">{% trans %}support.formats.table.no{% endtrans %}</div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+    </tr>
+    <tr>
+        <td><div>Recording date</div></td>
+        <td><div class="center">{% trans %}support.formats.table.no{% endtrans %}</div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+    </tr>
+    <tr>
+        <td><div>Comment</div></td>
+        <td><div class="center">{% trans %}support.formats.table.no{% endtrans %}</div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+        <td><div class="center">{% trans %}support.formats.table.no{% endtrans %}</div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+        <td><div class="center"></div></td>
+    </tr>
+    <tr>
+        <td><div>Copyright</div></td>
+        <td><div class="center">{% trans %}support.formats.table.no{% endtrans %}</div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+        <td><div class="center">{% trans %}support.formats.table.no{% endtrans %}</div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+    </tr>
+    <tr>
+        <td><div>Url</div></td>
+        <td><div class="center">{% trans %}support.formats.table.no{% endtrans %}</div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+    </tr>
+    <tr>
+        <td><div>Other tags</div></td>
+        <td><div class="center">{% trans %}support.formats.table.no{% endtrans %}</div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center">{% trans %}support.formats.table.no{% endtrans %}</div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+        <td><div class="center">{% trans %}support.formats.table.no{% endtrans %}</div></td>
+        <td><div class="center">{% trans %}support.formats.table.no{% endtrans %}</div></td>
+        <td><div class="center">{% trans %}support.formats.table.no{% endtrans %}</div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+        <td><div class="center"></div></td>
+    </tr>
+    <tr>
+        <td><p>&nbsp;</p></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+    </tr>
+    <tr>
+        <td><div><u>Video</u> </div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+        <td><div class="center">Yes </div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+    </tr>
+    <tr>
+        <td><div>Codec</div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+        <td><div class="center">{% trans %}support.formats.table.no{% endtrans %}</div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+    </tr>
+    <tr>
+        <td><div>Bitrate</div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+    </tr>
+    <tr>
+        <td><div>Aspect</div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+        <td><div class="center">{% trans %}support.formats.table.no{% endtrans %}</div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+    </tr>
+    <tr>
+        <td><div>Frame rate</div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+        <td><div class="center">{% trans %}support.formats.table.no{% endtrans %}</div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+    </tr>
+    <tr>
+        <td><div>Encoder</div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+    </tr>
+    <tr>
+        <td><div>Encoder settings</div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+    </tr>
+    <tr>
+        <td><p class="center">&nbsp;</p></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+    </tr>
+    <tr>
+        <td><div><u>Audio</u> </div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+        <td><div class="center"></div></td>
+    </tr>
+    <tr>
+        <td><div>Codec</div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+        <td><div class="center">{% trans %}support.formats.table.no{% endtrans %}</div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+        <td><div class="center"></div></td>
+    </tr>
+    <tr>
+        <td><div>Bitrate</div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+        <td><div class="center"></div></td>
+    </tr>
+    <tr>
+        <td><div>Channels</div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+        <td><div class="center">{% trans %}support.formats.table.no{% endtrans %}</div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+        <td><div class="center"></div></td>
+    </tr>
+    <tr>
+        <td><div>Sampling rate</div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+        <td><div class="center"></div></td>
+    </tr>
+    <tr>
+        <td><div>Language</div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+    </tr>
+    <tr>
+        <td><div>Encoder</div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+    </tr>
+    <tr>
+        <td><div>Encoder settings</div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+    </tr>
+    <tr>
+        <td><p>&nbsp;</p></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+    </tr>
+    <tr>
+        <td><div><u>Text</u></div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+    </tr>
+    <tr>
+        <td><div>Language</div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+    </tr>
+    <tr>
+        <td><p class="center">&nbsp;</p></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+    </tr>
+    <tr>
+        <td><div><u>Chapters</u></div></td>
+        <td><div class="center">{% trans %}support.formats.table.no{% endtrans %}</div></td>
+        <td><div class="center">{% trans %}support.formats.table.yes{% endtrans %}</div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+    </tr>
+    <tr>
+        <td><div>Language</div></td>
+        <td><div class="center">{% trans %}support.formats.table.no{% endtrans %}</div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+        <td><div class="center"></div></td>
+    </tr>
+</table>
+
+{% trans %}support.formats.supported{% endtrans %}
+{% endblock %}

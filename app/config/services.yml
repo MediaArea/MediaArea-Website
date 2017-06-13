@@ -1,0 +1,36 @@
+# Learn more about services, parameters and containers at
+# https://symfony.com/doc/current/service_container.html
+parameters:
+    #parameter_name: value
+
+services:
+    _defaults:
+        autowire: true
+        autoconfigure: true
+        public: false
+
+    #service_name:
+    #    class: AppBundle\Directory\ClassName
+    #    arguments: ['@another_service_name', 'plain_value', '%parameter_name%']
+    app.locale_listener:
+        class: AppBundle\EventListener\LocaleListener
+        arguments: ['%kernel.default_locale%', '%app.locales%']
+        tags:
+            - { name: kernel.event_subscriber }
+
+    app.cookies.listener:
+        class: AppBundle\EventListener\CookiesListener
+        tags:
+            - { name: kernel.event_listener, event: kernel.request, method: handleCookies }
+            - { name: kernel.event_listener, event: kernel.response, method: setCookies }
+
+    app.menu_builder:
+        class: AppBundle\Menu\MenuBuilder
+        arguments: ["@knp_menu.factory"]
+        tags:
+            - { name: knp_menu.menu_builder, method: createMainMenu, alias: main }
+        public: true
+
+    app.download_info:
+        class: AppBundle\Lib\DownloadInfo\DownloadInfo
+        public: true

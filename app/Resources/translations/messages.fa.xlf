@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="en" datatype="plaintext" original="file.ext" target-language="fa">
+    <body>
+      <trans-unit id="1" approved="yes">
+        <source><![CDATA[menu.about]]></source>
+        <target><![CDATA[درباره]]></target>
+      </trans-unit>
+      <trans-unit id="2" approved="yes">
+        <source><![CDATA[menu.download]]></source>
+        <target><![CDATA[دانلود]]></target>
+      </trans-unit>
+      <trans-unit id="3" approved="yes">
+        <source><![CDATA[menu.screenshots]]></source>
+        <target><![CDATA[تصاویر برنامه]]></target>
+      </trans-unit>
+      <trans-unit id="4" approved="yes">
+        <source><![CDATA[menu.donate]]></source>
+        <target><![CDATA[کمک مديا اينفو]]></target>
+      </trans-unit>
+      <trans-unit id="5" approved="yes">
+        <source><![CDATA[menu.support]]></source>
+        <target><![CDATA[پشتيباني]]></target>
+      </trans-unit>
+      <trans-unit id="6" approved="yes">
+        <source><![CDATA[menu.testimonials]]></source>
+        <target><![CDATA[آنها درباره مدیا اینفو میگویند]]></target>
+      </trans-unit>
+      <trans-unit id="7" approved="yes">
+        <source><![CDATA[about.page.description]]></source>
+        <target><![CDATA[مدیا اینفو تمام مشخصات فایل های ویدیویی و صوتی را نمایش میدهد. این نرم افزار رایگان است. سورس کد برنامه نیز رایگان می باشد]]></target>
+      </trans-unit>
+      <trans-unit id="8" approved="yes">
+        <source><![CDATA[about.what.title]]></source>
+        <target><![CDATA[مديا اينفو چيست?]]></target>
+      </trans-unit>
+      <trans-unit id="9" approved="yes">
+        <source><![CDATA[about.what.content]]></source>
+        <target><![CDATA[<strong>مديا اينفو</strong> تمام مشخصات فایلهای ویدیویی و صوتی را نمایش می دهد.<br/>     این نرم افزار رایگان است (<a href="%licenseRoute%">BSD</a> لیسانس)]]></target>
+      </trans-unit>
+      <trans-unit id="10" approved="yes">
+        <source><![CDATA[about.data.title]]></source>
+        <target><![CDATA[چه اطلاعاتی مدیا اینفو به من می دهد?]]></target>
+      </trans-unit>
+      <trans-unit id="11" approved="yes">
+        <source><![CDATA[about.data.content]]></source>
+        <target><![CDATA[<ul>  <li>در اصل: عنوان, نویسنده یا خواننده, هدایتگر, آلبوم, شماره آهنگ, تاربخ, مدت فایل و غیره</li>  <li>ویدیو: کدک, نمود, اف پی اس, بیت ریت و غیره</li>  <li>صوت: کدک, میزان نمونه, کانال, زبان, بیت ریت و غیره</li>  <li>متن: زبان و زیرنویس</li>  <li>کپچرز: تعداد کپچرز, لیست کپچرز</li> </ul>]]></target>
+      </trans-unit>
+      <trans-unit id="12" approved="yes">
+        <source><![CDATA[about.analyticals.title]]></source>
+        <target><![CDATA[مدیا اینفو چه فرمت هایی را پشتیبانی می کند?]]></target>
+      </trans-unit>
+      <trans-unit id="13" approved="yes">
+        <source><![CDATA[about.analyticals.content]]></source>
+        <target><![CDATA[<ul>  <li>ویدیو: MKV, OGM, AVI, DivX, WMV, QuickTime, Real, MPEG-1, MPEG-2, MPEG-4, DVD (VOB)...<br/>      (کدکها: DivX, XviD, MSMPEG4, ASP, H.264/AVC, H.265/HEVC, FFV1...)</li>  <li>صوت: OGG, MP3, WAV, RA, AC3, DTS, AAC, M4A, AU, AIFF...</li>  <li>زیرنویس: SRT, SSA, ASS, SAMI...</li> </ul>]]></target>
+      </trans-unit>
+      <trans-unit id="14" approved="yes">
+        <source><![CDATA[about.features.title]]></source>
+        <target><![CDATA[با مدیا اینفو چه کاری میتوانم انجام بدم?]]></target>
+      </trans-unit>
+      <trans-unit id="15" approved="yes">
+        <source><![CDATA[about.features.content]]></source>
+        <target><![CDATA[<ul>  <li>دیدن <a href="%supportFormatRoute%"> فرمت های ویدیویی و صوتی</a></li>  <li>دیدن اطلاعات به صورت های مختلف (text, sheet, tree, HTML...)</li>  <li>میتوانید برنامه را به دلخواه خود در آورید</li>  <li>text, CSV, HTML خارج سازی اطلاعات با فرمتهای</li>  <li>DLL محیط گرافیکی, یا کامندلاین, یا</li>  <li>ویندوز (بکش و رها کن, منوی راست کلیک)</li>  <li>جهانی: زبان های مختلف</li>  <li>قابلیت اضافه کردن زبان های دیگر احتیاج به داوطلب</li> </ul>]]></target>
+      </trans-unit>
+      <trans-unit id="16" approved="yes">
+        <source><![CDATA[about.download.button.text]]></source>
+        <target><![CDATA[دانلود کنید]]></target>
+      </trans-unit>
+      <trans-unit id="17" approved="yes">
+        <source><![CDATA[about.download.version]]></source>
+        <target><![CDATA[ویرایش]]></target>
+      </trans-unit>
+      <trans-unit id="18" approved="yes">
+        <source><![CDATA[about.download.installer]]></source>
+        <target><![CDATA[به صورت گرافیکی, نصب کننده]]></target>
+      </trans-unit>
+      <trans-unit id="19" approved="yes">
+        <source><![CDATA[about.download.for]]></source>
+        <target><![CDATA[برای]]></target>
+      </trans-unit>
+      <trans-unit id="20" approved="yes">
+        <source><![CDATA[about.download.other]]></source>
+        <target><![CDATA[ویرایشهای دیگر (OS, اینترفیس...) در <a href="%downloadRoute%">اینجا هستند</a>]]></target>
+      </trans-unit>
+      <trans-unit id="21" approved="yes">
+        <source><![CDATA[about.what.changelog]]></source>
+        <target><![CDATA[شما می توانید <a href="%changelogRoute%">مانیتور کنید</a>]]></target>
+      </trans-unit>
+      <trans-unit id="22" approved="yes">
+        <source><![CDATA[about.what.donate]]></source>
+        <target><![CDATA[شما میتوانید <a href="%donateRoute%">کمک کنید</a> برای توسعه نرم افزاری]]></target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

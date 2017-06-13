@@ -1,0 +1,56 @@
+<div class="container">
+    <div class="row">
+        <div class="col-sm-4 col-md-2">
+            {% image '@AppBundle/Resources/public/img/MediaInfo_90x90.png' %}
+                <a href="{{ path('mi_home') }}"><img src="{{ asset_url }}" alt="MediaInfo Logo" title="MediaInfo Logo" /></a>
+            {% endimage %}
+        </div>
+        <div class="col-sm-4 col-md-3">
+            <div class="footerHeading">MediaArea</div>
+            <ul>
+                <li><a href="{{ path('homepage') }}">{% trans %}menu.mediaarea.about{% endtrans %}</a></li>
+                <li><a href="{{ path('mi_support', {'_fragment': 'pro'}) }}">{% trans %}menu.mediaarea.pro{% endtrans %}</a></li>
+                <li><a href="{{ path('ma_events') }}">{% trans %}menu.mediaarea.events{% endtrans %}</a></li>
+                <li><a href="{{ path('ma_legal') }}">{% trans %}menu.mediaarea.legal{% endtrans %}</a></li>
+            </ul>
+        </div>
+        <div class="col-sm-4 col-md-3">
+            <div class="footerHeading">{% trans %}footer.projects{% endtrans %}</div>
+            <ul>
+                <li><a href="/MediaInfo">MediaInfo</a></li>
+                <li><a href="/MediaConch/">MediaConch</a></li>
+                <li><a href="/MediaTrace/">MediaTrace</a></li>
+                <li><a href="/QCTools/">QCTools</a></li>
+                <li><a href="/BWFMetaEdit/">BWF MetaEdit</a></li>
+                <li><a href="/DVAnalyzer/">DV Analyzer</a></li>
+            </ul>
+        </div>
+        <div class="col-sm-12 col-md-4">
+            <div>
+                Follow us on <a href="//twitter.com/MediaArea_net">Twitter</a>, <a href="//www.facebook.com/MediaAreaNet">Facebook</a> or <a href="//www.linkedin.com/company/mediaarea-net">LinkedIn</a>.
+            </div>
+            <div class="share" dir="ltr"></div>
+            <div class="clearfix"></div>
+            <div dir="ltr" class="searchbox">
+                <form name="cse" action="https://www.google.com/cse">
+                    <input type="hidden" name="cx" value="partner-pub-8386011224798635:2e3czgvvvx6" />
+                    <input type="hidden" name="ie" value="utf-8" />
+                    <input type="hidden" name="hl" value="en" />
+                    <input class="searchbox-input" type="text" name="q" placeholder="Google&#8482; Custom Search" />
+                    <input class="searchbox-submit" value="Go" type="submit" name="sa" />
+                    <input class="searchbox-reset" value="&#215;" type="reset" />
+                </form>
+            </div>
+            <div class="rss">
+                <a href="/rss/mediainfo_updates.xml" class="rss-updates">New releases feed</a>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <p class="text-center">
+                © MediaArea.net SARL 2002-{{ "now"|date('Y') }}
+            </p>
+        </div>
+    </div>
+</div>

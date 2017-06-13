@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="en" datatype="plaintext" original="file.ext" target-language="es">
+    <body>
+      <trans-unit id="1" approved="yes">
+        <source><![CDATA[menu.about]]></source>
+        <target><![CDATA[Acerca]]></target>
+      </trans-unit>
+      <trans-unit id="2" approved="yes">
+        <source><![CDATA[menu.download]]></source>
+        <target><![CDATA[Descargar]]></target>
+      </trans-unit>
+      <trans-unit id="3" approved="yes">
+        <source><![CDATA[menu.screenshots]]></source>
+        <target><![CDATA[Capturas de pantalla]]></target>
+      </trans-unit>
+      <trans-unit id="4" approved="yes">
+        <source><![CDATA[menu.donate]]></source>
+        <target><![CDATA[Ayuda MediaInfo]]></target>
+      </trans-unit>
+      <trans-unit id="5" approved="yes">
+        <source><![CDATA[menu.support]]></source>
+        <target><![CDATA[Soporte]]></target>
+      </trans-unit>
+      <trans-unit id="6" approved="yes">
+        <source><![CDATA[menu.testimonials]]></source>
+        <target><![CDATA[Ellos hablan acerca de MediaInfo]]></target>
+      </trans-unit>
+      <trans-unit id="7" approved="yes">
+        <source><![CDATA[about.page.description]]></source>
+        <target><![CDATA[MediaInfo provee información técnica y de la etiqueta sobre un archivo video o audio. Éste es un software libre (gratuito y de libre acceso al código fuente: BSD o licencia)]]></target>
+      </trans-unit>
+      <trans-unit id="8" approved="yes">
+        <source><![CDATA[about.what.title]]></source>
+        <target><![CDATA[¿Qué es MediaInfo?]]></target>
+      </trans-unit>
+      <trans-unit id="9" approved="yes">
+        <source><![CDATA[about.what.content]]></source>
+        <target><![CDATA[<strong>MediaInfo</strong> provee información técnica y de la etiqueta sobre un archivo video o audio.<br/>     Éste es un software libre (gratuito y de libre acceso al código fuente: <a href="%licenseRoute%">BSD</a> o licencia)]]></target>
+      </trans-unit>
+      <trans-unit id="10" approved="yes">
+        <source><![CDATA[about.data.title]]></source>
+        <target><![CDATA[¿Qué información puedo obtener con MediaInfo?]]></target>
+      </trans-unit>
+      <trans-unit id="11" approved="yes">
+        <source><![CDATA[about.data.content]]></source>
+        <target><![CDATA[<ul>  <li>General: título, autor, director, álbum, número de pista, fecha, duración...</li>  <li>Video: códec, aspecto, fps, bitrate...</li>  <li>Audio: códec, frecuencia de muestreo, canales, lenguaje, bitrate...</li>  <li>Texto: idioma de subtítulo</li>  <li>Capítulos: número de capítulos, lista de capítulos</li> </ul>]]></target>
+      </trans-unit>
+      <trans-unit id="12" approved="yes">
+        <source><![CDATA[about.analyticals.title]]></source>
+        <target><![CDATA[¿Qué formatos soporta MediaInfo?]]></target>
+      </trans-unit>
+      <trans-unit id="13" approved="yes">
+        <source><![CDATA[about.analyticals.content]]></source>
+        <target><![CDATA[<ul>  <li>Video: MKV, OGM, AVI, DivX, WMV, QuickTime, Real, MPEG-1, MPEG-2, MPEG-4, DVD (VOB)...<br/>      (Códecs: DivX, XviD, MSMPEG4, ASP, H.264/AVC, H.265/HEVC, FFV1...)</li>  <li>Audio: OGG, MP3, WAV, RA, AC3, DTS, AAC, M4A, AU, AIFF...</li>  <li>Subtítulos: SRT, SSA, ASS, SAMI...</li> </ul>]]></target>
+      </trans-unit>
+      <trans-unit id="14" approved="yes">
+        <source><![CDATA[about.features.title]]></source>
+        <target><![CDATA[¿Qué puedo hacer con él?]]></target>
+      </trans-unit>
+      <trans-unit id="15" approved="yes">
+        <source><![CDATA[about.features.content]]></source>
+        <target><![CDATA[<ul>  <li>Leer muchos <a href="%supportFormatRoute%"> formatos de archivos de audio y video</a></li>  <li>Diferentes métodos de visualización de la información (texto, hoja de árbol, HTML ...)</li>  <li>Puedes personalizar éstas vistas</li>  <li>Exportar información como texto, CSV, HTML...</li>  <li>Interfaz gráfica, o de línea de comandos, o de DLL</li>  <li>Integración con MS-Windows shell (arrastrar y soltar; Menú contextual)</li>  <li>Internacionalización: cualquier idioma de visualización en cualquier versión de su sistema operativo</li>  <li>Localización de capacidad (pero necesita voluntarios)</li> </ul>]]></target>
+      </trans-unit>
+      <trans-unit id="16" approved="yes">
+        <source><![CDATA[about.download.button.text]]></source>
+        <target><![CDATA[Descargar]]></target>
+      </trans-unit>
+      <trans-unit id="17" approved="yes">
+        <source><![CDATA[about.download.installer]]></source>
+        <target><![CDATA[Interfaz gráfica, con instalador]]></target>
+      </trans-unit>
+      <trans-unit id="18" approved="yes">
+        <source><![CDATA[about.download.for]]></source>
+        <target><![CDATA[para]]></target>
+      </trans-unit>
+      <trans-unit id="19" approved="yes">
+        <source><![CDATA[about.download.other]]></source>
+        <target><![CDATA[Hay otras versiones (OS, interfaz...) <a href="%downloadRoute%">disponibles</a>]]></target>
+      </trans-unit>
+      <trans-unit id="20" approved="yes">
+        <source><![CDATA[about.what.changelog]]></source>
+        <target><![CDATA[Puede <a href="%changelogRoute%">supervisar</a>]]></target>
+      </trans-unit>
+      <trans-unit id="21" approved="yes">
+        <source><![CDATA[about.what.donate]]></source>
+        <target><![CDATA[Puedes <a href="%donateRoute%">donar</a> para apoyar el desarrollo del proyecto]]></target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
