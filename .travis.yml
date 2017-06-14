@@ -4,8 +4,22 @@ php:
   - '7.0'
   - '7.1'
 
-install:
-  - composer update --optimize-autoloader
-  - php bin/console cache:clear --env=test
+sudo: false
 
-script: phpunit -v
+git:
+  depth: 3
+
+cache:
+    directories:
+        - $HOME/.composer/cache
+
+before_install:
+  - phpenv config-rm xdebug.ini
+
+install:
+  - travis_retry composer require --dev friendsofphp/php-cs-fixer phpmd/phpmd --prefer-dist --no-suggest --ansi
+
+script:
+  - phpunit -v
+  - vendor/bin/php-cs-fixer --dry-run --stop-on-violation --using-cache=no fix src/
+  - vendor/bin/phpmd src/ text phpmd.xml

@@ -18,6 +18,9 @@ class MenuBuilder
         $this->factory = $factory;
     }
 
+    /**
+     * @SuppressWarnings(PHPMD.UnusedFormalParameter)
+     */
     public function createMainMenu(array $options)
     {
         $menu = $this->factory->createItem('root');
@@ -77,7 +80,8 @@ class MenuBuilder
         $menu['menu.projects']->addChild('menu.projects.mediaconch', array('uri' => '/MediaConch/'))->setCurrent(false);
         $menu['menu.projects']->addChild('menu.projects.mediatrace', array('uri' => '/MediaTrace/'))->setCurrent(false);
         $menu['menu.projects']->addChild('menu.projects.qctools', array('uri' => '/QCTools'))->setCurrent(false);
-        $menu['menu.projects']->addChild('menu.projects.bwfmetaedit', array('uri' => '/BWFMetaEdit'))->setCurrent(false);
+        $menu['menu.projects']->addChild('menu.projects.bwfmetaedit', array('uri' => '/BWFMetaEdit'))
+            ->setCurrent(false);
         $menu['menu.projects']->addChild('menu.projects.dvanalyzer', array('uri' => '/DVAnalyzer'))->setCurrent(false);
 
         return $menu;
