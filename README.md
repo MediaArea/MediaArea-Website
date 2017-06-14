@@ -66,3 +66,8 @@ Translations are stored is XML format [here](https://github.com/MediaArea/MediaA
 ## Template
 
 Templates are in twig format, they are available [here](https://github.com/MediaArea/MediaArea-Website/tree/master/src/AppBundle/Resources/views)
+
+## Coding standard
+
+MediaArea-Website follow [PSR1](http://www.php-fig.org/psr/psr-1/) and [PSR2](http://www.php-fig.org/psr/psr-2/) standard  
+The source code is analyzed with [PHP Mess Detector](https://phpmd.org/) with the rules in [phpmd.xml](https://github.com/MediaArea/MediaArea-Website/blob/master/phpmd.xml) and [PHP-CS-Fixer](http://cs.sensiolabs.org/) with PSR1 and PSR2 rules
