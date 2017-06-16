@@ -93,7 +93,7 @@ class MediaInfoDefaultController extends Controller
      */
     public function pricesAction()
     {
-        return array();
+        return array('noAds' => true);
     }
 
     /**
