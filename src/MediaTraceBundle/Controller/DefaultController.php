@@ -9,7 +9,7 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 class DefaultController extends Controller
 {
     /**
-     * @Route("/", name="mediatrace_home")
+     * @Route("/MediaTrace", name="mediatrace_home")
      * @Template()
      */
     public function indexAction()
