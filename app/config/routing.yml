@@ -1,3 +1,8 @@
+media_trace:
+    resource: "@MediaTraceBundle/Controller/"
+    type:     annotation
+    prefix:   /MediaTrace
+
 app:
     resource: '@AppBundle/Controller/'
     type: annotation

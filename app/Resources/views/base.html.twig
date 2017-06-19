@@ -1,13 +1,105 @@
+{% if 'Y' == app.request.attributes.get('donated') or (noAds is defined and true == noAds) %}
+{% set ads = false %}
+{% else %}
+{% set ads = true %}
+{% endif %}
 <!DOCTYPE html>
-<html>
+<html{% if rtl is defined and true == rtl %} dir="rtl"{% endif %} lang="{{ app.request.locale }}">
     <head>
-        <meta charset="UTF-8" />
-        <title>{% block title %}Welcome!{% endblock %}</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>{% block title %}MediaInfo{% endblock %}</title>
+        <meta name="Author" content="MediaArea" />
+        <meta name="description" lang="en" content="{% block description %}MediaInfo{% endblock %}">
+        <meta name="keywords" lang="en" content="{% block keywords %}MediaInfo{% endblock %}">
+        <link rel="alternate" type="application/rss+xml" title="MediaInfo new releases feed" href="/rss/mediainfo_updates.xml" />
+        {% stylesheets
+            'bundles/app/css/bootstrap.css'
+            'bundles/app/css/jquery.fancybox-thumbs.css'
+            'bundles/app/css/jquery.fancybox.css'
+            'bundles/app/css/jquery.socialshareprivacy.min.css'
+            'bundles/app/css/base.css'
+            filter='cssrewrite' filter='?scssphp' output='css/main.css'
+         %}
+            <link rel="stylesheet" href="{{ asset_url }}" />
+        {% endstylesheets %}
         {% block stylesheets %}{% endblock %}
-        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
-    </head>
+        {% image '@AppBundle/Resources/public/img/favicon.ico' %}
+        <link rel="icon" type="image/x-icon" href="{{ asset_url }}" />
+        {% endimage %}
+        {% image '@AppBundle/Resources/public/img/apple-touch-icon.png' %}
+        <link rel="apple-touch-icon" href="{{ asset_url }}">
+        <meta name="msapplication-TileColor" content="white">
+        <meta name="msapplication-TileImage" content="{{ asset_url }}">
+        {% endimage %}
+        <!--[if lt IE 9]>
+            <script src="{{ asset('/bundles/app/js/html5shiv.min.js') }}"></script>
+            <script src="{{ asset('/bundles/app/js/respond.min.js') }}"></script>
+        <![endif]-->
+        <!--[if lte IE 7]>
+            * {
+                behavior: url("{{ asset('/bundles/app/img/box-sizing.htc') }}");
+            }
+        <![endif]-->
+        <!--[if lt IE 7]>
+           <style type="text/css">
+              @media screen{ body{behavior:url("{{ asset('/bundles/app/img/width.htc') }}");} }
+                /* PNG support for IE */
+                img {  behavior: url("{{ asset('/bundles/app/img/png.htc') }}");}
+                .DXImageTransformed { display: inline-block; }
+              </style>
+        <![endif]-->
+        <link rel="alternate" title="MediaInfo" hreflang="de" href="/de">
+        <link rel="alternate" title="MediaInfo" hreflang="en" href="/en">
+        <link rel="alternate" title="MediaInfo" hreflang="fr" href="/fr">
+        <link rel="alternate" title="MediaInfo" hreflang="hu" href="/hu">
+        <link rel="alternate" title="MediaInfo" hreflang="it" href="/it">
+        <link rel="alternate" title="MediaInfo" hreflang="ru" href="/ru">
+        <link rel="author" href="mailto:info@mediaarea.net" title="Mail to author">
+     </head>
     <body>
-        {% block body %}{% endblock %}
+        <div id="bodyInner" class="blue">
+                {% include 'AppBundle::nav.html.twig' %}
+            <div class="container content">
+                {% if ads %}
+                    {% include 'AppBundle::adSlot.html.twig' with { 'adSlotId': 5930355910 } only %}
+                {% endif %}
+                {% block body %}{% endblock %}
+            </div>
+        </div>
+
+        <div class="clearfix"></div>
+            {% if ads %}
+                <div class="container">
+                    {% include 'AppBundle::adSlot.html.twig' with { 'adSlotId': 8744221512 } only %}
+                </div>
+            {% endif %}
+        <footer id="footer">
+            {% include 'AppBundle::footer.html.twig' %}
+        </footer>
+        <script type="text/javascript">
+            var assetsBaseDir = "{{ asset('/bundles/app/') }}";
+        </script>
+        {% javascripts
+            '@AppBundle/Resources/public/js/jquery.min.js'
+            '@AppBundle/Resources/public/js/jquery.cookies.min.js'
+            '@AppBundle/Resources/public/js/jquery.socialshareprivacy.min.js'
+            '@AppBundle/Resources/public/js/jquery.fancybox.js'
+            '@AppBundle/Resources/public/js/jquery.fancybox-thumbs.js'
+            '@AppBundle/Resources/public/js/jquery.mousewheel.js'
+            '@AppBundle/Resources/public/js/bootstrap.min.js'
+            '@AppBundle/Resources/public/js/Tags.js'
+            '@AppBundle/Resources/public/js/social.js'
+            '@AppBundle/Resources/public/js/base.js'
+            filter="?jsqueeze" output='js/main.js'
+         %}
+            <script src="{{ asset_url }}"></script>
+        {% endjavascripts %}
+        {% include 'AppBundle::socialShare.html.twig' %}
         {% block javascripts %}{% endblock %}
+        {% if ads %}
+            <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        {% endif %}
     </body>
 </html>

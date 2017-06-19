@@ -26,12 +26,7 @@ class MenuBuilder
         $menu = $this->factory->createItem('root');
         $menu->setChildrenAttribute('class', 'nav navbar-nav main-menu');
 
-        $menu->addChild('menu.mediaarea', array('route' => 'homepage'))
-            ->setExtras(array('dropdown' => true));
-        $menu['menu.mediaarea']->addChild('menu.mediaarea.about', array('route' => 'homepage'));
-        $menu['menu.mediaarea']->addChild('menu.mediaarea.pro', array('route' => 'mi_support'))->setCurrent(false);
-        $menu['menu.mediaarea']->addChild('menu.mediaarea.events', array('route' => 'ma_events'));
-        $menu['menu.mediaarea']->addChild('menu.mediaarea.legal', array('route' => 'ma_legal'));
+        $menu = $this->mediaAreaMenu($menu);
 
         $menu->addChild('menu.mediainfo', array('route' => 'mi_home'))
             ->setExtras(array('dropdown' => true));
@@ -74,11 +69,56 @@ class MenuBuilder
             ->addChild('menu.support.sdk.filtering', array('route' => 'mi_support_sdk_filtering'));
         $menu['menu.mediainfo']->addChild('menu.testimonials', array('route' => 'mi_testimonials'));
 
+        $menu = $this->projectsMenu($menu);
+
+        return $menu;
+    }
+
+    /**
+     * @SuppressWarnings(PHPMD.UnusedFormalParameter)
+     */
+    public function createMediaTraceMenu(array $options)
+    {
+        $menu = $this->factory->createItem('root');
+        $menu->setChildrenAttribute('class', 'nav navbar-nav main-menu');
+
+        $menu = $this->mediaAreaMenu($menu);
+
+        $menu->addChild('menu.mediatrace', array('route' => 'mediatrace_home'))
+            ->setExtras(array('dropdown' => true))
+            ->setCurrent(true);
+        $menu['menu.mediatrace']->addChild('menu.mediatrace.about', array('uri' => '#about'));
+        $menu['menu.mediatrace']->addChild('menu.mediatrace.files', array('uri' => '#files'));
+        $menu['menu.mediatrace']->addChild('menu.mediatrace.use', array('uri' => '#use'));
+        $menu['menu.mediatrace']->addChild('menu.mediatrace.contact', array('uri' => '#contact'));
+        $menu['menu.mediatrace']->addChild('menu.mediatrace.credit', array('uri' => '#credit'));
+        $menu['menu.mediatrace']->addChild('menu.mediatrace.license', array('uri' => '#license'));
+
+        $menu = $this->projectsMenu($menu);
+
+        return $menu;
+    }
+
+    private function mediaAreaMenu($menu)
+    {
+        $menu->addChild('menu.mediaarea', array('route' => 'homepage'))
+            ->setExtras(array('dropdown' => true));
+        $menu['menu.mediaarea']->addChild('menu.mediaarea.about', array('route' => 'homepage'));
+        $menu['menu.mediaarea']->addChild('menu.mediaarea.pro', array('route' => 'mi_support'))->setCurrent(false);
+        $menu['menu.mediaarea']->addChild('menu.mediaarea.events', array('route' => 'ma_events'));
+        $menu['menu.mediaarea']->addChild('menu.mediaarea.legal', array('route' => 'ma_legal'));
+
+        return $menu;
+    }
+
+    private function projectsMenu($menu)
+    {
         $menu->addChild('menu.projects', array('route' => 'mi_home'))
             ->setExtras(array('dropdown' => true));
         $menu['menu.projects']->addChild('menu.projects.mediainfo', array('route' => 'mi_home'))->setCurrent(false);
         $menu['menu.projects']->addChild('menu.projects.mediaconch', array('uri' => '/MediaConch/'))->setCurrent(false);
-        $menu['menu.projects']->addChild('menu.projects.mediatrace', array('uri' => '/MediaTrace/'))->setCurrent(false);
+        $menu['menu.projects']->addChild('menu.projects.mediatrace', array('route' => 'mediatrace_home'))
+            ->setCurrent(false);
         $menu['menu.projects']->addChild('menu.projects.qctools', array('uri' => '/QCTools'))->setCurrent(false);
         $menu['menu.projects']->addChild('menu.projects.bwfmetaedit', array('uri' => '/BWFMetaEdit'))
             ->setCurrent(false);
