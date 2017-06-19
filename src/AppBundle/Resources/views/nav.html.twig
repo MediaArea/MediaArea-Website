@@ -13,8 +13,9 @@
                 <span class="icon-bar"></span>
             </button>
         </div>
+
         <div id="main-navbar" class="navbar-collapse collapse">
-            {{ knp_menu_render('main', {compressed: true, currentClass: 'active', ancestorClass: 'active', template: 'AppBundle::knp_menu.html.twig'}) }}
+            {{ knp_menu_render(menu|default('main'), {compressed: true, currentClass: 'active', ancestorClass: 'active', template: 'AppBundle::knp_menu.html.twig'}) }}
             {% if app.request.get('_locale') %}
                 {% include 'AppBundle::languageSwitcher.html.twig' %}
             {% endif %}
