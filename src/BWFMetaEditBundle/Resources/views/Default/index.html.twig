@@ -1,0 +1,122 @@
+{% extends 'BWFMetaEditBundle::base.html.twig' %}
+
+{% block title %}BWF MetaEdit{% endblock %}
+
+{% block body %}
+<section class="download-wrapper">
+    <div class="row reorder-xs">
+        <div class="v-align carousel-padding-xs col-xs-12 col-sm-5">
+            <div>
+            {% image '@BWFMetaEditBundle/Resources/public/img/BWFMetaEdit.png' %}
+                <img src="{{ asset_url }}" alt="BWF MetaEdit logo" class="img-responsive center-xs" title="BWF MetaEdit logo" />
+            {% endimage %}
+            </div>
+        </div>
+        <div class="v-align col-sm-7">
+            <div class="center-font-xs">
+                <h1 class="v-align bigtitle">BWF MetaEdit</h1>
+            </div>
+            <div class="projectDescription center-font-xs">
+                <strong>BWF MetaEdit</strong> is a tool that supports embedding, validating, and exporting of metadata in Broadcast WAVE Format (BWF) files. It supports the <a href="http://www.digitizationguidelines.gov/" target="_blank">FADGI (Federal Agencies Digitization Guidelines Initiative)</a> for embedded metadata in the bext and INFO chunks.<br>
+                Initial funding of BWF MetaEdit was provided by the <a href="http://www.digitizationguidelines.gov/" target="_blank">FADGI</a>, with project management from <a href="https://avpreserve.com/" target="_blank">AVPreserve</a>.<br>
+                MediaArea was involved in the development and provides binaries for all platforms.
+            </div>
+
+            {% if 'Windows' == downloadInfo.name %}
+                {% set downloadLink = '//mediaarea.net/download/binary/bwfmetaedit-gui/' ~ downloadInfo.version ~ '/BWF_MetaEdit_GUI_' ~ downloadInfo.version ~ '_Windows_x64.exe' %}
+            {% else %}
+                {% set downloadLink = path(downloadInfo.route) %}
+            {% endif %}
+
+            <div class="inner center-xs center-font-xs">
+                <div class="btn-group hidden-xs">
+                    <a class="btn btn-default btn-lg btn-dl " href="{{ downloadLink }}">
+                        <span class="downloadText">Download BWF MetaEdit</span>
+                    </a>
+                    <a href="{{ path('bwf_download') }}" class="btn btn-default btn-lg dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                        <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu dropdown-default platform-icons">
+                        <li><a href="{{ path('bwf_download_windows') }}">Windows</a></li>
+                        <li><a href="{{ path('bwf_download_mac') }}">Mac OS</a></li>
+                        <li><a href="{{ path('bwf_download_debian') }}">Debian</a></li>
+                        <li><a href="{{ path('bwf_download_ubuntu') }}">Ubuntu</a></li>
+                        <li><a href="{{ path('bwf_download_ubuntu') }}">Linux Mint</a></li>
+                        <li><a href="{{ path('bwf_download_rhel') }}">RedHat Entreprise Linux</a></li>
+                        <li><a href="{{ path('bwf_download_centos') }}">CentOS</a></li>
+                        <li><a href="{{ path('bwf_download_fedora') }}">Fedora</a></li>
+                        <li><a href="{{ path('bwf_download_opensuse') }}">openSUSE</a></li>
+                        <li><a href="{{ path('bwf_download_archlinux') }}">ArchLinux</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="{{ path('bwf_download') }}">Autres systèmes</a></li>
+                    </ul>
+                </div>
+                <div class="btn-group visible-xs visible-xs-inline-block">
+                    <a class="btn btn-default btn-lg btn-dl " href="{{ path(downloadInfo.route) }}">
+                        <span class="downloadText">Download BWF MetaEdit</span>
+                    </a>
+                </div>
+
+                <div class="projectDescription">
+                    <div class="downloadDetails">
+                        Development version {{ downloadInfo.version }}{% if downloadInfo.name %}, for {{ downloadInfo.name }}{% endif %}
+                    </div>
+                    Other versions (packaging, OS, interface...) are also <a href="{{ path('bwf_download') }}">available</a>
+                    {% image '@AppBundle/Resources/public/img/blank.gif' %}
+                    (<a href="{{ path('bwf_download_windows') }}"><img src="{{ asset_url }}" width="16" height="16" alt="Microsoft Windows" title="Microsoft Windows" class="sprite Windows"></a>
+                    <a href="{{ path('bwf_download_mac') }}"><img src="{{ asset_url }}" width="16" height="16" alt="Mac OS" title="Mac OS" class="sprite MacOS"></a>
+                    <a href="{{ path('bwf_download_debian') }}"><img src="{{ asset_url }}" width="16" height="16" alt="Debian" title="Debian" class="sprite Debian"></a>
+                    <a href="{{ path('bwf_download_ubuntu') }}"><img src="{{ asset_url }}" width="16" height="16" alt="Ubuntu" title="Ubuntu" class="sprite Ubuntu"></a>
+                    <a href="{{ path('bwf_download_ubuntu') }}"><img src="{{ asset_url }}" width="16" height="16" alt="Linux Mint" title="Linux Mint" class="sprite Linux_Mint"></a>
+                    <a href="{{ path('bwf_download_rhel') }}"><img src="{{ asset_url }}" width="16" height="16" alt="RedHat Entreprise Linux" title="RedHat Entreprise Linux" class="sprite RedHat"></a>
+                    <a href="{{ path('bwf_download_centos') }}"><img src="{{ asset_url }}" width="16" height="16" alt="CentOS" title="CentOS" class="sprite CentOS"></a>
+                    <a href="{{ path('bwf_download_fedora') }}"><img src="{{ asset_url }}" width="16" height="16" alt="Fedora" title="Fedora" class="sprite Fedora"></a>
+                    <a href="{{ path('bwf_download_opensuse') }}"><img src="{{ asset_url }}" width="16" height="16" alt="openSUSE" title="openSUSE" class="sprite openSUSE"></a>
+                    <a href="{{ path('bwf_download_archlinux') }}"><img src="{{ asset_url }}" width="16" height="16" alt="ArchLinux" title="ArchLinux" class="sprite ArchLinux"></a>)
+                    {% endimage %}
+                    <br>
+                    You can also check the <a href="//mediaarea.net/download/snapshots/binary/bwfmetaedit-gui/">GUI very latest snapshots</a> or  <a href="//mediaarea.net/download/snapshots/binary/bwfmetaedit/">CLI very latest snapshots</a>.
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section class="about">
+    <h2>BWF MetaEdit features:</h2>
+    <ul>
+     <li>Import, edit, embed, and export specified metadata elements in WAVE audio files</li>
+     <li>Export technical metadata from Format Chunks and minimal metadata from bext and INFO chunks as comma-separated values and/or XML, across a set of files or from individual files</li>
+     <li>Evaluate, verify and embed MD5 checksums, as applied to the WAVE file’s data chunk (audio bitstream only)</li>
+     <li>Enforce the guideline (above) developed by the Federal Agencies Audio-Visual Working Group, as well as specifications from the European Broadcasting Union (EBU), Microsoft, and IBM</li>
+     <li>Generate reports that show errors in the construction of WAVE files</li>
+    </ul>
+
+    <h2>Explanation of BWF MetaEdit Views and Documents:</h2>
+    <ul>
+    <li><a href="{{ path('bwf_doc_tech') }}">TECH</a></li>
+    <li><a href="{{ path('bwf_doc_core') }}">CORE</a></li>
+    <li><a href="{{ path('bwf_doc_trace') }}">TRACE</a></li>
+    <li><a href="{{ path('bwf_doc_errors') }}">Explanation of Errors and Warnings</a></li>
+    </ul>
+
+    <h2>Metadata Standards:</h2>
+    <ul>
+    <li><a href="{{ path('bwf_standards_bext') }}">Definitions and Use of BEXT metadata</a></li>
+    <li><a href="{{ path('bwf_standards_listinfo') }}">Definitions and Use of LIST-INFO metadata</a></li>
+    <li><a href="{{ path('bwf_standards_xml_chunks') }}">XML chunks</a></li>
+    </ul>
+
+    <h2>Use:</h2>
+    <ul>
+    <li><a href="{{ path('bwf_usage_preferences') }}">Preferences</a></li>
+    <li><a href="{{ path('bwf_usage_md5') }}">Use of Audio Only Checksums</a></li>
+    <li><a href="{{ path('bwf_usage_validation_rules') }}">Application of Validation Rules</a></li>
+    <li><a href="{{ path('bwf_usage_workflows') }}">Suggested Workflows</a></li>
+    </ul>
+
+    <h2>License:</h2>
+    It is <a href="https://en.wikipedia.org/wiki/Open_source">Open-Source</a> software which means that end users and developers have freedom to study, to improve and to redistribute the program (<a href="{{ path('bwf_license') }}">Public domain</a> for the code developed by us).<br/>
+</section>
+{% endblock %}

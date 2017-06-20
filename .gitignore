@@ -19,4 +19,6 @@
 /web/css/
 /web/js/
 /web/app_dev.php
-composer.lock
+/composer.lock
+/.php_cs.cache
+/worktrees/

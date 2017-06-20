@@ -4,7 +4,7 @@ namespace AppBundle\Lib\DownloadInfo;
 
 use DeviceDetector\Parser\OperatingSystem as OSParser;
 
-class DownloadInfo
+class DownloadInfo extends AbstractDownloadInfo
 {
     protected $supportedOS = array(
         'Arch Linux' => array('name' => 'Arch Linux', 'route' => 'mi_download_archlinux', 'installer' => false),
@@ -40,34 +40,9 @@ class DownloadInfo
         return array('name' => false, 'route' => 'mi_download', 'installer' => false);
     }
 
-    public function setUserAgent($userAgent)
-    {
-        $this->userAgent = $userAgent;
-    }
-
     public function parse()
     {
         $this->downloadInfo = $this->detectOS();
         $this->downloadInfo['version'] = '0.7.96';
-    }
-
-    public function getName()
-    {
-        return $this->downloadInfo['name'];
-    }
-
-    public function getRoute()
-    {
-        return $this->downloadInfo['route'];
-    }
-
-    public function getInstaller()
-    {
-        return $this->downloadInfo['installer'];
-    }
-
-    public function getVersion()
-    {
-        return $this->downloadInfo['version'];
     }
 }
