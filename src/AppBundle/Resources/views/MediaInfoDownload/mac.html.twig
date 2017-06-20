@@ -10,7 +10,8 @@
 <img src="{{ asset_url }}" alt="Mac OS" title="Mac OS" width="250" height="100"><br />
 {% endimage %}
 
-<table border="1" class="download">
+<div class="table-responsive">
+<table class="download table table-bordered table-condensed">
 <thead>
 <tr class="table-header">
     <th>Version</th>
@@ -21,53 +22,8 @@
 </tr>
 </thead>
 <tbody>
-
-<tr>
-    <th rowspan="2" colspan="2"><a href="https://www.apple.com/itunes/affiliates/download/?id=510620098">Mac App Store</a></th>
-	<td class="table-OS" colspan="3">Mac OS X 10.6 to 10.11, x86_64</td>
-</tr>
-<tr>
-    <th><abbr title="Graphical User Interface">GUI</abbr></th>
-    <td colspan="2">Mac App Store is the simplest way to find and download apps for your Mac.<br /><a href="http://itunes.apple.com/app/mediainfo/id510620098">Get MediaInfo v0.7.96 from Mac App Store!</a><br />(there is a small fee)</td>
-</tr>
-<tr>
-    <td colspan="5">&nbsp;<br />&nbsp;</td>
-</tr>
-<tr>
-    <th rowspan="3">10.5&nbsp;(Leopard),<br /> 10.6&nbsp;(Snow&nbsp;Leopard),<br />10.7&nbsp;(Lion),<br />10.8&nbsp;(Mountain&nbsp;Lion),<br />10.9&nbsp;(Mavericks),<br />10.10&nbsp;(Yosemite),<br />10.11&nbsp;(El Captain)</th>
-    <th rowspan="3">i386,<br />x86_64</th>
-    <th><abbr title="Graphical User Interface">GUI</abbr></th>
-    <td><a href="//mediaarea.net/download/binary/mediainfo-gui/0.7.96/MediaInfo_GUI_0.7.96_Mac.dmg">v0.7.96</a></td>
-    <td>The GUI is x86_64 only.<br />(free of charge GUI, but it is not well integrated in your OS: it is the old-style GUI I first used. Prefer the Mac App Store version)</td>
-</tr>
-<tr>
-    <th><abbr title="Command Line Interface">CLI</abbr></th>
-    <td><a href="//mediaarea.net/download/binary/mediainfo/0.7.96/MediaInfo_CLI_0.7.96_Mac.dmg">v0.7.96</a></td>
-    <td>&nbsp;</td>
-</tr>
-<tr>
-    <th><abbr title="Dynamic Library">DyLib</abbr></th>
-    <td><a href="//mediaarea.net/download/binary/libmediainfo0/0.7.96/MediaInfo_DLL_0.7.96_Mac_i386+x86_64.tar.bz2">v0.7.96</a></td>
-    <td>&nbsp;</td>
-</tr>
-<tr class="old-files">
-    <th rowspan="3">10.4 (Tiger),<br>10.5 (Leopard)</th>
-    <th rowspan="3">PPC,<br />i386</th>
-    <th><abbr title="Graphical User Interface">GUI</abbr></th>
-    <td><a href="//mediaarea.net/download/binary/mediainfo-gui/0.7.60/MediaInfo_GUI_0.7.60_Mac_Universal.dmg">v0.7.60</a></td>
-    <td>(free of charge GUI, but it is not well integrated in your OS: it is the old-style GUI I first used.)</td>
-</tr>
-<tr class="old-files">
-    <th><abbr title="Command Line Interface">CLI</abbr></th>
-    <td><a href="//mediaarea.net/download/binary/mediainfo/0.7.60/MediaInfo_CLI_0.7.60_Mac_Universal.dmg">v0.7.60</a></td>
-    <td>&nbsp;</td>
-</tr>
-<tr class="old-files">
-    <th><abbr title="Dynamic Library">DyLib</abbr></th>
-    <td><a href="//mediaarea.net/download/binary/libmediainfo0/0.7.60/MediaInfo_DLL_0.7.60_Mac_Universal.tar.bz2">v0.7.60</a></td>
-    <td>&nbsp;</td>
-</tr>
-
+{% include 'AppBundle::MediaInfoDownload/macTable.html.twig' %}
 </tbody>
 </table>
+</div>
 {% endblock %}

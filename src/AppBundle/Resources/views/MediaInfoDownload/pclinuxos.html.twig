@@ -10,7 +10,10 @@
 <img src="{{ asset_url }}" alt="PCLinuxOS" title="PCLinuxOS" width="65" height="65"><br />
 {% endimage %}
 
+<div class="table-responsive">
+<table class="download table table-bordered table-condensed">
 <table border="1" class="download">
+<thead>
 <tr class="table-header">
     <th>Version</th>
     <th>CPU</th>
@@ -18,57 +21,10 @@
     <td>Version</td>
     <td>Comment</td>
 </tr>
-<tr>
-    <td colspan="5">Note: these packages are unofficial, no support is provided. They are a copy of the packages you have in your distro repository, you should install these packages from your classic program manager.</td>
-</tr>
-<tr class="old-files">
-    <th rowspan="10">(Rolling release)</th>
-    <th rowspan="5">i586</th>
-    <td class="table-OS" colspan="3" id="5.i586">PCLinuxOS, i586</td>
-</tr>
-<tr class="old-files">
-    <th><abbr title="Graphical User Interface">GUI</abbr></th>
-    <td><a href="http://downloads.sourceforge.net/mediainfo/mediainfo-gui-0.7.53-1.i586.PCLinuxOS.rpm">v0.7.53</a></td>
-    <td>requires libmediainfo0</td>
-</tr>
-<tr class="old-files">
-    <th><abbr title="Command Line Interface">CLI</abbr></th>
-    <td><a href="http://downloads.sourceforge.net/mediainfo/mediainfo-0.7.53-1.i586.PCLinuxOS.rpm">v0.7.53</a></td>
-    <td>requires libmediainfo0</td>
-</tr>
-<tr class="old-files">
-    <th>libmediainfo0</th>
-    <td><a href="http://downloads.sourceforge.net/mediainfo/libmediainfo0-0.7.53-1.i586.PCLinuxOS.rpm">v0.7.53</a><small> (<a href="http://downloads.sourceforge.net/mediainfo/libmediainfo-devel-0.7.53-1.i586.PCLinuxOS.rpm">devel</a>)</small></td>
-    <td>requires libzen0</td>
-</tr>
-<tr class="old-files">
-    <th>libzen0</th>
-    <td><a href="http://downloads.sourceforge.net/zenlib/libzen0-0.4.24-1.i586.PCLinuxOS.rpm">v0.4.24</a><small> (<a href="http://downloads.sourceforge.net/zenlib/libzen-devel-0.4.24-1.i586.PCLinuxOS.rpm">devel</a>)</small></td>
-    <td>&nbsp;</td>
-</tr>
-<tr class="old-files">
-    <th rowspan="5">x86_64</th>
-    <td class="table-OS" colspan="3" id="5.i586">PCLinuxOS, x86_64</td>
-</tr>
-<tr class="old-files">
-    <th><abbr title="Graphical User Interface">GUI</abbr></th>
-    <td><a href="http://downloads.sourceforge.net/mediainfo/mediainfo-gui-0.7.53-1.x86_64.PCLinuxOS.rpm">v0.7.53</a></td>
-    <td>requires libmediainfo0</td>
-</tr>
-<tr class="old-files">
-    <th><abbr title="Command Line Interface">CLI</abbr></th>
-    <td><a href="http://downloads.sourceforge.net/mediainfo/mediainfo-0.7.53-1.x86_64.PCLinuxOS.rpm">v0.7.53</a></td>
-    <td>requires libmediainfo0</td>
-</tr>
-<tr class="old-files">
-    <th>libmediainfo0</th>
-    <td><a href="http://downloads.sourceforge.net/mediainfo/libmediainfo0-0.7.53-1.x86_64.PCLinuxOS.rpm">v0.7.53</a><small> (<a href="http://downloads.sourceforge.net/mediainfo/libmediainfo-devel-0.7.53-1.x86_64.PCLinuxOS.rpm">devel</a>)</small></td>
-    <td>requires libzen0</td>
-</tr>
-<tr class="old-files">
-    <th>libzen0</th>
-    <td><a href="http://downloads.sourceforge.net/zenlib/libzen0-0.4.24-1.x86_64.PCLinuxOS.rpm">v0.4.24</a><small> (<a href="http://downloads.sourceforge.net/zenlib/libzen-devel-0.4.24-1.x86_64.PCLinuxOS.rpm">devel</a>)</small></td>
-    <td>&nbsp;</td>
-</tr>
+</thead>
+<tbody>
+{% include 'AppBundle::MediaInfoDownload/pclinuxosTable.html.twig' %}
+</tbody>
 </table>
+</div>
 {% endblock %}
