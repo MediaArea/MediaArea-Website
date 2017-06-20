@@ -7,7 +7,8 @@
 {% block body %}
 <h1>{% trans %}download.title{% endtrans %}</h1>
 
-<table border="1" class="download">
+<div class="table-responsive">
+<table class="download table table-bordered table-condensed">
 <tr class="table-header">
     <th>{% trans %}download.table.os{% endtrans %}</th>
     <td>{% trans %}download.table.link{% endtrans %}</td>
@@ -131,4 +132,5 @@
     <td><a href="{{ path('mi_download_source') }}">{% trans %}download.table.official_release{% endtrans %}</a></td>
 </tr>
 </table>
+</div>
 {% endblock %}

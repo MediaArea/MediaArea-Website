@@ -431,10 +431,6 @@ ul.platform-icons.dropdown-menu {
 }
 
 /* Download pages */
-table.download, table.download th, table.download td {
-    border: 1px solid black;
-}
-
 .download td, .download th {
     padding: 2px;
 }
@@ -445,6 +441,10 @@ table.download, table.download th, table.download td {
 
 .old-files {
     background-color: #B8B8B8;
+}
+
+table.download > tbody > tr > td {
+     vertical-align: middle;
 }
 
 .download th {
@@ -619,6 +619,17 @@ code {
 .cpplisting_toprovide {
     color: red;
 }
+
+/* Prices table */
+.prices th.noMargin {
+    padding: 0;
+}
+
+.prices th.noMargin h2 {
+    padding: 5px 0;
+    margin: 0;
+}
+
 
 /* Misc */
 img, .normalButton {

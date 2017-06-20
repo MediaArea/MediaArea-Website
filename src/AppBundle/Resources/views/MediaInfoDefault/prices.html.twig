@@ -7,7 +7,8 @@
 {% block body %}
 <h1>{% trans %}prices.title{% endtrans %}</h1>
 
-<table class="download">
+<div class="table-responsive">
+<table class="download table table-bordered table-condensed prices">
  <tbody>
   <tr>
    <th>&nbsp;</th>
@@ -16,7 +17,7 @@
    <th>Rest of the world <br/>(USD)</th>
   </tr>
   <tr>
-   <th colspan="4"><h2>MediaInfo Development</h2></th>
+   <th colspan="4" class="noMargin"><h2>MediaInfo Development</h2></th>
   </tr>
   <tr>
    <td>
@@ -73,7 +74,7 @@
    <td colspan="3" style="text-align:center;">+50%</td>
   </tr>
   <tr>
-   <th colspan="4"><h2>MediaInfo Support</h2></th>
+   <th colspan="4" class="noMargin"><h2>MediaInfo Support</h2></th>
   </tr>
   <tr>
    <td colspan="4">
@@ -88,7 +89,7 @@
   </tr>
   <tr>
    <td>
-    <table>
+    <table class="download table table-bordered table-condensed">
      <tbody>
       <tr>
        <th>5-day package</th>
@@ -132,7 +133,7 @@
   </tr>
   <tr>
    <td>
-    <table>
+    <table class="download table table-bordered table-condensed">
      <tbody>
       <tr>
        <th>20-day package</th>
@@ -187,4 +188,5 @@
   </tr>
  </tbody>
 </table>
+</div>
 {% endblock %}

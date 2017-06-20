@@ -1,4 +1,4 @@
-{% if 'Y' == app.request.attributes.get('donated') or (noAds is defined and true == noAds) %}
+{% if 'Y' == app.request.attributes.get('donated') or (noAds is defined and true == noAds) or 'dev' == app.environment %}
 {% set ads = false %}
 {% else %}
 {% set ads = true %}
