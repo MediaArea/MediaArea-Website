@@ -120,6 +120,36 @@ class MenuBuilder
         return $menu;
     }
 
+    /**
+     * @SuppressWarnings(PHPMD.UnusedFormalParameter)
+     */
+    public function createQCToolsMenu(array $options)
+    {
+        $menu = $this->factory->createItem('root');
+        $menu->setChildrenAttribute('class', 'nav navbar-nav main-menu');
+
+        $menu = $this->mediaAreaMenu($menu);
+
+        $menu->addChild('menu.qctools', array('route' => 'qc_home'))
+            ->setExtras(array('dropdown' => true))
+            ->setCurrent(true);
+        $menu['menu.qctools']->addChild('menu.qctools.about', array('route' => 'qc_home'));
+        $menu['menu.qctools']->addChild('menu.qctools.download', array('route' => 'qc_download'));
+        $menu['menu.qctools']->addChild('menu.qctools.gettingStarted', array('route' => 'qc_doc_getting_started'));
+        $menu['menu.qctools']->addChild('menu.qctools.howToUse', array('route' => 'qc_doc_how_to_use'));
+        $menu['menu.qctools']->addChild(
+            'menu.qctools.filterDescriptions',
+            array('route' => 'qc_doc_filter_descriptions')
+        );
+        $menu['menu.qctools']->addChild('menu.qctools.playbackFilters', array('route' => 'qc_doc_playback_filters'));
+        $menu['menu.qctools']->addChild('menu.qctools.recording', array('route' => 'qc_doc_recording'));
+        $menu['menu.qctools']->addChild('menu.qctools.seattle', array('route' => 'qc_doc_seattle'));
+
+        $menu = $this->projectsMenu($menu);
+
+        return $menu;
+    }
+
     private function mediaAreaMenu($menu)
     {
         $menu->addChild('menu.mediaarea', array('route' => 'homepage'))
@@ -140,7 +170,7 @@ class MenuBuilder
         $menu['menu.projects']->addChild('menu.projects.mediaconch', array('uri' => '/MediaConch/'))->setCurrent(false);
         $menu['menu.projects']->addChild('menu.projects.mediatrace', array('route' => 'mediatrace_home'))
             ->setCurrent(false);
-        $menu['menu.projects']->addChild('menu.projects.qctools', array('uri' => '/QCTools'))->setCurrent(false);
+        $menu['menu.projects']->addChild('menu.projects.qctools', array('route' => 'qc_home'))->setCurrent(false);
         $menu['menu.projects']->addChild('menu.projects.bwfmetaedit', array('route' => 'bwf_home'))->setCurrent(false);
         $menu['menu.projects']->addChild('menu.projects.dvanalyzer', array('uri' => '/DVAnalyzer'))->setCurrent(false);
 

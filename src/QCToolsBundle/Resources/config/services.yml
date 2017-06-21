@@ -1,0 +1,8 @@
+services:
+#    qc_tools.example:
+#        class: QCToolsBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]
+
+    qc.download_info:
+        class: QCToolsBundle\Lib\DownloadInfo\QCToolsDownloadInfo
+        public: true

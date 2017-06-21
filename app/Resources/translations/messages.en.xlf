@@ -668,11 +668,11 @@ MediaInfo can be used in your own program without any difficulties, with a stati
       </trans-unit>
       <trans-unit id="141" approved="yes">
         <source><![CDATA[download.mac.page.title]]></source>
-        <target><![CDATA[MediaInfo - Download MediaInfo for Mac OS]]></target>
+        <target><![CDATA[MediaInfo - Download MediaInfo for macOS]]></target>
       </trans-unit>
       <trans-unit id="142" approved="yes">
         <source><![CDATA[download.mac.title]]></source>
-        <target><![CDATA[Download - Mac OS]]></target>
+        <target><![CDATA[Download - macOS]]></target>
       </trans-unit>
       <trans-unit id="143" approved="yes">
         <source><![CDATA[download.mageia.page.title]]></source>
@@ -1041,6 +1041,10 @@ Don't hesitate to <a href="mailto:info@mediaarea.net">contact us</a> if you're i
       <trans-unit id="228" approved="yes">
         <source><![CDATA[about.download.bundled]]></source>
         <target><![CDATA[(the installer is bundled with a software distribution network. <a href="%bundledRoute%">Learn more</a>.)]]></target>
+      </trans-unit>
+      <trans-unit id="about.download.otherOS" approved="yes">
+        <source><![CDATA[about.download.otherOS]]></source>
+        <target><![CDATA[Other Operating Systems]]></target>
       </trans-unit>
     </body>
   </file>

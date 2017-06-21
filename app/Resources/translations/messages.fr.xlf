@@ -243,6 +243,10 @@ Liste non exhaustive de prestations possibles :
 </ul>
 N'hésitez pas à <a href="mailto:info@mediaarea.net">me contacter</a> pour toute question ou demande de devis.]]></target>
       </trans-unit>
+      <trans-unit id="about.download.otherOS" approved="yes">
+        <source><![CDATA[about.download.otherOS]]></source>
+        <target><![CDATA[Autres systèmes]]></target>
+      </trans-unit>
     </body>
   </file>
 </xliff>

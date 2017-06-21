@@ -9,7 +9,7 @@
     <div class="row reorder-xs">
         <div class="v-align carousel-padding-xs col-xs-12 col-sm-5">
             <div>
-            {% if 'Mac OS X' == downloadInfo.name %}
+            {% if 'macOS' == downloadInfo.name %}
             {% image '@AppBundle/Resources/public/img/Screenshot/MediaInfo_Mac_Easy_en-thumb-about.png' %}
                 <a href="{{ path('mi_screenshots') }}"><img src="{{ asset_url }}" alt="{% trans %}about.screenshot_img.alt{% endtrans %}" class="img-responsive center-xs" title="{% trans %}about.screenshot_img.title{% endtrans %}" /></a>
             {% endimage %}
@@ -42,7 +42,7 @@
 
             <div class="inner center-xs center-font-xs">
                 <div class="btn-group hidden-xs">
-                    {% if 'Mac OS' == downloadInfo.name %}
+                    {% if 'macOS' == downloadInfo.name %}
                     <a class="btn btn-default btn-lg btn-dl" href="https://itunes.apple.com/app/mediainfo/id510620098" target="_blank">
                         <span class="downloadText">{% trans %}about.download.button.text{% endtrans %}</span>
                     </a>
@@ -56,7 +56,7 @@
                     </a>
                     <ul class="dropdown-menu dropdown-default platform-icons">
                         <li><a href="{{ path('mi_download_windows') }}">Windows</a></li>
-                        <li><a href="{{ path('mi_download_mac') }}">Mac OS</a></li>
+                        <li><a href="{{ path('mi_download_mac') }}">macOS</a></li>
                         <li><a href="{{ path('mi_download_debian') }}">Debian</a></li>
                         <li><a href="{{ path('mi_download_ubuntu') }}">Ubuntu</a></li>
                         <li><a href="{{ path('mi_download_ubuntu') }}">Linux Mint</a></li>
@@ -66,11 +66,11 @@
                         <li><a href="{{ path('mi_download_opensuse') }}">openSUSE</a></li>
                         <li><a href="{{ path('mi_download_archlinux') }}">ArchLinux</a></li>
                         <li role="separator" class="divider"></li>
-                        <li><a href="{{ path('mi_download') }}">Autres systèmes</a></li>
+                        <li><a href="{{ path('mi_download') }}">{% trans %}about.download.otherOS{% endtrans %}</a></li>
                     </ul>
                 </div>
                 <div class="btn-group visible-xs visible-xs-inline-block">
-                    {% if 'Mac OS' == downloadInfo.name %}
+                    {% if 'macOS' == downloadInfo.name %}
                     <a class="btn btn-default btn-lg btn-dl" href="https://itunes.apple.com/app/mediainfo/id510620098" target="_blank">
                         <span class="downloadText">{% trans %}about.download.button.text{% endtrans %}</span>
                     </a>
@@ -83,12 +83,12 @@
 
                 <div class="projectDescription">
                     <div class="downloadDetails">
-                        {% trans %}about.download.version{% endtrans %} {{ downloadInfo.version }}{% if downloadInfo.installer %}, {% trans %}about.download.installer{% endtrans %}{% endif %}{% if downloadInfo.name %}, {% if 'Mac OS' == downloadInfo.name %}Mac App Store{% else %}{% trans %}about.download.for{% endtrans %} {{ downloadInfo.name }}{% endif %}{% endif %}{% if 1 <= app.request.attributes.get('donated', -1) %}<br>{% trans with {'%bundledRoute%': path('mi_bundled')} %}about.download.bundled{% endtrans %}{% endif %}
+                        {% trans %}about.download.version{% endtrans %} {{ downloadInfo.version }}{% if downloadInfo.installer %}, {% trans %}about.download.installer{% endtrans %}{% endif %}{% if downloadInfo.name %}, {% if 'macOS' == downloadInfo.name %}Mac App Store{% else %}{% trans %}about.download.for{% endtrans %} {{ downloadInfo.name }}{% endif %}{% endif %}{% if 1 <= app.request.attributes.get('donated', -1) %}<br>{% trans with {'%bundledRoute%': path('mi_bundled')} %}about.download.bundled{% endtrans %}{% endif %}
                     </div>
                     {% trans with {'%downloadRoute%': path('mi_download')} %}about.download.other{% endtrans %}
                     {% image '@AppBundle/Resources/public/img/blank.gif' %}
                     (<a href="{{ path('mi_download_windows') }}"><img src="{{ asset_url }}" width="16" height="16" alt="Microsoft Windows" title="Microsoft Windows" class="sprite Windows"></a>
-                    <a href="{{ path('mi_download_mac') }}"><img src="{{ asset_url }}" width="16" height="16" alt="Mac OS" title="Mac OS" class="sprite MacOS"></a>
+                    <a href="{{ path('mi_download_mac') }}"><img src="{{ asset_url }}" width="16" height="16" alt="macOS" title="macOS" class="sprite MacOS"></a>
                     <a href="{{ path('mi_download_debian') }}"><img src="{{ asset_url }}" width="16" height="16" alt="Debian" title="Debian" class="sprite Debian"></a>
                     <a href="{{ path('mi_download_ubuntu') }}"><img src="{{ asset_url }}" width="16" height="16" alt="Ubuntu" title="Ubuntu" class="sprite Ubuntu"></a>
                     <a href="{{ path('mi_download_ubuntu') }}"><img src="{{ asset_url }}" width="16" height="16" alt="Linux Mint" title="Linux Mint" class="sprite Linux_Mint"></a>

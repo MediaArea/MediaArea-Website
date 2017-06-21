@@ -1,0 +1,26 @@
+{% extends 'QCToolsBundle::base.html.twig' %}
+
+{% block title %}QCTools - Download QCTools AppImage{% endblock %}
+
+{% block body %}
+<h1>Download - AppImage</h1>
+{% image '@AppBundle/Resources/public/img/OS/AppImage.png' %}
+<img src="{{ asset_url }}" alt="AppImage" title="AppImage" width="250" height="76"><br />
+{% endimage %}
+
+<div class="table-responsive">
+<table class="download table table-bordered table-condensed">
+<thead>
+<tr class="table-header">
+    <th>Architecture</th>
+    <th>Interface</th>
+    <th>Version</th>
+    <th>Comment</th>
+</tr>
+</thead>
+<tbody>
+{% include 'QCToolsBundle:Download:appimageTable.html.twig' %}
+</tbody>
+</table>
+</div>
+{% endblock %}

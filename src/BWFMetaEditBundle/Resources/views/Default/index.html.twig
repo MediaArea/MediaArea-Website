@@ -24,6 +24,8 @@
 
             {% if 'Windows' == downloadInfo.name %}
                 {% set downloadLink = '//mediaarea.net/download/binary/bwfmetaedit-gui/' ~ downloadInfo.version ~ '/BWF_MetaEdit_GUI_' ~ downloadInfo.version ~ '_Windows_x64.exe' %}
+            {% elseif 'macOS' == downloadInfo.name %}
+                {% set downloadLink = '//mediaarea.net/download/binary/bwfmetaedit-gui/' ~ downloadInfo.version ~ '/BWFMetaEdit_GUI_' ~ downloadInfo.version ~ '_Mac.dmg' %}
             {% else %}
                 {% set downloadLink = path(downloadInfo.route) %}
             {% endif %}
@@ -38,7 +40,7 @@
                     </a>
                     <ul class="dropdown-menu dropdown-default platform-icons">
                         <li><a href="{{ path('bwf_download_windows') }}">Windows</a></li>
-                        <li><a href="{{ path('bwf_download_mac') }}">Mac OS</a></li>
+                        <li><a href="{{ path('bwf_download_mac') }}">macOS</a></li>
                         <li><a href="{{ path('bwf_download_debian') }}">Debian</a></li>
                         <li><a href="{{ path('bwf_download_ubuntu') }}">Ubuntu</a></li>
                         <li><a href="{{ path('bwf_download_ubuntu') }}">Linux Mint</a></li>
@@ -48,7 +50,7 @@
                         <li><a href="{{ path('bwf_download_opensuse') }}">openSUSE</a></li>
                         <li><a href="{{ path('bwf_download_archlinux') }}">ArchLinux</a></li>
                         <li role="separator" class="divider"></li>
-                        <li><a href="{{ path('bwf_download') }}">Autres systèmes</a></li>
+                        <li><a href="{{ path('bwf_download') }}">Other systems</a></li>
                     </ul>
                 </div>
                 <div class="btn-group visible-xs visible-xs-inline-block">
@@ -64,7 +66,7 @@
                     Other versions (packaging, OS, interface...) are also <a href="{{ path('bwf_download') }}">available</a>
                     {% image '@AppBundle/Resources/public/img/blank.gif' %}
                     (<a href="{{ path('bwf_download_windows') }}"><img src="{{ asset_url }}" width="16" height="16" alt="Microsoft Windows" title="Microsoft Windows" class="sprite Windows"></a>
-                    <a href="{{ path('bwf_download_mac') }}"><img src="{{ asset_url }}" width="16" height="16" alt="Mac OS" title="Mac OS" class="sprite MacOS"></a>
+                    <a href="{{ path('bwf_download_mac') }}"><img src="{{ asset_url }}" width="16" height="16" alt="macOS" title="macOS" class="sprite MacOS"></a>
                     <a href="{{ path('bwf_download_debian') }}"><img src="{{ asset_url }}" width="16" height="16" alt="Debian" title="Debian" class="sprite Debian"></a>
                     <a href="{{ path('bwf_download_ubuntu') }}"><img src="{{ asset_url }}" width="16" height="16" alt="Ubuntu" title="Ubuntu" class="sprite Ubuntu"></a>
                     <a href="{{ path('bwf_download_ubuntu') }}"><img src="{{ asset_url }}" width="16" height="16" alt="Linux Mint" title="Linux Mint" class="sprite Linux_Mint"></a>

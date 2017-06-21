@@ -1,0 +1,27 @@
+{% extends 'QCToolsBundle::base.html.twig' %}
+
+{% block title %}QCTools - Download QCTools for openSUSE{% endblock %}
+
+{% block body %}
+<h1>Download - openSUSE</h1>
+{% image '@AppBundle/Resources/public/img/OS/openSUSE.png' %}
+<img src="{{ asset_url }}" alt="openSUSE" title="openSUSE" width="155" height="100"><br />
+{% endimage %}
+
+<div class="table-responsive">
+<table class="download table table-bordered table-condensed">
+<thead>
+<tr class="table-header">
+    <th>Version</th>
+    <th>Architecture</th>
+    <th>Interface</th>
+    <td>Version</td>
+    <td>Comment</td>
+</tr>
+</thead>
+<tbody>
+{% include 'QCToolsBundle:Download:opensuseTable.html.twig' %}
+</tbody>
+</table>
+</div>
+{% endblock %}
