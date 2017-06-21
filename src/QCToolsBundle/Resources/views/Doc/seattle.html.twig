@@ -1,0 +1,3553 @@
+{% extends 'QCToolsBundle::base.html.twig' %}
+
+{% block title %}QCTools - Seattle Municipal Archives Manual{% endblock %}
+
+{% block body %}
+{# Keep this open div #}
+<div>
+{# Keep this open div #}
+
+<h1>Seattle Municipal Archives Moving Images Manual: QCTools</h1>
+
+<ul>
+  <li><a href="#how">How to Use This Manual</a></li>
+  <li><a href="#intro">Introduction</a></li>
+  <li><a href="#graphs">Graph Descriptions</a>
+      <ul>
+        <li><a href="#graphs_voc">Vocabulary</a></li>
+        <li><a href="#graphs_intro">Introduction</a></li>
+        <li><a href="#graphs_desc">Descriptions</a></li>
+      </ul>
+  </li>
+  <li><a href="#artifacts">Artifacts</a></li>
+  <li><a href="#playback">Playback Filter Descriptions</a>
+      <ul>
+        <li><a href="#playback_intro">Introduction</a></li>
+        <li><a href="#playback_desc">Descriptions</a></li>
+      </ul>
+  </li>
+  <li><a href="#damage">Tape Damage</a></li>
+  <li><a href="#glossary">Glossary</a></li>
+</ul>
+
+
+<p>This manual contains material from the following contributors:</p>
+
+<p>A/V Artifact Atlas</p>
+
+<p>Bay Area Video Coalition (BAVC)</p>
+
+<p>BlackMagic Design</p>
+
+<p>Moving Image Preservation of Puget Sound (MIPoPS)</p>
+
+<p>Rosemary Carroll</p>
+
+<p>Anne Frantilla</p>
+
+<p>Libby Hopfauf</p>
+
+<p>Hannah Palin</p>
+
+<p>Rachel Price</p>
+
+<p>Dave Rice</p>
+
+<p>Seattle Municipal Archives (SMA)</p>
+
+<p>Carol Shenk</p>
+
+<p>(c) 2015 Seattle Municipal Archives</p>
+
+<p>City Hall, 600 Fourth Avenue • Third Floor</p>
+
+<p>Seattle, WA 98124-4728</p>
+
+<p>(206) 233-7807 • (206) 684-8353</p>
+
+<h2 id="how">How to Use This Manual</h2>
+
+<p>Below are explanations of the information icons and color coding that
+appears throughout this manual. This is to help the user find what they
+need in an efficient and intuitive manner. A glossary of video and
+technical terms is located in the back of the manual, along with quick
+image reference of possible video artifacts.</p>
+
+<p><strong>ICON KEY</strong></p>
+
+<p>######## <strong>icon key</strong></p>
+
+<p>For Your Information</p>
+
+<ol>
+  <li>Additional Resource</li>
+</ol>
+
+<p><strong>For Your Information:</strong> This icon will appear within a purple box
+throughout the manual to provide addition information about a section.</p>
+
+<p><strong>Additional Resources:</strong> This icon will mark places in the manual where
+addition information may be found in another section. For each
+reference, the section will be noted.</p>
+
+<p><strong>COLOR KEY</strong></p>
+
+<p>######## <strong>Color key</strong></p>
+
+<p><strong>Purple</strong> Chapter Headings</p>
+
+<p><strong>Lavender</strong> Section Headings</p>
+
+<p><strong>Blue</strong> Actions</p>
+
+<p><strong>Orange</strong> Titles</p>
+
+<p><strong>Salmon</strong> Terms</p>
+
+<p><strong>Purple:</strong> Chapter headings</p>
+
+<p><strong>Lavender:</strong> Section headings</p>
+
+<p><strong>Blue:</strong> Actions, buttons, icons to click or select</p>
+
+<p><strong>Orange:</strong> Titles of programs, site, resource, and windows</p>
+
+<p><strong>Salmon:</strong> First occurrence of a glossary term</p>
+
+<p>For more information on graphs and playback filters, consult the BAVC’s
+<strong>QCSchool: A blog series for users of QCTools.</strong> As of September 17,
+2015, only two posts exist. As more are posted, I will incorporate them
+into the manual.</p>
+
+<h2 id="intro">Introduction</h2>
+
+<p><img src="/_/img/QCTools/image5.png" alt="" />QCTools by double clicking the icon on the Dock.</p>
+
+<p><strong>Add Files:</strong> click the in the upper left hand corner and select the
+desired video file from the pop-up window. Once your files have been
+added, the preprogramed selection of graphs will begin running and you
+will see the lines begin to populate horizontally along each.
+Alternatively, you can open the Finder, navigate to the desired file,
+then drag and drop it into the program window.</p>
+
+<p><strong>Please Note:</strong> Sometimes QCTools only will let you add via one of
+these options. If one doesn’t work, try the other.</p>
+
+<p><strong>Select and Navigate Graphs</strong></p>
+
+<p><img style="max-width:50%" src="/_/img/QCTools/image6.png" alt="" /></p>
+
+<p><img src="/_/img/QCTools/image7.png" alt="" />
+<img src="/_/img/QCTools/image8.png" alt="" />
+<strong>Views</strong>: QCTools automatically opens in <strong>Graphs
+Layout</strong>. To view a list of your current video files, click the <strong>View</strong>
+tab on the toolbar and select <strong>File List</strong>. To return and view the
+graphs for the most recently viewed file (not necessarily the most
+recently added), click the <strong>View</strong> tab on the toolbar and select
+<strong>Graphs Layout</strong> from the dropdown menu. While in <strong>File List</strong> (Table)
+view, you can also double click on a file and you will be taken to a
+<strong>Graphs Layout</strong> of the corresponding video. You can also access these
+different views by clicking on the corresponding icon.</p>
+
+<p>Table (File View):</p>
+
+<p><img style="max-width:50%" src="/_/img/QCTools/image9.jpg" alt="" /><p>
+<p>The Table View enables you to view the
+progress of your file download, plus associated metadata:</p>
+
+<p>In addition to technical metadata about the file (duration, frame rate,
+file size, etc.) the List View also displays more detailed statistics
+about the averages of your video levels over the duration of the file.
+More columns exist, but the ones with information most helpful to you
+are listed below:</p>
+
+<pre>
+  Column Name        Description                                                                                                                  Ideal Range
+  ——————             —————————————————————————————————————————-                                                                                   —————–
+  Yav                The average of the Y values (128)                                                                                            ~128
+  Yrang              The average of the YHIGH and YLOW values (YHIGH-YLOW), which indicates the overall range of contrast                         ~128-219
+  Uav                The average of the U values                                                                                                  ~128
+  Vav                The average of the V values                                                                                                  ~128
+  TOUTc              The number of frames with a TOUT value of more than 0.005                                                                    &lt;10
+  SATb               The number of frames where the maximum saturation is over 88.7, which would indicate levels outside of the broadcast range   &lt;1000
+  SATi               The number of frames where the maximum saturation is over 118.2, which would indicate levels outside the legal YUV values    &lt;1000
+  BRNGav             The percentage of frames with a BRNG value of more than zero                                                                 &lt;0.02
+  BRNGc              The number of frames with a BRNG value greater than 0.02                                                                     &lt;1000
+  MSEfY              The number of frames with an MSEfY value over 1000                                                                           &lt;10
+</pre>
+
+<p>When checking for ideal range numbers mentioned throughout this manual,
+use this view as an initial quick frame of reference.</p>
+
+<p><strong>Graphs:</strong> <strong>Graphs</strong> display on the top portion of the screen,
+corresponding video thumbnails show below. The graph options (see image
+below) are located along the top of the window. Each title is followed
+by a check box. You can select or deselected any one(s) you want by
+checking or unchecking the corresponding box.</p>
+
+<p><img src="/_/img/QCTools/image10.jpg" alt="" /></p>
+
+<p><strong>Video Thumbnails</strong>: these are the squares (thumbnails of each frame)
+scrolling along the bottom of the window. The video thumbnails may be
+navigated via the <strong>Next</strong>, <strong>Previous</strong>, or; the frame and time for the
+particular selection will be displayed below the center (or selected
+frame). Clicking and dragging your cursor over a portion of the graph
+will cause the thumbnails below to update accordingly to correspond with
+the information. You may also double click a specific thumbnail and the
+playback window will appear displaying the image and with a variety of
+analytical playback filters.</p>
+
+<p><img style="max-width:50%" src="/_/img/QCTools/image11.png" alt="" />
+<strong>Levels:</strong> Moving your cursor over a
+particular point on a graph will reveal thesymbol in place of your
+cursor’s usual arrow. This symbol appears very faint and is sometimes
+hard to see; also you might have to try clicking around on the graph for
+it to appear occasionally. By moving the symbol around the graph(s) with
+your mouse, numbers will appear within a translucent black box,
+displaying the frame number and plot values for the lines with in the
+occupied graph. For example, Frame 15212: HUEMED = 125, HUE AVG = 122
+(see image on right). This is helpful when making adjustments to the
+video because you are more precisely able to decipher levels at
+different points in the video. By clicking on a certain area of the
+graph, the playback will automatically go to that point in the video
+(displayed in the current frame thumbnail at the bottom of the window).</p>
+
+<p><strong>Zoom:</strong> You may also use the magnifying glass icons in the tool bar to
+zoom in/out, giving you a more or less detailed view of the graph
+displays, over a specific timespan of the uploaded video.</p>
+
+<p><strong>keyboard shortcuts for Playback</strong></p>
+
+<p>to (select the previous frame)</p>
+
+<p>to (select the next frame)</p>
+
+<p><strong>F</strong> to enlarge the window to full screen</p>
+
+<p><strong>SPACE</strong> to toggle between and</p>
+
+<p><strong>Video Analysis Window</strong></p>
+
+<p><strong>Playback Filters:</strong> to view a certain frame and apply the various
+filters, double click on the thumbnail you want from the row along the
+bottom and a pop-up window will appear with two views. This is called
+the <strong>Video Analysis Window</strong>. In the upper left and right hand corners
+are dropdown menus used to select the <strong>playback filter(s)</strong>
+corresponding to the screen on their respective sides.</p>
+
+<p><img src="/_/img/QCTools/image12.jpg" alt="" /></p>
+
+<h2 id="graphs">Graph Descriptions</h2>
+
+<h3 id="graphs_voc">Vocabulary</h3>
+
+<p><strong>Graphs:</strong> the QCTools “Help” documents refer to these graphs as “graph
+filters” or “filters”. In order to reduce confusion (since there are
+also “playback filters”) this manual refers to “graph filters” as
+“graphs”.</p>
+
+<p><strong>Plot</strong>: is used here to refer to both the lines on the graph and the
+action (verb) of the lines recording data (level values). Line(s) is
+also used as a synonym for plot(s).</p>
+
+<p><strong>Channels:</strong> the contributing factors or signals making up the video
+image.</p>
+
+<p><strong>Levels:</strong> are the measurements of each video channel/signal.</p>
+
+<p><strong>Values:</strong> refer to the unit of measurement and number of each level.
+The values detailed below are appropriate for the 8-bit video samples
+analyzed by this tool.</p>
+
+<p><strong>IRE:</strong> is a unit of measurement used in the analysis of composite
+video signals. Its name is derived from the initials of the Institute of
+Radio Engineers.</p>
+
+<h3 id="graphs_intro">Introduction</h3>
+
+<p><strong>In General:</strong> The QCTools graphs analyze the various values of an
+encoded video file in order to provide information about the appearance
+of the video based upon the levels of its channels. Each graph analyzes
+a given channel and records the level values throughout the video. These
+levels are plotted on the corresponding graph. By examining the graphs
+alongside the playback, you will be able to identify problematic points,
+what caused them, and, if possible, how to fix them.</p>
+
+<p><strong>Keep in Mind:</strong> Although some variations may apply depending on each
+tape, in general the lines on all of these graphs should remain
+relatively constant. On graphs with more than one plot (line), the lines
+should remain relatively close together (except Y). For each graph
+described below, there is an approximate <strong>ideal range</strong> for where the
+lines should appear on the graph. If the lines are not exactly in this
+spot, that is fine. The ideal range is merely a guide to help in
+scanning for errors. Once an abnormality is spotted on the graph, it
+makes it easier to use the playback filters to determine the cause and
+any possible solutions. Not all abnormalities indicate an error and not
+all errors can be fixed. Also, not all levels within the ideal range are
+always correct. This can be ambiguous and confusing. Use them as a
+guide, along with you judgement to make the video look as “good” as
+possible with the fewest artifacts (errors).</p>
+
+<p><strong>Additional Note:</strong> Some of the graphs include more than one plot.
+Refer to the color keys on the right-hand side of the window for details
+of each. In general, they range in the following order: MIN, LOW,
+AVG/MED, HIGH, MAX.</p>
+
+<p>MIN = channel minimum</p>
+
+<p>LOW = channel 10%\
+AVG/MED = channel average/MEDIAN\
+HIGH = channel 90%\
+MAX = channel maximum</p>
+
+<p>These measurements (low, minimum, maximum, high and average) are
+contextual to each video it is analysis. For instance, the average line
+is plotting the average level of Luma throughout the movie of the
+current file.</p>
+
+<h3 id="graphs_desc">Descriptions</h3>
+
+<h4>1. Y VALUES: Y MIN, Y LOW, Y AVG, Y HIGH, Y MAX</h4>
+
+<pre>
+  Graph Domain        Graph Name(s)                        Values         Ideal Range
+  ——————-             ————————————                         —————          ——————
+  Y Channel           Y MIN, Y LOW, Y AVG, Y HIGH, Y MAX   0-255 IRE       16 IRE (Y LOW)
+                                                                          128 IRE (Y AVG)
+                                                                          235 IRE (Y HIGH)
+</pre>
+</div>
+
+<p><strong>Overview:</strong> Y Channels carry data about the brightness of a picture or
+<strong>Luminance (Luma)</strong>. Problematic variance in Y Channel values will
+manifest as a picture that is either too light or too dark (contains
+<strong>noise</strong>). 8-bit video will have values falling in the range of 0-255
+code values per pixel. A picture with well-balanced light levels will
+have an average (or mid-range Y Channel value) of around 128 (Y AVG).
+Graph readings outside of that range will indicate a picture that is
+either too bright or too dark. A Y Value of 0 would indicate total
+blackness and a value of 255 would present as entirely white. In the
+range of values, reference black is at value 16, while reference white
+is at value 235. The information plotted here will reflect a similar
+pattern to the Waveform monitor. Think of it like this graph is
+recording the movement of the trace from the <strong>Waveform</strong> on the
+BlackMagic Design Display.</p>
+
+<p>On a Waveform, the Luma range is from 0-100 (7.5 to 100 Ideal). This
+information is converted to the 0-255 (16-235 Ideal) scale when it is
+digitized.</p>
+
+<p><strong>The Lines:</strong> The Y AVG, Y LOW and Y HIGH are the most important to pay
+attention to on this graph. The Y AVG gives you an overall understanding
+or feeling for the brightness of the video. The Y LOW and Y HIGH are
+similar to the Y MIN and Y MAX filters, but instead of looking at the
+absolute minimum and maximum value for these channels, it looks at the
+10th percentile (LOW, or 16 pixels) and 90th percentile (HIGH, or 235
+pixels) which present the outside limits or ‘headroom’ of the legal
+broadcast range. An extreme minimum or maximum value could dramatically
+skew the graph but because they may be outside the viewable broadcast
+image (or the range of human perception), they may not necessarily be
+meaningful indicators of a problematic visual image that can be
+human-detectable. This is why Low/High measurements are so useful– they
+ignore the extreme outliers (Min/ Max) in favor of those abnormalities
+which fall in the range of human perception. You want to make sure the Y
+LOW stays above 16 IRE and that the Y HIGH stays below 235.</p>
+
+<p><strong>How the Graph Should Look:</strong> Except during particular moments like
+scene changes where one might expect abrupt spikes, the values of Y
+channels should remain relatively stable or constant with little
+variation for the majority of the movie.</p>
+
+<p><strong>Sample of Ideal Range:</strong></p>
+
+<p><strong>Exceptions:</strong> Portions of video showing extreme changes in average
+values (and not corresponding to a scene change or otherwise dramatic
+edit) likely indicate a picture error. Where you may expect Luma spikes
+could be camera fade-ins/outs, or a sudden brightness in the picture,
+like a camera flash, for example.</p>
+
+<p>Samples which demonstrate Y Value anomalies:</p>
+
+<h4>2. U, V Values: U MIN, U AVG, U MAX/ V MIN, V AVG, V MAX **</h4>
+
+<pre>
+  Graph Domain        Graph Name(s)         Values          Ideal Range
+  ——————-             ———————               —————           ——————–
+  U Channel           U MIN, U AVG, U MAX   0-255 IRE       85-170 IRE (U AVG)
+  V Channel           V MIN, V AVG, V MAX   0-255 IRE       85-170 IRE (V AVG)
+</pre>
+
+<p><strong>Overview:</strong> The U and V Channels represent the <strong>Chrominance</strong>
+<strong>(Chroma)</strong>, or color differences of a picture. U and V graphs act to
+detect color abnormalities in video.</p>
+
+<p><strong>The Lines:</strong> It can be difficult to derive meaning from U or V values
+on their own, but they provide supplementary information and can be good
+indicators of artifacts, especially when occurring in tandem with
+similar Y Value readings. Black and white video contains no chrominance
+information so should present flat-lines (or no data) for UV channels.
+Activity in UV Channels for black and white video content, however,
+would certainly be an indication of <strong>chrominance noise</strong> (colorful
+speckled movement or unintentional placement). Alternatively, a color
+video which shows flat-lines (at 0) for these channels would be an
+indicator of a color <strong>drop-out</strong> scenario.</p>
+
+<p><strong>How the Graph Should Look:</strong> Except during particular moments like
+scene changes where one might expect abrupt spikes, the values of the U
+and V channels should remain relatively stable or constant with little
+variation for the majority of the movie. Spikes or extreme variation
+could be an indicator of odd glowing or <strong>noise</strong>.</p>
+
+<p>Sample of Ideal Range:</p>
+
+<p>Samples which demonstrate U/V Value anomalies:</p>
+
+<h4><span id="Diff" class="anchor"></span>3. YUV Values/ Difference</h4>
+
+<pre>
+  Graph Domain        Graph Name(s)
+  ——————-             ——————–
+  Y Channel           Y DIF
+  U Channel           U DIF
+  V Channel           V DIF
+</pre>
+
+<p><img style="max-width:50%" src="/_/img/QCTools/image23.png" alt="" /></p>
+
+<p><strong>Overview:</strong> This QCTools graph selects two successive frames of video
+and subtracts the values of one from the other in order to find the
+change, or difference, between the two frames (measured in pixels). This
+information indicates the rapidity with which a video picture is
+changing from one frame to the next. Prolonged spikes (lasting past the
+first few frames of a scene change) can represent a <strong>head clog</strong>.</p>
+
+<p><strong>How the Graph Should Look:</strong> All three lines should be relatively
+close together and smooth. Aside from scene-change scenarios, a video
+picture should not undergo dramatic changes in these values unless an
+artifact is present. A scene-change would present as a short but
+dramatic spike in the graph, and that is normal. Other YUV Difference
+spikes may be present in cases where picture problems are visible.
+Often, head problems with corrupted frames will result in large YUV
+Difference values/graph spikes. This is also a good way to double check
+your Chroma and Luma settings.</p>
+
+<p>Samples which demonstrate YUV Difference anomalies:</p>
+
+<p><img src="/_/img/QCTools/image27.jpg" alt="" /></p>
+
+<h4>4. Saturation</h4>
+
+<pre>
+  Graph Domain        Graph Name(s)        Values        Ideal Range
+  ——————-             ——————–              ————-         —————–
+  Saturation          Sat                  0-180         0.00-88.7
+</pre>
+
+<p><strong>Overview:</strong> <strong>Saturation</strong> is a measure of the degree to which a color
+is diluted with white light; in other words–how vivid or “true” a color
+is. Low Saturation levels (<strong>Undersaturation</strong>) can cause colors to be
+pale or washed out. Alternatively, when the Saturation levels are too
+high (<strong>Oversaturation</strong>), the colors can appear unnaturally vibrant
+and, sometimes, almost luminous. The Saturation graph is a good way to
+compare the YUV graphs. If the UV plots are all in their ideal range,
+but the Y graph and Saturation graph plots are not, this is an indicator
+that your Luma levels are too high and causing the vividness of the
+colors to be compromised. It can also be used to compare issues with Hue
+or Chroma.</p>
+
+<p>A <strong>Vectorscope</strong> view is a good way to see Saturation data–a large
+plot area indicates much Saturation while a small plot area indicates
+little to none.</p>
+
+<p><strong>Ranges:</strong> This graph does the equivalent of plotting all pixels in a
+Vectorscope and measuring the distance from the plotted points (edge of
+the Vectorscope trace) to the center of the Vectorscope. The MAX, MIN,
+AVG, LOW and HIGH values for each frame are plotted. The <strong>SAT AVG</strong>
+will provide an overall idea of how much color saturation exists within
+a given frame. The plot for <strong>SAT MAX</strong> will highlight a number of
+errors that cause color levels which exceed broadcast range (are
+mathematically illegal). Values from <strong>0</strong> to <strong>88.7</strong> are considered
+within the 75% chrominance broadcast range. Values from <strong>88.7</strong> to
+<strong>118.2</strong> fall in-between the 75% and 100% chrominance broadcast ranges.
+Values from <strong>118.2</strong> to <strong>180</strong> represent illegal YUV color data that
+cannot be converted back to RGB without producing artifacts (negatives
+or overflows). This is usually caused by TBC error or tape damage.</p>
+
+<p>For examples of Over/Undersaturation, see <strong>TBC Errors</strong>. For more
+information on Vectorscopes, consult the <strong>Vectorscope Playback Filter</strong>
+section and the <strong>Using the TBC with Scope Monitors</strong> in the Processing
+Manual.<span id="Hue" class="anchor"></span></p>
+
+<h4>5. Hue</h4>
+
+<pre>
+  Graph Domain        Graph Name(s)        Values        Ideal Range
+  ——————-             ——————–              ————-         —————–
+  Hue                 Hue                  0-360°        120-147°
+</pre>
+
+<p><strong>Hue</strong> is another term used to describe color. In analyzing video, skin
+tone is a good baseline to measure appropriate color representation and
+balance. The Y axis values for the Hue graph correspond with the degree
+measurements of the Vectorscope. Skin tone should fall in the 147°
+range. If skin tone registers significantly above or below that number,
+it’s likely an indication that your video isn’t accurately storing or
+displaying color data accurately. When used in conjunction with the
+Vectorscope, it is easier to adjust the Hue level to produce the correct
+colors.</p>
+
+<p><strong><em>Please note:</em></strong> Hue can be very tricky. The numbers above for the
+suggested range are based on an image that is mostly of a person’s
+face/skin (all/any skin colors). Having other objects in a variety of
+colors will affect the reading. For example, if a person is wearing red,
+the hue average will be much higher (closer to 147⁰-150⁰) or if he/she
+is standing next to a bunch of trees on a bright day, the hue average
+will be much lower (closer to 110⁰-125⁰). Both of these colors can
+reflect onto the person’s and cause his/her skin to appear pink or
+yellow/green, even when the hue is in balance. This is most problematic
+with Umatic video</p>
+
+<p><strong>For Reference:</strong> the Hue filter measures G (green) at 38 degrees, Y
+(yellow) at 99 degrees, R (red) at 161 degrees, M (magenta) at 218
+degrees, B (blue) at 279 degrees, and C (cyan) at 341 degrees.</p>
+
+<p><strong>Please Note:</strong> Until I have a chance to talk to Dave regarding this
+dramatic change, I would suggest using your best judgement, in
+conjunction with the Vectorscope and employ the looser range of 128-147⁰
+when measuring Hue in QCTools. Through my research, I only came across
+small range (123-128⁰). I am not sure if Dave’s measurements correspond
+specifically to our equipment/QCTools or if there is something I am
+missing. More information soon.</p>
+
+<p><span id="Temp" class="anchor"></span></p>
+
+<p><strong>Sample of Ideal Range:</strong></p>
+
+<p><img style="max-width:50%" src="/_/img/QCTools/image30.png" alt="" /></p>
+
+<p>For more information on Vectorscopes, consult the <strong>Vectorscope Playback
+Filter</strong> section and the <strong>Using the TBC with Scope Monitors</strong> in the
+Processing Manual. For more information on the Hue graph measurements,
+look up the <strong>Munsell</strong> <strong>Color</strong> <strong>System</strong>.</p>
+
+<h4>6. Temporal Outliers (TOUT)</h4>
+
+<pre>
+  Graph Domain        Graph Name(s)        Values        Ideal Range
+  ——————-             ——————–              ————-         —————–
+  Temporal Outliers   TOUT                 0-1           0-0.009
+</pre>
+
+<p><strong>Overview:</strong> This graph was created to detect white speckle noise in
+analog VHS and 8mm video. It works by analyzing the current pixel
+against the two above and below and calculates an average value. In
+cases where the filter detects a pixel value which is dramatically
+outside of this established average, the graph will show small spikes,
+or blips, which correspond to white speckling in the video. The range of
+0-0.009 could be considered normal and anything above that range may be
+a quality error.</p>
+
+<p><strong>How the Graph Should Look:</strong> The plot should remain relatively flat
+and as close to 0 as possible.</p>
+
+<p><img style="max-width:50%" src="/_/img/QCTools/image30.png" alt=""/>
+<strong>Sample of Ideal Range:</strong></p>
+
+<p>Samples which demonstrate Temporal Outliers’ anomalies:</p>
+
+<p>You can see several blips in the graph reading, especially around 7.5s,
+15s, and 24s</p>
+
+<p><span id="VREP" class="anchor"></span><img src="/_/img/QCTools/image31.jpg" alt="" /></p>
+
+<p>For more information on TOUT graphs and playback filters, consult the
+BAVC blog post <strong>QCSchool: All About TOUT</strong>.</p>
+
+<h4>7. Vertical Line Repetitions (VREP)</h4>
+
+<pre>
+  Graph Domain                Graph Name(s)        Values        Ideal Range
+  —————————                   ——————–              ————-         —————–
+  Vertical Line Repetitions   VREP                 0-1           0
+</pre>
+
+<p>Vertical Line Repetitions, or the VREP graph, is useful in analyzing
+U-Matic tapes and detecting artifacts generated in the course of the
+digitization process. Specifically, VREP detects the repetition of lines
+in a video. If a time base corrector (TBC) notices a video signal
+dropout, it will compensate by playing the same line of data several
+times, hence the appearance of repetitious lines. The filter works by
+taking a given video line and comparing it against a video line that
+occurs 4 pixels earlier. If the difference in the two is less than 512,
+the filter reads them as being close enough to be appearing repetitious.
+Cleaning your deck and/or tape may remediate this problem.</p>
+
+<p><strong>Sample of Ideal Range:</strong></p>
+
+<p><img style="max-width:50%" src="/_/img/QCTools/image32.png" alt="" /></p>
+
+<p>Samples which demonstrate Vertical Repetition anomalies:</p>
+
+<p><img src="/_/img/QCTools/image33.jpg" alt="" /></p>
+
+<p><span id="Range" class="anchor"></span><img src="/_/img/QCTools/image34.jpg" alt="" /></p>
+
+<h4>8. Peak Signal to Noise Ratio (PSNRf)</h4>
+
+<pre>
+  Graph Domain                 Graph Name(s)        Value       Ideal Range
+  —————————-                   ——————–              ———–        —————–
+  Peak Signal to Noise Raito   PSNRf                0-60 dB     30-50 dB
+</pre>
+
+<p>This graph plots the Peak Signal to Noise Ratio between the video in
+Field 1 (odd lines) versus the video in Field 2 (even lines). PSNR is
+most commonly used to measure the quality of reconstruction of lossy
+compression codecs (e.g., for image compression). The signal in this
+case is the original data, and the noise is the error introduced by
+compression. When comparing compression codecs, PSNR is an
+<em>approximation</em> to human perception of reconstruction quality. Although
+a higher PSNR generally indicates that the reconstruction is of higher
+quality, in some cases it may not. One has to be extremely careful with
+the range of validity of this metric; it is only conclusively valid when
+it is used to compare results from the same codec (or codec type) and
+same content.</p>
+
+<p>Typical values for the PSNR in lossy image and video compression are
+between 30 and 50 dB, provided the bit depth is 8 bits, where higher is
+better. Lower values indicate that Field 1 and Field 2 are becoming more
+different which would happen during a playback error (ex. head clog).</p>
+
+<p><strong>Sample of Ideal Range:</strong></p>
+
+<p><strong>Samples which demonstrate Peak Signal to Noise Ratio anomalies:</strong></p>
+<p><span id="MSEf"></span><img src="/_/img/QCTools/image35.jpg" alt="" /></p>
+
+<h4>9. Mean Square Error (MSEf)</h4>
+
+<pre>
+  Graph Domain        Graph Name(s)        Range        Ideal Range
+  ——————-             ——————–              ————         —————————
+  Mean Square Error   MSEf                 0-1          As close to 0 as possible
+</pre>
+
+<p>This graph is meant to be used in the definition of the PSNR values. It
+reports on the Mean Square Error between Field 1 and Field 2. This is
+then used to calculate the PSNR. Higher values may be indicative of
+differences between the images of Field 1 and Field 2. In simpler terms,
+just want to make sure that this graph stays low and constant (as close
+to 0 as possible with few deviations) and that the PSNR stays between
+30-50 dB. These two graphs are best used alongside others as
+supplementary information.</p>
+
+<p><img src="/_/img/QCTools/image36.jpg" alt="" /></p>
+<p>Samples which demonstrate Mean Square Error anomalies:</p>
+
+<h2 id="playback">Playback Filter Descriptions</h2>
+
+<h3 id="playback_intro">Introduction</h3>
+
+<p>The QCTools preview window is intended as an analytical playback
+environment that allows the user to review video through multiple
+filters simultaneously. Often inconsistencies within the graph layout
+may be better understood by examining those frames in the playback
+window. The playback window includes two viewing windows which may be
+set to different combinations of filters. This allows a user to playback
+a video by multiple forms of analysis simultaneously just as viewing a
+Waveform and a Vectorscope side-by-side or seeing the video with
+highlighted pixels that are outside of broadcast range while seeing the
+waveform display.</p>
+
+<p><strong>Field View</strong>: Many of the filters include the option of enabling
+<strong>Field.</strong> This display splits the two video Fields for the selected
+frame and shows them as separate images. Thus all odd-numbered video
+lines present appear on the top of the image and the even-numbered lines
+appear on the bottom (see right hand side of image below). To enable
+Field, click the checkbox next to the filter drop-down menu (when
+available). Older versions of QCTools called referred to this as “Field
+Split”.</p>
+
+<h3 id="playback_desc">Descriptions</h3>
+
+<h4>1. No Display</h4>
+
+<p>This option enables you to remove one display, thereby only showing one
+view. This option allows a single playback window to occupy a greater
+amount of screen-space.</p>
+
+<h4>2. Normal</h4>
+
+<p>This view simply shows the video as QCTools interprets it, no special
+effects or filtering is added. In this view, you also have the option of
+enabling a <strong>Field</strong> display.</p>
+
+<p><strong>When to Use:</strong> Since many analog video errors occur differently
+between the two interlaced Fields, splitting the Fields into two
+distinct images can make it easier to see if a given error is caused by
+the analog video playback device (such as a head clog where the two
+Fields would react very differently) or tape damage (where the two
+Fields would react similarly).</p>
+
+<p>What to Look For:</p>
+
+<p><img src="/_/img/QCTools/image38.jpg" alt="" /></p>
+
+<p><img style="max-width:50%" src="/_/img/QCTools/image39.png" alt="" /></p>
+<h4>3. Histogram</h4>
+
+<p>The histogram charts the exposure and brightness of the video image.
+When you select this filter, check the RGB box. Typically the histogram
+will show one graph per channel (one for each Y, U, and V or one for
+each red, green, and blue). You can look at all 3 at once (check A box)
+or each individually. You may also select <strong>Field</strong> option which will
+depict Fields 1 and 2 separately (Field 1 on top, Field 2 on bottom).</p>
+
+<p>The graphs all show the levels of each channel from lightest to darkest.
+This means that the height of the plots on the left correspond to the
+dark parts of the image in that channel and the right corresponds to the
+lighter parts of the image. Video with a lot of contrast and a well
+distributed range of luminance values will result in a histogram with an
+even spread. The height or number of peaks and valley is not important.
+You want to make sure that the plots extend fully between the left and
+right. If the ends of the plots are bunched up and climbing against the
+end of the graph display, this most likely means that your image is
+overly bright and clipping has occurred.</p>
+
+<h4>4. Waveform</h4>
+
+<p>The Waveform displays a graph showing the signal intensity in the video
+clip. The horizontal axis of the graph corresponds to the video image
+(from left to right) and the vertical axis is the signal intensity in
+units called IRE (named for the Institute of Radio Engineers). The
+numbers on the right vertical axis correspond to the range percentage
+(0-100%).</p>
+
+<p>The Waveform displays luminance (Y Channel) information as a waveform.
+Bright objects produce a waveform pattern near the top of the graph;
+darker objects produce a waveform toward the bottom. For NTSC video in
+the United States, luminance levels should range from 7.5 to 100 IRE
+(sometimes referred to as the legal broadcast limit).</p>
+
+<p><img style="max-width:50%" src="/_/img/QCTools/image40.png" alt="" /></p>
+
+<p>The waveform monitor is a graphical representation of the image, showing
+Luma values in the same position relative to those within the frame. For
+example, if part of your sky is overexposed you will see it in the same
+horizontal position on the waveform display as it appears in the frame.</p>
+
+<p>Depending on your footage, your waveform will look different. If you are
+monitoring video which is high contrast, you might not see any values in
+the mid grays. The picture on the left shows a waveform for an evenly
+exposed image with a dark patch on the left and brighter values from the
+center of the frame out to the right. The trace should not go above 100
+or below 0. However, sometimes analog video will have a black border
+around the image; it is okay if the border goes below 0%.</p>
+
+<p><img style="max-width:50%" src="/_/img/QCTools/image41.png" alt="" /></p>
+<h4>5. Vectorscope</h4>
+
+<p>The Vectorscope displays a circular chart, similar to a color wheel that
+shows the video’s chrominance information (U and V Channels).</p>
+
+<p>Saturation is measured from the center of the chart outward. Saturated,
+vivid colors produce a pattern some distance from the center of the
+chart, while a black-and-white image produces only a dot at the center
+of the chart.</p>
+
+<p>The particular color, or hue, of the image determines the direction
+(angle of the pattern). Small target boxes [ ] indicate where fully
+saturated magenta, blue, cyan, green, yellow, and red (present in a
+color bars test pattern) should appear. In NTSC video, chrominance
+levels should not exceed these target areas.</p>
+
+<p>You may also select <strong>Field</strong> option which will depict Fields 1 and 2
+separately (Field 1 on top, Field 2 on bottom).</p>
+
+<h4>6. Extract Planes Equalized</h4>
+
+<p><img src="/_/img/QCTools/image42.jpg" alt="" />
+<strong>&amp; Extract Planes UV Equalized</strong></p>
+
+<p>The <strong>Extract Planes Equalized</strong> filter extracts a specified video plane
+(such as Y, U, or V) which represents the Luma or part of the Chroma
+data from the video so that it may be reviewed on its own. The filter
+also may apply histogram equalization to redistributes the pixel
+intensities to equalize their distribution across the intensity range
+(this feature can help exaggerate or clarify the details of the plane
+image). This filter is useful for detecting lossy compression in video
+signals or establishing provenance.</p>
+
+<p>The <strong>Extract Planes UV Equalized</strong> filter is similar to the <strong>Extract
+Planes Equalized</strong> filter but shows the two Chroma planes (U and V) side
+by side.</p>
+
+<h4>7. Bit Plane</h4>
+
+<p><img src="/_/img/QCTools/image43.jpg" alt="" />
+This filter selects the bit position of
+each plane for display. Selecting ‘None’ for a plane will replace all
+values with 0x80 (middle gray for Y and no color for U or V). Selecting
+‘All’ will send the display plane as is. Selecting ‘Bit [1-8]’ will
+display only that specific bit position of each pixel of the plane. For
+the Y plane a pixel will display as black if that bit is ‘0’ or white if
+that bit is ‘1’. For U a pixel will be yellow-green if ‘0’ purple if
+‘1’. For V a pixel will be green for ‘0’ and red for ‘1’. Generally
+lossy video codecs will show blocky structured patterns at higher
+numbered bit positions. (Video sample and permission to use provided by
+<a href="//www.seattle.gov/"><em>seattle.gov</em></a>)</p>
+
+<p><img style="max-width:50%" src="/_/img/QCTools/image44.jpg" alt="" /></p>
+<h4>8. Chroma Adjust</h4>
+
+<p>This filter enables the Hue and Saturation levels to be adjusted. Hue
+adjustments may be expressed in degrees where 0 is no change and 180
+would invert the color. For Saturation a value of 1 leaves the
+Saturation unchanged, 0 removes all color, and the Saturation may be
+increased up to a maximum of 10.</p>
+
+<p><img src="/_/img/QCTools/image45.jpg" alt="" /></p>
+<h4>9. Field Difference</h4>
+
+<p>This presentation visualizes the difference between video Field 1 and
+Field 2. A middle gray image would mean that Field 1 and Field 2 were
+identical, whereas deviation to white or black indicates a difference.</p>
+
+<p><img style="max-width:50%" src="/_/img/QCTools/image46.png" alt="" /></p>
+<h4>12. Broadcast Range Pixels</h4>
+
+<p>This is the same presentation as ‘Normal’ except that pixels that are
+outside of broadcast range are highlighted as white. This can often
+correspond to Luma noise. Again here, you have the option of selecting
+<strong>Field</strong> to display Field 1 (top) and Field 2 (bottom) separately.</p>
+
+<h4>13. Broadcast Illegal Focus</h4>
+
+<p>For video that uses the YUV colorspace and decode in a broadcast range.
+Values from 0-16 (on an 8 bit scale) will all decode to black on a
+computer monitor, while values from 235-255 will decode as white. This
+filter allows the users to select to feature pixel data that is outside
+of broadcast range. Select “above whites” to set pixels with Luma values
+from 236-255 to a range of grays (while all other pixels are set to
+black). Select “below black” to set pixels with Luma values from 0-15 to
+a range of grays (while all other pixels are set to black). If a video
+frame only contains pixels that have Luma values within broadcast range,
+then this filter will play black only black pixels. This filter portrays
+broadcast range compliance in somewhat the opposite way as the
+“Broadcast Range Pixels” filter since it focuses on values that may be
+crushed to black or white because they fall outside of broadcast range.
+Note that some videos may intentionally be encoded in ‘full range’ where
+this filter is less relevant.</p>
+
+<p><img style="max-width:50%" src="/_/img/QCTools/image47.jpg" alt="" /><p>
+<h4>14. Temporal Outlier Pixels</h4>
+
+<p>This filter was created to detect white speckle noise in analog VHS and
+8mm video. This is the same presentation as ‘Normal’ except that pixels
+that are labelled as temporal outliers are highlighted as white.
+Temporal outliers are pixels that significantly differ from their
+neighbors and often correspond to tape damage or playback error. When
+used in conjunction with the Broadcast filters above, you can determine
+whether the white noise in your video is caused by tape damage or Luma
+levels. Select <strong>Field</strong> to see the Fields displayed separately.</p>
+
+<p>For more information on TOUT graphs and playback filters, consult the
+BAVC blog post <strong>QCSchool: All About TOUT</strong>.</p>
+
+<p><img style="max-width:50%" src="/_/img/QCTools/image48.jpg" alt="" /></p>
+<h4>15. Vertical Line Repetitions **</h4>
+
+<p>This filter displays repetitive lines of video data. This information is
+useful in analyzing U-Matic tapes and detecting artifacts generated in
+the course of the digitization process or through tape damage. For
+example, in the image below, on the left, you can see that the lines of
+distortion running across the image correspond to horizontal yellow
+bands across the image on the right. This indicates that the tape is
+damaged or the player is dirty. It helps to run this filter over any
+video that you think looks off to immediately rule out tape/player
+issues.</p>
+
+<h2 id="artifacts">Artifacts</h2>
+
+<h3>Vocabulary</h3>
+
+<p><strong>Artifact</strong> is being used in the context of this manual to describe
+anything problematic which may occurring during playback or capture
+which compromises the quality of the video image or sound. BAVC defines
+artifact as, “an undesirable picture element in a video image, which may
+naturally occur in the recording process and must be eliminated in order
+to achieve a high quality image. Most common artifacts are cross-color
+and cross-luminance. Not to be confused with artifact as a cultural
+product<em>”</em> (Bay Area Video Coalition, 1998).</p>
+
+<p><strong>Error</strong> refers to the underlying cause of the poor quality.</p>
+
+<p><strong>Area</strong> refers to the physical location where the error can be
+resolved.</p>
+
+<h3>Introduction</h3>
+
+<p>As described in the A/V Artifact Atlas:</p>
+
+<blockquote>
+  <p>For original archival audio or video materials, the recorded signal
+must be reformatted in order to remain accessible. During the playback
+and reformatting process, how can we determine if an error we see or
+hear is inherent to the original recording, or was the result of an
+imperfect transfer? How can we tell if it is a sign of equipment
+malfunction or media damage? How do we know if it can be remedied?</p>
+
+  <p>Identification and definition of audio-visual artifacts is a critical
+part of archival work. Any number of errors in the signal encoding, or
+re-encoding, can occur at any point in the life cycle. Sometimes the
+error is introduced at the time that the recording is originally
+created, perhaps by either low-quality, improperly-configured or
+poorly-functioning equipment or by ambient conditions that interfere
+with the recording process. In some cases the error appears as the
+original recording is being reformatted, caused by damage or media
+deterioration that has occurred to the original media over time, or by
+poorly-functioning equipment used in the reformatting process. At any
+time, operator error can result in unintentional mistakes that reduce
+the quality of the transfer (A/V Artifact Atlas, 23 February 2015).</p>
+</blockquote>
+
+<p><strong>Categorization</strong>: The categories used in this manual are meant to make
+solving a problem more efficient and intuitive. They refer to the
+physical location where adjustments may be made to improve the video
+quality. Without this direction, guess work can lead to additional
+errors if multiple adjustments are made in several areas. Below is a
+list of artifacts that may occur during digitizing. They are broken down
+into categories based upon area:</p>
+
+<blockquote>
+  <p>1. <strong>TBC Errors:</strong> The levels on the TBC are out of ideal range and
+require adjustment to fit the needs of the tape.</p>
+
+  <p>2. <strong>Mechanical Errors:</strong> There is something wrong with the player and
+its interaction with the tape; cleaning or adjustment of the player is
+required.</p>
+
+  <p>3. <strong>Tape Damage:</strong> The tape is damaged from wear/age/use etc.</p>
+</blockquote>
+
+<p>Within each of these areas, several common errors may occur during
+processing creating the artifact. The following list outlines the way
+the rest of this manual is organized to help you identify and fix the
+errors you may encounter. Each error is broken down to explain what you
+will see and what it means. Step-by-step instructions are provided where
+possible to assist you in identifying, confirming and, if possible,
+solving specific errors. With older, deteriorating tapes, some problems
+may occur which are unavoidable. The graphs and playback filters will
+help you to determine whether or not this is the case.</p>
+
+<blockquote>
+  <p><strong>TBC Errors</strong></p>
+</blockquote>
+
+<ol>
+  <li>
+    <p>High Video Level</p>
+  </li>
+  <li>
+    <p>Undersaturation</p>
+  </li>
+  <li>
+    <p>Oversaturation</p>
+  </li>
+  <li>
+    <p>Chrominance Noise</p>
+  </li>
+  <li>
+    <p>Luminance Noise</p>
+  </li>
+  <li>
+    <p>Hue</p>
+  </li>
+  <li>
+    <p>Y/C Delay Error</p>
+  </li>
+  <li>
+    <p>TBC Processing Artifact</p>
+  </li>
+</ol>
+
+<blockquote>
+  <p>Mechanical errors</p>
+</blockquote>
+
+<ol>
+  <li>
+    <p>Tracking Error</p>
+  </li>
+  <li>
+    <p>Skew Error</p>
+  </li>
+  <li>
+    <p>Video Head Clog</p>
+  </li>
+  <li>
+    <p>Head Switching Noise</p>
+  </li>
+  <li>
+    <p>Timecode Error</p>
+  </li>
+</ol>
+
+<blockquote>
+  <p><strong>Tape Damage</strong></p>
+</blockquote>
+
+<ol>
+  <li>
+    <p>Dropout</p>
+  </li>
+  <li>
+    <p>Tape Crease</p>
+  </li>
+</ol>
+
+<p><strong>Alternative Categories:</strong> The <strong>A/V Artifact Atlas</strong> organizes errors
+within their index in a slightly different manner. The error categories
+are defined by the root of the problem: <strong>Device</strong> <strong>Error</strong>,
+<strong>Operator</strong> <strong>Error</strong>, <strong>Production</strong> <strong>Error</strong>, and <strong>Tape</strong>
+<strong>Error</strong>. While these categories are scientifically accurate and
+incredibly helpful if you are familiar with video terms, the gray areas
+between them can be a bit overwhelming. The categories in this manual
+are tailored to apply to your institution’s needs and digitizing
+workstation.</p>
+
+<p><strong>Production Error</strong> is the only category without an equivalent in this
+manual. The majority of production errors require initial trouble
+shooting to determine whether or not production is actually the cause.
+By weeding out an alternative error (device, operator, or tape), a
+production error will become apparent. In cases where it is impossible
+to remove an artifact from the video image, it is most likely caused by
+age or production. It is very difficult to know for certain whether or
+not the artifact was created in production or through other means, so
+trying your best to fix it and then moving on is the most efficient and
+functional work plan. For any case where a production error may be
+present, the possibility has been noted.</p>
+
+<p>Please note there are many more errors that can compromise video quality
+than are described here. For more information, visit the <strong>A/V Artifact
+Atlas</strong>
+(http://avaa.bavc.org/artifactatlas/index.php/A/V_Artifact_Atlas).</p>
+
+<p><strong>TBC Problems</strong></p>
+
+<p>The bullet points under each item are formatted to explain how to spot
+this error during play back, how to confirm this using QCTools, know
+whether or not it can be solved by adjustments/re-digitizing and, if so,
+how to solve it.</p>
+
+<ol>
+  <li>
+    <p><strong>High Video Level</strong></p>
+  </li>
+  <li>
+    <p><strong>Undersaturation</strong></p>
+  </li>
+  <li>
+    <p><strong>Oversaturation</strong></p>
+  </li>
+  <li>
+    <p><strong>Chrominance Noise</strong></p>
+  </li>
+  <li>
+    <p><strong>Luminance Noise</strong></p>
+  </li>
+  <li>
+    <p><strong>Hue</strong></p>
+  </li>
+  <li>
+    <p><strong>Y/C Delay Error</strong></p>
+  </li>
+  <li>
+    <p><strong>TBC Processing Artifact</strong></p>
+  </li>
+</ol>
+
+<h4>1. High Video Level (Video Gain Error)</h4>
+
+<p><strong>What You See During Playback</strong> Areas with a lot of light or white
+(notice the sky and the shirt in the image below) will appear washed out
+or overly bright and detail will be lost.</p>
+
+<p>When a video signal is recorded, peak white levels can usually be
+adjusted in a camera, a playback VTR or a number of intervening
+processing amplifiers. In some cases, natural tips of the video level
+can be overdriven by miscalibration and become clipped at the top of the
+video signal. Particularly bright scenes might have natural peaks above
+100 IRE in raw camera footage, but clipped video signals above that
+range may mean detail in the video image is being lost during
+digitization. Video levels that are too high can also introduce noise
+into the image that is not in the original source.</p>
+
+<blockquote>
+  <p><img style="max-width:50%" src="/_/img/QCTools/image49.jpg" alt="" /></p>
+
+<p><img src="/_/img/QCTools/image50.jpg" alt="" /></p>
+
+  <p><em>Before</em> <em>After</em></p>
+</blockquote>
+
+<p><strong>What You See on BlackMagic Design</strong> – Check the Luma and Black
+activity by looking at the Waveform monitor on the BlackMagic Design
+display. If the waves are consistently above the <strong>100-110</strong> mark and
+crushed/flat, this could indicate that the video signals are out of
+range.</p>
+
+<p><img src="/_/img/QCTools/image51.jpg" alt="" /></p>
+
+<p><img src="/_/img/QCTools/image52.jpg" alt="" /></p>
+
+<p><em>Before</em> <em>After</em></p>
+
+<p><strong>How to Check in QCTools (Graph) -</strong> To confirm that this is the cause
+of the problem, run through QCTools. Click on the check box to display
+the <strong>Y graph</strong>. Locate the point in the recording containing the
+artifact by using the time signature guides on the bottom. Note the IRE
+levels of the <strong>Y AVG</strong> (average) line within the <strong>Y graph</strong> by using
+the guides on the left side of the graph. The lines should be around
+<strong>128</strong>. If there are dramatic peaks in the graph above 110 that last
+for more than a few frames, high video level is most likely the cause.
+Occasional peaks can be created by a brief burst of light or a white
+fade-out.</p>
+
+<p><strong>How to Check in QCTools (Filter)</strong> Double click on the thumbnail (at
+the bottom of the QCTools window) that corresponds to the problematic
+area. The <strong>Video Analysis Window</strong> will pop-up. On the right side,
+select the <strong>TOUT</strong> filter and note the amount of pixels that are
+highlighted in yellow (out of range). Often, they will be highlighting
+or outlining areas of the image that are too bright.</p>
+
+<p><strong>Can You Fix It?</strong> – Yes, this is correctable through retransfer and
+adjustment of the VTR output using a processing amplifier to adjust
+video levels.</p>
+
+<p><strong>How to Fix It</strong> – The following steps will allow you to adjust the
+video level and troubleshoot fixing the image quality:</p>
+
+<ul>
+  <li>
+    <p>Start playback in Black Magic and begin capturing.</p>
+  </li>
+  <li>
+    <p>On the TBC that corresponds with the Mac you are using, check that
+the display panel is in showing the idle screen (displaying the Y,
+C, and R bars).</p>
+  </li>
+  <li>
+    <p>Click <strong>Enter</strong> to access the <strong>Main</strong> menu.</p>
+  </li>
+  <li>
+    <p>Click <strong>Enter</strong> to select the <strong>Video Setup</strong> menu.</p>
+  </li>
+  <li>
+    <p>Click <strong>Enter</strong> to select <strong>Video Gain</strong>. Once this control opens,
+it will display a bar range with 0 at the middle. This is usually
+the current/automatic setting, unless someone had adjusted it prior
+to your digitization. If the display does not open at 0, the cause
+could be that previous adjustments do not work with your
+current tape. Set the video gain back to 0 and see if that resolves
+the problem. If the display opens at 0, then make adjustments while
+viewing the playback to see if this fixes the image. Note the level
+of the video gain. If changes do occur, end the capture and run it
+through QCTools (same graphs and filters).</p>
+  </li>
+  <li>
+    <p>Note the changes in the graph as the adjustments occurred. If they
+are still out of range, notice the amount of the video gain
+adjustment (TBC display) vs. the changes in the graph. Using this
+rough estimation, try the quick capture again, making adjustments to
+try to reach ideal range. Do this as many times as necessary to
+achieve the best image quality possible.</p>
+  </li>
+  <li>
+    <p>Make sure all the other levels are still ideal and digitize
+the tape.</p>
+  </li>
+</ul>
+
+<p><img style="max-width:50%" src="/_/img/QCTools/image53.png" alt="" /></p>
+
+<h4>2. UnderSaturation</h4>
+
+<p><strong>What Do You See During Playback</strong> The video signal is undersaturated
+when chrominance amplitude is restricted to values under reference
+standard level (i.e., 75% SMPTE color bars), causing colors to appear
+washed out and unnaturally pale. Undersaturation can be difficult to
+identify because video is sometimes intentionally given a desaturated
+“look” during post-production treatment or finishing. However, raw
+camera footage should always be appropriately saturated and calibrated
+to reference color bars, if available, unless otherwise stated in
+production notes.</p>
+
+<p><strong>NOTE:</strong> If the video was previously transferred from film, color fade
+from the original film may be present. A fading of the cyan and yellow
+dyes resulting in an oversaturation of magenta is the most common
+manifestation of this problem.</p>
+
+<p><img src="/_/img/QCTools/image54.jpg" alt="" /></p>
+
+<p><img src="/_/img/QCTools/image55.jpg" alt="" /></p>
+
+<p><em>Before</em> <em>After</em></p>
+
+<p><strong>First Check</strong> Before making adjustments, check to make sure this is
+not a Field error (see <strong>Mechanical Problems, 3. Video Head Clog,
+Additional</strong>)</p>
+
+<p><strong>How to Check in QCTools (Graph)</strong> Select the <strong>Sat</strong> and <strong>Hue. Hue
+AVG</strong> should be <em>at</em> <strong>147</strong> and <strong>Sat</strong> should be <em>at or below</em>
+<strong>88.7</strong> and <em>above</em> <strong>0</strong>. Select the <strong>V</strong> and <strong>U</strong> graphs. The lines
+should all be relatively smooth (straight/flat) and should be between
+<strong>0-88.7</strong>. Undersaturated images will be way below 88.7. The Hue may
+also be too high or low (above or below 147).</p>
+
+<p><strong>Can You Fix It?</strong> Yes, this is correctable through adjustment of the
+<strong>Chroma</strong> and <strong>Hue</strong> levels.</p>
+
+<p><strong>How to Fix It</strong> – The following steps will allow you to adjust the
+video level and troubleshoot fixing the image quality:</p>
+
+<ul>
+  <li>
+    <p>Start playback in Black Magic and begin capturing.</p>
+  </li>
+  <li>
+    <p>Click <strong>Chroma</strong> on the TBC. Once this control opens, it will
+display a bar range with the IRE enlarged.</p>
+  </li>
+  <li>
+    <p>While watching the <strong>Vectorscope</strong> on the <strong>BlackMagic Design</strong>
+display, slowly rotate the <strong>dial</strong> on the TBC to the right
+to increase.</p>
+  </li>
+  <li>
+    <p>Note the level of Chroma gain. If changes do occur, end the capture
+and run it through QCTools</p>
+  </li>
+  <li>
+    <p>Note the changes in the graph as the adjustments occurred. If they
+are still out of range, notice the amount of the Chroma adjustment
+(TBC display) vs. the changes in the graph. Using this rough
+estimation, try the quick capture again, making adjustments to try
+to reach ideal range. Do this as many times as necessary to achieve
+the best image quality possible.</p>
+  </li>
+  <li>
+    <p>If the <strong>Hue AVG</strong> was not at 147, it also needs to be adjusted.
+Click <strong>Hue</strong> on the TBC. Once this control opens, it will display a
+bar range with the IRE enlarged.</p>
+  </li>
+  <li>
+    <p>While watching the <strong>Vectorscope</strong> on the <strong>BlackMagic Design</strong>
+display, slowly rotate the <strong>dial</strong> on the TBC to the right to
+increase or left to decrease (depend on what its previous graph
+reading was).</p>
+  </li>
+  <li>
+    <p>Note the level of Hue gain on the TBC display. If changes do occur,
+end the capture and run it through QCTools</p>
+  </li>
+  <li>
+    <p>Note the changes in the graph as the adjustments occurred. If the
+end results are still out of range, notice the amount of the Hue
+adjustment (TBC display) vs. the changes in the graph. Using this
+rough estimation, try the quick capture again, making adjustments to
+try to reach ideal range. Do this as many times as necessary to
+achieve the best image quality possible.</p>
+  </li>
+  <li>
+    <p>Make sure all the other levels are still ideal and digitize
+the tape.</p>
+  </li>
+</ul>
+
+<h4>3. OverSaturation (Chroma Error)</h4>
+
+<p><strong>What Do You See During Playback</strong> Oversaturation refers to high
+chrominance amplitude in a video signal, creating the appearance of very
+intense color in the image. Depending on severity of oversaturation,
+color in the image may appear to bleed into areas outside of an object’s
+apparent boundaries. Most NTSC broadcast standards require that the
+composite video signal not exceed 120 IRE (flat). SMPTE split Field
+color bars use 75% Saturation as the maximum value for calibration,
+although there are other patterns used for testing which contain 100%
+Saturation values.</p>
+
+<p><img src="/_/img/QCTools/image56.jpg" alt="" /></p>
+
+<p><img src="/_/img/QCTools/image57.jpg" alt="" /></p>
+
+<p><em>Before</em> <em>After</em></p>
+
+<p><strong>What You See on BlackMagic Design</strong> the trace within the Vectorscope
+will be extending beyond the color markers (the small squares by the
+letters).</p>
+
+<p><strong>How to Check in QCTools (Graph)</strong> Select the <strong>Sat</strong> and <strong>Hue. Hue
+AVG</strong> should be <em>at</em> <strong>147</strong> and <strong>Sat</strong> should be at or <em>below</em>
+<strong>88.7</strong>. Select the <strong>V</strong> and <strong>U</strong> graphs. The lines should all be
+relatively smooth (straight/flat) and should be between <strong>100</strong>-
+<strong>120</strong>. Oversaturated images will be way above 120. The Hue may also be
+too high or low.</p>
+
+<p><strong>Can You Fix It?</strong> Yes, oversaturation is correctable through
+retransfer and adjustment of the VTR output using the TBC controls.</p>
+
+<p><strong>How to Fix It</strong> – The following steps will allow you to adjust the
+video level and troubleshoot fixing the image quality:</p>
+
+<ul>
+  <li>
+    <p>Start playback in <strong>Black Magic Media Express</strong> and begin capturing.</p>
+  </li>
+  <li>
+    <p>Click <strong>Chroma</strong> on the TBC. Once this control opens, it will
+display a bar range with the IRE enlarged.</p>
+  </li>
+  <li>
+    <p>While watching the <strong>Vectorscope</strong> on the <strong>BlackMagic Design
+display</strong>, slowly rotate the dial on the TBC to the left to lower.</p>
+  </li>
+  <li>
+    <p>Note the level of <strong>Chroma</strong> gain. If changes do occur, end the
+capture and run it through QCTools</p>
+  </li>
+  <li>
+    <p>Note the changes in the graph as the adjustments occurred. If they
+are still out of range, notice the amount of the <strong>Chroma</strong>
+adjustment (TBC display) vs. the changes in the graph. Using this
+rough estimation, try the quick capture again, making adjustments to
+try to reach ideal range. Do this as many times as necessary to
+achieve the best image quality possible.</p>
+  </li>
+  <li>
+    <p>If the <strong>Hue AVG</strong> was not at 147, it also needs to be adjusted.
+Click <strong>Hue</strong> on the TBC. Once this control opens, it will display a
+bar range with the IRE enlarged.</p>
+  </li>
+  <li>
+    <p>While watching the <strong>Vectorscope</strong> on the <strong>BlackMagic Design</strong>
+display, slowly rotate the <strong>dial</strong> on the TBC to the right to
+increase or left to decrease (depend on what its previous graph
+reading was).</p>
+  </li>
+  <li>
+    <p>Note the level of Hue gain on the TBC display. If changes do occur,
+end the capture and run it through QCTools</p>
+  </li>
+  <li>
+    <p>Note the changes in the graph as the adjustments occurred. If the
+end results are still out of range, notice the amount of the Hue
+adjustment (TBC display) vs. the changes in the graph. Using this
+rough estimation, try the quick capture again, making adjustments to
+try to reach ideal range. Do this as many times as necessary to
+achieve the best image quality possible.</p>
+  </li>
+  <li>
+    <p>Make sure all the other levels are still ideal and digitize
+the tape.</p>
+  </li>
+</ul>
+
+<p><img src="/_/img/QCTools/image58.jpg" alt="" /></p>
+<h4>4. Chrominance Noise</h4>
+
+<p><strong>What Do You See During Playback – Chrominance noise</strong> can be
+identified as traces and specks of color in an otherwise clear picture.
+It is most visible in dark, saturated areas of the video image. It can
+be due to limitations of CCD sensitivity in video cameras (i.e.,
+low-lighting conditions during camera recording), over-boosting of
+chrominance in the video signal, or the use of poor video processors.
+Multi-generation composite dubs may suffer from high levels of
+chrominance noise.</p>
+
+<p><strong>What You See on BlackMagic Design</strong> On the Vectorscope, the specks
+of trace with appear to bounce or reverberate outward from the
+concentration of trace at the center. This movement is similar that of
+ripples, but happen in odd bursts, There may also be a constant presence
+of speckled trace that extend out much further than the concentration of
+trace pattern.</p>
+
+<p><strong>How to Check in QCTools (Graph)</strong> Select the <strong>U</strong> and <strong>V</strong> graphs.
+Look for any areas with abrupt spikes or plummets (particularly in the
+MIN and MAX).</p>
+
+<p><img src="/_/img/QCTools/image17.jpg" alt="" /></p>
+
+<p><strong>How to Check in QCTools (Filter)</strong> double-click a frame with Chroma
+noise (corresponding to the same time signature as a spike in the graph)
+and select the <strong>Histogram</strong> filter in the right hand view. Check the
+<strong>U</strong> and <strong>V</strong> boxes to view just these two graphs. If the plots are
+climb the edges of the display or do not extend to both edges, the
+Chroma levels are most likely off.</p>
+
+<p><strong>Can You Fix It?</strong> Maybe<strong>.</strong> If the video output has been properly
+adjusted for playback, there is not an acceptable fix for this problem
+in preservation workflows.</p>
+
+<p><strong>How to Fix It</strong> If the Chroma levels (U and V) were off, you can try
+the following steps to reduce the noise:</p>
+
+<ul>
+  <li>
+    <p>Start playback in <strong>BlackMagic Media Express</strong> and begin capturing.</p>
+  </li>
+  <li>
+    <p>Click <strong>Chroma</strong> on the TBC. Once this control opens, it will
+display a bar range with the IRE enlarged.</p>
+  </li>
+  <li>
+    <p>While watching the <strong>Vectorscope</strong> on the <strong>BlackMagic Design</strong>
+display, slowly rotate the dial on the TBC to the left to lower.</p>
+  </li>
+  <li>
+    <p>Note the level of <strong>Chroma</strong> gain. If changes do occur, end the
+capture and run it through QCTools</p>
+  </li>
+  <li>
+    <p>Note the changes in the graph as the adjustments occurred. If they
+are still out of range, notice the amount of the <strong>Chroma</strong>
+adjustment (TBC display) vs. the changes in the graph. Using this
+rough estimation, try the quick capture again, making adjustments to
+try to reach ideal range. Do this as many times as necessary to
+achieve the best image quality possible.</p>
+  </li>
+</ul>
+
+<h4>5. Luminance Noise</h4>
+
+<p><img src="/_/img/QCTools/image59.jpg" alt="" /><p>
+<p><strong>What Do You See During Playback</strong> Luminance noise
+is noise where only the brightness of a colored pixels is affected (but
+the color as such is fine). This appears as a bright layer of white
+noise (a translucent layer of snow) over the image.</p>
+
+<p><strong>What You See on BlackMagic Design</strong> The <strong>Waveform</strong> monitor will
+show an uneven trace spread, with trace that is consistently out of
+ideal range.</p>
+
+<p><strong>How to Check in QCTools (Graph)</strong> On the <strong>Y graph</strong>, look for any
+plots that are not within the 16-235 range or where the peaks and valley
+are noticeably erratic. On the <strong>YUV Diffs graph</strong>, see if there is a
+significant different between the Y plot and the U/V plots. Also, look
+at the <strong>Broadcast Range graph</strong>; normal, noise-free video would not
+trigger this filer, but noise occurring outside of these parameters
+would read as spikes in the graph. Typically anything with a value over
+0.01 will read as an artifact.</p>
+
+<p><strong>How to Check in QCTools (Filter)</strong> Double click on a frame that
+contains Luma noise. On the right hand view, compare the <strong>Broadcast
+Range Pixels filter</strong> with the <strong>TOUT filter</strong>. Both will possibly
+present spots (specks) highlighted in yellow. Notice the spread of the
+yellow specks in both. Do they outline areas that are either white or
+black? Or are they evenly spread across the image? If the spread is
+even, the noise is probably caused by tape damage. If it is concentrated
+in certain areas, this is most likely a Luma level artifact that is can
+be fixed through adjustment or was recorded into the original image.</p>
+
+<p><strong>Can You Fix It?</strong>Maybe. If the video output has been properly
+adjusted for playback, there is not an acceptable fix for this problem
+in preservation workflows.</p>
+
+<p><strong>How to Fix It</strong> If the Luma levels (Y) were off, you can try the
+following steps to reduce the noise:</p>
+
+<ul>
+  <li>
+    <p>Start playback in <strong>BlackMagic Media Express</strong> and begin capturing.</p>
+  </li>
+  <li>
+    <p>Click <strong>Luma</strong> on the TBC. Once this control opens, it will display
+a bar range with the IRE enlarged.</p>
+  </li>
+  <li>
+    <p>While watching the <strong>Vectorscope</strong> on the <strong>BlackMagic Design</strong>
+display, slowly rotate the dial on the TBC to the left to lower.</p>
+  </li>
+  <li>
+    <p>Note the level of <strong>Luma</strong> gain. If changes do occur, end the
+capture and run it through QCTools</p>
+  </li>
+  <li>
+    <p>Note the changes in the graph as the adjustments occurred. If they
+are still out of range, notice the amount of the <strong>Luma</strong> adjustment
+(TBC display) vs. the changes in the graph. Using this rough
+estimation, try the quick capture again, making adjustments to try
+to reach ideal range. Do this as many times as necessary to achieve
+the best image quality possible.</p>
+  </li>
+</ul>
+
+<h4>6. Hue</h4>
+
+<p><strong>What Do You See During Playback</strong> The colors will immediately appear
+<strong>“</strong>off” and most noticeably, the majority of featured skin tones will
+look unnatural (too orange, red, yellow, etc.)</p>
+
+<p><strong>What You See on BlackMagic/Vrecord Design</strong> on the <strong>Vectorscope</strong>
+the concentration of trace will not point exactly at the 147⁰ point
+(skintone line marked on Vrecord vectorscope) and the color
+concentration will be significantly uneven. The Hue measurement on the
+Vrecord numerical display will be significantly above or below 147⁰.</p>
+
+<p><strong><em>Please note:</em></strong> Hue can be <em>very</em> tricky. The numbers above for the
+suggested range are based on an image that is mostly of a person’s
+face/skin (all/any skin colors). Having other objects in a variety of
+colors will affect the reading. For example, if a person is wearing red,
+the hue average will be much higher (closer to 147⁰-150⁰) or if he/she
+is standing next to a bunch of trees on a bright day, the hue average
+will be much lower (closer to 110⁰-125⁰). Both of these colors can
+reflect onto the person’s and cause his/her skin to appear pink or
+yellow/green, even when the hue is in balance. This is most problematic
+with Umatic video.</p>
+
+<p><strong>How to Check in QCTools (Graph)</strong> The Hue measurement on the will be
+significantly above or below 147⁰.</p>
+
+<p><strong>How to Check in QCTools (Filter)</strong> Hue, Saturation, Diffs, &amp; U/V</p>
+
+<p><strong>Can You Fix It?</strong> Yes (most likely)</p>
+
+<p><strong>How to Fix It</strong> Using the TBC that corresponds with the Mac you are
+using, do the following:</p>
+
+<ul>
+  <li>
+    <p>Push the <strong>Hue</strong> button</p>
+  </li>
+  <li>
+    <p>Using the <strong>dial</strong>, adjust the range to be <strong>147⁰</strong>. Adjusting the
+<strong>Hue</strong> on the <strong>TBC</strong> will rotate the angle of the pattern (trace)
+on the <strong>Vectorscope</strong>.</p>
+  </li>
+  <li>
+    <p>Check your work by watching the <strong>Vectorscope</strong> monitor on the
+<strong>BlackMagic Design</strong> display. The angle of Hue should be about
+<strong>123-147⁰</strong> or about <strong>11 o’clock</strong>. In <strong>Vrecord</strong>, the program
+window <strong>Vectorscope</strong> has markers for the <strong>skintone</strong> line</p>
+  </li>
+  <li>
+    <p>For more information read the <strong>Vectorscope</strong> section in the <strong>Video
+Processing Manual</strong>.</p>
+  </li>
+</ul>
+
+<h4>7. Y/C Delay Error</h4>
+
+<p><strong>What Do You See During Playback</strong> When video suffers from Y/C delay
+error, there will be a mismatch in the timing among the luminance and/or
+color channels, with resulting visible misalignment in how colors appear
+in the monitor. A misalignment of Y/C shows a blurry edge around areas
+with high contrast color difference, and will be most apparent around
+sharp edges of objects in the video image. Notice the difference in the
+images below highlighted in the enlarged detail boxes. In the <em>Before</em>
+(image on the left) you can see a white edge along the reporter’s yellow
+jeans, as well as a green hue around the orange drop shadow in the
+lettering on the sign behind them. This is caused by misaligned Y and C
+components in the video signal. The error is corrected in the <em>After</em>
+image (image on the right).</p>
+
+<p><img src="/_/img/QCTools/image60.jpg" alt="" /></p>
+
+<p><img src="/_/img/QCTools/image61.jpg" alt="" /></p>
+
+<p><em>Before</em> <em>After</em></p>
+
+<p><strong>What You See on BlackMagic Design</strong></p>
+
+<p>How to Check in QCTools (Filter)</p>
+
+<p><strong>Can You Fix It?</strong> Yes, some time base correctors (VTR integrated or
+stand-alone) have Y/C adjustment capability.</p>
+
+<p><strong>How to Fix It</strong> – The following steps will allow you to adjust the
+video level and troubleshoot fixing the image quality:</p>
+
+<ul>
+  <li>
+    <p>Start playback in Black Magic and begin capturing.</p>
+  </li>
+  <li>
+    <p>On the TBC that corresponds with the Mac you are using, check that
+the display panel is in showing the idle screen (displaying the Y,
+C, and R bars).</p>
+  </li>
+  <li>
+    <p>Click <strong>Enter</strong> to access the <strong>Main</strong> menu.</p>
+  </li>
+  <li>
+    <p>Click <strong>Enter</strong> to select the <strong>Video Setup</strong> menu. Use the knob to
+scroll through the list of options.</p>
+  </li>
+  <li>
+    <p>Click <strong>Enter</strong> to select <strong>Input</strong> <strong>Y/C Delay</strong>. Once this control
+opens, it will display a bar range. Make adjustments while viewing
+the playback to see if this fixes the image. Note the level of the
+video gain. If changes do occur, end the capture and run it through
+QCTools (same graphs and filters).</p>
+  </li>
+  <li>
+    <p>Note the changes in the graph as the adjustments occurred. If they
+are still out of range, notice the amount of the input Y/C delay
+adjustment (TBC display) vs. the changes in the graph. Using this
+rough estimation, try the quick capture again, making adjustments to
+try to reach ideal range. Do this as many times as necessary to
+achieve the best image quality possible.</p>
+  </li>
+  <li>
+    <p>Make sure all the other levels are still ideal and digitize
+the tape.</p>
+  </li>
+</ul>
+
+<h4>8. TBC Processing Artifact</h4>
+
+<p><strong>What Do You See During Playback</strong> An artifact which is generated by
+maladjustment or circuitry failure in an integrated or stand-alone time
+base corrector (TBC) can be categorized as a processing artifact.
+Depending on the type of TBC used, these have a diverse set of
+manifestations and can include over-enhancement and aggressive noise
+reduction. If a video signal output to a time base corrector is suddenly
+lost due to low RF from severe media damage, a head clog or some other
+incident, the TBC may output noise while the processor attempts to
+re-lock to the incoming video signal.</p>
+
+<p>In the example below, a TBC was introducing errors through
+overcorrection. The image on the left is the correct image processed
+through a properly functioning TBC, while the image on the right shows
+overcorrection for what would otherwise be minimal skewing at the top,
+and a line error now appearing along the bottom. During playback, this
+tape showed a vertically shaky display that wasn’t occurring before the
+signal was sent through the TBC.</p>
+
+<p><img src="/_/img/QCTools/image62.jpg" alt="" /></p>
+
+<p><em>Correct Incorrect</em></p>
+
+<p><strong>What You See on BlackMagic Design</strong></p>
+
+<p><strong>How to Check in QCTools (Graph)</strong></p>
+
+<p>How to Check in QCTools (Filter)</p>
+
+<p><strong>Can You Fix It?</strong> This artifact may be correctable by readjustment
+or calibration of the TBC. If the TBC cannot process video output due to
+poor playback signal from the VTR, the media must be treated to improve
+playback or a different and more effective TBC must be used.</p>
+
+<p><strong>How to Fix It</strong></p>
+
+<p><img src="/_/img/QCTools/image63.jpg" alt="" />
+<strong>Mechanical Problems</strong></p>
+
+<p>The bullet points under each item are formatted to explain how to spot
+this error during play back, how to confirm this using QCTools, know
+whether or not it can be solved by adjustments/re-digitizing and, if so,
+how to solve it.</p>
+
+<ol>
+  <li>
+    <p><strong>Tracking Error</strong></p>
+  </li>
+  <li>
+    <p><strong>Skew Error</strong></p>
+  </li>
+  <li>
+    <p><strong>Video Head Clog</strong></p>
+  </li>
+  <li>
+    <p><strong>Head Switching Noise</strong></p>
+  </li>
+  <li>
+    <p><strong>Timecode Error</strong></p>
+  </li>
+</ol>
+
+<p><img src="/_/img/QCTools/image64.jpg" alt="" />
+<strong>1. Tracking Error</strong></p>
+
+<p><strong>What Do You See During Playback</strong> Tracking error is visible as a
+distortion produced during playback caused by the inability of video
+heads to correctly follow the video tracks recorded on a tape. The
+tracking control adjustment corrects for this error. It delays the
+control track signal during playback so its position approximates the
+position of the control track head that was used on the recording
+machine.</p>
+
+<p><strong>What You See on BlackMagic Design</strong> See <strong>Waveform</strong> filter (same as
+BlackMagic Design display) below.</p>
+
+<p><strong>How to Check in QCTools (Graph)</strong> Large tracking errors in a video
+file will be clearly evident as significant spikes in the Temporal
+Outliers (TOUT) graph. Check the boxes to generate graphs for both
+<strong>TOUT</strong> and <strong>VREP</strong>. Examples of TOUT graph and playback images with
+tracking errors below.</p>
+
+<p><img src="/_/img/QCTools/image65.png" alt="" /></p>
+<p><img src="/_/img/QCTools/image66.png" alt="" /></p>
+<p><strong>How to Check in QCTools (Filter)</strong>
+Double click on the thumbnail (at the bottom of the QCTools window) that
+corresponds to the problematic area. The <strong>Video Analysis Window</strong> will
+pop-up. On the right side, select the <strong>Temporal Outlier Pixels</strong>
+filter. This is the same presentation as <strong>Normal</strong> except that pixels
+that are labelled as temporal outliers are highlighted in yellow.
+Temporal outliers are pixels that significantly differ from their
+neighbors and often correspond to tape damage or playback error. A
+certain level of this is so be expected, especially on older tapes, but
+the lines of the <strong>TOUT</strong> graph should remain between 0-0.009 and be
+closer to 0 for the majority of the playback.</p>
+
+<p><img style="max-width:50%" src="/_/img/QCTools/image67.jpg" alt="" /></p>
+
+<p>The yellow highlighted pixels should also be evenly scattered and not
+too concentrated in one or more spot (see example above). Note any
+significant increases in the pixels, corresponding to the distortion on
+the <strong>Normal</strong> playback and spikes in the <strong>TOUT</strong> graph (see image
+below).</p>
+
+<p><img style="max-width:50%" src="/_/img/QCTools/image68.jpg" alt="" /></p>
+
+<p>In the above image, the pixels are concentrated in places where the
+white or black levels are out of range (overly dark or overly
+bright/white). This would signify a TBC adjustment error, whereas the
+first image implies either damage to the tape or a tracking error. Also,
+often times with a tracking error, if you leave the Temporal Outlier
+Pixels filter up during playback, the yellow areas with move change
+significantly and quickly.</p>
+
+<p>Next, select the <strong>Vertical Line Repetitions</strong> filter. This will help to
+separate damage or tracking errors from color errors.</p>
+
+<p><strong>Can You Fix It?</strong> Yes, a tracking error can be corrected by careful
+tracking adjustment. Severe tracking errors with a particular piece of
+media may require a custom tape path alignment.</p>
+
+<p><strong>How to Fix It</strong> On the front of the <strong>U-matic</strong> player, just to the
+right of the <strong>Audio Level</strong> knobs, is the <strong>Tracking</strong> knob. While in
+playback mode, slowly twist the knob back and forth and notice if the
+problem increases or decreases. Make sure to try going all the way to
+the left and to the right, as well as going very slowly to see if, at
+any point the distortion dissipates. If not, this may be a tracking
+error that would require a custom tape path alignment or might imply
+damage to the tape.</p>
+
+<p><strong>2. Skew Error</strong></p>
+
+<p><img src="/_/img/QCTools/image69.jpg" alt="" />
+<strong>What Do You See During Playback</strong> Tape
+is susceptible to expansion and shrinkage, see Lengthwise Tape Expansion
+or Shrinkage These dimensional changes impact the length and angle of
+the recorded tracks. On playback, the loss of correspondence between the
+track position and the playback head results in a skewed picture. “A
+skew error shows as a hooking in the picture at the top [or bottom] of
+the TV monitor. If the picture hooks to the left, the video track on the
+tape is longer than the playback track length of the machine. If the
+picture hooks to the right, the video track on the tape is shorter than
+the playback length of the machine”. Audio may also be affected. “Even
+if there is no actual image error, it is possible to see, at the bottom
+of the uncropped image (i.e. in underscan mode), a slight, jittery line
+displacement immediately below the head switching point. If the symptom
+is very pronounced, the skewing will also appear along the top edge of
+the image, where it becomes visible as a disruptive skew error.”</p>
+
+<p><strong>Can You Fix It?</strong> Maybe<strong>.</strong> Some VTRs have skew controls that allow
+for minor adjustments in tape tension, most notably, several models of
+U-matic machines and some 1/2” open reel models. Otherwise, skew error
+may be minimized through the use of a good time base corrector (TBC). It
+may also require an alignment adjustment or back tension adjustment in
+the player equipment, but be careful: this kind of tinkering should be
+done by a trained technician and not performed on equipment used for
+recording.</p>
+
+<p><strong>How to Fix It</strong> The <strong>U-matic</strong> players have a horizontal <strong>Skew</strong>
+switch to the right of the analog time counter. While the video is in
+playback, slowly move the switch from side to side and notice if the
+edges of the frame bend or straighten. Not all bends can be fixed this
+way, but they can be made less noticeable. When bending (or hooking) is
+present, this is also the quickest test. As with tracking, you may not
+be able to completely fix this error.</p>
+
+<p><strong>3. Video Head Clog</strong></p>
+
+<p><img src="/_/img/QCTools/image70.jpg" alt="" />
+<strong>What Do You See During Playback</strong> When
+loose oxide builds up in the tape path, it can travel with the tape to
+the drum assembly and prevent the video head from making contact with
+the tape. The result is a heavily obscured image or a complete loss of
+image. A video head clog requires thorough cleaning of the video heads
+if the clog obstructs RF completely during playback. In most cases, a
+severe head clog cannot be removed by playing a cleaning tape through
+the VTR. The head and drum assembly must be manually cleaned using a
+cleaning solution.</p>
+
+<p><strong>How to Check in QCTools (Graph)</strong> Select the <strong>PSNRf</strong> and <strong>MSEf</strong>
+graphs (click check box) and the <strong>Diffs</strong> graph. Often, head problems
+with corrupted frames will result in large YUV Difference values/graph
+spikes. The PSNR graph will be too high and the MSE will be too low.
+Both graphs will be uneven.</p>
+
+<p><strong>How to Check in QCTools (Filter)</strong> Waveform</p>
+
+<p><strong>Can You Fix It?</strong> Yes.</p>
+
+<p><strong>How to Fix It</strong> Stop playback and clean the video heads on the
+player using an appropriate solvent and cotton swab. While you are at
+it, clean the tape path to prevent possible recontamination.</p>
+
+<p><strong>ADDITIONAL</strong></p>
+
+<p><strong>To Rule Out a Head Clog Before Undersaturation</strong> – Double click on the
+thumbnail (at the bottom of the QCTools window) that corresponds to the
+problematic area. The <strong>Video Analysis Window</strong> will pop-up. On the
+right side, select the <strong>Normal</strong> filter for both sides. On either side,
+check the <strong>Field</strong> box. This will allow you to make sure that both
+Fields are reading the color correctly.</p>
+
+<p>Since many analog video errors occur differently between the two
+interlaced Fields, splitting the Fields into two distinct images can
+make it easier to see if a given error is from problems with the analog
+video playback device (such as a head clog where the two Fields would
+react very differently) and tape damage (where the two Fields would
+react similarly).</p>
+
+<p>The image below shows two <strong>Normal</strong> displays side-by-side where the
+right image has <strong>Field</strong> enabled. By viewed the Fields separated on the
+right, it is easily clear that while Field 1 was read correctly from the
+tape, there was no color data was read for Field 2.</p>
+
+<p><strong>Can You Fix It?</strong> Yes.</p>
+
+<p><strong>How to Fix It -</strong> This error can be fixed by cleaning the video player
+and re-digitizing the content.</p>
+
+<p><strong>4. Head Switching Noise</strong></p>
+
+<p><strong>What Do You See During Playback</strong> a horizontal line or section along
+the bottom of the frame that is consistently out of alignment from the
+rest of the picture. This is a result of the video heads being switched
+on and off and occurs as a result of the different positions that each
+format records information on tape.</p>
+
+<blockquote>
+  <p><strong>VHS -</strong> Head switching noise is commonly seen at the bottom of video
+display during VHS playback. Although it occurs in other formats, it
+is often masked depending on the processing features and calibration
+of the playback VTR. During playback of videotape, video heads are
+turned on as they pass over the media and then turned off to prevent
+the display of noise that would be output when they are not in contact
+with the tape. Head switching noise is a result of that switching
+interval, and it occurs prior to the start of vertical sync. This
+artifact is not viewable in overscan on a broadcast monitor, but it is
+viewable in underscan and in full-raster digitized video and
+un-cropped digital derivatives. Some VTRs feature “SWP masking”, which
+effectively masks the lines created during head switching with video
+black.</p>
+</blockquote>
+
+<p><img src="/_/img/QCTools/image71.jpg" alt="" /></p>
+<p><img src="/_/img/QCTools/image72.jpg" alt="" /></p>
+<p><img src="/_/img/QCTools/image73.jpg" alt="" /></p>
+
+<p>Playback from a normal VHS VCR into a card that captures from line 23,
+showing normal switching noise.</p>
+
+<p>Playback from a JVC BR-S525U into a card that captures from line 23,
+showing black at the bottom of the image.</p>
+
+<p>Playback from a JVC BR-S525U into a card that captures from line 22,
+showing no switching noise. (The bending is because this card has no
+TBC.)</p>
+
+<blockquote>
+  <p><strong>U-matic -</strong> The VO-series had the head switching point about 3-4
+lines before end of active video, so you can see the head switching
+point at the bottom of the frame. This is also seen in VHS and
+Betamax. This occurs when the tape is recorded, so any tape recorded
+in a VO-series machine will show this problem regardless of what model
+machine you use for playback. The BVU-series machines placed the head
+switching point after the end of active video, so you do not see the
+problem on recordings made on BVU-series machines.</p>
+</blockquote>
+
+<p><strong>How to Check in QCTools (Graph)</strong> TOUT and VREP</p>
+
+<p><strong>How to Check in QCTools (Filter)</strong> TOUT and VREP</p>
+
+<p><strong>Can You Fix It?</strong> Yes, but only under certain circumstances. It must
+not have been recorded as part of the signal on the tape.</p>
+
+<p><strong>How to Fix It</strong> Adjust skew and tracking. Since the problem is one
+of recording and not playback, not a lot can be done to remove the
+artifact, but by making these adjustments, you may be able to minimize
+its presence.</p>
+
+<blockquote>
+  <p><strong>VHS -</strong> The VHS must be played back on a VCR that advertises
+“switching noise masking”. There are only 8 known models that meet
+these criteria; all are very large “Professional” series S-VHS decks
+that are unable to play back tapes recorded in EP or LP modes. These
+are:</p>
+
+  <p>JVC BR -S522, -S525, -S822</p>
+
+  <p>Panasonic AG -DS545, -DS550, -DS555, -DS840, -DS850</p>
+
+  <p>JVC’s marketing explains the feature like so: “For improved playback
+and special-effects picture performance, a switching noise masking
+system is also provided. Especially effective with digitally processed
+special-effects pictures, this sets the switching point 1.5H lower
+than normal, completely eliminating on-screen switching noise.”</p>
+
+  <p>Even with one of these VCRs, capture devices following SMPTE RP 202’s
+standard for video alignment will display garbage at the very bottom
+of the image. To obtain a 720x480 image with no switching noise, a
+device that captures starting from line 22 is required. Alternatively,
+one that captures 720x486 can be used, allowing offending image rows
+to simply be cropped off.</p>
+
+  <p><strong>U-matic -</strong> As previously mentioned, this artifact occurs when the
+tape is recorded, so any tape recorded in a VO-series machine will
+show this problem regardless of what model machine you use for
+playback. The skew control can help minimize the horizontal offset at
+the head switching point but it is impossible to completely eliminate
+the picture problem.</p>
+</blockquote>
+
+<p><strong>5. timecode Error</strong></p>
+
+<p><strong>What Do You See During Playback</strong> Timecode error is visible as a
+line or section of rainbow distortion produced along the bottom or top
+of the picture.</p>
+
+<p><strong>Umatic</strong> - The VO-series machines do not properly support timecode.
+VO-series machines are not equipped with a timecode head, and do not
+contain the necessary filters to remove the unwanted effects where the
+timecode track interferes with the video. The addition of a timecode
+track on Umatic BVU-series machines was a big compromise. There was no
+empty space on the tape where to place the new track. The timecode track
+in BVU-series machines was placed an area that can cause “rainbow”
+interference at the top or bottom of the frame when played on a
+VO-series machine. In some cases it can cause vertical sync instability
+because the rainbow interference is obscuring the vertical sync of the
+video signal. The BVU-series machines have special filters to eliminate
+this interference. You should not see the rainbow interference or
+vertical instability on a BVU-series machine. However, a tape recorded
+on a BVU-series machine and played on a VO-series machine will likely
+show the interference. Furthermore, a tape recorded on a BVU-series
+machine and later copied using a VO-series machine will forever have the
+interference permanently on the copy.</p>
+
+<p><img src="/_/img/QCTools/image74.jpg" alt="" />
+ <h2 id="damage">Tape Damage</h2>
+
+<p>The bullet points under each item are formatted to explain how to spot
+this error during play back, how to confirm this using QCTools, know
+whether or not it can be solved by adjustments/re-digitizing and, if so,
+how to solve it.</p>
+
+<ol>
+  <li>
+    <p><strong>Dropout</strong></p>
+  </li>
+  <li>
+    <p><strong>Tape Crease</strong></p>
+  </li>
+</ol>
+
+<p><img src="/_/img/QCTools/image75.jpg" alt="" /></p>
+<h4>1. Dropout</h4>
+
+<p><img src="/_/img/QCTools/image76.jpg" alt="" /></p>
+<p><strong>What Do You See During Playback</strong>
+Brief signal loss caused by a tape head clog, defect in the tape,
+debris, or other feature that causes an increase in the head-to-tape
+spacing. A dropout can also be caused by missing magnetic material. A
+video dropout generally appears as a white spot or streak on the video
+monitor. When several video dropouts occur per frame, the TV monitor
+will appear snowy. The frequent appearance of dropouts on playback is an
+indication that the tape or recorder is contaminated with debris and/or
+that the tape binder is deteriorating.</p>
+
+<p><strong>How to Check in QCTools (Graph) – VREP and TOUT</strong></p>
+
+<p><img style="max-width:50%" src="/_/img/QCTools/image77.jpg" alt="" />
+<strong>How to Check in QCTools (Filter) –
+VREP</strong></p>
+
+<p><strong>Can You Fix It?</strong>Maybe. If media is scratched so that oxide is
+missing, the material cannot be replaced so the dropout is permanent.
+Dropout may also be recorded into the original content. This can be
+confirmed by “stepping through” the tape in a slow playback mode.</p>
+
+<p><strong>How to Fix It</strong> Environmental dirt or loose oxide can be removed by
+machine or hand-cleaning. If cleaning, it makes sense to rehouse and/or
+clean the cassette shell at the same
+time.<img src="/_/img/QCTools/image78.gif" alt="" /></p>
+
+<h4>2. Tape Crease</h4>
+
+<p><img src="/_/img/QCTools/image79.jpg" alt="" />
+<strong>What Do You See During Playback</strong> A
+tape crease is a fold or a wrinkle that can be created by a variety of
+circumstances, most of which involve VTR transport problems, damaged or
+misaligned tape guides, capstan/pinch roller malfunction, tape cinching,
+or damage caused to media during the tape threading/unthreading process.
+It results in video dropout during playback (usually horizontal and
+rolling) which is due to the wrinkle in the media surface which cannot
+be read entirely by the video head.</p>
+
+<p><strong>Can You Fix It?</strong>No<strong>.</strong> Tape creases are common and not easily
+treatable. Standard practices for safe “straightening” of videotape have
+not been developed.</p>
+
+<h2 id="glossary"><img src="/_/img/QCTools/image80.png" alt="" />
+ Glossary</h2>
+
+<h4 id="this-glossary-has-incorporated-the-terms-used-at-seattle-municipal-archives-with-the-preservation-glossary-published-by-bay-area-video-coalition-with-contributions-from-rebecca-bachman-pip-laurenson-heather-weaver-dr-john-van-bogart-and-snader--associates-incorporated"><strong>This glossary has incorporated the terms used at Seattle Municipal Archives with the <em>Preservation Glossary</em> published by Bay Area Video Coalition with contributions from Rebecca Bachman, Pip Laurenson, Heather Weaver, Dr. John Van Bogart, and Snader &amp; Associates Incorporated.</strong></h4>
+
+<h4 id="a"><strong>A</strong></h4>
+
+<p><strong>Analog recording</strong> A recording in which continuous
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#magn">magnetic</a>
+signals are written to the tape that are representations of the voltage
+signals coming from the recording of the video camera or microphone.
+Analog signals stored on tape deteriorate with each copy or generation;
+in contrast see
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#digi">digital</a>.</p>
+
+<p><strong>Analog-to-digital</strong> The process in which a continuous analog signal is
+quantized and converted to a series of binary integers.</p>
+
+<p><strong>Analog video</strong> A system of recording video images that employs
+continuously varying waveforms to encode brightness, color and the
+timing information necessary to reproduce a moving image.</p>
+
+<p><strong>ANSI</strong> See
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#stan">standards</a>.</p>
+
+<p><strong>Archival format</strong> A video format that provides reliable
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#play">playback</a>,
+without information loss. The format should be a current (as opposed to
+obsolescent) professional one supported by the industry. At present
+archival video material is typically stored on<a href="http://www.bavc.org/preservation/resources/preservation-glossary#magn"> magnetic
+tape</a>
+however in the near future computer-based storage is likely to become an
+option for archives. The advantage of uncompressed
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#digi">digital</a>
+formats over
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#anal">analog</a>
+formats is that they can be copied without generational loss. For this
+reason many archives are using digital formats for creating their
+archival masters. Ideally these formats should be uncompressed,
+component formats; however, for practical and cost reasons for Suitable
+archival formats will change as older formats become obsolete and are no
+longer supported. Ideally, archival master material is transferred onto
+new stock every 5-7 years and at this point a decision should be made
+about whether it is necessary to move to a new format as well. An
+archival format is therefore one that can be migrated onto new stock and
+new formats without the loss or distortion of information.</p>
+
+<p><strong>Artifact</strong> An undesirable picture element in a video image, which may
+naturally occur in the recording process and must be eliminated in order
+to achieve a high quality image. Most common artifacts are cross-color
+and cross-luminance. Not to be confused with artifact as a cultural
+product<em>.</em></p>
+
+<h4 id="b"><strong>B</strong></h4>
+
+<p><strong>Back coat</strong> Optional layer applied to backside of tape substrate
+layer, useful in reducing tape friction and distortion, as well as
+dissipating static charge in playback. <a href="http://www.bavc.org/preservation/resources/preservation-glossary#layers">See
+image.</a></p>
+
+<p><span id="backi" class="anchor"></span><strong>Backing film</strong> Also called
+substrate. The layer that supports the magnetic layer in a <a href="http://www.bavc.org/preservation/resources/preservation-glossary#magn">magnetic
+tape</a>,
+most commonly made of polyethylene terephthalate (PET). <a href="http://www.bavc.org/preservation/resources/preservation-glossary#layers">See
+image.</a></p>
+
+<p><strong>Baking</strong> A process of gently heating damaged videotape in an oven with
+controlled relative humidity in order to enable
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#play">playback</a>.
+As magnetic tape deteriorates the
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#poly">polymer</a>
+of the binder deteriorates by
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#hydr">hydrolysis</a>,
+resulting in what is typically called <a href="http://www.bavc.org/preservation/resources/preservation-glossary#stick">sticky
+shed</a>.
+Archivists have reported success in baking tapes that are suffering
+severe sticky shed; however, to date the scientific research has not
+been done to explain this. The temperature and humidity of the oven must
+be tightly controlled, as does the time for which a tape is baked. This
+process is not recommended except in extreme circumstances, as there is
+a suggestion that it will ultimately speed up the
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#dete">deterioration</a>
+of the tape, although it might enable playback for
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#rema">remastering</a>.
+There is unfortunately very little research in this area.</p>
+
+<p><strong>Bearding</strong> A type of video distortion that appears as black lines
+extending to the right of bright objects.</p>
+
+<p><span id="bind" class="anchor"></span><strong>Binder</strong> The<a href="http://www.bavc.org/preservation/resources/preservation-glossary#poly">
+polymer</a>
+used to bind<a href="http://www.bavc.org/preservation/resources/preservation-glossary#magn"> magnetic
+particles</a>
+together and adhere them to the tape substrate. <a href="http://www.bavc.org/preservation/resources/preservation-glossary#layers">See
+image.</a></p>
+
+<p><span id="bit" class="anchor"></span><strong>Bit</strong> Shorthand for binary digit,
+which has two optional values “0” or “1.” Eight bits means 8 binary
+digits. There are 256 possible combinations for 8 binary digits and
+therefore color depth of 8 bits represents 256 (2x2x2x2x2x2x2x2)
+possible colors. Because each pixel of a video picture contains 3
+samples Y’, R-Y’, B-Y’, the possible colors of an 8-bit system would be
+16.7 million (256 x 256 x 256). Nowadays archives will be receiving
+digital material into their collections or will be generating it as part
+of their preservation program. It is therefore necessary that we
+understand
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#digi">digital</a>
+and
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#anal">analog</a>\
+technology.</p>
+
+<p><strong>Bit rate</strong> The amount of data transported in a given amount of time,
+usually defined in Mega (Million) bits per second (Mbps). Bit rate is
+one way to define the amount of compression used on a video signal.</p>
+
+<p><span id="bite" class="anchor"></span><strong>Bit error rate (BER)</strong> The
+percentage of
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#bit">bits</a>
+that have errors in playback. One possible indicator for the
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#dete">deterioration</a>.
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#play">Playback</a>
+is never perfect and there are many possible causes of error such as
+noise, dirt and dust, and <a href="http://www.bavc.org/preservation/resources/preservation-glossary#drop">drop
+out</a>.
+In the binary world of digital data a bit is either correct or
+incorrect. Since it only has two states, the challenge is to correctly
+identify whether a bit is correct or not. To enable this, the data is
+therefore coded by adding redundant bits. All systems build in
+redundancy and error correction mechanisms. Information about bit error
+rates can refer to the bit error rate prior to error correction or the
+residual errors after error correction of digital videotape is an
+increase in the bit error rate prior to error correction.</p>
+
+<p><strong>Black, or Color Black, Blackburst</strong> A composite color video
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#sign">signal</a>
+comprised of
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#compos">composite</a>
+sync, reference burst and a black video signal which is usually at a
+level of 7.5 IRE (0.05V) above the <a href="http://www.bavc.org/preservation/resources/preservation-glossary#blank">blanking
+level</a>.
+Also refers to fade-to-black between scenes.</p>
+
+<p><span id="blank" class="anchor"></span><strong>Blanking level</strong> Also known as
+pedestal, the level of a video signal, which separates the range that
+contains the picture information from the range that contains the
+synchronizing information.</p>
+
+<p><strong>Blocking</strong> The sticking together or adhesion of successive windings in
+a tape pack. Blocking can result from deterioration of the
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#bind">binder</a>,
+storage of tape reels at high temperatures, and/or excessive tape pack
+stresses.</p>
+
+<p><strong>Blooming</strong> The defocusing of regions of a picture where brightness is
+excessive. Also refers to adjusting the white levels, on video monitors,
+to the point of leaving gray and becoming white.</p>
+
+<p><strong>Breakup</strong> Disturbance in the picture or sound
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#sign">signal</a>
+caused by loss of
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#sync">sync</a>
+or by videotape damage.</p>
+
+<p><strong>Burst (or Color Burst)</strong> The reference for establishing the picture
+color, burst is seven to nine cycles
+(<a href="http://www.bavc.org/preservation/resources/preservation-glossary#ntsc">NTSC</a>)
+or ten cycles (PAL) of
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#subc">subcarrier</a>
+placed near the end of horizontal
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#blank">blanking</a>
+to serve as the
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#phase">phase</a>
+(color) reference for the modulated color subcarrier.</p>
+
+<p><strong>Burst vector</strong><a href="http://www.bavc.org/preservation/resources/preservation-glossary#compos"> composite
+video</a>
+signals, the amplitude and angle of the color reference signal.</p>
+
+<p><strong>Byte</strong> A multi-digit binary number is called a word. A word of 8
+binary digits or
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#bit">bits</a>
+is called a byte. The amount of data that can be moved over time is
+expressed as MBps (Megabytes per second) or KBps (Kilobytes per second).
+A kilobyte of memory contains 1024 bytes, one megabyte contains 1024
+kilobytes and a gigabyte contains 1024 megabytes. These concepts are
+essential to understanding issues relating to the storage and format
+choices of digital materials as well as the terminology surrounding the
+measurement of
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#erro">errors</a>.<a href="http://www.bavc.org/preservation/resources/preservation-glossary#top">\
+</a></p>
+
+<h4 id="c"><strong>C</strong></h4>
+
+<p><strong>Capstan crease</strong>
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#wrin">Wrinkles</a>
+or creases pressed into the tape by the capstan/pinch roller assembly.</p>
+
+<p><strong>Carbon black</strong> An anti-static agent added to tape
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#bind">binder</a>,
+which also attracts debris to tape.</p>
+
+<p><strong>Chroma crawl</strong> An
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#arti">artifact</a>
+of encoded video also known as dot crawl or cross-luminance. Occurs in
+the video picture around the edges of highly saturated colors as a
+continuous series of crawling dots and is a result of color information
+being confused as
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#lumi">luminance</a>
+information by the decoder circuits.</p>
+
+<p><strong>Chroma level</strong> A reference to amount of color
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#satu">saturation</a>;
+high level Chroma that produces pastel, washed out color; low level
+Chroma produces heavy, saturated colors. The absence of Chroma would
+result in black and white.</p>
+
+<p><strong>Chroma noise</strong> A condition in which colors appear to be moving on
+screen. In color areas of picture, Chroma noise is usually most
+noticeable in highly saturated reds.</p>
+
+<p><span id="chrom" class="anchor"></span><strong>Chrominance (Chroma)</strong> The
+color part of a
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#sign">signal</a>
+relating to the hue and saturation, but not to the brightness or
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#lumi">luminance</a>
+of the signal. E.g., black, gray and white have no chrominance, but any
+colored signal has both chrominance and luminance. U, V; Cr, Cb; I, Q:
+(R-Y, B-Y) represent the chrominance information of a signal.</p>
+
+<p><strong>Cinch</strong> Interlayer slippage or magnetic tape in roll form, resulting
+in buckling of some strands of tape. The tape will in many cases<a href="http://www.bavc.org/preservation/resources/preservation-glossary#fold"> fold
+over</a>
+itself causing permanent vertical<a href="http://www.bavc.org/preservation/resources/preservation-glossary#crea">
+creases</a>
+in the tape. Also, if not fixed, will cause increased
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#drop">dropout</a>.
+See<a href="http://www.bavc.org/preservation/resources/preservation-glossary#wind">
+windowing</a>.</p>
+
+<p><span id="cinc" class="anchor"></span><strong>Cinching</strong> The wrinkling, or
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#fold">folding
+over</a>,
+of tape on itself in a loose tape pack. Normally occurs when a loose
+tape pack is sped suddenly, causing outer tape layers to slip past inner
+layers, which in turn causes buckling of tape in the region of the slip.
+Results in large
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#drop">dropout</a>
+or higher <a href="http://www.bavc.org/preservation/resources/preservation-glossary#erro">error
+rates</a>.</p>
+
+<p><span id="clip" class="anchor"></span><strong>Clipping level</strong> An electronic
+limit to avoid overdriving the video or audio portion of the television
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#sign">signal</a>.</p>
+
+<p><strong>Cleaning</strong> Debris between the
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#head">head</a>
+and the surface of a tape will cause errors in
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#play">playback</a>.
+However, the term “cleaning” is sometimes used in a general way to refer
+to more than the removal of debris from the surface of a tape, but to
+the removal of products of
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#dete">deterioration</a>
+and other actions of the “cleaning” machines. For example, it may be
+that one of the important functions of “cleaning” systems is to smooth
+deformations in the surface of the tape and this function could not
+correctly be described as cleaning but may be one of the actions being
+carried out by machines. These cleaning systems have a number of
+elements - contact with Pellon cloth, a vacuum chamber and a polishing
+stone. Research could valuably be conducted to establish what the effect
+of these cleaning systems are, what is being removed, the effect of the
+different elements and whether modifications could usefully be made. In
+addition to the systems described on the BAVC DVD <em>Playback: Preserving
+Analog Video</em>, there are also professionals who have skills and
+experience to hand clean videotape.</p>
+
+<p><span id="compon" class="anchor"></span><strong>Component video</strong> An unencoded
+video signal in which
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#lumi">luminance</a>
+(black and white) and
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#chrom">chrominance</a>
+(color) are transmitted as separate components, as such requires greater
+bandwidth than <a href="http://www.bavc.org/preservation/resources/preservation-glossary#compos">composite
+video</a>.
+Component analog video consists of three primary color signals (RGB)
+that together convey all necessary picture information.</p>
+
+<p><span id="compos" class="anchor"></span><strong>Composite video</strong> A mixed
+encoded signal combining <a href="http://www.bavc.org/preservation/resources/preservation-glossary#lumi">luminance
+</a>(black
+and white),
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#chrom">chrominance</a>
+(color),
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#blank">blanking</a>-<a href="http://www.bavc.org/preservation/resources/preservation-glossary#sync">sync</a>
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#ntsc">NTSC</a>,
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#pal">PAL</a>,
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#subc">subcarrier</a>
+to the luminance signal of approximately 3.58MHz in NTSC and 4.43 MHz in
+PAL. <span id="comp" class="anchor"></span>pulses and color burst, that
+includes horizontal or vertical synchronizing information, using one of
+the coding standards:</p>
+
+<p><strong>Compression</strong> A process employed to reduce the bit rate of
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#digi">digital</a>
+video. Compression algorithms aim to do this in ways that minimize the
+visible effects. For example, most images contain large amounts of
+identical or similar pixels that are repeated within a frame or a
+sequence of frames. <strong>Intra</strong>-coded compression will identify such
+redundancy within each frame whereas <strong>Inter</strong>-coded compression takes
+into account redundancy from one picture to the next. An intra-coded
+compression system therefore uses a time delay to calculate the pixel
+differences between pictures. The first picture is an absolute picture
+known as an Intra-coded or “I” picture. “I” pictures are sent
+periodically and require a large amount of data, this is then used as
+the reference in order to calculate the picture differences between
+successive pictures known as the differentially coded picture.
+Essentially this form of compression takes advantage of the similarities
+between successive pictures sending only the differences between
+pictures to cut down on the amount of data transmitted. Other techniques
+are based on the human ability to perceive picture detail and the
+predictability of the signal.</p>
+
+<p><span id="loss" class="anchor"></span><strong>Compression, lossless</strong> Coding
+essentially expands to provide identical data,
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#bit">bit</a><a href="http://www.bavc.org/preservation/resources/preservation-glossary#comp">
+compression</a>
+factor of such a system is usually around 2:1. Digital Betacam is a
+format that employs “lossless” intra-coded compression.</p>
+
+<p><span id="lossy" class="anchor"></span><strong>Compression, lossy</strong> Coding
+does not expand to produce identical data to the source material and
+differences are detectable. MPEG 2 is an example of a lossy inter-coded
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#comp">compression</a>
+standard. MPEG-2 is the compression system used for
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#dvd">DVD</a>.</p>
+
+<p><strong>Conservation</strong> The action taken to identify and assess the risks to a
+work of art, or artifact, from agents of
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#dete">deterioration</a>,
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#form">format</a>
+or technology. It is part of the role of a conservator to identify and,
+where possible, to mitigate such risks. Where undesirable change has
+occurred a conservator may explore ways of intervening and treating the
+work of art or artifact. Decision-making is based on information about
+the effects of deterioration or change, an understanding of the
+historical and aesthetic value of that artifact and of the likely
+effects of any proposed action. Appropriate conservation techniques and
+treatments are developed in accordance with an agreed professional code
+of ethics. Conservators have a responsibility to future generations in
+preserving the historical and aesthetic value of a work. There is much
+debate around what constitutes “undesirable change.” For example, in the
+case of a video installation, debates around the parameters of
+acceptable change will focus on whether it is appropriate to substitute
+different equipment or display technologies as older formats and
+technologies become obsolete or difficult to maintain. Artists have an
+important role to play in deciding what is essential to preserve,
+however conservators also have a responsibility to the historical
+integrity of the work. Conservation decisions are complex judgements
+made in consultation with other relevant parties such as the artist,
+where possible, and the curator or historian. The professional body for
+conservation in the USA is the American Institute for Conservation (AIC)
+<a href="http://aic.stanford.edu/">http://aic.stanford.edu/</a>. In for bit, with the original source data,
+although the processing does introduce the possibility of errors.</p>
+
+<p>A starting point for a conservator is therefore to provide a full
+description of the work of art or artifact being considered.
+Conservators are responsible for documenting changes that occur,
+decisions made about treatment or care and subsequent evaluation of such
+decisions. The relevant agents of change are dependent on the nature of
+the work of art or artifact being considered. Different types of
+artifacts will have different vulnerabilities to change and therefore
+different vocabularies of risk. For example, in the case of videotape we
+may be concerned about the impact of environmental factors such as
+temperature and humidity that increase the rate of deterioration or the
+obsolescence of a particular</p>
+
+<p>The worldwide body for conservation is the International Institute of
+Conservation (IIC) <a href="http://www.iiconservation.org/">http://www.iiconservation.org/</a></p>
+
+<p><strong>Conservation report</strong> A detailed description of the work of art or
+artifact, its condition, an analysis of the risks to that object and a
+description of how those risks might be mitigated. If treatment is
+proposed the report should document each stage of any action taken, the
+decision making process involved and a description and assessment of the
+outcome. Reports should be signed and dated.</p>
+
+<p><span id="cont" class="anchor"></span><strong>Control track</strong> A synchronizing
+signal on the edge of the videotape, which provides a reference for
+tracking control and tape speed. Control tracks which have heavy
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#drop">dropout</a></p>
+
+<p><span id="crea" class="anchor"></span><strong>Crease</strong> A tape deformity, which
+may cause horizontal or vertical lines in the
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#play">playback</a>
+picture. See
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#wrin">wrinkle</a>.</p>
+
+<p><strong>Cross-color</strong> A picture defect that appears as spurious rainbow
+patterns on highly textured objects, such as a striped shirt or a tweed
+jacket, attributed to the make-up of the
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#ntsc">NTSC</a>
+signal, which mixes high
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#lumi">luminance</a>
+and chrominance composite baseband spectrum.</p>
+
+<p><strong>Crosslinking</strong> A chemical reaction of
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#poly">polymers</a>.
+Crosslinking will lead to
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#embr">embrittlement</a>
+when the
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#bind">binder</a>
+is no longer flexible and the chemical makeup of the binder has changed
+and tightened. A reaction happens when chemicals within the binder
+crosslink. Mechanical action of the tape is difficult due to the
+tightened tape structure.</p>
+
+<p><span id="cross" class="anchor"></span><strong>Crosstalk</strong> An undesired
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#sign">signal</a>
+interfering with the desired signal, and usually caused by unintentional
+capacitive (AC) coupling. Can result in several types of picture
+distortion,
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#mist">mistracking</a>,
+and/or
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#nois">noisy</a>
+picture. Also refers to signal interference from one part of videotape
+to another.</p>
+
+<p><strong>Curvature error</strong> A change in track shape that results in a bowed or
+S-shaped track. This becomes a problem if the playback
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#head">head</a>
+is not able to follow the track closely enough to capture the
+information.</p>
+
+<p><a href="http://www.bavc.org/preservation/resources/preservation-glossary#top">\
+</a></p>
+
+<h4 id="d"><strong>D</strong></h4>
+
+<p><strong>Data</strong> Information transmitted as binary code. In the case of
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#compon">component
+video</a>
+each pixel is a vector quantity and includes information for all color
+components Y’, R-Y’ and B-Y.’ High quality standard definition for a
+moving color picture requires a data rate of 200 million
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#bit">bits</a>
+per second.</p>
+
+<p><strong>Data Compression</strong> A technique that provides for the transmission or
+storage, without noticeable information loss, of fewer data
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#bit">bits</a>
+than were originally used when the data was created.</p>
+
+<p><strong>Decoder</strong> A device used to recover the
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#compon">component</a>
+signals from a
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#compos">composite</a>
+(encoded) source. Decoders are used in displays and in various
+processing hardware where component signals are required from a
+composite source, such as composite Chroma keying of color correction
+equipment, etc.</p>
+
+<p><span id="dete" class="anchor"></span><strong>Deterioration</strong> The degradation
+of videotape, most typically with the
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#bind">binder</a>,
+which is responsible for holding the magnetic particles on the tape and
+facilitating tape transport. If the binder loses integrity - through
+softening, embrittlement, loss of cohesiveness, or loss of
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#lubr">lubrication</a>
+- the tape may become unplayable. <a href="http://www.bavc.org/preservation/resources/preservation-glossary#stickt">Sticky
+tape</a>
+and <a href="http://www.bavc.org/preservation/dvd/resources/gloss.htm#stick">sticky
+shed</a>
+are commonly used terms to describe the phenomenon associated with
+deterioration of the magnetic tape binder. <a href="http://www.bavc.org/preservation/resources/preservation-glossary#layers">See
+image.</a></p>
+
+<p><span id="digi" class="anchor"></span><strong>Digital</strong><a href="http://www.bavc.org/preservation/resources/preservation-glossary#bit">
+<strong>bits</strong></a><a href="http://www.bavc.org/preservation/resources/preservation-glossary#gene">
+<strong>generation</strong></a>
+(ones and zeros) Unlike analog, there is no information loss with each
+copy<strong>.</strong></p>
+
+<p><strong>Drop-frame time code</strong>
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#smpt">SMPTE</a>
+time code format that continuously counts 30 frames per second but drops
+2 frames from the count every minute except for every tenth minute
+(drops 108 frames every hour) to maintain synchronization of information
+in the same or which are improperly recorded may cause tracking errors
+or picture jumps. Electronic system that functions by converting the
+time code with clock time. This is necessary because the actual frame
+rate of
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#ntsc">NTSC</a>
+video is 29.94 frames per second rather than 30 frames.</p>
+
+<p><span id="drop" class="anchor"></span><strong>Dropout</strong> Momentary
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#sing">signal</a>
+loss of video or audio during
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#play">playback</a>
+on a tape machine, and caused by momentary loss of tape contact with the
+playback head, tape
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#head">head</a>
+clog, flaws in the tape or other features that cause an increase in the
+head-to-tape spacing. Dropout can also be cause by missing magnetic
+material. Video dropout generally appears as a white spot or streak on
+the video monitor. When several video dropouts occur per frame, the TV
+monitor will appear snowy. The frequent appearance of dropout on
+playback is an indication that the tape or recorder is contaminated with
+debris and /or that tape
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#bind">binder</a>
+is
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#dete">deteriorating</a>.</p>
+
+<p><span id="dub" class="anchor"></span><strong>Dub</strong> a copy of a video
+recording, or to make a copy.</p>
+
+<p><span id="dubm" class="anchor"></span><strong>Dubmaster</strong> The copy of a
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#mast">master</a>
+used for making additional copies.</p>
+
+<p><span id="dvd" class="anchor"></span><strong>DVD</strong> Abbreviation for
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#digi">Digital</a>
+Versatile Disc. There are a number of different types of DVD. At the
+time of writing these include DVD-R, DVD-Rom, DVD-RAM, DVD+RW, DVD-R/W.
+DVD is not a suitable
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#arch">archival</a>
+format for video mainly because it uses a
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#lossy">lossy</a>
+form of compression - MPEG2. It is also a format that is likely to see
+rapid changes in technology and therefore the risk of speedy
+obsolescence is high. DVDs are made up of a reflective aluminum layer, a
+polycarbonate
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#subs">substrate</a>,
+a dye layer and a clear lacquer. The aluminum layer is highly
+susceptible to pollution and the lacquer layer does not sufficiently
+protect the aluminum layer to prevent oxidation. Where the DVD is
+double-sided the two sides are bonded using an adhesive. The adhesive
+have not been subjected to accelerated aging tests by the manufacturers
+and there is little data on their life expectancy. A DVD is the same
+diameter as a CD (120cm) but cannot be read by the same equipment. DVD
+and CD both record data by encoding it as tiny pits in tracks that
+correspond to the zeros and ones of <a href="http://www.bavc.org/preservation/resources/preservation-glossary#bit">binary
+digits</a>.
+The pits are read by laser and played back. DVD is able to store more
+data by making the pits smaller and the tracks closer together and
+employing the
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#comp">compression</a>
+system MPEG II. Many artists use DVD-R as an exhibition format and this
+has replaced laser disc as a popular display <a href="http://www.bavc.org/preservation/resources/preservation-glossary#form">format
+</a>for
+many museums and galleries. However, because of the way the data is
+encoded<a href="http://www.bavc.org/preservation/resources/preservation-glossary#frame">
+frame</a>-accurate
+control cannot be achieved by referencing the picture content as it can
+with laser disc. Where external control is needed for display it is
+important to be clear of any specific requirements of the control system
+before having the disc(s) made.</p>
+
+<p><strong>DVD-R discs</strong> were introduced in 1997 with the capacity of 3.95 GB and
+a track pitch of 0.8 microns that later, by reducing the track pitch to
+0.74 microns, this was increased to 4.7GB.</p>
+
+<p>There are two types of DVD-R discs; “General” and “Authoring”. This has
+caused some compatibility issues as the lasers in the players for these
+discs need to be angled differently. Professional DVD players will have
+both lasers, however if you are using a domestic model it is important
+to check which discs your player is compatible with. This is also true
+for all other types of disc as there is unfortunately a lack of
+compatibility between playback equipment at this time. DVD is a rapidly
+developing technology and there is a continued push to increase the
+amount of data that can be stored on a disc.</p>
+
+<h4 id="e"><strong>E</strong></h4>
+
+<p><strong>Echo</strong> A wave which has been reflected at one or more points in the
+transmission medium. Echoes may be leading or lagging the primary
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#sign">signal</a>,
+and appear in the picture monitor as reflections or double images
+commonly known as
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#ghos">ghosts</a><em>.</em>
+<strong> </strong></p>
+
+<p><strong>Edge curl</strong> Usually occurs on the outside one-sixteenth inch of the
+videotape. If the tape is sufficiently deformed it will not make proper
+contact with the playback
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#head">heads</a>.
+An upper curl (audio edge) crease may affect sound quality. A lower curl
+(<a href="http://www.bavc.org/preservation/resources/preservation-glossary#cont">control
+track</a>)
+may result in poor picture quality</p>
+
+<p><span id="edged" class="anchor"></span><strong>Edge damage</strong> Physical
+distortion of the bottom edge of the magnetic tape, usually caused by
+pack problems such as <a href="http://www.bavc.org/preservation/resources/preservation-glossary#popp">popped
+strands</a>
+or
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#step">stepping</a>.
+Edge damage effects audio and <a href="http://www.bavc.org/preservation/resources/preservation-glossary#cont">control
+track</a>,
+sometimes preventing
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#play">playback</a>.</p>
+
+<p><strong>EDL</strong> (edit decision list) An EDL can be a handwritten list or
+computerized set of instructions used to direct the final outline
+editing assembly of the video programs. <strong> </strong></p>
+
+<p><strong>EIAJ</strong> Standard tape format for 1/2” VTRs after 1969.</p>
+
+<p><span id="embr" class="anchor"></span><strong>Embrittlement</strong> A tape
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#bind">binder</a>
+condition resulting from
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#poly">polymers</a>
+that have chemically meshed &amp; tightened resulting in a less supple tape.</p>
+
+<p><strong>Erasure</strong> Loss of
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#sign">signal</a>
+on the tape, resulting from extreme temperatures defined as above 275
+F/175 C.</p>
+
+<p><strong>Error correction</strong> The data in magnetic recordings can be corrupted
+due to
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#drop">dropout</a>,
+poor
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#track">tracking</a>,
+poor head noise in the replay circuits and heads. In optical recordings
+the light beam might be interrupted by scratches or dirt or the disc
+might be warped. Whatever the causes there are two types of error -
+large isolated corruptions where a clump of
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#bit">bits</a>
+are in
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#bite">error</a>
+or random errors effecting single bits. Error correction is entirely
+necessary in order to maximize the efficiency of recorders. In the
+binary world of digital media a bit can only be right or wrong.
+Therefore if you know which bits need correcting, all that needs to be
+done is for the value of the bit to be inverted. However, the difficulty
+is in predicting which bits are in error. This is done by adding what is
+known as redundancy. Redundancy is information added to the data about
+the data, the resulting unit is called a code word. Code words are more
+robust than data alone and enable the error correction mechanism to
+detect errors and correct them. If it is not possible to correct all the
+errors then the uncorrected errors are concealed. Concealment may be
+detectable as it is only the approximation of the information in error
+whereas corrected data is not detectable and perfectly accurate.</p>
+
+<p><span id="exhi" class="anchor"></span><strong>Exhibition format</strong> Tape or disc
+copies that are used expressly for frequent
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#play">playback</a>,
+as opposed to master tapes should only be played as part of the archival
+process. The criteria for a good exhibition format are different from
+that of an
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#arch">archival</a>
+format. For example hard disc,
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#dvd">DVD</a>
+and
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#lase">laser</a>
+disc are all good exhibition formats for video as they are reliable and
+because playback is made possible without mechanical
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#dete">deterioration</a>
+to the media as a result of being played. This is important where a
+video is on display all day every day. Although in the near future it is
+likely that we will see
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#unco">uncompressed</a>
+digital video being streamed from hard discs for display, it is more
+common that the video is compressed. Such
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#comp">compression</a>
+would not be acceptable for the master copy but may be a compromise that
+is acceptable for display. Each media type has different advantages and
+disadvantages, but the important point is to be clear that the criteria
+for display may be different than for archiving for example the display
+of a complex video work may require reliable frame-accurate
+synchronization.</p>
+
+<p><a href="http://www.bavc.org/preservation/resources/preservation-glossary#top"></a></p>
+
+<h4 id="f"><strong>F</strong></h4>
+
+<p><strong>Flagging</strong> A horizontal displacement of the upper portion of a
+picture. See
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#skew">skewing</a>.</p>
+
+<p><strong>Flicker</strong> Picture distortion mainly related to vertical
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#sync">syncs</a>
+and video fields display. Some flicker typically exists due to
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#inter">interlacing</a>
+and is more apparent in 50HZ systems
+(<a href="http://www.bavc.org/preservation/resources/preservation-glossary#pal">PAL</a>).
+Flicker also shows when static images are displayed on the screen, such
+as computer generated text transferred to video. Poor
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#digi">digital</a>
+image treatment, found in low quality system converters (going from PAL
+to<a href="http://www.bavc.org/preservation/resources/preservation-glossary#ntsc">
+NTSC</a>
+and vice versa) creates annoying flicker on the screen. There are
+several electronic methods to eliminate flicker.</p>
+
+<p><strong>Flutter</strong> Very short rapid variations in tape speed which may result
+in a jumpy or
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#jitt">jittery</a>
+picture.</p>
+
+<p><span id="fold" class="anchor"></span><strong>Foldover</strong> Tape that has folded
+over resulting in the oxide surface facing away from the
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#head">heads.</a></p>
+
+<p><span id="form" class="anchor"></span><strong>Format</strong> See <a href="http://www.bavc.org/preservation/resources/preservation-glossary#vidf">videotape
+formats</a>.</p>
+
+<p><span id="fram" class="anchor"></span><strong>Frame</strong> One complete video
+picture. A frame contains two video fields, scanned at the
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#ntsc">NTSC</a>
+rate of 30 frames per second, 525 lines, or the
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#pal">PAL</a>
+rate of 25 frames per second, 625 lines.</p>
+
+<p><strong>Frequency</strong> A measurement of an <a href="http://www.bavc.org/preservation/resources/preservation-glossary#anal">analog
+signal</a>’s
+vibration, represented as cycles per second or Hertz (Hz).</p>
+
+<p><a href="http://www.bavc.org/preservation/resources/preservation-glossary#top"></a></p>
+
+<h4 id="g"><strong>G</strong></h4>
+
+<p><strong>Gamma correction</strong> A process used with video and computer graphics
+images to correct brightness and internal micro-contrast within the
+image, allowing a change of ratio between the brightest red component of
+an image and the weakest red.</p>
+
+<p><strong>Gamut</strong> The range of voltages allowed from a video<a href="http://www.bavc.org/preservation/resources/preservation-glossary#sign">
+signal</a>,
+or a component of a video signal. Signal voltages outside of the range
+(i.e., exceeding the gamut) may lead to
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#clip">clipping</a>,
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#cross">crosstalk</a>
+or other distortions.</p>
+
+<p><span id="gene" class="anchor"></span><strong>Generation</strong> Copy of original
+video program material. The original videotaped material (source
+footage) is the first generation. A copy of the original is a second
+generation tape and so on. Generally the edited
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#master">master</a>
+tape is a second generation tape. In
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#anal">analog</a>
+systems, extensive efforts are made to keep generations to a minimum,
+since each copy or process adds noise and other artifacts resulting in
+diminished quality with each generation.</p>
+
+<p><strong>Generational loss</strong> Degradation cause by tape duplication.</p>
+
+<p><span id="ghos" class="anchor"></span><strong>Ghost</strong> A shadowy or weak image
+in the received picture, offset either to the right or to the left of
+the primary image, and the result of transmission conditions where
+secondary
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#sign">signals</a>
+are created and received earlier or later than the primary signal caused
+by a reflected RF signal.</p>
+
+<p><strong>Glitch</strong> A form of low frequency interference, appearing as a narrow
+horizontal bar moving vertically across the picture.</p>
+
+<p><a href="http://www.bavc.org/preservation/resources/preservation-glossary#top"></a></p>
+
+<h4 id="h"><strong>H</strong></h4>
+
+<p><strong>Head</strong> Magnetic pickup device in a VTR used to record, erase or
+reproduce video and audio
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#sign">signals</a>.</p>
+
+<p><span id="headc" class="anchor"></span><strong>Head clogging</strong> The
+accumulation of debris on one or more
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#head">heads</a>,
+usually causing poor picture clarity during
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#play">playback</a>.
+Clogging of the playback head with debris causes
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#drop">dropout</a>.</p>
+
+<p><strong>Head switching</strong> There are two write
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#head">heads</a>
+mounted on the video head assembly. The write heads are mounted 180
+degrees apart. The videotape is wound on the head drum at slightly more
+than 180 degrees. This allows for a slight overlap in information
+between the heads. The video head rotates under the tape so that the
+tape travels at one speed and the video head travels underneath at a
+much higher speed. The tracks are scanned alternately by the “A” head
+and the “B” head. Each track corresponds to one field of the interlaced
+video
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#sign">signal</a>.</p>
+
+<p>During the
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#play">playback</a>
+of the tape, the video heads are timed to avoid double playing the
+redundant region. The video head switching pulse falls in the “blacker
+than black” area below the bottom of the television. However, it can be
+seen by adjusting the vertical hold control so that the vertical sync
+pulse moves into the viewing area. Any picture disturbance during the
+head switch over should be hidden by the vertical over-scanning on a TV
+or monitor. The head drum and capstone drive form a very precise control
+system known as a servo. Poor servo tension can cause a large switching
+error that is visible in the picture.</p>
+
+<p><span id="heli" class="anchor"></span><strong>Helical scan</strong> A method of
+recording video information on a tape resulting in recorded parallel
+tracks that run diagonally across the tape from one edge to the other.</p>
+
+<p><strong>Horizontal Resolution</strong>
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#chrom">Chrominance</a>
+and
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#lumi">luminance</a>
+resolution (detail) expressed horizontally across a picture tube. This
+is usually expressed as a number of black to white transitions or lines
+that can be differentiated. Limited by bandwidth of the video
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#sign">signal</a>
+or equipment.</p>
+
+<p><strong>Hue</strong> (Tint, Phase, Chroma Phase) One of the characteristics that
+distinguishes one color from another. Hue defines color on the basis of
+its position on the spectrum, i.e., whether red, blue, green or yellow,
+etc. Hue is one of the 3 characteristics of television color, along with
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#satu">saturation</a>
+and
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#lumi">luminance</a>.
+In
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#ntsc">NTSC</a>
+and
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#pal">PAL</a>
+video
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#sign">signals</a>,
+the hue information at any particular point in the picture is conveyed
+by the corresponding instantaneous
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#phas">phase</a>
+of the active video
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#subc">subcarrier</a>.</p>
+
+<p><span id="hydr" class="anchor"></span><strong>Hydrolysis</strong> The chemical
+process in which scission or a chemical bond occurs via reaction with
+water. The polyester chemical bonds in tape binder<a href="http://www.bavc.org/preservation/resources/preservation-glossary#poly"> polymers
+</a>are
+subject to hydrolysis, producing alcohol and acid end groups. Hydrolysis
+is a reversible reaction, meaning that the alcohol and acid group can
+react with each other to produce a polyester bond and was as a
+byproduct. In practice, however, a severely degraded tape
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#bind">binder</a>
+layer will never fully reconstruct back to its original integrity when
+placed in a very low humidity environment. <a href="http://www.bavc.org/preservation/resources/preservation-glossary#layers">See image.\
+</a></p>
+
+<p><a href="http://www.bavc.org/preservation/resources/preservation-glossary#top"></a></p>
+
+<h4 id="i"><strong>I</strong></h4>
+
+<p><strong>Interlaced (See also:</strong>
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#noni">noninterlaced</a>)
+(Short for interlaced scanning) A system of video scanning whereby the
+odd- and even- numbered lines of a picture are transmitted consecutively
+as two separate interleaved fields. Also called line interlace.</p>
+
+<p><span id="ire" class="anchor"></span><strong>IRE</strong> (Institute of Radio
+Engineers) Units of measurement dividing the area from the bottom of
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#sync">sync</a>
+to peak white level into 140 equal units. 140 IRE equals 1V p-p. The
+range of active video is 100 IRE.</p>
+
+<h4 id="j"><strong>J</strong></h4>
+
+<p><strong>Jitter</strong> Small and rapid variations in a
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#wave">waveform</a>
+due to mechanical disturbances, changes in the characteristics of
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#compon">components</a>,
+supply voltages, imperfect synchronizing
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#sign">signals</a>,
+circuits, etc.</p>
+
+<h4 id="l"><strong>L</strong></h4>
+
+<p><strong>Laser disc</strong> A form of optical media that, unlike
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#dvd">DVD</a>,
+stores video as a
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#compos">composite</a>
+analog signal. The laser disc was first introduced by Philips and MCA in
+1972, and has been on the market since 1978. Laser discs can be glass or
+plastic. There are essentially two types of laser disc: those mastered
+for constant linear velocity (CLV) and those mastered for constant
+angular velocity (CAV). CAV store approximately 30 minutes of video, can
+be controlled in a
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#frame">frame</a>-accurate
+way and can be still framed. CLV discs can store approximately one hour
+of video but cannot be controlled frame-accurately and cannot be
+still-framed. Once a popular display
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#vidf">format</a>
+for many artists, the laser disc has now largely been superseded by DVD.
+Laser discs could not handle saturated areas of color, and would produce
+artifacts appearing as herring bone patterns. CAV discs did, however,
+have the advantage of frame-accurate external control.</p>
+
+<p><strong>LTC</strong> (Longitudinal Time Code) Another expression for the
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#smpt">SMPTE</a>
+time code signal recorded onto the third audio track of a videocassette
+tape.</p>
+
+<p><span id="lubr" class="anchor"></span><strong>Lubricant loss</strong> The loss of a
+component added to the magnetic layer of a tape to decrease the friction
+between the
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#head">head</a>
+and the tape. <a href="http://www.bavc.org/preservation/resources/preservation-glossary#layers">See
+image.</a></p>
+
+<p><span id="lumi" class="anchor"></span><strong>Luminance (Luma)</strong> The portion
+of the video
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#sign">signal</a>
+which contains the black and white information. Luminance indicates the
+amount of light intensity in a picture which is perceived by the eye as
+brightness. The color video picture information contains two components:
+luminance (brightness and contrast) and
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#chrom">chrominance</a>
+(<a href="http://www.bavc.org/preservation/resources/preservation-glossary#hue">hue</a>
+and
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#satu">saturation</a>).</p>
+
+<p><a href="http://www.bavc.org/preservation/resources/preservation-glossary#top"></a></p>
+
+<h4 id="m"><strong>M</strong></h4>
+
+<p><strong>Magnetic media</strong> Tape and discs that store information on a magnetized
+surface such as videotape, audiotape or computer floppy discs. <a href="http://www.bavc.org/preservation/resources/preservation-glossary#layers">See
+image.</a></p>
+
+<p><span id="magn" class="anchor"></span><strong>Magnetic Particles</strong> Elements
+incorporated in the
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#bind">binder</a>
+to form the magnetic layer - or coat -on magnetic tape. The
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#sign">signal</a>
+is recording on these particles. <a href="http://www.bavc.org/preservation/resources/preservation-glossary#layers">See image.\
+</a></p>
+
+<p><strong>Magnetic remanence</strong> The ability of the
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#pigm">pigment</a>
+to retain a magnetic field.</p>
+
+<p><span id="marc" class="anchor"></span><strong>MARC</strong> Machine Readable
+Cataloging. The standard system for computerizing cataloging records. IN
+US, also called USMARC, and systems may vary internationally, e.g.,
+DenMARC. See IMAP website for more information:
+<a href="http://www.imappreserve.org/faq.html">http://www.imappreserve.org/faq.html</a></p>
+
+<p><span id="mast" class="anchor"></span><strong>Master</strong> The earliest generation
+of a finished tape that should also be of the best quality. Masters
+should not be used as<a href="http://www.bavc.org/preservation/dvd/resources/gloss.htm#exhi"> exhibition
+tapes</a>,
+i.e., not for repeated
+<a href="http://www.bavc.org/preservation/dvd/resources/gloss.htm#play">playback</a>.
+See also
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#dubm">dubmaster.</a></p>
+
+<p><span id="rema" class="anchor"></span><strong>Migration, re-mastering,
+transferring</strong> Terms used interchangeably to refer to the process of
+copying the content of an existing videotape to new media.</p>
+
+<p><strong>Mistracking</strong> The phenomenon that occurs when the path followed by the
+read
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#head">head</a>
+of the recorder does not correspond to the location of the recorded
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#track">track</a>
+on the magnetic tape. Mistracking can occur both
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#long">longitudinal</a>
+and <a href="http://www.bavc.org/preservation/resources/preservation-glossary#heli">helical
+scan</a><a href="http://www.bavc.org/preservation/resources/preservation-glossary#heli">
+</a>recording
+systems. The read head must capture a given percentage of the track in
+order to produce a
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#sign">signal</a>
+for
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#play">playback</a>.</p>
+
+<p><strong>Moire</strong> 1. A wavy or satiny effect produced by the convergence of
+lines. It usually appears as a curving of the lines in the horizontal
+wedges of a test pattern. It is a natural optical effect when converging
+lines in a television picture are nearly parallel to the scanning lines.
+2. Optical disturbance caused by interference of similar\
+frequencies.</p>
+
+<p><a href="http://www.bavc.org/preservation/resources/preservation-glossary#top"></a></p>
+
+<h4 id="n"><strong>N</strong></h4>
+
+<p><strong>Noise</strong> Any unwanted
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#sign">signal</a>
+present in the total signal.</p>
+
+<p><strong>Nondrop Frame Time Code</strong>
+(<a href="http://www.bavc.org/preservation/resources/preservation-glossary#ntsc">NTSC</a>)
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#smpt">SMPTE</a>
+time code format that continuously counts a full 30 <a href="http://www.bavc.org/preservation/resources/preservation-glossary#frame">frames
+</a>per
+second. Because NTSC video does not operate at exactly 30 frames per
+second, nondrop frame time code will count 108 more frames in one hour
+than actually occur in the NTSC video in one hour. The result is
+incorrect synchronization of time code with clock time. Drop frame time
+code solves this problem by skipping or dropping 2 frame numbers per
+minute, except at the tens of the minute count.</p>
+
+<p><strong>Noninterlaced</strong> The process of scanning whereby every line in the
+picture is scanned during the vertical sweep. See
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#inte">interlaced</a>.</p>
+
+<p><span id="ntsc" class="anchor"></span><strong>NTSC</strong> (National Television
+Systems Committee) The US standard for color television transmission,
+calling for 525 lines of information, scanned at a rate of 30 frames per
+second. NTSC standard is used mainly in North America, Japan, and part
+of South America. One of three international standards, including
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#pal">PAL</a>
+and
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#seca">SECAM</a>.</p>
+
+<p><strong>NTSC Color Bars</strong> A pattern generated by the NTSC Generator,
+consisting of eight equal width color bars. Colors are white (75%),
+black (7.5% setup level), 75% saturated pure colors red, green, and
+blue, and 75% saturated hues of yellow, cyan, and magenta (mixtures of
+two colors in 1:1 ratio without third color).</p>
+
+<h4 id="o"><strong>O</strong></h4>
+
+<p><strong>Off-Line Editing</strong> that is done using inexpensive, nonbroadcast quality
+equipment to produce an edit decision list
+(<a href="http://www.bavc.org/preservation/resources/preservation-glossary#edl">EDL</a>)
+which will be used later for assembling a broadcast quality program
+using more expensive, high quality equipment.</p>
+
+<p><strong>Online Editing</strong> Final editing session in which the finished program
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#mast">master</a>
+is assembled from the original production material.</p>
+
+<p><a href="http://www.bavc.org/preservation/resources/preservation-glossary#top"></a></p>
+
+<h4 id="p"><strong>P</strong></h4>
+
+<p><strong>Pack slip</strong> A lateral slip of select tape windings causing high or low
+spots (when viewed with tape reel lying flat on one side) in an
+otherwise smooth tape pack. Pack slip can cause subsequent <a href="http://www.bavc.org/preservation/resources/preservation-glossary#edged">edge
+damage</a>
+when the tape is played, as it will unwind unevenly and may make contact
+with the tape reel flange.</p>
+
+<p><span id="pal" class="anchor"></span><strong>PAL</strong> (Phase Alternate Line): The
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#pal">European
+standard</a>
+for color television transmission, calling for 625 lines of information,
+scanned at a rate of 25 frames per second. Used mainly in Europe, China,
+Malaysia, Australia, New</p>
+
+<p>Zealand, the Middle East and parts of Africa. One of three international
+standards, including
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#ntsc">NTSC</a>
+and
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#seca">SECAM.</a></p>
+
+<p><span id="pigm" class="anchor"></span><strong>Pigment</strong> An old technology
+carryover term for the <a href="http://www.bavc.org/preservation/resources/preservation-glossary#magn">magnetic
+particles</a>
+contained in tape
+<a href="http://www.bavc.org/preservation/dvd/resources/gloss.htm#bind">binder</a>.
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#layers">See
+image.</a></p>
+
+<p><strong>Physical damage</strong> Any distortion of the magnetic tape which prevents
+proper
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#head">head</a>
+to tape contact and is therefore detrimental to the tape
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#play">playback</a>.
+These distortions can include <a href="http://www.bavc.org/preservation/resources/preservation-glossary#edged">edge
+damage</a>,
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#wrin">wrinkles</a>,
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#cinc">cinches</a>,
+and tape stretch. <a href="http://www.bavc.org/preservation/resources/preservation-glossary#layers">See
+image.</a></p>
+
+<p><strong>Pedestal</strong> 1. In the video waveform, the
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#sign">signal</a>
+level corresponding to black. Also called setup. 2. A pulse (usually
+with a flat peak) that elevates the base level of another waveform.</p>
+
+<p><span id="phas" class="anchor"></span><strong>Phase</strong> (Chroma Phase, Hue,
+Tint) The relative timing of a
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#sign">signal</a>
+in relation to another signal. If the time for one cycle of a signal is
+represented as a 360 degree along a time axis, the phase position for
+the second signal is called phase angle expressed in degrees. The
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#subc">subcarrier</a>
+phase TV colors can be adjusted and this makes the
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#hue">hue</a>
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#sign">signal</a>
+of a color
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#sign">signal</a>
+correct. Color phase is the timing relationship in a video that is
+measured in degrees and keeps the colors themselves.</p>
+
+<p><span id="play" class="anchor"></span><strong>Playback</strong> The viewing of
+recorded video footage or reproduction of recording video<a href="http://www.bavc.org/preservation/resources/preservation-glossary#sign">
+signal</a>
+via a magnetic pickup device.</p>
+
+<p><strong>Playback demagnetization</strong> A loss of magnetization and thus a
+degradation of recorded information caused by repeated playing of a
+recorded tape.</p>
+
+<p><strong>PLUGE</strong> (Picture Line-Up Generation Equipment) Also called Black Set.
+Used for aligning monitors and other video devices. In some versions of
+color bars, PLUGE is the black set at the bottom of the red bar that
+contains bars that are blacker than black, black, and whiter than black.
+Used to adjust monitor brightness by watching the PLUGE so that the
+whiter than black bar is just visible and both the black and blacker
+than black bars are no longer distinct.</p>
+
+<p><span id="poly" class="anchor"></span><strong>Polymer</strong> A long organic
+molecule made up of small, repeating units (literally, many mers).
+Analogous to a freight train, where each individual unit is represented
+by a freight car. At very high magnification, a chunk of polymer would
+resemble a bowl of cooked spaghetti. Plastic materials are polymers. The
+strength and toughness of plastics is due, in part, to the length of its
+polymer molecules. If the chains (links in the freight train) are broken
+by hydrolysis, the shorter chains will impart less strength to the
+plastic. If enough polymer chains are broken, the plastic will become
+weak, powdery, or gooey. See
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#bind">binder</a>.</p>
+
+<p><span id="popp" class="anchor"></span><strong>Popped strand</strong> A strand of tape
+protruding from the edge of a wound tape pack.</p>
+
+<p><strong>Preservation</strong> See<a href="http://www.bavc.org/preservation/resources/preservation-glossary#pres"> Video
+preservation</a>.</p>
+
+<p><strong>Print through</strong> The condition where low frequency
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#sign">signals</a>
+on one tape winding imprint themselves on the immediate adjacent tape
+windings. It is most noticeable on audio recordings where a
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#ghos">ghost</a>
+of a recording can be heard slightly before
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#play">playback</a>
+of the actual recording.</p>
+
+<h4 id="r"><strong>R</strong></h4>
+
+<p><strong>Remastering, migration, transferring</strong> Terms used interchangeably to
+refer to the process of copying the content of an existing videotape to
+new media.</p>
+
+<p><strong>Resolution</strong> A measure of the ability of a camera or television system
+to reproduce detail (the number of picture elements that can be produced
+with good definition).</p>
+
+<p><span id="rest" class="anchor"></span><strong>Restoration</strong> The process and
+work of improving the degraded quality of the sound or image in terms of
+video and audio preservation. It is important to be clear whether a
+proposed restoration relates to aspects of an image that are part of the
+historical nature of the technology being used at the time and are part
+of the original work and damage which has occurred after the piece was
+made due to
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#dete">deterioration</a>,
+poor handling or bad
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#rema">transfers</a>.
+It is important to recognize that the artifacts of the original
+technology are of historical value and are part of the texture of the
+work. These should not be removed. However, where damage has occurred
+after the work was finished there may be a case for intervention.
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#drop">Dropout</a>,
+for example, can be digitally “filled in” by copying information from
+the surrounding areas. There are also systems that detect artifacts in
+the image using motion compensation. A copy of the original un-restored
+video should always be
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#arch">archived</a>
+alongside any restored version.</p>
+
+<p><strong>RGB</strong> (Red, Green and Blue) The basic parallel component set in which
+a
+<a href="http://www.bavc.org/preservation/dvd/resources/gloss.htm#sign">signal</a>
+is used for each primary color; or the related equipment or interconnect
+formats or standards. The same signals may also be called “GBR” as a
+reminder of the mechanical sequence of connections in the
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#smpt">SMPTE</a>
+interconnect standard.</p>
+
+<p><strong>Roll</strong> A lack of vertical synchronization which causes the video
+picture to move upward or downward.</p>
+
+<h4 id="s"><strong>S</strong></h4>
+
+<p><strong>Saturation</strong> (Chroma, Chroma Gain, Color): 1. The intensity of the
+colors in the active picture. The voltage levels of colors. The degree
+by which the eye perceives a color as departing from a gray or white
+scale of the same brightness. A 100% saturated color does not contain
+any white; adding white reduces saturation. In
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#ntsc">NTSC</a>
+and
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#pal">PAL</a>
+video signals, the color saturation at any particular instant in the
+picture is conveyed by the corresponding instantaneous amplitude of the
+active video subcarrier. 2. The point on the operational curve of an
+amplifier at which an increase an input amplitude will no longer result
+in an increase in amplitude at the output.</p>
+
+<p><strong>Scanning</strong> The rapid movement of the electron beam in a pickup device
+of a camera or in the CRT of a television receiver. It is formatted in a
+line-for-line manner across the photo sensitive surface which produces
+or reproduces the video picture. When referred to a video surveillance
+field, it is the panning or the horizontal camera motion.</p>
+
+<p><span id="scrat" class="anchor"></span><strong>Scratching</strong> Gouging of the
+magnetic layer or
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#base">base</a>
+as the tape passes through a machine. Videotape scratches will cause a
+loss of
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#head">head</a>
+to tape contact and appear as a solid line on the screen.</p>
+
+<p><span id="seca" class="anchor"></span><strong>SECAM</strong> (Sequential Couleur Avec
+Memoir “sequential color with memory”) A color television standard with
+625 lines per frame and 50 fields per second developed by France and the
+U.S.S.R. Color difference information is transmitted sequentially on
+alternate lines as an FM signal. One of three international standards,
+including
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#ntsc">NTSC</a><a href="http://www.bavc.org/preservation/resources/preservation-glossary#pal">PAL</a>.
+and <strong> </strong></p>
+
+<p><strong>Shedding</strong> Loose oxide may clog video<a href="http://www.bavc.org/preservation/resources/preservation-glossary#head">
+heads</a>
+causing a loss of picture. <a href="http://www.bavc.org/preservation/resources/preservation-glossary#layers">See
+image.</a>
+A condition in which the oxide that forms the recording surface of a
+videotape has begun to separate from the<strong> </strong><a href="http://www.bavc.org/preservation/resources/preservation-glossary#base">
+base</a>.</p>
+
+<p><span id="sign" class="anchor"></span><strong>Signal</strong>
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#anal">Analog</a>
+video signal is an electrical signal that is continuously variable.
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#digi">Digital</a>
+video signal is comprised of <a href="http://www.bavc.org/preservation/resources/preservation-glossary#bit">binary
+digits</a>.</p>
+
+<p><strong>Signal to noise ratio (S/N)</strong> Expressed in decibels (dBs), this term
+describes a ratio or difference of wanted audible or visual information
+(<a href="http://www.bavc.org/preservation/resources/preservation-glossary#sign">signal</a>)
+versus unwanted information experienced by distorted sounds and pictures
+(<a href="http://www.bavc.org/preservation/resources/preservation-glossary#nois">noise</a>).
+Comparatively high decibel numbers mean better sound or visual images.</p>
+
+<p><strong>Sine wave</strong> Type of pure<a href="http://www.bavc.org/preservation/resources/preservation-glossary#wave">
+waveform</a>
+having an equal distance from its peak to the zero or center line and
+from its trough to the center line and in which the positive hump and
+negative hump of the wave are exactly equal in length, shape and height
+but flipped in a mirror image about the center line.</p>
+
+<p><span id="skew" class="anchor"></span><strong>Skew</strong> A bending of picture at
+or bottom of television screen caused by the changing of the video track
+angles on the tape from the time of recording to the time of
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#play">playback</a>.
+This can occur as a result of poor tension regulation by the VCR or by
+ambient conditions which affect the tape.</p>
+
+<p><strong>SMPTE</strong> (Society of Motion Picture and Television Engineers)
+Organization dedicated to researching, proposing, and promoting video
+standards.</p>
+
+<p><strong>SMPTE Time Code</strong> Time code that conforms to SMPTE standards. It
+consists of an 8-digit number specifying hours: minutes: seconds:
+frames. Each number identifies one frame on a videotape. SMPTE time code
+may be of either the frop-frame or non-drop frame type. In GVG editors,
+the SMPTE time code mode enables the editor to read either drop-frame or
+non-drop frame code from tape and perform calculations for either type
+(also called mixed time code).</p>
+
+<p><strong>Snow</strong> 1. White flashes appearing in the video image caused by random<a href="http://www.bavc.org/preservation/resources/preservation-glossary#nios">
+noise</a><a href="http://www.bavc.org/preservation/resources/preservation-glossary#nios">
+</a>and/or
+loss of <a href="http://www.bavc.org/preservation/resources/preservation-glossary#magn">magnetic
+particles</a>.
+2. TV signal breakup caused by weak video reception.</p>
+
+<p><span id="sque" class="anchor"></span><strong>Squeal</strong> Undesirable audio
+effect that is typically caused by a buildup of debris on a guide or
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#head">head</a>.
+Sometimes a cleaning of the offending surface will eliminate the squeal.
+Squeal is also caused by the tape having poor
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#lubr">lubrication</a>
+or losing its lubrication with age. A solution is to overcoat a tape
+with a lubricant solution, which will eliminate the squeal so a copy can
+be made.</p>
+
+<p><span id="stan" class="anchor"></span><strong>Standards</strong> A set of common
+guidelines such as for recording and playback processes, physical media
+and storage, which have been developed by the following committees:</p>
+
+<blockquote>
+  <p><strong>AIIM</strong> - <a href="http://www.aiim.org/article_aiim.asp?ID=18274">Association for Information and Image
+Management</a></p>
+
+  <p><strong>ANSI</strong> -<a href="http://www.ansi.org/public/ansi_info/intro.html"> American National Standards
+Institute</a></p>
+
+  <p><strong>ASTM</strong> -<a href="http://www.astm.org/cgi-bin/SoftCart.exe/FAQ/index.html?L%2Bmystore%2Bwqlb5173%2B1040107869"> American Society for Testing and
+Materials</a></p>
+
+  <p><strong>ISO</strong> -<a href="http://www.iso.ch/iso/en/ISOOnline.openerpage"> International Standards
+Organization</a></p>
+
+  <p><strong>NISO</strong> - <a href="http://www.niso.org/about/index.html">National Information Standards
+Organization</a></p>
+
+  <p><strong>RLG</strong> - <a href="http://www.rlg.org/rlg.html">Research Libraries Group</a></p>
+</blockquote>
+
+<p><span id="step" class="anchor"></span><strong>Stepping</strong> Unsmooth packing,
+with transversally mispositioned sections.</p>
+
+<p><strong>Stick slip</strong> The process in which (1) the tape sticks to the recording
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#head">head</a>
+because of high friction; (2) the tape tension builds because the tape
+is not moving at the head; (3) the tape tension level reaches a critical
+level, causing the tape to release from and briefly slip past the read
+head at high speed; (4) the tape slows to normal speed and once again
+sticks to the recording head; (5) this process is repeated indefinitely.
+Characterized by jittery movement of the tape in the transport and/or
+audible<a href="http://www.bavc.org/preservation/dvd/resources/gloss.htm#sque">
+squealing</a>
+of the tape. <a href="http://www.bavc.org/preservation/resources/preservation-glossary#layers">See
+image.</a></p>
+
+<p><span id="stick" class="anchor"></span><strong>Sticky shed</strong> The gummy
+deposits left on tape path guides and
+<a href="http://www.bavc.org/preservation/dvd/resources/gloss.htm#head">heads</a>
+after a sticky tape had been played. Sticky shed is also known as the
+phenomenon whereby a tape binder has deteriorated to such a degree that
+it lacks sufficient cohesive strength so that the magnetic coating sheds
+on playback. The shedding of particles by the tape is a result of
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#bind">binder</a>
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#dete">deterioration</a>
+that causes
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#drop">dropout</a>
+on VHS tapes. <a href="http://www.bavc.org/preservation/resources/preservation-glossary#layers">See
+image.</a></p>
+
+<p><span id="stickt" class="anchor"></span><strong>Sticky tape</strong> Tape
+characterized by a soft, gummy, or tacky tape surface; tape that has
+experienced a significant level of
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#hydr">hydrolysis</a>
+so that the magnetic coating is softer than normal; tape characterized
+by resinous or oily deposits on the surface of the magnetic tape. <a href="http://www.bavc.org/preservation/resources/preservation-glossary#layers">See
+image.</a></p>
+
+<p><span id="subc" class="anchor"></span><strong>Subcarrier</strong> The basic signal in
+all
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#ntsc">NTSC</a>
+sync signals. It is a continuous sine wave, usually generated and
+distributed at 2V in an amplitude, and having a frequency of
+3.579545MHz. Subcarrier is usually divided down from a primary crystal
+running at 14.318180MHz, and that divided by 4 is 3.579545. All other
+synchronizing signals are directly divided down from the subcarrier.
+Color subcarrier is the 3.58 MHz
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#sign">signal</a>
+that carries color information. This signal is superimposed on the
+luminance level. Amplitude of the color subcarrier represents
+saturation, and
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#phas">phase</a>
+angle represents
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#hue">hue</a>.</p>
+
+<p><span id="su" class="anchor"></span><strong>Substrate</strong> An alternate term for
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#backf">backing
+film</a>.
+The layer that supports the
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#magnp">magnetic</a>
+layer in a magnetic tape, most commonly made of polyethylene
+terephthalate (PET). <a href="http://www.bavc.org/preservation/resources/preservation-glossary#layers">See
+image.</a></p>
+
+<p><span id="sync" class="anchor"></span><strong>Sync</strong> (abbreviation for
+synchronous) The portion of an encoded video
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#signal">signal</a>
+that occurs during
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#blank">blanking</a>
+and is used to synchronize the operation of cameras, monitors and other
+equipment. Horizontal sync occurs within the blanking period in each
+horizontal
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#scan">scanning</a>
+line and vertical sync occurs within the vertical blanking period. In
+video, sync is an essential element for maintaining the proper clocking
+of video signals. <a href="http://www.bavc.org/preservation/resources/preservation-glossary#top">\
+</a></p>
+
+<h4 id="t"><strong>T</strong></h4>
+
+<p><strong>Tape clog</strong> See <a href="http://www.bavc.org/preservation/resources/preservation-glossary#headc">head
+clogging</a>.<strong> </strong></p>
+
+<p><strong>TBC (Time Base Corrector)</strong> Hardware that corrects the timing
+irregularities that occur during VCR
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#play">playback</a>.
+Time base correction is not necessary for direct playback from a VCR to
+a TV set.</p>
+
+<p><span id="t-1" class="anchor"></span><strong>Time base error</strong> A variation in
+the synchronizing signals on a videotape. When time based errors are
+large enough, they may cause<a href="http://www.bavc.org/preservation/resources/preservation-glossary#skew">
+skewing</a>
+or<a href="http://www.bavc.org/preservation/resources/preservation-glossary#flag">
+flagging</a>
+distortion of the video picture.</p>
+
+<p><span id="time" class="anchor"></span><strong>Time code</strong> tape for logging
+time code. See also
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#smpt">SMPTE</a>
+time code. Electronic indexing method used for editing and timing video
+programs. Time code denotes hours, minutes, seconds and frames elapsed
+on videotape. Time code permits very time efficient and accurate
+editing, and is displayed in a “<a href="http://www.bavc.org/preservation/resources/preservation-glossary#windd">window
+dub</a>”</p>
+
+<p><span id="track" class="anchor"></span><strong>Tracking</strong> The angle and speed
+at which the tape passes the video
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#head">heads</a>.
+Loss of tracking is evidenced by picture breakup or loss of video in
+segments of the picture.</p>
+
+<p><strong>Transcoder</strong> A device that converts one form of encoded video to
+another, e.g. to convert <a href="http://www.bavc.org/preservation/resources/preservation-glossary#ntsc">NTSC
+</a>or
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#pal">PAL</a>.
+Sometimes mistakably used to mean translator.</p>
+
+<p><strong>Transferring</strong>, migration, re-mastering</p>
+
+<p><strong>Trapezoidal error</strong> A change in the angle of a recorded <a href="http://www.bavc.org/preservation/resources/preservation-glossary#heli">helical
+scan</a>
+track. Can result in
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#mist">mistracking</a>.</p>
+
+<h4 id="v"><strong>V</strong></h4>
+
+<h4 id="vectorscope-oscilloscope-that-reads-chrominance-portion-of-a-video-signal-see-waveformhttpwwwbavcorgpreservationresourcespreservation-glossarywave"><strong>Vectorscope</strong> Oscilloscope that reads chrominance portion of a video signal. See<a href="http://www.bavc.org/preservation/resources/preservation-glossary#wave"> waveform</a>.</h4>
+
+<p><strong>Videotape</strong> <a href="http://www.bavc.org/preservation/resources/preservation-glossary#layers">See
+image.</a></p>
+
+<p><span id="vidf" class="anchor"></span><strong>Videotape formats</strong> Recording
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#vidf">formats</a>.
+Current video tape formats include C, U-matic, Betacam M, Betcam SP,
+Mll, D1, D2, video to Terms used interchangeably to refer to the process
+of copying the content of an existing videotape to new media.
+Oxide-coated plastic-based magnetic tape used for recording video and
+audio signals. that differ in magnetic patterns of information, but rely
+on the same fundamental process of recording image and sound on magnetic
+tape. A particular format needs its own playback machine that is able
+that to read the magnetic pattern. There are several characteristics
+that distinguish one format from another, such as the type of recorded
+signal, tape speed, width and placement of the video tracks and audio
+tracks. After 1970 the EAIJ standard was accomplished. The VHS (video
+home system) 1/2” consumer videotape format is one example. Since 1956,
+approximately 50 formats have been introduced worldwide. For examples,
+see the resources
+<a href="http://www.bavc.org/preservation/dvd/resources/hardware.htm">Hardware</a>
+section. D3, D5, Digital Betacam, Beta, VHS, Hi-*, 8mm, S-VHS, DVC Pro
+and DVcam.</p>
+
+<p><strong>Video preservation</strong> An archival system that ensures the survival in
+perpetuity of the program content according to the highest technical
+standards reasonably available. There are three major facets of video
+preservation: (1) safeguarding the recording under secure and favorable
+storage conditions, (2) providing for its proper restoration and
+periodic transfer to modern formats before the original or next
+generation copy is no longer technologically supportable, and (3)
+continuing protective maintenance of at least a master and a copy,
+physically separated in storage, preferably in different geographic
+locations. (From the National Film Preservation Board’s
+<a href="http://lcweb.loc.gov/film/tvstudy.html">Television/Video Preservation Study: Volume 1: Report
+1997</a>.)</p>
+
+<p><strong>Video signal to noise ratio</strong> An indication of the amount of
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#nois">noise</a>
+in a black and white picture.</p>
+
+<p><strong>Viewing copy</strong> A videotape dubbed from a
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#mast">master</a>
+and made for repeated viewing. See<a href="http://www.bavc.org/preservation/resources/preservation-glossary#exhi"> exhibition
+format</a><strong>.</strong></p>
+
+<p><strong>Vinegar syndrome</strong> Characteristic of the decomposition of
+acetate-based magnetic tape where acetic acid is a substantial by
+product that gives the tape a vinegar-like odor. After the onset of the
+vinegar syndrome, acetate tape <a href="http://www.bavc.org/preservation/resources/preservation-glossary#backi">backing
+s</a><a href="http://www.bavc.org/preservation/resources/preservation-glossary#hydr">hydrolysis</a>
+of the acetate is catalyzed further by the presence of acetate acid
+byproduct.</p>
+
+<h4 id="w"><strong>W</strong></h4>
+
+<p><strong>Waveform</strong> Oscilloscope that reads luminance and other parts of the
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#compos">composite</a>
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#sync">sync</a>,
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#blank">blanking</a>,
+video, etc. that may need adjustment for accurate display. See<a href="http://www.bavc.org/preservation/resources/preservation-glossary#vect">
+vectorscope</a>.</p>
+
+<p><strong>White balance</strong> An electronic process used in video cameras to retain
+true colors.</p>
+
+<p><span id="windd" class="anchor"></span><strong>Window dub</strong> <a href="http://www.bavc.org/preservation/resources/preservation-glossary#time">time
+code</a>.</p>
+
+<p><span id="wind" class="anchor"></span><strong>Windowing</strong> Interlayer slippage
+or magnetic tape in roll form, resulting in bucking of some strands of
+tape. The tape will in many cases <a href="http://www.bavc.org/preservation/resources/preservation-glossary#fold">fold
+over</a>
+itself causing permanent vertical crease in the tape. Also, if not
+fixed, will cause increased
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#drop">dropout</a>.
+See
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#cinc">cinching</a>.</p>
+
+<p><span id="wrin" class="anchor"></span><strong>Wrinkle</strong> A physical deformity
+of the videotape; any or wrinkle in the videotape may produce
+<a href="http://www.bavc.org/preservation/resources/preservation-glossary#drop">dropout</a>
+or loss of picture information upon playback. See<a href="http://www.bavc.org/preservation/resources/preservation-glossary#crea">
+creasing</a>.
+Copies of videotape with “burnt in” time code display. Hours, minutes,
+seconds and frames appear on the recorded image. Window dubs are used in
+off-line editing. <span id="layers" class="anchor"></span></p>
+
+<p>Glossary contributions by Rebecca Bachman*; Pip Laurenson, Sculpture
+Conservator, Tate UK; Heather Weaver, Online Editor, BAVC; Dr. John Van
+Bogart; and Snader &amp; Associates Inc.. *Originally published in
+<em>Playback: A Preservation Primer for Video</em>, Copyright 1998, Bay Area
+Video Coalition.</p>
+
+<p><strong>Works Cited</strong></p>
+
+<p>Bay Area Video Coalition, New York University Digital Library Technology
+Services, &amp; Stanford Media Preservation Lab. <em>A/V Artifact Atlas</em> (2015)
+Retrieved from:
+<a href="http://avaa.bavc.org/artifactatlas/index.php/A/V_Artifact_Atlas">http://avaa.bavc.org/artifactatlas/index.php/A/V_Artifact_Atlas</a></p>
+
+<p>Bay Area Video Coalition. “Help” <em>BAVC/QCTools</em> (2015) Retrieved from:
+<a href="https://github.com/bavc/qctools">https://github.com/bavc/qctools</a></p>
+
+<p>Bachman, Rebecca. “Video Preservation: Glossary of Terms” Walker Art
+Center Archives (1996) Retrieved from:
+<a href="http://cool.conservation-us.org/byorg/bavc/bavcterm.html">http://cool.conservation-us.org/byorg/bavc/bavcterm.html</a></p>
+
+<p>Haydon, Kelly. <em>QCSchool Blog Series for QCTools Users</em>. Bay Area Video
+Coalition (2015) Retrieved from:
+<a href="http://bavc.org/bavc-blog/intro-blog-series-qctools-users">http://bavc.org/bavc-blog/intro-blog-series-qctools-users</a></p>
+{% endblock %}

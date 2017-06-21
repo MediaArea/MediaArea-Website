@@ -1,0 +1,234 @@
+{% extends 'QCToolsBundle::base.html.twig' %}
+
+{% block title %}QCTools - How To Use{% endblock %}
+
+{% block body %}
+<h1 id="how-to-use">How to Use QCTools</h1>
+
+<ul>
+  <li><a href="#install">Install</a></li>
+  <li><a href="#preferences">Preferences</a></li>
+  <li><a href="#load">Load Video Files</a></li>
+  <li><a href="#select">Select Graph Filters</a></li>
+  <li><a href="#view">View and Navigate Graphs</a></li>
+  <li><a href="#playback">Playback and Visual Analysis</a></li>
+  <li><a href="#create">Create/Export a Report</a></li>
+  <li><a href="#parts">Parts of the Tool</a></li>
+  <li><a href="#data">Data Analysis Window</a></li>
+  <li><a href="#list">List View</a></li>
+  <li><a href="#analysis">Video Analysis Window</a></li>
+</ul>
+
+<h2 id="install">Install</h2>
+
+<p>Visit <a href="https://bavc.org/preserve-media/preservation-tools">https://bavc.org</a> or <a href="https://github.com/bavc/qctools">QCTools on Github</a> and download QCTools for your operating system (currently Windows, Mac OS X, and many Linux-based operating systems are supported). New releases of QCTools will be periodically available at BAVC. We encourage any issues, bugs, or ideas for QCTools to be submitted via our <a href="https://github.com/bavc/qctools/issues">issue tracker</a>.</p>
+
+<h2 id="preferences">Preferences</h2>
+
+<p>QCTools provides a Preferences window to configure settings for running QCTools.</p>
+
+<h3 id="filters">Filters</h3>
+
+<p>QCTool’s analysis methods depend on filters from FFmpeg’s libavfilter library. The “Filters” tab allows filters to be enabled or disabled. Currently this includes:</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td>filter name</td>
+      <td>track type</td>
+      <td>application in QCTools</td>
+    </tr>
+    <tr>
+      <td><a href="http://ffmpeg.org/ffmpeg-filters.html#signalstats">signalstats</a></td>
+      <td>video</td>
+      <td>The <code class="highlighter-rouge">signalstats</code> analysis filter generates data to plot statistics on video signal levels, frame-to-frame differences, saturation and hue averages, and quantifications of visual patterns and errors. It is highly recommended to enable this filter.</td>
+    </tr>
+    <tr>
+      <td><a href="http://ffmpeg.org/ffmpeg-filters.html#cropdetect">cropdetect</a></td>
+      <td>video</td>
+      <td>The cropdetect filter is used to determine how many columns and rows of nearly-black pixels border the visual image of the frame. The filter can detect changes in framing, letterboxing, pillarboxing, and adjustments to the aperture of the image.</td>
+    </tr>
+    <tr>
+      <td><a href="http://ffmpeg.org/ffmpeg-filters.html#psnr">PSNR</a></td>
+      <td>video</td>
+      <td>The PSNR filter is used in QCTools specifically to generate a comparison between the two fields of the frame. The resulting data documents how different the fields are (which can find head-clogs or other videotape playback errors).</td>
+    </tr>
+    <tr>
+      <td><a href="http://ffmpeg.org/ffmpeg-filters.html#ssim">SSIM</a></td>
+      <td>video</td>
+      <td>The SSIM filter is used in QCTools specifically to generate a comparison between the two fields of the frame. The resulting data documents how different the fields are (which can find head-clogs or other videotape playback errors). It is similar to PSNR but usually a different visual comparison algorithm.</td>
+    </tr>
+    <tr>
+      <td><a href="http://ffmpeg.org/ffmpeg-filters.html#astats">astats</a></td>
+      <td>audio</td>
+      <td>The <code class="highlighter-rouge">astats</code> filter compiles statistics on audio data for small units of time, including maximum and minimum audio levels, DC Offset, the amount of consecutive audio sample differences, and RMS data.</td>
+    </tr>
+    <tr>
+      <td><a href="http://ffmpeg.org/ffmpeg-filters.html#aphasemeter">aphasemeter</a></td>
+      <td>audio</td>
+      <td>The audio phase value represents the mean phase of current audio frame. Value is in range [-1, 1]. The -1 means left and right channels are completely out of phase and 1 means channels are in phase.</td>
+    </tr>
+    <tr>
+      <td><a href="http://ffmpeg.org/ffmpeg-filters.html#ebur128">EBU R.128</a></td>
+      <td>audio</td>
+      <td>The EBU R.128 filter provides data on the perceived loudness of audio volume.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Enabling all filters naturally provides more data, but results in a slower analysis and larger files. The EBU R.128 values represent perceived volume whereas the <code class="highlighter-rouge">astats</code> filters include metrics on actual volume (so the use of EBU R128 may not be considered essential if <code class="highlighter-rouge">astats</code> is in use). Additionally <code class="highlighter-rouge">PSNR</code> and <code class="highlighter-rouge">SSIM</code> both cover similar metrics by quantifying the difference between the two fields of the frame (the image of the odd-numbered lines vs the image of the even-numbered lines); <code class="highlighter-rouge">SSIM</code> is recommended.</p>
+
+<h3 id="tracks">Tracks</h3>
+
+<p>The ‘Tracks’ Preference pane allows the user to set if they would like to analyze only the first track or all tracks of video and audio. Setting QCTools to analyze only the first track will result in a faster analyze but the other tracks would be ignored.</p>
+
+<h3 id="signalserver">Signalserver</h3>
+
+<p>QCTools now offers <a href="https://github.com/bavc/signalserver">SignalServer</a> integration, allowing users to automatically or manually upload QCTools Reports as they are created by the application. Detailed SignalServer installation instructions can be found <a href="https://github.com/bavc/signalserver/blob/master/README.md">here</a>. Installation will vary based upon your specific technical infrastructure. Though designed for a Linux server environment, SignalServer can be installed on a local computer via <a href="https://www.docker.com/">Docker</a>.</p>
+
+<p>Once SignalServer has been <a href="https://github.com/bavc/signalserver/blob/master/README.md">installed</a> and an account on the server has been created, you’ll need to connect it to QCTools. Under the SignalServer tab, fill in the following: the unique URL of your SignalServer instance, your username, and your password.</p>
+
+<p><img src="signalserver_preferences.png" alt="SignalServer view" /></p>
+
+<h2 id="load">Load Video Files</h2>
+
+<p>QCTools can currently accommodate several video file types including QuickTime, MXF, AVI, Matroska, MP4, and many other audiovisual file formats. Once the QCTools application is open you may identify selected video files for QCTools analysis in three ways:</p>
+
+<ol>
+  <li>Simply drag a video file (or files) into the QCTools window. Note that you may import multiple files at once into the tool, though depending on the number and size of the files, processing speed may be affected.</li>
+  <li>Double click the folder icon on the upper left. This launches a window from which you can browse and select video files.</li>
+  <li>Navigating to File–&gt;Open.</li>
+</ol>
+
+<p>As files are opened QCTools will begin immediately processing them. This involves creating thumbnails, decoding audiovisual data, and analyzing that data through FFmpeg’s signalstats filter.</p>
+
+<h2 id="select">Select Graph Filters</h2>
+
+<p>By clicking the graph checkboxes you can select particular audiovisual metrics that you wish to analyze and display. You may make these selections before uploading your video or at any time after the QCTools analysis has been done and the graph display will update dynamically. The checkboxes that enable/disable the graphs can also be dragged/dropped left or right which will reorder the presentation of the graphs accordingly. As a default, ‘Y values’, ‘U values’, ‘V values’, ‘Diffs’, and ‘Sat’ (saturation) are selected. To begin, you may also want to select the <strong>Temporal Outliers</strong> (tout) Graph Filter. This will detect any large discrepancies between pixels and can provide an initial, high-level overview of potential errors.</p>
+
+<p>For descriptions of each Filter and how to read graph values, please see the Help Section, denoted by the ‘?’ icon in the toolbox portion of the application.</p>
+
+<h2 id="view">View and Navigate Graphs</h2>
+
+<p>Graphs display on the top portion of the screen, corresponding video thumbnails show below. The video frames may be navigated via the next, previous, or playback buttons; the frame and time for the particular selection will be displayed. Clicking and dragging your cursor over a portion of the graph will cause the thumbnails below to update accordingly. You may also double click a specific thumbnail and the playback window will appear displaying the image and with a variety of analytical playback filters.</p>
+
+<p>Scrubbing your cursor over a particular point on a graph will reveal the corresponding thumbnails in the thumbnail bar along with the frame number and the timestamp of the particular place in the video you have navigated to.</p>
+
+<p>You may also use the ‘+’ and ‘-‘ icons in the tool box section of the application to zoom in/out, giving you a more or less detailed view of the graph displays, over a specific timespan of the uploaded video.</p>
+
+<p>You can also ‘play’ the window within the graph view. When playing the graph’s cursor which shows the currently selected frame will scroll to the right while the corresponding thumbnails update in the thumbnail bar below.</p>
+
+<p>Some helpful <strong>keyboard shortcuts</strong> you may want to use are:</p>
+
+<ul>
+  <li>‘j’ - To rewind</li>
+  <li>‘k’ - To pause</li>
+  <li>‘l’ - To Fast Forward</li>
+  <li>‘f’ - To enlarge the window to full screen</li>
+  <li>space bar - Toggle between play and pause</li>
+  <li>left - Select the previous frame</li>
+  <li>right - Select the next frame</li>
+</ul>
+
+<h2 id="playback">Playback and Visual Analysis</h2>
+
+<p>By clicking on a thumbnail, you can open the preview window. The preview window serves as a playback environment that allows spot checking and manual video analysis. The preview window contains two playback windows that can be set to various selections; the filters allow the video to be processed in one of many ways which may help make particular issues more discernible. See the <strong>Playback Filters</strong> page for more details on these playback filters.</p>
+
+<p>When playing back a media file please note that QCTools will only render the video. The audio may be visualized in one of the Audio Playback Filters but the audio will not be presently aurally.</p>
+
+<p>Under situations where QCTools is not able to play back the video in real-time (for instance because the video is very large or the processing power available is not sufficient), there are options under the “View” toolbar menu to determine how playback should be prioritized under limited resources. Selecting “View&gt;Play All Frames” will slow down the presentation of the video such that every frame can be displayed so that no frames are missed. By selecting “View&gt;Play at Frame Rate” frames will be dropped during playback, if needed, in order to sustain the file’s playback frame rate.</p>
+
+<h2 id="create">Create/Export a Report</h2>
+
+<p>When an analysis (which may be time consuming, depending on the length of the file) is complete the analysis data may then be exported to a compressed XML file for future use. At a later point, the video may be reviewed again simply by opening the XML file–using the <strong>Import</strong> menu, or dragging and dropping the XML into QCTools–instead of having to reload/ reanalyze the video file itself; this process will take considerably less time. Additionally, this file may be opened in other environments such as standard spreadsheet or database applications.
+QCTools also can export analytical metadata per frame in a <a href="http://en.wikipedia.org/wiki/Comma-separated_values">CSV</a> document but the compressed <a href="http://en.wikipedia.org/wiki/XML">XML</a> report is recommended since it can be reloaded into QCTools. Please see ‘Data Format’ tab for more information on the XML file compression and resulting file.
+To <strong>Export</strong>:</p>
+
+<ul>
+  <li>Navigate to: Export–&gt;To .qctools.xml.gz…/CSV, etc.</li>
+  <li>Click the ‘CSV’ icon in the toolbox section of the application.</li>
+</ul>
+
+<p>Both options will prompt you to name your file and select a select a location.
+To <strong>Import</strong>:</p>
+
+<ul>
+  <li>Navigate to: Import –&gt; From .qctools.xml.gz…</li>
+  <li>Drag and drop file(s) into main QCTools window</li>
+</ul>
+
+<h2 id="parts">Parts of the Tool</h2>
+
+<h3 id="graph-window">Graph Window:</h3>
+
+<p>This view displays the filename, graph selections, X-Axis value selector, and the frame navigator buttons.</p>
+
+<p><img src="/_/img/QCTools/Slide1.jpg" alt="Data Analysis Window" /></p>
+
+<p>Descriptions of a graphs are reveals as tooltips when hovering your cursor over the graph checkboxes:</p>
+
+<p><img src="/_/img/QCTools/Slide4.jpg" alt="filter description" /></p>
+
+<h3 id="table-view">Table View:</h3>
+
+<p>The Table View enables you to view the progress of your file download, plus associated metadata:</p>
+
+<p><img src="/_/img/QCTools/metadatascreen.jpg" alt="List View" /></p>
+
+<p>In addition to technical metadata about the file (duration, frame rate, file size, etc.) the List View also displays more detailed statistics:</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td>Column Name</td>
+      <td>Description</td>
+    </tr>
+    <tr>
+      <td>Yav</td>
+      <td>The average of the Y values</td>
+    </tr>
+    <tr>
+      <td>Yrang</td>
+      <td>The average of the YHIGH and YLOW values, which indicates the overall range of contrast</td>
+    </tr>
+    <tr>
+      <td>Uav</td>
+      <td>The average of the U values</td>
+    </tr>
+    <tr>
+      <td>Vav</td>
+      <td>The average of the V values</td>
+    </tr>
+    <tr>
+      <td>TOUTav</td>
+      <td>The average of the TOUT values</td>
+    </tr>
+    <tr>
+      <td>SATb</td>
+      <td>The number of frames where the maximum saturation is over 88.7, which would indicate levels outside of the broadcast range</td>
+    </tr>
+    <tr>
+      <td>SATi</td>
+      <td>The number of frames where the maximum saturation is over 118.2, which would indicate levels outside the legal YUV values</td>
+    </tr>
+    <tr>
+      <td>BRNGav</td>
+      <td>The percentage of frames with a BRNG value of more than zero</td>
+    </tr>
+    <tr>
+      <td>BRNGc</td>
+      <td>The number of frames with a BRNG value greater than zero</td>
+    </tr>
+    <tr>
+      <td>MSEfY</td>
+      <td>The number of frames with an MSEfY value over 1000</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="analysis">Video Analysis Window</h2>
+
+<p><img src="/_/img/QCTools/Slide3.jpg" alt="Views" /></p>
+
+<p>Many playback filters will use contextual options to tweak them, please review the Playback Filters section of the help documentation for more details.</p>
+{% endblock %}

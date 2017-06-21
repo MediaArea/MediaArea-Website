@@ -1,3 +1,7 @@
+qc_tools:
+    resource: "@QCToolsBundle/Controller/"
+    type:     annotation
+
 bwf_meta_edit:
     resource: "@BWFMetaEditBundle/Controller/"
     type:     annotation

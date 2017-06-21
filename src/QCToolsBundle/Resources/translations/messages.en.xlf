@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="en" datatype="plaintext" original="file.ext" target-language="en">
+    <body>
+      <trans-unit id="menu.qctools" approved="yes">
+        <source><![CDATA[menu.qctools]]></source>
+        <target><![CDATA[QCTools]]></target>
+      </trans-unit>
+      <trans-unit id="menu.qctools.about" approved="yes">
+        <source><![CDATA[menu.qctools.about]]></source>
+        <target><![CDATA[About]]></target>
+      </trans-unit>
+      <trans-unit id="menu.qctools.download" approved="yes">
+        <source><![CDATA[menu.qctools.download]]></source>
+        <target><![CDATA[Download]]></target>
+      </trans-unit>
+      <trans-unit id="menu.qctools.gettingStarted" approved="yes">
+        <source><![CDATA[menu.qctools.gettingStarted]]></source>
+        <target><![CDATA[Getting Started]]></target>
+      </trans-unit>
+      <trans-unit id="menu.qctools.howToUse" approved="yes">
+        <source><![CDATA[menu.qctools.howToUse]]></source>
+        <target><![CDATA[How To Use]]></target>
+      </trans-unit>
+      <trans-unit id="menu.qctools.filterDescriptions" approved="yes">
+        <source><![CDATA[menu.qctools.filterDescriptions]]></source>
+        <target><![CDATA[Filter Descriptions]]></target>
+      </trans-unit>
+      <trans-unit id="menu.qctools.playbackFilters" approved="yes">
+        <source><![CDATA[menu.qctools.playbackFilters]]></source>
+        <target><![CDATA[Playback Filters]]></target>
+      </trans-unit>
+      <trans-unit id="menu.qctools.recording" approved="yes">
+        <source><![CDATA[menu.qctools.recording]]></source>
+        <target><![CDATA[Recording]]></target>
+      </trans-unit>
+      <trans-unit id="menu.qctools.seattle" approved="yes">
+        <source><![CDATA[menu.qctools.seattle]]></source>
+        <target><![CDATA[Seattle Municipal Archives Manual]]></target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
