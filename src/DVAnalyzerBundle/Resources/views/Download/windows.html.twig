@@ -1,0 +1,27 @@
+{% extends 'DVAnalyzerBundle::base.html.twig' %}
+
+{% block title %}DV Analyzer - Download DV Analyzer for Microsoft Windows{% endblock %}
+
+{% block body %}
+<h1>Download - Microsoft Windows</h1>
+{% image '@AppBundle/Resources/public/img/OS/Windows.png' %}
+<img src="{{ asset_url }}" alt="Windows logo" title="Windows logo" width="288" height="76"><br />
+{% endimage %}
+
+<div class="table-responsive">
+<table class="download table table-bordered table-condensed">
+<thead>
+<tr class="table-header">
+    <th>Version</th>
+    <th>Architecture</th>
+    <th>Interface</th>
+    <th>Version</th>
+    <th>Comment</th>
+</tr>
+</thead>
+<tbody>
+{% include 'DVAnalyzerBundle:Download:windowsTable.html.twig' %}
+</tbody>
+</table>
+</div>
+{% endblock %}

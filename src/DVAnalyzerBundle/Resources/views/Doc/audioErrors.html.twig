@@ -1,0 +1,66 @@
+{% extends 'DVAnalyzerBundle::base.html.twig' %}
+
+{% block title %}DV Analyzer - Audio Errors{% endblock %}
+
+{% block body %}
+<h1>DV Analyzer Case Study: Audio Errors</h1>
+<p>The file <a href="//www.archive.org/download/DvAnalyzerSampleDvAudioErrors/dvanalyzer_sample_EVIA_IU.mov" target="_blank">here</a> is from a video digitized off an NTSC miniDV tape held at The Archives of Traditional Music at Indiana University. This particular file is a severe example of audio errors that can occur during DV ingest, ones which render the digitized file mostly unusable. </p>
+<p>The source tape was recorded at LP (long-play) mode and in 4 track audio mode. When recording in LP the amount of data stored within a fixed surface area of the tape is greatly reduced. This increases the likelihood of errors on playback because there is a greater chance of the video heads missing parts of the spaced out data.</p>
+<p>Being recorded in 4 track audio mode at 32kHz with 12 bit audio (as opposed to 2 track, 48kHz, 16 bit audio), each audio track is stored with half as much data, i.e., the audio signal is divided into for channels instead of two, each channel holding a quarter of the audio information. This again increases the likelihood for error because the heads have to read four slimmer lines of data rather than two thicker ones. Given that the 3rd and 4th audio tracks of this particular file were not even utilized at the time of recording, there was no advantage to selecting 4 track, 32kHz, 12 bit.</p>
+<p>
+<div id="video0" class="flashvideo"><a href="http://www.macromedia.com/go/getflashplayer">Get the Flash Player</a> to see this content.</div>
+<script type="text/javascript">
+var params = { 'allowfullscreen': 'true', 'allowscriptaccess': 'always', 'wmode': 'transparent' };
+var attributes = { 'id': 'video0', 'name': 'video0'};
+var flashvars = {
+	'file' : '//www.archive.org/download/DvAnalyzerSampleDvAudioErrors/dvanalyzer_sample_EVIA_IU_512kb.mp4',
+	'width' : '400',
+	'height' : '280',
+	'controlbar' : 'bottom',
+	'dock' : 'false',
+	'icons' : 'true',
+	'logo.hide' : 'false',
+	'logo.position' : 'bottom-left',
+	'playlist' : 'none',
+	'autostart' : 'false',
+	'bufferlength' : '3',
+	'item' : '0',
+	'mute' : 'false',
+	'repeat' : 'always',
+	'shuffle' : 'false',
+	'smoothing' : 'true',
+	'stretching' : 'uniform',
+	'volume' : '90'
+ };
+swfobject.embedSWF("https://www.avpreserve.com/wp-content/plugins/flash-video-player/mediaplayer/player.swf", "video0", "400", "280", "9.0.0","https://www.avpreserve.com/wp-content/plugins/flash-video-player/mediaplayer/expressinstall.swf", flashvars, params, attributes);
+</script><br><br>
+
+<h1>Reading Audio Data from a DV Tape and Associated Error Detection</h1>
+<p>When a DV tape plays in a deck, each pass of the head across the tape reads 9 blocks of audio data. The data transmitted from each head pass across the tape is referred to as a <strong>DIF sequence</strong>. In NTSC, 10 of these passes (or DIF sequences) are needed to complete a full frame of DV. Thus each NTSC frame contains a total of 90 audio blocks. PAL requires 12 DIF sequences, for a total of 108 audio blocks.</p>
+<p> Each audio block contains <strong>parity data</strong> that is used for error correction. If the primary audio data is damaged or cannot be read, the parity data is referenced as a secondary source. In the case where the primary audio data and the parity data are both excessively damaged or not read properly, the deck may not have sufficient resources to perform error correction on that block of audio in the very short amount of time allowed to perform this work. The deck cannot compensate and lets the damaged data pass by unread, thereby causing a drop out.</p>
+<p>Even though the deck fails to correct the audio in these cases, it still records the fact that there was unread data present. It does this by writing the reserved audio sample value 0x8000 (or 0x808000 in 12 bit mode) to state that the audio sample is erroneous. These audio error codes may be parsed from a dv file in order to automate the detection of audio errors (without non-stop listening). DV Analyzer allows the user to isolate and arrange these instances of errors in a way that helps investigate the causes and whether they can be fixed in the workflow chain.<br/>
+<h1>Conclusions</h1>
+<p>Since this recording is configured to record 4 track audio but only contains 2 tracks, only DIF sequences 0, 1, 2, 3, and 4 contain audio data (DIF sequences 5-9 are empty although still often written with errors). The total number of audio blocks that are error-filled with the reserved code for the file above are:
+<ul>
+<li>648 Dseq=0</li>
+<li> 54 Dseq=1</li>
+<li>702 Dseq=2</li>
+<li> 45 Dseq=3</li>
+<li>684 Dseq=4</li>
+</ul>
+<p>See <a href="//www.archive.org/download/DvAnalyzerSampleDvAudioErrors/dvanalyzer_sample_EVIA_IU.txt" target="_blank">this document</a> for the more detailed technical synopsis of the error detection that DV Analyzer performed and from which these numbers are derived. </p>
+<p>Interestingly, in this sample the great majority of the errors are on even-numbered tape passes. This may indicate that the problems are more likely generated by a bad recording or playback head than by tape damage (i.e., one of the heads is regularly misreading the same passes).</p>
+<p>This <a href="//www.archive.org/download/DvAnalyzerSampleDvAudioErrors/dvanalyzer_sample_EVIA_IU.xml" target="_blank">XML document</a> that DV Analyzer produces reports on each frame that contains errors, providing the absolute time, timecode of the source tape, date and time of the recording, and information on the errors. For example frame number 6 has an error statement: “CH1: 27 audio errors ( 9 Dseq=0, 9 Dseq=2, 9 Dseq=4)". The “Dseq" refers to the DIF sequence, or the number of the head pass along the tape to read a frame (in NTSC 10 head passes are used for a single frame). Since there are 9 audio blocks per pass (or DIF sequence), the statement “9 Dseq=0" means that all 9 audio blocks failed to be read during the first head pass of that frame, thus 10% of that frames audio is missing. This happens again during head pass number 2 and 4 for a total of 30% audio loss. However since this is a 4 track recording, DIF sequences (or head passes) 0-4 contain the audio for tracks 1 and 2 while sequences 5-9 contain the audio for tracks 3 and 4 (unused). Thus audio tracks 1 and 2 of frame 6 are missing 60% of the audio.</p>
+<p>With these analyses, we can see that there are direct causes to the audio problems in the digital transfer. First, there were poor recording choices made in the original that affected the quality of the transfer. However, these issues were possibly exacerbated by a faulty or dirty head. If the transfer deck is cleaned, or another one is used, a better preservation copy could be made and future related issues could be avoided. </p>
+<p>These files referred to within this article are avilable for download from the <a href="//www.archive.org/details/DvAnalyzerSampleDvAudioErrors" target="_blank">Internet Archive</a>.</p>
+
+{% endblock %}
+
+{% block javascriptshead %}
+{% javascripts
+    '@DVAnalyzerBundle/Resources/public/js/swfobject.js'
+    filter="?jsqueeze"
+ %}
+    <script src="{{ asset_url }}"></script>
+{% endjavascripts %}
+{% endblock %}

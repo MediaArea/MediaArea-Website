@@ -1,0 +1,8 @@
+services:
+#    dv_analyzer.example:
+#        class: DVAnalyzerBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]
+
+    dv.download_info:
+        class: DVAnalyzerBundle\Lib\DownloadInfo\DVAnalyzerDownloadInfo
+        public: true

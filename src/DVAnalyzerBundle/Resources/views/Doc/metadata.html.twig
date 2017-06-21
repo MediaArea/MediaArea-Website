@@ -1,0 +1,55 @@
+{% extends 'DVAnalyzerBundle::base.html.twig' %}
+
+{% block title %}DV Analyzer - Temporal metadata{% endblock %}
+
+{% block body %}
+<h1>DV Analyzer Case Study: Temporal metadata and use of Final Cut Pro XML</h1>
+<p>As DV video is generated in the camera and written to tape, the
+camera has the ability to document the date and time of the recording,
+the timecode, and the camera settings (white balance, focus, etc) into
+each frame of DV video. With the right workflow this information can be
+preserved in a file-based environment if the DV tape is ingested as a DV
+ stream (or DV stream inside a container such as MXF, MOV, AVI or
+others). This information can potentially survive the editing process,
+but only if the frame isn’t transcoded from the original frame into
+another new DV frame. When Final Cut renders DV video (before
+application of color correction, added graphics, or any visual
+manipulation) then a new DV frame is generated from the original frame.
+However, the original metadata does not typically survive this process.<br>
+&nbsp;<br>
+This means that for both DV files ingested directly from tape and for
+final edits that did not alter the original frame (or block the DV
+metadata in another way) the file may be evaluated to report on DV
+metadata for each frame on fields such as recording date and time,
+timecode of the source tape, and camera settings.<br>
+&nbsp;<br>
+{% image '@DVAnalyzerBundle/Resources/public/img/dvanalyzer_fcp.jpg' %}<img src="{{ asset_url }}" alt="dvanalyzer_fcp" title="dvanalyzer_fcp" class="center-block" />{% endimage %}</p>
+<p>This DV file was edited at <a href="http://www.witness.org/" target="_blank">WITNESS</a>
+ as a compilation tape. Material was shot on DV camera, ingested to
+files using Live Capture Plus, edited in Final Cut Pro, then exported to
+ a Quicktime movie using the same DV codec (through the File&gt;Export
+method). This workflow preserves the camera’s metadata throughout the
+process so that the resulting export still contains information written
+by the camera, although typically this information is difficult to
+access.<br>
+&nbsp;<br>
+By evaluating this exported file in DV Analyzer, it will read the
+metadata from every frame and then report on inconsistencies, such as
+when one frame has a recording date and time that doesn’t follow the
+previous frame or when one frame has a timecode value (within the DV
+codec) that is not sequential with the prior frame. These jumps in the
+metadata value sequences indicate edit points or places where the camera
+ was stopped and restarted.<br>
+&nbsp;<br>
+By exporting a Final Cut Pro XML document from DV Analyzer, the reported
+ information can be directly associated with its reference frame. In
+this way, DV Analyzer can serve as a tool to generate a reverse EDL well
+ after the edit was performed or to document events that occurred during
+ the original camera shoot. DV Analyzer uses markers to identify
+potential points of edits and also to present areas where error
+detection or quality control may be an issue. This ability to recreate
+the history of the document after such information may have been lost or
+ forgotten, and the ability to identify problem areas in the DV stream
+are valuable tools in the preservation of DV and in creating more
+efficient workflows in those efforts.</p>
+{% endblock %}

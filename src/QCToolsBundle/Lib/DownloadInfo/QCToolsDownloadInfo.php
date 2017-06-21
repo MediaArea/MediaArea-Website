@@ -35,7 +35,7 @@ class QCToolsDownloadInfo extends AbstractDownloadInfo
             return $this->supportedOS[$detectedOS['name']];
         }
 
-        return array('name' => false, 'route' => 'mi_download');
+        return array('name' => false, 'route' => 'qc_download');
     }
 
     public function parse()

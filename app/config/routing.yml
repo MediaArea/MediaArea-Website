@@ -1,3 +1,7 @@
+dv_analyzer:
+    resource: "@DVAnalyzerBundle/Controller/"
+    type:     annotation
+
 qc_tools:
     resource: "@QCToolsBundle/Controller/"
     type:     annotation
