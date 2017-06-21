@@ -1,3 +1,7 @@
+bwf_meta_edit:
+    resource: "@BWFMetaEditBundle/Controller/"
+    type:     annotation
+
 media_trace:
     resource: "@MediaTraceBundle/Controller/"
     type:     annotation

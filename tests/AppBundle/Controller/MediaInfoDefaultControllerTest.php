@@ -23,8 +23,10 @@ class MediaInfoDefaultControllerTest extends WebTestCase
         $this->assertTrue($client->getResponse()->isRedirect('/en/MediaInfo'));
 
         // With valid locale
-        $client->request('GET', '/en/MediaInfo');
+        $crawler = $client->request('GET', '/en/MediaInfo');
         $this->assertEquals(200, $client->getResponse()->getStatusCode());
+        $this->assertEquals('MediaInfo', $crawler->filter('h1')->text());
+        $this->assertEquals('MediaInfo', trim($crawler->filter('#main-navbar ul.nav li.active a')->text()));
 
         $client->request('GET', '/en/MediaInfo/');
         $this->assertEquals(302, $client->getResponse()->getStatusCode());

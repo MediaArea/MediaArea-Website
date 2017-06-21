@@ -99,6 +99,27 @@ class MenuBuilder
         return $menu;
     }
 
+    /**
+     * @SuppressWarnings(PHPMD.UnusedFormalParameter)
+     */
+    public function createBWFMetaEditMenu(array $options)
+    {
+        $menu = $this->factory->createItem('root');
+        $menu->setChildrenAttribute('class', 'nav navbar-nav main-menu');
+
+        $menu = $this->mediaAreaMenu($menu);
+
+        $menu->addChild('menu.bwfmetaedit', array('route' => 'bwf_home'))
+            ->setExtras(array('dropdown' => true))
+            ->setCurrent(true);
+        $menu['menu.bwfmetaedit']->addChild('menu.bwfmetaedit.about', array('route' => 'bwf_home'));
+        $menu['menu.bwfmetaedit']->addChild('menu.bwfmetaedit.download', array('route' => 'bwf_download'));
+
+        $menu = $this->projectsMenu($menu);
+
+        return $menu;
+    }
+
     private function mediaAreaMenu($menu)
     {
         $menu->addChild('menu.mediaarea', array('route' => 'homepage'))
@@ -120,8 +141,7 @@ class MenuBuilder
         $menu['menu.projects']->addChild('menu.projects.mediatrace', array('route' => 'mediatrace_home'))
             ->setCurrent(false);
         $menu['menu.projects']->addChild('menu.projects.qctools', array('uri' => '/QCTools'))->setCurrent(false);
-        $menu['menu.projects']->addChild('menu.projects.bwfmetaedit', array('uri' => '/BWFMetaEdit'))
-            ->setCurrent(false);
+        $menu['menu.projects']->addChild('menu.projects.bwfmetaedit', array('route' => 'bwf_home'))->setCurrent(false);
         $menu['menu.projects']->addChild('menu.projects.dvanalyzer', array('uri' => '/DVAnalyzer'))->setCurrent(false);
 
         return $menu;

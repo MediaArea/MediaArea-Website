@@ -38,6 +38,13 @@ services:
             - { name: knp_menu.menu_builder, method: createMediaTraceMenu, alias: mediatrace }
         public: true
 
+    app.menu_bwf_builder:
+        class: AppBundle\Menu\MenuBuilder
+        arguments: ["@knp_menu.factory"]
+        tags:
+            - { name: knp_menu.menu_builder, method: createBWFMetaEditMenu, alias: bwf }
+        public: true
+
     app.download_info:
         class: AppBundle\Lib\DownloadInfo\DownloadInfo
         public: true

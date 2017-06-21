@@ -19,6 +19,7 @@ class AppKernel extends Kernel
             new Symfony\Bundle\AsseticBundle\AsseticBundle(),
             new Knp\Bundle\MenuBundle\KnpMenuBundle(),
             new MediaTraceBundle\MediaTraceBundle(),
+            new BWFMetaEditBundle\BWFMetaEditBundle(),
         ];
 
         if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {

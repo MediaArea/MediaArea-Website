@@ -24,4 +24,6 @@
             <property name="exceptions" value="id,q,i,j,v,e,f,fp,em,mc,ip,io" />
         </properties>
     </rule>
+
+    <exclude-pattern>src/*Bundle/Tests</exclude-pattern>
 </ruleset>

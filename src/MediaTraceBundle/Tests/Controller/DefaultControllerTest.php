@@ -14,5 +14,6 @@ class DefaultControllerTest extends WebTestCase
 
         $this->assertEquals(200, $client->getResponse()->getStatusCode());
         $this->assertEquals('MediaTrace', $crawler->filter('h1')->text());
+        $this->assertEquals('MediaTrace', trim($crawler->filter('#main-navbar ul.nav li.active a')->text()));
     }
 }
