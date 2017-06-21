@@ -14,7 +14,7 @@ class BWFMetaEditDownloadInfo extends AbstractDownloadInfo
         'Fedora' => array('name' => 'Fedora', 'route' => 'bwf_download_fedora'),
         'Kubuntu' => array('name' => 'Ubuntu', 'route' => 'bwf_download_ubuntu'),
         'Lubuntu' => array('name' => 'Ubuntu', 'route' => 'bwf_download_ubuntu'),
-        'Mac' => array('name' => 'Mac OS', 'route' => 'bwf_download_mac'),
+        'Mac' => array('name' => 'macOS', 'route' => 'bwf_download_mac'),
         'Mint' => array('name' => 'Linux Mint', 'route' => 'bwf_download_ubuntu'),
         'Red Hat' => array('name' => 'RHEL', 'route' => 'bwf_download_rhel'),
         'SUSE' => array('name' => 'openSUSE', 'route' => 'bwf_download_opensuse'),

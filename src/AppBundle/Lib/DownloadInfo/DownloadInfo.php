@@ -13,7 +13,7 @@ class DownloadInfo extends AbstractDownloadInfo
         'Fedora' => array('name' => 'Fedora', 'route' => 'mi_download_fedora', 'installer' => false),
         'Kubuntu' => array('name' => 'Ubuntu', 'route' => 'mi_download_ubuntu', 'installer' => false),
         'Lubuntu' => array('name' => 'Ubuntu', 'route' => 'mi_download_ubuntu', 'installer' => false),
-        'Mac' => array('name' => 'Mac OS', 'route' => 'mi_download_mac', 'installer' => true),
+        'Mac' => array('name' => 'macOS', 'route' => 'mi_download_mac', 'installer' => true),
         'Mandriva' => array('name' => 'Mandriva', 'route' => 'mi_download_mandriva', 'installer' => false),
         'Mint' => array('name' => 'Linux Mint', 'route' => 'mi_download_ubuntu', 'installer' => false),
         'Red Hat' => array('name' => 'RHEL', 'route' => 'mi_download_rhel', 'installer' => false),
