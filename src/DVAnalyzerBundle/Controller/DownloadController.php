@@ -1,6 +1,6 @@
 <?php
 
-namespace BWFMetaEditBundle\Controller;
+namespace DVAnalyzerBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
@@ -12,7 +12,7 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 class DownloadController extends Controller
 {
     /**
-     * @Route("/BWFMetaEdit/Download", name="bwf_download")
+     * @Route("/DVAnalyzer/Download", name="dv_download")
      * @Template()
      */
     public function indexAction()
@@ -22,8 +22,8 @@ class DownloadController extends Controller
 
     /**
      * @Route(
-     *     "/BWFMetaEdit/Download/Windows",
-     *     name="bwf_download_windows"
+     *     "/DVAnalyzer/Download/Windows",
+     *     name="dv_download_windows"
      * )
      * @Template()
      */
@@ -34,8 +34,8 @@ class DownloadController extends Controller
 
     /**
      * @Route(
-     *     "/BWFMetaEdit/Download/Mac_OS",
-     *     name="bwf_download_mac"
+     *     "/DVAnalyzer/Download/Mac_OS",
+     *     name="dv_download_mac"
      * )
      * @Template()
      */
@@ -46,8 +46,8 @@ class DownloadController extends Controller
 
     /**
      * @Route(
-     *     "/BWFMetaEdit/Download/Debian",
-     *     name="bwf_download_debian"
+     *     "/DVAnalyzer/Download/Debian",
+     *     name="dv_download_debian"
      * )
      * @Template()
      */
@@ -58,8 +58,8 @@ class DownloadController extends Controller
 
     /**
      * @Route(
-     *     "/BWFMetaEdit/Download/Ubuntu",
-     *     name="bwf_download_ubuntu"
+     *     "/DVAnalyzer/Download/Ubuntu",
+     *     name="dv_download_ubuntu"
      * )
      * @Template()
      */
@@ -70,8 +70,8 @@ class DownloadController extends Controller
 
     /**
      * @Route(
-     *     "/BWFMetaEdit/Download/RHEL",
-     *     name="bwf_download_rhel"
+     *     "/DVAnalyzer/Download/RHEL",
+     *     name="dv_download_rhel"
      * )
      * @Template()
      */
@@ -82,8 +82,8 @@ class DownloadController extends Controller
 
     /**
      * @Route(
-     *     "/BWFMetaEdit/Download/CentOS",
-     *     name="bwf_download_centos"
+     *     "/DVAnalyzer/Download/CentOS",
+     *     name="dv_download_centos"
      * )
      * @Template()
      */
@@ -94,8 +94,8 @@ class DownloadController extends Controller
 
     /**
      * @Route(
-     *     "/BWFMetaEdit/Download/Fedora",
-     *     name="bwf_download_fedora"
+     *     "/DVAnalyzer/Download/Fedora",
+     *     name="dv_download_fedora"
      * )
      * @Template()
      */
@@ -106,8 +106,8 @@ class DownloadController extends Controller
 
     /**
      * @Route(
-     *     "/BWFMetaEdit/Download/openSUSE",
-     *     name="bwf_download_opensuse"
+     *     "/DVAnalyzer/Download/openSUSE",
+     *     name="dv_download_opensuse"
      * )
      * @Template()
      */
@@ -118,8 +118,8 @@ class DownloadController extends Controller
 
     /**
      * @Route(
-     *     "/BWFMetaEdit/Download/SLE",
-     *     name="bwf_download_sle"
+     *     "/DVAnalyzer/Download/SLE",
+     *     name="dv_download_sle"
      * )
      * @Template()
      */
@@ -130,8 +130,8 @@ class DownloadController extends Controller
 
     /**
      * @Route(
-     *     "/BWFMetaEdit/Download/Mageia",
-     *     name="bwf_download_mageia"
+     *     "/DVAnalyzer/Download/Mageia",
+     *     name="dv_download_mageia"
      * )
      * @Template()
      */
@@ -142,8 +142,8 @@ class DownloadController extends Controller
 
     /**
      * @Route(
-     *     "/BWFMetaEdit/Download/Arch_Linux",
-     *     name="bwf_download_archlinux"
+     *     "/DVAnalyzer/Download/Arch_Linux",
+     *     name="dv_download_archlinux"
      * )
      * @Template()
      */
@@ -154,8 +154,8 @@ class DownloadController extends Controller
 
     /**
      * @Route(
-     *     "/BWFMetaEdit/Download/Source",
-     *     name="bwf_download_source"
+     *     "/DVAnalyzer/Download/Source",
+     *     name="dv_download_source"
      * )
      * @Template()
      */

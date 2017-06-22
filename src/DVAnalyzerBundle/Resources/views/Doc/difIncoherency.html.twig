@@ -1,0 +1,60 @@
+{% extends 'DVAnalyzerBundle::base.html.twig' %}
+
+{% block title %}DV Analyzer - DIF Incoherency{% endblock %}
+
+{% block body %}
+<h1>DV Analyzer Case Study: DIF Incoherency</h1>
+<p>This <a rel="nofollow" href="//www.archive.org/download/DvAnalyzerSampleDIFIncoherency_748/dvanalyzer_sample_Democracy_Now.dv">file</a> was digitized from a miniDV by the media archive at <a href="http://www.democracynow.org" target="_blank">Democracy Now!</a> and represents a rare but problematic occurrence in the digitization process. Within our test study, it was the only file identified with this particular error:</p>
+<p>
+<div id="video0" class="flashvideo"><a href="http://www.macromedia.com/go/getflashplayer">Get the Flash Player</a> to see this content.</div>
+<script type="text/javascript">
+var params = { 'allowfullscreen': 'true', 'allowscriptaccess': 'always', 'wmode': 'transparent' };
+var attributes = { 'id': 'video0', 'name': 'video0'};
+var flashvars = {
+	'file' : '//www.archive.org/download/DvAnalyzerSampleDIFIncoherency_748/dvanalyzer_sample_Democracy_Now_512kb.mp4',
+	'width' : '400',
+	'height' : '280',
+	'controlbar' : 'bottom',
+	'dock' : 'false',
+	'icons' : 'true',
+	'logo.hide' : 'false',
+	'logo.position' : 'bottom-left',
+	'playlist' : 'none',
+	'autostart' : 'false',
+	'bufferlength' : '1',
+	'item' : '0',
+	'mute' : 'false',
+	'repeat' : 'none',
+	'shuffle' : 'false',
+	'smoothing' : 'true',
+	'stretching' : 'uniform',
+	'volume' : '90'
+ };
+swfobject.embedSWF("https://www.avpreserve.com/wp-content/plugins/flash-video-player/mediaplayer/player.swf", "video0", "400", "280", "9.0.0","https://www.avpreserve.com/wp-content/plugins/flash-video-player/mediaplayer/expressinstall.swf", flashvars, params, attributes);
+</script><br><br>
+
+<p><span style="text-decoration: underline;">DV Structual Integrity</span></p>
+<p>As a deck reads data across a DV tape it reads sections of data for subcode (timecode), audio, video, and identification information. The tape stores these different information types as separate sections of data to facilitate insert editing or separate handling of audio, video and subcode while editing. As the decks reads the tape to output a DV stream that can be written to a file, these separate sections of data are combined into a new structure, one that conjoins subcode, audio, and video for each frame into a standardized structure of <strong>DIF blocks</strong>.<br/>
+A DIF block is a section of code that represents the data transmitted from all of the passes of the head across a tape that make up a frame. Each of these head passes is a <strong>DIF sequence</strong>. A DV decoder relies on the new combination of data to understand the specifications of the codec associated with the file in order to interpret and playback the video and audio.</p>
+<p>In the example above, the second frame begins with 33 DIF blocks that contain NULL data. The frame thus lacks the first header, the first declaration of video specification and first few blocks of video data. This image:<br/>
+<img src="//www.archive.org/download/DvAnalyzerSampleDIFIncoherency_748/DIF_incoherancy_as_hex.jpg" alt=""/><br/>
+shows the unreadable section of the file. Each line of data represents (in hexadecimal code) a single DIF block of a DV frame. The first three lines of the image are the end of frame 1, while the rest of the lines represents the beginning of the problematic second frame. The zero-filled DIF blocks occur where essential data is expected. Within the zero-filled DIF blocks the two lines that do contain meaningful data hold the first bits of audio data for the frame, which (somehow) appear in their expected location despite the missing header, subcode, and video data.</p>
+<p><span style="text-decoration: underline;">Implications</span></p>
+<p>It may seem that such an error is minor in the capture of an hour long DV tape; however, since the frame fails to follow the expected structure of file-based DV video, the manner in which a DV decoder will interpret the data can not be easily predicted. In this case Quicktime and Final Cut Pro handled the error gracefully, the <a rel="nofollow" href="//www.archive.org/download/DvAnalyzerSampleDIFIncoherency_748/dvanalyzer_sample_Democracy_Now.dv">file</a> plays continuously without stutter, though the missing video data is noticeable.</p>
+<p><img src="//www.archive.org/download/DvAnalyzerSampleDIFIncoherency_748/DIF_incoherency_as_frame.jpg" alt=""/></p>
+<p>The error first became apparent when the file was loaded into a broadcast server to play out during a live television news broadcast. The playout server did not handle this error as gracefully as Quicktime and stuttered when it reached this problem frame, resulting in the audio and video becoming significantly out of sync for the duration of the file&#8217;s playback. The live broadcast had to be quickly rearranged since the error prevented a 6 minute clip from presenting correctly.</p>
+<p><span style="text-decoration: underline;">Conclusions</span></p>
+<p>As mentioned, this file is our only known occurrence of this type of error (structural DIF incoherency from invalid NULL DIF blocks); however the results were significantly problematic to the achievement of reliable playback. Since the majority of the data for that particular head pass within the deck is valid, it is our assumption that the problem occurred within the DV deck&#8217;s reassembly of tape&#8217;s data into the DIF blocks of the DV stream output (the file written during digital transfer) and does not represent a problem with the source DV tape.</p>
+<p>Though a rare type of error, the analysis of the actual code that DV Analyzer enables allowed us to identify the likely direct cause of the problem. Rather than simply marking the file and tape as unplayable and scraping them, the tape could be saved and the DV stream could be captured again for archiving.</p>
+<p>These files referred to within this article are avilable for download from the <a href="//www.archive.org/details/DvAnalyzerSampleDIFIncoherency_748" target="_blank">Internet Archive</a>.</p>
+
+{% endblock %}
+
+{% block javascriptshead %}
+{% javascripts
+    '@DVAnalyzerBundle/Resources/public/js/swfobject.js'
+    filter="?jsqueeze"
+ %}
+    <script src="{{ asset_url }}"></script>
+{% endjavascripts %}
+{% endblock %}

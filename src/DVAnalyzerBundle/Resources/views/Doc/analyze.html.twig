@@ -1,0 +1,114 @@
+{% extends 'DVAnalyzerBundle::base.html.twig' %}
+
+{% block title %}DV Analyzer - What Does It Analyze{% endblock %}
+
+{% block body %}
+<h1>DV Analyzer: What Does It Analyze?</h1>
+<p>DV Analyzer reads through metadata within every frame of a DV video
+file to report on events, information, and errors. DV Analyzer
+information events include frames that contain jumps in recording date
+and time, jumps in the timecode with the DV stream, or repetition of
+this information (a duplicated frame). DV Analyzer also notes a list of
+errors such as video error concealment, audio errors, and structural
+inconsistencies.</p>
+<h3>Frame Information</h3>
+<h4>Frame</h4>
+<p>The number of the frame within the video, starting from zero</p>
+<h4>Absolute Time</h4>
+<p>Starting from 00:00:00.000. Absolute time represents the time from the beginning of the media file.</p>
+<h4>DV Timecode</h4>
+<p>This is the timecode as documented within that frame. This
+information is typically written by the camera and is typically what
+will appear on the front of a DV deck during playback. Often this
+information will survive from the ingest of the source tape, through an
+edit, to an output; however, if the content is recompressed through
+rendering or a transcoding, this information is easily lost.</p>
+<h4>Timecode Info</h4>
+<p>This could contain ‘Repeating’ if the DV Timecode is the same as the
+previous frame or ‘Non-sequential’ if it doesn’t follow the previous
+frame. This is disabled when the timecode equals ’00:00:00;00′. Timecode
+ Info is more likely to appear in DV that has been ingested from DV
+tape, then edited.</p>
+<h4>Rec. Date / Time</h4>
+<p>This is the date and time as set on the recording device. A DV camera
+ will normally document this information in every DV frame written to
+tape.</p>
+<h4>Rec. Date / Time Info</h4>
+<p>Similar to ‘Timecode Info’, this field states in the ‘Rec. Date /
+Time’ is ‘Repeating’ or ‘Non-sequential’ from the ‘Rec. Date / Time’
+value of the previous frame. This happens when the recording is stopped
+and restarted, thus non-sequential recording date/time can be used to
+separate shots from an ingested DV tape.</p>
+<h4>Arb bits</h4>
+<p>Every block of video data with a single contains an ‘arbitrary bit’, a
+ 4 bit value. If there is inconsistency in the arbitrary bits, the most
+popular one for the frame is expressed as a hexadecimal character.
+Typically arbitrary bit values follow a pattern of
+0,1,2,3,4,5,6,7,8,9,0,A,B, then repeat (for both NTSC and PAL).</p>
+<h4>Arb bits info</h4>
+<p>Similar to ‘Timecode Info’ this value shows when the ‘Arbitrary Bit’
+is ‘Repeating’ or ‘Non-sequential’ from the ‘Arbitrary Bit’ of the
+previous frame. A non-sequential arbitrary bit value may indicate a
+missing frame, an edit, or an error.</p>
+<h4>Rec. Start</h4>
+<p>Contains an ‘S’ if the camera has noted that this frame is the first frame of a recording.</p>
+<h4>Rec. End</h4>
+<p>Contains an ‘E’ if the camera has noted that this frame is the last frame of a recording.</p>
+<h3>Error Detection</h3>
+<h4>Video error concealment</h4>
+<p>DV tapes contain parity data to enable the deck to determine if data
+was read correctly. When video data can not be read correctly, the deck
+may conceal the missing information using a number of strategies. The
+type of concealment is documented in the output DV stream as a STA
+‘STAtus of compressed macro block’ value. The STA values are noted by
+DVAnalyzer as a hexadecimal character</p>
+<ul>
+<li>STA = ‘A’: This block of video data is replaced by the corresponding video data of the previous frame (very common)</li>
+<li>STA = ‘C’: This block of video data is replaced by the corresponding video data of the next frame</li>
+<li>STA = ‘E’: Unspecified concealment</li>
+<li>STA = ‘F’: Error. This typically is represented as grey blocks on the frame.</li>
+</ul>
+<p>There can be up to 1,350 STA errors per NTSC frame (1,500 in PAL). If
+ a NTSC frame notes ‘1,350 STA errors’, then the entire frame failed to
+read correctly. The higher the total number of STA errors per frame, the
+ more noticeable the concealment may be. In many case, video error
+concealment may not be easily detected by visual inspection.</p>
+<h4>Audio Errors</h4>
+<p>If the DV deck fails to read audio data, it may export error codes
+that can be detected. They are played as dropouts, since there is no
+audio error concealment. Since audio data is scrambled when written to
+tape the audio errors will often appear to be interspersed across the
+duration of a frame of video.</p>
+<p>Each frame of NTSC DV contains 90 blocks of audio data (108 in PAL).
+In NTSC it takes 10 passes of the deck’s head across the tape to read
+the data for an entire frame (12 in PAL). Each head pass reads one DIF
+sequence (Dseq). Often when audio fails to be read properly, it fails
+for the entire pass.</p>
+<p>DVAnalyzer will provide the total number of audio block read errors
+(1 to 90 or 108) and detail how many occurred within each head pass (DIF
+ sequence). If the audio errors mostly occur on odd numbered (or all
+even numbered) DIF sequences then the deck (or the original recording
+device) may have one dirty or damaged head.</p>
+<h4>Timecode Inconsistency</h4>
+<p>DV contains many timecode values per frame (this helps enable the
+timecode to be viewable while the tape is shuttled). This notes when the
+ timecodes within a frame are inconsistant. This error does not affect
+video or audio quality but may be indicative of other problems.</p>
+<h4>DIF incoherency</h4>
+<p>This may note structural problems with the frame such as unexpected, irregular information.</p>
+<p>DIF incoherency means that the frame may be failing to follow basic
+structural expectations of DV and can cause unpredictable behaviors
+during playback or encoding with various hardware and software
+applications.</p>
+<h4>Arbitrary bit Inconsistency</h4>
+<p>This is noted when the arbitrary bits within a frame are not
+consistent. As noted this information is ‘arbitrary’, but can indicate
+issues with the frame, such as when data from two different frames is
+mixed into a single frame (from recording over recordings or glitchy
+playout).</p>
+<h4>Stts Fluctuation</h4>
+<p>This is noted for frames that are assigned a presentation time that
+is longer or shorter than the other frames (normally all DV frames are
+presented for same amount of time). Occasionally this is indicative or
+audio/video sync issues and may present a stutter during playback.</p>
+{% endblock %}

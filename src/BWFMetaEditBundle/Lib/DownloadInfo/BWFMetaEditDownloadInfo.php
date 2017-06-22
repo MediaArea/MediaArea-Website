@@ -35,7 +35,7 @@ class BWFMetaEditDownloadInfo extends AbstractDownloadInfo
             return $this->supportedOS[$detectedOS['name']];
         }
 
-        return array('name' => false, 'route' => 'mi_download');
+        return array('name' => false, 'route' => 'bwf_download');
     }
 
     public function parse()

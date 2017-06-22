@@ -150,6 +150,27 @@ class MenuBuilder
         return $menu;
     }
 
+    /**
+     * @SuppressWarnings(PHPMD.UnusedFormalParameter)
+     */
+    public function createDVAnalyzerMenu(array $options)
+    {
+        $menu = $this->factory->createItem('root');
+        $menu->setChildrenAttribute('class', 'nav navbar-nav main-menu');
+
+        $menu = $this->mediaAreaMenu($menu);
+
+        $menu->addChild('menu.dvanalyzer', array('route' => 'dv_home'))
+            ->setExtras(array('dropdown' => true))
+            ->setCurrent(true);
+        $menu['menu.dvanalyzer']->addChild('menu.dvanalyzer.about', array('route' => 'dv_home'));
+        $menu['menu.dvanalyzer']->addChild('menu.dvanalyzer.download', array('route' => 'dv_download'));
+
+        $menu = $this->projectsMenu($menu);
+
+        return $menu;
+    }
+
     private function mediaAreaMenu($menu)
     {
         $menu->addChild('menu.mediaarea', array('route' => 'homepage'))
@@ -172,7 +193,7 @@ class MenuBuilder
             ->setCurrent(false);
         $menu['menu.projects']->addChild('menu.projects.qctools', array('route' => 'qc_home'))->setCurrent(false);
         $menu['menu.projects']->addChild('menu.projects.bwfmetaedit', array('route' => 'bwf_home'))->setCurrent(false);
-        $menu['menu.projects']->addChild('menu.projects.dvanalyzer', array('uri' => '/DVAnalyzer'))->setCurrent(false);
+        $menu['menu.projects']->addChild('menu.projects.dvanalyzer', array('route' => 'dv_home'))->setCurrent(false);
 
         return $menu;
     }
