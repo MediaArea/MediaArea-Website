@@ -22,6 +22,7 @@ class AppKernel extends Kernel
             new BWFMetaEditBundle\BWFMetaEditBundle(),
             new QCToolsBundle\QCToolsBundle(),
             new DVAnalyzerBundle\DVAnalyzerBundle(),
+            new OllistdBundle\OllistdBundle(),
         ];
 
         if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {

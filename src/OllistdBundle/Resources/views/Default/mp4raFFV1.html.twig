@@ -1,0 +1,33 @@
+{% extends 'OllistdBundle::base.html.twig' %}
+
+{% block title %}Open LossLess in STanDards - Mapping FFV1 into the MP4{% endblock %}
+
+{% block body %}
+<h1 id="mapping-ffv1-into-the-mp4">Mapping FFV1 into the MP4</h1>
+<p>This document represents preparation notes for a request to mp4ra.org to register FFV1 for use in MP4, following the instructions at the <a href="http://www.mp4ra.org/request.html">mp4ra.org request page</a>.</p>
+<h2 id="email-request">Email Request</h2>
+<p>Draft of email.</p>
+<h3 id="for-registration-with-iso">For registration with ISO</h3>
+<p>to: <a href="mailto:mp4reg@group.apple.com">mp4reg@group.apple.com</a><br />
+subject: mp4reg FFV1</p>
+<h3 id="for-registration-with-quicktime">For registration with QuickTime</h3>
+<p>to: <a href="mailto:qtfourcc@group.apple.com">qtfourcc@group.apple.com</a><br />
+subject: qtreg FFV1</p>
+<h3 id="email-message">Email Message</h3>
+<p>Dave Rice of Chemin du Vernay, Curienne, France 73190 at MediaArea SARL requests the registration of an identifier for a lossless video encoding, FFV1, which is presently under standardization within the IETF <a href="https://datatracker.ietf.org/wg/cellar/charter/">cellar working group</a>.</p>
+<p>This request is for a codec kind of codepoint with a video stream type. The recommended identifier is &quot;FFV1&quot;. The specification was initially published by FFmpeg at <a href="http://ffmpeg.org/~michael/ffv1.html" class="uri">http://ffmpeg.org/~michael/ffv1.html</a>. Presently the specification is under development by the IETF cellar working group and the most up-to-date copies of the specification are available at <a href="https://datatracker.ietf.org/doc/draft-niedermayer-cellar-ffv1/" class="uri">https://datatracker.ietf.org/doc/draft-niedermayer-cellar-ffv1/</a> (possibly changing to <a href="https://datatracker.ietf.org/doc/draft-ietf-cellar-ffv1/" class="uri">https://datatracker.ietf.org/doc/draft-ietf-cellar-ffv1/</a> later). Development work on the specification may be viewed at <a href="https://github.com/FFmpeg/FFV1" class="uri">https://github.com/FFmpeg/FFV1</a>.</p>
+<p>FFV1's specification defines several versions of FFV1, currently version 0, 1, and 3. Versions 3 and higher of FFV1 require storage of a &quot;ConfigurationRecord&quot; to initialize the decoding. This ConfigurationRecord is defined in the FFV1 specification draft at <a href="https://datatracker.ietf.org/doc/draft-niedermayer-cellar-ffv1/" class="uri">https://datatracker.ietf.org/doc/draft-niedermayer-cellar-ffv1/</a>. The ConfigurationRecord extends the sample description box (&quot;moov&quot;, &quot;trak&quot;, &quot;mdia&quot;, &quot;minf&quot;, &quot;stbl&quot;, &quot;stsd&quot;) with a &quot;glbl&quot; box which contains the ConfigurationRecord bitstream.</p>
+<p>The codec could be briefly described as: &quot;FFV1, an open lossless intra-frame video codec&quot;.</p>
+<p>An authorized representation for the code-point may be contacted at:<br />
+Dave Rice<br />
+dave .at. dericed.com<br />
+MediaArea SARL<br />
+Chemin du Vernay<br />
+Curienne<br />
+France<br />
+73190</p>
+<p>Inquiries about FFV1 may also be directed to the ffmpeg-devel listserv at <a href="https://ffmpeg.org/mailman/listinfo/ffmpeg-devel" class="uri">https://ffmpeg.org/mailman/listinfo/ffmpeg-devel</a> or the IETF cellar working group at <a href="https://datatracker.ietf.org/wg/cellar/email/" class="uri">https://datatracker.ietf.org/wg/cellar/email/</a>.</p>
+<p>The date of the definition or implementation could be set to June 9, 2003 when FFV1 was initially released. Or August 3, 2013 when the latest version of FFV1 was released. A date for the official release of the specification for FFV1 from the IETF is not yet known, though earlier version of the specification were released by FFmpeg as recently as 2013.</p>
+<p>There are currently at least two FFV1 encoders, in libav and ffmpeg, and both utilize the &quot;FFV1&quot; codec id and storage of the ConfigurationRecord in the glbl atom as specified above.</p>
+<p>Please feel welcome to contact us with any questions, comments, or recommendations about this request. Thanks much.</p>
+{% endblock %}
