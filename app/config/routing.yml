@@ -1,3 +1,7 @@
+ollistd:
+    resource: "@OllistdBundle/Controller/"
+    type:     annotation
+
 dv_analyzer:
     resource: "@DVAnalyzerBundle/Controller/"
     type:     annotation

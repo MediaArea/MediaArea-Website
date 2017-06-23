@@ -1034,6 +1034,10 @@ Don't hesitate to <a href="mailto:info@mediaarea.net">contact us</a> if you're i
         <source><![CDATA[menu.projects.dvanalyzer]]></source>
         <target><![CDATA[DV Analyzer]]></target>
       </trans-unit>
+      <trans-unit id="menu.projects.ollistd" approved="yes">
+        <source><![CDATA[menu.projects.ollistd]]></source>
+        <target><![CDATA[Open LossLess in STanDards]]></target>
+      </trans-unit>
       <trans-unit id="227" approved="yes">
         <source><![CDATA[footer.projects]]></source>
         <target><![CDATA[Projects]]></target>

@@ -1,0 +1,201 @@
+{% extends 'OllistdBundle::base.html.twig' %}
+
+{% block title %}Open LossLess in STanDards{% endblock %}
+
+{% block body %}
+<h1 id="open-lossless-in-standards">Open LossLess in STanDards</h1>
+<p>An open effort to standardize open formats.</p>
+<h2 id="foreword">Foreword</h2>
+<p>In cases where digital loss is not acceptable, lossless data compression has been changing the way the world stores and transmits its data. Nowadays most digital office documents use lossless compression (.docx, .xlsx, .odt, .pages) and lossless images are more ubiquitous (.png). Although uncompressed digital storage is an option, uncompressed data generally contains no fixity mechanisms and generates e-waste at a much faster rate than lossless formats. When the preservation of quality is a requirement, lossless compression is the green option.</p>
+<p>Although lossless formats have been well adopted for images, documents and other media types, the adoption of lossless formats for audiovisual recordings has been much slower. Given the opportunity for lossless compression in audiovisual media, we also propose a focus on open formats, meaning:</p>
+<ul>
+<li>NO PATENT -- freedom to read, write, and use the format</li>
+<li>NO PAYWALL -- freedom to read, understand, and share the format's specification</li>
+<li>NO PROHIBITIONS -- freedom to modify and distribute the format</li>
+</ul>
+<p>We propose accelerating the implementation of lossless audiovisual formats with the following coordinated efforts:</p>
+<ul>
+<li>coordinated registration efforts for lossless formats with principal audiovisual standards organizations (IANA, IETF, ISO, SMPTE, at least)</li>
+<li>open documentation efforts of open, lossless audiovisual formats for relevant communities</li>
+<li>advocacy and promotion of open, lossless audiovisual formats to media application developers (both proprietary and open source)</li>
+</ul>
+<p>Following with the work of the <a href="http://preforma-project.eu/">PREFORMA project</a> we are focused on 3 open lossless formats:</p>
+<ul>
+<li>Matroska, a file container with the ability to transport various media streams</li>
+<li>FFV1, a lossless video coding format</li>
+<li>FLAC, a lossless audio coding format</li>
+</ul>
+<p>This focus is not specific to the arrangement of these formats but regards their use in other contexts as well, such as using FFV1 in the MXF format or FLAC wrapped in the QuickTime format.</p>
+<p>This page lists a summary of what we are doing regarding the registration of these formats in standard bodies used by people and organizations working with open lossless formats.</p>
+<p><em>Note: Standardization of the formats themselves is excluded from this summary. It is part of the <a href="https://datatracker.ietf.org/wg/cellar/charter/">IETF CELLAR Working Group</a>.</em></p>
+<h2 id="proposed-actions">Proposed Actions</h2>
+<h3 id="matroska">Matroska</h3>
+<ul>
+<li><p>FFV1: Currently using the AVI compatibility layer (similar to early version of AVC support), with active discussion about instead having a dedicated codec identifier (also similar to current version of AVC support).<br />
+If we decide to move, we need to do a PR on the <a href="https://github.com/Matroska-Org/matroska-specification">Matroska public repository</a>.</p></li>
+<li><p>FLAC: Completed prior to this initiative. (&quot;A_FLAC&quot; identifier), <a href="https://matroska.org/technical/specs/codecid/index.html">source</a>.</p></li>
+</ul>
+<h3 id="iana">IANA</h3>
+<p>For HTTP(S)/RTP servers...<br />
+Similar to <a href="https://tools.ietf.org/html/rfc4337">MIME Type Registration for MPEG-4</a>.</p>
+<p>Action items:</p>
+<ul>
+<li>Fill out a <a href="https://www.iana.org/form/media-types">IANA form for media-types</a>.<br />
+</li>
+<li>Matroska: registering video/matroska (1+ video), audio/matroska (0 video, 1+ audio), and application/matroska (0 video, 0 audio, 1+ other)</li>
+<li>FFV1: Registering &quot;video/FFV1&quot;.</li>
+<li>FLAC: Registering &quot;audio/FLAC&quot;.</li>
+</ul>
+<h3 id="mp4quicktime">MP4/QuickTime</h3>
+<p>See the <a href="http://www.mp4ra.org/request.html">mp4ra request page</a> for more information.</p>
+<ul>
+<li>FFV1: Registering &quot;FFV1&quot;.</li>
+<li>FLAC: Registering &quot;FLAC&quot;.</li>
+</ul>
+<p>A draft proposal of the request is available for comment at <a href="{{ path('ollistd_mp4ra_ffv1') }}">Proposal</a>.</p>
+<h3 id="mxf">MXF</h3>
+<p>We have a <a href="{{ path('ollistd_mxf_ffv1') }}">Proposal for FFV1</a> and a <a href="{{ path('ollistd_mxf_flac') }}">Proposal for FLAC</a>.</p>
+<p>Action items:</p>
+<ul>
+<li>Standardize the implementation of FFV1 and FLAC within the MXF container. Standard subscriber fees have already been provided by Jérôme Martinez.<br />
+</li>
+<li>Attend physical SMPTE meetings in support of work to standardize FLAC and FFV1 in MXF.</li>
+</ul>
+<p>References:<br />
+<a href="https://twitter.com/MrMXF/status/824535480314265601">Discussion on Twitter</a><br />
+<a href="http://mrmxf.com/blog/how-to-put-a-new-codec-into-mxf/">Blog by Bruce Devlin on the process</a></p>
+<h3 id="ffmpeg">FFmpeg</h3>
+<p>FFmpeg is an open source, cross-platform solution to record, convert and stream audio and video.</p>
+<p>After/during registering, we will need to update FFmpeg in order to have a reference tool for the new codec identifiers.</p>
+<h2 id="status">Status</h2>
+<div class="table-responsive">
+<table class="download table table-bordered">
+<thead>
+<tr class="table-header">
+<th>Entity</th>
+<th>Format</th>
+<th>Begin</th>
+<th>In specs</th>
+<th>In FFmpeg</th>
+<th>Remarks</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Matroska</td>
+<td>FFV1</td>
+<td>2017-02-04</td>
+<td>2017-02-05</td>
+<td>2017-02-05</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Matroska</td>
+<td>FLAC</td>
+<td>N/A</td>
+<td>Already done</td>
+<td>Already done?</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>IANA</td>
+<td>Matroska</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>IANA</td>
+<td>FFV1</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>IANA</td>
+<td>FLAC</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>MP4</td>
+<td>FFV1</td>
+<td>2017-02-16</td>
+<td></td>
+<td></td>
+<td><a href="{{ path('ollistd_mp4ra_ffv1' )}}">Proposal</a></td>
+</tr>
+<tr class="odd">
+<td>MP4</td>
+<td>FLAC</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>QuickTime</td>
+<td>FFV1</td>
+<td>2017-02-16</td>
+<td></td>
+<td></td>
+<td><a href="{{ path('ollistd_mp4ra_ffv1' )}}">Proposal</a>, same as FFV1/MP4</td>
+</tr>
+<tr class="odd">
+<td>QuickTime</td>
+<td>FLAC</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>MXF</td>
+<td>FFV1</td>
+<td>2017-01-27</td>
+<td></td>
+<td></td>
+<td><a href="{{ path('ollistd_mxf_ffv1' )}}">Proposal</a></td>
+</tr>
+<tr class="odd">
+<td>MXF</td>
+<td>FLAC</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="{{ path('ollistd_mxf_flac' )}}">Proposal</a></td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 id="timeline">Timeline</h2>
+<ul>
+<li>2017-01-27 MXF, <a href="https://twitter.com/MrMXF/status/824535480314265601">discussion with MrMXF</a>.</li>
+<li>2017-02-04 Matroska, <a href="https://mailarchive.ietf.org/arch/search/?email_list=cellar&amp;gbt=1&amp;index=Kir-8JdOl6DTZFPrxy4XM-iRP7Q">proposal of V_FFV1 (FFV1 in Matroska) on CELLAR</a>.</li>
+<li>2017-02-05 Matroska, <a href="https://github.com/Matroska-Org/matroska-specification/pull/94">FFV1 in Matroska PR</a> is accepted.</li>
+<li>2017-02-11 First draft of proposal for FFV1 and FLAC in MXF written</li>
+<li>2017-02-11 Global, public communication about this page</li>
+</ul>
+<h2 id="costs">Costs</h2>
+<p>Based on $100/hour labor, here are the cost estimates for completing project goals.</p>
+<ul>
+<li>Matroska: $100 labor to begin discussion about V_FFV1 and PR</li>
+<li>Matroska: $400 to register V_FFV1 for FFmpeg patch</li>
+<li>IANA: $400 for administrative tasks associated with registration</li>
+<li>MP4/QuickTime: $200 labor for administrative tasks</li>
+<li>MXF: $3000-10,000 for SMPTE (writing, travels) and FFmpeg patch (to be defined)</li>
+</ul>
+<h2 id="sponsors">Sponsors</h2>
+<ul>
+<li><a href="http://www.preforma-project.eu/">PREFORMA</a>, project co-funded by the <a href="http://europa.eu/">European Commission</a> is focused on Matroska and FFV1 standardization; Matroska and IANA registration is included in the sponsorship of <a href="https://mediaarea.net/MediaConch">MediaConch</a>.</li>
+<li>Other: <a href="maito:info@mediaarea.net">You?</a></li>
+</ul>
+<h2 id="keep-in-touch">Keep in touch!</h2>
+<p>You can modify this page: <a href="https://github.com/MediaArea/ollistd/blob/master/README.md">source of this page</a>.<br />
+You can email us: <a href="maito:info@mediaarea.net">info@mediaarea.net</a>
+</p>
+{% endblock %}

@@ -1,0 +1,427 @@
+{% extends 'OllistdBundle::base.html.twig' %}
+
+{% block title %}Open LossLess in STanDards - Mapping FFV1 into the MXF Generic Container{% endblock %}
+
+{% block body %}
+<h1 id="mapping-ffv1-into-the-mxf-generic-container">Mapping FFV1 into the MXF Generic Container</h1>
+<p>Proposal, &quot;(TBD&quot;) and &quot;(To be defined)&quot; must be replaced by real values.</p>
+<h2 id="foreword">Foreword</h2>
+<p>(Same as is SMPTE ST 2037 document)</p>
+<h2 id="intellectual-property">Intellectual Property</h2>
+<p>Remark: this is the technical proposal, based on SMPTE ST 2037 document (VC-1 in MXF). We have tried to remove any generic SMPTE boilerplate that is not different for FFV1 and tried to keep only sentences relevant for having a good technical document to define use of FFV1 in MXF without reinventing the wheel. We believe there there are no copyright issues with using basic technical sentences from SMPTE ST 2037 as a basis for the language here, but please contact <a href="maito:info@mediaarea.net">info@mediaarea.net</a> if you are a copyright holder and disagree so that we may remove this document immediately.</p>
+<p>(Same as is SMPTE ST 2037 document)</p>
+<h2 id="scope">1 Scope</h2>
+<p>This standard defines how FFV1 bitstreams shall be mapped in the MXF Generic Container (SMPTE 379M).</p>
+<p>FFV1 defines three possible versions for compliant bitstreams: 0, 1, 3. All of these versions are supported by this standard.</p>
+<p>FFV1 bitstreams comprise FFV1 encoded Pictures and both intra-coding and inter-coding mechanisms can be used. Both coding mechanisms are supported in this standard.</p>
+<p>FFV1 bitstreams comprise FFV1 encoded Pictures in both CDCI or RGB color spaces. Both colors spaces are supported in this standard.</p>
+<p>This standard maps the FFV1 encoded Pictures as either frame-wrapped or clip-wrapped using the mechanisms defined in SMPTE 379M, and both progressive and interlaced Picture representations are supported in this standard.</p>
+<p>This standard defines the KLV coding, the Essence Container Universal Label, the Essence Compression Universal Label and the Essence Descriptor to be used when wrapping FFV1 bitstreams in the MXF Generic Container.</p>
+<h2 id="conformance-notation">2 Conformance Notation</h2>
+<p>(Same as is SMPTE ST 2037 document)</p>
+<h2 id="normative-references">3 Normative References</h2>
+<p>(Same as is SMPTE ST 2037 document)</p>
+<p>IETF RFC (to be defined) — FFV1 Compressed Video Bitstream Format and Decoding Process</p>
+<h2 id="glossary-of-acronyms-terms-and-data-types">4 Glossary of Acronyms, Terms and Data Types</h2>
+<p>(Same as is SMPTE ST 2037 document)</p>
+<h2 id="overview">5 Overview</h2>
+<p>(Same as is SMPTE ST 2037 document)</p>
+<h2 id="mxf-encoders-locating-data-access-units">6 MXF Encoders — Locating Data Access Units</h2>
+<p>(Same as is SMPTE ST 2037 document)</p>
+<h2 id="data-access-units-in-the-mxf-generic-container">7 Data Access Units in the MXF Generic Container</h2>
+<p>(Same as is SMPTE ST 2037 document)</p>
+<h3 id="frame-wrapping">7.1 Frame Wrapping</h3>
+<p>(Same as is SMPTE ST 2037 document)</p>
+<h3 id="clip-wrapping">7.2 Clip Wrapping</h3>
+<p>(Same as is SMPTE ST 2037 document)</p>
+<h2 id="key-length-value-coding">8 Key-Length-Value Coding</h2>
+<h3 id="essence-element-key">8.1 Essence Element Key</h3>
+<p>The values of the first 12 bytes of the essence element Key are defined in SMPTE 379M. The version (byte 8) shall be set to 0x01. The values of the last four bytes of the Picture Element Key are given in Table 1.</p>
+<p>Table 1 – Key Value for the FFV1 Picture Element</p>
+<div class="table-responsive">
+<table class="download table table-bordered">
+<colgroup>
+<col width="8%" />
+<col width="25%" />
+<col width="6%" />
+<col width="60%" />
+</colgroup>
+<thead>
+<tr class="table-header">
+<th>Byte No.</th>
+<th>Description</th>
+<th>Value</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1~12</td>
+<td>Defined in SMPTE 379M</td>
+<td></td>
+<td>See SMPTE 379M</td>
+</tr>
+<tr class="even">
+<td>13</td>
+<td>Item Type Identifier</td>
+<td>15h</td>
+<td>GC Picture Item (as defined in SMPTE 379M)</td>
+</tr>
+<tr class="odd">
+<td>14</td>
+<td>Essence Element Count</td>
+<td>kkh</td>
+<td>Count of Picture Elements in the Picture item</td>
+</tr>
+<tr class="even">
+<td>15</td>
+<td>Essence Element Type</td>
+<td>(TBD)</td>
+<td>Frame-wrapped FFV1 Picture Element</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td>(TBD)</td>
+<td>Clip-wrapped FFV1 Picture Element</td>
+</tr>
+<tr class="even">
+<td>16</td>
+<td>Essence Element Number</td>
+<td>Nnh</td>
+<td>The Number (used as an Index) of this Picture Element in the Picture Item</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3 id="essence-element-count-byte-14">8.1.1 Essence Element Count – Byte 14</h3>
+<p>(Same as is SMPTE ST 2037 document)</p>
+<h4 id="essence-element-type-byte-15">8.1.2 Essence Element Type – Byte 15</h4>
+<p>(Same as is SMPTE ST 2037 document)</p>
+<h4 id="essence-element-number-byte-16">8.1.3 Essence Element Number – Byte 16</h4>
+<p>(Same as is SMPTE ST 2037 document)</p>
+<h3 id="length">8.2 Length</h3>
+<p>(Same as is SMPTE ST 2037 document)</p>
+<h3 id="value">8.3 Value</h3>
+<h4 id="frame-wrapped">8.3.1 Frame-wrapped</h4>
+<p>(Same as is SMPTE ST 2037 document)</p>
+<h4 id="clip-wrapped">8.3.2 Clip-wrapped</h4>
+<p>(Same as is SMPTE ST 2037 document)</p>
+<h2 id="smpte-universal-labels-for-ffv1">9 SMPTE Universal Labels for FFV1</h2>
+<h3 id="essence-container-ul">9.1 Essence Container UL</h3>
+<p>The values for the Essence Container UL are given in Table 2.</p>
+<p>Table 2 – Specification of the Essence Container Label</p>
+<div class="table-responsive">
+<table class="download table table-bordered">
+<thead>
+<tr class="table-header"><th>Byte No.</th>
+<th>Description</th>
+<th>Value</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1~12</td>
+<td>Defined by Generic Container</td>
+<td></td>
+<td>As defined in SMPTE 379M</td>
+</tr>
+<tr class="even">
+<td>13</td>
+<td>Essence Container Kind</td>
+<td>02h</td>
+<td>MXF Generic Container</td>
+</tr>
+<tr class="odd">
+<td>14</td>
+<td>Mapping Kind</td>
+<td>(TBD)</td>
+<td>FFV1 Picture Element</td>
+</tr>
+<tr class="even">
+<td>15</td>
+<td>Content Kind</td>
+<td>01h</td>
+<td>Frame-wrapped Picture Element</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td>02h</td>
+<td>Clip-wrapped Picture Element</td>
+</tr>
+<tr class="even">
+<td>16</td>
+<td>Reserved</td>
+<td>00h</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>(Same as is SMPTE ST 2037 document)</p>
+<h3 id="picture-essence-coding-ul">9.2 Picture Essence Coding UL</h3>
+<p>Values for the Picture Essence coding UL are given in Table 3.</p>
+<p>Table 3 – Specification of the Picture Essence Compression Label</p>
+<div class="table-responsive">
+<table class="download table table-bordered">
+<colgroup>
+<col width="8%" />
+<col width="25%" />
+<col width="6%" />
+<col width="60%" />
+</colgroup>
+<thead>
+<tr class="table-header">
+<th>Byte No.</th>
+<th>Description</th>
+<th>Value</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1~8</td>
+<td>Registry Designator</td>
+<td></td>
+<td>Designator value is defined in SMPTE 400M</td>
+</tr>
+<tr class="even">
+<td>9</td>
+<td>Parametric</td>
+<td>04h</td>
+<td>Node used to define parametric data</td>
+</tr>
+<tr class="odd">
+<td>10</td>
+<td>Picture Essence</td>
+<td>01h</td>
+<td>Identifies picture essence coding</td>
+</tr>
+<tr class="even">
+<td>11</td>
+<td>Picture Coding Characteristics</td>
+<td>02h</td>
+<td>Identifies picture coding characteristics</td>
+</tr>
+<tr class="odd">
+<td>12</td>
+<td>Compressed Picture Coding</td>
+<td>02h</td>
+<td>Identifies specialized compression</td>
+</tr>
+<tr class="even">
+<td>13</td>
+<td></td>
+<td>(TBD)</td>
+<td>Identifies FFV1 picture coding</td>
+</tr>
+<tr class="odd">
+<td>14</td>
+<td></td>
+<td>xxh</td>
+<td>Identifies FFV1 version according to the table below</td>
+</tr>
+<tr class="even">
+<td>15</td>
+<td></td>
+<td>00h</td>
+<td>Unused</td>
+</tr>
+<tr class="odd">
+<td>16</td>
+<td></td>
+<td>00h</td>
+<td>Unused</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>(Same as is SMPTE ST 2037 document)</p>
+<p>The correspondence between byte 14 and the FFV1 version described in IETF RFC (to be defined) is shown in Table 4.</p>
+<p>Table 4 – Correspondence Between Byte 14 and FFV1 version</p>
+<div class="table-responsive">
+<table class="download table table-bordered">
+<thead>
+<tr class="table-header">
+<th>Profile</th>
+<th>Value of Byte 14</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>0</td>
+<td>01h</td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td>02h</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>03h</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 id="ffv1-picture-essence-descriptor">10 FFV1 Picture Essence Descriptor</h2>
+<p>This section defines the FFV1PictureEssenceDescriptor that extends the CDCI Picture Essence Descriptor and RGB Picture Essence Descriptor defined in SMPTE 377-1 with additional properties specific to FFV1.</p>
+<p>All FFV1 bitstreams wrapped in the MXF Essence Container according to this standard shall be described in the MXF Header Metadata with a FFV1PictureEssenceDescriptor according to the rules defined in SMPTE 377-1 on how to link such descriptors with the Essence Container, and as shown in Table 5.</p>
+<p>Table 5 – FFV1 Picture Essence Descriptor</p>
+<div class="table-responsive">
+<table class="download table table-bordered">
+<colgroup>
+<col width="20%" />
+<col width="10%" />
+<col width="4%" />
+<col width="11%" />
+<col width="6%" />
+<col width="38%" />
+<col width="7%" />
+</colgroup>
+<thead>
+<tr class="table-header">
+<th>Item Name</th>
+<th>Type</th>
+<th>Len</th>
+<th>UL Value</th>
+<th>Req ?</th>
+<th>Meaning</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>FFV1 Picture Essence Descriptor</td>
+<td>Set UL</td>
+<td>16</td>
+<td>See table below</td>
+<td>Req</td>
+<td>Defines the FFV1 Picture Essence Descriptor Set</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Length</td>
+<td>BER Length</td>
+<td>4</td>
+<td></td>
+<td>Req</td>
+<td>Set length</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><td colspan=5>All items from the MXF Format CDCI Descriptor</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>FFV1InitializationMetadata</td>
+<td>Datastream</td>
+<td>16</td>
+<td>06 0e 2b 34 <br/> (TBD) <br/> (TBD)<br/> (TBD)</td>
+<td>D/Req</td>
+<td>See Section 10.1.</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>FFV1IdenticalGOP</td>
+<td>Boolean</td>
+<td>1</td>
+<td>06 0e 2b 34 <br/> (TBD) <br/> (TBD)<br/> (TBD)</td>
+<td>Opt</td>
+<td>TRUE if every GOP in the sequence is constructed the same.</td>
+<td>FALSE</td>
+</tr>
+<tr class="even">
+<td>FFV1MaxGOP</td>
+<td>UInt16</td>
+<td>2</td>
+<td>06 0e 2b 34 <br/> (TBD) <br/> (TBD)<br/> (TBD)</td>
+<td>Opt</td>
+<td>Specifies the maximum occurring spacing between I frames. <br/> A value of 0 or the absence of this property implies no limit to the maximum GOP</td>
+<td>no limit</td>
+</tr>
+<tr class="odd">
+<td>FFV1MaximumBitRate</td>
+<td>UInt32</td>
+<td>4</td>
+<td>06 0e 2b 34 <br/> (TBD) <br/> (TBD)<br/> (TBD)</td>
+<td>Opt</td>
+<td>Maximum bit rate of FFV1 video elementary stream in bit/s.</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>FFV1Version</td>
+<td>UInt8</td>
+<td>1</td>
+<td>06 0e 2b 34 <br/> (TBD) <br/> (TBD)<br/> (TBD)</td>
+<td>Opt</td>
+<td>Specifies the FFV1 video version. <br/> Coded as per IETF RFC (to be defined)</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>FFV1MicroVersion</td>
+<td>UInt8</td>
+<td>1</td>
+<td>06 0e 2b 34 <br/> (TBD) <br/> (TBD)<br/> (TBD)</td>
+<td>Opt</td>
+<td>Specifies the FFV1 video microversion. <br/> Coded as per IETF RFC (to be defined)</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3 id="ffv1initializationmetadata">10.1 FFV1InitializationMetadata</h3>
+<p>This property encodes the Metadata defined in IETF RFC (to be defined) and shall be present for version 3 bitstreams. The value of the property shall consist of the content of ConfigurationRecord as defined in IETF RFC (to be defined).</p>
+<h3 id="key-value">10.2 Key Value</h3>
+<p>The set Key of the FFV1 Picture Descriptor shall be as defined in Table 6.</p>
+<p>Table 6 – Key Value for the FFV1 Picture Essence Descriptor</p>
+<div class="table-responsive">
+<table class="download table table-bordered">
+<colgroup>
+<col width="8%" />
+<col width="25%" />
+<col width="6%" />
+<col width="60%" />
+</colgroup>
+<thead>
+<tr class="table-header">
+<th>Byte No.</th>
+<th>Description</th>
+<th>Value</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1~13</td>
+<td>As defined in SMPTE 377-1, Common Key Value for Structural Metadata (Table 13)</td>
+<td></td>
+<td>Values for all MXF structural metadata sets</td>
+</tr>
+<tr class="even">
+<td>14~15</td>
+<td>Set Kind</td>
+<td>(TBD)</td>
+<td>Defines the Key value for the FFV1 Picture Essence Descriptor</td>
+</tr>
+<tr class="odd">
+<td>16</td>
+<td>Reserved</td>
+<td>00h</td>
+<td>Reserved value</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3 id="length-value">10.3 Length Value</h3>
+<p>(Same as is SMPTE ST 2037 document)</p>
+<h2 id="pre-change">11 Pre-Change</h2>
+<p>(Same as is SMPTE ST 2037 document)</p>
+<h2 id="index-tables">12 Index Tables</h2>
+<p>(Same as is SMPTE ST 2037 document)</p>
+<h2 id="annex-a-informative">Annex A (Informative)</h2>
+<h3 id="bibliography">Bibliography</h3>
+<p>FFV1 specification: IETF RFC (to be defined)<br />
+(Same as is SMPTE ST 2037 document)</p>
+{% endblock %}

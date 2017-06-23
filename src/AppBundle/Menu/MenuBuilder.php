@@ -171,6 +171,23 @@ class MenuBuilder
         return $menu;
     }
 
+    /**
+     * @SuppressWarnings(PHPMD.UnusedFormalParameter)
+     */
+    public function createOllistdMenu(array $options)
+    {
+        $menu = $this->factory->createItem('root');
+        $menu->setChildrenAttribute('class', 'nav navbar-nav main-menu');
+
+        $menu = $this->mediaAreaMenu($menu);
+
+        $menu->addChild('menu.ollistd', array('route' => 'ollistd_home'));
+
+        $menu = $this->projectsMenu($menu);
+
+        return $menu;
+    }
+
     private function mediaAreaMenu($menu)
     {
         $menu->addChild('menu.mediaarea', array('route' => 'homepage'))
@@ -194,6 +211,7 @@ class MenuBuilder
         $menu['menu.projects']->addChild('menu.projects.qctools', array('route' => 'qc_home'))->setCurrent(false);
         $menu['menu.projects']->addChild('menu.projects.bwfmetaedit', array('route' => 'bwf_home'))->setCurrent(false);
         $menu['menu.projects']->addChild('menu.projects.dvanalyzer', array('route' => 'dv_home'))->setCurrent(false);
+        $menu['menu.projects']->addChild('menu.projects.ollistd', array('route' => 'ollistd_home'))->setCurrent(false);
 
         return $menu;
     }
