@@ -1,0 +1,92 @@
+{% extends 'AVIMetaEditBundle::base.html.twig' %}
+
+{% block title %}AVI MetaEdit - Download{% endblock %}
+
+{% block body %}
+<h1>Download</h1>
+
+<div class="table-responsive">
+<table class="download table table-bordered table-condensed">
+<tr class="table-header">
+    <th>Operating system</th>
+    <td>Link</td>
+</tr>
+<tr>
+    {% image '@AppBundle/Resources/public/img/OS/Windows.png' %}
+    <th><a href="{{ path('avi_download_windows') }}"><img src="{{ asset_url }}" width="288" height="76" alt="Microsoft Windows" title="Microsoft Windows"></a></th>
+    {% endimage %}
+    <td><a href="{{ path('avi_download_windows') }}">MediaArea releases</a></td>
+</tr>
+<tr>
+    {% image '@AppBundle/Resources/public/img/OS/Mac_OS.png' %}
+    <th><a href="{{ path('avi_download_mac') }}"><img src="{{ asset_url }}" width="250" height="100" alt="macOS" title="macOS"></a></th>
+    {% endimage %}
+    <td><a href="{{ path('avi_download_mac') }}">MediaArea releases</a></td>
+</tr>
+<tr>
+    {% image '@AppBundle/Resources/public/img/OS/Debian.png' %}
+    <th><a href="{{ path('avi_download_debian') }}"><img src="{{ asset_url }}" width="229" height="61" alt="Debian" title="Debian"></a></th>
+    {% endimage %}
+    <td><a href="{{ path('avi_download_debian') }}">MediaArea releases</a></td>
+</tr>
+<tr>
+    {% image '@AppBundle/Resources/public/img/OS/Ubuntu.png' %}
+    <th><a href="{{ path('avi_download_ubuntu') }}"><img src="{{ asset_url }}" width="304" height="79" alt="Ubuntu" title="Ubuntu"></a></th>
+    {% endimage %}
+    <td><a href="{{ path('avi_download_ubuntu') }}">MediaArea releases</a></td>
+</tr>
+<tr>
+    {% image '@AppBundle/Resources/public/img/OS/Linux_Mint.png' %}
+    <th><a href="{{ path('avi_download_ubuntu') }}"><img src="{{ asset_url }}" width="256" height="75" alt="Linux Mint" title="Linux Mint"></a></th>
+    {% endimage %}
+    <td><a href="{{ path('avi_download_ubuntu') }}">MediaArea releases</a></td>
+</tr>
+<tr>
+    {% image '@AppBundle/Resources/public/img/OS/RedHat.png' %}
+    <th><a href="{{ path('avi_download_rhel') }}"><img src="{{ asset_url }}" width="200" height="61" alt="RedHat Entreprise Linux" title="RedHat Entreprise Linux"></a></th>
+    {% endimage %}
+    <td><a href="{{ path('avi_download_rhel') }}">MediaArea releases</a></td>
+</tr>
+<tr>
+    {% image '@AppBundle/Resources/public/img/OS/CentOS.png' %}
+    <th><a href="{{ path('avi_download_centos') }}"><img src="{{ asset_url }}" width="271" height="60" alt="CentOS" title="CentOS"></a></th>
+    {% endimage %}
+    <td><a href="{{ path('avi_download_centos') }}">MediaArea releases</a></td>
+</tr>
+<tr>
+    {% image '@AppBundle/Resources/public/img/OS/Fedora.png' %}
+    <th><a href="{{ path('avi_download_fedora') }}"><img src="{{ asset_url }}" width="250" height="89" alt="Fedora" title="Fedora"></a></th>
+    {% endimage %}
+    <td><a href="{{ path('avi_download_fedora') }}">MediaArea releases</a></td>
+</tr>
+<tr>
+    {% image '@AppBundle/Resources/public/img/OS/openSUSE.png' %}
+    <th><a href="{{ path('avi_download_opensuse') }}"><img src="{{ asset_url }}" width="155" height="100" alt="openSUSE" title="openSUSE"></a></th>
+    {% endimage %}
+    <td><a href="{{ path('avi_download_opensuse') }}">MediaArea releases</a></td>
+</tr>
+<tr>
+    {% image '@AppBundle/Resources/public/img/OS/Suse.png' %}
+    <th><a href="{{ path('avi_download_sle') }}"><img src="{{ asset_url }}" width="165" height="100" alt="SLE" title="SUSE Linux Enterprise"></a></th>
+    {% endimage %}
+    <td><a href="{{ path('avi_download_sle') }}">MediaArea releases</a></td>
+</tr>
+<tr>
+    {% image '@AppBundle/Resources/public/img/OS/Mageia.png' %}
+    <th><a href="{{ path('avi_download_mageia') }}"><img src="{{ asset_url }}" width="250" height="89" alt="Mageia" title="Mageia"></a></th>
+    {% endimage %}
+    <td><a href="{{ path('avi_download_mageia') }}">MediaArea releases</a></td>
+</tr>
+<tr>
+    {% image '@AppBundle/Resources/public/img/OS/ArchLinux.png' %}
+    <th><a href="{{ path('avi_download_archlinux') }}"><img src="{{ asset_url }}" width="350" height="103" alt="ArchLinux" title="ArchLinux"></a></th>
+    {% endimage %}
+    <td><a href="{{ path('avi_download_archlinux') }}">MediaArea releases</a></td>
+</tr>
+<tr>
+    <th><a href="{{ path('avi_download_source') }}">From source<br>(for other distributions or/and CPU)</a></th>
+    <td><a href="{{ path('avi_download_source') }}">MediaArea releases</a></td>
+</tr>
+</table>
+</div>
+{% endblock %}
