@@ -1,3 +1,7 @@
+avi_meta_edit:
+    resource: "@AVIMetaEditBundle/Controller/"
+    type:     annotation
+
 ollistd:
     resource: "@OllistdBundle/Controller/"
     type:     annotation

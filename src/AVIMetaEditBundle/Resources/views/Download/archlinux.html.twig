@@ -1,0 +1,27 @@
+{% extends 'AVIMetaEditBundle::base.html.twig' %}
+
+{% block title %}AVI MetaEdit - Download AVI MetaEdit for Arch Linux{% endblock %}
+
+{% block body %}
+<h1>Download - Arch Linux</h1>
+{% image '@AppBundle/Resources/public/img/OS/ArchLinux.png' %}
+<img src="{{ asset_url }}" alt="Arch Linux" title="Arch Linux" width="350" height="103"><br />
+{% endimage %}
+
+<div class="table-responsive">
+<table class="download table table-bordered table-condensed">
+<thead>
+<tr class="table-header">
+    <th>Version</th>
+    <th>Architecture</th>
+    <th>Interface</th>
+    <td>Version</td>
+    <td>Comment</td>
+</tr>
+</thead>
+<tbody>
+{% include 'AVIMetaEditBundle:Download:archlinuxTable.html.twig' %}
+</tbody>
+</table>
+</div>
+{% endblock %}

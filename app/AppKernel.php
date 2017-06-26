@@ -23,6 +23,7 @@ class AppKernel extends Kernel
             new QCToolsBundle\QCToolsBundle(),
             new DVAnalyzerBundle\DVAnalyzerBundle(),
             new OllistdBundle\OllistdBundle(),
+            new AVIMetaEditBundle\AVIMetaEditBundle(),
         ];
 
         if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {

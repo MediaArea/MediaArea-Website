@@ -1,0 +1,27 @@
+{% extends 'AVIMetaEditBundle::base.html.twig' %}
+
+{% block title %}AVI MetaEdit - Download AVI MetaEdit for macOS{% endblock %}
+
+{% block body %}
+<h1>Download - macOS</h1>
+{% image '@AppBundle/Resources/public/img/OS/Mac_OS.png' %}
+<img src="{{ asset_url }}" alt="macOS" title="macOS" width="250" height="100"><br />
+{% endimage %}
+
+<div class="table-responsive">
+<table class="download table table-bordered table-condensed">
+<thead>
+<tr class="table-header">
+    <th>Version</th>
+    <th>Architecture</th>
+    <th>Interface</th>
+    <th>Version</th>
+    <th>Comment</th>
+</tr>
+</thead>
+<tbody>
+{% include 'AVIMetaEditBundle:Download:macTable.html.twig' %}
+</tbody>
+</table>
+</div>
+{% endblock %}

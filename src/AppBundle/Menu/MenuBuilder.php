@@ -123,6 +123,27 @@ class MenuBuilder
     /**
      * @SuppressWarnings(PHPMD.UnusedFormalParameter)
      */
+    public function createAVIMetaEditMenu(array $options)
+    {
+        $menu = $this->factory->createItem('root');
+        $menu->setChildrenAttribute('class', 'nav navbar-nav main-menu');
+
+        $menu = $this->mediaAreaMenu($menu);
+
+        $menu->addChild('menu.avimetaedit', array('route' => 'avi_home'))
+            ->setExtras(array('dropdown' => true))
+            ->setCurrent(true);
+        $menu['menu.avimetaedit']->addChild('menu.avimetaedit.about', array('route' => 'avi_home'));
+        $menu['menu.avimetaedit']->addChild('menu.avimetaedit.download', array('route' => 'avi_download'));
+
+        $menu = $this->projectsMenu($menu);
+
+        return $menu;
+    }
+
+    /**
+     * @SuppressWarnings(PHPMD.UnusedFormalParameter)
+     */
     public function createQCToolsMenu(array $options)
     {
         $menu = $this->factory->createItem('root');
