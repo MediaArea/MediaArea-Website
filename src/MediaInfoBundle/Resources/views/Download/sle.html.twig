@@ -1,9 +1,11 @@
-{% extends 'QCToolsBundle::base.html.twig' %}
+{% extends 'MediaInfoBundle::base.html.twig' %}
 
-{% block title %}QCTools - Download QCTools for SLE{% endblock %}
+{% block title %}{% trans %}download.sle.page.title{% endtrans %}{% endblock %}
+{% block description %}{% trans %}about.page.description{% endtrans %}{% endblock %}
+{% block keywords %}{% trans %}about.page.keywords{% endtrans %}{% endblock %}
 
 {% block body %}
-<h1>Download - SLE</h1>
+<h1>{% trans %}download.sle.title{% endtrans %}</h1>
 {% image '@AppBundle/Resources/public/img/OS/Suse.png' %}
 <img src="{{ asset_url }}" alt="Suse" title="Suse" width="165" height="100"><br />
 {% endimage %}
@@ -20,7 +22,7 @@
 </tr>
 </thead>
 <tbody>
-{% include 'QCToolsBundle:Download:sleTable.html.twig' %}
+{% include 'MediaInfoBundle:Download:sleTable.html.twig' %}
 </tbody>
 </table>
 </div>

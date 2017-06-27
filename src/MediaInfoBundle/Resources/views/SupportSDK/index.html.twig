@@ -1,0 +1,29 @@
+{% extends 'MediaInfoBundle::base.html.twig' %}
+
+{% block title %}{% trans %}support.sdk.page.title{% endtrans %}{% endblock %}
+{% block description %}{% trans %}about.page.description{% endtrans %}{% endblock %}
+{% block keywords %}{% trans %}about.page.keywords{% endtrans %}{% endblock %}
+
+{% block body %}
+({% trans %}support.wip.warning{% endtrans %})
+<h1>{% trans %}support.sdk.title{% endtrans %}</h1>
+
+<h2>{% trans %}support.sdk.what.title{% endtrans %}</h2>
+{% trans %}support.sdk.what.content{% endtrans %}
+
+<h2>{% trans %}support.sdk.contents.title{% endtrans %}</h2>
+<ul>
+    <li><a href="{{ path('mi_support_sdk_readfirst') }}">{% trans %}support.sdk.contents.ReadFirst{% endtrans %}</a></li>
+    <li><a href="{{ path('mi_support_sdk_means') }}">{% trans %}support.sdk.contents.Means{% endtrans %}</a></li>
+    <li><a href="{{ path('mi_support_sdk_quick_start') }}">{% trans %}support.sdk.contents.Quick_Start{% endtrans %}</a></li>
+    <li><a href="{{ path('mi_support_sdk_more_info') }}">{% trans %}support.sdk.contents.More_Info{% endtrans %}</a></li>
+</ul>
+
+<h2>{% trans %}support.sdk.advanced.title{% endtrans %}</h2>
+{% trans %}support.sdk.advanced.note{% endtrans %}
+<ul>
+    <li><a href="{{ path('mi_support_sdk_buffers') }}">{% trans %}support.sdk.advanced.Buffers{% endtrans %}</a></li>
+    <li><a href="{{ path('mi_support_sdk_duplicate') }}">{% trans %}support.sdk.advanced.Duplicate{% endtrans %}</a></li>
+    <li><a href="{{ path('mi_support_sdk_filtering') }}">{% trans %}support.sdk.advanced.Filtering{% endtrans %}</a></li>
+</ul>
+{% endblock %}

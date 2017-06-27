@@ -1,0 +1,13 @@
+{% extends 'MediaInfoBundle::base.html.twig' %}
+
+{% block title %}{% trans %}support.page.title{% endtrans %}{% endblock %}
+{% block description %}{% trans %}about.page.description{% endtrans %}{% endblock %}
+{% block keywords %}{% trans %}about.page.keywords{% endtrans %}{% endblock %}
+
+{% block body %}
+<h1>{% trans %}support.title{% endtrans %}</h1>
+{% trans with {'%supportFaqRoute%': path('mi_support_faq'), '%supportFormatRoute%': path('mi_support_formats'), '%supportTagsRoute%': path('mi_support_tags'), '%supportSdkRoute%': path('mi_support_sdk'), '%supportBuildRoute%': path('mi_support_build') } %}support.content{% endtrans %}
+
+<a name="pro"></a><h1>{% trans %}support.pro.title{% endtrans %}</h1>
+{% trans %}support.pro.content{% endtrans %}
+{% endblock %}

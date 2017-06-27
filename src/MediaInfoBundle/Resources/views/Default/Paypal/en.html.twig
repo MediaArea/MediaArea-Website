@@ -1,0 +1,77 @@
+<table>
+     <tr>
+        <td class="address center">
+            U.S.A. / Others<br/>
+            (in <strong>U.S. Dollars</strong>)<br/>
+            <div>
+            {% include 'MediaInfoBundle:Default:Paypal/donate.html.twig' with {
+                'country': 'US',
+                'languageCountry': 'en_US',
+                'currency': 'USD',
+                'currencyBefore': 'US$',
+                'currencyAfter': '',
+                'currencyBase': 1,
+                'currencyDonateDefault': 10,
+                'currencySubscribeDefault': 2,
+                } only %}
+            </div>
+        </td>
+        <td>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        </td>
+        <td class="address center">
+            Great Britain<br/>
+            (in <strong>Pounds</strong>)<br/>
+            <div>
+            {% include 'MediaInfoBundle:Default:Paypal/donate.html.twig' with {
+                'country': 'GB',
+                'languageCountry': 'en_GB',
+                'currency': 'GBP',
+                'currencyBefore': '',
+                'currencyAfter': '£',
+                'currencyBase': 1,
+                'currencyDonateDefault': 5,
+                'currencySubscribeDefault': 1,
+                } only %}
+            </div>
+        </td>
+        <td>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        </td>
+        <td class="address center">
+            Australia<br/>
+            (in <strong>Australian Dollars</strong>)<br/>
+            <div>
+            {% include 'MediaInfoBundle:Default:Paypal/donate.html.twig' with {
+                'country': 'AU',
+                'languageCountry': 'en_AU',
+                'currency': 'AUD',
+                'currencyBefore': '',
+                'currencyAfter': 'AU$',
+                'currencyBase': 1,
+                'currencyDonateDefault': 10,
+                'currencySubscribeDefault': 2,
+                } only %}
+            </div>
+        </td>
+        <td>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        </td>
+        <td class="address center">
+            Canada<br/>
+            (in <strong>Canadian Dollars</strong>)<br/>
+            <div>
+            {% include 'MediaInfoBundle:Default:Paypal/donate.html.twig' with {
+                'country': 'CA',
+                'languageCountry': 'en_US',
+                'currency': 'CAD',
+                'currencyBefore': 'CA$',
+                'currencyAfter': '',
+                'currencyBase': 1,
+                'currencyDonateDefault': 10,
+                'currencySubscribeDefault': 2,
+                } only %}
+            </div>
+        </td>
+    </tr>
+</table>

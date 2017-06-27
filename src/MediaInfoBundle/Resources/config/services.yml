@@ -1,0 +1,8 @@
+services:
+#    media_info.example:
+#        class: MediaInfoBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]
+
+    mi.download_info:
+        class: MediaInfoBundle\Lib\DownloadInfo\MediaInfoDownloadInfo
+        public: true
