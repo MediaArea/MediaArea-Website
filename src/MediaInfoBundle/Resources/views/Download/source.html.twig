@@ -1,0 +1,26 @@
+{% extends 'MediaInfoBundle::base.html.twig' %}
+
+{% block title %}{% trans %}download.source.page.title{% endtrans %}{% endblock %}
+{% block description %}{% trans %}about.page.description{% endtrans %}{% endblock %}
+{% block keywords %}{% trans %}about.page.keywords{% endtrans %}{% endblock %}
+
+{% block body %}
+<h1>{% trans %}download.source.title{% endtrans %}</h1>
+
+<div class="table-responsive">
+<table class="download table table-bordered table-condensed">
+<thead>
+<tr class="table-header">
+    <th>Version</th>
+    <th>Interface</th>
+    <th>&nbsp;</th>
+    <th>Version</th>
+    <th>Comment</th>
+</tr>
+</thead>
+<tbody>
+{% include 'MediaInfoBundle:Download:sourceTable.html.twig' %}
+</tbody>
+</table>
+</div>
+{% endblock %}

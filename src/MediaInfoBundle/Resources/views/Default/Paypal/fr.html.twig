@@ -1,0 +1,58 @@
+<table>
+     <tr>
+        <td class="address center">
+            France<br/>
+            (en <strong>Euros</strong>)<br/>
+            <div>
+            {% include 'MediaInfoBundle:Default:Paypal/donate.html.twig' with {
+                'country': 'FR',
+                'languageCountry': 'fr_FR/FR',
+                'currency': 'EUR',
+                'currencyBefore': '',
+                'currencyAfter': 'Euros',
+                'currencyBase': 1,
+                'currencyDonateDefault': 5,
+                'currencySubscribeDefault': 1,
+                } only %}
+            </div>
+        </td>
+        <td>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        </td>
+        <td class="address center">
+            Québec<br/>
+            (en <strong>Dollars canadiens</strong>)<br/>
+            <div>
+            {% include 'MediaInfoBundle:Default:Paypal/donate.html.twig' with {
+                'country': 'CA',
+                'languageCountry': 'fr_XC',
+                'currency': 'CAD',
+                'currencyBefore': 'CA$',
+                'currencyAfter': '',
+                'currencyBase': 1,
+                'currencyDonateDefault': 10,
+                'currencySubscribeDefault': 2,
+                } only %}
+            </div>
+        </td>
+        <td>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        </td>
+        <td class="address center">
+            Autre<br/>
+            (en <strong>Dollars des Etats-Unis</strong>)<br/>
+            <div>
+            {% include 'MediaInfoBundle:Default:Paypal/donate.html.twig' with {
+                'country': 'US',
+                'languageCountry': 'fr_XC',
+                'currency': 'USD',
+                'currencyBefore': 'US$',
+                'currencyAfter': '',
+                'currencyBase': 1,
+                'currencyDonateDefault': 10,
+                'currencySubscribeDefault': 2,
+                } only %}
+            </div>
+        </td>
+    </tr>
+</table>

@@ -24,6 +24,7 @@ class AppKernel extends Kernel
             new DVAnalyzerBundle\DVAnalyzerBundle(),
             new OllistdBundle\OllistdBundle(),
             new AVIMetaEditBundle\AVIMetaEditBundle(),
+            new MediaInfoBundle\MediaInfoBundle(),
         ];
 
         if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {

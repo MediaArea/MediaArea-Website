@@ -1,0 +1,191 @@
+{% extends 'MediaInfoBundle::base.html.twig' %}
+
+{% block title %}{% trans %}support.faq.page.title{% endtrans %}{% endblock %}
+{% block description %}{% trans %}about.page.description{% endtrans %}{% endblock %}
+{% block keywords %}{% trans %}about.page.keywords{% endtrans %}{% endblock %}
+
+{% block body %}
+<h1>{% trans %}support.faq.title{% endtrans %}</h1>
+
+<ul>
+ <li><a href="#Analysis">{% trans %}support.faq.analysis{% endtrans %}</a>
+  <ul>
+   <li><a href="#BFF_TFF">{% trans %}support.faq.analysis.BFF_TFF.title{% endtrans %}</a></li>
+  </ul>
+ </li>
+ <li><a href="#General">{% trans %}support.faq.general{% endtrans %}</a>
+  <ul>
+   <li><a href="#URL">{% trans %}support.faq.general.URL.title{% endtrans %}</a></li>
+   <li><a href="#Internet">{% trans %}support.faq.general.Internet.title{% endtrans %}</a></li>
+   <li><a href="#MultipleNames">{% trans %}support.faq.general.MultipleNames.title{% endtrans %}</a></li>
+   <li><a href="#MultipleVersions">{% trans %}support.faq.general.MultipleVersions.title{% endtrans %}</a></li>
+   <li><a href="#NoSupport">{% trans %}support.faq.general.NoSupport.title{% endtrans %}</a></li>
+   <li><a href="#YouShould">{% trans %}support.faq.general.YouShould.title{% endtrans %}</a></li>
+   <li><a href="#NoDetection">{% trans %}support.faq.general.NoDetection.title{% endtrans %}</a></li>
+   <li><a href="#NoTranslation">{% trans %}support.faq.general.NoTranslation.title{% endtrans %}</a></li>
+   <li><a href="#BinaryPrefix">{% trans %}support.faq.general.BinaryPrefix.title{% endtrans %}</a></li>
+   <li><a href="#ThousandSeparator">{% trans %}support.faq.general.ThousandSeparator.title{% endtrans %}</a></li>
+   <li><a href="#NoQuestion">{% trans %}support.faq.general.NoQuestion.title{% endtrans %}</a></li>
+  </ul>
+ </li>
+ <li><a href="#GUI">{% trans %}support.faq.gui{% endtrans %}</a>
+  <ul>
+   <li><a href="#License_GUI">{% trans %}support.faq.gui.License_GUI.title{% endtrans %}</a></li>
+   <li><a href="#BuildFromSources_GUI">{% trans %}support.faq.gui.BuildFromSources_GUI.title{% endtrans %}</a></li>
+  </ul>
+ </li>
+ <li><a href="#Cmd">{% trans %}support.faq.cli{% endtrans %}</a>
+  <ul>
+   <li><a href="#License_Cmd">{% trans %}support.faq.cli.License_Cmd.title{% endtrans %}</a></li>
+   <li><a href="#Cmd_Options">{% trans %}support.faq.cli.Cmd_Options.title{% endtrans %}</a></li>
+   <li><a href="#BuildFromSources_Cmd">{% trans %}support.faq.cli.BuildFromSources_Cmd.title{% endtrans %}</a></li>
+  </ul>
+ </li>
+ <li><a href="#Dll">{% trans %}support.faq.dll{% endtrans %}</a>
+  <ul>
+   <li><a href="#License_Dll">{% trans %}support.faq.dll.License_Dll.title{% endtrans %}</a></li>
+   <li><a href="#NoSoftware">{% trans %}support.faq.dll.NoSoftware.title{% endtrans %}</a></li>
+   <li><a href="#SDK">{% trans %}support.faq.dll.SDK.title{% endtrans %}</a></li>
+   <li><a href="#StaticLib">{% trans %}support.faq.dll.StaticLib.title{% endtrans %}</a></li>
+   <li><a href="#BuildFromSources_DLL">{% trans %}support.faq.dll.BuildFromSources_DLL.title{% endtrans %}</a></li>
+   <li><a href="#AccessIsDenied">{% trans %}support.faq.dll.AccessIsDenied.title{% endtrans %}</a></li>
+  </ul>
+ </li>
+</ul>
+
+<a name="Analysis"></a><h2>{% trans %}support.faq.analysis{% endtrans %}</h2>
+<div class="paragraph-block">
+    <h3><a name="BFF_TFF"></a>{% trans %}support.faq.analysis.BFF_TFF.title{% endtrans %}</h3>
+    <div class="paragraph-block">
+        {% trans %}support.faq.analysis.BFF_TFF.content{% endtrans %}<br/>
+        <code>
+        Scan&nbsp;type&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;Interlaced<br/>
+        Scan&nbsp;order&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;Bottom&nbsp;Field&nbsp;First<br/>
+        Scan&nbsp;order,&nbsp;stored/displayed&nbsp;inverted&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;Yes
+        </code><br/>
+        {% trans %}support.faq.analysis.BFF_TFF.content2{% endtrans %}
+    </div>
+</div>
+
+<a name="General"></a><h2>{% trans %}support.faq.general{% endtrans %}</h2>
+<div class="paragraph-block">
+    <h3><a name="URL"></a>{% trans %}support.faq.general.URL.title{% endtrans %}</h3>
+    <div class="paragraph-block">
+        https://mediaarea.net/MediaInfo
+    </div>
+
+    <h3><a name="Internet"></a>{% trans %}support.faq.general.Internet.title{% endtrans %}</h3>
+    <div class="paragraph-block">
+        {% trans %}support.faq.general.Internet.content{% endtrans %}
+    </div>
+
+    <h3><a name="MultipleNames"></a>{% trans %}support.faq.general.MultipleNames.title{% endtrans %}</h3>
+    <div class="paragraph-block">
+        {% trans %}support.faq.general.MultipleNames.content{% endtrans %}
+    </div>
+
+    <h3><a name="MultipleVersions"></a>{% trans %}support.faq.general.MultipleVersions.title{% endtrans %}</h3>
+    <div class="paragraph-block">
+        {% trans %}support.faq.general.MultipleVersions.content{% endtrans %}
+    </div>
+
+    <h3><a name="NoSupport"></a>{% trans %}support.faq.general.NoSupport.title{% endtrans %}</h3>
+    <div class="paragraph-block">
+        {% trans %}support.faq.general.NoSupport.content{% endtrans %}
+    </div>
+
+    <h3><a name="YouShould"></a>{% trans %}support.faq.general.YouShould.title{% endtrans %}</h3>
+    <div class="paragraph-block">
+        {% trans %}support.faq.general.YouShould.content{% endtrans %}
+    </div>
+
+    <h3><a name="NoDetection"></a>{% trans %}support.faq.general.NoDetection.title{% endtrans %}</h3>
+    <div class="paragraph-block">
+        {% trans %}support.faq.general.NoDetection.content{% endtrans %}
+    </div>
+
+    <h3><a name="NoTranslation"></a>{% trans %}support.faq.general.NoTranslation.title{% endtrans %}</h3>
+    <div class="paragraph-block">
+        {% trans %}support.faq.general.NoTranslation.content{% endtrans %}
+    </div>
+
+    <h3><a name="BinaryPrefix"></a>{% trans %}support.faq.general.BinaryPrefix.title{% endtrans %}</h3>
+    <div class="paragraph-block">
+        {% trans %}support.faq.general.BinaryPrefix.content{% endtrans %}
+    </div>
+
+    <h3><a name="ThousandSeparator"></a>{% trans %}support.faq.general.ThousandSeparator.title{% endtrans %}</h3>
+    <div class="paragraph-block">
+        {% trans %}support.faq.general.ThousandSeparator.content{% endtrans %}
+    </div>
+
+    <h3><a name="NoQuestion"></a>{% trans %}support.faq.general.NoQuestion.title{% endtrans %}</h3>
+    <div class="paragraph-block">
+        {% trans %}support.faq.general.NoQuestion.content{% endtrans %}
+    </div>
+</div>
+
+<a name="GUI"></a><h2>{% trans %}support.faq.gui{% endtrans %}</h2>
+<div class="paragraph-block">
+    <h3><a name="License_GUI"></a>{% trans %}support.faq.gui.License_GUI.title{% endtrans %}</h3>
+    <div class="paragraph-block">
+        {% trans with {'%licenseRoute%': path('mi_license')} %}support.faq.gui.License_GUI.content{% endtrans %}
+    </div>
+
+    <h3><a name="BuildFromSources_GUI"></a>{% trans %}support.faq.gui.BuildFromSources_GUI.title{% endtrans %}</h3>
+    <div class="paragraph-block">
+        {% trans with {'%downloadSourceRoute%': path('mi_download_source')} %}support.faq.gui.BuildFromSources_GUI.content{% endtrans %}
+    </div>
+</div>
+
+<a name="Cmd"></a><h2>{% trans %}support.faq.cli{% endtrans %}</h2>
+<div class="paragraph-block">
+    <h3><a name="License_Cmd"></a>{% trans %}support.faq.cli.License_Cmd.title{% endtrans %}</h3>
+    <div class="paragraph-block">
+        {% trans with {'%licenseRoute%': path('mi_license')} %}support.faq.cli.License_Cmd.content{% endtrans %}
+    </div>
+
+    <h3><a name="Cmd_Options"></a>{% trans %}support.faq.cli.Cmd_Options.title{% endtrans %}</h3>
+    <div class="paragraph-block">
+        {% trans %}support.faq.cli.Cmd_Options.content{% endtrans %}
+    </div>
+
+    <h3><a name="BuildFromSources_Cmd"></a>{% trans %}support.faq.cli.BuildFromSources_Cmd.title{% endtrans %}</h3>
+    <div class="paragraph-block">
+        {% trans with {'%downloadSourceRoute%': path('mi_download_source')} %}support.faq.cli.BuildFromSources_Cmd.content{% endtrans %}
+    </div>
+</div>
+
+<a name="Dll"></a><h2>{% trans %}support.faq.dll{% endtrans %}</h2>
+<div class="paragraph-block">
+    <h3><a name="License_Dll"></a>{% trans %}support.faq.dll.License_Dll.title{% endtrans %}</h3>
+    <div class="paragraph-block">
+        {% trans with {'%licenseRoute%': path('mi_license')} %}support.faq.dll.Licence_Dll.content{% endtrans %}
+    </div>
+
+    <h3><a name="NoSoftware"></a>{% trans %}support.faq.dll.NoSoftware.title{% endtrans %}</h3>
+    <div class="paragraph-block">
+        {% trans %}support.faq.dll.NoSoftware.content{% endtrans %}
+    </div>
+
+    <h3><a name="SDK"></a>{% trans %}support.faq.dll.SDK.title{% endtrans %}</h3>
+    <div class="paragraph-block">
+        {% trans with {'%supportSdkRoute%': path('mi_support_sdk')} %}support.faq.dll.SDK.content{% endtrans %}
+    </div>
+
+    <h3><a name="StaticLib"></a>{% trans %}support.faq.dll.StaticLib.title{% endtrans %}</h3>
+    <div class="paragraph-block">
+        {% trans with {'%buildFromSourceRoute%': path('mi_support_build')} %}support.faq.dll.StaticLib.content{% endtrans %}
+    </div>
+
+    <h3><a name="BuildFromSources_DLL"></a>{% trans %}support.faq.dll.BuildFromSources_DLL.title{% endtrans %}</h3>
+    <div class="paragraph-block">
+        {% trans with {'%downloadSourceRoute%': path('mi_download_source')} %}support.faq.dll.BuildFromSources_DLL.content{% endtrans %}
+    </div>
+
+    <h3><a name="AccessIsDenied"></a>{% trans %}support.faq.dll.AccessIsDenied.title{% endtrans %}</h3>
+    <div class="paragraph-block">
+        {% trans %}support.faq.dll.AccessIsDenied.content{% endtrans %}
+    </div>
+</div>
+{% endblock %}

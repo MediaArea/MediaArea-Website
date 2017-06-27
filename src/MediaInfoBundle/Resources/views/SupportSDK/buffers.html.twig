@@ -1,0 +1,118 @@
+{% extends 'MediaInfoBundle::base.html.twig' %}
+
+{% block title %}MediaInfo - Using a buffer instead of a file name{% endblock %}
+{% block description %}{% trans %}about.page.description{% endtrans %}{% endblock %}
+{% block keywords %}{% trans %}about.page.keywords{% endtrans %}{% endblock %}
+
+{% block body %}
+<h1>Using a buffer instead of a file name</h1>
+<div>
+<ul>
+ <li><a href="#Steps">Steps</a>
+  <ul>
+   <li><a href="#Buffers_Init">Initialization</a></li>
+   <li><a href="#Buffers_Continue">Send data</a></li>
+   <li><a href="#Buffers_Finalize">Finalize</a></li>
+  </ul>
+ </li>
+ <li><a href="#Options">Options</a>
+  <ul>
+   <li><a href="#Buffers_IsSeekable">If the buffer stream is not seakable</a></li>
+  </ul>
+ </li>
+ <li><a href="#Examples">Examples</a>
+  <ul>
+   <li><a href="#Examples_1">Basic example</a></li>
+   <li><a href="#Examples_2">If the buffer stream is not seakable</a></li>
+  </ul>
+ </li>
+</ul>
+</div>
+<a name="Steps"></a><h2>Steps</h2>
+<div class="paragraph-block">
+<a name="Buffers_Init"></a><h3>Initialization</h3>
+For each buffer stream, you must initialize MediaInfo:<br/>
+<span class="cppcode">MediaInfo::Open_Buffer_Init()</span><br/>
+
+<a name="Buffers_Continue"></a><h3>Send data</h3>
+When you have data to send to MediaInfo:<br/>
+<span class="cppcode">MediaInfo::Open_Buffer_Continue(***The pointer to the buffer***, ***The buffer size***)</span><br/>
+Result:
+<ul>
+ <li>All bits are unset (Result=0) if you must continue to provide data</li>
+ <li>Bit 0 is set if MediaInfo has enough data for providing information (no more data is required)</li>
+ <li>Bit 1 is set if MediaInfo must go to a specific offset of the buffer stream (Not yet implemented)</li>
+ <li>Bit 2 is set if MediaInfo can provide full information (Not yet implemented)</li>
+</ul>
+
+<a name="Buffers_Finalize"></a><h3>Finalize</h3>
+When you don't want to provide anymore data to MediaInfo, you must inform MediaInfo:<br/>
+<span class="cppcode">MediaInfo::Open_Buffer_Finalize()</span><br/>
+Note: You must not do it if the buffer stream is not seekable. MediaInfo will do it itself.<br/>
+</div>
+
+<a name="Options"></a><h2>Options</h2>
+<div class="paragraph-block">
+<a name="Buffers_IsSeekable"></a><h3>If the buffer stream is not seakable</h3>
+By default, MediaInfo thinks that you can provide a seekable buffer stream.
+If you can't provide a seekable buffer stream, you must inform MediaInfo first:<br/>
+<span class="cppcode">MediaInfo::Options("File_IsSeekable", "0")</span><br/>
+Note: In this case, you don't have to "Finalize" the parsing, MediaInfo thinks that the buffer stream is unlimitated and finalyze it as soon it has enough buffer.<br/>
+</div>
+
+<a name="Examples"></a><h2>Examples</h2>
+<div class="paragraph-block">
+<a name="Examples_1"></a><h3>Basic example</h3>
+Parse a buffer, provided by the user with 1316 byte chunks.
+<div class="cpplisting"><span class="cpplisting_comment">//Preparing to fill MediaInfo with a buffer</span>
+MediaInfo MI;
+MI.Open_Buffer_Init();
+
+<span class="cpplisting_comment">//The parsing loop</span>
+<span class="cpplisting_toprovide">size_t From_Buffer_Size;</span>
+do
+{
+    <span class="cpplisting_comment">//Reading data somewhere, do what you want for this.</span>
+    <span class="cpplisting_toprovide">From_Buffer_Size=From.Read(From_Buffer, 1316);</span>
+
+    <span class="cpplisting_comment">//Sending the buffer to MediaInfo</span>
+    if ((MI.Open_Buffer_Continue(<span class="cpplisting_toprovide">From_Buffer</span>, <span class="cpplisting_toprovide">From_Buffer_Size</span>)&0x02)==1) <span class="cpplisting_comment">//Test bit 1 from the result</span>
+    {
+        int64u File_GoTo=MI.Open_Buffer_GoTo(); <span class="cpplisting_comment">//Retrieving where MediaInfo want we go into the stream.</span>
+         <span class="cpplisting_toprovide">...</span> <span class="cpplisting_comment">//The user must seek the stream.</span>
+    }
+}
+while (From_Buffer_Size>0);
+
+<span class="cpplisting_comment">//Info</span>
+MI.Open_Buffer_Finalize();
+MediaInfoLib::String Text=MI.Inform();
+</div>
+
+<a name="Examples_2"></a><h3>If the buffer stream is not seakable</h3>
+Parse a buffer, provided by the user with 1316 byte chunks, and is non-seakable.
+<div class="cpplisting"><span class="cpplisting_comment">//Setting MediaInfo as parsing a non seakable file</span>
+MediaInfo MI;
+MI.Options(_T("File_IsSeekable"), _T("0"));
+
+<span class="cpplisting_comment">//Preparing to fill MediaInfo with a buffer</span>
+MI.Open_Buffer_Init();
+
+<span class="cpplisting_comment">//The parsing loop</span>
+<span class="cpplisting_toprovide">size_t From_Buffer_Size;</span>
+do
+{
+    <span class="cpplisting_comment">//Reading data somewhere, do what you want for this.</span>
+    <span class="cpplisting_toprovide">From_Buffer_Size=From.Read(From_Buffer, 1316);</span>
+
+    <span class="cpplisting_comment">//Sending the buffer to MediaInfo</span>
+    if (MI.Open_Buffer_Continue(<span class="cpplisting_toprovide">From_Buffer</span>, <span class="cpplisting_toprovide">From_Buffer_Size</span>)==0)
+        From_Buffer_Size=0; <span class="cpplisting_comment">//Get out of the loop, no more data is needed by the parser</span>
+}
+while (From_Buffer_Size>0);
+
+<span class="cpplisting_comment">//Info</span>
+MediaInfoLib::String Text=MI.Inform();
+</div>
+</div>
+{% endblock %}

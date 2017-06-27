@@ -719,6 +719,13 @@ ul.events-list li {
     visibility: hidden;
 }
 
+.center-img {
+    display: block;
+    margin: auto;
+    text-align: center;
+    vertical-align: middle;
+}
+
 /* Feature box */
 .featureBox {
     border: 1px solid #ddd;

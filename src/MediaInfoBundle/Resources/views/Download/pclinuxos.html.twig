@@ -1,0 +1,29 @@
+{% extends 'MediaInfoBundle::base.html.twig' %}
+
+{% block title %}{% trans %}download.pclinuxos.page.title{% endtrans %}{% endblock %}
+{% block description %}{% trans %}about.page.description{% endtrans %}{% endblock %}
+{% block keywords %}{% trans %}about.page.keywords{% endtrans %}{% endblock %}
+
+{% block body %}
+<h1>{% trans %}download.pclinuxos.title{% endtrans %}</h1>
+{% image '@AppBundle/Resources/public/img/OS/PCLinuxOS.png' %}
+<img src="{{ asset_url }}" alt="PCLinuxOS" title="PCLinuxOS" width="65" height="65"><br />
+{% endimage %}
+
+<div class="table-responsive">
+<table class="download table table-bordered table-condensed">
+<thead>
+<tr class="table-header">
+    <th>Version</th>
+    <th>CPU</th>
+    <th>Interface</th>
+    <td>Version</td>
+    <td>Comment</td>
+</tr>
+</thead>
+<tbody>
+{% include 'MediaInfoBundle:Download:pclinuxosTable.html.twig' %}
+</tbody>
+</table>
+</div>
+{% endblock %}

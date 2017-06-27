@@ -72,7 +72,3 @@ services:
         tags:
             - { name: knp_menu.menu_builder, method: createOllistdMenu, alias: ollistd }
         public: true
-
-    app.download_info:
-        class: AppBundle\Lib\DownloadInfo\DownloadInfo
-        public: true

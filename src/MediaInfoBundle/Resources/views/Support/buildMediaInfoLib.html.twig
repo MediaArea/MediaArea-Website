@@ -1,0 +1,39 @@
+{% extends 'MediaInfoBundle::base.html.twig' %}
+
+{% block title %}{% trans %}support.buildMil.page.title{% endtrans %}{% endblock %}
+{% block description %}{% trans %}about.page.description{% endtrans %}{% endblock %}
+{% block keywords %}{% trans %}about.page.keywords{% endtrans %}{% endblock %}
+
+{% block body %}
+({% trans %}support.wip.warning{% endtrans %})
+<h1>{% trans %}support.buildMil.title{% endtrans %}</h1>
+
+<h2>Options</h2>
+If you want to compile only some containers support, you can enable or disable them with Compilation defines (in your compiler project file).<br/>
+<code>MEDIAINFO_XXX_NO</code> or <code>MEDIAINFO_XXX_YES</code> (if both are defined, <code>MEDIAINFO_XXX_NO</code> has priority).<br/>
+<code>XXX</code> can be:
+    <ul>
+        <li>VIDEO : all videos</li>
+        <li>AUDIO : all audios</li>
+        <li>RIFF : Microsoft Avi, Wav...</li>
+        <li>OGG : Ogg, Ogm...</li>
+        <li>MPEG : Mpg, Mpeg, Vob...</li>
+        <li>MPEG4 : Mp4, M4a, M4v...</li>
+        <li>MPEGA : mpa, mp2, mp3...</li>
+        <li>MPEGV : mpv, m2v...</li>
+        <li>WM : Wma, Wmv...</li>
+        <li>QT : Qt, Mov...</li>
+        <li>RM : Rm, Rmvb...</li>
+        <li>DVDV : Ifo of DVD</li>
+        <li>AAC : Aac</li>
+        <li>DTS : Dts</li>
+        <li>AC3 : Ac3</li>
+        <li>MK : Matroska</li>
+        <li>APE : Monkey Audio, Ape, Mac...</li>
+        <li>FLAC : Flac</li>
+        <li>SNDFILE : SndFile related</li>
+    </ul>
+
+<h2>Compile</h2>
+Open the project, compile it.
+{% endblock %}

@@ -1,0 +1,124 @@
+{% extends 'MediaInfoBundle::base.html.twig' %}
+
+{% block title %}{% trans %}about.page.title{% endtrans %}{% endblock %}
+{% block description %}{% trans %}about.page.description{% endtrans %}{% endblock %}
+{% block keywords %}{% trans %}about.page.keywords{% endtrans %}{% endblock %}
+
+{% block body %}
+<section class="download-wrapper">
+    <div class="row reorder-xs">
+        <div class="v-align carousel-padding-xs col-xs-12 col-sm-5">
+            <div>
+            {% if 'macOS' == downloadInfo.name %}
+            {% image '@MediaInfoBundle/Resources/public/img/Screenshot/MediaInfo_Mac_Easy_en-thumb-about.png' %}
+                <a href="{{ path('mi_screenshots') }}"><img src="{{ asset_url }}" alt="{% trans %}about.screenshot_img.alt{% endtrans %}" class="img-responsive center-xs" title="{% trans %}about.screenshot_img.title{% endtrans %}" /></a>
+            {% endimage %}
+            {% else %}
+            {% image '@MediaInfoBundle/Resources/public/img/Screenshot/MediaInfo_Windows_Easy_en-thumb-about.jpg' %}
+                <a href="{{ path('mi_screenshots') }}"><img src="{{ asset_url }}" alt="{% trans %}about.screenshot_img.alt{% endtrans %}" class="img-responsive center-xs" title="{% trans %}about.screenshot_img.title{% endtrans %}" /></a>
+            {% endimage %}
+            {% endif %}
+            </div>
+        </div>
+        <div class="v-align col-sm-7">
+            <div class="center-font-xs">
+                <h1 class="v-align bigtitle">MediaInfo</h1>
+            </div>
+            <div class="projectDescription center-font-xs">
+                {% trans with {'%licenseRoute%': path('mi_license')} %}about.what.content{% endtrans %}
+            </div>
+
+            {% if 'Windows' == downloadInfo.name %}
+                {% if 'Y' == app.request.attributes.get('donated') %}
+                    {% set downloadLink = '//mediaarea.net/download/donors/' ~ downloadInfo.version ~ '/MediaInfo_GUI_' ~ downloadInfo.version ~ '_Windows.exe' %}
+                {% elseif 1 <= app.request.attributes.get('donated', -1) %}
+                    {% set downloadLink = '//mediaarea.net/download/current/MediaInfo_GUI_' ~ downloadInfo.version ~ '_Windows.exe' %}
+                {% else %}
+                    {% set downloadLink = '//mediaarea.net/download/binary/mediainfo-gui/' ~ downloadInfo.version ~ '/MediaInfo_GUI_' ~ downloadInfo.version ~ '_Windows.exe' %}
+                {% endif %}
+            {% else %}
+                {% set downloadLink = path(downloadInfo.route) %}
+            {% endif %}
+
+            <div class="inner center-xs center-font-xs">
+                <div class="btn-group hidden-xs">
+                    {% if 'macOS' == downloadInfo.name %}
+                    <a class="btn btn-default btn-lg btn-dl" href="https://itunes.apple.com/app/mediainfo/id510620098" target="_blank">
+                        <span class="downloadText">{% trans %}about.download.button.text{% endtrans %}</span>
+                    </a>
+                    {% else %}
+                    <a class="btn btn-default btn-lg btn-dl " href="{{ downloadLink }}">
+                        <span class="downloadText">{% trans %}about.download.button.text{% endtrans %}</span>
+                    </a>
+                    {% endif %}
+                    <a href="{{ path('mi_download') }}" class="btn btn-default btn-lg dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                        <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu dropdown-default platform-icons">
+                        <li><a href="{{ path('mi_download_windows') }}">Windows</a></li>
+                        <li><a href="{{ path('mi_download_mac') }}">macOS</a></li>
+                        <li><a href="{{ path('mi_download_debian') }}">Debian</a></li>
+                        <li><a href="{{ path('mi_download_ubuntu') }}">Ubuntu</a></li>
+                        <li><a href="{{ path('mi_download_ubuntu') }}">Linux Mint</a></li>
+                        <li><a href="{{ path('mi_download_rhel') }}">RedHat Entreprise Linux</a></li>
+                        <li><a href="{{ path('mi_download_centos') }}">CentOS</a></li>
+                        <li><a href="{{ path('mi_download_fedora') }}">Fedora</a></li>
+                        <li><a href="{{ path('mi_download_opensuse') }}">openSUSE</a></li>
+                        <li><a href="{{ path('mi_download_archlinux') }}">ArchLinux</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="{{ path('mi_download') }}">{% trans %}about.download.otherOS{% endtrans %}</a></li>
+                    </ul>
+                </div>
+                <div class="btn-group visible-xs visible-xs-inline-block">
+                    {% if 'macOS' == downloadInfo.name %}
+                    <a class="btn btn-default btn-lg btn-dl" href="https://itunes.apple.com/app/mediainfo/id510620098" target="_blank">
+                        <span class="downloadText">{% trans %}about.download.button.text{% endtrans %}</span>
+                    </a>
+                    {% else %}
+                    <a class="btn btn-default btn-lg btn-dl " href="{{ path(downloadInfo.route) }}">
+                        <span class="downloadText">{% trans %}about.download.button.text{% endtrans %}</span>
+                    </a>
+                    {% endif %}
+                </div>
+
+                <div class="projectDescription">
+                    <div class="downloadDetails">
+                        {% trans %}about.download.version{% endtrans %} {{ downloadInfo.version }}{% if downloadInfo.installer %}, {% trans %}about.download.installer{% endtrans %}{% endif %}{% if downloadInfo.name %}, {% if 'macOS' == downloadInfo.name %}Mac App Store{% else %}{% trans %}about.download.for{% endtrans %} {{ downloadInfo.name }}{% endif %}{% endif %}{% if 1 <= app.request.attributes.get('donated', -1) %}<br>{% trans with {'%bundledRoute%': path('mi_bundled')} %}about.download.bundled{% endtrans %}{% endif %}
+                    </div>
+                    {% trans with {'%downloadRoute%': path('mi_download')} %}about.download.other{% endtrans %}
+                    {% image '@AppBundle/Resources/public/img/blank.gif' %}
+                    (<a href="{{ path('mi_download_windows') }}"><img src="{{ asset_url }}" width="16" height="16" alt="Microsoft Windows" title="Microsoft Windows" class="sprite Windows"></a>
+                    <a href="{{ path('mi_download_mac') }}"><img src="{{ asset_url }}" width="16" height="16" alt="macOS" title="macOS" class="sprite MacOS"></a>
+                    <a href="{{ path('mi_download_debian') }}"><img src="{{ asset_url }}" width="16" height="16" alt="Debian" title="Debian" class="sprite Debian"></a>
+                    <a href="{{ path('mi_download_ubuntu') }}"><img src="{{ asset_url }}" width="16" height="16" alt="Ubuntu" title="Ubuntu" class="sprite Ubuntu"></a>
+                    <a href="{{ path('mi_download_ubuntu') }}"><img src="{{ asset_url }}" width="16" height="16" alt="Linux Mint" title="Linux Mint" class="sprite Linux_Mint"></a>
+                    <a href="{{ path('mi_download_rhel') }}"><img src="{{ asset_url }}" width="16" height="16" alt="RedHat Entreprise Linux" title="RedHat Entreprise Linux" class="sprite RedHat"></a>
+                    <a href="{{ path('mi_download_centos') }}"><img src="{{ asset_url }}" width="16" height="16" alt="CentOS" title="CentOS" class="sprite CentOS"></a>
+                    <a href="{{ path('mi_download_fedora') }}"><img src="{{ asset_url }}" width="16" height="16" alt="Fedora" title="Fedora" class="sprite Fedora"></a>
+                    <a href="{{ path('mi_download_opensuse') }}"><img src="{{ asset_url }}" width="16" height="16" alt="openSUSE" title="openSUSE" class="sprite openSUSE"></a>
+                    <a href="{{ path('mi_download_archlinux') }}"><img src="{{ asset_url }}" width="16" height="16" alt="ArchLinux" title="ArchLinux" class="sprite ArchLinux"></a>)
+                    {% endimage %}
+                    <br/>
+                    {% trans with {'%changelogRoute%': '/MediaInfo/ChangeLog'} %}about.what.changelog{% endtrans %}<br/>
+                    {% trans with {'%donateRoute%': path('mi_donate')} %}about.what.donate{% endtrans %}
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section class="about">
+    <h2>{% trans %}about.data.title{% endtrans %}</h2>
+    {% trans %}about.data.content{% endtrans %}
+
+    <h2>{% trans %}about.analyticals.title{% endtrans %}</h2>
+    {% trans %}about.analyticals.content{% endtrans %}
+
+    <h2>{% trans %}about.features.title{% endtrans %}</h2>
+    {% trans with {'%supportFormatRoute%': path('mi_support_formats')} %}about.features.content{% endtrans %}
+
+    <h2>{% trans %}about.license.title{% endtrans %}</h2>
+    {% trans with {'%licenseRoute%': path('mi_license')} %}about.license.content{% endtrans %}
+</section>
+{% endblock %}

@@ -25,3 +25,7 @@ media_trace:
 app:
     resource: '@AppBundle/Controller/'
     type: annotation
+
+media_info:
+    resource: "@MediaInfoBundle/Controller/"
+    type:     annotation

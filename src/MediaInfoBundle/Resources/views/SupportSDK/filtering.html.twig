@@ -1,0 +1,37 @@
+{% extends 'MediaInfoBundle::base.html.twig' %}
+
+{% block title %}MediaInfo - Filter streams{% endblock %}
+{% block description %}{% trans %}about.page.description{% endtrans %}{% endblock %}
+{% block keywords %}{% trans %}about.page.keywords{% endtrans %}{% endblock %}
+
+{% block body %}
+<ul>
+ <li><a href="#Filtering">Filtering</a>
+  <ul>
+   <li><a href="#Introduction">Introduction</a></li>
+   <li><a href="#Steps">Steps</a>
+    <ul>
+     <li><a href="#Filtering_Add">Adding a filter</a></li>
+     <li><a href="#Filtering_Remove">Removing a filter</a></li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+<a name="Filtering"></a><h1>Filtering</h1>
+<a name="Introduction"></a><h2>Introduction</h2>
+MediaInfo has a specific feature, which permit to filter streams from a stream having multiple substreams, for speed improvement or for only having what you really want in the result from MediaInfo.<br/>
+Currently, this feature is supported with the following parsers:
+<ul>
+    <li>MPEP-TS (MPEG Transport Stream)</li>
+</ul>
+
+<a name="Steps"></a><h2>Steps</h2>
+<a name="Filtering_Add"></a><h3>Adding a filter</h3>
+<code>MediaInfo::Options("File_Filter", "***The program number***")</code><br/>
+
+<a name="Filtering_Add"></a><h3>Adding a filter</h3>
+<code>MediaInfo::Options("File_Filter", "***The program number***;0")</code><br/>
+NOT YET IMPLEMENTED.
+{% endblock %}
