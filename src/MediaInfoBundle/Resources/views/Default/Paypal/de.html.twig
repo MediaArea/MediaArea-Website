@@ -2,16 +2,16 @@
      <tr>
         <td class="address">
             <div>
-            {% include 'MediaInfoBundle:Default:Paypal/donate.html.twig' with {
-                'country': 'DE',
-                'languageCountry': 'de_DE',
-                'currency': 'EUR',
-                'currencyBefore': '',
-                'currencyAfter': 'Euros',
-                'currencyBase': 1,
-                'currencyDonateDefault': 5,
-                'currencySubscribeDefault': 1,
-                } only %}
+            {{ include('@MediaInfo/Default/Paypal/donate.html.twig', {
+                country: 'DE',
+                languageCountry: 'de_DE',
+                currency: 'EUR',
+                currencyBefore: '',
+                currencyAfter: 'Euros',
+                currencyBase: 1,
+                currencyDonateDefault: 5,
+                currencySubscribeDefault: 1,
+                }, with_context = false) }}
             </div>
         </td>
     </tr>
