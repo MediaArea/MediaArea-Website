@@ -779,6 +779,50 @@ ul.icons li {
     display: inline-block;
 }
 
+/* Sidebar */
+.visible-xl {
+  display: none !important;
+}
+
+@media (min-width: 1860px) {
+  .visible-xl {
+    display: block !important;
+  }
+}
+
+#sidebar {
+    position: fixed;
+    width: 330px;
+    padding: 10px;
+    margin-top: 0;
+    background-color: #F0F0F0;
+}
+
+#sidebar ul {
+    margin-bottom: 0;
+}
+
+#sidebar hr {
+    border-top: 1px solid #e7e7e7;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#sidebar .sidebar-menu li a {
+    padding: 2px;
+    display: inline-block;
+}
+
+#sidebar .sidebar-menu li a:hover, #sidebar .sidebar-menu li a.active:hover {
+    color: #fff;
+    background-color: #0070bb;
+    text-decoration: none;
+}
+
+#sidebar .sidebar-menu li a.active {
+    background-color: #88cfff;
+}
+
 /* media query */
 @media (min-width: 768px) and (max-width: 991px) {
     .display-block-sm {
