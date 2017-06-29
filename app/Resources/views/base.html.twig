@@ -61,21 +61,34 @@
      </head>
     <body>
         <div id="bodyInner" class="blue">
-                {% include 'AppBundle::nav.html.twig' %}
-            <div class="container content">
-                {% if ads %}
-                    {% include 'AppBundle::adSlot.html.twig' with { 'adSlotId': 5930355910 } only %}
-                {% endif %}
-                {% block body %}{% endblock %}
+            {% include 'AppBundle::nav.html.twig' %}
+            <div class="container-fluid">
+                <div id="sidebar" class="visible-xl">
+                    <div class="text-right sidebar-menu">
+                        <ul></ul>
+                    </div>
+                    <div class="sidebar-social"></div>
+                    <div class="clearfix"></div>
+                    {% if ads %}
+                        <hr>
+                        <div class="sidebar-ads"></div>
+                    {% endif %}
+                </div>
+                <div class="container content">
+                    {% if ads %}
+                        {% include 'AppBundle::adSlot.html.twig' with { 'adSlotId': 5930355910 } only %}
+                    {% endif %}
+                    {% block body %}{% endblock %}
+                </div>
             </div>
         </div>
 
         <div class="clearfix"></div>
-            {% if ads %}
-                <div class="container">
-                    {% include 'AppBundle::adSlot.html.twig' with { 'adSlotId': 8744221512 } only %}
-                </div>
-            {% endif %}
+        {% if ads %}
+            <div class="container">
+                {% include 'AppBundle::adSlot.html.twig' with { 'adSlotId': 8744221512 } only %}
+            </div>
+        {% endif %}
         <footer id="footer">
             {% include 'AppBundle::footer.html.twig' %}
         </footer>
@@ -92,6 +105,9 @@
             '@AppBundle/Resources/public/js/bootstrap.min.js'
             '@AppBundle/Resources/public/js/Tags.js'
             '@AppBundle/Resources/public/js/social.js'
+            '@AppBundle/Resources/public/js/jquery.scrollex.min.js'
+            '@AppBundle/Resources/public/js/jquery.scrolly.min.js'
+            '@AppBundle/Resources/public/js/sidebar.js'
             '@AppBundle/Resources/public/js/base.js'
             filter="?jsqueeze" output='js/main.js'
          %}
