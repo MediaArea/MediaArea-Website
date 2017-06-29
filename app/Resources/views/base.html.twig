@@ -61,7 +61,7 @@
      </head>
     <body>
         <div id="bodyInner" class="blue">
-            {% include 'AppBundle::nav.html.twig' %}
+            {{ include('@App/nav.html.twig') }}
             <div class="container-fluid">
                 <div id="sidebar" class="visible-xl">
                     <div class="text-right sidebar-menu">
@@ -76,7 +76,7 @@
                 </div>
                 <div class="container content">
                     {% if ads %}
-                        {% include 'AppBundle::adSlot.html.twig' with { 'adSlotId': 5930355910 } only %}
+                        {{ include('@App/adSlot.html.twig', { adSlotId: 5930355910 }, with_context = false) }}
                     {% endif %}
                     {% block body %}{% endblock %}
                 </div>
@@ -86,11 +86,11 @@
         <div class="clearfix"></div>
         {% if ads %}
             <div class="container">
-                {% include 'AppBundle::adSlot.html.twig' with { 'adSlotId': 8744221512 } only %}
+                {{ include('@App/adSlot.html.twig', { adSlotId: 8744221512 }, with_context = false) }}
             </div>
         {% endif %}
         <footer id="footer">
-            {% include 'AppBundle::footer.html.twig' %}
+            {{ include('@App/footer.html.twig') }}
         </footer>
         <script type="text/javascript">
             var assetsBaseDir = "{{ asset('/bundles/app/') }}";
@@ -113,7 +113,7 @@
          %}
             <script src="{{ asset_url }}"></script>
         {% endjavascripts %}
-        {% include 'AppBundle::socialShare.html.twig' %}
+        {{ include('@App/socialShare.html.twig') }}
         {% block javascripts %}{% endblock %}
         {% if ads %}
             <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>

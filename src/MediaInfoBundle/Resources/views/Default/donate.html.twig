@@ -14,11 +14,11 @@
 
 {% set language = app.request.locale %}
 {% if 'fr' == language %}
-    {% include 'MediaInfoBundle:Default:Paypal/fr.html.twig' %}
+    {{ include('@MediaInfo/Default/Paypal/fr.html.twig') }}
 {% elseif 'de' == language %}
-    {% include 'MediaInfoBundle:Default:Paypal/de.html.twig' %}
+    {{ include('@MediaInfo/Default/Paypal/de.html.twig') }}
 {% else %}
-    {% include 'MediaInfoBundle:Default:Paypal/en.html.twig' %}
+    {{ include('@MediaInfo/Default/Paypal/en.html.twig') }}
 {% endif %}
 
 <h2>{% trans %}donate.flattr.title{% endtrans %}</h2>
