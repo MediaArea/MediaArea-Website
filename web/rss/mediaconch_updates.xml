@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+    <channel>
+        <title>MediaConch updates</title>
+        <link>https://mediaarea.net/MediaConch/</link>
+        <description>MediaConch updates feed</description>
+        <language>en-us</language>
+        <lastBuildDate>Fri, 30 Jun 2017 08:00:00 +0000</lastBuildDate>
+          <item>
+            <title>MediaConch 17.06</title>
+            <description>
+                <![CDATA["Full parsing" option<br />
+                    Internal database viewer<br />
+                    Policy column in checker was sometimes displaying "fail" even if test was passing<br />
+                    Ubuntu 17.04 packages<br />
+                    More Matroska checks<br />
+                    More detailed FFV1 errors<br />
+                    See https://github.com/MediaArea/groundtruth/blob/master/matroska/README.md for more information]]>
+            </description>
+            <link>https://mediaarea.net/MediaConch/download.html</link>
+            <pubDate>Fri, 30 Jun 2017 08:00:00 +0000</pubDate>
+            <guid>MediaConch-17.06</guid>
+          </item>
+          <item>
+            <title>MediaConch 17.05</title>
+            <description>
+                <![CDATA[Add MediaConch to Mac App Store<br />
+                    Use OS native dialogs instead of those from Qt<br />
+                    Display login status in settings page and allow to logout<br />
+                    Fixed broken XML output display<br />
+                    add FFV1-VALID-VERSION, EBML-ELEMENT-VALID-RANGE, NO-JUNK-IN-FIXEDSIZE-MATROSKA, EBML-ELEM-UNKNOWN-SIZE tests<br />
+                    deprecate MKV-VALID-BOOLEANS test<br />
+                    fixes to MKV-NUMERICAL-TAG test]]>
+            </description>
+            <link>https://mediaarea.net/MediaConch/download.html</link>
+            <pubDate>Thu, 01 Jun 2017 14:00:00 +0000</pubDate>
+            <guid>MediaConch-17.05</guid>
+          </item>
+          <item>
+            <title>MediaConch 17.04</title>
+            <description>
+                <![CDATA[Better support of some broken Matroska files (high EBMLMaxSizeLength, padding before start of EBML)<br />
+                    Was sometimes displaying "Bit depth: Bit0" when bit depth is unknown in Matroska<br />
+                    FFV1 PixelAspectRatio was an integer, switched to 3-digit rational<br />
+                    Several small bug fixes and small performance optimizations]]>
+            </description>
+            <link>https://mediaarea.net/MediaConch/download.html</link>
+            <pubDate>Thu, 04 May 2017 14:00:00 +0000</pubDate>
+            <guid>MediaConch-17.04</guid>
+          </item>
+          <item>
+            <title>MediaConch 17.03</title>
+            <description>
+                <![CDATA[Analyze attachments in Matroska files<br />
+                    Reduce size of Matroska trace<br />
+                    Few small FFV1 parsing improvements<br />
+                    Checker: js refactoring, improve display of results, performance improvements<br />
+                    Several small bug fixes]]>
+            </description>
+            <link>https://mediaarea.net/MediaConch/download.html</link>
+            <pubDate>Thu, 30 Mar 2017 13:00:00 +0000</pubDate>
+            <guid>MediaConch-17.03</guid>
+          </item>
+          <item>
+            <title>MediaConch 17.02</title>
+            <description>
+                <![CDATA[New policy example (TN2162)<br />
+                    Fix incorrect namespaces in schemaLocation (Thanks to kimec)<br />
+                    Report refactoring<br />
+                    Flipping between pages removed<br />
+                    Several minor FFV1 related bug fixed<br />
+                    Support of V_FFV1 codec identifier in Matroska<br />
+                    Fix Qt 5.7+ webengine support]]>
+            </description>
+            <link>https://mediaarea.net/MediaConch/download.html</link>
+            <pubDate>Wed, 01 Mar 2017 16:00:00 +0000</pubDate>
+            <guid>MediaConch-17.02</guid>
+          </item>
+          <item>
+            <title>MediaConch 17.01</title>
+            <description>
+                <![CDATA[Less verbose output by default (use " -ft" for old behavior)<br />
+                    New display templates "Simple" and "CSV"<br />
+                    Support of newest version of DPFManager (TIFF plugin) and VeraPDF (PDF plugin)<br />
+                    Store implementation report in database (no need to run it again at relaunch)<br />
+                    Policy editor: option for creating policy from a file<br />
+                    Policy editor: split between Profile and Level<br />
+                    Checker page: jump to the page containing the file to analyze<br />
+                    Checker page: scroll to the top of the results when page is changed<br />
+                    Checker page: add reload analyze button (force analyze)<br />
+                    Checker page: reduce font size of jstree MediaInfo and MediaTrace<br />
+                    Several small bug fixes]]>
+            </description>
+            <link>https://mediaarea.net/MediaConch/download.html</link>
+            <pubDate>Tue, 31 Jan 2017 16:00:00 +0000</pubDate>
+            <guid>MediaConch-17.01</guid>
+          </item>
+          <item>
+            <title>MediaConch 16.12</title>
+            <description>
+                <![CDATA[Push policies to MediaConchOnline (public or private)<br />
+                Import policies from MediaConchOnline<br />
+                UI improvements<br />
+                Better handling of errors<br />
+                Fix adding 100+ files for analyze<br />
+                Fixes]]>
+            </description>
+            <link>https://mediaarea.net/MediaConch/download.html</link>
+            <pubDate>Tue, 31 Jan 2017 14:00:00 +0000</pubDate>
+            <guid>MediaConch-16.12</guid>
+        </item>
+        <item>
+            <title>MediaConch 16.11</title>
+            <description>
+                <![CDATA[Publish a policy to MediaConchOnline public policies<br />
+                MediaTrace optimization for Matroska<br />
+                Fixed parsing of FFV1 v0/v1<br />
+                Minor UI fixes<br />
+                Improve support of plugins]]>
+            </description>
+            <link>https://mediaarea.net/MediaConch/download.html</link>
+            <pubDate>Thu, 01 Dec 2016 16:00:00 +0000</pubDate>
+            <guid>MediaConch-16.11</guid>
+        </item>
+       <item>
+            <title>MediaConch 16.10</title>
+            <description>
+                <![CDATA[Update implementation tests, policies and displays<br />
+                Public policies page<br />
+                Handle latest versions of VeraPDF and DPF Manager<br />
+                FFmpeg plugin<br />
+                Watch folder plugin<br />
+                Fixer (see https://mediaarea.net/MediaConch/fixity.html )<br />
+                Several minor fixes]]>
+            </description>
+            <link>https://mediaarea.net/MediaConch/download.html</link>
+            <pubDate>Mon, 31 Oct 2016 14:00:00 +0000</pubDate>
+            <guid>MediaConch-16.10</guid>
+        </item>
+        <item>
+            <title>MediaConch 16.09</title>
+            <description>
+                <![CDATA[New policy format to allow complex policies<br />
+                Update example policies and displays<br />
+                New policy editor to build complex policies<br />
+                Policy rules can use MediaTrace<br />
+                Handling of FFV1 16-bit bitdepth (YUV and RGB)<br />
+                Support of Matroska FieldOrder, MatrixCoefficients, BitsPerChannel, Range, TransferCharacteristics, Primaries new elements<br />
+                Stream count policy test (in General section)]]>
+            </description>
+            <link>https://mediaarea.net/MediaConch/download.html</link>
+            <pubDate>Fri, 30 Sep 2016 08:00:00 +0000</pubDate>
+            <guid>MediaConch-16.09</guid>
+        </item>
+        <item>
+            <title>MediaConch 16.08</title>
+            <description>
+                <![CDATA[Policy Editor : close message when user change of policy/rule<br />
+                Checker : remove a node is not saved<br />
+                Checker : fix handling of files with special chars<br />
+                Add ctrl-q shortcut to quit<br />
+                Better handling of user path]]>
+            </description>
+            <link>https://mediaarea.net/MediaConch/download.html</link>
+            <pubDate>Wed, 31 Aug 2016 07:00:00 +0000</pubDate>
+            <guid>MediaConch-16.08</guid>
+        </item>
+        <item>
+            <title>MediaConch 16.07</title>
+            <description>
+                <![CDATA[New policy editor<br />
+                Minor fixes]]>
+            </description>
+            <link>https://mediaarea.net/MediaConch/download.html</link>
+            <pubDate>Fri, 29 Jul 2016 10:00:00 +0000</pubDate>
+            <guid>MediaConch-16.07</guid>
+        </item>
+        <item>
+            <title>MediaConch 16.06</title>
+            <description>
+                <![CDATA[Create a policy from MediaInfo report<br />
+                Revisited HTML report, more compact and with a summary per test<br />
+                Revisited Display window<br />
+                Minor UI fixes on the main window<br />
+                Matroska files with CodecPrivate element before CodecID element where not always correctly parsed<br />
+                Performance improvements]]>
+            </description>
+            <link>https://mediaarea.net/MediaConch/download.html</link>
+            <pubDate>Thu, 30 Jun 2016 12:00:00 +0000</pubDate>
+            <guid>MediaConch-16.06</guid>
+        </item>
+        <item>
+            <title>MediaConch 16.05</title>
+            <description>
+                <![CDATA[MediaConch XML format v0.2<br />
+                Improved Matroska tests<br />
+                Improved HTML display<br />
+                FFV1 parsing speed improvement<br />
+                Updated settings display<br />
+                Remember last policy and display directories<br />
+                List of values for several elements in the policy editor<br />
+                Option for applying a policy to all open files<br />
+                Code refactoring of the user interface<br />
+                Minor UI fixes]]>
+            </description>
+            <link>https://mediaarea.net/MediaConch/download.html</link>
+            <pubDate>Tue, 31 May 2016 14:00:00 +0000</pubDate>
+            <guid>MediaConch-16.05</guid>
+        </item>
+        <item>
+            <title>MediaConch 16.04</title>
+            <description><![CDATA[Merge of "Checker" and "Results" pages in one page as in MediaConchOnline<br />
+                Checker page new design, based on MediaConchOnline one<br />
+                Add some settings (default policy, default display, default path for file open)<br />
+                Remember the last policy used, the last display used, the last path used<br />
+                FFV1: display of the trace of the slice header<br />
+                Check a directory recursively<br />
+                Fix: display correctly information even if the file disappeared (renamed / not accessible)<br />
+                Minor UI fixes]]></description>
+            <link>https://mediaarea.net/MediaConch/download.html</link>
+            <pubDate>Fri, 29 Apr 2016 14:00:00 +0000</pubDate>
+            <guid>MediaConch-16.04</guid>
+        </item>
+        <item>
+            <title>MediaConch 16.03</title>
+            <description><![CDATA[Support of plugins (VeraPDF and DPF Manager)<br />
+                Verbosity selection<br />
+                Improved free text editor<br />
+                Bugfixes]]></description>
+            <link>https://mediaarea.net/MediaConch/download.html</link>
+            <pubDate>Thu, 31 Mar 2016 14:00:00 +0000</pubDate>
+            <guid>MediaConch-16.03</guid>
+        </item>
+        <item>
+            <title>MediaConch 16.02</title>
+            <description><![CDATA[New page for the results (analyze and update in background, delete/add jobs during the processing of the queue)<br />
+                GUI usage is saved and restored when it is restarted<br />
+                Dynamic selection of the policy and the display format in the policy viewer<br />
+                Dynamic selection of the display format in the implementation viewer<br />
+                CAVPP access and preservation policy sets<br />
+                Update of implementation checker tests, including some FFV1 checks<br />
+                Expanded REST API of the server]]></description>
+            <link>https://mediaarea.net/MediaConch/download.html</link>
+            <pubDate>Mon, 29 Feb 2016 17:00:00 +0000</pubDate>
+            <guid>MediaConch-16.02</guid>
+        </item>
+        <item>
+            <title>MediaConch 16.01</title>
+            <description><![CDATA[More Matroska validation tests<br />
+                Improved reports<br />
+                Verbosity option<br />
+                MediaConch server, with a REST API<br />
+                MediaConch CLI and GUI can communicate with MediaConch server<br />
+                Support of Qt 5.6 (QtWebKit dependancy is replaced by Qt QtWebEngine dependancy)<br />
+                Matroska: CRC-32 validation<br />
+                Matroska: support of padding/junk at the start of a segment<br />
+                Matroska: trace is activated for all elements (but report is still based on the first element met)<br />
+                Matroska: add an intermediate level in the trace for the raw stream parser<br />
+                Visual Studio 2015 project files]]></description>
+            <link>https://mediaarea.net/MediaConch/download.html</link>
+            <pubDate>Wed, 27 Jan 2016 17:00:00 +0000</pubDate>
+            <guid>MediaConch-16.01</guid>
+        </item>
+    </channel>
+</rss>

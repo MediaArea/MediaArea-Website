@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+    <channel>
+        <title>MediaInfo updates</title>
+        <link>https://mediaarea.net/MediaInfo</link>
+        <description>MediaInfo updates feed</description>
+        <language>en-us</language>
+        <lastBuildDate>Fri, 30 Jun 2017 08:00:00 +0000</lastBuildDate>
+         <item>
+            <title>MediaInfo 0.7.97</title>
+            <description>
+                <![CDATA[+ Ubuntu 17.04 packages<br />
+                    + HEVC: support of stream having VPS hrd_parameters<br />
+                    + FLV: support of FLV files with an ID3v2 header<br />
+                    + FLV: detect some incoherent frame rates in buggy files<br />
+                    + TIFF: support of more tags<br />
+                    + I518, AAC: consider 4 back channels as 2 side + 2 back channels<br />
+                    + Matroska: integrate all elements from Matroska specs in MediaTrace<br />
+                    + WAV: parsing of MPEG Audio extension "mext" chunk and displayed in MediaTrace<br />
+                    + MPC: channels count<br />
+                    + AAC: ADTS/ADIF duration in case of full parsing and/or "risky bitrate estimation" option<br />
+                    x MXF: less false-positive detection of some files as MXF<br />
+                    x B1053, WAV: metadata coherency, ignore "fact" chunk more often in order to avoid bad information when this chunk is buggy<br />
+                    x B1029, DPX: DPX endianess not considered with some fields in MediaTrace<br />
+                    x Custom template: can check "Other" part as any other parts<br />
+                    x Matroska: fix parsing issue with small byte blocks are taken from the file e.g. when reading from HTTP link<br />
+                    x Matroska: files with unknown block size were flagged as truncated<br />
+                    x MediaTrace: values with a \n were breaking the text report lines<br />
+                    x Some typos (RefFrames, SPF) ]]>
+            </description>
+            <link>https://mediaarea.net/MediaInfo</link>
+            <pubDate>Fri, 30 Jun 2017 08:00:00 +0000</pubDate>
+            <guid>MediaInfo-0.7.97</guid>
+        </item>
+         <item>
+            <title>MediaInfo 0.7.96</title>
+            <description>
+                <![CDATA[+ MPEG-4: display of recorded date from DV substream<br />
+                    x I505, AC-3: crash with some potentially malformed frames<br />
+                    x I477, AVC: fix hang when open .mpls from some 3D BD<br />
+                    x MPEG-4: does not show "1904" year is raw value is 0 (Mac/Linux)<br />
+                    x Dedicated read thread disabled by default (rare dead locks)<br />
+                    x #B1027, MPEG-TS: some files where detected as MPEG-TS or BDAV but they aren't<br />
+                    x Sequence of files : frame count was wrong with sequence of MPEG-TS files (was count of files)<br />
+                    x MXF: detection of more 608/708 with parsing of few frames in the middle of the file was broken]]>
+            </description>
+            <link>https://mediaarea.net/MediaInfo</link>
+            <pubDate>Thu, 01 Jun 2017 14:00:00 +0000</pubDate>
+            <guid>MediaInfo-0.7.96</guid>
+        </item>
+         <item>
+            <title>MediaInfo 0.7.95</title>
+            <description>
+                <![CDATA[+ EBUCore: EBUCore 1.8 with acquisition metadata output.<br />
+                    + Better support of growing files, especially when accessed by FTP<br />
+                    + Matroska: better support of some broken files (high EBMLMaxSizeLength, padding before start of EBML)<br />
+                    + EXR: showing Multipart and Deep flags<br />
+                    + EXR: show image compression method<br />
+                    x EBUCore: fixed display aspect ratio (was using rational)<br />
+                    x EBUCore: fixed frame rate factor (was num/den instead of factor)<br />
+                    x AVC: some streams with dynamic frame type were having a wrong frame rate<br />
+                    x MPEG-4: some old AAC tracks were not correctly detected<br />
+                    x Matroska: was sometimes displaying "Bit depth: Bit0" when bit depth is unknown<br />
+                    x Nut: fix crash with some files<br />
+                    x FFV1: PixelAspectRatio was an integer, switched to 3-digit rational<br />
+                    x DTS: fix frame count<br />
+                    x Dolby E: fix frame count<br />
+                    x EBUCore: fix regression creating invalid XML files<br />
+                    x AVC: some streams with dynamic frame type were having a wrong frame rate<br />
+                    x I490, EXR: was not supporting valid 31-char attribute names]]>
+            </description>
+            <link>https://mediaarea.net/MediaInfo</link>
+            <pubDate>Thu, 04 May 2017 14:00:00 +0000</pubDate>
+            <guid>MediaInfo-0.7.95</guid>
+        </item>
+         <item>
+            <title>MediaInfo 0.7.94</title>
+            <description>
+                <![CDATA[+ VC-3: detection of embedded time code<br />
+                    + VC-3: better support of stream with width 960 or 1440<br />
+                    + VC-3: support of version 3 (a.k.a. DNxHR), including profile and level for version 1/2 (a.k.a. DNxHD)<br />
+                    + Matroska trace feature: reduction of its size<br />
+                    + MXF trace feature: reduction of its size<br />
+                    + Visual Studio 2017 project files<br />
+                    x M143, MXF with Acquisition Metadata: crash fixed<br />
+                    x Several crash fixes]]>
+            </description>
+            <link>https://mediaarea.net/MediaInfo</link>
+            <pubDate>Thu, 30 Mar 2017 13:00:00 +0000</pubDate>
+            <guid>MediaInfo-0.7.94</guid>
+        </item>
+         <item>
+            <title>MediaInfo 0.7.93</title>
+            <description>
+                <![CDATA[+ Matroska: detection of native FFV1 CodecID ("V_FFV1")<br />
+                    + AC-3/E-AC-3: detection of Atmos inside core streams<br />
+                    + AC-3/E-AC-3: slight reorganization of metadata display for dual mono and surround<br />
+                    + AC-3/E-AC-3: "complete main" and similar info moved to "Service kind" dedicated line<br />
+                    + AC-3/E-AC-3: more precision about how is built a stream (e.g. "E-AC-3+Atmos / E-AC-3" or "TrueHD+Atmos / TrueHD / AC-3")<br />
+                    + WTV: basic detection<br />
+                    + MPEG-TS: Detection of Opus<br />
+                    + URL: "URLEncode" option for saying if the input should be URL encoded or not (default is guess = no change except if it contains spaces)<br />
+                    x MediaTrace: for bitstreams (not bytestreams), bit offset was wrong<br />
+                    x HLS: duration was sometimes wrong, reading only the first TS file duration. Now full duration is displayed<br />
+                    x MPEG-TS: if stream is encrypted or invalid, level was sometimes not the expected one for AVC (e.g. "BaseLine@3.0" instead of "Baseline@3")<br />
+                    x Matroska: FFV1 stream width/height was not initialized when Matroska track header width/height is after CodecID<br />
+                    x FFV1: fix potential crash with some buggy slice headers<br />
+                    x Matroska: crash in case of big attachment and CRC32 present]]>
+            </description>
+            <link>https://mediaarea.net/MediaInfo</link>
+            <pubDate>Wed, 01 Mar 2017 16:00:00 +0000</pubDate>
+            <guid>MediaInfo-0.7.93</guid>
+        </item>
+         <item>
+            <title>MediaInfo 0.7.92</title>
+            <description>
+                <![CDATA[+ #F507, MXF: detection of HLG Transfer Characteristic<br />
+                    + #F508, HEVC: support of preferred_transfer_characteristics SEI (from HEVC/H.265 draft, preferred method for HLG in DVB)<br />
+                    + MXF: parsing of AVC descriptors and crosscheck with the essence content<br />
+                    + MP4: more AppleStoreCountry values mapped to countries, show the country number if unknown<br />
+                    + File extension: test if the file extension correspond to the container format<br />
+                    + AVI/WAV: test of truncated file<br />
+                    + MIXML output: Format_Profile divided in Format_Profile, Format_Level, Format_Tier<br />
+                    + ID3v2: TCAP tag is mapped to new field "PodcastCategory"<br />
+                    x MIXML output: some *_Original values were missing<br />
+                    x MXF/Teletext: was not correctly detecting non subtitle streams<br />
+                    x ID3v2: TP2 tag was incorrectly mapped to "Accompaniment", now mapped to "Album_Performer"<br />
+                    x ID3v2: TSO2 tag was incorrectly mapped to "Performer_Sort", now mapped to "Album_Performer_Sort"<br />
+                    x ID3v2: TCMP tag was displayed twice (2 "Compilation" lines)<br />
+                    x Windows version was sometimes showing a long character string in Windows explorer, changed to a shorter character string]]>
+            </description>
+            <link>https://mediaarea.net/MediaInfo</link>
+            <pubDate>Tue, 31 Jan 2017 16:00:00 +0000</pubDate>
+            <guid>MediaInfo-0.7.92</guid>
+        </item>
+       <item>
+            <title>MediaInfo 0.7.91</title>
+            <description>
+                <![CDATA[+ Add TIFF extension to Windows shell extension<br />
+                    x Debian 9 and Ubuntu 16.10+: Remove unneeded dependency<br />
+                    + IMF and PTX: more languages detected from file names (but the full list of common languages tags still need to be added)<br />
+                    + IMF and PTX: support of non-standard but common "LAS" = "Spanish (Latin America)" language code<br />
+                    + MXF: Support of color primaries, transfer characteristic, coding equations defined in SMPTE ST 2067-21:2016 e.g. xvYCC or BT.2020<br />
+                    + Minor performance optimizations and cleanup (Thanks to Pavel Pimenov)<br />
+                    + MediaTrace optimization for Matroska<br />
+                    x Fixed parsing of FFV1 v0/v1<br />
+                    x PTX: fix crash due to bad parsing of some file names while looking for track language]]>
+            </description>
+            <link>https://mediaarea.net/MediaInfo</link>
+            <pubDate>Thu, 01 Dec 2016 16:00:00 +0000</pubDate>
+            <guid>MediaInfo-0.7.91</guid>
+        </item>
+        <item>
+           <title>MediaInfo 0.7.90</title>
+            <description>
+                <![CDATA[+ #M94, WAV: support of file with a buggy RIFF header<br />
+                + Matroska: detection of segment size of zero (compatibility risks e.g. Windows 10 Media Player does not play such file)<br />
+                + MXF: detection of some incoherences between header and footer<br />
+                + MXF: display of Locked information<br />
+                + N19/STL: support of 48/50/60 fps content<br />
+                + N19/STL: display of time code of first frame<br />
+                + AC-3: bit depth<br />
+                + MPEG Video: CBR bitrate mode information based on vbv_delay<br />
+                + DXW: support of fake time code attribute<br />
+                x Teletext in MPEG-TS: CodecID, format (classic teletext or subtitle), video delay were sometimes not displayed<br />
+                x PDF: fixed crash with some files with full analysis set<br />
+                x #B485, BMP height is negative<br />
+                x Several minor fixes]]>
+            </description>
+            <link>https://mediaarea.net/MediaInfo</link>
+            <pubDate>Mon, 31 Oct 2016 14:00:00 +0000</pubDate>
+            <guid>MediaInfo-0.7.90</guid>
+        </item>
+        <item>
+            <title>MediaInfo 0.7.89</title>
+            <description>
+                <![CDATA[x Tree view for Windows: present the results at the top of the tree<br />
+                + QuickTime: support of Panasonic AVC-Intra 50/100/200 without SPS/PPS ("aixx" and "AVin" CodecID)<br />
+                + More QuickTime/MP4/AVC/HEVC color descriptions based on future ISO 23001-8:201x/PDAM1<br />
+                + FFV1: handling 16+ bitdepth (YUV and RGB) while handling buggy version &lt;= 3 YUV 16-bit streams<br />
+                + Improved growing file detection, option for forcing the growing file test<br />
+                + Matroska: support of video FieldOrder, MatrixCoefficients, BitsPerChannel, Range, TransferCharacteristics, Primaries<br />
+                + Acquisition Metadata: support of more elements (IrisTNumber, IrisRingPosition, FocusRingPosition, ZoomRingPosition, ColorMatrix)<br />
+                + Add stream counts to MIXML output<br />
+                + I242, AVI/Matroska: mapping of mjp2 to JPEG 2000 format name<br />
+                + MPEG-4 Visual: parsing of Studio profiles, providing width/height/frame rate...<br />
+                + MXF: reading MPEG-4 Visual profile from MXF sub-descriptor and/or EssenceCompression<br />
+                + MXF: reading Intra GOP info from descriptors<br />
+                + Sequence of images: detection of sequence even if the provided path separator is the Unix one (Windows only)<br />
+                x Acquisition Metadata: IrisFNumber, FocusPosition, LensZoom were not correctly reported<br />
+                x LXF: fixed crash in case of some malformed files<br />
+                x LXF: reject bad frames instead of displaying wrong duration and bit rate]]>
+            </description>
+            <link>https://mediaarea.net/MediaInfo</link>
+            <pubDate>Fri, 30 Sep 2016 08:00:00 +0000</pubDate>
+            <guid>MediaInfo-0.7.89</guid>
+        </item>
+        <item>
+            <title>MediaInfo 0.7.88</title>
+            <description>
+                <![CDATA[+ MediaInfo distributed with HTTP/HTTPS support: support of Amazon S3 with Signature Version 4<br />
+                + FFV1: parsing speed slight improvement<br />
+                x Duration: fixed regression in last release, sometimes duration was displayed with only count of minutes]]>
+            </description>
+            <link>https://mediaarea.net/MediaInfo</link>
+            <pubDate>Wed, 31 Aug 2016 07:00:00 +0000</pubDate>
+            <guid>MediaInfo-0.7.88</guid>
+        </item>
+        <item>
+            <title>MediaInfo 0.7.87</title>
+            <description>
+                <![CDATA[+ Spanish and catalan languages updated, thanks to Sergi Medina<br />
+                + Refactoring of the trace feature, for better performance and some bug fixes<br />
+                - Visual C++ 2012 project files removed<br />
+                x Review of symbols display, now using standard display (e.g. "k" instead of "K", " min" instead of "mn"...)<br />
+                x XML output: revert to old versioning method (version is MediaInfo software version)<br />
+                x I63, EBUCore/FIMS outputs: typo correction about WritingLibrary and WritingApplication<br />
+                x Matroska: files with CodecPrivate element before CodecID element where not always correctly parsed<br />
+                x OGG: crash/incoherent behavior with some buggy OGG streams having invalid chunk sizes]]>
+            </description>
+            <link>https://mediaarea.net/MediaInfo</link>
+            <pubDate>Thu, 30 Jun 2016 12:00:00 +0000</pubDate>
+            <guid>MediaInfo-0.7.87</guid>
+        </item>
+        <item>
+            <title>MediaInfo 0.7.86</title>
+            <description>
+                <![CDATA[+ Linux/Mac: more output formats (PBCore, EBUCore, FIMS)<br />
+                + FFV1 parsing optimization, avoiding by default a too verbose trace<br />
+                + Matroska: more elements support and typo fixes in the trace<br />
+                + #I172, Trace feature: provide the name of the main parser in the media element<br />
+                + Matroska: consider all values below 0x10 EBML names as 1-byte junk<br />
+                x Matroska: better support (including speed improvement) of huge lossless frames (e.g. 20 MB FFV1 4K)<br />
+                x #I144, Python binding: Python 2 on Linux does not automatically provide the locale to the shared object<br />
+                x HTML output: don't escape carriage returns from the input file<br />
+                x FFV1: some streams were rejected despite the fact they are valid<br />
+                x Python binding: some errors during call of Get() API with Python3 on Linux/Mac]]>
+            </description>
+            <link>https://mediaarea.net/MediaInfo</link>
+            <pubDate>Tue, 31 May 2016 14:00:00 +0000</pubDate>
+            <guid>MediaInfo-0.7.86</guid>
+        </item>
+        <item>
+            <title>MediaInfo 0.7.85</title>
+            <description><![CDATA[+ FFV1: ScanType and ScanOrder<br />
+                + Detection of Omneon VBI and move of the VBI track from Video part to Others part<br />
+                + N19/STL: Support of etection of less standard frame rates (23.976 and 29.970)<br />
+                + Teletext in MPEG-TS: Teletext not subtitle moved to "Other" part<br />
+                + Teletext in MPEG-TS: display of CodecID and timestamp of first frame<br />
+                x Teletext in MXF: some IDs were wrong (when there are more than one Teletext service)<br />
+                x MPEG-4/MOV: default of raw audio to Signed in case of stsd atom version &lt;2<br />
+                x MPEG Video: some CEA-608/708 captions were not correctly detected due to some packets discarded by the parser with interlaced content<br />
+                x MPEG-4/MOV: Dolby E with 2 or more audio services were not correctly reported]]></description>
+            <link>https://mediaarea.net/MediaInfo</link>
+            <pubDate>Fri, 29 Apr 2016 11:00:00 +0000</pubDate>
+            <guid>MediaInfo-0.7.85</guid>
+        </item>
+        <item>
+            <title>MediaInfo 0.7.84</title>
+            <description><![CDATA[x #I122, MPEG-4/MOV: Crash if mdhd timescale is 0<br />
+                x MPEG-4/MOV: Infinite loop if malformed stsc / stsz (detected by fuzzing)<br />
+                x MPEG-TS: some DVB Subtitles were not detected<br />
+                x HLS: better handling of media playlists having EXT-X-BYTERANGE]]></description>
+            <link>https://mediaarea.net/MediaInfo</link>
+            <pubDate>Thu, 31 Mar 2016 14:00:00 +0000</pubDate>
+            <guid>MediaInfo-0.7.84</guid>
+        </item>
+        <item>
+            <title>MediaInfo 0.7.83</title>
+            <description><![CDATA[+ HEVC: Maximum Content Light Level (MaxCLL) and Maximum Frame-Average Light Level (MaxFALL), metadata mandated by CEA-861.3 for HDR support<br />
+                + HEVC: Mastering display color primaries and luminance (based on SMPTE ST 2084), metadata mandated by CEA-861.3 for HDR support<br />
+                + HEVC: SMPTE ST 2048 and SMPTE ST 428-1 transfer characteristics<br />
+                + HEVC: Chroma subsampling location (indication of the location type described in the HEVC spec)<br />
+                + MPEG-TS: ATSC Modulation Mode (Analog, SCTE_mode_1 aka 64-QAM, SCTE_mode_2 aka 256-QAM, 8-VSB, 16-VSB)<br />
+                + #B981, MP4: support of buggy file having "hint" SubType<br />
+                x HLS: better handling of media playlists having EXT-X-BYTERANGE]]></description>
+            <link>https://mediaarea.net/MediaInfo</link>
+            <pubDate>Mon, 29 Feb 2016 17:00:00 +0000</pubDate>
+            <guid>MediaInfo-0.7.83</guid>
+        </item>
+        <item>
+            <title>MediaInfo 0.7.82</title>
+            <description><![CDATA[+ Matroska: CRC-32 validation<br />
+                + Matroska: support of padding/junk at the start of a segment<br />
+                + Matroska: trace is activated for all elements (but report is still based on the first element met)<br />
+                + Matroska: add an intermediate level in the trace for the raw stream parser<br />
+                x FLV: potential infinite loop fixed<br />
+                x #B966, DTS: DTS-HD HR 3840 not detected anymore<br />
+                x AC-3: wrong sample rate with 32 kHz streams<br />
+                x #B948, EBUCore 1.6: invalid output due to position of containerEncoding element<br />
+                x #B957, MPEG-7 output: No XML encoded value output]]></description>
+            <link>https://mediaarea.net/MediaInfo</link>
+            <pubDate>Wed, 27 Jan 2016 17:00:00 +0000</pubDate>
+            <guid>MediaInfo-0.7.82</guid>
+        </item>
+        <item>
+            <title>MediaInfo 0.7.81</title>
+            <description><![CDATA[+ Acquisition Metadata: support of all SMPTE RDD18 elements<br />
+                + Matroska: cover presence and content of the cover, thanks to Max Pozdeev<br />
+                + #F446, Matroska: Handling of cropping values, thanks to Max Pozdeev<br />
+                + Improvement of Python binding: Mac Os X support, Python2 and Python3 can use same MediaInfoDLL.py<br />
+                + #F484, AVI: OpenDML Interlaced / Progressive scan type detection<br />
+                + MP4: support of AtomicParsley imdb tag<br />
+                x #B959, MPEG-TS: MPEG-1 Video appeared as MPEG-2 Video<br />
+                x #B914, Matroska: Undefined number of chapters in some M4V with Timed Text, thanks to Max Pozdeev<br />
+                x #B962, Matroska: negative timecodes were not correctly handled<br />
+                x #B964, FLV: was hanging trying to open some FLV files<br />
+                x JPEG in AVI or MOV: better handling of buggy APP0/AVI1, avoiding some false positives about interlacement<br />
+                x DVCPRO HD: some containers consider DVCPRO HD as with width 1920 despite the fact it is 1280 or 1440, using 1280 or 1440 in all cases]]></description>
+            <link>https://mediaarea.net/MediaInfo</link>
+            <pubDate>Thu, 31 Dec 2015 17:00:00 +0000</pubDate>
+            <guid>MediaInfo-0.7.81</guid>
+        </item>
+        <item>
+            <title>MediaInfo 0.7.80</title>
+            <description><![CDATA[+ Matroska: support of MKVMerge statistics tags (duration frame count, stream size, bit rate) per track, thanks to ndjamena<br />
+                + FLAC: Channel positions, thanks to ndjamena<br />
+                + FLAC: difference between detected bit depth and stored bit depth<br />
+                + MPEG-TS: if DTVCC transport stream is present and no DTVCC service descriptor, scan also in the middle of the file in order to detect more caption services<br />
+                + Subtitle frame rate computing if frame count and duration are available (hidden by default)<br />
+                + Subtitles in Matroska: count of elements<br />
+                + Matroska, MXF and MP4/MOV: detection of truncated files<br />
+                + DTS: difference between ES Matrix and ES Discrete<br />
+                + DTS: display ES Matrix or ES Discrete even if HRA or MA is present<br />
+                + DTS: difference between DTS-HRA with 96k option and pure DTS-96/24<br />
+                + DTS: detection of DTS:X<br />
+                + Samples per frame info<br />
+                + AC-3: detection of Atmos inside TrueHD<br />
+                + Video frame rate: showing precision of 1/1.001 frame rates (e.g. "23.976 (24000/1001) fps" and "23.976 (23976/1000) fps")<br />
+                + MPEG-4/MOV: showing the complete list of compatible brands in the CodecID field<br />
+                + MPEG-4/MOV: Alternate groups<br />
+                + MPEG-4/MOV: "Disabled" tag<br />
+                + MPEG-4/MOV: "Forced" tag<br />
+                + MPEG-4/MOV: showing links between tracks (chapters for, subtitles for, fallback for)<br />
+                + MXF: handling of more acquisition metadata items<br />
+                + MXF: Package name<br />
+                + AVC: Store method of interlaced content (Interleaved Fields or Separated Fields)<br />
+                + EBUCore: acquisition metadata (Proof of concept, for feedback only)<br />
+                x Matroska: frame rate detection algorithm revisited, less wrong numbers are expected<br />
+                x SDP/Teletext: some pages were sometimes (when present in 2 different SDP lines) displayed several times<br />
+                x MPEG-4/MOV: some hint tracks were not displayed]]></description>
+            <link>https://mediaarea.net/MediaInfo</link>
+            <pubDate>Mon, 30 Nov 2015 17:00:00 +0000</pubDate>
+            <guid>MediaInfo-0.7.80</guid>
+        </item>
+    </channel>
+</rss>
