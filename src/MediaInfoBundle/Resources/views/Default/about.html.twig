@@ -99,7 +99,7 @@
                     <a href="{{ path('mi_download_archlinux') }}"><img src="{{ asset_url }}" width="16" height="16" alt="ArchLinux" title="ArchLinux" class="sprite ArchLinux"></a>)
                     {% endimage %}
                     <br/>
-                    {% trans with {'%changelogRoute%': '/MediaInfo/ChangeLog'} %}about.what.changelog{% endtrans %}<br/>
+                    {% trans with {'%changelogRoute%': path('mi_changelog')} %}about.what.changelog{% endtrans %}<br/>
                     {% trans with {'%donateRoute%': path('mi_donate')} %}about.what.donate{% endtrans %}
                 </div>
             </div>
