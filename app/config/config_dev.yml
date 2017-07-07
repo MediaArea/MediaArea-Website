@@ -39,3 +39,8 @@ monolog:
 
 #swiftmailer:
 #    delivery_addresses: ['me@example.com']
+
+fos_user:
+    registration:
+        confirmation:
+            enabled:    false

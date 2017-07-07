@@ -22,3 +22,4 @@
 /composer.lock
 /.php_cs.cache
 /worktrees/
+*.php~

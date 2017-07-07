@@ -18,6 +18,7 @@ class AppKernel extends Kernel
             new AppBundle\AppBundle(),
             new Symfony\Bundle\AsseticBundle\AsseticBundle(),
             new Knp\Bundle\MenuBundle\KnpMenuBundle(),
+            new FOS\UserBundle\FOSUserBundle(),
             new MediaTraceBundle\MediaTraceBundle(),
             new BWFMetaEditBundle\BWFMetaEditBundle(),
             new QCToolsBundle\QCToolsBundle(),
@@ -25,6 +26,7 @@ class AppKernel extends Kernel
             new OllistdBundle\OllistdBundle(),
             new AVIMetaEditBundle\AVIMetaEditBundle(),
             new MediaInfoBundle\MediaInfoBundle(),
+            new UserBundle\UserBundle(),
         ];
 
         if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {

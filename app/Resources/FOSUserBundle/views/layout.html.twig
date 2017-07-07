@@ -1,0 +1,11 @@
+{% set menu = 'main' %}
+{% set noAds = true %}
+{% extends '::base.html.twig' %}
+
+{% block title %}MediaArea user management{% endblock %}
+{% block description %}MediaArea user management{% endblock %}
+{% block keywords %}{% endblock %}
+
+{% block body %}
+    {% block fos_user_content %}{% endblock %}
+{% endblock %}
