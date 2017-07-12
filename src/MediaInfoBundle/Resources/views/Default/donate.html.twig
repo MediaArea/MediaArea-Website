@@ -17,6 +17,8 @@
     {{ include('@MediaInfo/Default/Paypal/fr.html.twig') }}
 {% elseif 'de' == language %}
     {{ include('@MediaInfo/Default/Paypal/de.html.twig') }}
+{% elseif 'ja' == language %}
+    {{ include('@MediaInfo/Default/Paypal/ja.html.twig') }}
 {% else %}
     {{ include('@MediaInfo/Default/Paypal/en.html.twig') }}
 {% endif %}
@@ -40,7 +42,7 @@
 {% if 'fr' == language %}
     <h2>Par chèque (France uniquement)</h2>
     Il est possible d'envoyer un chèque à l'ordre de Jérôme Martinez (créateur du projet), adressé à l'adresse suivante :
-    <div class="address">Jérôme Martinez<br/>Chemin du Vernay<br/>73190 Curienne<br/>France</div>
+    <div><div class="address">Jérôme Martinez<br/>Chemin du Vernay<br/>73190 Curienne<br/>France</div></div>
     N'oubliez pas de mettre un petit mot avec votre adresse e-mail afin que je vous confirme la réception!
 {% endif %}
 
