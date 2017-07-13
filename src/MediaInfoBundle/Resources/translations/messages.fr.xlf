@@ -153,11 +153,11 @@
       <trans-unit id="40" approved="yes">
         <source><![CDATA[donate.bank.content]]></source>
         <target><![CDATA[Il est possible de faire un virement bancaire en Euros, voici les coordonnées bancaires :
-<div class="address">
+<div><div class="address">
 Titulaire du compte : Jérôme Martinez<br/>
 IBAN : FR76 3000 3038 4500 0502 5346 889<br/>
 BIC/SWIFT : SOGEFRPP<br/>
-</div>
+</div></div>
 N'oubliez pas de mettre votre adresse e-mail dans la description du virement!]]></target>
       </trans-unit>
       <trans-unit id="41" approved="yes">

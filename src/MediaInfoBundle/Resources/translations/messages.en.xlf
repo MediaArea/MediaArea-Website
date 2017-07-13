@@ -811,11 +811,11 @@ Please choose your preferred method below.]]></target>
         <source><![CDATA[donate.bank.content]]></source>
         <target><![CDATA[Donations can be made within Eurozone via wire transfer.
 <br/>My Bank information -
-<div class="address">
+<div><div class="address">
 Name : Jérôme Martinez<br/>
 IBAN : FR76 3000 3038 4500 0502 5346 889<br/>
 BIC/SWIFT : SOGEFRPP<br/>
-</div>
+</div><div/>
 Don't forget to put your e-mail address in the wire transfer description!]]></target>
       </trans-unit>
       <trans-unit id="182" approved="yes">

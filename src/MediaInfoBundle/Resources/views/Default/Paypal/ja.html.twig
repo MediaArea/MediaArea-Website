@@ -1,54 +1,51 @@
 <div class="donate-box row">
     <div class="col-md-3 col-sm-4 col-xs-6">
         <div class="address">
-            France<br/>
-            (en <strong>Euros</strong>)<br/>
-            <div>
+            Japan (in <strong>Yen</strong>)
+            <div class="">
             {{ include('@MediaInfo/Default/Paypal/donate.html.twig', {
-                country: 'FR',
-                languageCountry: 'fr_FR/FR',
-                currency: 'EUR',
+                country: 'JA',
+                languageCountry: 'ja_JP',
+                currency: 'JPY',
                 currencyBefore: '',
-                currencyAfter: 'Euros',
-                currencyBase: 1,
-                currencyDonateDefault: 5,
-                currencySubscribeDefault: 1,
+                currencyAfter: '¥',
+                currencyBase: 100,
+                currencyDonateDefault: 1000,
+                currencySubscribeDefault: 100,
                 }, with_context = false) }}
             </div>
         </div>
     </div>
     <div class="col-md-3 col-sm-4 col-xs-6">
         <div class="address">
-            Québec<br/>
-            (en <strong>Dollars canadiens</strong>)<br/>
-            <div>
-            {{ include('@MediaInfo/Default/Paypal/donate.html.twig', {
-                country: 'CA',
-                languageCountry: 'fr_XC',
-                currency: 'CAD',
-                currencyBefore: 'CA$',
-                currencyAfter: '',
-                currencyBase: 1,
-                currencyDonateDefault: 10,
-                currencySubscribeDefault: 2,
-                }, with_context = false) }}
-            </div>
-        </div>
-    </div>
-    <div class="col-md-3 col-sm-4 col-xs-6">
-        <div class="address">
-            Autre<br/>
-            (en <strong>Dollars des Etats-Unis</strong>)<br/>
+        U.S.A. / Others (in <strong>U.S. Dollars</strong>)
             <div>
             {{ include('@MediaInfo/Default/Paypal/donate.html.twig', {
                 country: 'US',
-                languageCountry: 'fr_XC',
+                languageCountry: 'en_US',
                 currency: 'USD',
                 currencyBefore: 'US$',
                 currencyAfter: '',
                 currencyBase: 1,
                 currencyDonateDefault: 10,
                 currencySubscribeDefault: 2,
+                }, with_context = false) }}
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3 col-sm-4 col-xs-6">
+        <div class="address">
+        E.U. (in <strong>Euros</strong>)
+            <div>
+            {{ include('@MediaInfo/Default/Paypal/donate.html.twig', {
+                country: 'FR',
+                languageCountry: 'en_US',
+                currency: 'EUR',
+                currencyBefore: '',
+                currencyAfter: 'Euros',
+                currencyBase: 1,
+                currencyDonateDefault: 5,
+                currencySubscribeDefault: 1,
                 }, with_context = false) }}
             </div>
         </div>

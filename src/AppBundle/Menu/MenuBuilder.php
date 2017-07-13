@@ -3,6 +3,7 @@
 namespace AppBundle\Menu;
 
 use Knp\Menu\FactoryInterface;
+use Knp\Menu\ItemInterface;
 
 class MenuBuilder
 {
@@ -209,7 +210,7 @@ class MenuBuilder
         return $menu;
     }
 
-    private function mediaAreaMenu($menu)
+    private function mediaAreaMenu(ItemInterface $menu)
     {
         $menu->addChild('menu.mediaarea', array('route' => 'homepage'))
             ->setExtras(array('dropdown' => true));
@@ -221,7 +222,7 @@ class MenuBuilder
         return $menu;
     }
 
-    private function projectsMenu($menu)
+    private function projectsMenu(ItemInterface $menu)
     {
         $menu->addChild('menu.projects', array('route' => 'mi_home'))
             ->setExtras(array('dropdown' => true));
