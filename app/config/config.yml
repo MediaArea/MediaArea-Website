@@ -2,6 +2,7 @@ imports:
     - { resource: parameters.yml }
     - { resource: security.yml }
     - { resource: services.yml }
+    - { resource: admin.yml }
     - { resource: "@UserBundle/Resources/config/services.yml" }
     - { resource: "@MediaTraceBundle/Resources/config/services.yml" }
     - { resource: "@BWFMetaEditBundle/Resources/config/services.yml" }

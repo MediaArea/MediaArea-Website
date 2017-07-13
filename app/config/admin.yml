@@ -1,0 +1,30 @@
+easy_admin:
+    site_name: MediaArea Admin
+    entities:
+        User:
+            class: UserBundle\Entity\User
+            disabled_actions: ['new']
+            search:
+                fields: ['username', 'email', 'name']
+            list:
+                fields: ['username', { property: 'email', type: 'email' }, 'name', 'enabled', 'createdAt', 'lastLogin', 'subscriber']
+            form:
+                fields:
+                    - 'username'
+                    - { property: 'email', type: 'email' }
+                    - 'name'
+                    - 'companyName'
+                    - 'newsletter'
+                    - { property: 'professional', type: 'UserBundle\Form\Type\ProfessionalType' }
+                    - { property: 'country', type: 'UserBundle\Form\Type\CountryCustomType' }
+                    - { property: 'language', type: 'UserBundle\Form\Type\LanguageCustomType' }
+                    - 'enabled'
+                    - 'donor'
+                    - 'roles'
+
+        Subscriber:
+            class: UserBundle\Entity\Subscriber
+            list:
+                fields: ['user', 'vote', 'endDate', 'displayName', 'totalDonated']
+            form:
+                fields: ['user', 'vote', 'endDate', 'displayName', 'totalDonated']
