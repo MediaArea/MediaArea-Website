@@ -9,6 +9,7 @@ use Symfony\Component\Validator\Constraints as Assert;
 /**
  * @ORM\Entity
  * @ORM\Table(name="users")
+ * @ORM\HasLifecycleCallbacks
  */
 class User extends BaseUser
 {
@@ -65,9 +66,34 @@ class User extends BaseUser
      */
     protected $language;
 
+    /**
+     * @ORM\Column(type="boolean", nullable=false, options={"default":0})
+     */
+    protected $donor = false;
+
+    /**
+     * @ORM\Column(type="datetime")
+     */
+    private $createdAt;
+
+    /**
+     * @ORM\OneToOne(targetEntity="Subscriber", mappedBy="user", cascade={"persist"})
+     */
+    private $subscriber;
+
     public function __construct()
     {
         parent::__construct();
+    }
+
+    /**
+     * Gets triggered only on insert.
+     *
+     * @ORM\PrePersist
+     */
+    public function onPrePersist()
+    {
+        $this->setCreatedAt(new \DateTime());
     }
 
     /**
@@ -212,5 +238,77 @@ class User extends BaseUser
     public function getLanguage()
     {
         return $this->language;
+    }
+
+    /**
+     * Set donor.
+     *
+     * @param bool $donor
+     *
+     * @return User
+     */
+    public function setDonor($donor)
+    {
+        $this->donor = $donor;
+
+        return $this;
+    }
+
+    /**
+     * Get donor.
+     *
+     * @return bool
+     */
+    public function getDonor()
+    {
+        return $this->donor;
+    }
+
+    /**
+     * Set createdAt.
+     *
+     * @param \DateTime $createdAt
+     *
+     * @return User
+     */
+    public function setCreatedAt($createdAt)
+    {
+        $this->createdAt = $createdAt;
+
+        return $this;
+    }
+
+    /**
+     * Get createdAt.
+     *
+     * @return \DateTime
+     */
+    public function getCreatedAt()
+    {
+        return $this->createdAt;
+    }
+
+    /**
+     * Set subscriber.
+     *
+     * @param \UserBundle\Entity\Subscriber $subscriber
+     *
+     * @return User
+     */
+    public function setSubscriber(\UserBundle\Entity\Subscriber $subscriber = null)
+    {
+        $this->subscriber = $subscriber;
+
+        return $this;
+    }
+
+    /**
+     * Get subscriber.
+     *
+     * @return \UserBundle\Entity\Subscriber
+     */
+    public function getSubscriber()
+    {
+        return $this->subscriber;
     }
 }
