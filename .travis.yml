@@ -31,3 +31,8 @@ script:
   - ./vendor/bin/simple-phpunit -v
   - vendor/bin/php-cs-fixer --dry-run --stop-on-violation --using-cache=no fix src/
   - vendor/bin/phpmd src/ text phpmd.xml
+  - php bin/console lint:twig app/ src/
+  - php bin/console lint:xliff src/
+  - php bin/console lint:xliff app/
+  - php bin/console lint:yaml src/
+  - php bin/console lint:yaml app/
