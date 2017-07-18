@@ -26,10 +26,10 @@ class Subscriber
     /**
      * @ORM\Column(type="integer", nullable=false, options={"unsigned":true, "default":0})
      */
-    protected $vote;
+    protected $vote = 0;
 
     /**
-     * @ORM\Column(type="datetime")
+     * @ORM\Column(type="datetime", nullable=true)
      */
     private $endDate;
 
@@ -41,7 +41,7 @@ class Subscriber
     /**
      * @ORM\Column(type="integer", nullable=false, options={"unsigned":true, "default":0})
      */
-    protected $totalDonated;
+    protected $totalDonated = 0;
 
     /**
      * Get Subscriber.
