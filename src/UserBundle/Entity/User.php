@@ -299,6 +299,16 @@ class User extends BaseUser
     }
 
     /**
+     * Is user have donated.
+     *
+     * @return bool
+     */
+    public function isDonor()
+    {
+        return $this->getTotalDonated() > 0;
+    }
+
+    /**
      * Set vote.
      *
      * @param int $vote
