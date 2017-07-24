@@ -67,19 +67,29 @@ class User extends BaseUser
     protected $language;
 
     /**
-     * @ORM\Column(type="boolean", nullable=false, options={"default":0})
+     * @ORM\Column(type="integer", nullable=false, options={"unsigned":true, "default":0})
      */
-    protected $donor = false;
+    protected $totalDonated = 0;
+
+    /**
+     * @ORM\Column(type="integer", nullable=false, options={"unsigned":true, "default":0})
+     */
+    protected $vote = 0;
+
+    /**
+     * @ORM\Column(type="boolean", nullable=false, options={"default":1})
+     */
+    protected $displayName = true;
+
+    /**
+     * @ORM\Column(type="datetime", nullable=true)
+     */
+    private $endDate;
 
     /**
      * @ORM\Column(type="datetime")
      */
     private $createdAt;
-
-    /**
-     * @ORM\OneToOne(targetEntity="Subscriber", mappedBy="user", cascade={"persist"})
-     */
-    private $subscriber;
 
     public function __construct()
     {
@@ -241,30 +251,6 @@ class User extends BaseUser
     }
 
     /**
-     * Set donor.
-     *
-     * @param bool $donor
-     *
-     * @return User
-     */
-    public function setDonor($donor)
-    {
-        $this->donor = $donor;
-
-        return $this;
-    }
-
-    /**
-     * Get donor.
-     *
-     * @return bool
-     */
-    public function getDonor()
-    {
-        return $this->donor;
-    }
-
-    /**
      * Set createdAt.
      *
      * @param \DateTime $createdAt
@@ -289,26 +275,98 @@ class User extends BaseUser
     }
 
     /**
-     * Set subscriber.
+     * Set totalDonated.
      *
-     * @param \UserBundle\Entity\Subscriber $subscriber
+     * @param int $totalDonated
      *
      * @return User
      */
-    public function setSubscriber(\UserBundle\Entity\Subscriber $subscriber = null)
+    public function setTotalDonated($totalDonated)
     {
-        $this->subscriber = $subscriber;
+        $this->totalDonated = $totalDonated;
 
         return $this;
     }
 
     /**
-     * Get subscriber.
+     * Get totalDonated.
      *
-     * @return \UserBundle\Entity\Subscriber
+     * @return int
      */
-    public function getSubscriber()
+    public function getTotalDonated()
     {
-        return $this->subscriber;
+        return $this->totalDonated;
+    }
+
+    /**
+     * Set vote.
+     *
+     * @param int $vote
+     *
+     * @return User
+     */
+    public function setVote($vote)
+    {
+        $this->vote = $vote;
+
+        return $this;
+    }
+
+    /**
+     * Get vote.
+     *
+     * @return int
+     */
+    public function getVote()
+    {
+        return $this->vote;
+    }
+
+    /**
+     * Set displayName.
+     *
+     * @param bool $displayName
+     *
+     * @return User
+     */
+    public function setDisplayName($displayName)
+    {
+        $this->displayName = $displayName;
+
+        return $this;
+    }
+
+    /**
+     * Get displayName.
+     *
+     * @return bool
+     */
+    public function getDisplayName()
+    {
+        return $this->displayName;
+    }
+
+    /**
+     * Set endDate.
+     *
+     * @param \DateTime $endDate
+     *
+     * @return User
+     */
+    public function setEndDate($endDate)
+    {
+        $this->endDate = $endDate;
+
+        return $this;
+    }
+
+    /**
+     * Get endDate.
+     *
+     * @return \DateTime
+     */
+    public function getEndDate()
+    {
+        return $this->endDate;
     }
 }

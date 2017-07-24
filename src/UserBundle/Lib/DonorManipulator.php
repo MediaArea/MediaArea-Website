@@ -6,7 +6,6 @@ use FOS\UserBundle\Model\UserManagerInterface;
 use FOS\UserBundle\Util\TokenGeneratorInterface;
 use Symfony\Component\Validator\Validator\ValidatorInterface;
 use Symfony\Component\Validator\Constraints\Email;
-use UserBundle\Entity\Subscriber;
 
 class DonorManipulator
 {
@@ -77,15 +76,8 @@ class DonorManipulator
 
     protected function updateDonor($user, $amount)
     {
-        $user->setDonor(true);
+        $user->setTotalDonated($user->getTotalDonated() + $amount);
 
-        if (!$subscriber = $user->getSubscriber()) {
-            $subscriber = new Subscriber();
-            $subscriber->setUser($user);
-        }
-
-        $subscriber->setTotalDonated($subscriber->getTotalDonated() + $amount);
-        $user->setSubscriber($subscriber);
         $this->userManager->updateUser($user);
     }
 }

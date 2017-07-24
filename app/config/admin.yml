@@ -7,7 +7,7 @@ easy_admin:
             search:
                 fields: ['username', 'email', 'name']
             list:
-                fields: ['username', { property: 'email', type: 'email' }, 'name', 'enabled', 'createdAt', 'lastLogin', 'subscriber']
+                fields: ['username', { property: 'email', type: 'email' }, 'name', 'enabled', 'createdAt', 'lastLogin', { property: 'totalDonated', label: 'Total' }]
             form:
                 fields:
                     - 'username'
@@ -19,12 +19,8 @@ easy_admin:
                     - { property: 'country', type: 'UserBundle\Form\Type\CountryCustomType' }
                     - { property: 'language', type: 'UserBundle\Form\Type\LanguageCustomType' }
                     - 'enabled'
-                    - 'donor'
+                    - 'totalDonated'
+                    - 'vote'
+                    - 'displayName'
+                    - 'endDate'
                     - 'roles'
-
-        Subscriber:
-            class: UserBundle\Entity\Subscriber
-            list:
-                fields: ['user', 'vote', 'endDate', 'displayName', 'totalDonated']
-            form:
-                fields: ['user', 'vote', 'endDate', 'displayName', 'totalDonated']
