@@ -108,7 +108,7 @@ fos_user:
         form:
             type: UserBundle\Form\Type\RegistrationFormType
         confirmation:
-            enabled:    true
+            enabled:    false
     profile:
         form:
             type: UserBundle\Form\Type\ProfileFormType

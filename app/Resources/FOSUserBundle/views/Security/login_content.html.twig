@@ -19,6 +19,10 @@
         <input type="checkbox" id="remember_me" name="_remember_me" value="on" />
         <label for="remember_me">{{ 'security.login.remember_me'|trans }}</label>
 
+        {% if app.request.getUri != app.session.get('loginRedirect') %}
+            <input type="hidden" name="_target_path" value="{{ app.session.get('loginRedirect') }}" />
+        {% endif %}
+
         <input type="submit" id="_submit" name="_submit" value="{{ 'security.login.submit'|trans }}" class="btn btn-default" />
     </div>
 </form>

@@ -75,9 +75,18 @@
                     {% endif %}
                 </div>
                 <div class="container content">
+                    {% for type, messages in app.flashes %}
+                        {% for message in messages %}
+                            <div class="alert alert-{{ type ?? 'info' }} alert-dismissible">
+                                {{ message|trans({}, 'FOSUserBundle')|raw }}
+                            </div>
+                        {% endfor %}
+                    {% endfor %}
+
                     {% if ads %}
                         {{ include('@App/adSlot.html.twig', { adSlotId: 5930355910 }, with_context = false) }}
                     {% endif %}
+
                     {% block body %}{% endblock %}
                 </div>
             </div>
