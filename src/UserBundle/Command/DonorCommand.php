@@ -7,6 +7,7 @@ use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Console\Question\Question;
+use Symfony\Component\Validator\Constraints\Email;
 
 class DonorCommand extends ContainerAwareCommand
 {
@@ -21,6 +22,7 @@ class DonorCommand extends ContainerAwareCommand
             ->setDefinition(array(
                 new InputArgument('email', InputArgument::REQUIRED, 'The email'),
                 new InputArgument('amount', InputArgument::REQUIRED, 'Amount donated'),
+                new InputArgument('name', InputArgument::OPTIONAL, 'Name'),
             ))
             ->setHelp(
                 <<<'EOT'
@@ -34,6 +36,10 @@ You can alternatively specify the amount as the second argument:
 
   <info>php %command.full_name% EMAIL AMOUNT</info>
 
+You can optionnaly give a name as the third argument:
+
+  <info>php %command.full_name% EMAIL AMOUNT NAME</info>
+
 EOT
             );
     }
@@ -45,9 +51,10 @@ EOT
     {
         $email = $input->getArgument('email');
         $amount = $input->getArgument('amount');
+        $name = $input->getArgument('name');
 
         $manipulator = $this->getContainer()->get('user.util.donor_manipulator');
-        $manipulator->createOrPromoteDonor($email, $amount);
+        $manipulator->createOrPromoteDonor($email, $amount, $name);
 
         $output->writeln(sprintf('Created or updated user <comment>%s</comment>', $email));
     }
@@ -66,9 +73,13 @@ EOT
                     throw new \Exception('Email can not be empty');
                 }
 
+                $this->validateEmail($email);
+
                 return $email;
             });
             $questions['email'] = $question;
+        } else {
+            $this->validateEmail($input->getArgument('email'));
         }
 
         if (!$input->getArgument('amount')) {
@@ -86,6 +97,20 @@ EOT
         foreach ($questions as $name => $question) {
             $answer = $this->getHelper('question')->ask($input, $output, $question);
             $input->setArgument($name, $answer);
+        }
+    }
+
+    /**
+     * Validate email address.
+     *
+     * @var email
+     */
+    protected function validateEmail($email)
+    {
+        $validator = $this->getContainer()->get('validator');
+        $errors = $validator->validate($email, new Email());
+        if ($errors->count()) {
+            throw new \Exception('Email is not valid');
         }
     }
 }
