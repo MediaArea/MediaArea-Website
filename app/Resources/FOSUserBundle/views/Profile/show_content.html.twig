@@ -1,7 +1,9 @@
 {% trans_default_domain 'FOSUserBundle' %}
 
 <div class="fos_user_user_show">
-    <p>{{ 'profile.show.username'|trans }}: {{ user.username }}</p>
+    {% if user.realusername %}
+        <p>{{ 'profile.show.username'|trans }}: {{ user.username }}</p>
+    {% endif %}
     <p>{{ 'profile.show.email'|trans }}: {{ user.email }}</p>
     {% if user.name %}<p>Name: {{ user.name }}</p>{% endif %}
     {% if country %}<p>Country: {{ country }}</p>{% endif %}

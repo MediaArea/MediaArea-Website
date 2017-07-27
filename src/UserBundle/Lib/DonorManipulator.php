@@ -51,7 +51,8 @@ class DonorManipulator
     protected function createDonor($email)
     {
         $user = $this->userManager->createUser();
-        $user->setUsername($email);
+        $user->setUsername(uniqid());
+        $user->setRealUserName(0);
         $user->setEmail($email);
         $user->setPlainPassword($this->tokenGenerator->generateToken());
         $user->setEnabled(true);

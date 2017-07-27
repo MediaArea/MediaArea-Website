@@ -77,9 +77,14 @@ class User extends BaseUser
     protected $vote = 0;
 
     /**
+     * @ORM\Column(type="boolean", nullable=false, options={"default":0})
+     */
+    protected $displayName = false;
+
+    /**
      * @ORM\Column(type="boolean", nullable=false, options={"default":1})
      */
-    protected $displayName = true;
+    protected $realUserName = true;
 
     /**
      * @ORM\Column(type="datetime", nullable=true)
@@ -378,5 +383,45 @@ class User extends BaseUser
     public function getEndDate()
     {
         return $this->endDate;
+    }
+
+    /**
+     * Set realUserName.
+     *
+     * @param bool $realUserName
+     *
+     * @return User
+     */
+    public function setRealUserName($realUserName)
+    {
+        $this->realUserName = $realUserName;
+
+        return $this;
+    }
+
+    /**
+     * Get realUserName.
+     *
+     * @return bool
+     */
+    public function getRealUserName()
+    {
+        return $this->realUserName;
+    }
+
+    /**
+     * Get name for display.
+     *
+     * @return string
+     */
+    public function getNameForDisplay()
+    {
+        if (null !== $this->getName()) {
+            return $this->getName();
+        } elseif (1 == $this->getRealUserName()) {
+            return $this->getUsername();
+        }
+
+        return $this->getEmail();
     }
 }

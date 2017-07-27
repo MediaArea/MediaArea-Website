@@ -24,6 +24,11 @@ services:
             - { name: kernel.event_listener, event: kernel.request, method: handleCookies }
             - { name: kernel.event_listener, event: kernel.response, method: setCookies }
 
+    twig.extension.text:
+            class: Twig_Extensions_Extension_Text
+            tags:
+                - { name: twig.extension }
+
     app.menu_builder:
         class: AppBundle\Menu\MenuBuilder
         arguments: ["@knp_menu.factory"]

@@ -20,7 +20,7 @@
             <ul class="nav navbar-nav navbar-right">
                 <li class="dropdown">
                     {% if app.user and is_granted("IS_AUTHENTICATED_REMEMBERED") %}
-                        <a href="{{ path('fos_user_profile_show') }}" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{ 'layout.logged_in_as'|trans({'%username%': app.user.username}, 'FOSUserBundle') }} <span class="caret"></span></a>
+                        <a href="{{ path('fos_user_profile_show') }}" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{ 'layout.logged_in_as'|trans({'%username%': app.user.namefordisplay | truncate(30, false, '…')}, 'FOSUserBundle') }} <span class="caret"></span></a>
                         <ul class="dropdown-menu">
                           <li><a href="{{ path('fos_user_profile_show') }}">Profile</a></li>
                           {% if app.user and is_granted('ROLE_ADMIN') %}
