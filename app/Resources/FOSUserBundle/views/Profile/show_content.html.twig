@@ -1,0 +1,19 @@
+{% trans_default_domain 'FOSUserBundle' %}
+
+<div class="fos_user_user_show">
+    {% if user.realusername %}
+        <p>{{ 'profile.show.username'|trans }}: {{ user.username }}</p>
+    {% endif %}
+    <p>{{ 'profile.show.email'|trans }}: {{ user.email }}</p>
+    {% if user.name %}<p>Name: {{ user.name }}</p>{% endif %}
+    {% if country %}<p>Country: {{ country }}</p>{% endif %}
+    {% if language %}<p>Language: {{ language }}</p>{% endif %}
+    <p>Professional: {% if user.professional %}Yes{% elseif false is same as(user.professional) %}No{% else %}Not specified{% endif %}</p>
+    {% if user.companyName %}<p>Company name: {{ user.companyName }}</p>{% endif %}
+    <p>Newsletter: {% if user.newsletter %}Yes{% else %}No{% endif %}</p>
+</div>
+
+<div class="fos_user_user_actions">
+    <p><a href="{{ path('fos_user_profile_edit') }}">Edit your profile</a></p>
+    <p><a href="{{ path('fos_user_change_password') }}">Change your password</a></p>
+</div>

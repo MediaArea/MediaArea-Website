@@ -29,9 +29,9 @@
     }
 %}
 {% set currentLocale = app.request.attributes.get('_locale') %}
-<ul class="nav navbar-nav navbar-right hidden-xs">
-	<div class="map">
-		<ul class="map scrollable-menu">
+<li>
+    <div class="map">
+    	<ul class="scrollable-menu">
             {% set routeParams = app.request.attributes.get('_route_params')|merge(app.request.query.all()) %}
             {% set routeCurrent = app.request.get('_route') == "" ? 'homepage' : app.request.get('_route') %}
             {% image '@AppBundle/Resources/public/img/blank.gif' %}
@@ -39,6 +39,6 @@
                 <li><a href="{{ path((routeCurrent), (routeParams|merge({'_locale': language}))) }}" title="{{ languages[language].title }}"><img src="{{ asset_url }}" width="25" height="15" title="{{ languages[language].title }}" alt="{{ languages[language].title }}" class="sprite {{ languages[language].sprite }}"> {{ languages[language].title }}</a></li>
             {% endfor %}
             {% endimage %}
-		</ul>
-	</div>
-</ul>
+    	</ul>
+    </div>
+</li>

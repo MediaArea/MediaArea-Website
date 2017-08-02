@@ -2,6 +2,8 @@ imports:
     - { resource: parameters.yml }
     - { resource: security.yml }
     - { resource: services.yml }
+    - { resource: admin.yml }
+    - { resource: "@UserBundle/Resources/config/services.yml" }
     - { resource: "@MediaTraceBundle/Resources/config/services.yml" }
     - { resource: "@BWFMetaEditBundle/Resources/config/services.yml" }
     - { resource: "@QCToolsBundle/Resources/config/services.yml" }
@@ -45,6 +47,7 @@ framework:
 twig:
     debug: '%kernel.debug%'
     strict_variables: '%kernel.debug%'
+    form_themes: ['bootstrap_3_horizontal_layout.html.twig']
 
 # Doctrine Configuration
 doctrine:
@@ -56,6 +59,9 @@ doctrine:
         user: '%database_user%'
         password: '%database_password%'
         charset: UTF8
+        default_table_options:
+            charset: utf8mb4
+            collate: utf8mb4_unicode_ci
         # if using pdo_sqlite as your database driver:
         #   1. add the path in parameters.yml
         #     e.g. database_path: "%kernel.project_dir%/var/data/data.sqlite"
@@ -67,6 +73,13 @@ doctrine:
         auto_generate_proxy_classes: '%kernel.debug%'
         naming_strategy: doctrine.orm.naming_strategy.underscore
         auto_mapping: true
+
+# Doctrine migrations
+doctrine_migrations:
+    dir_name: "%kernel.root_dir%/DoctrineMigrations"
+    namespace: Application\Migrations
+    table_name: migration_versions
+    name: Application Migrations
 
 # Swiftmailer Configuration
 swiftmailer:
@@ -93,3 +106,21 @@ knp_menu:
         builder_alias: false
         builder_service: true
         container_aware: false
+
+fos_user:
+    db_driver: orm # other valid values are 'mongodb' and 'couchdb'
+    firewall_name: main
+    user_class: UserBundle\Entity\User
+    from_email:
+        address: info@mediaarea.net
+        sender_name: info@mediaarea.net
+    registration:
+        form:
+            type: UserBundle\Form\Type\RegistrationFormType
+            validation_groups: [UserRegistration]
+        confirmation:
+            enabled:    false
+    profile:
+        form:
+            type: UserBundle\Form\Type\ProfileFormType
+            validation_groups: [UserProfile]

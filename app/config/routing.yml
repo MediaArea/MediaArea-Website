@@ -1,3 +1,15 @@
+easy_admin_bundle:
+    resource: "@EasyAdminBundle/Controller/AdminController.php"
+    type:     annotation
+    prefix:   /admin
+
+fos_user:
+    resource: "@FOSUserBundle/Resources/config/routing/all.xml"
+
+user:
+    resource: "@UserBundle/Controller/"
+    type:     annotation
+
 avi_meta_edit:
     resource: "@AVIMetaEditBundle/Controller/"
     type:     annotation
