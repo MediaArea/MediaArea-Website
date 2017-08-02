@@ -19,6 +19,11 @@ class ResettingController extends BaseController
      */
     public function requestAction()
     {
+        // Redirect logged in user to profile page
+        if ($this->get('security.authorization_checker')->isGranted('ROLE_USER')) {
+            return $this->redirectToRoute('fos_user_profile_show');
+        }
+
         // Get request from service to keep function signature from parent controller
         $request = $this->get('request_stack')->getCurrentRequest();
 
