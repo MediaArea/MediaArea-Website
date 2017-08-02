@@ -2,21 +2,17 @@
 
 namespace UserBundle\Tests\Form\Type;
 
-use UserBundle\Form\Type\RegistrationFormType;
+use UserBundle\Form\Type\ProfileFormType;
 use UserBundle\Tests\TestUser;
 
-class RegistrationFormTypeTest extends ValidatorExtensionTypeTestCase
+class ProfileFormTypeTest extends ValidatorExtensionTypeTestCase
 {
     public function testSubmitWithoutUsername()
     {
         $user = new TestUser();
-        $form = $this->factory->create(RegistrationFormType::class, $user);
+        $form = $this->factory->create(ProfileFormType::class, $user);
         $formData = array(
             'email' => 'usertest@mediaarea.net',
-            'plainPassword' => array(
-                'first' => 'test123',
-                'second' => 'test123',
-            ),
             'name' => 'test',
             'country' => 'GB',
             'language' => 'en_US',
@@ -24,14 +20,14 @@ class RegistrationFormTypeTest extends ValidatorExtensionTypeTestCase
             'companyName' => 'test',
             'newsletter' => 0,
         );
+
         $form->submit($formData);
         $this->assertTrue($form->isSynchronized());
         $this->assertSame($user, $form->getData());
         $this->assertSame('usertest@mediaarea.net', $user->getEmail());
-        $this->assertSame('test123', $user->getPlainPassword());
+        $this->assertSame('test', $user->getName());
         $this->assertNotNull($user->getUsername());
         $this->assertEquals(0, $user->getRealUserName());
-        $this->assertSame('test', $user->getName());
         $this->assertSame('GB', $user->getCountry());
         $this->assertSame('en_US', $user->getLanguage());
         $this->assertSame(1, $user->getProfessional());
@@ -42,21 +38,17 @@ class RegistrationFormTypeTest extends ValidatorExtensionTypeTestCase
     public function testSubmitWithUsername()
     {
         $user = new TestUser();
-        $form = $this->factory->create(RegistrationFormType::class, $user);
+        $form = $this->factory->create(ProfileFormType::class, $user);
         $formData = array(
             'username' => 'usertest',
             'email' => 'usertest@mediaarea.net',
-            'plainPassword' => array(
-                'first' => 'test123',
-                'second' => 'test123',
-            ),
         );
         $form->submit($formData);
         $this->assertTrue($form->isSynchronized());
         $this->assertSame($user, $form->getData());
         $this->assertSame('usertest@mediaarea.net', $user->getEmail());
-        $this->assertSame('test123', $user->getPlainPassword());
         $this->assertSame('usertest', $user->getUsername());
+        $this->assertEquals(1, $user->getRealUserName());
         $this->assertNull($user->getName());
         $this->assertNull($user->getCountry());
         $this->assertNull($user->getLanguage());
@@ -70,8 +62,8 @@ class RegistrationFormTypeTest extends ValidatorExtensionTypeTestCase
     protected function getTypes()
     {
         return array_merge(parent::getTypes(), array(
-            new RegistrationFormType('UserBundle\Tests\TestUser'),
-            new \FOS\UserBundle\Form\Type\RegistrationFormType('UserBundle\Tests\TestUser'),
+            new ProfileFormType('UserBundle\Tests\TestUser'),
+            new \FOS\UserBundle\Form\Type\ProfileFormType('UserBundle\Tests\TestUser'),
         ));
     }
 }

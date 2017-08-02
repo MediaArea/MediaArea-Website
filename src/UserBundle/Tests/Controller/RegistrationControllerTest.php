@@ -39,6 +39,7 @@ class RegistrationControllerTest extends WebTestCase
         $user = $userManager->findUserByEmail($email);
         $this->assertNotNull($user);
         $this->assertNotNull($user->getUsername());
+        $this->assertEquals(0, $user->getRealUserName());
         $userManager->deleteUser($user);
     }
 
@@ -68,6 +69,8 @@ class RegistrationControllerTest extends WebTestCase
         $user = $userManager->findUserByEmail($email);
         $this->assertNotNull($user);
         $this->assertEquals($username, $user->getUsername());
+        $this->assertEquals(1, $user->getRealUserName());
+        $this->assertEquals(1, $user->getNewsletter());
         $userManager->deleteUser($user);
     }
 }
