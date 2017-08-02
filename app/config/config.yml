@@ -113,7 +113,7 @@ fos_user:
     user_class: UserBundle\Entity\User
     from_email:
         address: info@mediaarea.net
-        sender_name: MediaArea <info@mediaarea.net>
+        sender_name: MediaArea
     registration:
         form:
             type: UserBundle\Form\Type\RegistrationFormType
