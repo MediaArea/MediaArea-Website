@@ -2,9 +2,7 @@
 
 namespace UserBundle\Tests\Controller;
 
-use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
-
-class ResettingControllerTest extends WebTestCase
+class ResettingControllerTest extends UserAbstractControllerTest
 {
     public function testReset()
     {
@@ -26,5 +24,15 @@ class ResettingControllerTest extends WebTestCase
 
         $this->assertEquals(200, $client->getResponse()->getStatusCode());
         $this->assertEquals('test@mediaarea.net', trim($form->get('username')->getValue()));
+    }
+
+    public function testResetConnected()
+    {
+        $client = $this->createAuthorizedClient();
+
+        $client->request('GET', '/resetting/request');
+
+        $this->assertEquals(302, $client->getResponse()->getStatusCode());
+        $this->assertTrue($client->getResponse()->isRedirect('/profile/'));
     }
 }

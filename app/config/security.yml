@@ -31,7 +31,7 @@ security:
             anonymous:    true
             remember_me:
                 secret: '%secret%'
-                lifetime: 2592000 # 30 days in seconds
+                lifetime: 31536000 # 365 days in seconds
                 always_remember_me: false
 
     access_control:
