@@ -9,9 +9,10 @@
 * A web server (tested on Apache 2.4)
     * mod_rewrite is recommended
 * PHP (tested on version 7.0 and 7.1)
-    * Mandatory packages for Debian-like distributions : `sudo apt-get install libapache2-mod-php7.0 php7.0-cli php7.0-intl php7.0-curl php7.0-opcache`
-    * Mandatory packages for RedHat-like distributions : `sudo dnf install php php-cli php-intl php-mbstring php-pdo php-process php-xml php-opcache`
+    * Mandatory packages for Debian-like distributions : `sudo apt-get install libapache2-mod-php7.0 php7.0-cli php7.0-intl php7.0-curl php7.0-opcache php7.0-mysql`
+    * Mandatory packages for RedHat-like distributions : `sudo dnf install php php-cli php-intl php-mbstring php-pdo php-process php-xml php-opcache php-mysqlnd`
     * date.timezone parameter should be set in your php.ini (both cli and apache module)
+* MySQL >= 5.1
 * [Composer](https://getcomposer.org/download/)
 
 ## Get sourcecode
@@ -24,12 +25,28 @@ git clone https://github.com/MediaArea/MediaArea-Website.git
 ```
 ## Install
 
+### MySQL
+
+Create a user and a datable, give the user the all rights to this database.
+```
+CREATE USER '<USER>'@'<HOST>' IDENTIFIED BY '<PASSWORD>';
+GRANT ALL ON `<DB>`.* TO '<USER>'@'<HOST>';
+CREATE DATABASE IF NOT EXISTS `<DB>`;
+```
+
 ### Dependencies
 
 Get dependencies with composer
 ```
 cd YOUR_PATH/MediaArea-Website/
 composer install
+```
+
+### SQL tables and assets
+
+```
+php bin/console doctrine:migrations:migrate --env=prod --no-interaction
+php bin/console assetic:dump --env=prod
 ```
 
 ### Apache
@@ -71,3 +88,10 @@ Templates are in twig format, they are available [here](https://github.com/Media
 
 MediaArea-Website follow [PSR1](http://www.php-fig.org/psr/psr-1/) and [PSR2](http://www.php-fig.org/psr/psr-2/) standard  
 The source code is analyzed with [PHP Mess Detector](https://phpmd.org/) with the rules in [phpmd.xml](https://github.com/MediaArea/MediaArea-Website/blob/master/phpmd.xml) and [PHP-CS-Fixer](http://cs.sensiolabs.org/) with PSR1 and PSR2 rules
+
+## Cache
+
+Remind to clear the cache after a modification :
+```
+php bin/console cache:clear --env=prod
+```
