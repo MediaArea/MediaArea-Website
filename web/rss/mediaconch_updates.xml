@@ -5,7 +5,18 @@
         <link>https://mediaarea.net/MediaConch/</link>
         <description>MediaConch updates feed</description>
         <language>en-us</language>
-        <lastBuildDate>Fri, 30 Jun 2017 08:00:00 +0000</lastBuildDate>
+        <lastBuildDate>Tue, 08 Aug 2017 18:00:00 +0000</lastBuildDate>
+          <item>
+            <title>MediaConch 17.07</title>
+            <description>
+                <![CDATA[Add EBML-MINVER-COHERANT and EBML-MAXVER-COHERANT tests<br />
+                    MediaConch is now directly integrated in Fedora repository<br />
+                    CLI was sometimes not responding with -f option]]>
+            </description>
+            <link>https://mediaarea.net/MediaConch/download.html</link>
+            <pubDate>Tue, 08 Aug 2017 18:00:00 +0000</pubDate>
+            <guid>MediaConch-17.07</guid>
+          </item>
           <item>
             <title>MediaConch 17.06</title>
             <description>
