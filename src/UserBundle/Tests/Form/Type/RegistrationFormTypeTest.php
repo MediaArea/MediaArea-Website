@@ -23,9 +23,11 @@ class RegistrationFormTypeTest extends ValidatorExtensionTypeTestCase
             'professional' => 1,
             'companyName' => 'test',
             'newsletter' => 0,
+            'companyUrl' => '',
         );
         $form->submit($formData);
         $this->assertTrue($form->isSynchronized());
+        $this->assertTrue($form->isValid());
         $this->assertSame($user, $form->getData());
         $this->assertSame('usertest@mediaarea.net', $user->getEmail());
         $this->assertSame('test123', $user->getPlainPassword());
@@ -50,9 +52,11 @@ class RegistrationFormTypeTest extends ValidatorExtensionTypeTestCase
                 'first' => 'test123',
                 'second' => 'test123',
             ),
+            'companyUrl' => '',
         );
         $form->submit($formData);
         $this->assertTrue($form->isSynchronized());
+        $this->assertTrue($form->isValid());
         $this->assertSame($user, $form->getData());
         $this->assertSame('usertest@mediaarea.net', $user->getEmail());
         $this->assertSame('test123', $user->getPlainPassword());
@@ -62,6 +66,24 @@ class RegistrationFormTypeTest extends ValidatorExtensionTypeTestCase
         $this->assertNull($user->getLanguage());
         $this->assertNull($user->getProfessional());
         $this->assertNull($user->getCompanyName());
+    }
+
+    public function testSubmitWithCompanyUrl()
+    {
+        $user = new TestUser();
+        $form = $this->factory->create(RegistrationFormType::class, $user);
+        $formData = array(
+            'username' => 'usertest',
+            'email' => 'usertest@mediaarea.net',
+            'plainPassword' => array(
+                'first' => 'test123',
+                'second' => 'test123',
+            ),
+            'companyUrl' => 'my company',
+        );
+        $form->submit($formData);
+        $this->assertTrue($form->isSynchronized());
+        $this->assertFalse($form->isValid());
     }
 
     /**
