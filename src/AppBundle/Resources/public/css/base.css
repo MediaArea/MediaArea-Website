@@ -755,6 +755,10 @@ ul.events-list li {
     vertical-align: middle;
 }
 
+#fos_user_registration_form div.form-group:nth-child(9) {
+    display: none;
+}
+
 /* Feature box */
 .featureBox {
     border: 1px solid #ddd;
