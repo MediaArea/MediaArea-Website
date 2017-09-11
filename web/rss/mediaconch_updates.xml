@@ -5,7 +5,17 @@
         <link>https://mediaarea.net/MediaConch/</link>
         <description>MediaConch updates feed</description>
         <language>en-us</language>
-        <lastBuildDate>Tue, 08 Aug 2017 18:00:00 +0000</lastBuildDate>
+        <lastBuildDate>Mon, 11 Sep 2017 14:00:00 +0000</lastBuildDate>
+          <item>
+            <title>MediaConch 17.08</title>
+            <description>
+                <![CDATA[FFV1: fix false positive about FFV1 slice_x error when slice_w>slice_h<br />
+                    Clarifcation about license of some third party library]]>
+            </description>
+            <link>https://mediaarea.net/MediaConch/download.html</link>
+            <pubDate>Mon, 11 Sep 2017 14:00:00 +0000</pubDate>
+            <guid>MediaConch-17.08</guid>
+          </item>
           <item>
             <title>MediaConch 17.07</title>
             <description>
