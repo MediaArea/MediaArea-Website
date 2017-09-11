@@ -5,7 +5,26 @@
         <link>https://mediaarea.net/MediaInfo</link>
         <description>MediaInfo updates feed</description>
         <language>en-us</language>
-        <lastBuildDate>Tue, 08 Aug 2017 18:00:00 +0000</lastBuildDate>
+        <lastBuildDate>Mon, 11 Sep 2017 14:00:00 +0000</lastBuildDate>
+         <item>
+            <title>MediaInfo 0.7.99</title>
+            <description>
+                <![CDATA[+ EBUCore: JSON output (--Output=EBUCore_1.8_JSON)<br />
+                    + EBUCore: add writingLibraryName and writingLibraryVersion attributes<br />
+                    + Ad-ID identifier display on a single line ("Value (Registry)" format)<br />
+                    + MPEG-4: Better display of format of VobSub tracks<br />
+                    + MPEG-4: CodecID is stsd name + ObjectTypeId for mp4a, mp4v, mp4s<br />
+                    + AVC: preferred_transfer_characteristics support<br />
+                    + MPEG Video, MPEG-4 Visual, AVC, HEVC, MPEG-4, Matroska: correct detection of RGB<br />
+                    + matrix_coefficients: detection of Y'D'zD'x and Chromaticity-derived<br />
+                    + AAC: info about SBR/PS being implicit/explicit/NBC (Not Backward Compatible)<br />
+                    + AAC: indicate audioObjectType in CodecID<br />
+                    x Fix a weird 1.334 DAR due to a rounding issue]]>
+            </description>
+            <link>https://mediaarea.net/MediaInfo</link>
+            <pubDate>Mon, 11 Sep 2017 14:00:00 +0000</pubDate>
+            <guid>MediaInfo-0.7.99</guid>
+        </item>
          <item>
             <title>MediaInfo 0.7.98</title>
             <description>
