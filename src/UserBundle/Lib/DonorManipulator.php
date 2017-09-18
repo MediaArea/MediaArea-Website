@@ -48,6 +48,21 @@ class DonorManipulator
         $this->updateDonor($user, $amount);
     }
 
+    /**
+     * Add a donation to a user.
+     *
+     * @param User  $user   The user
+     * @param float $amount Donation amount
+     *
+     * @return DonorManipulator
+     */
+    public function addDonationToUser($user, $amount)
+    {
+        $this->updateDonor($user, $amount);
+
+        return $this;
+    }
+
     protected function createDonor($email)
     {
         $user = $this->userManager->createUser();

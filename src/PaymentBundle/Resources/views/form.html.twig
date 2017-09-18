@@ -1,0 +1,36 @@
+{{ form_start(form) }}
+    <div class="row">
+        <div class="col-md-4">
+            {{ form_row(form.amount) }}
+            {{ form_row(form.method) }}
+        </div>
+        <div class="col-md-8 stripe-form">
+            {{ form_row(form.data_stripe_credit_card.name) }}
+            {{ form_row(form.data_stripe_credit_card.number) }}
+            <div class="form-group {% if not form.data_stripe_credit_card.exp_month.vars.valid or not form.data_stripe_credit_card.exp_year.vars.valid %}has-error{% endif %}">
+                {{ form_label(form.data_stripe_credit_card.exp_month) }}
+                <div class="col-sm-3">
+                    {{ form_widget(form.data_stripe_credit_card.exp_month) }}
+                    {{ form_errors(form.data_stripe_credit_card.exp_month) }}
+                </div>
+                <div class="col-sm-3">
+                    {{ form_widget(form.data_stripe_credit_card.exp_year) }}
+                    {{ form_errors(form.data_stripe_credit_card.exp_year) }}
+                </div>
+                <div class="col-sm-4">
+                    {{ form_row(form.data_stripe_credit_card.cvc) }}
+                </div>
+                <div class="clearfix"></div>
+                <div class="col-sm-6 col-sm-offset-2">
+                    {% image '@PaymentBundle/Resources/public/img/card-brands.png' %}
+                        <img src="{{ asset_url }}" class="img-responsive">
+                    {% endimage %}
+                </div>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+        <div class="col-md-4 text-center">
+            <input type="submit" value="Donate" class="btn btn-default payment-submit-button" />
+        </div>
+    </div>
+{{ form_end(form) }}

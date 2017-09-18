@@ -1,0 +1,25 @@
+services:
+    payment.status.change:
+        class: PaymentBundle\EventListener\OrdersListener
+        tags:
+            - { name: kernel.event_listener, event: payment.state_change, method: onPaymentStateChange }
+        arguments: [ "@payment.invoice.create", "@security.token_storage", "@user.util.donor_manipulator", "@payment.clean.payment_instruction" ]
+
+    payment.invoice.create:
+        class: PaymentBundle\Lib\CreateInvoice
+        arguments: [ "@security.token_storage", "@doctrine.orm.entity_manager", "@request_stack" ]
+
+    payment.clean.payment_instruction:
+        class: PaymentBundle\Lib\CleanPaymentInstruction
+        arguments: [ "@doctrine.orm.entity_manager" ]
+
+    payment.form.choose_payment_method_type:
+        class: PaymentBundle\Form\ChoosePaymentMethodType
+        arguments: [ "@payment.plugin_controller", "@request_stack" ]
+        tags: [ { name: form.type,  alias: ma_choose_payment_method } ]
+        calls:
+            - method: setDataTransformer
+              arguments: [ "@payment.form.choose_payment_method_transformer" ]
+
+parameters:
+    payment.form.stripe_credit_card_type.class: KJ\Payment\StripeBundle\Form\StripeCreditCardMinimumType

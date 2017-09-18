@@ -44,3 +44,6 @@ fos_user:
     registration:
         confirmation:
             enabled:    false
+
+jms_payment_paypal:
+    debug: true

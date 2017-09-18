@@ -17,3 +17,11 @@ parameters:
 
     # A secret key that's used to generate certain security-related tokens
     secret: TravisTokenNotSoSecret
+
+    # Payment Bundle
+    jms_payment_core_secret: def000009ae257dc160bab1e05c2d83161cd61703bdb00cc9f7bd151add036981d882aa3c2d8522f1c5fa334d7003784b460fac5bb93bb74b06259903148f389bc0f4bbd
+    kj_payment_stripe_api_key: Travis
+    kj_payment_stripe_api_version: Travis
+    jms_payment_paypal_username: Travis
+    jms_payment_paypal_password: Travis
+    jms_payment_paypal_signature: Travis

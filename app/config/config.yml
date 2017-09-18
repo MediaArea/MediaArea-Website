@@ -11,6 +11,7 @@ imports:
     - { resource: "@OllistdBundle/Resources/config/services.yml" }
     - { resource: "@AVIMetaEditBundle/Resources/config/services.yml" }
     - { resource: "@MediaInfoBundle/Resources/config/services.yml" }
+    - { resource: "@PaymentBundle/Resources/config/services.yml" }
 
 # Put parameters here that don't need to change on each machine where the app is deployed
 # https://symfony.com/doc/current/best_practices/configuration.html#application-related-configuration
@@ -124,3 +125,18 @@ fos_user:
         form:
             type: UserBundle\Form\Type\ProfileFormType
             validation_groups: [UserProfile]
+
+jms_payment_core:
+    encryption:
+        provider: defuse_php_encryption
+        secret: "%jms_payment_core_secret%"
+
+kj_payment_stripe:
+    api_key: "%kj_payment_stripe_api_key%"
+    api_version: "%kj_payment_stripe_api_version%"
+
+jms_payment_paypal:
+    username: "%jms_payment_paypal_username%"
+    password: "%jms_payment_paypal_password%"
+    signature: "%jms_payment_paypal_signature%"
+    debug: false

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="en" datatype="plaintext" original="file.ext" target-language="en">
+    <body>
+      <trans-unit id="form.label.stripe_credit_card" approved="yes">
+        <source><![CDATA[form.label.stripe_credit_card]]></source>
+        <target><![CDATA[Credit Cards]]></target>
+      </trans-unit>
+      <trans-unit id="form.label.paypal_express_checkout" approved="yes">
+        <source><![CDATA[form.label.paypal_express_checkout]]></source>
+        <target><![CDATA[Paypal]]></target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

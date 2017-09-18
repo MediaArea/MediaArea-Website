@@ -34,6 +34,10 @@ media_trace:
     resource: "@MediaTraceBundle/Controller/"
     type:     annotation
 
+payment:
+    resource: "@PaymentBundle/Controller/"
+    type:     annotation
+
 app:
     resource: '@AppBundle/Controller/'
     type: annotation
