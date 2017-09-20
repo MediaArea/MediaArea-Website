@@ -119,7 +119,7 @@ class DefaultController extends Controller
                     'data' => ['name' => (null !== $this->getUser()) ? $this->getUser()->getNameForDisplay() : ''],
                 ],
             ],
-            'allowed_methods' => ['paypal_express_checkout', 'stripe_credit_card'],
+            'allowed_methods' => ['stripe_credit_card'],
         ]);
 
         $form->handleRequest($request);
