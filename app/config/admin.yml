@@ -24,3 +24,11 @@ easy_admin:
                     - 'displayName'
                     - 'endDate'
                     - 'roles'
+
+        Invoice:
+            class: PaymentBundle\Entity\Invoice
+            disabled_actions: ['new', 'show', 'edit', 'delete']
+            search:
+                fields: ['user', 'amount', 'vat', 'currency', 'ipAddress', 'country', 'date']
+            list:
+                fields: ['user', 'amount', 'vat', 'currency', 'ipAddress', 'country', 'date']
