@@ -17,3 +17,12 @@ parameters:
 
     # A secret key that's used to generate certain security-related tokens
     secret: ThisTokenIsNotSoSecretChangeIt
+
+    # Payment Bundle
+    jms_payment_core_secret: ~
+    kj_payment_stripe_api_key: ~
+    kj_payment_stripe_api_version: ~
+    jms_payment_paypal_username: ~
+    jms_payment_paypal_password: ~
+    jms_payment_paypal_signature: ~
+    

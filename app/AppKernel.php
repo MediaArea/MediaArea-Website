@@ -19,8 +19,11 @@ class AppKernel extends Kernel
             new Symfony\Bundle\AsseticBundle\AsseticBundle(),
             new Knp\Bundle\MenuBundle\KnpMenuBundle(),
             new FOS\UserBundle\FOSUserBundle(),
-            new JavierEguiluz\Bundle\EasyAdminBundle\EasyAdminBundle(),
+            new EasyCorp\Bundle\EasyAdminBundle\EasyAdminBundle(),
             new Doctrine\Bundle\MigrationsBundle\DoctrineMigrationsBundle(),
+            new JMS\Payment\CoreBundle\JMSPaymentCoreBundle(),
+            new JMS\Payment\PaypalBundle\JMSPaymentPaypalBundle(),
+            new KJ\Payment\StripeBundle\KJPaymentStripeBundle(),
             new MediaTraceBundle\MediaTraceBundle(),
             new BWFMetaEditBundle\BWFMetaEditBundle(),
             new QCToolsBundle\QCToolsBundle(),
@@ -29,6 +32,7 @@ class AppKernel extends Kernel
             new AVIMetaEditBundle\AVIMetaEditBundle(),
             new MediaInfoBundle\MediaInfoBundle(),
             new UserBundle\UserBundle(),
+            new PaymentBundle\PaymentBundle(),
         ];
 
         if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {

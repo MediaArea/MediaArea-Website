@@ -690,6 +690,14 @@ div.address {
 
 }
 
+form[name=ma_choose_payment_method] {
+    margin-top: 12px;
+}
+
+#ma_choose_payment_method_data_stripe_credit_card_exp_month, #ma_choose_payment_method_data_stripe_credit_card_exp_year {
+    margin-bottom: 15px;
+}
+
 .paragraph-block {
     background-color: #fff;
     border-color: #595D96;

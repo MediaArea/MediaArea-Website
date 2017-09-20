@@ -791,6 +791,14 @@ and your help will be greatly appreciated.]]></target>
         <target><![CDATA[Donations can be made via Credit Cards or Paypal - once off or as a monthly subscription.<br/>
 Please choose your preferred method below.]]></target>
       </trans-unit>
+      <trans-unit id="donate.location_currency" approved="yes">
+        <source><![CDATA[donate.location_currency]]></source>
+        <target><![CDATA[We have located you in "%country%" your payment will be made in "%currency%". <a href="mailto:info@mediaarea.net">Contact us</a> if we have not located you correctly.]]></target>
+      </trans-unit>
+      <trans-unit id="donate.not_loggued_in" approved="yes">
+        <source><![CDATA[donate.not_loggued_in]]></source>
+        <target><![CDATA[You are not loggued you will not have the features reserved to our donators (like no ads) and the new features, please <a href="%login%">login</a> or <a href="%register%">register</a>.]]></target>
+      </trans-unit>
       <trans-unit id="177" approved="yes">
         <source><![CDATA[donate.flattr.title]]></source>
         <target><![CDATA[Via Flattr]]></target>
