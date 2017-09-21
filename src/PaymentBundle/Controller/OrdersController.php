@@ -27,11 +27,11 @@ class OrdersController extends Controller
         $ppc = $this->get('payment.plugin_controller');
         $result = $ppc->approveAndDeposit($payment->getId(), $payment->getTargetAmount());
 
-        if ($result->getStatus() === Result::STATUS_SUCCESS) {
+        if (Result::STATUS_SUCCESS === $result->getStatus()) {
             return $this->redirect($this->generateUrl('payment_orders_paymentcomplete', [
                 'id' => $order->getId(),
             ]));
-        } elseif ($result->getStatus() === Result::STATUS_PENDING) {
+        } elseif (Result::STATUS_PENDING === $result->getStatus()) {
             $exception = $result->getPluginException();
 
             if ($exception instanceof ActionRequiredException) {
@@ -50,6 +50,10 @@ class OrdersController extends Controller
         }
 
         $message .= '.<br>';
+
+        if ('stripe_credit_card' == $result->getPaymentInstruction()->getPaymentSystemName()) {
+            $message .= 'You may also consider to pay with Paypal by credit card.<br>';
+        }
 
         $message .= '<a href="mailto:info@mediaarea.net">Contact us</a> if the problem persists.';
 
@@ -87,7 +91,7 @@ class OrdersController extends Controller
         $instruction = $order->getPaymentInstruction();
         $pendingTransaction = $instruction->getPendingTransaction();
 
-        if ($pendingTransaction !== null) {
+        if (null !== $pendingTransaction) {
             return $pendingTransaction->getPayment();
         }
 
