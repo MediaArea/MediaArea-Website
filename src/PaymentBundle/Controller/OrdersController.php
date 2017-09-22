@@ -67,22 +67,41 @@ class OrdersController extends Controller
      */
     public function paymentCompleteAction(Request $request, Order $order)
     {
+        // Redirect if user have already completed his payment
+        if (Order::STATUS_COMPLETED === $order->getStatus()) {
+            $this->addFlash('danger', 'Order already completed');
+
+            return $this->redirectToRoute('mi_donate');
+        }
+
+        // Redirect if payment is not complete
+        if ($order->getPaymentInstruction()->getAmount() !== $order->getPaymentInstruction()->getApprovedAmount()) {
+            $this->addFlash('danger', 'The requested payment is not complete');
+
+            return $this->redirectToRoute('mi_donate');
+        }
+
+        // Set order completed
+        $order->setStatus(Order::STATUS_COMPLETED);
+        $em = $this->getDoctrine()->getManager();
+        $em->persist($order);
+        $em->flush($order);
+
+        // Add flash message
         $ipToCurrency = new IpToCurrency($request->getClientIp());
         $message = sprintf(
             'Thank you, your payment of %s have been successfully processed',
             $ipToCurrency->amountWithCurrency((int) $order->getAmount())
         );
 
-        $this->addFlash(
-            'success',
-            $message
-        );
+        $this->addFlash('success', $message);
 
         // Redirect connected users to profile page
         if ($this->getUser() instanceof UserInterface) {
             return $this->redirectToRoute('fos_user_profile_show');
         }
 
+        // Redirect anonymous users
         return $this->redirectToRoute('mi_home', ['Donated' => true]);
     }
 

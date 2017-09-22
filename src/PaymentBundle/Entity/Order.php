@@ -10,6 +10,9 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class Order
 {
+    const STATUS_NEW = 0;
+    const STATUS_COMPLETED = 1;
+
     /**
      * @ORM\Id
      * @ORM\Column(type="integer")
@@ -26,6 +29,11 @@ class Order
      * @ORM\Column(type="decimal", precision=10, scale=5)
      */
     private $amount;
+
+    /**
+     * @ORM\Column(type="smallint", nullable=false, options={"default":0})
+     */
+    protected $status = 0;
 
     public function __construct($amount)
     {
@@ -88,5 +96,29 @@ class Order
     public function getPaymentInstruction()
     {
         return $this->paymentInstruction;
+    }
+
+    /**
+     * Set status
+     *
+     * @param integer $status
+     *
+     * @return Order
+     */
+    public function setStatus($status)
+    {
+        $this->status = $status;
+
+        return $this;
+    }
+
+    /**
+     * Get status
+     *
+     * @return integer
+     */
+    public function getStatus()
+    {
+        return $this->status;
     }
 }
