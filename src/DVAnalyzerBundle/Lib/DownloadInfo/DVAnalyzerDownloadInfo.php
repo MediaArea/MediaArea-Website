@@ -41,6 +41,6 @@ class DVAnalyzerDownloadInfo extends AbstractDownloadInfo
     public function parse()
     {
         $this->downloadInfo = $this->detectOS();
-        $this->downloadInfo['version'] = '1.4.1.20160928';
+        $this->downloadInfo['version'] = '1.4.2';
     }
 }
