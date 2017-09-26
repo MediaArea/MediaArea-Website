@@ -1,43 +1,142 @@
 <tr>
-    <th colspan="5">Notes for installing the packages below:<br />"sudo dpkg -i *deb"<br /><br />If you get an error message, use:<br />"sudo apt-get -f install"</th>
+    <th colspan="4">For automatic update and easiest installation, enable MediaArea softwares repository for Debian<br />Search for "DVAnalyzer" in your package manager<br />or "apt-get install dvanalyzer-gui" (for GUI)<br /> or "apt-get install dvanalyzer" (for CLI)</th>
+    <td><a href='{{ path('ma_repos') }}'>Activate MediaArea Repository</a></td>
+</tr>
+<tr>
+    <th colspan="5">Notes for installing the packages below:<br />"sudo dpkg -i *deb"</th>
 </tr>
 
 <tr>
-    <th rowspan="2" id="8">8 (Jessie)</th>
-    <th rowspan="1" id="8.amd64">amd64</th>
-    <td>GUI</td>
-    <td><a href="//mediaarea.net/download/snapshots/binary/dvanalyzer/20160928/dvanalyzer_1.4.1.20160928-1_amd64.Debian_8.0.deb">v1.4.1.20160928</a></td>
-    <td>&nbsp;</td>
+    <th rowspan="8" id="9">9 (Stretch)</th>
+    <th rowspan="4" id="9.amd64">amd64</th>
+    <th><abbr title="Graphical User Interface">GUI</abbr></th>
+    <td><a href="//mediaarea.net/download/binary/dvanalyzer-gui/1.4.2/dvanalyzer-gui_1.4.2-1_amd64.Debian_9.0.deb">v1.4.2</a></td>
+    <td>requires libmediainfo0</td>
 </tr>
 <tr>
-    <th rowspan="1" id="8.i386">i386</th>
-    <td>GUI</td>
-    <td><a href="//mediaarea.net/download/snapshots/binary/dvanalyzer/20160928/dvanalyzer_1.4.1.20160928-1_i386.Debian_8.0.deb">v1.4.1.20160928</a></td>
-    <td>&nbsp;</td>
+    <th><abbr title="Command Line Interface">CLI</abbr></th>
+    <td><a href="//mediaarea.net/download/binary/dvanalyzer/1.4.2/dvanalyzer_1.4.2-1_amd64.Debian_9.0.deb">v1.4.2</a></td>
+    <td>requires libmediainfo0</td>
 </tr>
 <tr>
-    <th rowspan="2" id="7">7 (Wheezy)</th>
-    <th rowspan="1" id="7.amd64">amd64</th>
-    <td>GUI</td>
-    <td><a href="//mediaarea.net/download/snapshots/binary/dvanalyzer/20160928/dvanalyzer_1.4.1.20160928-1_amd64.Debian_7.0.deb">v1.4.1.20160928</a></td>
-    <td>&nbsp;</td>
+    <th>libmediainfo0</th>
+    <td><a href="//mediaarea.net/download/binary/libmediainfo0/0.7.99/libmediainfo0v5_0.7.99-1_amd64.Debian_9.0.deb">v0.7.99</a> <small>(<a href="//mediaarea.net/download/binary/libmediainfo0/0.7.99/libmediainfo-dev_0.7.99-1_amd64.Debian_9.0.deb">devel</a>, <a href="//mediaarea.net/download/binary/libmediainfo0/0.7.99/libmediainfo-doc_0.7.99-1_amd64.Debian_9.0.deb">doc</a>)</small></td>
+    <td>requires libzen0</td>
 </tr>
 <tr>
-    <th rowspan="1" id="7.i386">i386</th>
-    <td>GUI</td>
-    <td><a href="//mediaarea.net/download/snapshots/binary/dvanalyzer/20160928/dvanalyzer_1.4.1.20160928-1_i386.Debian_7.0.deb">v1.4.1.20160928</a></td>
+    <th>libzen0</th>
+    <td><a href="//mediaarea.net/download/binary/libzen0/0.4.37/libzen0v5_0.4.37-1_amd64.Debian_9.0.deb">v0.4.37</a> <small>(<a href="//mediaarea.net/download/binary/libzen0/0.4.37/libzen-dev_0.4.37-1_amd64.Debian_9.0.deb">devel</a>, <a href="//mediaarea.net/download/binary/libzen0/0.4.37/libzen-doc_0.4.37-1_amd64.Debian_9.0.deb">doc</a>)</small></td>
     <td>&nbsp;</td>
 </tr>
+
 <tr>
-    <th rowspan="2" id="6">6 (Squeeze)</th>
-    <th rowspan="1" id="6.amd64">amd64</th>
-    <td>GUI</td>
-    <td><a href="//mediaarea.net/download/snapshots/binary/dvanalyzer/20160928/dvanalyzer_1.4.1.20160928-1_amd64.Debian_6.0.deb">v1.4.1.20160928</a></td>
-    <td>&nbsp;</td>
+    <th rowspan="4" id="9.i386">i386</th>
+    <th><abbr title="Graphical User Interface">GUI</abbr></th>
+    <td><a href="//mediaarea.net/download/binary/dvanalyzer-gui/1.4.2/dvanalyzer-gui_1.4.2-1_i386.Debian_9.0.deb">v1.4.2</a></td>
+    <td>requires libmediainfo0</td>
 </tr>
 <tr>
-    <th rowspan="1" id="6.i386">i386</th>
-    <td>GUI</td>
-    <td><a href="//mediaarea.net/download/snapshots/binary/dvanalyzer/20160928/dvanalyzer_1.4.1.20160928-1_i386.Debian_6.0.deb">v1.4.1.20160928</a></td>
+    <th><abbr title="Command Line Interface">CLI</abbr></th>
+    <td><a href="//mediaarea.net/download/binary/dvanalyzer/1.4.2/dvanalyzer_1.4.2-1_i386.Debian_9.0.deb">v1.4.2</a></td>
+    <td>requires libmediainfo0</td>
+</tr>
+<tr>
+    <th>libmediainfo0</th>
+    <td><a href="//mediaarea.net/download/binary/libmediainfo0/0.7.99/libmediainfo0v5_0.7.99-1_i386.Debian_9.0.deb">v0.7.99</a> <small>(<a href="//mediaarea.net/download/binary/libmediainfo0/0.7.99/libmediainfo-dev_0.7.99-1_i386.Debian_9.0.deb">devel</a>, <a href="//mediaarea.net/download/binary/libmediainfo0/0.7.99/libmediainfo-doc_0.7.99-1_i386.Debian_9.0.deb">doc</a>)</small></td>
+    <td>requires libzen0</td>
+</tr>
+<tr>
+    <th>libzen0</th>
+    <td><a href="//mediaarea.net/download/binary/libzen0/0.4.37/libzen0v5_0.4.37-1_i386.Debian_9.0.deb">v0.4.37</a> <small>(<a href="//mediaarea.net/download/binary/libzen0/0.4.37/libzen-dev_0.4.37-1_i386.Debian_9.0.deb">devel</a>, <a href="//mediaarea.net/download/binary/libzen0/0.4.37/libzen-doc_0.4.37-1_i386.Debian_9.0.deb">doc</a>)</small></td>
+    <td>&nbsp;</td>
+</tr>
+
+<tr>
+    <th rowspan="8" id="8">8 (Jessie)</th>
+    <th rowspan="4" id="8.amd64">amd64</th>
+    <th><abbr title="Graphical User Interface">GUI</abbr></th>
+    <td><a href="//mediaarea.net/download/binary/dvanalyzer-gui/1.4.2/dvanalyzer-gui_1.4.2-1_amd64.Debian_8.0.deb">v1.4.2</a></td>
+    <td>requires libmediainfo0</td>
+</tr>
+<tr>
+    <th><abbr title="Command Line Interface">CLI</abbr></th>
+    <td><a href="//mediaarea.net/download/binary/dvanalyzer/1.4.2/dvanalyzer_1.4.2-1_amd64.Debian_8.0.deb">v1.4.2</a></td>
+    <td>requires libmediainfo0</td>
+</tr>
+<tr>
+    <th>libmediainfo0</th>
+    <td><a href="//mediaarea.net/download/binary/libmediainfo0/0.7.99/libmediainfo0_0.7.99-1_amd64.Debian_8.0.deb">v0.7.99</a> <small>(<a href="//mediaarea.net/download/binary/libmediainfo0/0.7.99/libmediainfo-dev_0.7.99-1_amd64.Debian_8.0.deb">devel</a>, <a href="//mediaarea.net/download/binary/libmediainfo0/0.7.99/libmediainfo-doc_0.7.99-1_amd64.Debian_8.0.deb">doc</a>)</small></td>
+    <td>requires libzen0</td>
+</tr>
+<tr>
+    <th>libzen0</th>
+    <td><a href="//mediaarea.net/download/binary/libzen0/0.4.37/libzen0_0.4.37-1_amd64.Debian_8.0.deb">v0.4.37</a> <small>(<a href="//mediaarea.net/download/binary/libzen0/0.4.37/libzen-dev_0.4.37-1_amd64.Debian_8.0.deb">devel</a>, <a href="//mediaarea.net/download/binary/libzen0/0.4.37/libzen-doc_0.4.37-1_amd64.Debian_8.0.deb">doc</a>)</small></td>
+    <td>&nbsp;</td>
+</tr>
+
+<tr>
+    <th rowspan="4" id="8.i386">i386</th>
+    <th><abbr title="Graphical User Interface">GUI</abbr></th>
+    <td><a href="//mediaarea.net/download/binary/dvanalyzer-gui/1.4.2/dvanalyzer-gui_1.4.2-1_i386.Debian_8.0.deb">v1.4.2</a></td>
+    <td>requires libmediainfo0</td>
+</tr>
+<tr>
+    <th><abbr title="Command Line Interface">CLI</abbr></th>
+    <td><a href="//mediaarea.net/download/binary/dvanalyzer/1.4.2/dvanalyzer_1.4.2-1_i386.Debian_8.0.deb">v1.4.2</a></td>
+    <td>requires libmediainfo0</td>
+</tr>
+<tr>
+    <th>libmediainfo0</th>
+    <td><a href="//mediaarea.net/download/binary/libmediainfo0/0.7.99/libmediainfo0_0.7.99-1_i386.Debian_8.0.deb">v0.7.99</a> <small>(<a href="//mediaarea.net/download/binary/libmediainfo0/0.7.99/libmediainfo-dev_0.7.99-1_i386.Debian_8.0.deb">devel</a>, <a href="//mediaarea.net/download/binary/libmediainfo0/0.7.99/libmediainfo-doc_0.7.99-1_i386.Debian_8.0.deb">doc</a>)</small></td>
+    <td>requires libzen0</td>
+</tr>
+<tr>
+    <th>libzen0</th>
+    <td><a href="//mediaarea.net/download/binary/libzen0/0.4.37/libzen0_0.4.37-1_i386.Debian_8.0.deb">v0.4.37</a> <small>(<a href="//mediaarea.net/download/binary/libzen0/0.4.37/libzen-dev_0.4.37-1_i386.Debian_8.0.deb">devel</a>, <a href="//mediaarea.net/download/binary/libzen0/0.4.37/libzen-doc_0.4.37-1_i386.Debian_8.0.deb">doc</a>)</small></td>
+    <td>&nbsp;</td>
+</tr>
+
+<tr>
+    <th rowspan="8" id="7">7 (Wheezy)</th>
+    <th rowspan="4" id="7.amd64">amd64</th>
+    <th><abbr title="Graphical User Interface">GUI</abbr></th>
+    <td><a href="//mediaarea.net/download/binary/dvanalyzer-gui/1.4.2/dvanalyzer-gui_1.4.2-1_amd64.Debian_7.0.deb">v1.4.2</a></td>
+    <td>requires libmediainfo0</td>
+</tr>
+<tr>
+    <th><abbr title="Command Line Interface">CLI</abbr></th>
+    <td><a href="//mediaarea.net/download/binary/dvanalyzer/1.4.2/dvanalyzer_1.4.2-1_amd64.Debian_7.0.deb">v1.4.2</a></td>
+    <td>requires libmediainfo0</td>
+</tr>
+<tr>
+    <th>libmediainfo0</th>
+    <td><a href="//mediaarea.net/download/binary/libmediainfo0/0.7.99/libmediainfo0_0.7.99-1_amd64.Debian_7.0.deb">v0.7.99</a> <small>(<a href="//mediaarea.net/download/binary/libmediainfo0/0.7.99/libmediainfo-dev_0.7.99-1_amd64.Debian_7.0.deb">devel</a>, <a href="//mediaarea.net/download/binary/libmediainfo0/0.7.99/libmediainfo-doc_0.7.99-1_amd64.Debian_7.0.deb">doc</a>)</small></td>
+    <td>requires libzen0</td>
+</tr>
+<tr>
+    <th>libzen0</th>
+    <td><a href="//mediaarea.net/download/binary/libzen0/0.4.37/libzen0_0.4.37-1_amd64.Debian_7.0.deb">v0.4.37</a> <small>(<a href="//mediaarea.net/download/binary/libzen0/0.4.37/libzen-dev_0.4.37-1_amd64.Debian_7.0.deb">devel</a>, <a href="//mediaarea.net/download/binary/libzen0/0.4.37/libzen-doc_0.4.37-1_amd64.Debian_7.0.deb">doc</a>)</small></td>
+    <td>&nbsp;</td>
+</tr>
+
+<tr>
+    <th rowspan="4" id="7.i386">i386</th>
+    <th><abbr title="Graphical User Interface">GUI</abbr></th>
+    <td><a href="//mediaarea.net/download/binary/dvanalyzer-gui/1.4.2/dvanalyzer-gui_1.4.2-1_i386.Debian_7.0.deb">v1.4.2</a></td>
+    <td>requires libmediainfo0</td>
+</tr>
+<tr>
+    <th><abbr title="Command Line Interface">CLI</abbr></th>
+    <td><a href="//mediaarea.net/download/binary/dvanalyzer/1.4.2/dvanalyzer_1.4.2-1_i386.Debian_7.0.deb">v1.4.2</a></td>
+    <td>requires libmediainfo0</td>
+</tr>
+<tr>
+    <th>libmediainfo0</th>
+    <td><a href="//mediaarea.net/download/binary/libmediainfo0/0.7.99/libmediainfo0_0.7.99-1_i386.Debian_7.0.deb">v0.7.99</a> <small>(<a href="//mediaarea.net/download/binary/libmediainfo0/0.7.99/libmediainfo-dev_0.7.99-1_i386.Debian_7.0.deb">devel</a>, <a href="//mediaarea.net/download/binary/libmediainfo0/0.7.99/libmediainfo-doc_0.7.99-1_i386.Debian_7.0.deb">doc</a>)</small></td>
+    <td>requires libzen0</td>
+</tr>
+<tr>
+    <th>libzen0</th>
+    <td><a href="//mediaarea.net/download/binary/libzen0/0.4.37/libzen0_0.4.37-1_i386.Debian_7.0.deb">v0.4.37</a> <small>(<a href="//mediaarea.net/download/binary/libzen0/0.4.37/libzen-dev_0.4.37-1_i386.Debian_7.0.deb">devel</a>, <a href="//mediaarea.net/download/binary/libzen0/0.4.37/libzen-doc_0.4.37-1_i386.Debian_7.0.deb">doc</a>)</small></td>
     <td>&nbsp;</td>
 </tr>

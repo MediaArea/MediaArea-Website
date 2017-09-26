@@ -23,7 +23,7 @@
             </div>
 
             {% if 'Windows' == downloadInfo.name %}
-                {% set downloadLink = '//mediaarea.net/download/snapshots/binary/dvanalyzer-gui/' ~ downloadInfo.version ~ '/AVPS_DV_Analyzer_GUI_' ~ downloadInfo.version ~ '_Windows_x64.exe' %}
+                {% set downloadLink = '//mediaarea.net/download/snapshots/binary/dvanalyzer-gui/' ~ downloadInfo.version ~ '/DVAnalyzer_GUI_' ~ downloadInfo.version ~ '_Windows_x64.exe' %}
             {% elseif 'macOS' == downloadInfo.name %}
                 {% set downloadLink = '//mediaarea.net/download/snapshots/binary/dvanalyzer-gui/' ~ downloadInfo.version ~ '/DVAnalyzer_GUI_' ~ downloadInfo.version ~ '_Mac.dmg' %}
             {% else %}
@@ -32,7 +32,7 @@
 
             <div class="inner center-xs center-font-xs">
                 <div class="btn-group hidden-xs">
-                    <a class="btn btn-default btn-lg btn-dl disabled" href="{{ downloadLink }}">
+                    <a class="btn btn-default btn-lg btn-dl" href="{{ downloadLink }}">
                         <span class="downloadText">Download DV Analyzer</span>
                     </a>
                     <a href="{{ path('dv_download') }}" class="btn btn-default btn-lg dropdown-toggle disabled" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
@@ -61,9 +61,10 @@
 
                 <div class="projectDescription">
                     <div class="downloadDetails">
-                        (deactivated for the moment, issues with the analysis part in the automatic builds)<br>
-                        Development version {{ downloadInfo.version }}{% if downloadInfo.name %}, for {{ downloadInfo.name }}{% endif %}
+                        Version {{ downloadInfo.version }}{% if downloadInfo.name %}, for {{ downloadInfo.name }}{% endif %}
                     </div>
+                    This version is an unofficial update with a refresh of binaries including a couple of fixes, check the <a href="https://github.com/MediaArea/DV_Analyzer/blob/master/History_GUI.txt">ChangeLog</a> for the list of changes.
+                    <br>
                     Other versions (packaging, OS, interface...) are also <a href="{{ path('dv_download') }}">available</a>
                     {% image '@AppBundle/Resources/public/img/blank.gif' %}
                     (<a href="{{ path('dv_download_windows') }}"><img src="{{ asset_url }}" width="16" height="16" alt="Microsoft Windows" title="Microsoft Windows" class="sprite Windows"></a>

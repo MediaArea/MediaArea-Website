@@ -23,7 +23,7 @@
             </div>
 
             {% if 'Windows' == downloadInfo.name %}
-                {% set downloadLink = '//mediaarea.net/download/binary/avimetaedit-gui/' ~ downloadInfo.version ~ '/AVI_MetaEdit_GUI_' ~ downloadInfo.version ~ '_Windows_x64.exe' %}
+                {% set downloadLink = '//mediaarea.net/download/binary/avimetaedit-gui/' ~ downloadInfo.version ~ '/AVIMetaEdit_GUI_' ~ downloadInfo.version ~ '_Windows_x64.exe' %}
             {% elseif 'macOS' == downloadInfo.name %}
                 {% set downloadLink = '//mediaarea.net/download/binary/avimetaedit-gui/' ~ downloadInfo.version ~ '/AVIMetaEdit_GUI_' ~ downloadInfo.version ~ '_Mac.dmg' %}
             {% else %}
@@ -61,8 +61,10 @@
 
                 <div class="projectDescription">
                     <div class="downloadDetails">
-                        Development version {{ downloadInfo.version }}{% if downloadInfo.name %}, for {{ downloadInfo.name }}{% endif %}
+                        Version {{ downloadInfo.version }}{% if downloadInfo.name %}, for {{ downloadInfo.name }}{% endif %}
                     </div>
+                    This version is an unofficial update with a refresh of binaries including a couple of fixes, check the <a href="https://github.com/MediaArea/AVI_MetaEdit/blob/master/History_GUI.txt">ChangeLog</a> for the list of changes.
+                    <br>
                     Other versions (packaging, OS, interface...) are also <a href="{{ path('avi_download') }}">available</a>
                     {% image '@AppBundle/Resources/public/img/blank.gif' %}
                     (<a href="{{ path('avi_download_windows') }}"><img src="{{ asset_url }}" width="16" height="16" alt="Microsoft Windows" title="Microsoft Windows" class="sprite Windows"></a>
