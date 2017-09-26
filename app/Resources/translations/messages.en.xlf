@@ -74,6 +74,10 @@
         <source><![CDATA[menu.projects.bwfmetaedit]]></source>
         <target><![CDATA[BWF MetaEdit]]></target>
       </trans-unit>
+      <trans-unit id="menu.projects.avimetaedit" approved="yes">
+        <source><![CDATA[menu.projects.avimetaedit]]></source>
+        <target><![CDATA[AVI MetaEdit]]></target>
+      </trans-unit>
       <trans-unit id="226" approved="yes">
         <source><![CDATA[menu.projects.dvanalyzer]]></source>
         <target><![CDATA[DV Analyzer]]></target>
