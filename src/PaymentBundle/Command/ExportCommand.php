@@ -64,7 +64,7 @@ EOT
             'start' => $this->getStartDate($start),
             'end' => $this->getEndDate($start, $end),
         ]);
-        $invoices = $query->getScalarResult();
+        $invoices = $query->getResult();
 
         $output->writeln('Invoices between '.$this->getStartDate($start).' and '.$this->getEndDate($start, $end));
 
@@ -74,17 +74,18 @@ EOT
             return;
         }
 
-        $output->writeln('AmountExclTax,VAT,Currency,IP,Country,Date');
+        $output->writeln('AmountExclTax,VAT,Currency,IP,Country,Date,PaymentSystem');
 
         foreach ($invoices as $invoice) {
             $output->writeln(sprintf(
-                '%s,%s,%s,%s,%s,%s',
-                $invoice['i_amount'],
-                $invoice['i_vat'],
-                $invoice['i_currency'],
-                $invoice['i_ipAddress'],
-                $invoice['i_country'],
-                $invoice['i_date']->format('Y-m-d\TH:i:s')
+                '%s,%s,%s,%s,%s,%s,%s',
+                $invoice->getAmount(),
+                $invoice->getVat(),
+                $invoice->getCurrency(),
+                $invoice->getIpAddress(),
+                $invoice->getCountry(),
+                $invoice->getDate()->format('Y-m-d\TH:i:s'),
+                $invoice->getPaymentInstruction()->getPaymentSystemName()
             ));
         }
     }
