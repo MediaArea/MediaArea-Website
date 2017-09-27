@@ -263,4 +263,14 @@ class Invoice
     {
         return $this->paymentInstruction;
     }
+
+    /**
+     * Get payment system name.
+     *
+     * @return string
+     */
+    public function getPaymentSystemName()
+    {
+        return $this->paymentInstruction->getPaymentSystemName();
+    }
 }
