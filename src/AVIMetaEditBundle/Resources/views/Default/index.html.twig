@@ -24,8 +24,6 @@
 
             {% if 'Windows' == downloadInfo.name %}
                 {% set downloadLink = '//mediaarea.net/download/binary/avimetaedit-gui/' ~ downloadInfo.version ~ '/AVIMetaEdit_GUI_' ~ downloadInfo.version ~ '_Windows_x64.exe' %}
-            {% elseif 'macOS' == downloadInfo.name %}
-                {% set downloadLink = '//mediaarea.net/download/binary/avimetaedit-gui/' ~ downloadInfo.version ~ '/AVIMetaEdit_GUI_' ~ downloadInfo.version ~ '_Mac.dmg' %}
             {% else %}
                 {% set downloadLink = path(downloadInfo.route) %}
             {% endif %}
@@ -54,9 +52,15 @@
                     </ul>
                 </div>
                 <div class="btn-group visible-xs visible-xs-inline-block">
+                    {% if 'macOS' == downloadInfo.name %}
+                    <a class="btn btn-default btn-lg btn-dl" href="https://itunes.apple.com/app/avimetaedit/id1289778020" target="_blank">
+                        <span class="downloadText">Download AVI MetaEdit</span>
+                    </a>
+                    {% else %}
                     <a class="btn btn-default btn-lg btn-dl " href="{{ path(downloadInfo.route) }}">
                         <span class="downloadText">Download AVI MetaEdit</span>
                     </a>
+                    {% endif %}
                 </div>
 
                 <div class="projectDescription">
