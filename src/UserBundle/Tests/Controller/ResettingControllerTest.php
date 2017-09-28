@@ -28,7 +28,7 @@ class ResettingControllerTest extends UserAbstractControllerTest
 
     public function testResetConnected()
     {
-        $client = $this->createAuthorizedClient();
+        $client = $this->createRegularUserClient();
 
         $client->request('GET', '/resetting/request');
 

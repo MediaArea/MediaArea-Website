@@ -1,0 +1,72 @@
+{% extends 'SupportUsBundle::base.html.twig' %}
+
+{% block title %}Support Us! Become a sponsor of MediaArea{% endblock %}
+{% block description %}Support Us! Become a sponsor of MediaArea{% endblock %}
+{% block keywords %}Donation sponsor member crowdfunding{% endblock %}
+
+{% block body %}
+<form class="form-horizontal form-pricing" role="form">
+    <div class="price-slider">
+        <h1>Become a MediaArea sponsor</h1>
+        <p>
+            Wanting only dedicated support? Check the <a href="{{ path('ma_professional_services') }}">Services page</a><br>
+            (Interested as an individual? Check also our <a href="{{ path('supportUs_individual') }}">individual page</a>)
+        </p>
+        <p>
+            {% if country %}{% trans with { '%country%': country, '%currency%': currency.currency } %}donate.location_currency{% endtrans %}<br>{% endif %}
+        </p>
+        <p>Choose your amount (VAT excluded):</p>
+        <br>
+        <div class="row">
+            <div class="col-sm-12">
+                <div id="slider" class="ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all" aria-disabled="false">
+                    <a class="ui-slider-handle ui-state-default ui-corner-all" href=""></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="price-form">
+        <input id="corporate" class="form-control" value="" type="hidden" />
+        <p id="corporate-label"></p>
+    </div>
+
+    <div class="form-group">
+        <div class="col-sm-12">
+            <a class="btn btn-primary btn-lg btn-block corporate-quote-btn btn-support" href="mailto:info@mediaarea.net?Subject=Request%20quote%20for%20sponsor">Contact us for a formal quote</a>
+        </div>
+    </div>
+</form>
+{% endblock %}
+
+{% block stylesheets %}
+{% stylesheets
+    '@SupportUsBundle/Resources/public/css/supportUs.css'
+    filter='?scssphp' output='css/supportUs.css'
+ %}
+    <link rel="stylesheet" href="{{ asset_url }}" />
+{% endstylesheets %}
+{% endblock %}
+
+{% block javascripts %}
+<script src="{{ asset('bundles/fosjsrouting/js/router.js') }}"></script>
+<script src="{{ path('fos_js_routing_js', { callback: 'fos.Router.setData' }) }}"></script>
+{% javascripts
+    '@SupportUsBundle/Resources/public/js/jquery-ui.min.js'
+    output='js/jquery-ui.js'
+ %}
+    <script src="{{ asset_url }}"></script>
+{% endjavascripts %}
+{% javascripts
+    '@SupportUsBundle/Resources/public/js/supportUsSlider.js'
+    filter="?jsqueeze" output='js/supportUsSlider.js'
+ %}
+    <script src="{{ asset_url }}"></script>
+{% endjavascripts %}
+
+<script>
+    $(document).ready(function() {
+        supportUs.initCorporate('{{ currency.currencySymbol }}');
+    });
+</script>
+{% endblock %}

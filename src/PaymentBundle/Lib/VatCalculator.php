@@ -129,6 +129,20 @@ class VatCalculator
     }
 
     /**
+     * Get vat rate.
+     *
+     * @return int Vat rate
+     */
+    public function getVatRate()
+    {
+        if (isset($this->vatRate[$this->country])) {
+            return $this->vatRate[$this->country] * 100;
+        }
+
+        return 0;
+    }
+
+    /**
      * Calculate net price and vat amount from gross price.
      */
     public function calculateNet()

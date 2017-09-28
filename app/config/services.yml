@@ -31,49 +31,42 @@ services:
 
     app.menu_builder:
         class: AppBundle\Menu\MenuBuilder
-        arguments: ["@knp_menu.factory"]
         tags:
             - { name: knp_menu.menu_builder, method: createMainMenu, alias: main }
         public: true
 
     app.menu_mediatrace_builder:
         class: AppBundle\Menu\MenuBuilder
-        arguments: ["@knp_menu.factory"]
         tags:
             - { name: knp_menu.menu_builder, method: createMediaTraceMenu, alias: mediatrace }
         public: true
 
     app.menu_bwf_builder:
         class: AppBundle\Menu\MenuBuilder
-        arguments: ["@knp_menu.factory"]
         tags:
             - { name: knp_menu.menu_builder, method: createBWFMetaEditMenu, alias: bwf }
         public: true
 
     app.menu_avi_builder:
         class: AppBundle\Menu\MenuBuilder
-        arguments: ["@knp_menu.factory"]
         tags:
             - { name: knp_menu.menu_builder, method: createAVIMetaEditMenu, alias: avi }
         public: true
 
     app.menu_qc_builder:
         class: AppBundle\Menu\MenuBuilder
-        arguments: ["@knp_menu.factory"]
         tags:
             - { name: knp_menu.menu_builder, method: createQCToolsMenu, alias: qc }
         public: true
 
     app.menu_dv_builder:
         class: AppBundle\Menu\MenuBuilder
-        arguments: ["@knp_menu.factory"]
         tags:
             - { name: knp_menu.menu_builder, method: createDVAnalyzerMenu, alias: dv }
         public: true
 
     app.menu_ollistd_builder:
         class: AppBundle\Menu\MenuBuilder
-        arguments: ["@knp_menu.factory"]
         tags:
             - { name: knp_menu.menu_builder, method: createOllistdMenu, alias: ollistd }
         public: true

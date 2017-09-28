@@ -6,6 +6,9 @@ easy_admin_bundle:
 fos_user:
     resource: "@FOSUserBundle/Resources/config/routing/all.xml"
 
+fos_js_routing:
+    resource: "@FOSJsRoutingBundle/Resources/config/routing/routing.xml"
+
 user:
     resource: "@UserBundle/Controller/"
     type:     annotation
@@ -32,6 +35,10 @@ bwf_meta_edit:
 
 media_trace:
     resource: "@MediaTraceBundle/Controller/"
+    type:     annotation
+
+support_us:
+    resource: "@SupportUsBundle/Controller/"
     type:     annotation
 
 payment:

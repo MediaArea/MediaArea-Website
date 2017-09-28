@@ -1,0 +1,92 @@
+{% extends 'SupportUsBundle::base.html.twig' %}
+
+{% block title %}Support Us! List of supporters of MediaArea{% endblock %}
+{% block description %}Support Us! List of supporters of MediaArea{% endblock %}
+{% block keywords %}Donation subscriber supporter member crowdfunding{% endblock %}
+
+{% block body %}
+<h1>Our supporters</h1>
+<section id="logo" class="anchor">
+    <ul class="icon-lists supporters">
+        <li class="icon">
+            <p class="button text-center"><a href="" target="_blank" title="Your website URL">Your name</a></p>
+
+            {% image '@SupportUsBundle/Resources/public/img/100x100.png' %}
+                <a href="" target="_blank"><img src="{{ asset_url }}" alt="Your website URL" title="Your website URL" /></a>
+            {% endimage %}
+        </li>
+        <li class="icon">
+            <p class="button text-center"><a href="" target="_blank" title="Your website URL">Your name</a></p>
+
+            {% image '@SupportUsBundle/Resources/public/img/100x100.png' %}
+                <a href="" target="_blank"><img src="{{ asset_url }}" alt="Your website URL" title="Your website URL" /></a>
+            {% endimage %}
+        </li>
+        <li class="icon">
+            <p class="button text-center"><a href="" target="_blank" title="Your website URL">Your name</a></p>
+
+            {% image '@SupportUsBundle/Resources/public/img/100x100.png' %}
+                <a href="" target="_blank"><img src="{{ asset_url }}" alt="Your website URL" title="Your website URL" /></a>
+            {% endimage %}
+        </li>
+        <li class="icon">
+            <p class="button text-center"><a href="" target="_blank" title="Your website URL">Your name</a></p>
+
+            {% image '@SupportUsBundle/Resources/public/img/100x100.png' %}
+                <a href="" target="_blank"><img src="{{ asset_url }}" alt="Your website URL" title="Your website URL" /></a>
+            {% endimage %}
+        </li>
+        <li class="icon">
+            <p class="button text-center"><a href="" target="_blank" title="Your website URL">Your name</a></p>
+
+            {% image '@SupportUsBundle/Resources/public/img/100x100.png' %}
+                <a href="" target="_blank"><img src="{{ asset_url }}" alt="Your website URL" title="Your website URL" /></a>
+            {% endimage %}
+        </li>
+        <li class="icon">
+            <p class="button text-center"><a href="" target="_blank" title="Your website URL">Your name</a></p>
+
+            {% image '@SupportUsBundle/Resources/public/img/100x100.png' %}
+                <a href="" target="_blank"><img src="{{ asset_url }}" alt="Your website URL" title="Your website URL" /></a>
+            {% endimage %}
+        </li>
+        <li class="icon">
+            <p class="button text-center"><a href="" target="_blank" title="Your website URL">Your name</a></p>
+
+            {% image '@SupportUsBundle/Resources/public/img/100x100.png' %}
+                <a href="" target="_blank"><img src="{{ asset_url }}" alt="Your website URL" title="Your website URL" /></a>
+            {% endimage %}
+        </li>
+        <li class="icon">
+            <p class="button text-center"><a href="" target="_blank" title="Your website URL">Your name</a></p>
+
+            {% image '@SupportUsBundle/Resources/public/img/100x100.png' %}
+                <a href="" target="_blank"><img src="{{ asset_url }}" alt="Your website URL" title="Your website URL" /></a>
+            {% endimage %}
+        </li>
+    </ul>
+</section>
+<div class="clearfix"></div>
+<hr>
+<section id="link" class="anchor">
+    {% for i in 0..10 %}
+        <a href="" target="_blank">Supporter {{ i }} with link</a>{% if not loop.last %} - {% endif %}
+    {% endfor %}
+</section>
+
+<hr>
+<section id="name" class="anchor">
+    {% for i in 0..10 %}
+        Supporter {{ i }} without link{% if not loop.last %} - {% endif %}
+    {% endfor %}
+</section>
+{% endblock %}
+
+{% block stylesheets %}
+{% stylesheets
+    '@SupportUsBundle/Resources/public/css/supportUs.css'
+    filter='?scssphp' output='css/supportUs.css'
+ %}
+    <link rel="stylesheet" href="{{ asset_url }}" />
+{% endstylesheets %}
+{% endblock %}

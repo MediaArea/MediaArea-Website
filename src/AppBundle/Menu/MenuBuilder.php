@@ -4,19 +4,22 @@ namespace AppBundle\Menu;
 
 use Knp\Menu\FactoryInterface;
 use Knp\Menu\ItemInterface;
+use Symfony\Component\Security\Core\Authorization\AuthorizationCheckerInterface;
 
 class MenuBuilder
 {
     private $factory;
+    private $authChecker;
 
     /**
      * @param FactoryInterface $factory
      *
      * Add any other dependency you need
      */
-    public function __construct(FactoryInterface $factory)
+    public function __construct(FactoryInterface $factory, AuthorizationCheckerInterface $authChecker)
     {
         $this->factory = $factory;
+        $this->authChecker = $authChecker;
     }
 
     /**
@@ -71,6 +74,7 @@ class MenuBuilder
         $menu['menu.mediainfo']->addChild('menu.testimonials', array('route' => 'mi_testimonials'));
 
         $menu = $this->projectsMenu($menu);
+        $menu = $this->supportUsMenu($menu);
 
         return $menu;
     }
@@ -96,6 +100,7 @@ class MenuBuilder
         $menu['menu.mediatrace']->addChild('menu.mediatrace.license', array('uri' => '#license'));
 
         $menu = $this->projectsMenu($menu);
+        $menu = $this->supportUsMenu($menu);
 
         return $menu;
     }
@@ -117,6 +122,7 @@ class MenuBuilder
         $menu['menu.bwfmetaedit']->addChild('menu.bwfmetaedit.download', array('route' => 'bwf_download'));
 
         $menu = $this->projectsMenu($menu);
+        $menu = $this->supportUsMenu($menu);
 
         return $menu;
     }
@@ -138,6 +144,7 @@ class MenuBuilder
         $menu['menu.avimetaedit']->addChild('menu.avimetaedit.download', array('route' => 'avi_download'));
 
         $menu = $this->projectsMenu($menu);
+        $menu = $this->supportUsMenu($menu);
 
         return $menu;
     }
@@ -168,6 +175,7 @@ class MenuBuilder
         $menu['menu.qctools']->addChild('menu.qctools.seattle', array('route' => 'qc_doc_seattle'));
 
         $menu = $this->projectsMenu($menu);
+        $menu = $this->supportUsMenu($menu);
 
         return $menu;
     }
@@ -189,6 +197,7 @@ class MenuBuilder
         $menu['menu.dvanalyzer']->addChild('menu.dvanalyzer.download', array('route' => 'dv_download'));
 
         $menu = $this->projectsMenu($menu);
+        $menu = $this->supportUsMenu($menu);
 
         return $menu;
     }
@@ -206,6 +215,7 @@ class MenuBuilder
         $menu->addChild('menu.ollistd', array('route' => 'ollistd_home'));
 
         $menu = $this->projectsMenu($menu);
+        $menu = $this->supportUsMenu($menu);
 
         return $menu;
     }
@@ -215,7 +225,7 @@ class MenuBuilder
         $menu->addChild('menu.mediaarea', array('route' => 'homepage'))
             ->setExtras(array('dropdown' => true));
         $menu['menu.mediaarea']->addChild('menu.mediaarea.about', array('route' => 'homepage'));
-        $menu['menu.mediaarea']->addChild('menu.mediaarea.pro', array('route' => 'mi_support'))->setCurrent(false);
+        $menu['menu.mediaarea']->addChild('menu.mediaarea.pro', array('route' => 'ma_professional_services'));
         $menu['menu.mediaarea']->addChild('menu.mediaarea.events', array('route' => 'ma_events'));
         $menu['menu.mediaarea']->addChild('menu.mediaarea.conduct', array('route' => 'ma_conduct'));
         $menu['menu.mediaarea']->addChild('menu.mediaarea.legal', array('route' => 'ma_legal'));
@@ -236,6 +246,25 @@ class MenuBuilder
         $menu['menu.projects']->addChild('menu.projects.avimetaedit', array('route' => 'avi_home'))->setCurrent(false);
         $menu['menu.projects']->addChild('menu.projects.dvanalyzer', array('route' => 'dv_home'))->setCurrent(false);
         $menu['menu.projects']->addChild('menu.projects.ollistd', array('route' => 'ollistd_home'))->setCurrent(false);
+
+        return $menu;
+    }
+
+    private function supportUsMenu(ItemInterface $menu)
+    {
+        // Check if user has ROLE_BETA
+        if (!$this->authChecker->isGranted('ROLE_BETA')) {
+            return $menu;
+        }
+
+        $menu->addChild('menu.supportUs', array('route' => 'supportUs_about'))
+            ->setExtras(array('dropdown' => true));
+        $menu['menu.supportUs']->addChild('menu.supportUs.about', ['route' => 'supportUs_about']);
+        $menu['menu.supportUs']->addChild('menu.supportUs.corporate', ['route' => 'supportUs_corporate']);
+        $menu['menu.supportUs']->addChild('menu.supportUs.individial', ['route' => 'supportUs_individual']);
+        $menu['menu.supportUs']->addChild('menu.supportUs.faq', ['route' => 'supportUs_faq']);
+        $menu['menu.supportUs']->addChild('menu.supportUs.sponsorsList', ['route' => 'supportUs_sponsors_list']);
+        $menu['menu.supportUs']->addChild('menu.supportUs.supportersList', ['route' => 'supportUs_supporters_list']);
 
         return $menu;
     }

@@ -1,0 +1,73 @@
+{% extends 'SupportUsBundle::base.html.twig' %}
+
+{% block title %}Support Us! Become a sponsor or a supporter of MediaArea{% endblock %}
+{% block description %}Support Us! Become a sponsor or a supporter of MediaArea{% endblock %}
+{% block keywords %}Donation sponsor subscriber supporter member crowdfunding{% endblock %}
+
+{% block body %}
+<h1 class="text-center">
+    MediaArea tools (MediaInfo, MediaConch...) 2018:<br>
+    Let's make Digital Media Analysis better!
+</h1>
+
+<p>
+    Help us spread the word:<br>
+    <ul>
+        <li>Spread this page (<a href="{{ url('supportUs_about') }}">{{ url('supportUs_about') }}</a>) in your communuity</li>
+        <li><a href="https://twitter.com/MediaArea_Net" target="_blank">Follow us on Twitter</li>
+        <li><a href="https://www.linkedin.com/company/3196112/" target="_blank">Follow us on LinkedIn</a></li>
+        <li><a href="https://www.facebook.com/MediaAreaNet/" target="_blank">Like and follow us on Facebook</a></li>
+        <li><a href="https://www.facebook.com/pg/MediaAreaNet/reviews/" target="_blank">Write a review on Facebook</a></li>
+        <li><a href="https://plus.google.com/+MediaAreaNetOfficial" target="_blank">Like and follow us on Google+</a></li>
+        <li>Get and note tools we work on on Mac App Store (<a href="https://itunes.apple.com/app/mediainfo/id510620098" target="_blank">MediaInfo</a>,
+            <a href="https://itunes.apple.com/app/mediaconch/id1183720451" target="_blank">MediaConch</a>,
+            <a href="https://itunes.apple.com/app/qctools/id1234563987" target="_blank">QCTools</a>,
+            <a href="https://itunes.apple.com/app/bwf-metaedit/id860703858" target="_blank">BWF MetaEdit</a>,
+            <a href="https://itunes.apple.com/app/avi-metaedit/id1289778020" target="_blank">AVI MetaEdit</a>,
+            <a href="https://itunes.apple.com/app/dvanalyzer/id1289789624" target="_blank">DV Analyzer</a>)
+        </li>
+        <li>Star tools we work on on GitHub (<a href="https://github.com/MediaArea/MediaInfo" target="_blank">MediaInfo</a>,
+            <a href="https://github.com/MediaArea/MediaInfoLib" target="_blank">MediaInfoLib</a>,
+            <a href="https://github.com/MediaArea/MediaConch_SourceCode" target="_blank">MediaConch</a>,
+            <a href="https://github.com/MediaArea/QCTools" target="_blank">QCTools</a>,
+            <a href="https://github.com/MediaArea/BWFMetaEdit" target="_blank">BWF MetaEdit</a>,
+            <a href="https://github.com/MediaArea/AVIMetaEdit" target="_blank">AVI MetaEdit</a>,
+            <a href="https://github.com/MediaArea/DVAnalyzer" target="_blank">DV Analyzer</a>)
+        </li>
+        <li>Click on "I use this" for tools we work on on OpenHub (<a href="https://www.openhub.net/p/MediaInfo" target="_blank">MediaInfo</a>,
+            <a href="https://www.openhub.net/p/MediaInfoLib" target="_blank">MediaInfoLib</a>,
+            <a href="https://www.openhub.net/p/MediaConch" target="_blank">MediaConch</a>,
+            <a href="https://www.openhub.net/p/QCTools" target="_blank">QCTools</a>,
+            <a href="https://www.openhub.net/p/BWFMetaEdit" target="_blank">BWF MetaEdit</a>,
+            <a href="https://www.openhub.net/p/AVIMetaEdit" target="_blank">AVI MetaEdit</a>,
+            <a href="https://www.openhub.net/p/DVAnalyzer" target="_blank">DV Analyzer</a>)
+        </li>
+        <li>Fill the list of third party software using MediaInfo</li>
+        <li>Write a testimonial (long like <a href="https://mediaarea.net/MediaConch/blog.html">these ones</a> or short like <a href="{{ path('mi_testimonials') }}">these ones</a>)</li>
+        <li>Send patches (ToDo: more stuff)</li>
+    </ul>
+</p>
+<p>
+Financially support (<a href="{{ path('supportUs_individual') }}">individual</a>) or sponsor (<a href="{{ path('supportUs_corporate') }}">corporate</a>) us, that would permit you to get priority support and be part of the people who decide about the future of MediaArea tools.
+</p>
+
+<div class="form-group row">
+    <div class="col-sm-12">
+        <div class="col-sm-6">
+            <a href="{{ path('supportUs_individual') }}" class="btn btn-primary btn-lg btn-block btn-support">Individual</a>
+        </div>
+        <div class="col-sm-6">
+            <a href="{{ path('supportUs_corporate') }}" class="btn btn-primary btn-lg btn-block btn-support">Corporate</a>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block stylesheets %}
+{% stylesheets
+    '@SupportUsBundle/Resources/public/css/supportUs.css'
+    filter='?scssphp' output='css/supportUs.css'
+ %}
+    <link rel="stylesheet" href="{{ asset_url }}" />
+{% endstylesheets %}
+{% endblock %}

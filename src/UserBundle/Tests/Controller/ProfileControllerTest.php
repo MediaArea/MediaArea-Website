@@ -16,7 +16,7 @@ class ProfileControllerTest extends UserAbstractControllerTest
 
     public function testProfileConnected()
     {
-        $client = $this->createAuthorizedClient();
+        $client = $this->createRegularUserClient();
 
         $crawler = $client->request('GET', '/profile/');
 
@@ -29,7 +29,7 @@ class ProfileControllerTest extends UserAbstractControllerTest
 
     public function testProfileEdit()
     {
-        $client = $this->createAuthorizedClient();
+        $client = $this->createRegularUserClient();
 
         $crawler = $client->request('GET', '/profile/edit');
         $form = $crawler->selectButton('Update')->form();

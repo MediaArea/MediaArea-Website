@@ -90,6 +90,34 @@
         <source><![CDATA[menu.projects.ollistd]]></source>
         <target><![CDATA[Open LossLess in STanDards]]></target>
       </trans-unit>
+      <trans-unit id="menu.supportUs" approved="yes">
+        <source><![CDATA[menu.supportUs]]></source>
+        <target><![CDATA[Support Us!]]></target>
+      </trans-unit>
+      <trans-unit id="menu.supportUs.about" approved="yes">
+        <source><![CDATA[menu.supportUs.about]]></source>
+        <target><![CDATA[About]]></target>
+      </trans-unit>
+      <trans-unit id="menu.supportUs.individial" approved="yes">
+        <source><![CDATA[menu.supportUs.individial]]></source>
+        <target><![CDATA[Individial]]></target>
+      </trans-unit>
+      <trans-unit id="menu.supportUs.corporate" approved="yes">
+        <source><![CDATA[menu.supportUs.corporate]]></source>
+        <target><![CDATA[Corporate]]></target>
+      </trans-unit>
+      <trans-unit id="menu.supportUs.faq" approved="yes">
+        <source><![CDATA[menu.supportUs.faq]]></source>
+        <target><![CDATA[FAQ]]></target>
+      </trans-unit>
+      <trans-unit id="menu.supportUs.supportersList" approved="yes">
+        <source><![CDATA[menu.supportUs.supportersList]]></source>
+        <target><![CDATA[Supporters]]></target>
+      </trans-unit>
+      <trans-unit id="menu.supportUs.sponsorsList" approved="yes">
+        <source><![CDATA[menu.supportUs.sponsorsList]]></source>
+        <target><![CDATA[Sponsors]]></target>
+      </trans-unit>
       <trans-unit id="227" approved="yes">
         <source><![CDATA[footer.projects]]></source>
         <target><![CDATA[Projects]]></target>

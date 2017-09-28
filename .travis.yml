@@ -27,6 +27,8 @@ install:
   - php bin/console doctrine:database:create --env=test --if-not-exists
   - php bin/console doctrine:migrations:migrate --no-interaction
   - php bin/console mediaarea:user:donor test@mediaarea.net 1
+  - php bin/console fos:user:create beta beta@mediaarea.net betaTravis
+  - php bin/console fos:user:promote beta ROLE_BETA
 
 script:
   - ./vendor/bin/simple-phpunit -v
