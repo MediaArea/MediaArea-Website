@@ -42,6 +42,10 @@
         <source><![CDATA[menu.mediaarea.events]]></source>
         <target><![CDATA[Events]]></target>
       </trans-unit>
+      <trans-unit id="menu.mediaarea.conduct" approved="yes">
+        <source><![CDATA[menu.mediaarea.conduct]]></source>
+        <target><![CDATA[Code of conduct]]></target>
+      </trans-unit>
       <trans-unit id="218" approved="yes">
         <source><![CDATA[menu.mediaarea.legal]]></source>
         <target><![CDATA[Legal]]></target>

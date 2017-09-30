@@ -37,6 +37,15 @@ class DefaultController extends Controller
     }
 
     /**
+     * @Route("/Conduct", name="ma_conduct")
+     * @Template()
+     */
+    public function conductAction()
+    {
+        return array();
+    }
+
+    /**
      * @Route("/Legal", name="ma_legal")
      * @Template()
      */

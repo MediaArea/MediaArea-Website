@@ -217,6 +217,7 @@ class MenuBuilder
         $menu['menu.mediaarea']->addChild('menu.mediaarea.about', array('route' => 'homepage'));
         $menu['menu.mediaarea']->addChild('menu.mediaarea.pro', array('route' => 'mi_support'))->setCurrent(false);
         $menu['menu.mediaarea']->addChild('menu.mediaarea.events', array('route' => 'ma_events'));
+        $menu['menu.mediaarea']->addChild('menu.mediaarea.conduct', array('route' => 'ma_conduct'));
         $menu['menu.mediaarea']->addChild('menu.mediaarea.legal', array('route' => 'ma_legal'));
 
         return $menu;
