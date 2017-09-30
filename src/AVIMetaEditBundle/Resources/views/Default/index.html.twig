@@ -30,9 +30,15 @@
 
             <div class="inner center-xs center-font-xs">
                 <div class="btn-group hidden-xs">
+                    {% if 'macOS' == downloadInfo.name %}
+                    <a class="btn btn-default btn-lg btn-dl" href="https://itunes.apple.com/app/avimetaedit/id1289778020" target="_blank">
+                        <span class="downloadText">Download AVI MetaEdit</span>
+                    </a>
+                    {% else %}
                     <a class="btn btn-default btn-lg btn-dl " href="{{ downloadLink }}">
                         <span class="downloadText">Download AVI MetaEdit</span>
                     </a>
+                    {% endif %}
                     <a href="{{ path('avi_download') }}" class="btn btn-default btn-lg dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
                         <span class="caret"></span>
                     </a>
