@@ -15,7 +15,7 @@ class SecurityControllerTest extends UserAbstractControllerTest
 
     public function testLogInInNavConnected()
     {
-        $client = $this->createAuthorizedClient();
+        $client = $this->createRegularUserClient();
 
         $crawler = $client->request('GET', '/');
 
@@ -36,7 +36,7 @@ class SecurityControllerTest extends UserAbstractControllerTest
 
     public function testLoginConnected()
     {
-        $client = $this->createAuthorizedClient();
+        $client = $this->createRegularUserClient();
 
         $client->request('GET', '/login');
 

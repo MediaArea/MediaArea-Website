@@ -80,4 +80,13 @@ class DefaultController extends Controller
     {
         return array();
     }
+
+    /**
+     * @Route("/Services", name="ma_professional_services")
+     * @Template()
+     */
+    public function professionalServicesAction()
+    {
+        return ['noAds' => true];
+    }
 }

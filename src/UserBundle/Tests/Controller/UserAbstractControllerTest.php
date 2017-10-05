@@ -12,14 +12,27 @@ use Symfony\Component\BrowserKit\Cookie;
 abstract class UserAbstractControllerTest extends WebTestCase
 {
     /**
-     * @var Client
+     * @return Client
      */
-    protected $client = null;
+    protected function createRegularUserClient()
+    {
+        return $this->createAuthorizedClient('test@mediaarea.net');
+    }
 
     /**
      * @return Client
      */
-    protected function createAuthorizedClient()
+    protected function createBetaUserClient()
+    {
+        return $this->createAuthorizedClient('beta@mediaarea.net');
+    }
+
+    /**
+     * @param  string $email Email of user to authenticate
+     *
+     * @return Client
+     */
+    private function createAuthorizedClient($email)
     {
         $client = static::createClient();
         $container = $client->getContainer();
@@ -29,7 +42,7 @@ abstract class UserAbstractControllerTest extends WebTestCase
         $loginManager = $container->get('fos_user.security.login_manager');
         $firewallName = $container->getParameter('fos_user.firewall_name');
 
-        $user = $userManager->findUserBy(array('email' => 'test@mediaarea.net'));
+        $user = $userManager->findUserBy(array('email' => $email));
         $loginManager->loginUser($firewallName, $user);
 
         // save the login token into the session and put it in a cookie

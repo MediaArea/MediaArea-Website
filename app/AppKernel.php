@@ -19,6 +19,7 @@ class AppKernel extends Kernel
             new Symfony\Bundle\AsseticBundle\AsseticBundle(),
             new Knp\Bundle\MenuBundle\KnpMenuBundle(),
             new FOS\UserBundle\FOSUserBundle(),
+            new FOS\JsRoutingBundle\FOSJsRoutingBundle(),
             new EasyCorp\Bundle\EasyAdminBundle\EasyAdminBundle(),
             new Doctrine\Bundle\MigrationsBundle\DoctrineMigrationsBundle(),
             new JMS\Payment\CoreBundle\JMSPaymentCoreBundle(),
@@ -33,6 +34,7 @@ class AppKernel extends Kernel
             new MediaInfoBundle\MediaInfoBundle(),
             new UserBundle\UserBundle(),
             new PaymentBundle\PaymentBundle(),
+            new SupportUsBundle\SupportUsBundle(),
         ];
 
         if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {

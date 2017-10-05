@@ -1,0 +1,4 @@
+services:
+#    contact_us.example:
+#        class: SupportUsBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]

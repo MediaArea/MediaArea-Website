@@ -2,9 +2,9 @@
 
 namespace Tests\AppBundle\Controller;
 
-use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
+use UserBundle\Tests\Controller\UserAbstractControllerTest;
 
-class DefaultControllerTest extends WebTestCase
+class DefaultControllerTest extends UserAbstractControllerTest
 {
     public function testHomeMediaArea()
     {
@@ -13,7 +13,6 @@ class DefaultControllerTest extends WebTestCase
         $client->request('GET', '/');
         $this->assertEquals(200, $client->getResponse()->getStatusCode());
     }
-
 
     public function testMediaInfoPageDoesNotExist()
     {
@@ -59,11 +58,33 @@ class DefaultControllerTest extends WebTestCase
         $this->assertEquals(200, $client->getResponse()->getStatusCode());
     }
 
+    public function testProfessionalServices()
+    {
+        $client = $this->createBetaUserClient();
+        $client->request('GET', '/Services');
+        $this->assertEquals(200, $client->getResponse()->getStatusCode());
+    }
+
     public function testEvents()
     {
         $client = static::createClient();
 
         $client->request('GET', '/Events');
+        $this->assertEquals(200, $client->getResponse()->getStatusCode());
+    }
+
+    public function testCodeOfConduct()
+    {
+        $client = static::createClient();
+
+        $client->request('GET', '/Conduct');
+        $this->assertEquals(200, $client->getResponse()->getStatusCode());
+    }
+
+    public function testLegal()
+    {
+        $client = static::createClient();
+        $client->request('GET', '/Legal');
         $this->assertEquals(200, $client->getResponse()->getStatusCode());
     }
 
