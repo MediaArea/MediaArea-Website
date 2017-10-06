@@ -1,0 +1,8 @@
+services:
+#    mov_meta_edit.example:
+#        class: MOVMetaEditBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]
+
+    mov.download_info:
+        class: MOVMetaEditBundle\Lib\DownloadInfo\MOVMetaEditDownloadInfo
+        public: true

@@ -146,6 +146,26 @@ class MenuBuilder
     /**
      * @SuppressWarnings(PHPMD.UnusedFormalParameter)
      */
+    public function createMOVMetaEditMenu(array $options)
+    {
+        $menu = $this->factory->createItem('root');
+        $menu->setChildrenAttribute('class', 'nav navbar-nav main-menu');
+
+        $menu = $this->mediaAreaMenu($menu);
+
+        $menu->addChild('menu.movmetaedit', ['route' => 'mov_home'])->setExtras(['dropdown' => true])->setCurrent(true);
+        $menu['menu.movmetaedit']->addChild('menu.movmetaedit.about', ['route' => 'mov_home']);
+        $menu['menu.movmetaedit']->addChild('menu.movmetaedit.download', ['route' => 'mov_download']);
+
+        $menu = $this->projectsMenu($menu);
+        $menu = $this->supportUsMenu($menu);
+
+        return $menu;
+    }
+
+    /**
+     * @SuppressWarnings(PHPMD.UnusedFormalParameter)
+     */
     public function createQCToolsMenu(array $options)
     {
         $menu = $this->factory->createItem('root');

@@ -1,0 +1,109 @@
+{% extends 'MOVMetaEditBundle::base.html.twig' %}
+
+{% block title %}MOV MetaEdit{% endblock %}
+
+{% block body %}
+<section class="download-wrapper">
+    <div class="row reorder-xs">
+        <div class="v-align carousel-padding-xs col-xs-12 col-sm-5">
+            <div>
+            {% image '@MOVMetaEditBundle/Resources/public/img/MOVMetaEdit.png' %}
+                <img src="{{ asset_url }}" alt="MOV MetaEdit logo" class="img-responsive center-xs" title="MOV MetaEdit logo" />
+            {% endimage %}
+            </div>
+        </div>
+        <div class="v-align col-sm-7">
+            <div class="center-font-xs">
+                <h1 class="v-align bigtitle">MOV MetaEdit</h1>
+            </div>
+            <div class="projectDescription center-font-xs">
+                <strong>MOV MetaEdit</strong> is a tool that supports the embedding and editing of metadata in MOV (Apple QuickTime) or MP4 (ISO/IEC 14496-14 a.k.a. MPEG-4 Part 14) files. It is currently focused on Universal Ad ID metadata but could be expanded on request.<br>
+                Sponsored by <a href="https://ad-id.org">Ad-ID</a>; designed, led and fully developed by MediaArea.
+            </div>
+            <div class="projectDescription center-font-xs">
+                Currently in "beta" status, for tests only.
+            </div>
+
+            {% if 'Windows' == downloadInfo.name %}
+                {% set downloadLink = '//mediaarea.net/download/binary/movmetaedit-gui/' ~ downloadInfo.versionPath ~ '/MOVMetaEdit_GUI_' ~ downloadInfo.version ~ '_Windows_x64.exe' %}
+            {% else %}
+                {% set downloadLink = path(downloadInfo.route) %}
+            {% endif %}
+
+            <div class="inner center-xs center-font-xs">
+                <div class="btn-group hidden-xs">
+                    <a class="btn btn-default btn-lg btn-dl " href="{{ downloadLink }}">
+                        <span class="downloadText">Download MOV MetaEdit</span>
+                    </a>
+                    <a href="{{ path('mov_download') }}" class="btn btn-default btn-lg dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                        <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu dropdown-default platform-icons">
+                        <li><a href="{{ path('mov_download_windows') }}">Windows</a></li>
+                        <li><a href="{{ path('mov_download_mac') }}">macOS</a></li>
+                        <li><a href="{{ path('mov_download_debian') }}">Debian</a></li>
+                        <li><a href="{{ path('mov_download_ubuntu') }}">Ubuntu</a></li>
+                        <li><a href="{{ path('mov_download_ubuntu') }}">Linux Mint</a></li>
+                        <li><a href="{{ path('mov_download_rhel') }}">RedHat Entreprise Linux</a></li>
+                        <li><a href="{{ path('mov_download_centos') }}">CentOS</a></li>
+                        <li><a href="{{ path('mov_download_fedora') }}">Fedora</a></li>
+                        <li><a href="{{ path('mov_download_opensuse') }}">openSUSE</a></li>
+                        <li><a href="{{ path('mov_download_archlinux') }}">ArchLinux</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="{{ path('mov_download') }}">Other systems</a></li>
+                    </ul>
+                </div>
+                <div class="btn-group visible-xs visible-xs-inline-block">
+                    <a class="btn btn-default btn-lg btn-dl " href="{{ path(downloadInfo.route) }}">
+                        <span class="downloadText">Download MOV MetaEdit</span>
+                    </a>
+                </div>
+
+                <div class="projectDescription">
+                    <div class="downloadDetails">
+                        Version {{ downloadInfo.version }}{% if downloadInfo.name %}, for {{ downloadInfo.name }}{% endif %}
+                    </div>
+                    Other versions (packaging, OS, interface...) are also <a href="{{ path('mov_download') }}">available</a>
+                    {% image '@AppBundle/Resources/public/img/blank.gif' %}
+                    (<a href="{{ path('mov_download_windows') }}"><img src="{{ asset_url }}" width="16" height="16" alt="Microsoft Windows" title="Microsoft Windows" class="sprite Windows"></a>
+                    <a href="{{ path('mov_download_mac') }}"><img src="{{ asset_url }}" width="16" height="16" alt="macOS" title="macOS" class="sprite MacOS"></a>
+                    <a href="{{ path('mov_download_debian') }}"><img src="{{ asset_url }}" width="16" height="16" alt="Debian" title="Debian" class="sprite Debian"></a>
+                    <a href="{{ path('mov_download_ubuntu') }}"><img src="{{ asset_url }}" width="16" height="16" alt="Ubuntu" title="Ubuntu" class="sprite Ubuntu"></a>
+                    <a href="{{ path('mov_download_ubuntu') }}"><img src="{{ asset_url }}" width="16" height="16" alt="Linux Mint" title="Linux Mint" class="sprite Linux_Mint"></a>
+                    <a href="{{ path('mov_download_rhel') }}"><img src="{{ asset_url }}" width="16" height="16" alt="RedHat Entreprise Linux" title="RedHat Entreprise Linux" class="sprite RedHat"></a>
+                    <a href="{{ path('mov_download_centos') }}"><img src="{{ asset_url }}" width="16" height="16" alt="CentOS" title="CentOS" class="sprite CentOS"></a>
+                    <a href="{{ path('mov_download_fedora') }}"><img src="{{ asset_url }}" width="16" height="16" alt="Fedora" title="Fedora" class="sprite Fedora"></a>
+                    <a href="{{ path('mov_download_opensuse') }}"><img src="{{ asset_url }}" width="16" height="16" alt="openSUSE" title="openSUSE" class="sprite openSUSE"></a>
+                    <a href="{{ path('mov_download_archlinux') }}"><img src="{{ asset_url }}" width="16" height="16" alt="ArchLinux" title="ArchLinux" class="sprite ArchLinux"></a>)
+                    {% endimage %}
+                    <br>
+                    You can also check the <a href="//mediaarea.net/download/snapshots/binary/movmetaedit-gui/">GUI very latest snapshots</a> or  <a href="//mediaarea.net/download/snapshots/binary/movmetaedit/">CLI very latest snapshots</a>.
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section class="about">
+    <h2>MOV MetaEdit features:</h2>
+    <ul>
+     <li>Embedding and editing of Universal Ad ID metadata in MOV (Apple QuickTime) or MP4 (ISO/IEC 14496-14 a.k.a. MPEG-4 Part 14) files.</li>
+     <li>Embedding and editing of PAR (Pixel Aspect Ratio), command line only.</li>
+    </ul>
+
+    <h2>Universal Ad ID editor</h2>
+    <p>After having drag and dropped (or from the "File" menu) some files, the Universal Ad ID view displays information (Universal Ad ID registry and Universal Ad ID value) about each file in a table.<br/>
+    Then it is possible to edit Universal Ad ID registry and Universal Ad ID value, respecting standard Ad-ID format in case of Ad-ID registry, and save this metadata.</p>
+	<p>A command line version is also available.</p>
+	<p>MediaInfo can extract such metadata.</p>
+
+    <h2>Pixel Aspect Ratio editor</h2>
+    <p>Currently available only from the command line version, developped for an anonymous sponsor who did not need of a GUI.<br/>
+	It is possible to embed or edit "pasp" atom as well as the width scale in the "tkhd" atom.
+	</p>
+
+    <h2>License:</h2>
+    It is <a href="https://en.wikipedia.org/wiki/Open_source">Open-Source</a> software which means that end users and developers have freedom to study, to improve and to redistribute the program (<a href="{{ path('mov_license') }}">MIT license</a> for the code developed by us).<br/>
+</section>
+{% endblock %}
