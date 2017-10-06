@@ -9,7 +9,7 @@ use Symfony\Component\HttpFoundation\Request;
 class ZZLastController extends Controller
 {
     /**
-     * @Route("/MediaInfo/{url}", name="mi_locale_redirect", defaults={"url": null})
+     * @Route("/MediaInfo/{url}", name="mi_locale_redirect", defaults={"url": null}, requirements={"url"=".+"})
      * @Route("/MediaInfo/")
      */
     public function localeRedirectAction(Request $request)
@@ -64,7 +64,7 @@ class ZZLastController extends Controller
     }
 
     /**
-     * @Route("/MI/{url}", name="old_mi_redirect", defaults={"url": null})
+     * @Route("/MI/{url}", name="old_mi_redirect", defaults={"url": null}, requirements={"url"=".+"})
      * @Route("/MI/")
      */
     public function oldMIUrlAction(Request $request)
@@ -89,7 +89,7 @@ class ZZLastController extends Controller
     /**
      * @Route("/{_locale}/MI/{url}", name="old_mi_locale_redirect",
      *     defaults={"url": null},
-     *     requirements={"_locale": "%app.locales%"})
+     *     requirements={"_locale": "%app.locales%", "url"=".+"})
      * @Route("{_locale}/MI/", requirements={"_locale": "%app.locales%"})
      */
     public function oldMIUrlLocaleAction(Request $request)
