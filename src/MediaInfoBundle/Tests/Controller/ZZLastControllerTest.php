@@ -6,6 +6,23 @@ use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 
 class ZZLastControllerTest extends WebTestCase
 {
+    public function testLocaleRedirect()
+    {
+        $client = static::createClient();
+
+        $client->request('GET', '/MediaInfo');
+        $this->assertEquals(302, $client->getResponse()->getStatusCode());
+        $this->assertTrue($client->getResponse()->isRedirect('/en/MediaInfo'));
+
+        $client->request('GET', '/MediaInfo/Download');
+        $this->assertEquals(302, $client->getResponse()->getStatusCode());
+        $this->assertTrue($client->getResponse()->isRedirect('/en/MediaInfo/Download'));
+
+        $client->request('GET', '/MediaInfo/Download/Ubuntu');
+        $this->assertEquals(302, $client->getResponse()->getStatusCode());
+        $this->assertTrue($client->getResponse()->isRedirect('/en/MediaInfo/Download/Ubuntu'));
+    }
+
     public function testMIRedirect()
     {
         $client = static::createClient();
@@ -23,6 +40,10 @@ class ZZLastControllerTest extends WebTestCase
         $this->assertEquals(302, $client->getResponse()->getStatusCode());
         $this->assertTrue($client->getResponse()->isRedirect('/en/MediaInfo/Download'));
 
+        $client->request('GET', '/MI/Download/Ubuntu');
+        $this->assertEquals(302, $client->getResponse()->getStatusCode());
+        $this->assertTrue($client->getResponse()->isRedirect('/en/MediaInfo/Download/Ubuntu'));
+
         // With locale
         $client->request('GET', '/en/MI');
         $this->assertEquals(302, $client->getResponse()->getStatusCode());
@@ -35,6 +56,10 @@ class ZZLastControllerTest extends WebTestCase
         $client->request('GET', '/en/MI/Download');
         $this->assertEquals(302, $client->getResponse()->getStatusCode());
         $this->assertTrue($client->getResponse()->isRedirect('/en/MediaInfo/Download'));
+
+        $client->request('GET', '/en/MI/Download/Ubuntu');
+        $this->assertEquals(302, $client->getResponse()->getStatusCode());
+        $this->assertTrue($client->getResponse()->isRedirect('/en/MediaInfo/Download/Ubuntu'));
     }
 
     public function testNotFound()

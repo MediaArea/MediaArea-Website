@@ -21,10 +21,12 @@ class DefaultControllerTest extends UserAbstractControllerTest
         // Without locale
         $client->request('GET', '/MediaInfo/DoesNotExist');
         $this->assertEquals(302, $client->getResponse()->getStatusCode());
+        $this->assertTrue($client->getResponse()->isRedirect('/en/MediaInfo/DoesNotExist'));
 
         // With locale
         $client->request('GET', '/en/MediaInfo/DoesNotExist');
         $this->assertEquals(302, $client->getResponse()->getStatusCode());
+        $this->assertTrue($client->getResponse()->isRedirect('/en/MediaInfo'));
     }
 
     public function testMediaInfoAcceptLanguage()
