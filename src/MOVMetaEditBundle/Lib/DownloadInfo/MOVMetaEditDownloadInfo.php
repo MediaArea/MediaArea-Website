@@ -41,8 +41,8 @@ class MOVMetaEditDownloadInfo extends AbstractDownloadInfo
     public function parse()
     {
         $this->downloadInfo = $this->detectOS();
-        $this->downloadInfo['version'] = '0.1.20171005';
-        $this->downloadInfo['versionPath'] = '20171005-2';
+        $this->downloadInfo['version'] = '0.1.20171009';
+        $this->downloadInfo['versionPath'] = '20171009-2';
     }
 
     public function getVersionPath()
