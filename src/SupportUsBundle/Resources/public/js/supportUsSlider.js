@@ -30,18 +30,25 @@ var supportUs = (function () {
 
         corporateUpdate(3);
         corporateSlider();
+        corporateButtons();
     };
 
     var corporateSlider = function() {
-        $('#slider').slider({
-          animate: true,
-          value: 3,
-          min: 1,
-          max: 20,
-          step: 1,
-          slide: function(event, ui) {
-              corporateUpdate(ui.value); //changed
-          },
+        $('[data-slider]').bind('slider:ready slider:changed', function (event, data) {
+            corporateUpdate(data.value);
+        });
+    };
+
+
+    var corporateButtons = function() {
+        $('.btn-corporate-bronze').click(function() {
+            $('#slider').simpleSlider('setValue', 3);
+        });
+        $('.btn-corporate-silver').click(function() {
+            $('#slider').simpleSlider('setValue', 8);
+        });
+        $('.btn-corporate-gold').click(function() {
+            $('#slider').simpleSlider('setValue', 20);
         });
     };
 
@@ -79,7 +86,7 @@ var supportUs = (function () {
         }
 
         // Display sponsor name
-        var total = { value: '<b><span class="sponsor-name">' + name + '</span></b>, 1 year<br>' };
+        var total = { value: '<span class="sponsor-name">' + displayAmountWithCurrency(amount) + '</span>, <b><span class="sponsor-name">' + name + '</span></b>, 1 year<br>' };
 
         // Memberships
         add(total, memberships + ' <a href="' + Routing.generate('supportUs_faq') + '#membership">individual memberships</a>', 0);
@@ -123,13 +130,6 @@ var supportUs = (function () {
 
         $('#corporate-label').html(total.value);
 
-        // Slider label with amount
-        $('#slider a').html(
-            '<label><span class="glyphicon glyphicon-chevron-left"></span> ' +
-            displayAmountWithCurrency(amount) +
-            ' <span class="glyphicon glyphicon-chevron-right"></span></label>'
-        );
-
         // Request quote
         $('a.corporate-quote-btn').attr('href', 'mailto:info@mediaarea.net?Subject=Request%20quote%20for%20' + name +'%20(' + displayAmountWithCurrency(amount) + ')');
     };
@@ -162,27 +162,43 @@ var supportUs = (function () {
 
         individualUpdate(3);
         individualSlider();
+        individualButtons();
     };
 
     var individualSlider = function() {
-        $('#slider').slider({
-            animate: true,
-            value:4,
-            min: 0,
-            max: 22,
-            step: 1,
-            slide: function(event, ui) {
-                individualUpdate(ui.value); //changed
-            }
+        $('[data-slider]').bind('slider:ready slider:changed', function (event, data) {
+            individualUpdate(data.value);
         });
     };
+
+
+    var individualButtons = function() {
+        $('.btn-individual-member').click(function() {
+            $('#slider').simpleSlider('setValue', 4);
+        });
+        $('.btn-individual-voter').click(function() {
+            $('#slider').simpleSlider('setValue', 7);
+        });
+        $('.btn-individual-supporter-bronze').click(function() {
+            $('#slider').simpleSlider('setValue', 14);
+        });
+        $('.btn-individual-supporter-silver').click(function() {
+            $('#slider').simpleSlider('setValue', 18);
+        });
+        $('.btn-individual-supporter-gold').click(function() {
+            $('#slider').simpleSlider('setValue', 22);
+        });
+    };
+
 
     var individualUpdate = function(val) {
         var amount = val;
         var amount1 = 10;
-        var amount2 = 50;
-        var amount3 = 250;
-        var amount4 = 500;
+        var amount2 = 30;
+        var amount3 = 100;
+        var amount4 = 300;
+        var amount5 = 500;
+
         if (amount >= 15) {
             amount = (amount - 12) * 50;
         } else if ( amount >= 7) {
@@ -192,14 +208,18 @@ var supportUs = (function () {
         }
 
         var name = 'Thanks!';
-        if (amount >= amount4) {
-            name = 'Supporter liking links and logos ;-)';
+        if (amount >= amount5) {
+            name = 'Supporter++';
+        } else if (amount >= amount4) {
+            name = 'Supporter+';
         } else if (amount >= amount3) {
-            name = 'Supporter liking links ;-)';
-        } else if (amount >= amount2) {
             name = 'Supporter';
-        } else if (amount>=amount1) {
+        } else if (amount >= amount2) {
+            name = 'Voter';
+        } else if (amount >= amount1) {
             name = 'Member';
+        } else if (0 == amount) {
+            name = false;
         }
 
         var noad = 1 - amount;
@@ -226,7 +246,11 @@ var supportUs = (function () {
         }
 
         // Display supporter name
-        var total = { value: '<b><span class="supporter-name">' + name + '<span></b><br>' };
+        if (name) {
+            var total = { value: '<span class="supporter-name">' + displayAmountWithCurrency(amount) + '</span>, <b><span class="supporter-name">' + name + '</span></b><br>' };
+        } else {
+            var total = { value: '<span class="supporter-name">' + displayAmountWithCurrency(amount) + '</span><br>' };
+        }
 
         // No ad
         if (noad <= -10 + 1) {
@@ -278,13 +302,6 @@ var supportUs = (function () {
         }
 
         $('#total-label').html(total.value);
-
-        // Slider label with amount
-        $('#slider a').html(
-            '<label><span class="glyphicon glyphicon-chevron-left"></span> ' +
-            displayAmountWithCurrency(amount) +
-            ' <span class="glyphicon glyphicon-chevron-right"></span></label>'
-        );
     };
 
     var displayAmountWithCurrency = function(amount) {
