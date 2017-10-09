@@ -86,7 +86,7 @@ var supportUs = (function () {
         }
 
         // Display sponsor name
-        var total = { value: '<span class="sponsor-name">' + displayAmountWithCurrency(amount) + '</span>, <b><span class="sponsor-name">' + name + '</span></b>, 1 year<br>' };
+        var total = { value: '<span class="sponsor-name">' + displayAmountWithCurrency(amount) + ', <b>' + name + '</span></b>, 1 year<br>' };
 
         // Memberships
         add(total, memberships + ' <a href="' + Routing.generate('supportUs_faq') + '#membership">individual memberships</a>', 0);
@@ -247,7 +247,7 @@ var supportUs = (function () {
 
         // Display supporter name
         if (name) {
-            var total = { value: '<span class="supporter-name">' + displayAmountWithCurrency(amount) + '</span>, <b><span class="supporter-name">' + name + '</span></b><br>' };
+            var total = { value: '<span class="supporter-name">' + displayAmountWithCurrency(amount) + ' <b>' + name + '</span></b><br>' };
         } else {
             var total = { value: '<span class="supporter-name">' + displayAmountWithCurrency(amount) + '</span><br>' };
         }
@@ -301,7 +301,7 @@ var supportUs = (function () {
             total.value += '<br><br><br>';
         }
 
-        $('#total-label').html(total.value);
+        $('#individual-label').html(total.value);
     };
 
     var displayAmountWithCurrency = function(amount) {

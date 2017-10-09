@@ -11,13 +11,8 @@ a.btn-support {
 	color: #fff;
 }
 
-
 .sponsor-name, .supporter-name {
     font-size: 200%;
-}
-
-.support-us-buttons-bar {
-	margin-bottom: 15px;
 }
 
 /* Slider */
@@ -58,18 +53,18 @@ a.btn-support {
 	margin: 0 10px;
 	width: 195px;
 	padding-bottom: 20px;
+	margin-bottom: 15px;
 
 }
 
-.btn-support-us h2 {
+.btn-support-us .plan-title {
 	font-size: 30px;
-	background-color: inherit;
 	margin-top: 20px;
 	margin-bottom: 10px;
-	padding: 0;
 	color: #fff;
 	line-height: 1.1;
 	font-weight: 500;
+	display: block;
 }
 
 .btn-corporate-bronze, .btn-corporate-bronze:hover, .btn-corporate-bronze:focus, .btn-corporate-bronze:active {
@@ -83,8 +78,6 @@ a.btn-support {
 .btn-corporate-gold, .btn-corporate-gold:hover, .btn-corporate-gold:focus, .btn-corporate-gold:active {
 	background-color: #F1BC47;
 }
-
-
 
 .btn-individual-member, .btn-individual-member:hover, .btn-individual-member:focus, .btn-individual-member:active {
 	background-color: #337ab7;

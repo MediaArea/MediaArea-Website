@@ -18,19 +18,19 @@
 </div>
 
 <p>Select a plan:</p>
-<div class="support-us-buttons-bar text-center">
+<div class="text-center">
     <button type="button" class="btn btn-primary btn-large btn-support-us btn-corporate-bronze">
-        <h2>Bronze</h2>
+        <span class="plan-title">Bronze</span>
         <hr>
         <span>3000 € / year</span>
     </button>
     <button type="button" class="btn btn-primary btn-large btn-support-us btn-corporate-silver">
-        <h2>Silver</h2>
+        <span class="plan-title">Silver</span>
         <hr>
         <span>8000 € / year</span>
     </button>
     <button type="button" class="btn btn-primary btn-large btn-support-us btn-corporate-gold">
-        <h2>Gold</h2>
+        <span class="plan-title">Gold</span>
         <hr>
         <span>20000 € / year</span>
     </button>
@@ -65,13 +65,8 @@
 <script src="{{ path('fos_js_routing_js', { callback: 'fos.Router.setData' }) }}"></script>
 {% javascripts
     '@SupportUsBundle/Resources/public/js/simple-slider.min.js'
-    output='js/simple-slider.js'
- %}
-    <script src="{{ asset_url }}"></script>
-{% endjavascripts %}
-{% javascripts
     '@SupportUsBundle/Resources/public/js/supportUsSlider.js'
-    filter="?jsqueeze" output='js/supportUsSlider.js'
+    filter="?jsqueeze" output='js/supportUs.js'
  %}
     <script src="{{ asset_url }}"></script>
 {% endjavascripts %}

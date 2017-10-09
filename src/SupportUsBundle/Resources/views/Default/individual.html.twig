@@ -16,29 +16,29 @@
     <p>Choose your amount (VAT {% if vatRate %}{{ vatRate }}% {% endif %}included):<br/>&nbsp;</p>
 </div>
 <p>Select a plan:</p>
-<div class="support-us-buttons-bar text-center">
+<div class="text-center">
     <button type="button" class="btn btn-primary btn-large btn-support-us btn-individual-member">
-        <h2>Member</h2>
+        <span class="plan-title">Member</span>
         <hr>
         <span>10 € / year</span>
     </button>
     <button type="button" class="btn btn-primary btn-large btn-support-us btn-individual-voter">
-        <h2>Voter</h2>
+        <span class="plan-title">Voter</span>
         <hr>
         <span>30 € / year</span>
     </button>
     <button type="button" class="btn btn-primary btn-large btn-support-us btn-individual-supporter-bronze">
-        <h2>Supporter</h2>
+        <span class="plan-title">Supporter</span>
         <hr>
         <span>100 € / year</span>
     </button>
     <button type="button" class="btn btn-primary btn-large btn-support-us btn-individual-supporter-silver">
-        <h2>Supporter+</h2>
+        <span class="plan-title">Supporter+</span>
         <hr>
         <span>300 € / year</span>
     </button>
     <button type="button" class="btn btn-primary btn-large btn-support-us btn-individual-supporter-gold">
-        <h2>Supporter++</h2>
+        <span class="plan-title">Supporter++</span>
         <hr>
         <span>500 € / year</span>
     </button></div>
@@ -47,7 +47,7 @@
 <input id="slider" data-slider="true" data-slider-range="0,22" data-slider-step="1" data-slider-snap="true" data-slider-highlight="true" style="display: none;" value="4" type="text">
 
 <div class="support-us-features-list">
-    <p id="total-label"></p>
+    <p id="individual-label"></p>
 </div>
 
 <div class="form-group row pay">
@@ -86,13 +86,8 @@
 <script src="{{ path('fos_js_routing_js', { callback: 'fos.Router.setData' }) }}"></script>
 {% javascripts
     '@SupportUsBundle/Resources/public/js/simple-slider.min.js'
-    output='js/simple-slider.js'
- %}
-    <script src="{{ asset_url }}"></script>
-{% endjavascripts %}
-{% javascripts
     '@SupportUsBundle/Resources/public/js/supportUsSlider.js'
-    filter="?jsqueeze" output='js/supportUsSlider.js'
+    filter="?jsqueeze" output='js/supportUs.js'
  %}
     <script src="{{ asset_url }}"></script>
 {% endjavascripts %}
