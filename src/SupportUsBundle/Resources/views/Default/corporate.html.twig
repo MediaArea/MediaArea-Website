@@ -5,42 +5,54 @@
 {% block keywords %}Donation sponsor member crowdfunding{% endblock %}
 
 {% block body %}
-<form class="form-horizontal form-pricing" role="form">
-    <div class="price-slider">
-        <h1>Become a MediaArea sponsor</h1>
-        <p>
-            Wanting only dedicated support? Check the <a href="{{ path('ma_professional_services') }}">Services page</a><br>
-            (Interested as an individual? Check also our <a href="{{ path('supportUs_individual') }}">individual page</a>)
-        </p>
-        <p>
-            {% if country %}{% trans with { '%country%': country, '%currency%': currency.currency } %}donate.location_currency{% endtrans %}<br>{% endif %}
-        </p>
-        <p>Choose your amount (VAT excluded):</p>
-        <br>
-        <div class="row">
-            <div class="col-sm-12">
-                <div id="slider" class="ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all" aria-disabled="false">
-                    <a class="ui-slider-handle ui-state-default ui-corner-all" href=""></a>
-                </div>
-            </div>
-        </div>
-    </div>
+<div>
+    <h1>Become a MediaArea sponsor</h1>
+    <p>
+        Wanting only dedicated support? Check the <a href="{{ path('ma_professional_services') }}">Services page</a><br>
+        (Interested as an individual? Check also our <a href="{{ path('supportUs_individual') }}">individual page</a>)
+    </p>
+    <p>
+        {% if country %}{% trans with { '%country%': country, '%currency%': currency.currency } %}donate.location_currency{% endtrans %}<br>{% endif %}
+    </p>
+    <p>Choose your amount (VAT excluded):</p>
+</div>
 
-    <div class="price-form">
-        <input id="corporate" class="form-control" value="" type="hidden" />
-        <p id="corporate-label"></p>
-    </div>
+<p>Select a plan:</p>
+<div class="support-us-buttons-bar text-center">
+    <button type="button" class="btn btn-primary btn-large btn-support-us btn-corporate-bronze">
+        <h2>Bronze</h2>
+        <hr>
+        <span>3000 € / year</span>
+    </button>
+    <button type="button" class="btn btn-primary btn-large btn-support-us btn-corporate-silver">
+        <h2>Silver</h2>
+        <hr>
+        <span>8000 € / year</span>
+    </button>
+    <button type="button" class="btn btn-primary btn-large btn-support-us btn-corporate-gold">
+        <h2>Gold</h2>
+        <hr>
+        <span>20000 € / year</span>
+    </button>
+</div>
 
-    <div class="form-group">
-        <div class="col-sm-12">
-            <a class="btn btn-primary btn-lg btn-block corporate-quote-btn btn-support" href="mailto:info@mediaarea.net?Subject=Request%20quote%20for%20sponsor">Contact us for a formal quote</a>
-        </div>
+<p>Or customize it:</p>
+<input id="slider" data-slider="true" data-slider-range="1,20" data-slider-step="1" data-slider-snap="true" data-slider-highlight="true" style="display: none;" value="3" type="text">
+
+<div class="support-us-features-list">
+    <p id="corporate-label"></p>
+</div>
+
+<div class="form-group">
+    <div class="col-sm-12">
+        <a class="btn btn-primary btn-lg btn-block corporate-quote-btn btn-support" href="mailto:info@mediaarea.net?Subject=Request%20quote%20for%20sponsor">Contact us for a formal quote</a>
     </div>
-</form>
+</div>
 {% endblock %}
 
 {% block stylesheets %}
 {% stylesheets
+    '@SupportUsBundle/Resources/public/css/simple-slider.css'
     '@SupportUsBundle/Resources/public/css/supportUs.css'
     filter='?scssphp' output='css/supportUs.css'
  %}
@@ -52,8 +64,8 @@
 <script src="{{ asset('bundles/fosjsrouting/js/router.js') }}"></script>
 <script src="{{ path('fos_js_routing_js', { callback: 'fos.Router.setData' }) }}"></script>
 {% javascripts
-    '@SupportUsBundle/Resources/public/js/jquery-ui.min.js'
-    output='js/jquery-ui.js'
+    '@SupportUsBundle/Resources/public/js/simple-slider.min.js'
+    output='js/simple-slider.js'
  %}
     <script src="{{ asset_url }}"></script>
 {% endjavascripts %}
