@@ -50,6 +50,7 @@ class MenuBuilder
             ->addChild('menu.download.solaris', ['route' => 'mi_download_solaris'])
             ->addChild('menu.download.mageia', ['route' => 'mi_download_mageia'])
             ->addChild('menu.download.archlinux', ['route' => 'mi_download_archlinux'])
+            ->addChild('menu.download.gentoo', ['route' => 'mi_download_gentoo'])
             ->addChild('menu.download.manjaro', ['route' => 'mi_download_manjaro'])
             ->addChild('menu.download.pclinuxos', ['route' => 'mi_download_pclinuxos'])
             ->addChild('menu.download.slackware', ['route' => 'mi_download_slackware'])
