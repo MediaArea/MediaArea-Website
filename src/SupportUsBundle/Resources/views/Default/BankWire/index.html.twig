@@ -1,0 +1,18 @@
+{% if isoCode in ['at', 'be', 'cy', 'de', 'ee', 'es', 'fi', 'fr', 'gr', 'ie', 'it', 'lt', 'lu', 'lv', 'mt', 'nl', 'pt', 'si', 'sk', 'bg', 'cz', 'dk', 'hr', 'hu', 'pl', 'ro', 'se', 'us', 'gb', 'au'] %}
+    <div class="col-sm-12 support-us-features-list">
+        <button type="submit" class="btn btn-default btn-lg btn-block btn-bank-wire">Bank wire</button>
+        {% if isoCode in ['at', 'be', 'cy', 'de', 'ee', 'es', 'fi', 'fr', 'gr', 'ie', 'it', 'lt', 'lu', 'lv', 'mt', 'nl', 'pt', 'si', 'sk'] %}
+            {{ include('@SupportUs/Default/BankWire/eu.html.twig') }}
+        {% elseif isoCode in ['bg', 'cz', 'dk', 'hr', 'hu', 'pl', 'ro', 'se'] %}
+            {{ include('@SupportUs/Default/BankWire/sepa.html.twig') }}
+        {% elseif 'us' == isoCode %}
+            {{ include('@SupportUs/Default/BankWire/us.html.twig') }}
+        {% elseif 'gb' == isoCode %}
+            {{ include('@SupportUs/Default/BankWire/gb.html.twig') }}
+        {% elseif 'au' == isoCode %}
+            {{ include('@SupportUs/Default/BankWire/au.html.twig') }}
+        {% endif %}
+        <br>
+        Use your email address in the bank wire subject to allow us associate your payment with your account.
+    </div>
+{% endif %}

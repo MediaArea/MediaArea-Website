@@ -22,15 +22,34 @@ class OrdersController extends Controller
      */
     public function paymentCreateAction(Order $order)
     {
+        return $this->paymentCreate(
+            $order,
+            $this->generateUrl('payment_orders_paymentcomplete', ['id' => $order->getId()]),
+            $this->generateUrl('mi_donate')
+        );
+    }
+
+    /**
+     * @Route("/{id}/payment/create/individual")
+     */
+    public function paymentCreateIndividualAction(Order $order)
+    {
+        return $this->paymentCreate(
+            $order,
+            $this->generateUrl('payment_orders_paymentcompleteindividual', ['id' => $order->getId()]),
+            $this->generateUrl('supportUs_individual')
+        );
+    }
+
+    public function paymentCreate(Order $order, $paymentCompleteUrl, $paymentErrorReturnUrl)
+    {
         $payment = $this->createPayment($order);
 
         $ppc = $this->get('payment.plugin_controller');
         $result = $ppc->approveAndDeposit($payment->getId(), $payment->getTargetAmount());
 
         if (Result::STATUS_SUCCESS === $result->getStatus()) {
-            return $this->redirect($this->generateUrl('payment_orders_paymentcomplete', [
-                'id' => $order->getId(),
-            ]));
+            return $this->redirect($paymentCompleteUrl);
         } elseif (Result::STATUS_PENDING === $result->getStatus()) {
             $exception = $result->getPluginException();
 
@@ -59,7 +78,7 @@ class OrdersController extends Controller
 
         $this->addFlash('danger', $message);
 
-        return $this->redirectToRoute('mi_donate');
+        return $this->redirect($paymentErrorReturnUrl);
     }
 
     /**
@@ -67,18 +86,31 @@ class OrdersController extends Controller
      */
     public function paymentCompleteAction(Request $request, Order $order)
     {
+        return $this->paymentComplete($request, $order, $this->generateUrl('mi_donate'));
+    }
+
+    /**
+     * @Route("/{id}/payment/complete/individual")
+     */
+    public function paymentCompleteIndividualAction(Request $request, Order $order)
+    {
+        return $this->paymentComplete($request, $order, $this->generateUrl('supportUs_individual'));
+    }
+
+    public function paymentComplete(Request $request, Order $order, $paymentSuccessUrl)
+    {
         // Redirect if user have already completed his payment
         if (Order::STATUS_COMPLETED === $order->getStatus()) {
             $this->addFlash('danger', 'Order already completed');
 
-            return $this->redirectToRoute('mi_donate');
+            return $this->redirect($paymentSuccessUrl);
         }
 
         // Redirect if payment is not complete
         if ($order->getPaymentInstruction()->getAmount() !== $order->getPaymentInstruction()->getApprovedAmount()) {
             $this->addFlash('danger', 'The requested payment is not complete');
 
-            return $this->redirectToRoute('mi_donate');
+            return $this->redirect($paymentSuccessUrl);
         }
 
         // Set order completed
