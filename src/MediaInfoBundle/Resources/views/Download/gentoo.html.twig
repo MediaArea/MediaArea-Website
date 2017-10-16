@@ -1,0 +1,38 @@
+{% extends 'MediaInfoBundle::base.html.twig' %}
+
+{% block title %}{% trans %}download.gentoo.page.title{% endtrans %}{% endblock %}
+{% block description %}{% trans %}about.page.description{% endtrans %}{% endblock %}
+{% block keywords %}{% trans %}about.page.keywords{% endtrans %}{% endblock %}
+
+{% block body %}
+<h1>{% trans %}download.gentoo.title{% endtrans %}</h1>
+{% image '@AppBundle/Resources/public/img/OS/Gentoo.png' %}
+<img src="{{ asset_url }}" alt="Gentoo" title="Gentoo" width="250" height="94"><br />
+{% endimage %}
+
+<div class="table-responsive">
+<table class="download table table-bordered table-condensed">
+<thead>
+<tr class="table-header">
+    <th>Version</th>
+    <th>CPU</th>
+    <th>Interface</th>
+    <td>Version</td>
+    <td>Comment</td>
+</tr>
+</thead>
+<tbody>
+<tr>
+    <th colspan="3">Official distribution package<br/>for installing MediaInfo, just type in a root terminal<br/>"emerge -a mediainfo"<br/>(For the GUI don't forget to set the "wxwidgets" useflag for this package.)</th>
+    <td></td>
+    <td>Is currently up to date</td>
+</tr>
+<tr>
+    <th colspan="3">No officialy supported packages are available</th>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</div>
+{% endblock %}

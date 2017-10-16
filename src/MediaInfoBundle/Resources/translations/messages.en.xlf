@@ -642,6 +642,14 @@ MediaInfo can be used in your own program without any difficulties, with a stati
         <source><![CDATA[download.fedora.title]]></source>
         <target><![CDATA[Download - Fedora]]></target>
       </trans-unit>
+      <trans-unit id="download.gentoo.page.title" approved="yes">
+        <source><![CDATA[download.gentoo.page.title]]></source>
+        <target><![CDATA[MediaInfo - Download MediaInfo for Gentoo]]></target>
+      </trans-unit>
+      <trans-unit id="download.gentoo.title" approved="yes">
+        <source><![CDATA[download.gentoo.title]]></source>
+        <target><![CDATA[Download - Gentoo]]></target>
+      </trans-unit>
       <trans-unit id="141" approved="yes">
         <source><![CDATA[download.mac.page.title]]></source>
         <target><![CDATA[MediaInfo - Download MediaInfo for macOS]]></target>

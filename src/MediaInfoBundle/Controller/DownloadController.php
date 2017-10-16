@@ -218,6 +218,20 @@ class DownloadController extends Controller
 
     /**
      * @Route(
+     *     "/{_locale}/MediaInfo/Download/Gentoo",
+     *     name="mi_download_gentoo",
+     *     requirements={"_locale": "%app.locales%"
+     *     }
+     * )
+     * @Template()
+     */
+    public function gentooAction()
+    {
+        return array();
+    }
+
+    /**
+     * @Route(
      *     "/{_locale}/MediaInfo/Download/Manjaro",
      *     name="mi_download_manjaro",
      *     requirements={"_locale": "%app.locales%"
