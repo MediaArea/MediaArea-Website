@@ -88,7 +88,7 @@
 <ul>
     <li>Read the <a href="%supportFaqRoute%">Frequently Asked Questions</a> first, please.</li>
     <li>If this doesn't help, you can submit a <a href="https://sourceforge.net/p/mediainfo/bugs/">bug report</a>
-    or a <a href="https://sourceforge.net/p/mediainfo/feature-requests/">feature request</a>.</li>
+    or a <a href="https://sourceforge.net/p/mediainfo/feature-requests/">feature request</a> on Sourceforge, or use <a href="https://github.com/MediaArea/MediaInfoLib/issues">MediaInfoLib issue tracker on GitHub</a> (for file detection issue) or <a href="https://github.com/MediaArea/MediaInfo/issues">MediaInfo issue tracker on GitHub</a> (for command line or graphical interface issues)</li>
     <li>Also, there is a <a href="https://sourceforge.net/p/mediainfo/discussion/">forum</a> for other questions.</li>
 </ul>
 You can find more detailed information here:
@@ -876,7 +876,7 @@ Don't hesitate to <a href="mailto:info@mediaarea.net">contact us</a> if you're i
       </trans-unit>
       <trans-unit id="189" approved="yes">
         <source><![CDATA[testimonials.title]]></source>
-        <target><![CDATA[What MediaInfo users say]]></target>
+        <target><![CDATA[Proud users]]></target>
       </trans-unit>
       <trans-unit id="190" approved="yes">
         <source><![CDATA[testimonials.technology.title]]></source>
