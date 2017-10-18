@@ -5,32 +5,31 @@
 {% block keywords %}Donation sponsor member crowdfunding{% endblock %}
 
 {% block body %}
-<div>
-    <h1>Become a MediaArea sponsor</h1>
-    <p>
-        Wanting only dedicated support? Check the <a href="{{ path('ma_professional_services') }}">Services page</a><br>
-        (Interested as an individual? Check also our <a href="{{ path('supportUs_individual') }}">individual page</a>)
-    </p>
-    <p>
-        {% if country %}{% trans with { '%country%': country, '%currency%': currency.currency } %}donate.location_currency{% endtrans %}<br>{% endif %}
-    </p>
-    <p>Choose your amount (VAT excluded):</p>
-</div>
+<h1>Become a MediaArea sponsor</h1>
+
+<p>
+    Wanting only dedicated support? Check the <a href="{{ path('ma_professional_services') }}">Services page</a><br>
+    (Interested as an individual? Check also our <a href="{{ path('supportUs_individual') }}">individual page</a>)
+</p>
+
+<p>
+    {% if country %}{% trans with { '%country%': country, '%currency%': currency.currency } %}supportUs.individual.location_currency{% endtrans %}{% else %}{% trans with { '%currency%': currency.currency } %}supportUs.individual.currency{% endtrans %}{% endif %}  (VAT excluded)
+</p>
 
 <p>Select a plan:</p>
-<div class="support-us-buttons-bar text-center">
-    <button type="button" class="btn btn-primary btn-large btn-support-us btn-corporate-bronze">
-        <h2>Bronze</h2>
+<div class="text-center">
+    <button type="button" class="btn btn-support-us btn-corporate-bronze">
+        <span class="plan-title">Bronze</span>
         <hr>
         <span>3000 € / year</span>
     </button>
-    <button type="button" class="btn btn-primary btn-large btn-support-us btn-corporate-silver">
-        <h2>Silver</h2>
+    <button type="button" class="btn btn-support-us btn-corporate-silver">
+        <span class="plan-title">Silver</span>
         <hr>
         <span>8000 € / year</span>
     </button>
-    <button type="button" class="btn btn-primary btn-large btn-support-us btn-corporate-gold">
-        <h2>Gold</h2>
+    <button type="button" class="btn btn-support-us btn-corporate-gold">
+        <span class="plan-title">Gold</span>
         <hr>
         <span>20000 € / year</span>
     </button>
@@ -45,7 +44,7 @@
 
 <div class="form-group">
     <div class="col-sm-12">
-        <a class="btn btn-primary btn-lg btn-block corporate-quote-btn btn-support" href="mailto:info@mediaarea.net?Subject=Request%20quote%20for%20sponsor">Contact us for a formal quote</a>
+        <a class="btn btn-default btn-lg btn-block corporate-quote-btn btn-support" href="mailto:info@mediaarea.net?Subject=Request%20quote%20for%20sponsor">Contact us for a formal quote</a>
     </div>
 </div>
 {% endblock %}
@@ -65,13 +64,8 @@
 <script src="{{ path('fos_js_routing_js', { callback: 'fos.Router.setData' }) }}"></script>
 {% javascripts
     '@SupportUsBundle/Resources/public/js/simple-slider.min.js'
-    output='js/simple-slider.js'
- %}
-    <script src="{{ asset_url }}"></script>
-{% endjavascripts %}
-{% javascripts
     '@SupportUsBundle/Resources/public/js/supportUsSlider.js'
-    filter="?jsqueeze" output='js/supportUsSlider.js'
+    filter="?jsqueeze" output='js/supportUs.js'
  %}
     <script src="{{ asset_url }}"></script>
 {% endjavascripts %}

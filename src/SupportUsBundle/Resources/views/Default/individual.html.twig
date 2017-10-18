@@ -5,40 +5,40 @@
 {% block keywords %}Donation subscriber supporter member crowdfunding{% endblock %}
 
 {% block body %}
-<div>
-    <h1>Become a MediaArea supporter</h1>
-    <p>
-        (Your company could be interested? Check also our <a href="{{ path('supportUs_corporate') }}">corporate page</a>)
-    </p>
-    <p>
-        {% if country %}{% trans with { '%country%': country, '%currency%': currency.currency } %}donate.location_currency{% endtrans %}<br>{% endif %}
-    </p>
-    <p>Choose your amount (VAT {% if vatRate %}{{ vatRate }}% {% endif %}included):<br/>&nbsp;</p>
-</div>
+<h1>Become a MediaArea supporter</h1>
+
+<p>
+    (Your company could be interested? Check also our <a href="{{ path('supportUs_corporate') }}">corporate page</a>)
+</p>
+
+<p>
+    {% if country.countryName(false) %}{% trans with { '%country%': country.countryName(false), '%currency%': currency.currency } %}supportUs.individual.location_currency{% endtrans %}{% else %}{% trans with { '%currency%': currency.currency } %}supportUs.individual.currency{% endtrans %}{% endif %}  (VAT {% if vatRate %}{{ vatRate }}% {% endif %}included)
+</p>
+
 <p>Select a plan:</p>
 <div class="support-us-buttons-bar text-center">
-    <button type="button" class="btn btn-primary btn-large btn-support-us btn-individual-member">
-        <h2>Member</h2>
+    <button type="button" class="btn btn-support-us btn-individual-member">
+        <span class="plan-title">Member</span>
         <hr>
         <span>10 € / year</span>
     </button>
-    <button type="button" class="btn btn-primary btn-large btn-support-us btn-individual-voter">
-        <h2>Voter</h2>
+    <button type="button" class="btn btn-support-us btn-individual-voter">
+        <span class="plan-title">Voter</span>
         <hr>
         <span>30 € / year</span>
     </button>
-    <button type="button" class="btn btn-primary btn-large btn-support-us btn-individual-supporter-bronze">
-        <h2>Supporter</h2>
+    <button type="button" class="btn btn-support-us btn-individual-supporter-bronze">
+        <span class="plan-title">Supporter</span>
         <hr>
         <span>100 € / year</span>
     </button>
-    <button type="button" class="btn btn-primary btn-large btn-support-us btn-individual-supporter-silver">
-        <h2>Supporter+</h2>
+    <button type="button" class="btn btn-support-us btn-individual-supporter-silver">
+        <span class="plan-title">Supporter+</span>
         <hr>
         <span>300 € / year</span>
     </button>
-    <button type="button" class="btn btn-primary btn-large btn-support-us btn-individual-supporter-gold">
-        <h2>Supporter++</h2>
+    <button type="button" class="btn btn-support-us btn-individual-supporter-gold">
+        <span class="plan-title">Supporter++</span>
         <hr>
         <span>500 € / year</span>
     </button></div>
@@ -47,19 +47,26 @@
 <input id="slider" data-slider="true" data-slider-range="0,22" data-slider-step="1" data-slider-snap="true" data-slider-highlight="true" style="display: none;" value="4" type="text">
 
 <div class="support-us-features-list">
-    <p id="total-label"></p>
+    <p id="individual-label"></p>
 </div>
 
-<div class="form-group row pay">
+<div class="form-group pay">
     <div class="col-sm-12">
         {% if not app.user %}{% trans with { '%login%': path('fos_user_security_login'), '%register%': path('fos_user_registration_register') } %}donate.not_loggued_in{% endtrans %}{% endif %}
         <p>Pay with:</p>
     </div>
-    <div class="col-sm-6">
-        <button type="submit" class="btn btn-primary btn-lg btn-block">Credit Card</button>
-    </div>
-    <div class="col-sm-6">
-        <button type="submit" class="btn btn-primary btn-lg btn-block">Paypal</button>
+    <div class="row">
+        <div class="col-sm-6 individual-payment">
+            <div class="col-sm-12 support-us-features-list">
+                {{ include('@SupportUs/individualPaymentForm.html.twig') }}
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="col-sm-12 support-us-features-list">
+                <button type="submit" class="btn btn-default btn-lg btn-block btn-paypal">Pay with Paypal</button>
+            </div>
+            {{ include('@SupportUs/Default/BankWire/index.html.twig', {'isoCode': country.countryIsoCode | lower}, with_context = false) }}
+        </div>
     </div>
 </div>
 
@@ -86,13 +93,8 @@
 <script src="{{ path('fos_js_routing_js', { callback: 'fos.Router.setData' }) }}"></script>
 {% javascripts
     '@SupportUsBundle/Resources/public/js/simple-slider.min.js'
-    output='js/simple-slider.js'
- %}
-    <script src="{{ asset_url }}"></script>
-{% endjavascripts %}
-{% javascripts
     '@SupportUsBundle/Resources/public/js/supportUsSlider.js'
-    filter="?jsqueeze" output='js/supportUsSlider.js'
+    filter="?jsqueeze" output='js/supportUs.js'
  %}
     <script src="{{ asset_url }}"></script>
 {% endjavascripts %}

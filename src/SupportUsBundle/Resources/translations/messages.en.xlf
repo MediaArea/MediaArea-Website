@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="en" datatype="plaintext" original="file.ext" target-language="en">
+    <body>
+      <trans-unit id="supportUs.individual.location_currency" approved="yes">
+        <source>supportUs.individual.location_currency</source>
+        <target><![CDATA[We have located you in "%country%" your payment will be made in "%currency%". <a href="mailto:info@mediaarea.net">Contact us</a> if we have not located you correctly.]]></target>
+      </trans-unit>
+      <trans-unit id="supportUs.individual.currency" approved="yes">
+        <source>supportUs.individual.currency</source>
+        <target><![CDATA[Your payment will be made in "%currency%".]]></target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

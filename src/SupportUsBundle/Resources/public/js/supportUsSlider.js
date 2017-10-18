@@ -1,6 +1,6 @@
 var supportUs = (function () {
-    var currency;
-    var currencyMultiply;
+    var currency,
+        currencyMultiply;
 
     var initCorporate = function(corporateCurrency) {
         currency = corporateCurrency;
@@ -53,46 +53,50 @@ var supportUs = (function () {
     };
 
     var corporateUpdate = function(val) {
-        var name = '';
-        var days = 0;
-        var amount = val * 1000;
-        var amount1 = 1000;
-        var amount2 = 3000;
-        var amount3 = 8000;
-        var amount4 = 20000;
-        var logo1 = amount1 - amount;
-        var logo2 = amount2 - amount;
-        var logo3 = amount3 - amount;
-        var logo4 = amount4 - amount;
-        var priority2 = amount2 - amount;
-        var priority3 = amount3 - amount;
-        var priority4 = amount4 - amount;
-        var memberships = amount / 100;
-        var voteright = amount / 2 / 10 * 5;
+        var name = '',
+            days = 0,
+            amount = val * 1000,
+            amount1 = 1000,
+            amount2 = 3000,
+            amount3 = 8000,
+            amount4 = 20000,
+            logo1 = amount1 - amount,
+            logo2 = amount2 - amount,
+            logo3 = amount3 - amount,
+            logo4 = amount4 - amount,
+            priority2 = amount2 - amount,
+            priority3 = amount3 - amount,
+            priority4 = amount4 - amount
+            memberships = amount / 100,
+            voteright = amount / 2 / 10 * 5;
 
         // Sponsor type
+        buttonsHighlightReset();
         if (amount>=amount4) {
             name = 'Gold Sponsor';
             days = 10 + (amount - amount4) / 1000 * 0.5;
+            buttonsHighlight('.btn-corporate-gold');
         } else if (amount >= amount3) {
             name = 'Silver Sponsor';
             days = 5 + (amount - amount3) / 1000 * 0.5;
+            buttonsHighlight('.btn-corporate-silver');
         } else if (amount >= amount2) {
             name = 'Bronze Sponsor';
             days = 2 + (amount - amount2) / 1000 * 0.5;
+            buttonsHighlight('.btn-corporate-bronze');
         } else if ( amount >= amount1) {
             name = 'Sponsor';
             days = amount / 1000 * 0.5;
         }
 
         // Display sponsor name
-        var total = { value: '<span class="sponsor-name">' + displayAmountWithCurrency(amount) + '</span>, <b><span class="sponsor-name">' + name + '</span></b>, 1 year<br>' };
+        var total = { value: '<span class="sponsor-name">' + displayAmountWithCurrency(amount) + ', <b>' + name + '</span></b>, 1 year<br>' };
 
         // Memberships
         add(total, memberships + ' <a href="' + Routing.generate('supportUs_faq') + '#membership">individual memberships</a>', 0);
 
-        // Vote rights
-        add(total, voteright + ' <a href="' + Routing.generate('supportUs_faq') + '#votes">vote rights</a>', 0);
+        // Voting points
+        add(total, voteright + ' <a href="' + Routing.generate('supportUs_faq') + '#votes">voting points</a>', 0);
 
         // Days of support
         if (priority4 <= 0) {
@@ -122,7 +126,7 @@ var supportUs = (function () {
         total.value += '<br>' +
             '<b>Early bird</b> (expiring 2017-12-31) advantages:<br>' +
             '&#x2611; Membership and support extended to 2019-06-30<br>' +
-            '&#x2611; Vote rights x1.5' +
+            '&#x2611; Voting points x1.5' +
             '<br><br>' +
             '<b>Early adopter</b> (expiring 2018-06-30) advantages:<br>' +
             '&#x2611; Membership and support extended to 2019-06-30';
@@ -160,9 +164,10 @@ var supportUs = (function () {
                 currencyMultiply = 1;
         }
 
-        individualUpdate(3);
+        individualUpdate(4);
         individualSlider();
         individualButtons();
+        paymentButtonsBindings();
     };
 
     var individualSlider = function() {
@@ -190,14 +195,13 @@ var supportUs = (function () {
         });
     };
 
-
     var individualUpdate = function(val) {
-        var amount = val;
-        var amount1 = 10;
-        var amount2 = 30;
-        var amount3 = 100;
-        var amount4 = 300;
-        var amount5 = 500;
+        var amount = val,
+            amount1 = 10,
+            amount2 = 30,
+            amount3 = 100,
+            amount4 = 300,
+            amount5 = 500;
 
         if (amount >= 15) {
             amount = (amount - 12) * 50;
@@ -208,30 +212,37 @@ var supportUs = (function () {
         }
 
         var name = 'Thanks!';
+        buttonsHighlightReset();
         if (amount >= amount5) {
             name = 'Supporter++';
+            buttonsHighlight('.btn-individual-supporter-gold');
         } else if (amount >= amount4) {
             name = 'Supporter+';
+            buttonsHighlight('.btn-individual-supporter-silver');
         } else if (amount >= amount3) {
             name = 'Supporter';
+            buttonsHighlight('.btn-individual-supporter-bronze');
         } else if (amount >= amount2) {
             name = 'Voter';
+            buttonsHighlight('.btn-individual-voter');
         } else if (amount >= amount1) {
             name = 'Member';
+            buttonsHighlight('.btn-individual-member');
         } else if (0 == amount) {
             name = false;
         }
 
-        var noad = 1 - amount;
-        var member1 = 10 - amount;
-        var member2 = 15 - amount;
-        var member3 = 20 - amount;
-        var supporter = 50 - amount;
-        var link = 250 - amount;
-        var logo = 500 - amount;
-        var vote = 30 - amount;
-        var vote1 = 30 - amount;
-        var voteright = (amount - 20) / 10 * 5;
+        var noad = 1 - amount,
+            member1 = 10 - amount,
+            member2 = 15 - amount,
+            member3 = 20 - amount,
+            supporter = 50 - amount,
+            link = 250 - amount,
+            logo = 500 - amount,
+            vote = 30 - amount,
+            vote1 = 30 - amount,
+            voteright = (amount - 20) / 10 * 5;
+
         if (voteright < 5) {
             voteright = 5;
         }
@@ -247,7 +258,7 @@ var supportUs = (function () {
 
         // Display supporter name
         if (name) {
-            var total = { value: '<span class="supporter-name">' + displayAmountWithCurrency(amount) + '</span>, <b><span class="supporter-name">' + name + '</span></b><br>' };
+            var total = { value: '<span class="supporter-name">' + displayAmountWithCurrency(amount) + ' <b>' + name + '</span></b><br>' };
         } else {
             var total = { value: '<span class="supporter-name">' + displayAmountWithCurrency(amount) + '</span><br>' };
         }
@@ -268,8 +279,8 @@ var supportUs = (function () {
             add(total, '<a href="' + Routing.generate('supportUs_faq') + '#membership">MediaArea member</a> during 1 year', member1, '2 years', member2);
         }
 
-        // Vote rights
-        add(total, voteright + ' <a href="' + Routing.generate('supportUs_faq') + '#votes">vote rights</a>', vote1);
+        // Voting points
+        add(total, voteright + ' <a href="' + Routing.generate('supportUs_faq') + '#votes">voting points</a>', vote1);
 
         // Supporter page name
         add(total, '<a href="' + Routing.generate('supportUs_supporters_list') + '#name">Your name</a> on Supporters page, 1 year', supporter);
@@ -293,7 +304,7 @@ var supportUs = (function () {
             }
 
             if (vote1 <= 0) {
-                total.value += '&#x2611; Vote rights x1.5<br>';
+                total.value += '&#x2611; Voting points x1.5<br>';
             } else {
                 total.value += '<br>';
             }
@@ -301,7 +312,25 @@ var supportUs = (function () {
             total.value += '<br><br><br>';
         }
 
-        $('#total-label').html(total.value);
+        $('#individual-label').html(total.value);
+
+        // Payment buttons update
+        $('.btn-paypal').text('Pay ' + displayAmountWithCurrency(amount) + ' with Paypal');
+        $('.btn-cb').val('Pay ' + displayAmountWithCurrency(amount) + ' by Credit Card');
+        $('input[type="text"][name="ma_choose_payment_method[amount]"').val(amount);
+        if ($('.btn-bank-wire').length) {
+            $('.btn-bank-wire').text(displayAmountWithCurrency(amount) + ' by bank wire');
+        }
+    };
+
+    var paymentButtonsBindings = function() {
+        $('.btn-cb').click(function () {
+            $('input[type="radio"][name="ma_choose_payment_method[method]"][value="stripe_credit_card"]').prop('checked', true);
+        });
+        $('.btn-paypal').click(function () {
+            $('input[type="radio"][name="ma_choose_payment_method[method]"][value="paypal_express_checkout"]').prop('checked', true);
+            $('form[name="ma_choose_payment_method"]').submit();
+        });
     };
 
     var displayAmountWithCurrency = function(amount) {
@@ -310,6 +339,13 @@ var supportUs = (function () {
         }
 
         return amount * currencyMultiply + ' ' + currency;
+    };
+
+    var buttonsHighlightReset = function() {
+        $('.btn-support-us').removeClass('active');
+    };
+    var buttonsHighlight = function(btn) {
+        $(btn).addClass('active');
     };
 
     var add = function(obj, text, value, text2, value2) {
