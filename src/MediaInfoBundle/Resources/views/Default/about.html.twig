@@ -83,8 +83,8 @@
 
                 <div class="projectDescription">
                     <div class="downloadDetails">
-                        {% trans %}about.download.version{% endtrans %} {{ downloadInfo.version }}{% if downloadInfo.installer %}, {% trans %}about.download.installer{% endtrans %}{% endif %}{% if downloadInfo.name %}, {% if 'macOS' == downloadInfo.name %}Mac App Store{% else %}{% trans %}about.download.for{% endtrans %} {{ downloadInfo.name }}{% endif %}{% endif %}{% if 1 <= app.request.attributes.get('donated', -1) %}<br>{% trans with {'%bundledRoute%': path('mi_bundled')} %}about.download.bundled{% endtrans %}{% endif %}
-                    </div>
+                        {% trans %}about.download.version{% endtrans %} {{ downloadInfo.version }}{% if downloadInfo.installer %}, {% trans %}about.download.installer{% endtrans %}{% endif %}{% if downloadInfo.name %}, {% if 'macOS' == downloadInfo.name %}Mac App Store{% else %}{% trans %}about.download.for{% endtrans %} {{ downloadInfo.name }}{% endif %}{% endif %}
+                    <br/>
                     {% trans with {'%downloadRoute%': path('mi_download')} %}about.download.other{% endtrans %}
                     {% image '@AppBundle/Resources/public/img/blank.gif' %}
                     (<a href="{{ path('mi_download_windows') }}"><img src="{{ asset_url }}" width="16" height="16" alt="Microsoft Windows" title="Microsoft Windows" class="sprite Windows"></a>
@@ -100,6 +100,7 @@
                     {% endimage %}
                     <br/>
                     {% trans with {'%changelogRoute%': path('mi_changelog')} %}about.what.changelog{% endtrans %}<br/>
+                    </div>
                     {% trans with {'%donateRoute%': path('mi_donate')} %}about.what.donate{% endtrans %}
                 </div>
             </div>
