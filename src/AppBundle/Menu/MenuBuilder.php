@@ -235,6 +235,7 @@ class MenuBuilder
         $menu['menu.mediaarea']->addChild('menu.mediaarea.pro', ['route' => 'ma_professional_services']);
         $menu['menu.mediaarea']->addChild('menu.mediaarea.events', ['route' => 'ma_events']);
         $menu['menu.mediaarea']->addChild('menu.mediaarea.conduct', ['route' => 'ma_conduct']);
+        $menu['menu.mediaarea']->addChild('menu.mediaarea.teamrules', ['route' => 'ma_team_rules']);
         $menu['menu.mediaarea']->addChild('menu.mediaarea.legal', ['route' => 'ma_legal']);
 
         return $menu;

@@ -46,6 +46,15 @@ class DefaultController extends Controller
     }
 
     /**
+     * @Route("/TeamRules", name="ma_team_rules")
+     * @Template()
+     */
+    public function teamRulesAction()
+    {
+        return array();
+    }
+
+    /**
      * @Route("/Legal", name="ma_legal")
      * @Template()
      */
