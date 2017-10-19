@@ -83,6 +83,14 @@ class DefaultControllerTest extends UserAbstractControllerTest
         $this->assertEquals(200, $client->getResponse()->getStatusCode());
     }
 
+    public function testTeamRules()
+    {
+        $client = static::createClient();
+
+        $client->request('GET', '/TeamRules');
+        $this->assertEquals(200, $client->getResponse()->getStatusCode());
+    }
+
     public function testLegal()
     {
         $client = static::createClient();
