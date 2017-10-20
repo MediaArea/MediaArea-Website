@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>{% block title %}MediaInfo{% endblock %}</title>
+        <meta name="Author" content="MediaArea" />
+        <meta name="description" lang="en" content="{% block description %}MediaInfo{% endblock %}">
+        <meta name="keywords" lang="en" content="{% block keywords %}MediaInfo{% endblock %}">
+        {% stylesheets
+            'bundles/app/css/bootstrap.css'
+            'bundles/app/css/jquery.fancybox-thumbs.css'
+            'bundles/app/css/jquery.fancybox.css'
+            'bundles/app/css/jquery.socialshareprivacy.min.css'
+            'bundles/app/css/base.css'
+            filter='cssrewrite' filter='?scssphp' output='css/main.css'
+         %}
+            <link rel="stylesheet" href="{{ asset_url }}" media="all" />
+        {% endstylesheets %}
+
+        <style>
+            footer {
+                margin-top: 290px;
+            }
+        </style>
+
+        {% image '@AppBundle/Resources/public/img/favicon.ico' %}
+        <link rel="icon" type="image/x-icon" href="{{ asset_url }}" />
+        {% endimage %}
+
+        <link rel="author" href="mailto:info@mediaarea.net" title="Mail to author">
+     </head>
+    <body>
+        <div id="bodyInner" class="blue">
+            <div class="container-fluid">
+                <div class="container content">
+                    {% block body %}{% endblock %}
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

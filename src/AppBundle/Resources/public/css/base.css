@@ -870,9 +870,11 @@ ul.icons li {
 }
 
 /* Invoice */
-#invoiceModal h2 {
+#invoiceModal .title {
     margin-top: 20px;
     margin-bottom: 20px;
+    color: #0070bb;
+    font-size: 20px;
 }
 
 /* media query */

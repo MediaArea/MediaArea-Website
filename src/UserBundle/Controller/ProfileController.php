@@ -37,6 +37,16 @@ class ProfileController extends BaseController
             'language' => $language ?? null,
             'country' => $country ?? null,
             'invoices' => $invoices,
+            'data' => [
+                'id' => '',
+                'date' => '',
+                'amount' => '',
+                'vat' => '',
+                'total' => '',
+                'product' => '',
+                'country' => '',
+                'currency' => '',
+            ],
         ));
     }
 }

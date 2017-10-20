@@ -39,50 +39,7 @@
             </div>
             <div class="modal-body">
                 <div class="modal-invoice-success">
-                    <div class="media-left media-middle">
-                        {% image '@AppBundle/Resources/public/img/MediaInfo_90x90.png' %}
-                            <img src="{{ absolute_url(asset_url) }}" alt="MediaArea Logo" title="MediaArea Logo" />
-                        {% endimage %}
-                    </div>
-                    <div class="media-body media-middle">
-                        MediaArea.net<br>
-                        Chemin du Vernay<br>
-                        73190 Curienne<br>
-                        France
-                    </div>
-
-                    <h2>Invoice #<span class="invoice-data-id"></span> (<span class="invoice-data-currency"></span>) <span class="pull-right invoice-data-date"></span></h2>
-
-                    <div class="table-responsive">
-                        <table class="download table table-bordered table-condensed">
-                            <thead>
-                                <tr class="table-header">
-                                    <th>Quantity</th>
-                                    <th>Description</th>
-                                    <th>Unit price</th>
-                                    <th>Amount</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <th>1</th>
-                                    <th>Membership</th>
-                                    <th><span class="invoice-data-amount"></span></th>
-                                    <th><span class="invoice-data-amount"></span></th>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <p class="text-right">
-                        Subtotal : <span class="invoice-data-amount"></span><br>
-                        Sales tax (<span class="invoice-data-country"></span>) : <span class="invoice-data-vat"></span><br>
-                        <b>Total : <span class="invoice-data-total"></span></b>
-                    </p>
-                    <hr>
-                    <p class="text-center">
-                        SARL 5 000 € - RCS Chambéry 500 291 844 - VAT : FR 73 500 291 844<br>
-                        MediaArea.net SARL - Chemin du Vernay 73190 Curienne France
-                    </p>
+                    {{ include('@Payment/Invoice/invoice_content.html.twig') }}
                 </div>
                 <div class="modal-invoice-error hidden">
                     <div class="alert alert-danger">
@@ -91,6 +48,7 @@
                 </div>
             </div>
             <div class="modal-footer">
+                <button type="button" class="btn btn-primary btn-dld">Download</button>
                 <button type="button" class="btn btn-primary btn-print">Print</button>
                 <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
             </div>

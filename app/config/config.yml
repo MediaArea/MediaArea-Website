@@ -134,7 +134,8 @@ fos_js_routing:
         - supportUs_faq
         - supportUs_sponsors_list
         - supportUs_supporters_list
-        - invoice_modal_data
+        - invoice_ajax_modal_data
+        - invoice_download_pdf
 
 jms_payment_core:
     encryption:

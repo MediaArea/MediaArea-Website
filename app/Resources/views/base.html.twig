@@ -22,7 +22,7 @@
             'bundles/app/css/base.css'
             filter='cssrewrite' filter='?scssphp' output='css/main.css'
          %}
-            <link rel="stylesheet" href="{{ asset_url }}" />
+            <link rel="stylesheet" href="{{ asset_url }}" type="text/css" media="all" />
         {% endstylesheets %}
         {% block stylesheets %}{% endblock %}
         {% block javascriptshead %}{% endblock %}
