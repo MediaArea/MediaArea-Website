@@ -869,6 +869,14 @@ ul.icons li {
     content: " *";
 }
 
+/* Invoice */
+#invoiceModal .title {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: #0070bb;
+    font-size: 20px;
+}
+
 /* media query */
 @media (min-width: 768px) and (max-width: 991px) {
     .display-block-sm {

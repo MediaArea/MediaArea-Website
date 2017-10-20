@@ -1,0 +1,17 @@
+{% extends "@FOSUser/layout.html.twig" %}
+
+{% block fos_user_content %}
+{% include "@FOSUser/Profile/show_content.html.twig" %}
+{% endblock fos_user_content %}
+
+{% block javascripts %}
+<script src="{{ asset('bundles/fosjsrouting/js/router.js') }}"></script>
+<script src="{{ path('fos_js_routing_js', { callback: 'fos.Router.setData' }) }}"></script>
+{% javascripts
+    '@UserBundle/Resources/public/js/invoice.js'
+    '@UserBundle/Resources/public/js/printThis.js'
+    filter="?jsqueeze" output='js/invoice.js'
+ %}
+    <script src="{{ asset_url }}"></script>
+{% endjavascripts %}
+{% endblock %}

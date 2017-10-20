@@ -6,6 +6,7 @@ use FOS\UserBundle\Controller\ProfileController as BaseController;
 use FOS\UserBundle\Model\UserInterface;
 use Symfony\Component\Intl\Intl;
 use Symfony\Component\Security\Core\Exception\AccessDeniedException;
+use PaymentBundle\Entity\Invoice;
 
 class ProfileController extends BaseController
 {
@@ -27,10 +28,25 @@ class ProfileController extends BaseController
             $country = Intl::getRegionBundle()->getCountryName($user->getCountry());
         }
 
+        $invoices = $this->getDoctrine()
+            ->getRepository(Invoice::class)
+            ->findBy(['user' => $this->getUser()], ['date' => 'DESC']);
+
         return $this->render('@FOSUser/Profile/show.html.twig', array(
             'user' => $user,
             'language' => $language ?? null,
             'country' => $country ?? null,
+            'invoices' => $invoices,
+            'data' => [
+                'id' => '',
+                'date' => '',
+                'amount' => '',
+                'vat' => '',
+                'total' => '',
+                'product' => '',
+                'country' => '',
+                'currency' => '',
+            ],
         ));
     }
 }

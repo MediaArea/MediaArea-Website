@@ -14,7 +14,44 @@
     {% if user.totalDonated %}<p>Total donations: {{ user.totalDonated }}</p>{% endif %}
 </div>
 
+{% if invoices %}
+    <div class="profile-show-invoices">
+        Your invoices:<br>
+        <ul>
+            {% for invoice in invoices  %}
+                <li><a href="" data-toggle="modal" data-target="#invoiceModal" data-invoice-id="{{ invoice.id }}">{{ (invoice.amount + invoice.vat)}} {{ invoice.currency }} on {{ invoice.date|date('F jS Y') }}</a></li>
+            {% endfor %}
+        </ul>
+    </div>
+{% endif %}
+
 <div class="fos_user_user_actions">
     <p><a href="{{ path('fos_user_profile_edit') }}">Edit your profile</a></p>
     <p><a href="{{ path('fos_user_change_password') }}">Change your password</a></p>
+</div>
+
+<div class="modal fade" id="invoiceModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">Invoice</h4>
+            </div>
+            <div class="modal-body">
+                <div class="modal-invoice-success">
+                    {{ include('@Payment/Invoice/invoice_content.html.twig') }}
+                </div>
+                <div class="modal-invoice-error hidden">
+                    <div class="alert alert-danger">
+                        An error occured, please try again later. <a href="mailto:info@mediaarea.net">Contact us</a> if the problem persists.
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary btn-dld">Download</button>
+                <button type="button" class="btn btn-primary btn-print">Print</button>
+                <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
 </div>
