@@ -62,7 +62,7 @@
                 <div class="projectDescription">
                     <div class="downloadDetails">
                         Development version {{ downloadInfo.version }}{% if downloadInfo.name %}, for {{ downloadInfo.name }}{% endif %}
-                    </div>
+                    <br>
                     Other versions (packaging, OS, interface...) are also <a href="{{ path('qc_download') }}">available</a>
                     {% image '@AppBundle/Resources/public/img/blank.gif' %}
                     (<a href="{{ path('qc_download_windows') }}"><img src="{{ asset_url }}" width="16" height="16" alt="Microsoft Windows" title="Microsoft Windows" class="sprite Windows"></a>
@@ -77,7 +77,8 @@
                     <a href="{{ path('qc_download_archlinux') }}"><img src="{{ asset_url }}" width="16" height="16" alt="ArchLinux" title="ArchLinux" class="sprite ArchLinux"></a>)
                     {% endimage %}
                     <br>
-                    You can also check the <a href="//mediaarea.net/download/snapshots/binary/qctools/">very latest snapshots</a>.
+                    See <a href="https://github.com/MediaArea/QCTools/blob/master/History.txt">ChangeLog</a> or <a href="/download/snapshots/binary/">very latest snapshots</a>
+                    </div>
                 </div>
             </div>
 
