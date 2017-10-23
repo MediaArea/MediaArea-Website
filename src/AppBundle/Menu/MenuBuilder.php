@@ -250,6 +250,7 @@ class MenuBuilder
         $menu['menu.projects']->addChild('menu.projects.qctools', ['route' => 'qc_home'])->setCurrent(false);
         $menu['menu.projects']->addChild('menu.projects.bwfmetaedit', ['route' => 'bwf_home'])->setCurrent(false);
         $menu['menu.projects']->addChild('menu.projects.avimetaedit', ['route' => 'avi_home'])->setCurrent(false);
+        $menu['menu.projects']->addChild('menu.projects.movmetaedit', ['route' => 'mov_home'])->setCurrent(false);
         $menu['menu.projects']->addChild('menu.projects.dvanalyzer', ['route' => 'dv_home'])->setCurrent(false);
         $menu['menu.projects']->addChild('menu.projects.ollistd', ['route' => 'ollistd_home'])->setCurrent(false);
 
