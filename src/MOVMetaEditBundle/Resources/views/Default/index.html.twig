@@ -61,8 +61,7 @@
 
                 <div class="projectDescription">
                     <div class="downloadDetails">
-                        Version {{ downloadInfo.version }}{% if downloadInfo.name %}, for {{ downloadInfo.name }}{% endif %}
-                    </div>
+                        Version {{ downloadInfo.version }}{% if downloadInfo.name %}, for {{ downloadInfo.name }}{% endif %}<br/>
                     Other versions (packaging, OS, interface...) are also <a href="{{ path('mov_download') }}">available</a>
                     {% image '@AppBundle/Resources/public/img/blank.gif' %}
                     (<a href="{{ path('mov_download_windows') }}"><img src="{{ asset_url }}" width="16" height="16" alt="Microsoft Windows" title="Microsoft Windows" class="sprite Windows"></a>
@@ -76,8 +75,7 @@
                     <a href="{{ path('mov_download_opensuse') }}"><img src="{{ asset_url }}" width="16" height="16" alt="openSUSE" title="openSUSE" class="sprite openSUSE"></a>
                     <a href="{{ path('mov_download_archlinux') }}"><img src="{{ asset_url }}" width="16" height="16" alt="ArchLinux" title="ArchLinux" class="sprite ArchLinux"></a>)
                     {% endimage %}
-                    <br>
-                    You can also check the <a href="//mediaarea.net/download/snapshots/binary/movmetaedit-gui/">GUI very latest snapshots</a> or  <a href="//mediaarea.net/download/snapshots/binary/movmetaedit/">CLI very latest snapshots</a>.
+                    </div>
                 </div>
             </div>
 
