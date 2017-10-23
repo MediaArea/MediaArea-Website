@@ -25,7 +25,7 @@
             </div>
 
             {% if 'Windows' == downloadInfo.name %}
-                {% set downloadLink = '//mediaarea.net/download/snapshots/binary/movmetaedit-gui/' ~ downloadInfo.versionPath ~ '/MOVMetaEdit_GUI_' ~ downloadInfo.version ~ '_Windows_x64.exe' %}
+                {% set downloadLink = '//mediaarea.net/download/binary/movmetaedit-gui/' ~ downloadInfo.versionPath ~ '/MOVMetaEdit_GUI_' ~ downloadInfo.version ~ '_Windows_x64.exe' %}
             {% else %}
                 {% set downloadLink = path(downloadInfo.route) %}
             {% endif %}
