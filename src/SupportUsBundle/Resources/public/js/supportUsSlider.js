@@ -164,7 +164,7 @@ var supportUs = (function () {
                 currencyMultiply = 1;
         }
 
-        individualUpdate(4);
+        individualUpdate(7);
         individualSlider();
         individualButtons();
         paymentButtonsBindings();
@@ -241,10 +241,10 @@ var supportUs = (function () {
             logo = 500 - amount,
             vote = 30 - amount,
             vote1 = 30 - amount,
-            voteright = (amount - 20) / 10 * 5;
+            voteright = amount / 10 * 5;
 
-        if (voteright < 5) {
-            voteright = 5;
+        if (voteright < 15) {
+            voteright = 15;
         }
 
         // Payment buttons
