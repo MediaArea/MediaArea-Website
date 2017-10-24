@@ -48,23 +48,23 @@ class OrdersListener
 
             // Add donation to user if user is connected
             if ($this->user instanceof UserInterface) {
-                $this->donorManipulator->addDonationToUser(
-                    $this->user,
-                    $event->getPayment()->getPaymentInstruction()->getApprovedAmount()
-                );
-
                 $individual = new Individual();
                 $votes = $individual->amountToVotes(
                     $event->getPayment()->getPaymentInstruction()->getApprovedAmount(),
                     $event->getPayment()->getPaymentInstruction()->getCurrency()
                 );
-                $this->donorManipulator->addVotesToUser($this->user, $votes);
 
                 $date = $individual->amountToMembership(
                     $event->getPayment()->getPaymentInstruction()->getApprovedAmount(),
                     $event->getPayment()->getPaymentInstruction()->getCurrency()
                 );
-                $this->donorManipulator->setMembershipEndDateToUser($this->user, $date);
+
+                $this->donorManipulator->addAmountVotesAndMembershipDateToUser(
+                    $this->user,
+                    $event->getPayment()->getPaymentInstruction()->getApprovedAmount(),
+                    $votes,
+                    $date
+                );
             }
 
             // Clean payment instruction
