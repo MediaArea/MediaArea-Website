@@ -29,6 +29,7 @@ var supportUs = (function () {
         }
 
         corporateUpdate(3);
+        setSliderPosition(3);
         corporateSlider();
         corporateButtons();
     };
@@ -42,13 +43,13 @@ var supportUs = (function () {
 
     var corporateButtons = function() {
         $('.btn-corporate-bronze').click(function() {
-            $('#slider').simpleSlider('setValue', 3);
+            setSliderPosition(3);
         });
         $('.btn-corporate-silver').click(function() {
-            $('#slider').simpleSlider('setValue', 8);
+            setSliderPosition(8);
         });
         $('.btn-corporate-gold').click(function() {
-            $('#slider').simpleSlider('setValue', 20);
+            setSliderPosition(20);
         });
     };
 
@@ -165,6 +166,7 @@ var supportUs = (function () {
         }
 
         individualUpdate(7);
+        setSliderPosition(7);
         individualSlider();
         individualButtons();
         paymentButtonsBindings();
@@ -264,7 +266,7 @@ var supportUs = (function () {
         }
 
         // No ad
-        if (noad <= -10 + 1) {
+        if (noad <= 9) {
             add(total, 'No ads.', noad);
         } else {
             add(total, 'No ads, 1 year. Every little bit helps.', noad);
@@ -344,8 +346,13 @@ var supportUs = (function () {
     var buttonsHighlightReset = function() {
         $('.btn-support-us').removeClass('active');
     };
+
     var buttonsHighlight = function(btn) {
         $(btn).addClass('active');
+    };
+
+    var setSliderPosition = function(pos) {
+        $('#slider').simpleSlider('setValue', pos);
     };
 
     var add = function(obj, text, value, text2, value2) {
