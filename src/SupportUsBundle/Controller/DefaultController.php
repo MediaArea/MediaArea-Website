@@ -4,7 +4,6 @@ namespace SupportUsBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Generator\UrlGeneratorInterface;
@@ -16,9 +15,6 @@ use PaymentBundle\Lib\VatCalculator;
 use SupportUsBundle\Lib\Corporate;
 use SupportUsBundle\Lib\Individual;
 
-/**
- * @Security("has_role('ROLE_BETA')")
- */
 class DefaultController extends Controller
 {
     /**
