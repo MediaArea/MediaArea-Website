@@ -259,11 +259,6 @@ class MenuBuilder
 
     private function supportUsMenu(ItemInterface $menu)
     {
-        // Check if user has ROLE_BETA
-        if (!$this->authChecker->isGranted('ROLE_BETA')) {
-            return $menu;
-        }
-
         $menu->addChild('menu.supportUs', ['route' => 'supportUs_about'])->setExtras(['dropdown' => true]);
         $menu['menu.supportUs']->addChild('menu.supportUs.about', ['route' => 'supportUs_about']);
         $menu['menu.supportUs']->addChild('menu.supportUs.corporate', ['route' => 'supportUs_corporate']);
