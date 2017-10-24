@@ -4,6 +4,7 @@ namespace UserBundle\Lib;
 
 use FOS\UserBundle\Model\UserManagerInterface;
 use FOS\UserBundle\Util\TokenGeneratorInterface;
+use SupportUsBundle\Lib\Individual;
 
 class DonorManipulator
 {
@@ -45,7 +46,11 @@ class DonorManipulator
             $user->setName($name);
         }
 
-        $this->updateDonor($user, $amount);
+        $individual = new Individual();
+        $votes = $individual->amountToVotes($amount, 'EUR');
+        $date = $individual->amountToMembership($amount, 'EUR');
+
+        $this->addAmountVotesAndMembershipDateToUser($user, $amount, $votes, $date);
     }
 
     /**
