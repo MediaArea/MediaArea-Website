@@ -7,6 +7,7 @@ use JMS\Payment\CoreBundle\PluginController\Event\PaymentStateChangeEvent;
 use JMS\Payment\CoreBundle\Model\PaymentInterface;
 use PaymentBundle\Lib\CleanPaymentInstruction;
 use PaymentBundle\Lib\CreateInvoice;
+use SupportUsBundle\Lib\Individual;
 use Symfony\Component\Security\Core\Authentication\Token\Storage\TokenStorageInterface;
 use UserBundle\Lib\DonorManipulator;
 
@@ -51,6 +52,19 @@ class OrdersListener
                     $this->user,
                     $event->getPayment()->getPaymentInstruction()->getApprovedAmount()
                 );
+
+                $individual = new Individual();
+                $votes = $individual->amountToVotes(
+                    $event->getPayment()->getPaymentInstruction()->getApprovedAmount(),
+                    $event->getPayment()->getPaymentInstruction()->getCurrency()
+                );
+                $this->donorManipulator->addVotesToUser($this->user, $votes);
+
+                $date = $individual->amountToMembership(
+                    $event->getPayment()->getPaymentInstruction()->getApprovedAmount(),
+                    $event->getPayment()->getPaymentInstruction()->getCurrency()
+                );
+                $this->donorManipulator->setMembershipEndDateToUser($this->user, $date);
             }
 
             // Clean payment instruction

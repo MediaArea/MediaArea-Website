@@ -63,6 +63,42 @@ class DonorManipulator
         return $this;
     }
 
+    /**
+     * Add voting points to a user.
+     *
+     * @param User $user  The user
+     * @param int  $votes Voting points
+     *
+     * @return DonorManipulator
+     */
+    public function addVotesToUser($user, $votes)
+    {
+        $user->setVote($user->getVote() + $votes);
+
+        $this->userManager->updateUser($user);
+
+        return $this;
+    }
+
+    /**
+     * Set membership end date to user.
+     *
+     * @param User $user The user
+     * @param int  $date Membership end date
+     *
+     * @return DonorManipulator
+     */
+    public function setMembershipEndDateToUser($user, $date)
+    {
+        if ($date > $user->getEndDate()) {
+            $user->setEndDate($date);
+
+            $this->userManager->updateUser($user);
+        }
+
+        return $this;
+    }
+
     protected function createDonor($email)
     {
         $user = $this->userManager->createUser();
