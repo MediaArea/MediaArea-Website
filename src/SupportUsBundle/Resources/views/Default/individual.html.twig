@@ -20,31 +20,31 @@
     <button type="button" class="btn btn-support-us btn-individual-member">
         <span class="plan-title">Member</span>
         <hr>
-        <span>10 €</span>
+        <span>{{ individual.localizedAmountWithCurrency(10, currency.currency) }}</span>
     </button>
     <button type="button" class="btn btn-support-us btn-individual-voter">
         <span class="plan-title">Voter</span>
         <hr>
-        <span>30 €</span>
+        <span>{{ individual.localizedAmountWithCurrency(30, currency.currency) }}</span>
     </button>
     <button type="button" class="btn btn-support-us btn-individual-supporter-bronze">
         <span class="plan-title">Supporter</span>
         <hr>
-        <span>100 €</span>
+        <span>{{ individual.localizedAmountWithCurrency(100, currency.currency) }}</span>
     </button>
     <button type="button" class="btn btn-support-us btn-individual-supporter-silver">
         <span class="plan-title">Supporter+</span>
         <hr>
-        <span>300 €</span>
+        <span>{{ individual.localizedAmountWithCurrency(300, currency.currency) }}</span>
     </button>
     <button type="button" class="btn btn-support-us btn-individual-supporter-gold">
         <span class="plan-title">Supporter++</span>
         <hr>
-        <span>500 €</span>
+        <span>{{ individual.localizedAmountWithCurrency(500, currency.currency) }}</span>
     </button></div>
 
 <p>Or customize it:</p>
-<input id="slider" data-slider="true" data-slider-range="0,22" data-slider-step="1" data-slider-snap="true" data-slider-highlight="true" style="display: none;" value="4" type="text">
+<input id="slider" data-slider="true" data-slider-range="0,22" data-slider-step="1" data-slider-snap="true" data-slider-highlight="true" style="display: none;" value="7" type="text">
 
 <div class="support-us-features-list">
     <p id="individual-label"></p>

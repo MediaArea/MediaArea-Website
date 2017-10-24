@@ -38,7 +38,7 @@ class IpToCurrency
             'amountChoices' => [1, 2, 5, 10, 25, 50, 100, 200, 500],
             'amountDefault' => '10',
         ],
-        'JA' => [
+        'JP' => [
             'currency' => 'JPY',
             'currencySymbol' => '¥',
             'currencySymbolDisposition' => 'right',

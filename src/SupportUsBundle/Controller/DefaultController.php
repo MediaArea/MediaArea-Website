@@ -13,6 +13,8 @@ use PaymentBundle\Form\ChoosePaymentMethodType;
 use PaymentBundle\Lib\IpToCountry;
 use PaymentBundle\Lib\IpToCurrency;
 use PaymentBundle\Lib\VatCalculator;
+use SupportUsBundle\Lib\Corporate;
+use SupportUsBundle\Lib\Individual;
 
 /**
  * @Security("has_role('ROLE_BETA')")
@@ -106,6 +108,7 @@ class DefaultController extends Controller
             'currency' => $ipToCurrency,
             'vatRate' => $vat->getVatRate(),
             'form' => $form->createView(),
+            'individual' => new Individual(),
         ];
     }
 
@@ -122,6 +125,7 @@ class DefaultController extends Controller
             'noAds' => true,
             'country' => $ipToCountry->getCountryName(false),
             'currency' => $ipToCurrency,
+            'corporate' => new Corporate(),
         ];
     }
 

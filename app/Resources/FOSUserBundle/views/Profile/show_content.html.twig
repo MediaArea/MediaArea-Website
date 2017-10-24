@@ -11,7 +11,8 @@
     <p>Professional: {% if user.professional %}Yes{% elseif false is same as(user.professional) %}No{% else %}Not specified{% endif %}</p>
     {% if user.companyName %}<p>Company name: {{ user.companyName }}</p>{% endif %}
     <p>Newsletter: {% if user.newsletter %}Yes{% else %}No{% endif %}</p>
-    {% if user.totalDonated %}<p>Total donations: {{ user.totalDonated }}</p>{% endif %}
+    {% if user.vote %}<p>Voting points: {{ user.vote }} (voting points manager will be available at the beginning of 2018)</p>{% endif %}
+    {% if user.endDate %}<p>Membership end date: {{ user.endDate|date_modify('-1 day')|date('Y-m-d') }}</p>{% endif %}
 </div>
 
 {% if invoices %}
