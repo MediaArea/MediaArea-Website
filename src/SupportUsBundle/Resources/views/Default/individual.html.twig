@@ -51,7 +51,7 @@
 </div>
 
 <div class="form-group pay">
-    <div class="col-sm-12">
+    <div>
         {% if not app.user %}{% trans with { '%login%': path('fos_user_security_login'), '%register%': path('fos_user_registration_register') } %}donate.not_loggued_in{% endtrans %}{% endif %}
         <p>Pay with:</p>
     </div>
@@ -67,6 +67,17 @@
             </div>
             {{ include('@SupportUs/Default/BankWire/index.html.twig', {'isoCode': country.countryIsoCode | lower}, with_context = false) }}
         </div>
+    </div>
+    <hr/>
+    <div>
+        Alternatively, you can support us on
+        {% image '@AppBundle/Resources/public/img/Patreon.png' %}
+        <a href="https://www.patreon.com/MediaArea"><img src="{{ asset_url }}" width="128" height="25" alt="Patreon" title="Patreon"></a>
+        {% endimage %}
+    or
+        {% image '@AppBundle/Resources/public/img/Liberapay.png' %}
+        <a href="https://liberapay.com/MediaArea/"><img src="{{ asset_url }}" width="70" height="25" alt="Liberapay" title="Liberapay"></a>
+        {% endimage %}
     </div>
 </div>
 
