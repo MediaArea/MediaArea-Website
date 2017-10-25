@@ -88,7 +88,7 @@
       </trans-unit>
       <trans-unit id="22" approved="yes">
         <source><![CDATA[about.what.donate]]></source>
-        <target><![CDATA[您可以通过<a href="%donateRoute%">捐助</a>支持本软件。]]></target>
+        <target><![CDATA[您可以通过<a href="%donateRoute%" class="alert-link">捐助</a>支持本软件。]]></target>
       </trans-unit>
     </body>
   </file>

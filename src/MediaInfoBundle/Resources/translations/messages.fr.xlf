@@ -108,7 +108,7 @@
       </trans-unit>
       <trans-unit id="29" approved="yes">
         <source><![CDATA[about.what.donate]]></source>
-        <target><![CDATA[Vous pouvez <a href="%donateRoute%">faire un don</a> pour soutenir les developements futurs]]></target>
+        <target><![CDATA[Vous pouvez <a href="%donateRoute%" class="alert-link">faire un don</a> pour soutenir les developements futurs]]></target>
       </trans-unit>
       <trans-unit id="30" approved="yes">
         <source><![CDATA[donate.page.title]]></source>

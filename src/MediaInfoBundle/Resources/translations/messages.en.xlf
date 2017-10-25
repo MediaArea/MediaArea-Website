@@ -972,7 +972,7 @@ Don't hesitate to <a href="mailto:info@mediaarea.net">contact us</a> if you're i
       </trans-unit>
       <trans-unit id="213" approved="yes">
         <source><![CDATA[about.what.donate]]></source>
-        <target><![CDATA[Please <a href="%donateRoute%">donate</a> to support further development]]></target>
+        <target><![CDATA[Please <a href="%donateRoute%" class="alert-link">donate</a> to support further development]]></target>
       </trans-unit>
       <trans-unit id="228" approved="yes">
         <source><![CDATA[about.download.bundled]]></source>

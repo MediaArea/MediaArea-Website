@@ -56,7 +56,7 @@
       </trans-unit>
       <trans-unit id="14" approved="yes">
         <source><![CDATA[about.what.donate]]></source>
-        <target><![CDATA[Вы маеце магчымаcць зрабіць <a href="%donateRoute%">ахвяраванне</a> для падтрымкі наступнай распрацоўкі]]></target>
+        <target><![CDATA[Вы маеце магчымаcць зрабіць <a href="%donateRoute%" class="alert-link">ахвяраванне</a> для падтрымкі наступнай распрацоўкі]]></target>
       </trans-unit>
     </body>
   </file>
