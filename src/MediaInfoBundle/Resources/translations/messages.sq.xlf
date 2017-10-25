@@ -96,7 +96,7 @@
       </trans-unit>
       <trans-unit id="24" approved="yes">
         <source><![CDATA[about.what.donate]]></source>
-        <target><![CDATA[Mund të <a href="%donateRoute%">kontribuosh</a> për të përkrahur zhvillimin e mëtejshëm]]></target>
+        <target><![CDATA[Mund të <a href="%donateRoute%" class="alert-link">kontribuosh</a> për të përkrahur zhvillimin e mëtejshëm]]></target>
       </trans-unit>
     </body>
   </file>

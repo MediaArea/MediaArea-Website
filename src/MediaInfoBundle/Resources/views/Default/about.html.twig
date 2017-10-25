@@ -101,7 +101,9 @@
                     <br/>
                     {% trans with {'%changelogRoute%': path('mi_changelog')} %}about.what.changelog{% endtrans %}<br/>
                     </div>
-                    {% trans with {'%donateRoute%': path('mi_donate')} %}about.what.donate{% endtrans %}
+                    <div class="alert alert-info text-center">
+                        {% trans with {'%donateRoute%': path('supportUs_individual')} %}about.what.donate{% endtrans %}
+                    </div>
                 </div>
             </div>
 

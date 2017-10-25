@@ -92,7 +92,7 @@
       </trans-unit>
       <trans-unit id="23" approved="yes">
         <source><![CDATA[about.what.donate]]></source>
-        <target><![CDATA[Вы можете внести <a href="%donateRoute%">пожертвование</a> для поддержки дальнейшей разработки]]></target>
+        <target><![CDATA[Вы можете внести <a href="%donateRoute%" class="alert-link">пожертвование</a> для поддержки дальнейшей разработки]]></target>
       </trans-unit>
     </body>
   </file>

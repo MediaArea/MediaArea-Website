@@ -76,7 +76,7 @@
       </trans-unit>
       <trans-unit id="19" approved="yes">
         <source><![CDATA[about.what.donate]]></source>
-        <target><![CDATA[შენ შეგიძლია <a href="%donateRoute%">შემოწირო</a> ,რათა დაეხმარო შემდეგი განვითარებისთვის]]></target>
+        <target><![CDATA[შენ შეგიძლია <a href="%donateRoute%" class="alert-link">შემოწირო</a> ,რათა დაეხმარო შემდეგი განვითარებისთვის]]></target>
       </trans-unit>
     </body>
   </file>

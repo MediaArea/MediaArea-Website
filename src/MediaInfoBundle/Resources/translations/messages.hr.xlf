@@ -80,7 +80,7 @@
       </trans-unit>
       <trans-unit id="20" approved="yes">
         <source><![CDATA[about.what.donate]]></source>
-        <target><![CDATA[Unaprijed zahvaljujemo ukoliko se odlučite <a href="%donateRoute%">donirati prilog</a> potpore daljnjem razvoju projekta]]></target>
+        <target><![CDATA[Unaprijed zahvaljujemo ukoliko se odlučite <a href="%donateRoute%" class="alert-link">donirati prilog</a> potpore daljnjem razvoju projekta]]></target>
       </trans-unit>
     </body>
   </file>
