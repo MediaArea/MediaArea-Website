@@ -68,17 +68,6 @@
             {{ include('@SupportUs/Default/BankWire/index.html.twig', {'isoCode': country.countryIsoCode | lower}, with_context = false) }}
         </div>
     </div>
-    <hr/>
-    <div>
-        Alternatively, you can support us on
-        {% image '@AppBundle/Resources/public/img/Patreon.png' %}
-        <a href="https://www.patreon.com/MediaArea"><img src="{{ asset_url }}" width="128" height="25" alt="Patreon" title="Patreon"></a>
-        {% endimage %}
-    or
-        {% image '@AppBundle/Resources/public/img/Liberapay.png' %}
-        <a href="https://liberapay.com/MediaArea/"><img src="{{ asset_url }}" width="70" height="25" alt="Liberapay" title="Liberapay"></a>
-        {% endimage %}
-    </div>
 </div>
 
 <div class="form-group row no-pay hidden">
@@ -86,6 +75,18 @@
     <div class="col-sm-12">
         <a class="btn btn-primary btn-lg btn-block btn-support" href="{{ path('supportUs_about') }}">Financially embarrassed? Help us spread the word!</a>
     </div>
+</div>
+
+<div>
+    Alternatively, you can support us on
+    {% image '@AppBundle/Resources/public/img/Patreon.png' %}
+    <a href="https://www.patreon.com/MediaArea"><img src="{{ asset_url }}" width="128" height="25" alt="Patreon" title="Patreon"></a>
+    {% endimage %},
+    <a href="https://www.tipeee.com/mediaarea">Tipee</a>
+or
+    {% image '@AppBundle/Resources/public/img/Liberapay.png' %}
+    <a href="https://liberapay.com/MediaArea/"><img src="{{ asset_url }}" width="70" height="25" alt="Liberapay" title="Liberapay"></a>
+    {% endimage %}
 </div>
 {% endblock %}
 
