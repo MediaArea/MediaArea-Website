@@ -4,6 +4,7 @@ namespace UserBundle\Lib;
 
 use FOS\UserBundle\Model\UserManagerInterface;
 use FOS\UserBundle\Util\TokenGeneratorInterface;
+use SupportUsBundle\Lib\Individual;
 
 class DonorManipulator
 {
@@ -45,7 +46,11 @@ class DonorManipulator
             $user->setName($name);
         }
 
-        $this->updateDonor($user, $amount);
+        $individual = new Individual();
+        $votes = $individual->amountToVotes($amount, 'EUR');
+        $date = $individual->amountToMembership($amount, 'EUR');
+
+        $this->addAmountVotesAndMembershipDateToUser($user, $amount, $votes, $date);
     }
 
     /**
@@ -83,8 +88,8 @@ class DonorManipulator
     /**
      * Set membership end date to user.
      *
-     * @param User $user The user
-     * @param int  $date Membership end date
+     * @param User     $user The user
+     * @param DateTime $date Membership end date
      *
      * @return DonorManipulator
      */
@@ -95,6 +100,29 @@ class DonorManipulator
 
             $this->userManager->updateUser($user);
         }
+
+        return $this;
+    }
+
+    /**
+     * Set membership end date to user.
+     *
+     * @param User     $user   The user
+     * @param float    $amount Donation amount
+     * @param int      $votes  Voting points
+     * @param DateTime $date   Membership end date
+     *
+     * @return DonorManipulator
+     */
+    public function addAmountVotesAndMembershipDateToUser($user, $amount, $votes, $date)
+    {
+        $user->setTotalDonated($user->getTotalDonated() + $amount);
+        $user->setVote($user->getVote() + $votes);
+        if ($date > $user->getEndDate()) {
+            $user->setEndDate($date);
+        }
+
+        $this->userManager->updateUser($user);
 
         return $this;
     }
