@@ -1,0 +1,7 @@
+{% extends 'BlogBundle::base.html.twig' %}
+
+{% block title %}{{ post.title }}{% endblock %}
+
+{% block body %}
+{{ post.htmlContent|raw }}
+{% endblock %}

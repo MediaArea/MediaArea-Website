@@ -13,6 +13,10 @@ user:
     resource: "@UserBundle/Controller/"
     type:     annotation
 
+blog:
+    resource: "@BlogBundle/Controller/"
+    type:     annotation
+
 mov_meta_edit:
     resource: "@MOVMetaEditBundle/Controller/"
     type:     annotation
