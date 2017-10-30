@@ -10,7 +10,7 @@ easy_admin:
             search:
                 fields: ['username', 'email', 'name']
             list:
-                fields: ['username', { property: 'email', type: 'email' }, 'name', 'enabled', 'createdAt', 'lastLogin', { property: 'totalDonated', label: 'Total' }]
+                fields: ['username', { property: 'email', type: 'email' }, 'name', 'enabled', 'createdAt', 'lastLogin', { property: 'totalDonated', label: 'Total' }, 'vote']
             form:
                 fields:
                     - 'username'
