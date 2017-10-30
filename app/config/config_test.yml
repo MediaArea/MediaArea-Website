@@ -14,3 +14,6 @@ web_profiler:
 
 swiftmailer:
     disable_delivery: true
+
+blog:
+    post_files_path: "%kernel.project_dir%/src/BlogBundle/Tests/data/Posts/"

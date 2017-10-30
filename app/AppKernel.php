@@ -37,6 +37,7 @@ class AppKernel extends Kernel
             new PaymentBundle\PaymentBundle(),
             new SupportUsBundle\SupportUsBundle(),
             new MOVMetaEditBundle\MOVMetaEditBundle(),
+            new BlogBundle\BlogBundle(),
         ];
 
         if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {

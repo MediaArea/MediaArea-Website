@@ -1,0 +1,12 @@
+{% extends 'BlogBundle::base.html.twig' %}
+
+{% block title %}MediaArea blog{% endblock %}
+
+{% block body %}
+<h1>MediaArea blog</h1>
+{% for post in posts %}
+    <h2><a href="{{ path('ma_blog_post', post.getUrlParams)}}">{{ post.title }}</a></h2>
+    <p>{% if post.excerpt %}{{ post.excerpt }}{% else %}{{ post.htmlContent|striptags|truncate(400, true, '…')}}{% endif %} <a href="{{ path('ma_blog_post', post.getUrlParams)}}">[continue]</a></p>
+
+{% endfor %}
+{% endblock %}
