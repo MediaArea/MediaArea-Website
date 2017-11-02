@@ -7,33 +7,10 @@
 
 <p>Video Error Concealment is one of the most commonly identified preservation issues in the digitization of DV content from tape to file because of the invasive effect the process has on the image. The issues that result from error concealment are often termed as blocking or glitchiness, or described as areas where groups of pixels are shifted out of their expected position.</p>
 <p> This file presents a very apparent use of video error concealment. On nearly every frame video data from a prior frame is copied to cover an error in a subsequent frame.</p>
-<p>
-<div id="video0" class="flashvideo"><a href="http://www.macromedia.com/go/getflashplayer">Get the Flash Player</a> to see this content.</div>
-<script type="text/javascript">
-var params = { 'allowfullscreen': 'true', 'allowscriptaccess': 'always', 'wmode': 'transparent' };
-var attributes = { 'id': 'video0', 'name': 'video0'};
-var flashvars = {
-	'file' : '//www.archive.org/download/DvAnalyzerSampleDvVideoErrorConcealment/DV_Analyzer_Sample_Video_Error_Concealment_original_512kb.mp4',
-	'width' : '400',
-	'height' : '280',
-	'controlbar' : 'bottom',
-	'dock' : 'false',
-	'icons' : 'true',
-	'logo.hide' : 'false',
-	'logo.position' : 'bottom-left',
-	'playlist' : 'none',
-	'autostart' : 'false',
-	'bufferlength' : '3',
-	'item' : '0',
-	'mute' : 'false',
-	'repeat' : 'always',
-	'shuffle' : 'false',
-	'smoothing' : 'true',
-	'stretching' : 'uniform',
-	'volume' : '90'
- };
-swfobject.embedSWF("https://www.avpreserve.com/wp-content/plugins/flash-video-player/mediaplayer/player.swf", "video0", "400", "280", "9.0.0","https://www.avpreserve.com/wp-content/plugins/flash-video-player/mediaplayer/expressinstall.swf", flashvars, params, attributes);
-</script><br><br>
+
+<div>
+	<video src="//www.archive.org/download/DvAnalyzerSampleDvVideoErrorConcealment/DV_Analyzer_Sample_Video_Error_Concealment_original_512kb.mp4" controls width="400" height="280"></video>
+</div>
 
 <p> As the decks reads tape-based data it utilizes <strong>parity data</strong> to ensure that the tape is being read correctly. Parity data acts as a secondary data source to be referenced if the primary data is damaged or unreadable. If the data is read improperly and cannot be recovered in the very short amount of time that the deck has to read that section, then the deck will note and write into the file the use of concealment and the strategy applied to the dv stream that is output from the deck.</p>
 <p> Strategies employed to conceal the missing video data include:</p>
@@ -45,72 +22,17 @@ Type &#8220;F&#8221;: This typically manifests as groups of grey blocks appearin
 <p> Often video error concealment strategies work so well that their use is not noticed in the resulting file, which is especially true in static frame shots that contain a high degree of repeated visual data from one frame to another. If a pixel remains the same over multiple frames, its replacement from a prior frame is not noticeable. In the example above, however, there is lots of movement within the foreground. As the speaker moves his head, the position of those &#8220;head&#8221; pixels relocate from frame to frame. Pixels replaced with &#8220;head&#8221; information from the prior frame where there should now be &#8220;background&#8221; pixels cause the image to appear glitchy.</p>
 <p> When DV Analyzer is run on a DV file it will report on the occurrences and extant of video error concealment so that the user can decide whether to make a second capture attempt. These concealments can be analyzed to determine at what point in the workflow chain the error is being caused, whether it may be recorded into the tape or occurring during playback/transfer. Commonly, misaligned or unmaintained playback decks will cause a greater degree of video error concealment, so potentially trying to capture again in another deck may improve the results.</p>
 <p> What would a DV video look like without the application of video error concealment? In order to demonstrate the effect, we took this sample file and replaced all of the compressed <strong>macro blocks</strong> (groups of pixels) that noted video error concealment with white pixels. The results demonstrates a substantially different experience from the version with concealment:</p>
-<p>
-<div id="video1" class="flashvideo"><a href="http://www.macromedia.com/go/getflashplayer">Get the Flash Player</a> to see this content.</div>
-<script type="text/javascript">
-var params = { 'allowfullscreen': 'true', 'allowscriptaccess': 'always', 'wmode': 'transparent' };
-var attributes = { 'id': 'video1', 'name': 'video1'};
-var flashvars = {
-	'file' : '//www.archive.org/download/DvAnalyzerSampleDvVideoErrorConcealment/DV_Analyzer_Sample_Video_Error_Concealment_unconcealed_512kb.mp4',
-	'width' : '400',
-	'height' : '280',
-	'controlbar' : 'bottom',
-	'dock' : 'false',
-	'icons' : 'true',
-	'logo.hide' : 'false',
-	'logo.position' : 'bottom-left',
-	'playlist' : 'none',
-	'autostart' : 'false',
-	'bufferlength' : '3',
-	'item' : '0',
-	'mute' : 'false',
-	'repeat' : 'always',
-	'shuffle' : 'false',
-	'smoothing' : 'true',
-	'stretching' : 'uniform',
-	'volume' : '90'
- };
-swfobject.embedSWF("https://www.avpreserve.com/wp-content/plugins/flash-video-player/mediaplayer/player.swf", "video1", "400", "280", "9.0.0","https://www.avpreserve.com/wp-content/plugins/flash-video-player/mediaplayer/expressinstall.swf", flashvars, params, attributes);
-</script><br><br>
+
+<div>
+	<video src="//www.archive.org/download/DvAnalyzerSampleDvVideoErrorConcealment/DV_Analyzer_Sample_Video_Error_Concealment_unconcealed_512kb.mp4" controls width="400" height="280"></video>
+</div>
 
 <p> The following presents the two versions side by side, that with error concealment and that with suppression of error concealment:</p>
-<p>
-<div id="video2" class="flashvideo"><a href="http://www.macromedia.com/go/getflashplayer">Get the Flash Player</a> to see this content.</div>
-<script type="text/javascript">
-var params = { 'allowfullscreen': 'true', 'allowscriptaccess': 'always', 'wmode': 'transparent' };
-var attributes = { 'id': 'video2', 'name': 'video2'};
-var flashvars = {
-	'file' : '//www.archive.org/download/DvAnalyzerSampleDvVideoErrorConcealment/DV_Analyzer_Sample_Video_Error_Concealment_side-by-side.mp4',
-	'width' : '640',
-	'height' : '280',
-	'controlbar' : 'bottom',
-	'dock' : 'false',
-	'icons' : 'true',
-	'logo.hide' : 'false',
-	'logo.position' : 'bottom-left',
-	'playlist' : 'none',
-	'autostart' : 'false',
-	'bufferlength' : '3',
-	'item' : '0',
-	'mute' : 'false',
-	'repeat' : 'always',
-	'shuffle' : 'false',
-	'smoothing' : 'true',
-	'stretching' : 'uniform',
-	'volume' : '90'
- };
-swfobject.embedSWF("https://www.avpreserve.com/wp-content/plugins/flash-video-player/mediaplayer/player.swf", "video2", "640", "280", "9.0.0","https://www.avpreserve.com/wp-content/plugins/flash-video-player/mediaplayer/expressinstall.swf", flashvars, params, attributes);
-</script><br><br>
+
+<div>
+	<video src="//www.archive.org/download/DvAnalyzerSampleDvVideoErrorConcealment/DV_Analyzer_Sample_Video_Error_Concealment_side-by-side.mp4" controls width="640" height="280"></video>
+</div>
 
 <p>There is a certain aesthetic quality to the version with the error concealment suppressed, almost like seeing the scratches and damage on a film. In this way we can begin to think about dv in a more physical way that may be easier to comprehend than imagining everything happening virtually outside of any mechanical process. Using DV Analyzer we are able to better isolate and assess those points of damage, decay, and playback issues that are more apparent to the eye with film.</p>
 <p>These files referred to within this article are avilable for download from the <a href="//www.archive.org/details/DvAnalyzerSampleDvVideoErrorConcealment" target="_blank">Internet Archive</a>.</p>
-{% endblock %}
-
-{% block javascriptshead %}
-{% javascripts
-    '@DVAnalyzerBundle/Resources/public/js/swfobject.js'
-    filter="?jsqueeze"
- %}
-    <script src="{{ asset_url }}"></script>
-{% endjavascripts %}
 {% endblock %}

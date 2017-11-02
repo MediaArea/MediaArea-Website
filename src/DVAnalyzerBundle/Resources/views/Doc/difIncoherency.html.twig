@@ -5,33 +5,10 @@
 {% block body %}
 <h1>DV Analyzer Case Study: DIF Incoherency</h1>
 <p>This <a rel="nofollow" href="//www.archive.org/download/DvAnalyzerSampleDIFIncoherency_748/dvanalyzer_sample_Democracy_Now.dv">file</a> was digitized from a miniDV by the media archive at <a href="http://www.democracynow.org" target="_blank">Democracy Now!</a> and represents a rare but problematic occurrence in the digitization process. Within our test study, it was the only file identified with this particular error:</p>
-<p>
-<div id="video0" class="flashvideo"><a href="http://www.macromedia.com/go/getflashplayer">Get the Flash Player</a> to see this content.</div>
-<script type="text/javascript">
-var params = { 'allowfullscreen': 'true', 'allowscriptaccess': 'always', 'wmode': 'transparent' };
-var attributes = { 'id': 'video0', 'name': 'video0'};
-var flashvars = {
-	'file' : '//www.archive.org/download/DvAnalyzerSampleDIFIncoherency_748/dvanalyzer_sample_Democracy_Now_512kb.mp4',
-	'width' : '400',
-	'height' : '280',
-	'controlbar' : 'bottom',
-	'dock' : 'false',
-	'icons' : 'true',
-	'logo.hide' : 'false',
-	'logo.position' : 'bottom-left',
-	'playlist' : 'none',
-	'autostart' : 'false',
-	'bufferlength' : '1',
-	'item' : '0',
-	'mute' : 'false',
-	'repeat' : 'none',
-	'shuffle' : 'false',
-	'smoothing' : 'true',
-	'stretching' : 'uniform',
-	'volume' : '90'
- };
-swfobject.embedSWF("https://www.avpreserve.com/wp-content/plugins/flash-video-player/mediaplayer/player.swf", "video0", "400", "280", "9.0.0","https://www.avpreserve.com/wp-content/plugins/flash-video-player/mediaplayer/expressinstall.swf", flashvars, params, attributes);
-</script><br><br>
+
+<div>
+	<video src="//www.archive.org/download/DvAnalyzerSampleDIFIncoherency_748/dvanalyzer_sample_Democracy_Now_512kb.mp4" controls width="400" height="280"></video>
+</div>
 
 <p><span style="text-decoration: underline;">DV Structual Integrity</span></p>
 <p>As a deck reads data across a DV tape it reads sections of data for subcode (timecode), audio, video, and identification information. The tape stores these different information types as separate sections of data to facilitate insert editing or separate handling of audio, video and subcode while editing. As the decks reads the tape to output a DV stream that can be written to a file, these separate sections of data are combined into a new structure, one that conjoins subcode, audio, and video for each frame into a standardized structure of <strong>DIF blocks</strong>.<br/>
@@ -47,14 +24,4 @@ shows the unreadable section of the file. Each line of data represents (in hexad
 <p>As mentioned, this file is our only known occurrence of this type of error (structural DIF incoherency from invalid NULL DIF blocks); however the results were significantly problematic to the achievement of reliable playback. Since the majority of the data for that particular head pass within the deck is valid, it is our assumption that the problem occurred within the DV deck&#8217;s reassembly of tape&#8217;s data into the DIF blocks of the DV stream output (the file written during digital transfer) and does not represent a problem with the source DV tape.</p>
 <p>Though a rare type of error, the analysis of the actual code that DV Analyzer enables allowed us to identify the likely direct cause of the problem. Rather than simply marking the file and tape as unplayable and scraping them, the tape could be saved and the DV stream could be captured again for archiving.</p>
 <p>These files referred to within this article are avilable for download from the <a href="//www.archive.org/details/DvAnalyzerSampleDIFIncoherency_748" target="_blank">Internet Archive</a>.</p>
-
-{% endblock %}
-
-{% block javascriptshead %}
-{% javascripts
-    '@DVAnalyzerBundle/Resources/public/js/swfobject.js'
-    filter="?jsqueeze"
- %}
-    <script src="{{ asset_url }}"></script>
-{% endjavascripts %}
 {% endblock %}
