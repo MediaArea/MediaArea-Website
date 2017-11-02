@@ -4,36 +4,17 @@
 
 {% block body %}
 <h1>DV Analyzer Case Study: STTS Fluctuation</h1>
-&#8220;Sample to Time&#8221; (STTS) is a table in a Quicktime wrapper that represents how much time is allotted to each sample of a given track, i.e. the length of the sample&#8217;s duration. </p>
-<div id="attachment_1011" style="width: 393px" class="wp-caption alignnone"><img src="http://www.avpreserve.com/wp-content/uploads/2009/10/stts_fluctuation_dumpster_stbl.gif" alt="STTS Fluctuation as shown in Dumpster" title="stts_fluctuation_shown_in_dumpster" width="383" height="160" class="size-full wp-image-1011" srcset="https://www.avpreserve.com/wp-content/uploads/2009/10/stts_fluctuation_dumpster_stbl.gif 383w, https://www.avpreserve.com/wp-content/uploads/2009/10/stts_fluctuation_dumpster_stbl-300x125.gif 300w" sizes="(max-width: 383px) 100vw, 383px"/><p class="wp-caption-text">STTS Fluctuation as shown in Dumpster</p></div>
+&#8220;Sample to Time&#8221; (STTS) is a table in a Quicktime wrapper that represents how much time is allotted to each sample of a given track, i.e. the length of the sample&#8217;s duration.
+<div>
+	{% image '@DVAnalyzerBundle/Resources/public/img/stts_fluctuation_dumpster_stbl.gif' %}
+	<img src="{{ asset_url }}" alt="STTS Fluctuation as shown in Dumpster" title="stts_fluctuation_shown_in_dumpster" width="383" height="160" srcset="{{ asset_url }}{% endimage %}{% image '@DVAnalyzerBundle/Resources/public/img/stts_fluctuation_dumpster_stbl-300x125.gif' %} 383w, {{ asset_url }}{% endimage %} 300w" sizes="(max-width: 383px) 100vw, 383px"/>
+	<p class="wp-caption-text">STTS Fluctuation as shown in Dumpster</p>
+</div>
 <p>In a typical DV video track every sample &#8212; in this case the sample would be a video frame &#8212; is allotted exactly the same amount of time. This sample/frame duration can be used to calculate the frame rate of a DV file, most typically 29.97 (or 25) frames per second. The audio track is also assigned a regular STTS number. The STTS Fluctuation error arises when one particular frame of a file includes a sample-to-time value in consistent with the other frames in the file.</p>
-<p>
-<div id="video0" class="flashvideo"><a href="http://www.macromedia.com/go/getflashplayer">Get the Flash Player</a> to see this content.</div>
-<script type="text/javascript">
-var params = { 'allowfullscreen': 'true', 'allowscriptaccess': 'always', 'wmode': 'transparent' };
-var attributes = { 'id': 'video0', 'name': 'video0'};
-var flashvars = {
-	'file' : '//www.archive.org/download/DvAnalyzerSampleSttsFluctuation/DV_Analyzer_Sample_STTS_Fluctuation_512kb.mp4',
-	'width' : '400',
-	'height' : '280',
-	'controlbar' : 'bottom',
-	'dock' : 'false',
-	'icons' : 'true',
-	'logo.hide' : 'false',
-	'logo.position' : 'bottom-left',
-	'playlist' : 'none',
-	'autostart' : 'false',
-	'bufferlength' : '3',
-	'item' : '0',
-	'mute' : 'false',
-	'repeat' : 'always',
-	'shuffle' : 'false',
-	'smoothing' : 'true',
-	'stretching' : 'uniform',
-	'volume' : '90'
- };
-swfobject.embedSWF("https://www.avpreserve.com/wp-content/plugins/flash-video-player/mediaplayer/player.swf", "video0", "400", "280", "9.0.0","https://www.avpreserve.com/wp-content/plugins/flash-video-player/mediaplayer/expressinstall.swf", flashvars, params, attributes);
-</script><br><br>
+
+<div>
+	<video src="//www.archive.org/download/DvAnalyzerSampleSttsFluctuation/DV_Analyzer_Sample_STTS_Fluctuation_512kb.mp4" controls width="400" height="280"></video>
+</div>
 
 <p>The sample <a href="//www.archive.org/download/DvAnalyzerSampleSttsFluctuation/DV_Analyzer_Sample_STTS_Fluctuation.mov" target="_blank">file</a> was recorded from a half inch video tape run through a time base corrector to an I/O box, then out as a DV stream, and into a Mac running Final Cut. During this process 8 video frames were dropped. In the resulting file the frame before the drop (in the example presented frame #43) is assigned a timeline duration (the STTS value) that is 9 times higher than the other frames, thus frame 43 is presented for 9 times longer than any other frame. This results in a loss of visual data where frame 43 is held through the time represented by the dropped frames, and then a visual stutter where the image jumps to original frame 52. As a result of this irregularity, the sample file now has a variable frame rate and averages 27.36 frames per second instead of 29.97.</p>
 <p>By adjusting the sample to time duration the playback system is trying to compensate for the 8 dropped frames. This keeps the timecode track and video track in sync following the event, thus preventing further visual errors that would affect much more of the video image. However the audio track is also missing 8 frames worth of audio which <em>is not</em> compensated for within the STTS associated with the audio track. The result is that the audio falls 8 frames out of sync following the event.</p>
@@ -43,13 +24,4 @@ encoded. The clues to discover this error (loss of video frames and loss of sync
 <p>Thanks to Angelo Sacerdote of Bay Area Video Coalition<br/>
 File Credit: Thomas F. Barrett, Ph.D., Hanna Perkins Center for Child Development</p>
 <p>The original DV file referenced in this article can be downloaded <a href="//www.archive.org/download/DvAnalyzerSampleSttsFluctuation/DV_Analyzer_Sample_STTS_Fluctuation.mov" target="_blank">here</a>.</p>
-{% endblock %}
-
-{% block javascriptshead %}
-{% javascripts
-    '@DVAnalyzerBundle/Resources/public/js/swfobject.js'
-    filter="?jsqueeze"
- %}
-    <script src="{{ asset_url }}"></script>
-{% endjavascripts %}
 {% endblock %}
