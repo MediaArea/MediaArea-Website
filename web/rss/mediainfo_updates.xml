@@ -5,26 +5,55 @@
         <link>https://mediaarea.net/MediaInfo</link>
         <description>MediaInfo updates feed</description>
         <language>en-us</language>
-        <lastBuildDate>Mon, 11 Sep 2017 14:00:00 +0000</lastBuildDate>
+        <lastBuildDate>Thu, 02 Nov 2017 17:00:00 +0000</lastBuildDate>
          <item>
-            <title>MediaInfo 0.7.99</title>
+            <title>MediaInfo 17.10</title>
             <description>
-                <![CDATA[+ EBUCore: JSON output (--Output=EBUCore_1.8_JSON)<br />
-                    + EBUCore: add writingLibraryName and writingLibraryVersion attributes<br />
-                    + Ad-ID identifier display on a single line ("Value (Registry)" format)<br />
-                    + MPEG-4: Better display of format of VobSub tracks<br />
-                    + MPEG-4: CodecID is stsd name + ObjectTypeId for mp4a, mp4v, mp4s<br />
-                    + AVC: preferred_transfer_characteristics support<br />
-                    + MPEG Video, MPEG-4 Visual, AVC, HEVC, MPEG-4, Matroska: correct detection of RGB<br />
-                    + matrix_coefficients: detection of Y'D'zD'x and Chromaticity-derived<br />
-                    + AAC: info about SBR/PS being implicit/explicit/NBC (Not Backward Compatible)<br />
-                    + AAC: indicate audioObjectType in CodecID<br />
-                    x Fix a weird 1.334 DAR due to a rounding issue]]>
+                <![CDATA[+ We need your support! Visit https://mediaarea.net/SupportUs<br />
+                    + Version scheme is now YY.MM (year dot month, 2 digits each)<br />
+                    + New MediaInfo XML output, with XSD, more suitable for automatic parsing. Use Option("Inform", "OLDXML") for keeping previous behavior<br />
+                    + New "Info_OutputFormats" option for listing supported output formats<br />
+                    + Universal Ad ID: refactored display, better display of value and registry, XML name slightly modified<br />
+                    + MOV: support of HDR metadata (MasteringDisplayColorVolume, MaxCLL, MaxFALL)<br />
+                    + BWF: display of UMID and loudness info<br />
+                    + AAC: show program_config_element in trace<br />
+                    + MPEG Audio: frame rate info<br />
+                    + PCM in WAV and Matroska: Support of ValidBitsPerSample<br />
+                    + I197, EBUCore: 1.8 output uses now final version of XSD and final XSD location<br />
+                    + Matroska: tweaking frame rate empirical detection for some corner cases<br />
+                    x I1070, LAME 3.100 info tag was incorrectly parsed<br />
+                    x B1068, MPEG Audio: Incoherent duration between General and Audio parts, Audio part duration fixed<br />
+                    x Matroska: showing "A_MS/ACM" Matroska CodecID<br />
+                    x MXF: Fix crash with some buggy files<br />
+                    x MXF: was not well supporting MXF referencing only 1 file<br />
+                    x PCM in WAV: 8-bit content is unsigned and without endianess<br />
+                    x PCM in WAV and Matroska: More coherency between Wave info and ExtensibleWave Info (bitdepth, sign)<br />
+                    x WAV: GUID display was with first 8 bytes in wrong order<br />
+                    x Several crash fixes]]>
             </description>
             <link>https://mediaarea.net/MediaInfo</link>
-            <pubDate>Mon, 11 Sep 2017 14:00:00 +0000</pubDate>
-            <guid>MediaInfo-0.7.99</guid>
+            <pubDate>Thu, 02 Nov 2017 17:00:00 +0000</pubDate>
+            <guid>MediaInfo-17.10</guid>
         </item>
+        <item>
+           <title>MediaInfo 0.7.99</title>
+           <description>
+               <![CDATA[+ EBUCore: JSON output (--Output=EBUCore_1.8_JSON)<br />
+                   + EBUCore: add writingLibraryName and writingLibraryVersion attributes<br />
+                   + Ad-ID identifier display on a single line ("Value (Registry)" format)<br />
+                   + MPEG-4: Better display of format of VobSub tracks<br />
+                   + MPEG-4: CodecID is stsd name + ObjectTypeId for mp4a, mp4v, mp4s<br />
+                   + AVC: preferred_transfer_characteristics support<br />
+                   + MPEG Video, MPEG-4 Visual, AVC, HEVC, MPEG-4, Matroska: correct detection of RGB<br />
+                   + matrix_coefficients: detection of Y'D'zD'x and Chromaticity-derived<br />
+                   + AAC: info about SBR/PS being implicit/explicit/NBC (Not Backward Compatible)<br />
+                   + AAC: indicate audioObjectType in CodecID<br />
+                   x Fix a weird 1.334 DAR due to a rounding issue]]>
+           </description>
+           <link>https://mediaarea.net/MediaInfo</link>
+           <pubDate>Mon, 11 Sep 2017 14:00:00 +0000</pubDate>
+           <guid>MediaInfo-0.7.99</guid>
+       </item>
          <item>
             <title>MediaInfo 0.7.98</title>
             <description>
