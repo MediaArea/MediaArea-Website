@@ -319,7 +319,7 @@ var supportUs = (function () {
         // Payment buttons update
         $('.btn-paypal').text('Pay ' + displayAmountWithCurrency(amount) + ' with Paypal');
         $('.btn-cb').val('Pay ' + displayAmountWithCurrency(amount) + ' by Credit Card');
-        $('input[type="text"][name="ma_choose_payment_method[amount]"').val(amount);
+        $('#ma_choose_payment_method_amount').val(amount);
         if ($('.btn-bank-wire').length) {
             $('.btn-bank-wire').text(displayAmountWithCurrency(amount) + ' by bank wire');
         }
