@@ -43,3 +43,12 @@ easy_admin:
                     - 'country'
                     - 'date'
                     - { property: 'PaymentSystemName', label: 'Payment system' }
+
+        Feature:
+            class: VoteBundle\Entity\Feature
+            search:
+                fields: ['title', 'description']
+            list:
+                fields: ['title', 'votesTarget', 'votesCountCache', 'status']
+            form:
+                fields: ['title', 'description', 'votesTarget', 'votesCountCache', 'status']

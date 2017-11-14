@@ -15,6 +15,7 @@ imports:
     - { resource: "@SupportUsBundle/Resources/config/services.yml" }
     - { resource: "@MOVMetaEditBundle/Resources/config/services.yml" }
     - { resource: "@BlogBundle/Resources/config/services.yml" }
+    - { resource: "@VoteBundle/Resources/config/services.yml" }
 
 # Put parameters here that don't need to change on each machine where the app is deployed
 # https://symfony.com/doc/current/best_practices/configuration.html#application-related-configuration
@@ -84,6 +85,12 @@ doctrine_migrations:
     namespace: Application\Migrations
     table_name: migration_versions
     name: Application Migrations
+
+# Stof doctrine extensions
+stof_doctrine_extensions:
+    orm:
+        default:
+            sluggable: true
 
 # Swiftmailer Configuration
 swiftmailer:

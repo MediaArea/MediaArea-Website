@@ -1,0 +1,63 @@
+{% extends 'VoteBundle::base.html.twig' %}
+
+{% block title %}{{ feature.title }} - Feature{% endblock %}
+
+{% block body %}
+<h1>{{ feature.title }}</h1>
+
+<div class="well well-sm">
+    {{ feature.description }}
+</div>
+
+<p>
+    {% trans with { '%count%': feature.votesCountCache, '%target%': feature.votesTarget, '%ratio%': feature.completionRatio|round } %}vote.feature.status{% endtrans %}
+    <span class="glyphicon glyphicon-info-sign vote-help" data-toggle="popover" data-trigger="hover" title="Vote help"></span>
+</p>
+
+{% if app.user and is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+    <hr>
+
+    {% if userVotesFeature %}
+        <p>
+            {% trans with { '%points%': userVotesFeature } %}vote.feature.user.points{% endtrans %}
+        </p>
+    {% endif %}
+
+    {% if app.user.vote > 0 %}
+        {% trans with { '%points%': app.user.vote } %}vote.feature.user.points.available{% endtrans %}
+    {% else %}
+        {% trans with { '%supportUS%': path('supportUs_individual') } %}vote.feature.user.no.points{% endtrans %}
+    {% endif %}
+
+    {{ form_start(form) }}
+    <div class="col-sm-3">
+        {{ form_row(form.vote) }}
+    </div>
+    <div class="clearfix"></div>
+    <div class="col-sm-3">
+        <div class="form-group">
+            <div class="col-sm-2"></div>
+            <div class="col-sm-10"><button type="submit" class="btn-default btn">{% if userVotesFeature %}Update your vote{% else %}Vote{% endif %}</button></div>
+        </div>
+    </div>
+    {{ form_end(form) }}
+    <div class="clearfix"></div>
+{% else %}
+    {% trans with { '%login%': path('fos_user_security_login'), '%register%': path('fos_user_registration_register') } %}vote.feature.user.not.login{% endtrans %}
+{% endif %}
+
+<p class="vote-return">
+    {% trans with { '%list%': path('vote_list_features') } %}vote.feature.return.list{% endtrans %}
+</p>
+{% endblock %}
+
+{% block javascripts %}
+<script>
+    $(document).ready(function() {
+        var voteHelp = '{{ 'vote.list.text'|trans|e('js') }}';
+        $(function () {
+          $('.vote-help').popover({content: voteHelp, html: true});
+        })
+    });
+</script>
+{% endblock %}

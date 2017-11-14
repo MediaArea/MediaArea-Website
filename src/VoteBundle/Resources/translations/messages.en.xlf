@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="en" datatype="plaintext" original="file.ext" target-language="en">
+    <body>
+        <trans-unit id="vote.page.title" approved="yes">
+            <source>vote.page.title</source>
+            <target><![CDATA[Features list]]></target>
+        </trans-unit>
+        <trans-unit id="vote.title" approved="yes">
+            <source>vote.title</source>
+            <target><![CDATA[Proposed features]]></target>
+        </trans-unit>
+        <trans-unit id="vote.list.text" approved="yes">
+            <source>vote.list.text</source>
+            <target><![CDATA[MediaArea let you vote to your favourite features.<br>
+                By voting to to your most important features you priorize the features we will worked on and accelerate their development.<br>
+                You can vote for a feature (adding or removing points) until we start the development, after that we freeze the vote and the points you put on, when the development is finished we take the points definitively.<br>
+                After a feature is developed, we select the next feature to develop by checking features with the highest ratio, with a minimal ratio of 100%; we may also work on a feature even if it has not reached 100% depending on our workload.]]></target>
+        </trans-unit>
+        <trans-unit id="vote.list.user.points" approved="yes">
+            <source>vote.list.user.points</source>
+            <target><![CDATA[You have <span class="vote-user-total-points">%points%</span> vote points to vote for your favourite features.]]></target>
+        </trans-unit>
+        <trans-unit id="vote.list.user.no.points" approved="yes">
+            <source>vote.list.user.no.points</source>
+            <target><![CDATA[You have no vote points, if you want to vote for your favourite features <a href="%supportUS%">buy vote points</a>.]]></target>
+        </trans-unit>
+        <trans-unit id="vote.list.user.not.login" approved="yes">
+            <source>vote.list.user.not.login</source>
+            <target><![CDATA[You are not loggued you cannot vote for a feature, please <a href="%login%">login</a> or <a href="%register%">register</a> if you want to be able to vote.]]></target>
+        </trans-unit>
+        <trans-unit id="vote.list.missing.feature" approved="yes">
+            <source>vote.list.missing.feature</source>
+            <target><![CDATA[The feature you want is not in the list ? <a href="mailto:info@mediaarea.net">Contact us</a> to propose your feature.]]></target>
+        </trans-unit>
+        <trans-unit id="vote.feature.status" approved="yes">
+            <source>vote.feature.status</source>
+            <target><![CDATA[This feature have <span class="vote-feature-count">%count%</span> points for a target of <span class="vote-feature-target">%target%</span>, the completion ratio is <span class="vote-feature-ratio">%ratio%</span>%]]></target>
+        </trans-unit>
+        <trans-unit id="vote.feature.user.points" approved="yes">
+            <source>vote.feature.user.points</source>
+            <target><![CDATA[You have already set <span class="vote-user-feature-points">%points%</span> voting points for this feature.]]></target>
+        </trans-unit>
+        <trans-unit id="vote.feature.user.points.available" approved="yes">
+            <source>vote.feature.user.points.available</source>
+            <target><![CDATA[You still have <span class="vote-user-total-points">%points%</span> vote points.]]></target>
+        </trans-unit>
+        <trans-unit id="vote.feature.user.no.points" approved="yes">
+            <source>vote.feature.user.no.points</source>
+            <target><![CDATA[You have no vote points, <a href="%supportUS%">buy vote points</a> to vote for this feature]]></target>
+        </trans-unit>
+        <trans-unit id="vote.feature.user.not.login" approved="yes">
+            <source>vote.feature.user.not.login</source>
+            <target><![CDATA[You are not loggued you cannot vote for this feature, please <a href="%login%">login</a> or <a href="%register%">register</a> if you want to be able to vote.]]></target>
+        </trans-unit>
+        <trans-unit id="vote.feature.return.list" approved="yes">
+            <source>vote.feature.return.list</source>
+            <target><![CDATA[Return to the <a href="%list%">proposed features list</a>]]></target>
+        </trans-unit>
+        <trans-unit id="vote.feature.close" approved="yes">
+            <source>vote.feature.close</source>
+            <target><![CDATA[You cannot see this feature anymore]]></target>
+        </trans-unit>
+        <trans-unit id="vote.feature.vote.close" approved="yes">
+            <source>vote.feature.vote.close</source>
+            <target><![CDATA[You cannot vote for this feature anymore]]></target>
+        </trans-unit>
+        <trans-unit id="vote.feature.vote.same" approved="yes">
+            <source>vote.feature.vote.same</source>
+            <target><![CDATA[You have already given %points% voting points to this feature]]></target>
+        </trans-unit>
+        <trans-unit id="vote.feature.vote.login" approved="yes">
+            <source>vote.feature.vote.login</source>
+            <target><![CDATA[You need to be <a href="%login%" class="alert-link">loggued</a> to vote for this feature]]></target>
+        </trans-unit>
+        <trans-unit id="vote.feature.vote.low" approved="yes">
+            <source>vote.feature.vote.low</source>
+            <target><![CDATA[You do not have enough voting points]]></target>
+        </trans-unit>
+        <trans-unit id="vote.feature.vote.remove" approved="yes">
+            <source>vote.feature.vote.remove</source>
+            <target><![CDATA[You cannot remove more voting points than you have already voted]]></target>
+        </trans-unit>
+        <trans-unit id="vote.feature.vote.success.add" approved="yes">
+            <source>vote.feature.vote.success.add</source>
+            <target><![CDATA[You have successfully added %points% voting points to this feature]]></target>
+        </trans-unit>
+        <trans-unit id="vote.feature.vote.success.remove" approved="yes">
+            <source>vote.feature.vote.success.remove</source>
+            <target><![CDATA[You have successfully removed %points% voting points to this feature]]></target>
+        </trans-unit>
+    </body>
+  </file>
+</xliff>

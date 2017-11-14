@@ -877,6 +877,19 @@ ul.icons li {
     font-size: 20px;
 }
 
+/* Vote */
+#features-table_wrapper {
+    margin-top: 15px;
+}
+
+form[name="vote"] {
+    margin-top: 15px;
+}
+
+.vote-return {
+    margin-top: 50px;
+}
+
 /* media query */
 @media (min-width: 768px) and (max-width: 991px) {
     .display-block-sm {
