@@ -5,7 +5,22 @@
         <link>https://mediaarea.net/MediaConch/</link>
         <description>MediaConch updates feed</description>
         <language>en-us</language>
-        <lastBuildDate>Mon, 11 Sep 2017 14:00:00 +0000</lastBuildDate>
+        <lastBuildDate>Wed, 22 Nov 2017 14:00:00 +0000</lastBuildDate>
+          <item>
+            <title>MediaConch 17.11</title>
+            <description>
+                <![CDATA[Formatted MediaInfo display<br>
+                    Text and EBUCore 1.8 (XML and JSON) reports available for download in MediaInfo display<br>
+                    Improved Matroska video frame rate detection<br>
+                    Support of BWF (bext) loudness info<br>
+                    Support of MOV HDR metadata<br>
+                    Support of PCM endianess in Matroska files<br>
+                    Several minor fixes]]>
+            </description>
+            <link>https://mediaarea.net/MediaConch/download.html</link>
+            <pubDate>Wed, 22 Nov 2017 14:00:00 +0000</pubDate>
+            <guid>MediaConch-17.11</guid>
+          </item>
           <item>
             <title>MediaConch 17.08</title>
             <description>
