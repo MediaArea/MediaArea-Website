@@ -53,6 +53,10 @@ payment:
     resource: "@PaymentBundle/Controller/"
     type:     annotation
 
+vote:
+    resource: "@VoteBundle/Controller/"
+    type:     annotation
+
 app:
     resource: '@AppBundle/Controller/'
     type: annotation

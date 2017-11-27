@@ -338,6 +338,20 @@ class User extends BaseUser
     }
 
     /**
+     * Remove vote.
+     *
+     * @param int $vote
+     *
+     * @return User
+     */
+    public function removeVote($vote)
+    {
+        $this->vote -= $vote;
+
+        return $this;
+    }
+
+    /**
      * Set displayName.
      *
      * @param bool $displayName

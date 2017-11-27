@@ -7,6 +7,8 @@ use FOS\UserBundle\Model\UserInterface;
 use Symfony\Component\Intl\Intl;
 use Symfony\Component\Security\Core\Exception\AccessDeniedException;
 use PaymentBundle\Entity\Invoice;
+use VoteBundle\Entity\Vote;
+use VoteBundle\Entity\Feature;
 
 class ProfileController extends BaseController
 {
@@ -32,6 +34,10 @@ class ProfileController extends BaseController
             ->getRepository(Invoice::class)
             ->findBy(['user' => $this->getUser()], ['date' => 'DESC']);
 
+        $userVotes = $this->getDoctrine()->getRepository(Vote::class)->getTotalVotesByUser($user);
+
+        $userVotesFeatures = $this->getDoctrine()->getRepository(Feature::class)->getFeaturesVotedByUser($user);
+
         return $this->render('@FOSUser/Profile/show.html.twig', array(
             'user' => $user,
             'language' => $language ?? null,
@@ -47,6 +53,8 @@ class ProfileController extends BaseController
                 'country' => '',
                 'currency' => '',
             ],
+            'userVotes' => $userVotes,
+            'userVotesFeatures' => $userVotesFeatures,
         ));
     }
 }

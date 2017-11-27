@@ -126,6 +126,10 @@
         <source><![CDATA[menu.supportUs.sponsorsList]]></source>
         <target><![CDATA[Sponsors]]></target>
       </trans-unit>
+      <trans-unit id="menu.vote" approved="yes">
+        <source><![CDATA[menu.vote]]></source>
+        <target><![CDATA[Vote!]]></target>
+      </trans-unit>
       <trans-unit id="227" approved="yes">
         <source><![CDATA[footer.projects]]></source>
         <target><![CDATA[Projects]]></target>
