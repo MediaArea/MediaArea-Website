@@ -139,6 +139,7 @@ fos_user:
 fos_js_routing:
     routes_to_expose:
         - ma_professional_services
+        - ma_contact
         - supportUs_faq
         - supportUs_sponsors_list
         - supportUs_supporters_list

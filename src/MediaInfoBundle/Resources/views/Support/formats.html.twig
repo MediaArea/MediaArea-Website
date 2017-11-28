@@ -822,5 +822,5 @@ Audio Visual Research (avr)<br/>
     </tr>
 </table>
 
-{% trans %}support.formats.supported{% endtrans %}
+{% trans with {'%contact%': path('ma_contact')} %}support.formats.supported{% endtrans %}
 {% endblock %}

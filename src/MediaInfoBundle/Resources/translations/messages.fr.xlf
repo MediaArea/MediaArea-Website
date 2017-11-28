@@ -179,7 +179,7 @@ Vous pouvez toujours contribuer à MediaInfo en faisant autre chose :
   <li>Adapter pour des plates-formes non supportées (Linux, Win64...)</li>
   <li>...</li>
 </ul>
-N'hésitez pas à <a href="mailto:info@mediaarea.net">nous contacter</a>!]]></target>
+N'hésitez pas à <a href="%contact%">nous contacter</a>!]]></target>
       </trans-unit>
       <trans-unit id="43" approved="yes">
         <source><![CDATA[paypal.donation]]></source>
@@ -241,7 +241,7 @@ Liste non exhaustive de prestations possibles :
  <li>Support personnalisé (aide sur l'API...)</li>
  <li>...</li>
 </ul>
-N'hésitez pas à <a href="mailto:info@mediaarea.net">me contacter</a> pour toute question ou demande de devis.]]></target>
+N'hésitez pas à <a href="%contact%">me contacter</a> pour toute question ou demande de devis.]]></target>
       </trans-unit>
       <trans-unit id="about.download.otherOS" approved="yes">
         <source><![CDATA[about.download.otherOS]]></source>

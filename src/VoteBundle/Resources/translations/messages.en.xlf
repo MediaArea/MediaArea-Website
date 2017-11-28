@@ -31,7 +31,7 @@
         </trans-unit>
         <trans-unit id="vote.list.missing.feature" approved="yes">
             <source>vote.list.missing.feature</source>
-            <target><![CDATA[The feature you want is not in the list ? <a href="mailto:info@mediaarea.net">Contact us</a> to propose your feature.]]></target>
+            <target><![CDATA[The feature you want is not in the list ? <a href="%contact%">Contact us</a> to propose your feature.]]></target>
         </trans-unit>
         <trans-unit id="vote.feature.status" approved="yes">
             <source>vote.feature.status</source>

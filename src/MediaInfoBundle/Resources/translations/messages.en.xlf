@@ -56,7 +56,7 @@
       </trans-unit>
       <trans-unit id="17" approved="yes">
         <source><![CDATA[about.features.content]]></source>
-        <target><![CDATA[<ul>    <li>Read many <a href="%supportFormatRoute%"> video and audio file formats</a></li>    <li>View information in different formats (text, sheet, tree, HTML...)</li>    <li>Customise these viewing formats</li>    <li>Export information as text, CSV, HTML...</li>    <li>Graphical user interface, command line interface, or library (.dll/.so/.dylib) versions available</li>    <li>Integrate with the shell (drag 'n' drop, and Context menu)</li>    <li>Internationalisation: display any language on any operating system</li>    <li>Localisation capability (for which volunteers are needed - please <a href="mailto:info@mediaarea.net">contact us</a>!)</li></ul>]]></target>
+        <target><![CDATA[<ul>    <li>Read many <a href="%supportFormatRoute%"> video and audio file formats</a></li>    <li>View information in different formats (text, sheet, tree, HTML...)</li>    <li>Customise these viewing formats</li>    <li>Export information as text, CSV, HTML...</li>    <li>Graphical user interface, command line interface, or library (.dll/.so/.dylib) versions available</li>    <li>Integrate with the shell (drag 'n' drop, and Context menu)</li>    <li>Internationalisation: display any language on any operating system</li>    <li>Localisation capability (for which volunteers are needed - please <a href="%contact%">contact us</a>!)</li></ul>]]></target>
       </trans-unit>
       <trans-unit id="18" approved="yes">
         <source><![CDATA[about.license.title]]></source>
@@ -117,7 +117,7 @@ Non-exhaustive list of possible services:
  <li>Customized support (help using the API...)</li>
  <li>...</li>
 </ul>
-Feel free to <a href="mailto:info@mediaarea.net">contact us</a> with any questions or requests - but please, check the FAQ first]]></target>
+Feel free to <a href="%contact%">contact us</a> with any questions or requests - but please, check the FAQ first]]></target>
       </trans-unit>
       <trans-unit id="29" approved="yes">
         <source><![CDATA[support.faq.page.title]]></source>
@@ -208,9 +208,9 @@ And your platform:
       <trans-unit id="44" approved="yes">
         <source><![CDATA[support.faq.general.NoSupport.content]]></source>
         <target><![CDATA[First, maybe I don't have specifications for it.<br/>
-If you have documentation about the format, please <a href="mailto:info@mediaarea.net">contact us</a>.<br/>
+If you have documentation about the format, please <a href="%contact%">contact us</a>.<br/>
 Second, maybe we don't have the time on free support for implementing it.<br/>
-If you desire to accelerate the development, don't hesitate to <a href="mailto:info@mediaarea.net">contact us</a> for a quotation.]]></target>
+If you desire to accelerate the development, don't hesitate to <a href="%contact%">contact us</a> for a quotation.]]></target>
       </trans-unit>
       <trans-unit id="45" approved="yes">
         <source><![CDATA[support.faq.general.YouShould.title]]></source>
@@ -431,7 +431,7 @@ If you use IIS, <code>IIS_IUSRS</code> user must have the "Read &amp; execute" r
       </trans-unit>
       <trans-unit id="90" approved="yes">
         <source><![CDATA[support.formats.supported]]></source>
-        <target><![CDATA[If you know how to obtain information which is currently not supported, please <a href="mailto:info@mediaarea.net">write to us</a> (French or English only)]]></target>
+        <target><![CDATA[If you know how to obtain information which is currently not supported, please <a href="%contact%">write to us</a> (French or English only)]]></target>
       </trans-unit>
       <trans-unit id="91" approved="yes">
         <source><![CDATA[support.tags.page.title]]></source>
@@ -801,7 +801,7 @@ Please choose your preferred method below.]]></target>
       </trans-unit>
       <trans-unit id="donate.location_currency" approved="yes">
         <source><![CDATA[donate.location_currency]]></source>
-        <target><![CDATA[We have located you in "%country%" your payment will be made in "%currency%". <a href="mailto:info@mediaarea.net">Contact us</a> if we have not located you correctly.]]></target>
+        <target><![CDATA[We have located you in "%country%" your payment will be made in "%currency%". <a href="%contact%">Contact us</a> if we have not located you correctly.]]></target>
       </trans-unit>
       <trans-unit id="donate.not_loggued_in" approved="yes">
         <source><![CDATA[donate.not_loggued_in]]></source>
@@ -852,7 +852,7 @@ Don't forget to put your e-mail address in the wire transfer description!]]></ta
     <li>Helping to support currently non-supported platforms (Linux, Win64...),</li>
     <li>What else can you think of?</li>
 </ul>
-Don't hesitate to <a href="mailto:info@mediaarea.net">contact us</a> if you're interested in contributing in any way!]]></target>
+Don't hesitate to <a href="%contact%">contact us</a> if you're interested in contributing in any way!]]></target>
       </trans-unit>
       <trans-unit id="184" approved="yes">
         <source><![CDATA[paypal.donation]]></source>

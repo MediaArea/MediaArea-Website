@@ -1,0 +1,36 @@
+{% extends 'AppBundle::base.html.twig' %}
+
+{% block title %}Contact MediaArea{% endblock %}
+{% block description %}Contact MediaArea{% endblock %}
+{% block keywords %}Contact MediaArea{% endblock %}
+
+{% block body %}
+<h1>Contact us</h1>
+
+<h2>Contact us by email</h2>
+You can <a href="mailto:info@mediaarea.net">send us an email</a> directly.
+
+<h2>Leave us a message</h2>
+<p>You can fill this form to send us a message.</p>
+{{ form_start(form) }}
+{{ form_widget(form) }}
+<div class="clearfix"></div>
+<div>
+    <div class="form-group">
+        <div class="col-sm-2"></div>
+        <div class="col-sm-10"><button type="submit" class="btn-default btn">Send message</button></div>
+    </div>
+</div>
+{{ form_end(form) }}
+
+<hr>
+
+<h2>Send us a mail</h2>
+<p>You can also send us a message by post.</p>
+<p>
+    MediaArea.net SARL<br>
+    Chemin du Vernay<br>
+    73190 Curienne<br>
+    France
+</p>
+{% endblock %}

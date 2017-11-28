@@ -10,7 +10,7 @@
 {% trans %}donate.why.content{% endtrans %}
 
 <h2>{% trans %}donate.paypal.title{% endtrans %}</h2>
-{% if country %}{% trans with { '%country%': country, '%currency%': currency } %}donate.location_currency{% endtrans %}<br>{% endif %}
+{% if country %}{% trans with { '%country%': country, '%currency%': currency, '%contact%': path('ma_contact') } %}donate.location_currency{% endtrans %}<br>{% endif %}
 {% if not app.user %}{% trans with { '%login%': path('fos_user_security_login'), '%register%': path('fos_user_registration_register') } %}donate.not_loggued_in{% endtrans %}<br>{% endif %}
 {{ include('@Payment/form.html.twig') }}
 
@@ -38,7 +38,7 @@
 {% endif %}
 
 <h2>{% trans %}donate.other.title{% endtrans %}</h2>
-{% trans %}donate.other.content{% endtrans %}
+{% trans with {'%contact%': path('ma_contact')} %}donate.other.content{% endtrans %}
 {% endblock %}
 
 {% block javascripts %}

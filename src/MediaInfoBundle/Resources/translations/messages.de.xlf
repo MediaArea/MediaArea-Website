@@ -60,7 +60,7 @@
       </trans-unit>
       <trans-unit id="15" approved="yes">
         <source><![CDATA[about.features.content]]></source>
-        <target><![CDATA[<ul>  <li>Liest viele <a href="%supportFormatRoute%"> Video- und Audioformate</a></li>  <li>Verschiedene Darstellungsmöglichkeiten der Informationen (Text, Tabelle, Baumstruktur, HTML...)</li>  <li>Diese Darstellungen können selbst angepasst werden</li>  <li>Informationen können als Text, CSV, HTML... ausgegeben werden</li>  <li>Grafische Benutzeroberfläche, Aufruf per Kommandozeile, oder über die DLL</li>  <li>Integration in MS-Windows (Drag'n'Drop, Kontextmenü)</li>  <li>Internationalisierung : Jede Sprache wird unter jedem Betriebssystem unterstützt</li>  <li>Lokalisierbar (<a href="mailto:info@mediaarea.net">Übersetzer gesucht!</a>)</li> </ul>]]></target>
+        <target><![CDATA[<ul>  <li>Liest viele <a href="%supportFormatRoute%"> Video- und Audioformate</a></li>  <li>Verschiedene Darstellungsmöglichkeiten der Informationen (Text, Tabelle, Baumstruktur, HTML...)</li>  <li>Diese Darstellungen können selbst angepasst werden</li>  <li>Informationen können als Text, CSV, HTML... ausgegeben werden</li>  <li>Grafische Benutzeroberfläche, Aufruf per Kommandozeile, oder über die DLL</li>  <li>Integration in MS-Windows (Drag'n'Drop, Kontextmenü)</li>  <li>Internationalisierung : Jede Sprache wird unter jedem Betriebssystem unterstützt</li>  <li>Lokalisierbar (<a href="%contact%">Übersetzer gesucht!</a>)</li> </ul>]]></target>
       </trans-unit>
       <trans-unit id="16" approved="yes">
         <source><![CDATA[about.license.content]]></source>
@@ -153,7 +153,7 @@ Sie können MediaInfo auch noch auf folgende Weise unterstützen:
  <li>Helfen Sie, noch nicht unterstützte Betriebssysteme zu unterstützen (Linux, Win64...)</li>
  <li>...</li>
 </ul>
-Zögern Sie nicht mir zu <a href="mailto:info@mediaarea.net">schreiben</a>!]]></target>
+Zögern Sie nicht mir zu <a href="%contact%">schreiben</a>!]]></target>
       </trans-unit>
       <trans-unit id="34" approved="yes">
         <source><![CDATA[paypal.donation]]></source>

@@ -12,7 +12,7 @@
 </p>
 
 <p>
-    {% if country.countryName(false) %}{% trans with { '%country%': country.countryName(false), '%currency%': currency.currency } %}supportUs.individual.location_currency{% endtrans %}{% else %}{% trans with { '%currency%': currency.currency } %}supportUs.individual.currency{% endtrans %}{% endif %}  (VAT {% if vatRate %}{{ vatRate }}% {% endif %}included)
+    {% if country.countryName(false) %}{% trans with { '%country%': country.countryName(false), '%currency%': currency.currency, '%contact%': path('ma_contact') } %}supportUs.individual.location_currency{% endtrans %}{% else %}{% trans with { '%currency%': currency.currency } %}supportUs.individual.currency{% endtrans %}{% endif %}  (VAT {% if vatRate %}{{ vatRate }}% {% endif %}included)
 </p>
 
 <p>Select a plan:</p>

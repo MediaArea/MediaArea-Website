@@ -54,6 +54,10 @@
         <source><![CDATA[menu.mediaarea.legal]]></source>
         <target><![CDATA[Legal]]></target>
       </trans-unit>
+      <trans-unit id="menu.mediaarea.contact" approved="yes">
+        <source><![CDATA[menu.mediaarea.contact]]></source>
+        <target><![CDATA[Contact us]]></target>
+      </trans-unit>
       <trans-unit id="219" approved="yes">
         <source><![CDATA[menu.mediainfo]]></source>
         <target><![CDATA[MediaInfo]]></target>

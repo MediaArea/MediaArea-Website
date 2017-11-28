@@ -865,7 +865,7 @@ ul.icons li {
 }
 
 /* User */
-#fos_user_registration_form .required:after, #fos_user_profile_form .required:after {
+#fos_user_registration_form .required:after, #fos_user_profile_form .required:after, #contact .required:after {
     content: " *";
 }
 
