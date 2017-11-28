@@ -25,7 +25,7 @@
     {% endif %}
 
     <p>
-        {% trans %}vote.list.missing.feature{% endtrans %}
+        {% trans with {'%contact%': path('ma_contact')} %}vote.list.missing.feature{% endtrans %}
     </p>
 </div>
 

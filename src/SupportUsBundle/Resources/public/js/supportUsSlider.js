@@ -136,7 +136,7 @@ var supportUs = (function () {
         $('#corporate-label').html(total.value);
 
         // Request quote
-        $('a.corporate-quote-btn').attr('href', 'mailto:info@mediaarea.net?Subject=Request%20quote%20for%20' + name +'%20(' + displayAmountWithCurrency(amount) + ')');
+        $('a.corporate-quote-btn').attr('href', Routing.generate('ma_contact', {sponsor: name, amount: displayAmountWithCurrency(amount) }));
     };
 
     var initIndividual = function(individualCurrency) {

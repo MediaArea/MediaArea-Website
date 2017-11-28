@@ -74,7 +74,7 @@ class OrdersController extends Controller
             $message .= 'You may also consider to pay with Paypal by credit card.<br>';
         }
 
-        $message .= '<a href="mailto:info@mediaarea.net">Contact us</a> if the problem persists.';
+        $message .= '<a href="'.$this->generateUrl('ma_contact').'">Contact us</a> if the problem persists.';
 
         $this->addFlash('danger', $message);
 

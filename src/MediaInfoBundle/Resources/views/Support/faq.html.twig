@@ -91,7 +91,7 @@
 
     <h3><a name="NoSupport"></a>{% trans %}support.faq.general.NoSupport.title{% endtrans %}</h3>
     <div class="paragraph-block">
-        {% trans %}support.faq.general.NoSupport.content{% endtrans %}
+        {% trans with {'%contact%': path('ma_contact')} %}support.faq.general.NoSupport.content{% endtrans %}
     </div>
 
     <h3><a name="YouShould"></a>{% trans %}support.faq.general.YouShould.title{% endtrans %}</h3>

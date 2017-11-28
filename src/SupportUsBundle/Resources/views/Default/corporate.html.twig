@@ -44,7 +44,7 @@
 
 <div class="form-group">
     <div class="col-sm-12">
-        <a class="btn btn-default btn-lg btn-block corporate-quote-btn btn-support" href="mailto:info@mediaarea.net?Subject=Request%20quote%20for%20sponsor">Contact us for a formal quote</a>
+        <a class="btn btn-default btn-lg btn-block corporate-quote-btn btn-support" href="{{ path('ma_contact', {sponsor: 'Bronze Sponsor', amount: corporate.localizedAmountWithCurrency(3000, currency.currency) })}}">Contact us for a formal quote</a>
     </div>
 </div>
 {% endblock %}

@@ -119,7 +119,7 @@
     {% trans %}about.analyticals.content{% endtrans %}
 
     <h2>{% trans %}about.features.title{% endtrans %}</h2>
-    {% trans with {'%supportFormatRoute%': path('mi_support_formats')} %}about.features.content{% endtrans %}
+    {% trans with {'%supportFormatRoute%': path('mi_support_formats'), '%contact%': path('ma_contact')} %}about.features.content{% endtrans %}
 
     <h2>{% trans %}about.license.title{% endtrans %}</h2>
     {% trans with {'%licenseRoute%': path('mi_license')} %}about.license.content{% endtrans %}

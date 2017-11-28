@@ -9,5 +9,5 @@
 {% trans with {'%supportFaqRoute%': path('mi_support_faq'), '%supportFormatRoute%': path('mi_support_formats'), '%supportTagsRoute%': path('mi_support_tags'), '%supportSdkRoute%': path('mi_support_sdk'), '%supportBuildRoute%': path('mi_support_build') } %}support.content{% endtrans %}
 
 <a name="pro"></a><h1>{% trans %}support.pro.title{% endtrans %}</h1>
-{% trans %}support.pro.content{% endtrans %}
+{% trans with {'%contact%': path('ma_contact')} %}support.pro.content{% endtrans %}
 {% endblock %}

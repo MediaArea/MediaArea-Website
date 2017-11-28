@@ -18,6 +18,21 @@ class ContactController extends Controller
     public function indexAction(Request $request)
     {
         $contact = new Contact();
+
+        if ('GET' === $request->getMethod() && $request->get('sponsor') && $request->get('amount')) {
+            $contact
+                ->setSubject(sprintf(
+                    'Request quote for %s (%s)',
+                    htmlspecialchars($request->get('sponsor')),
+                    htmlspecialchars($request->get('amount'))
+                ))
+                ->setMessage(sprintf(
+                    "I'm interested in becoming a MediaArea sponsor.\n\nPlease send me a quote of %s to become a %s.",
+                    htmlspecialchars($request->get('amount')),
+                    htmlspecialchars($request->get('sponsor'))
+                ));
+        }
+
         $form = $this->createForm(ContactType::class, $contact);
         $form->handleRequest($request);
 
@@ -25,11 +40,15 @@ class ContactController extends Controller
             $contact = $form->getData();
 
             $message = (new \Swift_Message())
-                ->setSubject('[web] '.$contact->getSubject())
+                ->setSubject($contact->getSubject())
                 ->setFrom([$contact->getEmail() => $contact->getName()])
                 ->setTo('info@mediaarea.net')
                 ->setBody(
-                    ($contact->getCompany() ? 'Company: '.$contact->getCompany()."\n\n" : '').$contact->getMessage(),
+                    sprintf(
+                        "Source: web\n%s\n%s",
+                        $contact->getCompany() ? 'Company: '.$contact->getCompany()."\n" : '',
+                        $contact->getMessage()
+                    ),
                     'text/plain'
                 );
             $this->get('mailer')->send($message);
