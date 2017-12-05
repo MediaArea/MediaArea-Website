@@ -273,4 +273,23 @@ class Invoice
     {
         return $this->paymentInstruction->getPaymentSystemName();
     }
+
+    /**
+     * Get short payment system name.
+     *
+     * @return string
+     */
+    public function getShortPaymentSystemName()
+    {
+        switch ($this->paymentInstruction->getPaymentSystemName()) {
+            case 'paypal_express_checkout':
+                return 'Paypal';
+            break;
+            case 'stripe_credit_card':
+                return 'Stripe';
+            break;
+            default:
+                return $this->paymentInstruction->getPaymentSystemName();
+        }
+    }
 }
