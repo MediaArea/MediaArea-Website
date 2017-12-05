@@ -30,7 +30,7 @@ easy_admin:
 
         Invoice:
             class: PaymentBundle\Entity\Invoice
-            disabled_actions: ['new', 'show', 'edit', 'delete']
+            disabled_actions: ['new', 'show', 'delete']
             search:
                 fields: ['user', 'amount', 'vat', 'currency', 'ipAddress', 'country', 'date']
             list:
@@ -42,7 +42,10 @@ easy_admin:
                     - 'ipAddress'
                     - 'country'
                     - 'date'
-                    - { property: 'PaymentSystemName', label: 'Payment system' }
+                    - { property: 'ShortPaymentSystemName', label: 'Payment' }
+            form:
+                fields:
+                    - 'user'
 
         Feature:
             class: VoteBundle\Entity\Feature
