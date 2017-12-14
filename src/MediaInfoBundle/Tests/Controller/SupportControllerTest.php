@@ -1,6 +1,6 @@
 <?php
 
-namespace Tests\MediaInfoBundle\Controller;
+namespace MediaInfoBundle\Tests\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 
