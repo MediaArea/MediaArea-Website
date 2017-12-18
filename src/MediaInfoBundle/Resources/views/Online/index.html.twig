@@ -1,0 +1,88 @@
+{% extends 'MediaInfoBundle::base.html.twig' %}
+
+{% block title %}{% trans %}mediainfoonline.page.title{% endtrans %}{% endblock %}
+{% block description %}{% trans %}mediainfoonline.page.description{% endtrans %}{% endblock %}
+{% block keywords %}{% trans %}mediainfoonline.page.keywords{% endtrans %}{% endblock %}
+
+{% block body %}
+<h1>{% trans %}mediainfoonline.title{% endtrans %}</h1>
+
+<p>
+    {% trans %}mediainfoonline.about{% endtrans %}
+</p>
+<p>
+    {% trans %}mediainfoonline.help{% endtrans %}
+</p>
+
+<div class="mediainfo-loader">
+    <span>{% trans %}mediainfoonline.loading{% endtrans %}</span>
+</div>
+<div class="mediainfo-container hidden">
+    <div class="mediainfo-file-drop" draggable="true">
+        <p>
+            {% trans %}mediainfoonline.drop.help{% endtrans %}
+        </p>
+        <p>
+            <input type="file" id="mediainfo-file-input" />
+        </p>
+    </div>
+    <p>
+        <div class="row">
+            <div class="col-md-7">
+                {% trans %}mediainfoonline.output{% endtrans %} <select id="mediainfo-format-list" class="form-control"></select>
+            </div>
+            <div class="col-md-5">
+                <div class="btn-group mediainfo-format-list-download-container hidden">
+                    <button class="btn btn-primary mediainfo-format-list-download">Download MediaInfo report</button>
+                    <button class="btn btn-primary dropdown-toggle mediainfo-format-list-download-format" data-toggle="dropdown"><span class="caret"></span></button>
+                    <ul class="dropdown-menu col-md-12"></ul>
+                </div>
+            </div>
+        </div>
+    </p>
+    <p class="mediainfo-report-filename-container hidden">{% trans %}mediainfoonline.analyzed.filename{% endtrans %} "<span class="mediainfo-report-filename"></span>" :</p>
+    <div class="mediainfo-report-container hidden"><pre><code id="mediainfo-report"></code></pre></div>
+    <div class="mediainfo-report-error alert alert-danger hidden"></div>
+</div>
+{% endblock %}
+
+{% block stylesheets %}
+{% stylesheets
+    '@MediaInfoBundle/Resources/public/css/mediainfoonline.css'
+    '@MediaInfoBundle/Resources/public/css/highlight.css'
+    filter='?scssphp' output='css/mediainfoonline.css'
+ %}
+    <link rel="stylesheet" href="{{ asset_url }}" />
+{% endstylesheets %}
+{% endblock %}
+
+{% block javascripts %}
+{% javascripts
+    '@MediaInfoBundle/Resources/public/js/mediainfoonline.js'
+    '@MediaInfoBundle/Resources/public/js/FileSaver.min.js'
+    '@MediaInfoBundle/Resources/public/js/highlight.pack.js'
+    filter='?jsqueeze' output='js/mediainfoonline.js'
+ %}
+<script type="text/javascript" src="{{ asset_url }}"></script>
+{% endjavascripts %}
+<script>
+$(document).ready(function() {
+    var mediainfoSrc = '/_/js/MediaInfo.js';
+    var mediainfoMemSrc = '/_/js/MediaInfo.js.mem';
+
+    (function() {
+      var script = document.createElement('script');
+      script.src = mediainfoSrc;
+      script.type = 'text/javascript';
+      script.async = 'true';
+      script.onload = script.onreadystatechange = function() {
+        var rs = script.readyState;
+        if (rs && rs != 'complete' && rs != 'loaded') return;
+        try { test = MediaInfoOnline(); test.init(mediainfoMemSrc); } catch (e) {}
+      };
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(script, s);
+    })();
+});
+</script>
+{% endblock %}

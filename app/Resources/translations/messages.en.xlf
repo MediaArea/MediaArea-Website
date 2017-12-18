@@ -18,6 +18,10 @@
         <source><![CDATA[menu.donate]]></source>
         <target><![CDATA[Donate to MediaInfo]]></target>
       </trans-unit>
+      <trans-unit id="mediainfoonline" approved="yes">
+        <source><![CDATA[menu.mediainfoonline]]></source>
+        <target><![CDATA[MediaInfoOnline]]></target>
+      </trans-unit>
       <trans-unit id="5" approved="yes">
         <source><![CDATA[menu.support]]></source>
         <target><![CDATA[Support]]></target>

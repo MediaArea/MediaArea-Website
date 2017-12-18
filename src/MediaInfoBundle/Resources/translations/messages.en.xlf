@@ -982,6 +982,46 @@ Don't hesitate to <a href="%contact%">contact us</a> if you're interested in con
         <source><![CDATA[about.download.otherOS]]></source>
         <target><![CDATA[Other Operating Systems]]></target>
       </trans-unit>
+      <trans-unit id="mediainfoonline.page.title" approved="yes">
+        <source><![CDATA[mediainfoonline.page.title]]></source>
+        <target><![CDATA[MediaInfoOnline - Use MediaInfo in your browser]]></target>
+      </trans-unit>
+      <trans-unit id="mediainfoonline.page.description" approved="yes">
+        <source><![CDATA[mediainfoonline.page.description]]></source>
+        <target><![CDATA[MediaInfoOnline allo you to use MediaInfo in your browser without installing any software on your computer]]></target>
+      </trans-unit>
+      <trans-unit id="mediainfoonline.page.keywords" approved="yes">
+        <source><![CDATA[mediainfoonline.page.keywords]]></source>
+        <target><![CDATA[MediaInfoOnline MediaInfo install online analyze metadata browser]]></target>
+      </trans-unit>
+      <trans-unit id="mediainfoonline.title" approved="yes">
+        <source><![CDATA[mediainfoonline.title]]></source>
+        <target><![CDATA[MediaInfoOnline - MediaInfo in your browser!]]></target>
+      </trans-unit>
+      <trans-unit id="mediainfoonline.about" approved="yes">
+        <source><![CDATA[mediainfoonline.about]]></source>
+        <target><![CDATA[MediaInfoOnline allows you to use MediaInfo in your browser without installing any software on your computer. Your information is kept safe because everything stays on your machine (nothing is uploaded to our servers).]]></target>
+      </trans-unit>
+      <trans-unit id="mediainfoonline.help" approved="yes">
+        <source><![CDATA[mediainfoonline.help]]></source>
+        <target><![CDATA[To get metadata of your files simply drag and drop a file in the box below and the MediaInfo report will be displayed in a few seconds.]]></target>
+      </trans-unit>
+      <trans-unit id="mediainfoonline.loading" approved="yes">
+        <source><![CDATA[mediainfoonline.loading]]></source>
+        <target><![CDATA[Please wait while MediaInfo is loading...]]></target>
+      </trans-unit>
+      <trans-unit id="mediainfoonline.drop.help" approved="yes">
+        <source><![CDATA[mediainfoonline.drop.help]]></source>
+        <target><![CDATA[Drop your file here or select one below.]]></target>
+      </trans-unit>
+      <trans-unit id="mediainfoonline.output" approved="yes">
+        <source><![CDATA[mediainfoonline.output]]></source>
+        <target><![CDATA[Select the MediaInfo output : ]]></target>
+      </trans-unit>
+      <trans-unit id="mediainfoonline.analyzed.filename" approved="yes">
+        <source><![CDATA[mediainfoonline.analyzed.filename]]></source>
+        <target><![CDATA[MediaInfo report of]]></target>
+      </trans-unit>
     </body>
   </file>
 </xliff>
