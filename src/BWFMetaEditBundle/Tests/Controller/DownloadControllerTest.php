@@ -14,6 +14,14 @@ class DownloadControllerTest extends WebTestCase
         $this->assertEquals(200, $client->getResponse()->getStatusCode());
     }
 
+    public function testFlatpak()
+    {
+        $client = static::createClient();
+
+        $client->request('GET', '/BWFMetaEdit/Download/Flatpak');
+        $this->assertEquals(200, $client->getResponse()->getStatusCode());
+    }
+
     public function testArch()
     {
         $client = static::createClient();

@@ -64,6 +64,20 @@ class DownloadController extends Controller
 
     /**
      * @Route(
+     *     "/{_locale}/MediaInfo/Download/Flatpak",
+     *     name="mi_download_flatpak",
+     *     requirements={"_locale": "%app.locales%"
+     *     }
+     * )
+     * @Template()
+     */
+    public function flatpakAction()
+    {
+        return array();
+    }
+
+    /**
+     * @Route(
      *     "/{_locale}/MediaInfo/Download/Debian",
      *     name="mi_download_debian",
      *     requirements={"_locale": "%app.locales%"

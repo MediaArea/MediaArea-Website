@@ -12,6 +12,7 @@ class BWFMetaEditDownloadInfo extends AbstractDownloadInfo
         'CentOS' => array('name' => 'CentOS', 'route' => 'bwf_download_centos'),
         'Debian' => array('name' => 'Debian', 'route' => 'bwf_download_debian'),
         'Fedora' => array('name' => 'Fedora', 'route' => 'bwf_download_fedora'),
+        'Flatpak' => array('name' => 'Flatpak', 'route' => 'bwf_download_flatpak'),
         'Kubuntu' => array('name' => 'Ubuntu', 'route' => 'bwf_download_ubuntu'),
         'Lubuntu' => array('name' => 'Ubuntu', 'route' => 'bwf_download_ubuntu'),
         'Mac' => array('name' => 'macOS', 'route' => 'bwf_download_mac'),
