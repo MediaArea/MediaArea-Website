@@ -40,6 +40,9 @@
                     <button class="btn btn-primary dropdown-toggle mediainfo-format-list-download-format" data-toggle="dropdown"><span class="caret"></span></button>
                     <ul class="dropdown-menu col-md-12"></ul>
                 </div>
+                <div class="pull-right mediainfo-copy-to-clipboard-container hidden">
+                    <button class="btn btn-primary mediainfo-copy-to-clipboard" data-toggle="tooltip" data-placement="bottom" title="Copied to clipboard">Copy to clipboard</button>
+                </div>
             </div>
         </div>
     </p>
@@ -64,6 +67,7 @@
     '@MediaInfoBundle/Resources/public/js/mediainfoonline.js'
     '@MediaInfoBundle/Resources/public/js/FileSaver.min.js'
     '@MediaInfoBundle/Resources/public/js/highlight.pack.js'
+    '@MediaInfoBundle/Resources/public/js/clipboard.min.js'
     filter='?jsqueeze' output='js/mediainfoonline.js'
  %}
 <script type="text/javascript" src="{{ asset_url }}"></script>
