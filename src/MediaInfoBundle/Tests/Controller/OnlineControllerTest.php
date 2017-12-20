@@ -2,25 +2,15 @@
 
 namespace MediaInfoBundle\Tests\Controller;
 
-use UserBundle\Tests\Controller\UserAbstractControllerTest;
+use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 
-class OnlineControllerTest extends UserAbstractControllerTest
+class OnlineControllerTest extends WebTestCase
 {
     public function testIndex()
     {
-        // User not loggued in (beta period)
         $client = static::createClient();
-        $client->request('GET', '/MediaInfoOnline');
-        $this->assertEquals(302, $client->getResponse()->getStatusCode());
-
-        // User loggued in without ROLE_BETA
-        $client = $this->createRegularUserClient();
-        $client->request('GET', '/MediaInfoOnline');
-        $this->assertEquals(403, $client->getResponse()->getStatusCode());
-
-        // User loggued in with ROLE_BETA
-        $client = $this->createBetaUserClient();
-        $client->request('GET', '/MediaInfoOnline');
+        $crawler = $client->request('GET', '/MediaInfoOnline');
         $this->assertEquals(200, $client->getResponse()->getStatusCode());
+        $this->assertEquals('MediaInfoOnline - MediaInfo in your browser!', $crawler->filter('h1')->text());
     }
 }
