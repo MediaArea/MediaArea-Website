@@ -984,7 +984,7 @@ Don't hesitate to <a href="%contact%">contact us</a> if you're interested in con
       </trans-unit>
       <trans-unit id="mediainfoonline.page.title" approved="yes">
         <source><![CDATA[mediainfoonline.page.title]]></source>
-        <target><![CDATA[MediaInfoOnline - Use MediaInfo in your browser]]></target>
+        <target><![CDATA[MediaInfoOnline - MediaInfo in your browser]]></target>
       </trans-unit>
       <trans-unit id="mediainfoonline.page.description" approved="yes">
         <source><![CDATA[mediainfoonline.page.description]]></source>
@@ -1001,6 +1001,10 @@ Don't hesitate to <a href="%contact%">contact us</a> if you're interested in con
       <trans-unit id="mediainfoonline.about" approved="yes">
         <source><![CDATA[mediainfoonline.about]]></source>
         <target><![CDATA[MediaInfoOnline allows you to use MediaInfo in your browser without installing any software on your computer. Your information is kept safe because everything stays on your machine (nothing is uploaded to our servers).]]></target>
+      </trans-unit>
+      <trans-unit id="mediainfoonline.tp" approved="yes">
+        <source><![CDATA[mediainfoonline.tp]]></source>
+        <target><![CDATA[MediaInfoOnline is provided for now as a technology preview, please <a href="%contact%">contact us</a> if you find an error or if you have suggestions.]]></target>
       </trans-unit>
       <trans-unit id="mediainfoonline.help" approved="yes">
         <source><![CDATA[mediainfoonline.help]]></source>
