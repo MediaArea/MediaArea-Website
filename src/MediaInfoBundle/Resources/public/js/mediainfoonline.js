@@ -65,6 +65,27 @@ var MediaInfoOnline = (function () {
             }
         });
 
+        // Copy to clipboard
+        var clipboard = new Clipboard('.mediainfo-copy-to-clipboard', {
+            text: function() {
+                if (processing) {
+                    MI.Option('Inform', $('#mediainfo-format-list').val());
+                    return MI.Inform();
+                }
+
+                return false;
+            }
+        });
+        $('.mediainfo-copy-to-clipboard').tooltip({trigger: 'manual'});
+
+        // Display tooltip on copy
+        clipboard.on('success', function() {
+            $('.mediainfo-copy-to-clipboard').tooltip('show');
+            setTimeout(function() {
+                $('.mediainfo-copy-to-clipboard').tooltip('hide');
+            }, 2000);
+        });
+
         // File input
         $('#mediainfo-file-input').on('change', function() {
             var input = $(this)[0];
@@ -131,6 +152,7 @@ var MediaInfoOnline = (function () {
         displayReport(mime);
         $('.mediainfo-report-container').removeClass('hidden');
         $('.mediainfo-format-list-download-container').removeClass('hidden');
+        $('.mediainfo-copy-to-clipboard-container').removeClass('hidden');
     };
 
     // Change output format
@@ -214,6 +236,7 @@ var MediaInfoOnline = (function () {
         $('.mediainfo-report-error').text(error);
         $('.mediainfo-report-container').addClass('hidden');
         $('.mediainfo-format-list-download-container').addClass('hidden');
+        $('.mediainfo-copy-to-clipboard-container').addClass('hidden');
         $('.mediainfo-report-filename-container').addClass('hidden');
         $('.mediainfo-report-error').removeClass('hidden')
     };
