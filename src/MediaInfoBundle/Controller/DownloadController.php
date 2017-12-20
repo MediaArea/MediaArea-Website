@@ -288,6 +288,20 @@ class DownloadController extends Controller
 
     /**
      * @Route(
+     *     "/{_locale}/MediaInfo/Download/JavaScript",
+     *     name="mi_download_javascript",
+     *     requirements={"_locale": "%app.locales%"
+     *     }
+     * )
+     * @Template()
+     */
+    public function javascriptAction()
+    {
+        return array();
+    }
+
+    /**
+     * @Route(
      *     "/{_locale}/MediaInfo/Download/Source",
      *     name="mi_download_source",
      *     requirements={"_locale": "%app.locales%"
