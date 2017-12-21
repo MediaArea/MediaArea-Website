@@ -59,9 +59,7 @@ class MenuBuilder
             ->addChild('menu.download.source', ['route' => 'mi_download_source']);
         $menu['menu.mediainfo']->addChild('menu.screenshots', ['route' => 'mi_screenshots']);
         $menu['menu.mediainfo']->addChild('menu.donate', ['route' => 'mi_donate']);
-        if ($this->authChecker->isGranted('ROLE_BETA')) {
-            $menu['menu.mediainfo']->addChild('menu.mediainfoonline', ['route' => 'mi_online']);
-        }
+        $menu['menu.mediainfo']->addChild('menu.mediainfoonline', ['route' => 'mi_online']);
         $menu['menu.mediainfo']
             ->addChild('menu.support', ['route' => 'mi_support'])->setDisplayChildren(false)
             ->addChild('menu.support.faq', ['route' => 'mi_support_faq'])
