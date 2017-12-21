@@ -5,7 +5,21 @@
         <link>https://mediaarea.net/MediaConch/</link>
         <description>MediaConch updates feed</description>
         <language>en-us</language>
-        <lastBuildDate>Wed, 22 Nov 2017 14:00:00 +0000</lastBuildDate>
+        <lastBuildDate>Thu, 21 Dec 2017 12:00:00 +0000</lastBuildDate>
+          <item>
+            <title>MediaConch 17.12</title>
+            <description>
+                <![CDATA[Endianness and Sign report for PCM Matroska tracks<br>
+                    Support of external time code tracks (.qtc) in MOV<br>
+                    Support of file names >64 chars long or non ASCII for referenced files in MOV<br>
+                    JPEG 2000: Support of IMF profiles<br>
+                    Fixed wrong color range info Matroska<br>
+                    I630, "Input is not proper UTF-8" message with some MOV files]]>
+            </description>
+            <link>https://mediaarea.net/MediaConch/download.html</link>
+            <pubDate>Thu, 21 Dec 2017 12:00:00 +0000</pubDate>
+            <guid>MediaConch-17.12</guid>
+          </item>
           <item>
             <title>MediaConch 17.11</title>
             <description>
