@@ -171,6 +171,14 @@ class DownloadControllerTest extends WebTestCase
         $this->assertEquals(200, $client->getResponse()->getStatusCode());
     }
 
+    public function testJavascript()
+    {
+        $client = static::createClient();
+
+        $client->request('GET', '/en/MediaInfo/Download/JavaScript');
+        $this->assertEquals(200, $client->getResponse()->getStatusCode());
+    }
+
     public function testSource()
     {
         $client = static::createClient();

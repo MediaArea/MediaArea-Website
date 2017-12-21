@@ -586,6 +586,10 @@ MediaInfo can be used in your own program without any difficulties, with a stati
         <source><![CDATA[download.table.unsupported_release]]></source>
         <target><![CDATA[unsupported]]></target>
       </trans-unit>
+      <trans-unit id="download.table.javascript_release" approved="yes">
+        <source><![CDATA[download.table.javascript_release]]></source>
+        <target><![CDATA[MediaInfoLib JavaScript Module]]></target>
+      </trans-unit>
       <trans-unit id="127" approved="yes">
         <source><![CDATA[download.table.source_release]]></source>
         <target><![CDATA[From source<br/>(for other distributions or/and CPU)]]></target>
@@ -737,6 +741,14 @@ MediaInfo can be used in your own program without any difficulties, with a stati
       <trans-unit id="160" approved="yes">
         <source><![CDATA[download.solaris.title]]></source>
         <target><![CDATA[Download - Solaris]]></target>
+      </trans-unit>
+      <trans-unit id="download.javascript.page.title" approved="yes">
+        <source><![CDATA[download.javascript.page.title]]></source>
+        <target><![CDATA[MediaInfo - Download MediaInfo JavaScript Module]]></target>
+      </trans-unit>
+      <trans-unit id="download.javascript.title" approved="yes">
+        <source><![CDATA[download.javascript.title]]></source>
+        <target><![CDATA[Download - JavaScript Module]]></target>
       </trans-unit>
       <trans-unit id="161" approved="yes">
         <source><![CDATA[download.source.page.title]]></source>

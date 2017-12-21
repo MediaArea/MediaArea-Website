@@ -55,6 +55,7 @@ class MenuBuilder
             ->addChild('menu.download.pclinuxos', ['route' => 'mi_download_pclinuxos'])
             ->addChild('menu.download.slackware', ['route' => 'mi_download_slackware'])
             ->addChild('menu.download.flatpak', ['route' => 'mi_download_flatpak'])
+            ->addChild('menu.download.javascript', ['route' => 'mi_download_javascript'])
             ->addChild('menu.download.source', ['route' => 'mi_download_source']);
         $menu['menu.mediainfo']->addChild('menu.screenshots', ['route' => 'mi_screenshots']);
         $menu['menu.mediainfo']->addChild('menu.donate', ['route' => 'mi_donate']);
