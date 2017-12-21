@@ -610,6 +610,14 @@ MediaInfo can be used in your own program without any difficulties, with a stati
         <source><![CDATA[download.appimage.title]]></source>
         <target><![CDATA[Download - AppImage]]></target>
       </trans-unit>
+      <trans-unit id="download.flatpak.page.title" approved="yes">
+        <source><![CDATA[download.flatpak.page.title]]></source>
+        <target><![CDATA[MediaInfo - Download MediaInfo Flatpak]]></target>
+      </trans-unit>
+      <trans-unit id="download.flatpak.title" approved="yes">
+        <source><![CDATA[download.flatpak.title]]></source>
+        <target><![CDATA[Download - Flatpak]]></target>
+      </trans-unit>
       <trans-unit id="133" approved="yes">
         <source><![CDATA[download.arch.page.title]]></source>
         <target><![CDATA[MediaInfo - Download MediaInfo for Arch Linux]]></target>

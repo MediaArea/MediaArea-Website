@@ -46,6 +46,18 @@ class DownloadController extends Controller
 
     /**
      * @Route(
+     *     "/BWFMetaEdit/Download/Flatpak",
+     *     name="bwf_download_flatpak"
+     * )
+     * @Template()
+     */
+    public function flatpakAction()
+    {
+        return array();
+    }
+
+    /**
+     * @Route(
      *     "/BWFMetaEdit/Download/Debian",
      *     name="bwf_download_debian"
      * )
