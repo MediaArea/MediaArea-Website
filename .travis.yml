@@ -24,7 +24,7 @@ cache:
         - $HOME/.composer/cache
 
 before_install:
-  - phpenv config-rm xdebug.ini
+  - phpenv config-rm xdebug.ini || true
   - cp app/config/parameters.yml.travis app/config/parameters.yml
   - mysql -e 'CREATE DATABASE IF NOT EXISTS travis;'
 
