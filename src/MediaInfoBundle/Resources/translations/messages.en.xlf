@@ -1008,11 +1008,11 @@ Don't hesitate to <a href="%contact%">contact us</a> if you're interested in con
       </trans-unit>
       <trans-unit id="mediainfoonline.page.description" approved="yes">
         <source><![CDATA[mediainfoonline.page.description]]></source>
-        <target><![CDATA[MediaInfoOnline allo you to use MediaInfo in your browser without installing any software on your computer]]></target>
+        <target><![CDATA[MediaInfoOnline is an online file analyzer that allows you to use MediaInfo in your browser without installing any software on your computer]]></target>
       </trans-unit>
       <trans-unit id="mediainfoonline.page.keywords" approved="yes">
         <source><![CDATA[mediainfoonline.page.keywords]]></source>
-        <target><![CDATA[MediaInfoOnline MediaInfo install online analyze metadata browser]]></target>
+        <target><![CDATA[MediaInfoOnline MediaInfo online file analyzer metadata parser browser]]></target>
       </trans-unit>
       <trans-unit id="mediainfoonline.title" approved="yes">
         <source><![CDATA[mediainfoonline.title]]></source>
