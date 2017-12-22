@@ -31,23 +31,21 @@
             <input type="file" id="mediainfo-file-input" />
         </p>
     </div>
-    <p>
-        <div class="row">
-            <div class="col-md-7">
-                {% trans %}mediainfoonline.output{% endtrans %} <select id="mediainfo-format-list" class="form-control"></select>
+    <div class="row">
+        <div class="col-md-7 col-sm-12">
+            {% trans %}mediainfoonline.output{% endtrans %} <select id="mediainfo-format-list" class="form-control"></select>
+        </div>
+        <div class="col-md-5 col-sm-12">
+            <div class="btn-group mediainfo-format-list-download-container hidden">
+                <button class="btn btn-primary mediainfo-format-list-download">Download MediaInfo report</button>
+                <button class="btn btn-primary dropdown-toggle mediainfo-format-list-download-format" data-toggle="dropdown"><span class="caret"></span></button>
+                <ul class="dropdown-menu col-md-12"></ul>
             </div>
-            <div class="col-md-5">
-                <div class="btn-group mediainfo-format-list-download-container hidden">
-                    <button class="btn btn-primary mediainfo-format-list-download">Download MediaInfo report</button>
-                    <button class="btn btn-primary dropdown-toggle mediainfo-format-list-download-format" data-toggle="dropdown"><span class="caret"></span></button>
-                    <ul class="dropdown-menu col-md-12"></ul>
-                </div>
-                <div class="pull-right mediainfo-copy-to-clipboard-container hidden">
-                    <button class="btn btn-primary mediainfo-copy-to-clipboard" data-toggle="tooltip" data-placement="bottom" title="Copied to clipboard">Copy to clipboard</button>
-                </div>
+            <div class="pull-right mediainfo-copy-to-clipboard-container hidden">
+                <button class="btn btn-primary mediainfo-copy-to-clipboard" data-toggle="tooltip" data-placement="bottom" title="Copied to clipboard">Copy to clipboard</button>
             </div>
         </div>
-    </p>
+    </div>
     <p class="mediainfo-report-filename-container hidden">{% trans %}mediainfoonline.analyzed.filename{% endtrans %} "<span class="mediainfo-report-filename"></span>" :</p>
     <div class="mediainfo-report-container hidden"><pre><code id="mediainfo-report"></code></pre></div>
     <div class="mediainfo-report-error alert alert-danger hidden"></div>
@@ -56,7 +54,7 @@
 
 {% block head %}
 <!--preload:{{ preload(MIJS, { as: 'script', nopush: true }) }}-->
-<!--preload:{{ preload(MIJS ~ '.mem', { as: 'script', nopush: true }) }}-->
+<!--prefetch:{{ prefetch(MIJS ~ '.mem', { as: 'script', nopush: true }) }}-->
 {% endblock %}
 
 {% block stylesheets %}
@@ -65,7 +63,7 @@
     '@MediaInfoBundle/Resources/public/css/highlight.css'
     filter='?scssphp' output='css/mediainfoonline.css'
  %}
-    <link rel="stylesheet" href="{{ preload(asset_url, {nopush: true}) }}" />
+    <link rel="stylesheet" href="{{ preload(asset_url, { as: 'style', nopush: true }) }}" />
 {% endstylesheets %}
 {% endblock %}
 
@@ -77,26 +75,25 @@
     '@MediaInfoBundle/Resources/public/js/clipboard.min.js'
     filter='?jsqueeze' output='js/mediainfoonline.js'
  %}
-<script type="text/javascript" src="{{ preload(asset_url, {nopush: true}) }}"></script>
+<script type="text/javascript" src="{{ preload(asset_url, { as: 'script', nopush: true }) }}"></script>
 {% endjavascripts %}
 <script>
-$(document).ready(function() {
-    var mediainfoSrc = '{{ MIJS }}';
-    var mediainfoMemSrc = '{{ MIJS }}.mem';
+var mediainfoSrc = '{{ MIJS }}';
+var mediainfoMemSrc = '{{ MIJS }}.mem';
 
-    (function() {
-      var script = document.createElement('script');
-      script.src = mediainfoSrc;
-      script.type = 'text/javascript';
-      script.async = 'true';
-      script.onload = script.onreadystatechange = function() {
-        var rs = script.readyState;
-        if (rs && rs != 'complete' && rs != 'loaded') return;
-        try { test = MediaInfoOnline(); test.init(mediainfoMemSrc); } catch (e) {}
-      };
-      var s = document.getElementsByTagName('script')[0];
-      s.parentNode.insertBefore(script, s);
-    })();
-});
+var script = document.createElement('script');
+script.src = mediainfoSrc;
+script.type = 'text/javascript';
+script.async = 'true';
+script.onload = script.onreadystatechange = function() {
+    var rs = script.readyState;
+    if (rs && rs != 'complete' && rs != 'loaded') return;
+    try {
+        var mediainfo = MediaInfoOnline();
+        mediainfo.init(mediainfoMemSrc);
+    } catch (e) {}
+};
+var s = document.getElementsByTagName('script')[0];
+s.parentNode.insertBefore(script, s);
 </script>
 {% endblock %}

@@ -14,22 +14,24 @@ var MediaInfoOnline = (function () {
 
     // Page init
     var initPage = function() {
-        // Format list
-        var formatList = JSON.parse(MediaInfoModule.MediaInfo.Option_Static('Info_OutputFormats_JSON'));
-        $.each(formatList.output, function(key, format) {
-            // Change format list
-            $('#mediainfo-format-list').append($('<option>', { value: format.name, mime: format.mime }).text(format.desc));
+        $(document).ready(function() {
+            // Format list
+            var formatList = JSON.parse(MediaInfoModule.MediaInfo.Option_Static('Info_OutputFormats_JSON'));
+            $.each(formatList.output, function(key, format) {
+                // Change format list
+                $('#mediainfo-format-list').append($('<option>', { value: format.name, mime: format.mime }).text(format.desc));
 
-            // Download format list
-            $('.mediainfo-format-list-download-container ul').append(
-                '<li data-format="' + format.name + '" data-mime="' + format.mime + '"><a href="#">' + format.desc + '</a></li>'
-            );
+                // Download format list
+                $('.mediainfo-format-list-download-container ul').append(
+                    '<li data-format="' + format.name + '" data-mime="' + format.mime + '"><a href="#">' + format.desc + '</a></li>'
+                );
+            });
+
+            bindings();
+
+            $('div.mediainfo-loader').remove();
+            $('div.mediainfo-container').removeClass('hidden');
         });
-
-        bindings();
-
-        $('div.mediainfo-loader').remove();
-        $('div.mediainfo-container').removeClass('hidden');
     };
 
     var bindings = function() {
