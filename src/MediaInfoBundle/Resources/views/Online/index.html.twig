@@ -31,23 +31,21 @@
             <input type="file" id="mediainfo-file-input" />
         </p>
     </div>
-    <p>
-        <div class="row">
-            <div class="col-md-7">
-                {% trans %}mediainfoonline.output{% endtrans %} <select id="mediainfo-format-list" class="form-control"></select>
+    <div class="row">
+        <div class="col-md-7 col-sm-12">
+            {% trans %}mediainfoonline.output{% endtrans %} <select id="mediainfo-format-list" class="form-control"></select>
+        </div>
+        <div class="col-md-5 col-sm-12">
+            <div class="btn-group mediainfo-format-list-download-container hidden">
+                <button class="btn btn-primary mediainfo-format-list-download">Download MediaInfo report</button>
+                <button class="btn btn-primary dropdown-toggle mediainfo-format-list-download-format" data-toggle="dropdown"><span class="caret"></span></button>
+                <ul class="dropdown-menu col-md-12"></ul>
             </div>
-            <div class="col-md-5">
-                <div class="btn-group mediainfo-format-list-download-container hidden">
-                    <button class="btn btn-primary mediainfo-format-list-download">Download MediaInfo report</button>
-                    <button class="btn btn-primary dropdown-toggle mediainfo-format-list-download-format" data-toggle="dropdown"><span class="caret"></span></button>
-                    <ul class="dropdown-menu col-md-12"></ul>
-                </div>
-                <div class="pull-right mediainfo-copy-to-clipboard-container hidden">
-                    <button class="btn btn-primary mediainfo-copy-to-clipboard" data-toggle="tooltip" data-placement="bottom" title="Copied to clipboard">Copy to clipboard</button>
-                </div>
+            <div class="pull-right mediainfo-copy-to-clipboard-container hidden">
+                <button class="btn btn-primary mediainfo-copy-to-clipboard" data-toggle="tooltip" data-placement="bottom" title="Copied to clipboard">Copy to clipboard</button>
             </div>
         </div>
-    </p>
+    </div>
     <p class="mediainfo-report-filename-container hidden">{% trans %}mediainfoonline.analyzed.filename{% endtrans %} "<span class="mediainfo-report-filename"></span>" :</p>
     <div class="mediainfo-report-container hidden"><pre><code id="mediainfo-report"></code></pre></div>
     <div class="mediainfo-report-error alert alert-danger hidden"></div>
