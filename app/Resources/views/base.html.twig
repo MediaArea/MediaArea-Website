@@ -23,7 +23,7 @@
             'bundles/app/css/base.css'
             filter='cssrewrite' filter='?scssphp' output='css/main.css'
          %}
-            <link rel="stylesheet" href="{{ asset_url }}" type="text/css" media="all" />
+            <link rel="stylesheet" href="{{ preload(asset_url, { as: 'style', nopush: true }) }}" type="text/css" media="all" />
         {% endstylesheets %}
         {% block stylesheets %}{% endblock %}
         {% block javascriptshead %}{% endblock %}
@@ -121,7 +121,7 @@
             '@AppBundle/Resources/public/js/base.js'
             filter="?jsqueeze" output='js/main.js'
          %}
-            <script src="{{ asset_url }}"></script>
+            <script src="{{ preload(asset_url, { as: 'script', nopush: true }) }}"></script>
         {% endjavascripts %}
         {{ include('@App/socialShare.html.twig') }}
         {% block javascripts %}{% endblock %}
