@@ -42,6 +42,7 @@ class AppKernel extends Kernel
             new VoteBundle\VoteBundle(),
             new RAWcookedBundle\RAWcookedBundle(),
             new MediaConchBundle\MediaConchBundle(),
+            new MediaBinBundle\MediaBinBundle(),
         ];
 
         if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {

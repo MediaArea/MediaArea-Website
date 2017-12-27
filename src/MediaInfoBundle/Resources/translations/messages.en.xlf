@@ -1046,6 +1046,30 @@ Don't hesitate to <a href="%contact%">contact us</a> if you're interested in con
         <source><![CDATA[mediainfoonline.analyzed.filename]]></source>
         <target><![CDATA[MediaInfo report of]]></target>
       </trans-unit>
+      <trans-unit id="mediainfoonline.report.download" approved="yes">
+        <source><![CDATA[mediainfoonline.report.download]]></source>
+        <target><![CDATA[Download MediaInfo report]]></target>
+      </trans-unit>
+      <trans-unit id="mediainfoonline.report.copy" approved="yes">
+        <source><![CDATA[mediainfoonline.report.copy]]></source>
+        <target><![CDATA[Copy to clipboard]]></target>
+      </trans-unit>
+      <trans-unit id="mediainfoonline.report.copy.tooltip" approved="yes">
+        <source><![CDATA[mediainfoonline.report.copy.tooltip]]></source>
+        <target><![CDATA[Copied to clipboard]]></target>
+      </trans-unit>
+      <trans-unit id="mediainfoonline.mediabin.panel.title" approved="yes">
+        <source><![CDATA[mediainfoonline.mediabin.panel.title]]></source>
+        <target><![CDATA[MediaBin - Share your MediaInfo report]]></target>
+      </trans-unit>
+      <trans-unit id="mediainfoonline.mediabin.panel.content" approved="yes">
+        <source><![CDATA[mediainfoonline.mediabin.panel.content]]></source>
+        <target><![CDATA[MediaBin allow you to share your MediaInfo report.]]></target>
+      </trans-unit>
+      <trans-unit id="mediainfoonline.mediabin.user.not.login" approved="yes">
+        <source><![CDATA[mediainfoonline.mediabin.user.not.login]]></source>
+        <target><![CDATA[You are not logged in, you need to <a href="%login%">login</a> or <a href="%register%">register</a> to create and share a MediaBin.]]></target>
+      </trans-unit>
     </body>
   </file>
 </xliff>

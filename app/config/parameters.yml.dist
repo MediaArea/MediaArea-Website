@@ -25,4 +25,13 @@ parameters:
     jms_payment_paypal_username: ~
     jms_payment_paypal_password: ~
     jms_payment_paypal_signature: ~
-    
+
+    # MediaBin
+    mediabin_local_path: ~
+    mediabin_external_enabled: false
+    mediabin_external_openstack_auth_url: ~
+    mediabin_external_openstack_region: ~
+    mediabin_external_openstack_container: ~
+    mediabin_external_openstack_username: ~
+    mediabin_external_openstack_password: ~
+    mediabin_external_openstack_tenant_id: ~

@@ -1,0 +1,162 @@
+{% extends 'MediaBinBundle::base.html.twig' %}
+
+{% set MIJS = '/_/js/MediaInfo_20180314.js' %}
+{% set MIWASM = '/_/js/MediaInfoWasm_20180314' %}
+
+{% block title %}{% if bin.title %}{{ bin.title }} - {% endif %}{% trans %}mediabin.page.title{% endtrans %}{% endblock %}
+{% block description %}{% trans %}mediabin.page.description{% endtrans %}{% endblock %}
+{% block keywords %}{% trans %}mediabin.page.keywords{% endtrans %}{% endblock %}
+
+{% block body %}
+<h1>{% if bin.title %}{{ bin.title }} - {% endif %}MediaBin</h1>
+
+<div class="mediainfo-container">
+    {% if app.user and bin.user is not null and app.user == bin.user %}
+        <div class="panel panel-default mediabin-container">
+            <div class="panel-heading">
+                <h3 class="panel-title">
+                    <a data-toggle="collapse" data-target="#mediabin-panel" class="collapsed">{% trans %}mediabin.panel.title{% endtrans %}</a>
+                </h3>
+            </div>
+            <div id="mediabin-panel" class="panel-collapse collapse">
+                <div class="panel-body">
+                    <p>
+                        {% trans %}mediabin.panel.content{% endtrans %}
+                    </p>
+                    <div class="row">
+                        <div class="mediabin-create-container form-horizontal">
+                            {{ include('@MediaBin/Form/BinParamsForm.html.twig', {'bin': bin}, with_context = false) }}
+                            <div class="clearfix"></div>
+                            <div class="col-lg-4 col-md-6 mediabin-button-container">
+                                <button class="btn btn-primary mediabin-update{% if bin.hasExpired %} hidden{% endif %}">{% trans %}mediabin.update.button{% endtrans %}</button>
+                                <button class="btn btn-danger mediabin-delete{% if bin.hasExpired %} hidden{% endif %}">{% trans %}mediabin.delete.button{% endtrans %}</button>
+                                <button class="btn btn-warning mediabin-cancel{% if not bin.hasExpired %} hidden{% endif %}">{% trans %}mediabin.cancel.button{% endtrans %}</button>
+                            </div>
+                            <div class="col-lg-8 col-md-6 mediabin-url-copy-container">
+                                <label class="pull-left" for="mediabin-url-copy">{% trans %}mediabin.create.success.url{% endtrans %} </label>
+                                <div class="input-group">
+                                  <span class="input-group-btn">
+                                    <button class="btn btn-primary mediabin-url-copy-to-clipboard" data-clipboard-target="#mediabin-url-copy" data-container="body" type="button" data-toggle="tooltip" data-placement="bottom" title="Copied to clipboard"><span class="glyphicon glyphicon-copy" aria-hidden="true"></span> {% trans %}mediabin.create.success.copy{% endtrans %}</button>
+                                  </span>
+                                  <input type="text" id="mediabin-url-copy" class="form-control" value="{{ absolute_url(path('mediabin_show', {'hash': bin.hash})) }}" readonly>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 mediabin-alert mediabin-success hidden">
+                            <div class="alert alert-success" role="alert">
+                                    <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> {% trans %}mediabin.update.success{% endtrans %}
+                            </div>
+                        </div>
+                        <div class="col-sm-12 mediabin-alert mediabin-error hidden">
+                            <div class="alert alert-danger" role="alert">
+                                <span class="glyphicon glyphicon-remove text-danger" aria-hidden="true"></span> {% trans %}mediabin.update.error{% endtrans %}
+                            </div>
+                        </div>
+                        <div class="col-sm-12 mediabin-alert mediabin-delete-success hidden">
+                            <div class="alert alert-success" role="alert">
+                                    <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> {% trans %}mediabin.delete.success{% endtrans %}
+                            </div>
+                        </div>
+                        <div class="col-sm-12 mediabin-alert mediabin-delete-error hidden">
+                            <div class="alert alert-danger" role="alert">
+                                <span class="glyphicon glyphicon-remove text-danger" aria-hidden="true"></span> {% trans %}mediabin.delete.error{% endtrans %}
+                            </div>
+                        </div>
+                        <div class="col-sm-12 mediabin-alert mediabin-cancel-success hidden">
+                            <div class="alert alert-success" role="alert">
+                                    <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> {% trans %}mediabin.cancel.success{% endtrans %}
+                            </div>
+                        </div>
+                        <div class="col-sm-12 mediabin-alert mediabin-cancel-error hidden">
+                            <div class="alert alert-danger" role="alert">
+                                <span class="glyphicon glyphicon-remove text-danger" aria-hidden="true"></span> {% trans %}mediabin.cancel.error{% endtrans %}
+                            </div>
+                        </div>
+                        <div class="col-sm-12 mediabin-alert mediabin-reload hidden">
+                            <div class="alert alert-warning" role="alert">
+                                <span class="glyphicon glyphicon-warning-sign text-warning" aria-hidden="true"></span> {% trans with { '%url%': path('mediabin_show', {'hash': bin.hash}) } %}mediabin.reload{% endtrans %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endif %}
+
+    <div class="row mediainfo-tools-container-temp"></div>
+    <div class="row mediainfo-tools-container hidden">
+        <div class="col-lg-7 col-md-6">
+            {% trans %}mediainfoonline.output{% endtrans %} <select id="mediainfo-format-list" class="form-control"></select>
+        </div>
+        <div class="col-lg-5 col-md-6">
+            <div class="btn-group mediainfo-format-list-download-container hidden">
+                <button class="btn btn-primary mediainfo-format-list-download"><span class="glyphicon glyphicon-download" aria-hidden="true"></span> {% trans %}mediainfoonline.report.download{% endtrans %}</button>
+                <button class="btn btn-primary dropdown-toggle mediainfo-format-list-download-format" data-toggle="dropdown"><span class="caret"></span></button>
+                <ul class="dropdown-menu col-md-12"></ul>
+            </div>
+            <div class="pull-right mediainfo-copy-to-clipboard-container hidden">
+                <button class="btn btn-primary mediainfo-copy-to-clipboard" data-toggle="tooltip" data-placement="bottom" title="{% trans %}mediainfoonline.report.copy.tooltip{% endtrans %}"><span class="glyphicon glyphicon-copy" aria-hidden="true"></span> {% trans %}mediainfoonline.report.copy{% endtrans %}</button>
+            </div>
+        </div>
+    </div>
+    <div class="mediainfo-report-container">
+        <pre><code id="mediainfo-report" class="hljs">{{ report }}</code></pre>
+    </div>
+    <div class="mediainfo-report-error alert alert-danger hidden"></div>
+</div>
+
+{% endblock %}
+
+{% block head %}
+<!--preload:{{ preload(MIWASM ~ '.js', { as: 'script', nopush: true }) }}-->
+<!--prefetch:{{ prefetch(MIWASM ~ '.wasm', { as: 'script', nopush: true }) }}-->
+{% endblock %}
+
+{% block stylesheets %}
+{% stylesheets
+    '@MediaInfoBundle/Resources/public/css/mediainfoonline.css'
+    '@MediaInfoBundle/Resources/public/css/highlight.css'
+    filter='?scssphp' output='css/mediainfoonline.css'
+ %}
+    <link rel="stylesheet" href="{{ preload(asset_url, { as: 'style', nopush: true }) }}" />
+{% endstylesheets %}
+{% endblock %}
+
+{% block javascripts %}
+{% javascripts
+    '@MediaBinBundle/Resources/public/js/mediabin.js'
+    '@MediaInfoBundle/Resources/public/js/FileSaver.min.js'
+    '@MediaInfoBundle/Resources/public/js/highlight.pack.js'
+    '@MediaInfoBundle/Resources/public/js/clipboard.min.js'
+    filter='?jsqueeze' output='js/mediabin.js'
+ %}
+<script type="text/javascript" src="{{ preload(asset_url, { as: 'script', nopush: true }) }}"></script>
+{% endjavascripts %}
+
+<script>
+if (('WebAssembly' in window)) {
+    var mediainfoSrc = '{{ MIWASM }}.js';
+    var mediainfoMemSrc = '{{ MIWASM }}.wasm';
+} else {
+    var mediainfoSrc = '{{ MIJS }}';
+    var mediainfoMemSrc = '{{ MIJS }}.mem';
+}
+
+var script = document.createElement('script');
+script.src = mediainfoSrc;
+script.type = 'text/javascript';
+script.async = 'true';
+script.onload = script.onreadystatechange = function() {
+    var rs = script.readyState;
+    if (rs && rs != 'complete' && rs != 'loaded') return;
+    try {
+        var bin = MediaBin();
+        bin.init(mediainfoMemSrc, '{{ xml|e('js') }}', '{{ bin.title }}', '{{ bin.hash }}');
+    } catch (e) {}
+};
+var s = document.getElementsByTagName('script')[0];
+s.parentNode.insertBefore(script, s);
+</script>
+<script src="{{ asset('bundles/fosjsrouting/js/router.js') }}"></script>
+<script src="{{ path('fos_js_routing_js', { callback: 'fos.Router.setData' }) }}"></script>
+{% endblock %}

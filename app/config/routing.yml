@@ -29,6 +29,10 @@ ollistd:
     resource: "@OllistdBundle/Controller/"
     type:     annotation
 
+media_bin:
+    resource: "@MediaBinBundle/Controller/"
+    type:     annotation
+
 dv_analyzer:
     resource: "@DVAnalyzerBundle/Controller/"
     type:     annotation
