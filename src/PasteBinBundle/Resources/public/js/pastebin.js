@@ -1,14 +1,15 @@
-var MediaInfoOnline = (function () {
+var pastebin = (function () {
     var MediaInfoModule, MI, filename, processing = false, CHUNK_SIZE = 1024 * 1024;
 
     // Initialize emscripten module
-    var init = function(memFile) {
+    var init = function(memFile, xml, file) {
         var locateFile = function() {
           return memFile;
         };
 
         MediaInfoModule = MediaInfoLib({'locateFile': locateFile, 'postRun': function() {
             initPage();
+            loadXML(xml, file);
         }});
     };
 
@@ -87,66 +88,6 @@ var MediaInfoOnline = (function () {
                 $('.mediainfo-copy-to-clipboard').tooltip('hide');
             }, 2000);
         });
-
-        // File input
-        $('#mediainfo-file-input').on('change', function() {
-            var input = $(this)[0];
-            if(input.files.length > 0) {
-                processFile(input.files[0]);
-            }
-        });
-
-        // PasteBin
-        $('.pastebin-create').on('click', function(e) {
-            e.preventDefault();
-
-            if (processing) {
-                MI.Option('Inform', 'XML');
-                $.post(Routing.generate('pastebin_api_new'), {xml: MI.Inform(), title: filename, type: 'mi'})
-                .done(function(data) {
-                    $('.pastebin-url').html('<a href="'+data.url+'">'+data.url+'</a>').removeClass('hidden');
-                })
-                .fail(function() {
-                });
-            }
-        });
-
-        dragAndDropBinding();
-    };
-
-    var dragAndDropBinding = function() {
-        $('.mediainfo-file-drop').on('dragover dragenter', function(e){
-            e.preventDefault();
-            e.stopPropagation();
-            $(this).css('border', '3px dashed #0070bb');
-        });
-
-        $('.mediainfo-file-drop').on('dragleave', function(e) {
-            e.preventDefault();
-            e.stopPropagation();
-            $(this).css('border', '3px dashed #e7e7e7');
-        });
-
-        $('.mediainfo-file-drop').on('drop', function(e) {
-            var dt = e.originalEvent.dataTransfer;
-            if(dt){
-                if (dt.items && dt.items[0] && dt.items[0].kind == "file") {
-                    e.preventDefault();
-                    e.stopPropagation();
-
-                    processDragFile(dt.items[0].getAsFile());
-                }
-                else if(dt.files.length) {
-                    e.preventDefault();
-                    e.stopPropagation();
-
-                    processDragFile(dt.files[0]);
-                }
-            }
-            else {
-                $(this).css('border', '3px dashed #e7e7e7');
-            }
-        });
     };
 
     var finish = function() {
@@ -156,21 +97,20 @@ var MediaInfoOnline = (function () {
     };
 
     // parseFile callback
-    var showResult = function(file) {
+    var showResult = function() {
         var mime = 'text/plain';
         if ($('#mediainfo-format-list').val()) {
             MI.Option('Inform', $('#mediainfo-format-list').val());
             mime = $('#mediainfo-format-list :selected').attr('mime');
         }
 
-        $('.mediainfo-report-filename').text(file.name);
+        $('.mediainfo-report-filename').text(filename);
         $('.mediainfo-report-filename-container').removeClass('hidden');
 
         displayReport(mime);
         $('.mediainfo-report-container').removeClass('hidden');
         $('.mediainfo-format-list-download-container').removeClass('hidden');
         $('.mediainfo-copy-to-clipboard-container').removeClass('hidden');
-        $('.pastebin-container').removeClass('hidden');
     };
 
     // Change output format
@@ -256,97 +196,26 @@ var MediaInfoOnline = (function () {
         $('.mediainfo-format-list-download-container').addClass('hidden');
         $('.mediainfo-copy-to-clipboard-container').addClass('hidden');
         $('.mediainfo-report-filename-container').addClass('hidden');
-        $('.pastebin-container').addClass('hidden');
         $('.mediainfo-report-error').removeClass('hidden')
     };
 
-    // Process dragged file
-    var processDragFile = function(file) {
-        $('.mediainfo-file-drop').css('border', '3px dashed #01d318');
-
-        processFile(file);
-    }
-
-    // Process file
-    var processFile = function(file) {
-        // Analyze file
-        $('#mediainfo-report').text('Processing...');
-        if (processing) {
-            finish();
-        }
-
-        try {
-            parseFile(file, showResult);
-        } catch (e) {
-            displayError('Your browser is not compatible.')
-        }
-    }
-
-    // Analyze file
-    var parseFile = function(file, callback) {
-        if (processing) {
-            return;
-        }
+    // Load MI XML
+    var loadXML = function(xml, file) {
         processing = true;
-        filename = file.name;
-
-        var offset = 0;
+        filename = file;
 
         // Initialise MediaInfo
         MI = new MediaInfoModule.MediaInfo();
-
-        MI.Option('File_FileName', file.name);
-        MI.Open_Buffer_Init(file.size, 0);
-
-        var loop = function(length) {
-            if (processing) {
-                var r = new FileReader();
-                var blob = file.slice(offset, offset + length);
-                r.onload = processChunk;
-                r.readAsArrayBuffer(blob);
-            } else {
-                finish()
-            }
-        };
-
-        var processChunk = function(e) {
-            if (e.target.error === null) {
-                // Send the buffer to MediaInfo
-                try {
-                    var state = MI.Open_Buffer_Continue(e.target.result);
-
-                } catch(e) {
-                    finish();
-                    displayError('An error happened reading your file.');
-                    return;
-                }
-
-                //Test if there is a MediaInfo request to go elsewhere
-                var seekTo = MI.Open_Buffer_Continue_Goto_Get();
-                if(seekTo === -1) {
-                    offset += e.target.result.byteLength;
-                } else {
-                    offset = seekTo;
-                    MI.Open_Buffer_Init(file.size, seekTo); // Inform MediaInfo we have seek
-                }
-            } else {
-                finish();
-                displayError('An error happened reading your file.');
-                return;
-            }
-
-            // Bit 3 set means finalized
-            if (state&0x08 || e.target.result.byteLength < 1) {
-                MI.Open_Buffer_Finalize();
-                callback(file);
-                return;
-            }
-
-            loop(CHUNK_SIZE);
-        };
-
-        // Start
-        loop(CHUNK_SIZE);
+        MI.Open_Buffer_Init(xml.length, 0);
+        try {
+            MI.Open_Buffer_Continue(xml);
+            MI.Open_Buffer_Finalize();
+            showResult();
+        } catch(e) {
+            finish();
+            displayError('An error happened loading your pastebin.');
+            return;
+        }
     };
 
     return {

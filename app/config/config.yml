@@ -16,6 +16,7 @@ imports:
     - { resource: "@MOVMetaEditBundle/Resources/config/services.yml" }
     - { resource: "@BlogBundle/Resources/config/services.yml" }
     - { resource: "@VoteBundle/Resources/config/services.yml" }
+    - { resource: "@PasteBinBundle/Resources/config/services.yml" }
 
 # Put parameters here that don't need to change on each machine where the app is deployed
 # https://symfony.com/doc/current/best_practices/configuration.html#application-related-configuration
@@ -147,6 +148,7 @@ fos_js_routing:
         - supportUs_supporters_list
         - invoice_ajax_modal_data
         - invoice_download_pdf
+        - pastebin_api_new
 
 jms_payment_core:
     encryption:

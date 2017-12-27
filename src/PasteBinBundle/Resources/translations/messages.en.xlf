@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="en" datatype="plaintext" original="file.ext" target-language="en">
+    <body>
+      <trans-unit id="pastebin.page.title" approved="yes">
+        <source><![CDATA[pastebin.page.title]]></source>
+        <target><![CDATA[MediaArea pastebin]]></target>
+      </trans-unit>
+      <trans-unit id="pastebin.page.description" approved="yes">
+        <source><![CDATA[pastebin.page.description]]></source>
+        <target><![CDATA[MediaArea pastebin]]></target>
+      </trans-unit>
+      <trans-unit id="pastebin.page.keywords" approved="yes">
+        <source><![CDATA[pastebin.page.keywords]]></source>
+        <target><![CDATA[MediaArea MediaInfo pastebin paste bin]]></target>
+      </trans-unit>
+      <trans-unit id="pastebin.title" approved="yes">
+        <source><![CDATA[pastebin.title]]></source>
+        <target><![CDATA[MediaArea pastebin]]></target>
+      </trans-unit>
+  </body>
+</file>
+</xliff>

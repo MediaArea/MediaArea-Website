@@ -29,6 +29,10 @@ ollistd:
     resource: "@OllistdBundle/Controller/"
     type:     annotation
 
+paste_bin:
+    resource: "@PasteBinBundle/Controller/"
+    type:     annotation
+
 dv_analyzer:
     resource: "@DVAnalyzerBundle/Controller/"
     type:     annotation

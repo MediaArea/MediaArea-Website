@@ -1,36 +1,18 @@
-{% extends 'MediaInfoBundle::base.html.twig' %}
+{% extends 'PasteBinBundle::base.html.twig' %}
 
 {% set MIJS = '/_/js/MediaInfo-17.12.js' %}
 
-{% block title %}{% trans %}mediainfoonline.page.title{% endtrans %}{% endblock %}
-{% block description %}{% trans %}mediainfoonline.page.description{% endtrans %}{% endblock %}
-{% block keywords %}{% trans %}mediainfoonline.page.keywords{% endtrans %}{% endblock %}
+{% block title %}{% trans %}pastebin.page.title{% endtrans %}{% endblock %}
+{% block description %}{% trans %}pastebin.page.description{% endtrans %}{% endblock %}
+{% block keywords %}{% trans %}pastebin.page.keywords{% endtrans %}{% endblock %}
 
 {% block body %}
-<h1>{% trans %}mediainfoonline.title{% endtrans %}</h1>
-
-<p>
-    {% trans %}mediainfoonline.about{% endtrans %}
-</p>
-<p>
-    {% trans with {'%contact%': path('ma_contact')} %}mediainfoonline.tp{% endtrans %}
-</p>
-<p>
-    {% trans %}mediainfoonline.help{% endtrans %}
-</p>
+<h1>{{ paste.title }} - {% trans %}pastebin.title{% endtrans %}</h1>
 
 <div class="mediainfo-loader">
     <span>{% trans %}mediainfoonline.loading{% endtrans %}</span>
 </div>
 <div class="mediainfo-container hidden">
-    <div class="mediainfo-file-drop" draggable="true">
-        <p>
-            {% trans %}mediainfoonline.drop.help{% endtrans %}
-        </p>
-        <p>
-            <input type="file" id="mediainfo-file-input" />
-        </p>
-    </div>
     <div class="row">
         <div class="col-md-7 col-sm-12">
             {% trans %}mediainfoonline.output{% endtrans %} <select id="mediainfo-format-list" class="form-control"></select>
@@ -46,21 +28,11 @@
             </div>
         </div>
     </div>
-    {% if is_granted('ROLE_BETA') %}
-        <div class="pastebin-container hidden">
-            <button class="btn btn-primary pastebin-create">Create pastebin</button>
-            <span class="pastebin-url hidden"></span>
-        </div>
-    {% endif %}
     <p class="mediainfo-report-filename-container hidden">{% trans %}mediainfoonline.analyzed.filename{% endtrans %} "<span class="mediainfo-report-filename"></span>" :</p>
     <div class="mediainfo-report-container hidden"><pre><code id="mediainfo-report"></code></pre></div>
     <div class="mediainfo-report-error alert alert-danger hidden"></div>
 </div>
-{% endblock %}
 
-{% block head %}
-<!--preload:{{ preload(MIJS, { as: 'script', nopush: true }) }}-->
-<!--prefetch:{{ prefetch(MIJS ~ '.mem', { as: 'script', nopush: true }) }}-->
 {% endblock %}
 
 {% block stylesheets %}
@@ -75,14 +47,15 @@
 
 {% block javascripts %}
 {% javascripts
-    '@MediaInfoBundle/Resources/public/js/mediainfoonline.js'
+    '@PasteBinBundle/Resources/public/js/pastebin.js'
     '@MediaInfoBundle/Resources/public/js/FileSaver.min.js'
     '@MediaInfoBundle/Resources/public/js/highlight.pack.js'
     '@MediaInfoBundle/Resources/public/js/clipboard.min.js'
-    filter='?jsqueeze' output='js/mediainfoonline.js'
+    filter='?jsqueeze' output='js/pastebin.js'
  %}
 <script type="text/javascript" src="{{ preload(asset_url, { as: 'script', nopush: true }) }}"></script>
 {% endjavascripts %}
+
 <script>
 var mediainfoSrc = '{{ MIJS }}';
 var mediainfoMemSrc = '{{ MIJS }}.mem';
@@ -95,13 +68,10 @@ script.onload = script.onreadystatechange = function() {
     var rs = script.readyState;
     if (rs && rs != 'complete' && rs != 'loaded') return;
     try {
-        var mediainfo = MediaInfoOnline();
-        mediainfo.init(mediainfoMemSrc);
+        var paste = pastebin();
+        paste.init(mediainfoMemSrc, '{{ xml|e('js') }}', '{{ paste.title }}');
     } catch (e) {}
 };
 var s = document.getElementsByTagName('script')[0];
-s.parentNode.insertBefore(script, s);
-</script>
-<script src="{{ asset('bundles/fosjsrouting/js/router.js') }}"></script>
-<script src="{{ path('fos_js_routing_js', { callback: 'fos.Router.setData' }) }}"></script>
+s.parentNode.insertBefore(script, s);</script>
 {% endblock %}

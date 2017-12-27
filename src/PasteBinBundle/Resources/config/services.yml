@@ -1,0 +1,4 @@
+services:
+#    paste_bin.example:
+#        class: PasteBinBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]
