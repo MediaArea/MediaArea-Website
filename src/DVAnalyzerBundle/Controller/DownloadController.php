@@ -46,6 +46,18 @@ class DownloadController extends Controller
 
     /**
      * @Route(
+     *     "/DVAnalyzer/Download/Flatpak",
+     *     name="dv_download_flatpak"
+     * )
+     * @Template()
+     */
+    public function flatpakAction()
+    {
+        return array();
+    }
+
+    /**
+     * @Route(
      *     "/DVAnalyzer/Download/Debian",
      *     name="dv_download_debian"
      * )

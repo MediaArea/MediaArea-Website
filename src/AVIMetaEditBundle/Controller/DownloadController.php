@@ -46,6 +46,18 @@ class DownloadController extends Controller
 
     /**
      * @Route(
+     *     "/AVIMetaEdit/Download/Flatpak",
+     *     name="avi_download_flatpak"
+     * )
+     * @Template()
+     */
+    public function flatpakAction()
+    {
+        return array();
+    }
+
+    /**
+     * @Route(
      *     "/AVIMetaEdit/Download/Debian",
      *     name="avi_download_debian"
      * )
