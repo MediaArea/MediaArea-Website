@@ -57,7 +57,7 @@ class DefaultControllerTest extends UserAbstractControllerTest
         $this->assertEquals(50, $crawler->filter('.vote-feature-target')->text());
         $this->assertEquals(0, $crawler->filter('.vote-feature-count')->text());
         $this->assertEquals(0, $crawler->filter('.vote-feature-ratio')->text());
-        $this->assertEquals(23, $crawler->filter('.vote-user-total-points')->text());
+        $this->assertEquals(15, $crawler->filter('.vote-user-total-points')->text());
         $this->assertEquals(0, $crawler->filter('.vote-user-feature-points')->count());
     }
 
@@ -88,7 +88,7 @@ class DefaultControllerTest extends UserAbstractControllerTest
         $this->assertEquals(50, $crawler->filter('.vote-feature-target')->text());
         $this->assertEquals(5, $crawler->filter('.vote-feature-count')->text());
         $this->assertEquals(10, $crawler->filter('.vote-feature-ratio')->text());
-        $this->assertEquals(18, $crawler->filter('.vote-user-total-points')->text());
+        $this->assertEquals(10, $crawler->filter('.vote-user-total-points')->text());
         $this->assertEquals(5, $crawler->filter('.vote-user-feature-points')->text());
 
         $form = $crawler->selectButton('Update your vote')->form();
@@ -113,7 +113,7 @@ class DefaultControllerTest extends UserAbstractControllerTest
         $this->assertEquals(50, $crawler->filter('.vote-feature-target')->text());
         $this->assertEquals(8, $crawler->filter('.vote-feature-count')->text());
         $this->assertEquals(16, $crawler->filter('.vote-feature-ratio')->text());
-        $this->assertEquals(15, $crawler->filter('.vote-user-total-points')->text());
+        $this->assertEquals(7, $crawler->filter('.vote-user-total-points')->text());
         $this->assertEquals(8, $crawler->filter('.vote-user-feature-points')->text());
 
         $form = $crawler->selectButton('Update your vote')->form();
