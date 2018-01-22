@@ -1,6 +1,7 @@
 {% extends 'MediaInfoBundle::base.html.twig' %}
 
 {% set MIJS = '/_/js/MediaInfo-17.12.js' %}
+{% set MIWASM = '/_/js/MediaInfoWasm' %}
 
 {% block title %}{% trans %}mediainfoonline.page.title{% endtrans %}{% endblock %}
 {% block description %}{% trans %}mediainfoonline.page.description{% endtrans %}{% endblock %}
@@ -53,8 +54,8 @@
 {% endblock %}
 
 {% block head %}
-<!--preload:{{ preload(MIJS, { as: 'script', nopush: true }) }}-->
-<!--prefetch:{{ prefetch(MIJS ~ '.mem', { as: 'script', nopush: true }) }}-->
+<!--preload:{{ preload(MIWASM ~ '.js', { as: 'script', nopush: true }) }}-->
+<!--prefetch:{{ prefetch(MIWASM ~ '.wasm', { as: 'script', nopush: true }) }}-->
 {% endblock %}
 
 {% block stylesheets %}
@@ -78,8 +79,13 @@
 <script type="text/javascript" src="{{ preload(asset_url, { as: 'script', nopush: true }) }}"></script>
 {% endjavascripts %}
 <script>
-var mediainfoSrc = '{{ MIJS }}';
-var mediainfoMemSrc = '{{ MIJS }}.mem';
+if (('WebAssembly' in window)) {
+    var mediainfoSrc = '{{ MIWASM }}.js';
+    var mediainfoMemSrc = '{{ MIWASM }}.wasm';
+} else {
+    var mediainfoSrc = '{{ MIJS }}';
+    var mediainfoMemSrc = '{{ MIJS }}.mem';
+}
 
 var script = document.createElement('script');
 script.src = mediainfoSrc;
