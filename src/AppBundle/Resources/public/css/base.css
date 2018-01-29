@@ -890,6 +890,18 @@ form[name="vote"] {
     margin-top: 50px;
 }
 
+.supported-default {
+    background-color: #00FF80;
+}
+
+.supported-key {
+    background-color: #FF8040;
+}
+
+.supported-needfile {
+    background-color: #FF00FF;
+}
+
 /* media query */
 @media (min-width: 768px) and (max-width: 991px) {
     .display-block-sm {

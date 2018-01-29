@@ -40,6 +40,7 @@ class AppKernel extends Kernel
             new MOVMetaEditBundle\MOVMetaEditBundle(),
             new BlogBundle\BlogBundle(),
             new VoteBundle\VoteBundle(),
+            new RAWcookedBundle\RAWcookedBundle(),
         ];
 
         if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {

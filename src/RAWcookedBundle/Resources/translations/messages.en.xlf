@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="en" datatype="plaintext" original="file.ext" target-language="en">
+    <body>
+      <trans-unit id="menu.rawcooked" approved="yes">
+        <source><![CDATA[menu.rawcooked]]></source>
+        <target><![CDATA[RAWcooked]]></target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

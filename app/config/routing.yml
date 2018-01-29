@@ -45,6 +45,10 @@ media_trace:
     resource: "@MediaTraceBundle/Controller/"
     type:     annotation
 
+raw_cooked:
+    resource: "@RAWcookedBundle/Controller/"
+    type:     annotation
+
 support_us:
     resource: "@SupportUsBundle/Controller/"
     type:     annotation

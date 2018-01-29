@@ -1,0 +1,4 @@
+services:
+#    raw_cooked.example:
+#        class: RAWcookedBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]
