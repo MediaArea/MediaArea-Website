@@ -37,7 +37,7 @@
         "symfony/monolog-bundle": "^3.1.0",
         "symfony/polyfill-apcu": "^1.0",
         "symfony/swiftmailer-bundle": "^2.3.10",
-        "symfony/symfony": "~3.3.0",
+        "symfony/symfony": "3.3.15",
         "tfox/mpdf-port-bundle": "^1.3",
         "twig/extensions": "^1.5",
         "twig/twig": "^1.0||^2.0"
