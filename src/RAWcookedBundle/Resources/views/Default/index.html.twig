@@ -1,0 +1,290 @@
+{% extends 'RAWcookedBundle::base.html.twig' %}
+
+{% block title %}RAWcooked{% endblock %}
+
+{% block body %}
+<section>
+    <div class="row reorder-xs">
+        <div class="v-align carousel-padding-xs col-xs-12 col-sm-5">
+            <div>
+            {% image '@RAWcookedBundle/Resources/public/img/RAWcooked_256.png' %}
+                <img src="{{ asset_url }}" alt="RAWcooked logo" class="img-responsive center-xs" title="RAWcooked logo" />
+            {% endimage %}
+            </div>
+        </div>
+        <div class="v-align col-sm-7">
+            <div class="center-font-xs">
+                <h1 class="v-align bigtitle">RAWcooked</h1>
+            </div>
+            <div class="projectDescription center-font-xs">
+                <strong>RAWcooked</strong> encodes RAW audio-visual data into the Matroska container (MKV), using the video codec FFV1 for the image and audio codec FLAC for the sound. The metadata accompanying the RAW data are preserved, and sidecar files, like MD5, LUT or XML, can be added into the Matroska container as attachments. This allows to manage these audio-visual file format in an effective and transparent way (e.g. native playback by VLC), while saving typically between one and two thirds of the needed storage, and speeding up the back-up on LTO cartridges.<br/>
+                When needed, the uncompressed source is retrieved <b>bit-by-bit</b>, in a faster manner than with uncompressed source directly stored on LTO cartridges.
+            </div>
+            <br/>
+            <div class="projectDescription center-font-xs">
+                Sponsored by <a href="https://reto.ch">AV Preserve by reto.ch</a> with support from <a href="http://www.cna.public.lu">CNA (National Audiovisual Centre of Luxembourg)</a> and <a href="https://www.nb.no">Nasjonalbiblioteket (National Library of Norway)</a>; designed, led and fully developed by MediaArea.
+            </div>
+        </div>
+    </div>
+</section>
+
+<section>
+<h2>A current reality of many archives</h2>
+<p>Many archives preserve their single-image based files as TIFF or DPX, grouped by entire films or single reels, and stored inside folders, or TAR or ZIP archives. Yet to have a single file format which is suitable for the preservation of both film and video has been a dream of many audio-visual archives, especially in smaller ones, since the beginning of digital moving images.</p>
+<p>Additional context:</p>
+<ul>
+<li>Reto Kromer: «<a href="https://retokromer.ch/publications/JFP_96.html" target="_blank">Matroska and FFV1: One File Format for Film and Video Archiving?</a>», in <i>Journal of Film Preservation</i>, n. 96 (April 2017)</li>
+<li>Kieran O’Leary: «<a href="https://kieranjol.wordpress.com/2016/10/07/introduction-to-ffv1-and-matroska-for-film-scans/" target="_blank">Introduction to FFV1 and Matroska for Film Scans</a>», 2016–10–07</li>
+</ul>
+<h2>The missing piece of software</h2>
+<p>The solution we propose is <i>RAWcooked</i>, a piece of software that  encodes from and decodes to various so-called «raw» audio-visual file formats in a completely transparent way. The image content and/or sound content, including all the related metadata and sidecar files, is fully preserved bit-by-bit.<br />
+For instance, the unplayable ZIP files could be replaced by a playable file, with the full reversibility of the original package content.</p>
+<h2>Decoding the Matroska file back to the original RAW</h2>
+<p>Whenever needed, <i>RAWcooked</i> decodes back the encoded Matroska file to the original RAW files, including all the original metadata and sidecar files. It is important to stress out clearly that the encoded files can be decoded, and the resulting files are bit-by-bit identical to the original ones. Not only the image and/or sound content is fully preserved, but also all enclosed metadata and the all file’s characteristics. Therefore, an encoded and decoded RAW file cannot be differentiated from its original.</p>
+<h2>A complete ecosystem</h2>
+<p>The Matroska files which have been encoded by <i>RAWcooked</i> can be used on wide range of popular software supporting Matroska/FFV1 and FLAC plackack, including:</p>
+<ul>
+<li><a href="https://www.videolan.org/vlc/">VLC</a> media player for playback</li>
+<li><a href="https://www.ffmpeg.org/">FFmpeg</a> tools can transcode, playback and probe those files</li>
+<li><a href="{{ path('qc_home') }}">QCTools</a> can performs in-depth analysis</li>
+<li><a href="{{ path('mi_home') }}">MediaInfo</a> can display technical information</li>
+<li><a href="/MediaConch/">MediaConch</a> can check the conformance of the file</li>
+</ul>
+<p>This way an archive with limited resources can process the files encoded by <i>RAWcooked</i> on every current computer (e.g. for cataloging or access purposes).</p>
+<h2>Funding plan</h2>
+<p>MediaArea.net realizes the implementation of the basis module for anticipated costs of 10&nbsp;000&nbsp;&euro; which are guaranteed by AV Preservation by reto.ch.</p>
+<p>The archival community and the industry are invited to buy the flavors (components, bit depths, endianess, packing, etc.) of the formats they actually need. An example file of each flavor of a format will be tested by MediaArea.net and the exact specification implemented into the software. This way the contributing bodies and individuals are sure their files can be processed by the software. The price is 1&nbsp;000&nbsp;&euro; for the first flavor of a format and 500&nbsp;&euro; for each following.</p>
+<h2>Status</h2>
+<p>RAWcooked is currently under development. <a href="/download/snapshots/binary/rawcooked/">Development snapshots</a> are available (<a href="https://github.com/MediaArea/RAWcooked">corresponding code</a>), not to be used in production yet. As in January, some DPX flavors are supported, a sequence of DPX is detected, encode is delegated to FFmpeg and decode is native (from another MediaArea project), <code>rawcooked yourdpx.dpx</code> provides the FFmpeg command to run for encode, <code>rawcooked yourdpx.mkv</code> reverts bit-by-bit.<br/>
+The first release is officially launched during the <a href="http://nfa.cz/en/fiaf-congress-2018/symposium-sharing/">FIAF Congress 2018</a> (22–27 April 2018 in Prague, Czechia). Priority is given to formats and flavors from our sponsors. You can test with this <a href="https://github.com/MediaArea/RAWcooked-RegressionTestingFiles/blob/master/Features/AV_Package/818_DCDM_P3_IA_FIC_000918/818_OV/818_OV_0086945.dpx?raw=true">file</a> (or a <a href="https://github.com/MediaArea/RAWcooked-RegressionTestingFiles/tree/master/Features/AV_Package/818_DCDM_P3_IA_FIC_000918/818_OV">sequence of files</a>).</p>
+</section>
+
+<section>
+<h2>Supported (when officially launched) input flavors</h2>
+<p><span class="supported-default">D = Supported by default</span> / 
+<span class="supported-key">K = Supported with a key, please <a href="{{ path('ma_contact') }}">contact us</a></span> / 
+<span class="supported-needfile">N = File needed, please <a href="{{ path('ma_contact') }}">contact us</a></span></p>
+    
+<div class="table-responsive">
+<table class="download table table-bordered table-condensed">
+<tr class="table-header">
+    <th width="40%">Video format</th>
+    <th width="10%">Components</th>
+    <th>Bit depth</th>
+    <th>Packing</th>
+    <th>Endianess</th>
+    <th width="5%">Support</th>
+</tr>
+  <tr>
+    <td rowspan="16"><b>DPX</b><br>left to right<br>top to bottom<br>1 image element<br>unsigned<br>without encoding</td>
+    <td rowspan="9">RGB</td>
+    <td>8-bit</td>
+    <td>Packed</td>
+    <td></td>
+    <td class="supported-default"><abbr title="Supported by default">D</abbr></td>
+  </tr>
+  <tr>
+    <td rowspan="2">10-bit</td>
+    <td rowspan="2">Filled A</td>
+    <td><abbr title="Big Endian">BE</abbr></td>
+    <td class="supported-default"><abbr title="Supported by default">D</abbr></td>
+  </tr>
+  <tr>
+    <td><abbr title="Little Endian">LE</abbr></td>
+    <td class="supported-default"><abbr title="Supported by default">D</abbr></td>
+  </tr>
+  <tr>
+    <td rowspan="2">12-bit</td>
+    <td rowspan="2">Packed</td>
+    <td><abbr title="Big Endian">BE</abbr></td>
+    <td class="supported-key"><abbr title="Supported with a key, please contact us">K</abbr></td>
+  </tr>
+  <tr>
+    <td><abbr title="Little Endian">LE</abbr></td>
+    <td class="supported-needfile"><abbr title="File needed, please contact us">N</abbr></td>
+  </tr>
+  <tr>
+    <td rowspan="2">16-bit</td>
+    <td rowspan="2">Packed</td>
+    <td><abbr title="Big Endian">BE</abbr></td>
+    <td class="supported-key"><abbr title="Supported with a key, please contact us">K</abbr></td>
+  </tr>
+  <tr>
+    <td><abbr title="Little Endian">LE</abbr></td>
+    <td class="supported-needfile"><abbr title="File needed, please contact us">N</abbr></td>
+  </tr>
+  <tr>
+    <td rowspan="2">16-bit Float (out of FFV1 specs)</td>
+    <td rowspan="2">Packed</td>
+    <td><abbr title="Big Endian">BE</abbr></td>
+    <td class="supported-key"><abbr title="Supported with a key, please contact us">K</abbr></td>
+  </tr>
+  <tr>
+    <td><abbr title="Little Endian">LE</abbr></td>
+    <td class="supported-needfile"><abbr title="File needed, please contact us">N</abbr></td>
+  </tr>
+  <tr>
+    <td rowspan="7">RGBA</td>
+    <td>8-bit</td>
+    <td>Packed</td>
+    <td></td>
+    <td class="supported-key"><abbr title="Supported with a key, please contact us">K</abbr></td>
+  </tr>
+  <tr>
+    <td rowspan="2">10-bit</td>
+    <td rowspan="2">Filled A</td>
+    <td><abbr title="Big Endian">BE</abbr></td>
+    <td class="supported-key"><abbr title="Supported with a key, please contact us">K</abbr></td>
+  </tr>
+  <tr>
+    <td><abbr title="Little Endian">LE</abbr></td>
+    <td class="supported-needfile"><abbr title="File needed, please contact us">N</abbr></td>
+  </tr>
+  <tr>
+    <td rowspan="2">12-bit</td>
+    <td rowspan="2">Packed</td>
+    <td><abbr title="Big Endian">BE</abbr></td>
+    <td class="supported-key"><abbr title="Supported with a key, please contact us">K</abbr></td>
+  </tr>
+  <tr>
+    <td><abbr title="Little Endian">LE</abbr></td>
+    <td class="supported-needfile"><abbr title="File needed, please contact us">N</abbr></td>
+  </tr>
+  <tr>
+    <td rowspan="2">16-bit</td>
+    <td rowspan="2">Packed</td>
+    <td><abbr title="Big Endian">BE</abbr></td>
+    <td class="supported-key"><abbr title="Supported with a key, please contact us">K</abbr></td>
+  </tr>
+  <tr>
+    <td><abbr title="Little Endian">LE</abbr></td>
+    <td class="supported-needfile"><abbr title="File needed, please contact us">N</abbr></td>
+  </tr>
+</table>
+</div>
+<div class="table-responsive">
+<table class="download table table-bordered table-condensed">
+<tr class="table-header">
+    <th width="40%">Video format</th>
+    <th width="10%">Components</th>
+    <th>Bit depth</th>
+    <th>Endianess</th>
+    <th width="5%">Support</th>
+</tr>
+  <tr>
+    <td><b>TIFF</b><br>Limitations to be defined</td>
+    <td>RGB</td>
+    <td>16-bit</td>
+    <td></td>
+    <td class="supported-needfile"><abbr title="File needed, please contact us">N</abbr></td>
+  </tr>
+</table>
+</div>
+<div class="table-responsive">
+<table class="download table table-bordered table-condensed">
+<tr class="table-header">
+    <th width="40%">Video format</th>
+    <th width="10%">Components</th>
+    <th>Bit depth</th>
+    <th>Endianess</th>
+    <th width="5%">Support</th>
+</tr>
+  <tr>
+    <td rowspan="3"><b>EXR</b><br>Limitations to be defined</td>
+    <td rowspan="3">RGB</td>
+    <td>16-bit Float</td>
+    <td></td>
+    <td class="supported-key"><abbr title="Supported with a key, please contact us">K</abbr></td>
+  </tr>
+  <tr>
+    <td>32-bit</td>
+    <td></td>
+    <td class="supported-key"><abbr title="Supported with a key, please contact us">K</abbr></td>
+  </tr>
+  <tr>
+    <td>32-bit Float</td>
+    <td></td>
+    <td class="supported-key"><abbr title="Supported with a key, please contact us">K</abbr></td>
+  </tr>
+</table>
+</div>
+<div class="table-responsive">
+<table class="download table table-bordered table-condensed">
+<tr class="table-header">
+    <th width="40%">Audio format</th>
+    <th>Sampling rate</th>
+    <th>Bit depth</th>
+    <th>Channels</th>
+    <th width="5%">Support</th>
+</tr>
+  <tr>
+    <td rowspan="6"><b>PCM</b><br/>In legacy WAV, BWF, RF64</td>
+    <td rowspan="6">48 kHz</td>
+    <td rowspan="2">16-bit</td>
+    <td>2-channel</td>
+    <td class="supported-default"><abbr title="Supported by default">D</abbr></td>
+  </tr>
+  <tr>
+    <td>6-channel</td>
+    <td class="supported-key"><abbr title="Supported with a key, please contact us">K</abbr></td>
+  </tr>
+  <tr>
+    <td rowspan="2">24-bit</td>
+    <td>2-channel</td>
+    <td class="supported-key"><abbr title="Supported with a key, please contact us">K</abbr></td>
+  </tr>
+  <tr>
+    <td>6-channel</td>
+    <td class="supported-key"><abbr title="Supported with a key, please contact us">K</abbr></td>
+  </tr>
+  <tr>
+    <td rowspan="2">32-bit</td>
+    <td>2-channel</td>
+    <td class="supported-needfile"><abbr title="File needed, please contact us">N</abbr></td>
+  </tr>
+  <tr>
+    <td>6-channel</td>
+    <td class="supported-needfile"><abbr title="File needed, please contact us">N</abbr></td>
+  </tr>
+</table>
+</div>
+
+<p>Another format/flavor you want us to support (e.g. little endian…)? <a href="{{ path('ma_contact') }}">Contact us</a>.</p>
+
+<h2>Supported (when officially launched) output formats</h2>
+<div class="table-responsive">
+<table class="download table table-bordered table-condensed">
+<tr class="table-header">
+    <th width="40%">Container format</th>
+    <th>Stream format</th>
+    <th></th>
+    <th></th>
+    <th width="5%">Support</th>
+</tr>
+  <tr>
+    <td rowspan="3">MKV</td>
+    <td>FFV1</td>
+    <td></td>
+    <td></td>
+    <td class="supported-default"><abbr title="Supported by default">D</abbr></td>
+  </tr>
+  <tr>
+    <td>FLAC</td>
+    <td></td>
+    <td></td>
+    <td class="supported-default"><abbr title="Supported by default">D</abbr></td>
+  </tr>
+  <tr>
+    <td>PCM</td>
+    <td></td>
+    <td></td>
+    <td class="supported-key"><abbr title="Supported with a key, please contact us">K</abbr></td>
+  </tr>
+</table>
+</div>
+<p>Another format you want us to support (e.g. MOV…)? <a href="{{ path('ma_contact') }}">Contact us</a>.</p>
+
+    <h2>License:</h2>
+    <p>It is <a href="https://en.wikipedia.org/wiki/Open_source">Open-Source</a> software which means that end users and developers have freedom to study, to improve and to redistribute the program (<a href="https://github.com/MediaArea/RAWcooked/blob/master/LICENSE">MIT license</a> for the code developed by us).</p>
+</section>
+{% endblock %}

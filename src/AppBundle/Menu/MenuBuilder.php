@@ -231,6 +231,24 @@ class MenuBuilder
         return $menu;
     }
 
+    /**
+     * @SuppressWarnings(PHPMD.UnusedFormalParameter)
+     */
+    public function createRAWcookedMenu(array $options)
+    {
+        $menu = $this->factory->createItem('root');
+        $menu->setChildrenAttribute('class', 'nav navbar-nav main-menu');
+
+        $menu = $this->mediaAreaMenu($menu);
+
+        $menu->addChild('menu.rawcooked', ['route' => 'rawcooked_home']);
+
+        $menu = $this->projectsMenu($menu);
+        $menu = $this->supportUsMenu($menu);
+
+        return $menu;
+    }
+
     private function mediaAreaMenu(ItemInterface $menu)
     {
         $menu->addChild('menu.mediaarea', ['route' => 'homepage'])->setExtras(['dropdown' => true]);
@@ -257,6 +275,7 @@ class MenuBuilder
         $menu['menu.projects']->addChild('menu.projects.movmetaedit', ['route' => 'mov_home'])->setCurrent(false);
         $menu['menu.projects']->addChild('menu.projects.dvanalyzer', ['route' => 'dv_home'])->setCurrent(false);
         $menu['menu.projects']->addChild('menu.projects.ollistd', ['route' => 'ollistd_home'])->setCurrent(false);
+        $menu['menu.projects']->addChild('menu.projects.rawcooked', ['route' => 'rawcooked_home'])->setCurrent(false);
 
         return $menu;
     }

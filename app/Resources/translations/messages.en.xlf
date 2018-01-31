@@ -106,6 +106,10 @@
         <source><![CDATA[menu.projects.ollistd]]></source>
         <target><![CDATA[Open LossLess in STanDards]]></target>
       </trans-unit>
+      <trans-unit id="menu.projects.rawcooked" approved="yes">
+        <source><![CDATA[menu.projects.rawcooked]]></source>
+        <target><![CDATA[RAWcooked]]></target>
+      </trans-unit>
       <trans-unit id="menu.supportUs" approved="yes">
         <source><![CDATA[menu.supportUs]]></source>
         <target><![CDATA[Support Us!]]></target>
