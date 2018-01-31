@@ -8,7 +8,7 @@
         <div class="v-align carousel-padding-xs col-xs-12 col-sm-5">
             <div>
             {% image '@RAWcookedBundle/Resources/public/img/RAWcooked_256.png' %}
-                <img src="{{ asset_url }}" alt="RAWcooked logo" class="img-responsive center-xs" title="RAWcooked logo" />
+                <img src="{{ asset_url }}" alt="RAWcooked logo" class="img-responsive center-xs" title="RAWcooked logo">
             {% endimage %}
             </div>
         </div>
@@ -17,10 +17,10 @@
                 <h1 class="v-align bigtitle">RAWcooked</h1>
             </div>
             <div class="projectDescription center-font-xs">
-                <strong>RAWcooked</strong> encodes RAW audio-visual data into the Matroska container (MKV), using the video codec FFV1 for the image and audio codec FLAC for the sound. The metadata accompanying the RAW data are preserved, and sidecar files, like MD5, LUT or XML, can be added into the Matroska container as attachments. This allows for the management of these audio-visual file formats in an effective and transparent way (e.g. native playback in VLC), while saving typically between one to two thirds of the needed storage, and speeding up the back-up process on LTO cartridges.<br/>
+                <strong>RAWcooked</strong> encodes RAW audio-visual data into the Matroska container (MKV), using the video codec FFV1 for the image and audio codec FLAC for the sound. The metadata accompanying the RAW data are preserved, and sidecar files, like MD5, LUT or XML, can be added into the Matroska container as attachments. This allows for the management of these audio-visual file formats in an effective and transparent way (e.g. native playback in VLC), while saving typically between one to two thirds of the needed storage, and speeding up the back-up process on LTO cartridges.<br>
                 When needed, the uncompressed source is retrieved <b>bit-by-bit</b>, in a manner faster than uncompressed sources directly stored on LTO cartridges.
             </div>
-            <br/>
+            <br>
             <div class="projectDescription center-font-xs">
                 Sponsored by <a href="https://reto.ch">AV Preservation by reto.ch</a> with support from <a href="http://www.cna.public.lu">CNA (National Audiovisual Centre of Luxembourg)</a> and <a href="https://www.nb.no">Nasjonalbiblioteket (National Library of Norway)</a>; designed, led and fully developed by MediaArea.
             </div>
@@ -37,7 +37,7 @@
 <li>Kieran O’Leary: «<a href="https://kieranjol.wordpress.com/2016/10/07/introduction-to-ffv1-and-matroska-for-film-scans/" target="_blank">Introduction to FFV1 and Matroska for Film Scans</a>», 2016–10–07</li>
 </ul>
 <h2>The missing piece of software</h2>
-<p>The solution we propose is <i>RAWcooked</i>, a piece of software that  encodes from and decodes to various so-called «raw» audio-visual file formats in a completely transparent way. The image content and/or sound content, including all the related metadata and sidecar files, is fully preserved at the bit level.<br />
+<p>The solution we propose is <i>RAWcooked</i>, a piece of software that  encodes from and decodes to various so-called «raw» audio-visual file formats in a completely transparent way. The image content and/or sound content, including all the related metadata and sidecar files, is fully preserved at the bit level.<br>
 For instance, the unplayable ZIP files could be replaced by a playable file, with the full reversibility of the original package content.</p>
 <h2>Decoding the Matroska file back to the original RAW</h2>
 <p>Whenever needed, <i>RAWcooked</i> decodes back the encoded Matroska file to the original RAW files, including all the original metadata and sidecar files. It is important to stress clearly that the encoded files can be decoded, and the resulting files are bit-by-bit identical to the original ones. Not only is the image and/or sound content fully preserved, but also all enclosed metadata and the all of the file’s characteristics. Therefore, an encoded and decoded RAW file cannot be differentiated from its original.</p>
@@ -55,7 +55,7 @@ For instance, the unplayable ZIP files could be replaced by a playable file, wit
 <p>MediaArea.net realizes the implementation of the basis module for anticipated costs of 10&nbsp;000&nbsp;&euro; which are guaranteed by AV Preservation by reto.ch.</p>
 <p>The archival community and the industry are invited to buy the flavors (components, bit depths, endianess, packing, etc.) of the formats they actually need. An example file of each flavor of a format will be tested by MediaArea.net and the exact specification implemented into the software. This way the contributing bodies and individuals are sure their files can be processed by the software. The price is 1&nbsp;000&nbsp;&euro; for the first flavor of a format and 500&nbsp;&euro; for each following.</p>
 <h2>Status</h2>
-<p>RAWcooked is currently under development. <a href="/download/snapshots/binary/rawcooked/">Development snapshots</a> are available (<a href="https://github.com/MediaArea/RAWcooked">corresponding code</a>), not to be used in production yet. As in January, some DPX flavors are supported, a sequence of DPX is detected, encode is delegated to FFmpeg and decode is native (from another MediaArea project), <code>rawcooked yourdpx.dpx</code> provides the FFmpeg command to run for encode, <code>rawcooked yourdpx.mkv</code> reverts bit-by-bit.<br/>
+<p>RAWcooked is currently under development. <a href="/download/snapshots/binary/rawcooked/">Development snapshots</a> are available (<a href="https://github.com/MediaArea/RAWcooked">corresponding code</a>), not to be used in production yet. As in January, some DPX flavors are supported, a sequence of DPX is detected, encode is delegated to FFmpeg and decode is native (from another MediaArea project), <code>rawcooked yourdpx.dpx</code> provides the FFmpeg command to run for encode, <code>rawcooked yourdpx.mkv</code> reverts bit-by-bit.<br>
 The first release is officially launched during the <a href="http://nfa.cz/en/fiaf-congress-2018/symposium-sharing/">FIAF Congress 2018</a> (22–27 April 2018 in Prague, Czechia). Priority is given to formats and flavors from our sponsors. You can test with this <a href="https://github.com/MediaArea/RAWcooked-RegressionTestingFiles/blob/master/Features/AV_Package/818_DCDM_P3_IA_FIC_000918/818_OV/818_OV_0086945.dpx?raw=true">file</a> (or a <a href="https://github.com/MediaArea/RAWcooked-RegressionTestingFiles/tree/master/Features/AV_Package/818_DCDM_P3_IA_FIC_000918/818_OV">sequence of files</a>).</p>
 </section>
 
