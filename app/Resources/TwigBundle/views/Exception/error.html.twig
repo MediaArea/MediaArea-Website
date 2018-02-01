@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ status_code }} error - MediaArea{% endblock %}
+{% block description %}{{ status_code }} error on MediaArea{% endblock %}
+
+{% block body %}
+<h3>
+    {% if 401 == status_code %}
+        You are not authorized to view this page.
+    {% elseif 404 == status_code %}
+        This page does not exists.
+    {% elseif 410 == status_code %}
+        This page has gone.
+    {% else %}
+        An error occurred, please try again later.
+    {% endif %}
+</h3>
+<p>{{ status_code }} error</p>
+<p>
+    You can <a href="{{ path('homepage') }}">return to the homepage</a>.<br>
+    <a href="{{ path('ma_contact') }}">Contact us</a> if the problem persists.
+</p>
+{% endblock %}
