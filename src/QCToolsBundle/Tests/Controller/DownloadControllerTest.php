@@ -54,6 +54,14 @@ class DownloadControllerTest extends WebTestCase
         $this->assertEquals(200, $client->getResponse()->getStatusCode());
     }
 
+    public function testFlatpak()
+    {
+        $client = static::createClient();
+
+        $client->request('GET', '/QCTools/Download/Flatpak');
+        $this->assertEquals(200, $client->getResponse()->getStatusCode());
+    }
+
     public function testMac()
     {
         $client = static::createClient();

@@ -58,6 +58,18 @@ class DownloadController extends Controller
 
     /**
      * @Route(
+     *     "/QCTools/Download/Flatpak",
+     *     name="qc_download_flatpak"
+     * )
+     * @Template()
+     */
+    public function flatpakAction()
+    {
+        return array();
+    }
+
+    /**
+     * @Route(
      *     "/QCTools/Download/Debian",
      *     name="qc_download_debian"
      * )

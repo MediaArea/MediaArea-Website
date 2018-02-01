@@ -46,6 +46,18 @@ class DownloadController extends Controller
 
     /**
      * @Route(
+     *     "/MOVMetaEdit/Download/Flatpak",
+     *     name="mov_download_flatpak"
+     * )
+     * @Template()
+     */
+    public function flatpakAction()
+    {
+        return array();
+    }
+
+    /**
+     * @Route(
      *     "/MOVMetaEdit/Download/Debian",
      *     name="mov_download_debian"
      * )
