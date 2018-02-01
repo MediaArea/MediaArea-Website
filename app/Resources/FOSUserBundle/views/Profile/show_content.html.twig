@@ -25,7 +25,7 @@
 <div class="panel panel-default">
     <div class="panel-heading">Votes</div>
     <div class="panel-body">
-        {% if is_granted('ROLE_BETA') %}
+        {% if app.user and is_granted('ROLE_BETA') %}
             {% if user.vote %}
                 <p>Voting points: {{ user.vote }} ({% if userVotes %}you have already given {{ userVotes }} voting points{% else %}You haven't vote for a feature yet{% endif %})</p>
             {% else %}
