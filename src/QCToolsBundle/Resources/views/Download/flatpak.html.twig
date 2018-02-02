@@ -1,0 +1,31 @@
+{% extends 'QCToolsBundle::base.html.twig' %}
+
+{% block title %}QCTools - Download QCTools Flatpak{% endblock %}
+
+{% block body %}
+<h1>Download - Flatpak</h1>
+{% image '@AppBundle/Resources/public/img/OS/Flatpak.png' %}
+<img src="{{ asset_url }}" alt="Flatpak" title="Flatpak" width="250" height="72"><br />
+{% endimage %}
+
+<div class="table-responsive">
+<table class="download table table-bordered table-condensed">
+<thead>
+<tr class="table-header">
+    <th>Version</th>
+    <th>CPU</th>
+    <th>Interface</th>
+    <td>Version</td>
+    <td>Comment</td>
+</tr>
+</thead>
+<tbody>
+<tr>
+    <th colspan="3">Officialy supported package.<br/>For installing QCTools, just type in a terminal<br/>"flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo &amp;&amp; flatpak install flathub net.mediaarea.QCTools"<br/></th>
+    <td>&nbsp;</td>
+    <td>Is currently up to date</td>
+</tr>
+</tbody>
+</table>
+</div>
+{% endblock %}
