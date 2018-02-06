@@ -25,7 +25,7 @@ class CreateInvoice
         EntityManager $entityManager,
         RequestStack $requestStack
     ) {
-        $this->user = $tokenStorage->getToken()->getUser();
+        $this->user = $tokenStorage->getToken() ? $tokenStorage->getToken()->getUser() : null;
         $this->em = $entityManager;
         $this->request = $requestStack->getCurrentRequest();
     }

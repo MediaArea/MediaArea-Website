@@ -30,7 +30,7 @@ class OrdersListener
         CleanPaymentInstruction $cleanPaymentInstruction
     ) {
         $this->createInvoice = $createInvoice;
-        $this->user = $tokenStorage->getToken()->getUser();
+        $this->user = $tokenStorage->getToken() ? $tokenStorage->getToken()->getUser() : null;
         $this->donorManipulator = $donorManipulator;
         $this->cleanPaymentInstruction = $cleanPaymentInstruction;
     }
