@@ -6,7 +6,7 @@
 
 {% block body %}
 <h1>Our sponsors</h1>
-
+{#
 <section id="gold" class="anchor">
     <h2>Gold sponsors</h2>
     <ul class="icon-lists sponsors-gold">
@@ -62,42 +62,56 @@
     </ul>
     <div class="clearfix"></div>
 </section>
-
+#}
 <section id="bronze" class="anchor">
-    <h2>Bronze sponsors</h2>
+    {# <h2>Bronze sponsors</h2> #}
     <ul class="icon-lists sponsors-bronze">
         <li class="icon">
-            <p class="button text-center"><a href="" target="_blank" title="Your company website URL">Your company name</a></p>
+            <p class="button text-center"><a href="http://www.root6technology.com" target="_blank" title="ROOT6 Technology">ROOT6 Technology</a></p>
 
-            {% image '@SupportUsBundle/Resources/public/img/250x250.png' %}
-                <a href="" target="_blank"><img src="{{ asset_url }}" alt="Your company website URL" title="Your company website URL" /></a>
+            {% image '@SupportUsBundle/Resources/public/img/sponsors/root6tech_250.png' %}
+                <a href="http://www.root6technology.com" target="_blank"><img src="{{ asset_url }}" alt="ROOT6 Technology" title="ROOT6 Technology" /></a>
             {% endimage %}
         </li>
         <li class="icon">
-            <p class="button text-center"><a href="" target="_blank" title="Your company website URL">Your company name</a></p>
+            <p class="button text-center"><a href="https://reto.ch" target="_blank" title="AV Preservation by reto.ch">AV Preservation by reto.ch</a></p>
 
-            {% image '@SupportUsBundle/Resources/public/img/250x250.png' %}
-                <a href="" target="_blank"><img src="{{ asset_url }}" alt="Your company website URL" title="Your company website URL" /></a>
+            {% image '@SupportUsBundle/Resources/public/img/sponsors/reto_250.png' %}
+                <a href="https://reto.ch" target="_blank"><img src="{{ asset_url }}" alt="AV Preservation by reto.ch" title="AV Preservation by reto.ch" /></a>
             {% endimage %}
         </li>
         <li class="icon">
-            <p class="button text-center"><a href="" target="_blank" title="Your company website URL">Your company name</a></p>
+            <p class="button text-center"><a href="http://www.cna.public.lu" target="_blank" title="Centre national de l’audiovisuel">Centre national de l’audiovisuel</a></p>
 
-            {% image '@SupportUsBundle/Resources/public/img/250x250.png' %}
-                <a href="" target="_blank"><img src="{{ asset_url }}" alt="Your company website URL" title="Your company website URL" /></a>
+            {% image '@SupportUsBundle/Resources/public/img/sponsors/CNA_250.png' %}
+                <a href="http://www.cna.public.lu" target="_blank"><img src="{{ asset_url }}" alt="Centre national de l’audiovisuel" title="Centre national de l’audiovisuel" /></a>
             {% endimage %}
         </li>
         <li class="icon">
-            <p class="button text-center"><a href="" target="_blank" title="Your company website URL">Your company name</a></p>
+            <p class="button text-center"><a href="http://ifi.ie" target="_blank" title="Irish Film Institute">Irish Film Institute</a></p>
 
-            {% image '@SupportUsBundle/Resources/public/img/250x250.png' %}
-                <a href="" target="_blank"><img src="{{ asset_url }}" alt="Your company website URL" title="Your company website URL" /></a>
+            {% image '@SupportUsBundle/Resources/public/img/sponsors/IFI_250.png' %}
+                <a href="http://ifi.ie" target="_blank"><img src="{{ asset_url }}" alt="Irish Film Institute" title="Irish Film Institute" /></a>
+            {% endimage %}
+        </li>
+        <li class="icon">
+            <p class="button text-center"><a href="https://www.nb.no" target="_blank" title="Nasjonalbiblioteket">Nasjonalbiblioteket</a></p>
+
+            {% image '@SupportUsBundle/Resources/public/img/sponsors/Nasjonalbiblioteket_250.png' %}
+                <a href="https://www.nb.no" target="_blank"><img src="{{ asset_url }}" alt="Nasjonalbiblioteket" title="Nasjonalbiblioteket" /></a>
+            {% endimage %}
+        </li>
+        <li class="icon">
+            <p class="button text-center"><a href="https://www.ad-id.org" target="_blank" title="Ad-ID">Ad-ID</a></p>
+
+            {% image '@SupportUsBundle/Resources/public/img/sponsors/Ad-ID_250.png' %}
+                <a href="https://www.ad-id.org" target="_blank"><img src="{{ asset_url }}" alt="Ad-ID" title="Ad-ID" /></a>
             {% endimage %}
         </li>
     </ul>
     <div class="clearfix"></div>
 </section>
-
+{#
 <section id="sponsor" class="anchor">
     <h2>Sponsors</h2>
     <ul class="icon-lists sponsors-basic">
@@ -146,6 +160,7 @@
     </ul>
     <div class="clearfix"></div>
 </section>
+#}
 {% endblock %}
 
 {% block stylesheets %}
