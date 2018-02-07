@@ -125,10 +125,6 @@ var supportUs = (function () {
         add(total, 'Small logo on all MediaArea tools pages', logo4);
 
         total.value += '<br>' +
-            '<b>Early bird</b> (expiring 2017-12-31) advantages:<br>' +
-            '&#x2611; Membership and support extended to 2019-06-30<br>' +
-            '&#x2611; Voting points x1.5' +
-            '<br><br>' +
             '<b>Early adopter</b> (expiring 2018-06-30) advantages:<br>' +
             '&#x2611; Membership and support extended to 2019-06-30';
 
@@ -292,27 +288,6 @@ var supportUs = (function () {
 
         // Supporter page logo
         add(total, '<a href="' + Routing.generate('supportUs_supporters_list') + '#logo">Your logo</a> on Supporters page, 1 year', logo);
-
-        total.value += '<br>';
-        if (member1 <= 0) {
-            total.value += '<b>Early bird</b> (expiring 2017-12-31) advantages:<br>';
-
-            if (member3 <= 0) {
-                total.value += '&#x2611; Membership extended to 2021-12-31<br>';
-            } else if (member2 <= 0) {
-                total.value += '&#x2611; Membership extended to 2020-12-31<br>';
-            } else {
-                total.value += '&#x2611; Membership extended to 2019-12-31<br>';
-            }
-
-            if (vote1 <= 0) {
-                total.value += '&#x2611; Voting points x1.5<br>';
-            } else {
-                total.value += '<br>';
-            }
-        } else {
-            total.value += '<br><br><br>';
-        }
 
         $('#individual-label').html(total.value);
 

@@ -6,6 +6,7 @@
 
 {% block body %}
 <h1>Our supporters</h1>
+{#
 <section id="logo" class="anchor">
     <ul class="icon-lists supporters">
         <li class="icon">
@@ -75,10 +76,9 @@
 </section>
 
 <hr>
+#}
 <section id="name" class="anchor">
-    {% for i in 0..10 %}
-        Supporter {{ i }} without link{% if not loop.last %} - {% endif %}
-    {% endfor %}
+    Charles Anizet
 </section>
 {% endblock %}
 
