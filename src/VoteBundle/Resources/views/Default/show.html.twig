@@ -43,7 +43,7 @@
     {{ form_end(form) }}
     <div class="clearfix"></div>
 {% else %}
-    {% trans with { '%login%': path('fos_user_security_login'), '%register%': path('fos_user_registration_register') } %}vote.feature.user.not.login{% endtrans %}
+    {% trans with { '%login%': path('fos_user_security_login'), '%register%': path('fos_user_registration_register'), '%supportUS%': path('supportUs_individual') } %}vote.feature.user.not.login{% endtrans %}
 {% endif %}
 
 <p class="vote-return">

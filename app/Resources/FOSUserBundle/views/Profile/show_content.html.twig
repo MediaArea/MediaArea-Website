@@ -25,28 +25,20 @@
 <div class="panel panel-default">
     <div class="panel-heading">Votes</div>
     <div class="panel-body">
-        {% if app.user and is_granted('ROLE_BETA') %}
-            {% if user.vote %}
-                <p>Voting points: {{ user.vote }} ({% if userVotes %}you have already given {{ userVotes }} voting points{% else %}You haven't vote for a feature yet{% endif %})</p>
-            {% else %}
-              <p>You have no vote points, if you want to vote for your favourite features <a href="{{ path('supportUs_individual') }}">buy vote points</a>.</p>
-            {% endif %}
-
-            {% if userVotesFeatures %}
-              Features you voted on :<br>
-              <ul>
-                  {% for feature in userVotesFeatures %}
-                      <li><a href="{{ path('vote_show_feature', {slug: feature.slug, id: feature.id}) }}">{{ feature.title }}</a></li>
-                  {% endfor %}
-              </ul>
-            {% endif %}
+        {% if user.vote %}
+            <p>Voting points: {{ user.vote }} ({% if userVotes %}you have already given {{ userVotes }} voting points{% else %}You haven't vote for a feature yet{% endif %})</p>
         {% else %}
-            {% if user.vote %}
-                <p>Voting points: {{ user.vote }} (voting points manager will be available at the beginning of 2018)</p>
-            {% else %}
-                <p>You have no vote points, if you want to vote for your favourite features <a href="{{ path('supportUs_individual') }}">buy vote points</a>.</p>
-            {% endif %}
-      {% endif %}
+          <p>You have no vote points, if you want to vote for your favourite features <a href="{{ path('supportUs_individual') }}">buy vote points</a>.</p>
+        {% endif %}
+
+        {% if userVotesFeatures %}
+          Features you voted on :<br>
+          <ul>
+              {% for feature in userVotesFeatures %}
+                  <li><a href="{{ path('vote_show_feature', {slug: feature.slug, id: feature.id}) }}">{{ feature.title }}</a></li>
+              {% endfor %}
+          </ul>
+        {% endif %}
       <p>See all <a href="{{ path('vote_list_features') }}">proposed features</a></p>
   </div>
 </div>
