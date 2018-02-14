@@ -76,7 +76,7 @@
 <script>
     $(document).ready(function() {
         $('#features-table').DataTable({
-            order: [[ 4, 'desc' ], [ 0, 'asc' ]],
+            order: [[ {% if app.user %}4{% else %}3{% endif %}, 'desc' ], [ 0, 'asc' ]],
             pageLength: 50,
         });
     });
