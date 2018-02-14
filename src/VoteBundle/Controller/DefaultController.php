@@ -57,11 +57,7 @@ class DefaultController extends Controller
             $userVotesFeature = $this->getDoctrine()->getRepository(Vote::class)
                 ->getTotalVotesByUserAndFeature($user, $feature);
 
-            if ($userVotesFeature > $user->getVote()) {
-                $voteMax = $userVotesFeature + $user->getVote();
-            } else {
-                $voteMax = $user->getVote();
-            }
+            $voteMax = $userVotesFeature + $user->getVote();
         }
 
         $form = $this->createForm(VoteType::class, null, [
