@@ -20,7 +20,7 @@
         </p>
     {% else %}
         <p>
-            {% trans with { '%login%': path('fos_user_security_login'), '%register%': path('fos_user_registration_register') } %}vote.list.user.not.login{% endtrans %}
+            {% trans with { '%login%': path('fos_user_security_login'), '%register%': path('fos_user_registration_register'), '%supportUS%': path('supportUs_individual') } %}vote.list.user.not.login{% endtrans %}
         <p/>
     {% endif %}
 
@@ -77,7 +77,7 @@
     $(document).ready(function() {
         $('#features-table').DataTable({
             order: [[ 4, 'desc' ], [ 0, 'asc' ]],
-            pageLength: 25,
+            pageLength: 50,
         });
     });
 </script>

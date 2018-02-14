@@ -290,9 +290,7 @@ class MenuBuilder
         $menu['menu.supportUs']->addChild('menu.supportUs.faq', ['route' => 'supportUs_faq']);
         $menu['menu.supportUs']->addChild('menu.supportUs.sponsorsList', ['route' => 'supportUs_sponsors_list']);
         $menu['menu.supportUs']->addChild('menu.supportUs.supportersList', ['route' => 'supportUs_supporters_list']);
-        if ($this->authChecker->isGranted('ROLE_BETA')) {
-            $menu['menu.supportUs']->addChild('menu.vote', ['route' => 'vote_list_features']);
-        }
+        $menu['menu.supportUs']->addChild('menu.vote', ['route' => 'vote_list_features']);
 
         return $menu;
     }

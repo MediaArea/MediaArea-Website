@@ -6,16 +6,12 @@ use FOS\UserBundle\Model\UserInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use VoteBundle\Entity\Feature;
 use VoteBundle\Entity\Vote;
 use VoteBundle\Form\VoteType;
 use VoteBundle\Model\FeatureInterface;
 
-/**
- * @Security("has_role('ROLE_BETA')")
- */
 class DefaultController extends Controller
 {
     /**
