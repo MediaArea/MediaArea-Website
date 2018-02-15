@@ -4,6 +4,7 @@ namespace VoteBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Gedmo\Mapping\Annotation as Gedmo;
+use Parsedown;
 use VoteBundle\Model\FeatureInterface;
 
 /**
@@ -120,6 +121,18 @@ class Feature implements FeatureInterface
     public function getDescription()
     {
         return $this->description;
+    }
+
+    /**
+     * Get description as HTML (from markdown).
+     *
+     * @return string
+     */
+    public function getHtmlDescription()
+    {
+        $mdParser = new Parsedown();
+
+        return $mdParser->text($this->description);
     }
 
     /**

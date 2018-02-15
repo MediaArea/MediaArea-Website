@@ -5,8 +5,8 @@
 {% block body %}
 <h1>{{ feature.title }}</h1>
 
-<div class="well well-sm">
-    {{ feature.description }}
+<div class="well well-sm feature-description">
+    {{ feature.htmlDescription|raw }}
 </div>
 
 <p>
