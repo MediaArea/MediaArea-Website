@@ -1,0 +1,122 @@
+{% extends 'MediaConchBundle::base.html.twig' %}
+
+{% block title %}Fixity Feature for MediaConch{% endblock %}
+
+{% block body %}
+<h1 id="fixity-feature-for-mediaconch">Fixity feature for MediaConch</h1>
+
+<p>In the October release of MediaConch, <a href="{{ path('mc_download') }}">available here</a>, we have introduced some new features for checking and implementing fixity within video files, including some methods to correct small fixity errors.</p>
+
+<section id="segment-sizes-in-matroska" class="anchor">
+<h2>Segment sizes in Matroska</h2>
+
+<p>Some files have a wrong Matroska Segment element size (it is set to 0 instead of the actual size). As a result, a file with this problem is playable on some players that support corrections of this bug but not on some other players (e.g. VLC can play the file but Windows 10 Media Player cannot play the file). This is an example of interoperability issue.
+The new fixer feature in MediaConch is able to resolve this issue.</p>
+
+<p>Try this new feature out for yourself with the below demo:</p>
+
+<p>Download <a href="http://www.archive.org/download/vip.videobaran1.com/The.Simpsons/06/The.Simpsons.S06.E05.www.VideoBaran.net.mkv" target="_blank">this file on archive.org</a>. This file is not playable using Windows 10 Media Player.</p>
+
+<ol>
+  <li>Click on “Enable fixer” in the MediaConch GUI checker page</li>
+  <li>Select the file</li>
+  <li>Click on “Check files”</li>
+</ol>
+
+<p>Alternatively, if using the command line, add the option “--TryToFix --Force”.</p>
+
+<p>A file with the same name + “.fixed” is created with the correct Segment size and is now playable by Windows 10 Media Player.</p>
+</section>
+
+<section id="ffv1-bit-flip-correction" class="anchor">
+<h2>FFV1 “bit flip” correction</h2>
+
+<p>MediaConch can now check for “bit flipping” and correct these if found, saving the file from damage caused by an unintentional state switch between 0 and 1 which can occur to bits stored for a long time, in the case FFV1 slice are “protected” with a CRC checksum. This is the default in FFmpeg for streams in 720x480 definition or higher.</p>
+
+<p>Demo below:</p>
+
+<p>Download <a href="https://mediaarea.net/MediaConch/files/FFV1+PCM_WithChecksum_VideoBitFlip.mkv">this file</a>. This is a file created by FFmpeg with handmade flipped bit.</p>
+
+<p>The 9th bit (most significant bit of 2nd byte) of the FFV1 1st slice of the 1st video frame is flipped. Also, the 17th bit (less significant bit of 3rd byte) of the FFV1 4th slice of the 1st video frame is flipped. Why these bits? Because it creates nice display of bugs during decoding. Touching some other bits just make FFmpeg decoder create a black image and displaying a black image is not interesting!</p>
+
+<p>The resulting decoded frame (e.g. with FFmpeg “ffmpeg -i FFV1+PCM_WithChecksum_VideoBitFlip.mkv Decoded_Error.png”) is:</p>
+
+<p>
+    {% image '@MediaConchBundle/Resources/public/img/video_bitflip_detected.png' %}
+    <img src="{{ asset_url }}" alt="video_bitflip_detected">
+    {% endimage %}
+</p>
+
+<p>Obviously the first (top left) and fourth (bottom right) slices are scrambled.</p>
+
+<ol>
+  <li>Click on “Enable fixer” in the GUI’s checker page</li>
+  <li>Select the file</li>
+  <li>Click on “Check files”</li>
+</ol>
+
+<p>Or, if using the command line, add the option “--TryToFix --Force”</p>
+
+<p>The resulting decoded frame (e.g. with FFmpeg “ffmpeg -i FFV1+PCM_WithChecksum_VideoBitFlip.mkv.fixed Decoded_Fixed.png”) is:</p>
+
+<p>
+    {% image '@MediaConchBundle/Resources/public/img/video_bitflip_corrected.png' %}
+    <img src="{{ asset_url }}" alt="video_bitflip_corrected">
+    {% endimage %}
+</p>
+
+<p>…and it’s a miracle! The image is the expected one.</p>
+
+<p>There is currently one limitation: if the bit in error is in the slice footer (7 bytes at the end of a slice), CRC values are not found and the correction cannot be done (all slices may be lost in this case). Detecting “bit flipping” in the footer is possible with a different algorithm and is planned in a later release of MediaConch. Performance may also be improved if there is a request for it.</p>
+</section>
+
+<section id="matroska-bit-flip-correction" class="anchor">
+<h2>Matroska “bit flip” correction</h2>
+
+<p>Matroska can also support CRC protection per Cluster (often a block containing a video GOP and the corresponding audio, which can be a single video frame if the GOP is 1 as expected in archives). The next version of FFmpeg will create Matroska files with CRC by default (yeah!). This permits to protect stream formats not having their own CRC protection like PCM, as well as the container itself.</p>
+
+<p>Demo below:</p>
+
+<p>Download <a href="https://mediaarea.net/MediaConch/files/FFV1+PCM_WithChecksum_AudioBitFlip.mkv">this file</a>. This is a file created by FFmpeg with hand made flipped bit. The1st bit (most significant bit of 1st byte) of the PCM packet is flipped. The resulting decoded packet (e.g. file opened in open source audio editor <a href="https://www.audacityteam.org/" target="_blank">Audacity</a>) starts with:</p>
+
+<p>
+    {% image '@MediaConchBundle/Resources/public/img/audio_bitflip_detected.png' %}
+    <img src="{{ asset_url }}" alt="audio_bitflip_detected">
+    {% endimage %}
+</p>
+
+<p>Obviously the 1st audio sample is completely wrong!</p>
+
+<ol>
+  <li>Click on “Enable fixer” in the GUI checker page</li>
+  <li>Select the file</li>
+  <li>Click on “Check files”</li>
+</ol>
+
+<p>If using the CLI, add the option “--TryToFix”</p>
+
+<p>The resulting decoded frame starts with:</p>
+
+<p>
+    {% image '@MediaConchBundle/Resources/public/img/audio_bitflip_corrected.png' %}
+    <img src="{{ asset_url }}" alt="audio_bitflip_corrected" />
+    {% endimage %}
+</p>
+
+<p>Another miracle! The audio waveform is as expected.</p>
+
+<p>There is currently one limitation: if the bit in error is in the CRC element header of the Matroska cluster), CRC values are not found and the correction can not be done. Detecting “bit flipping” in the CRC element header is possible with a different algorithm and is planned in a later release of MediaConch.
+Performance may also be improved if there is a request for it.</p>
+</section>
+
+<section id="whats-next-for-us" class="anchor">
+<h2>What’s next for us?</h2>
+
+<p>We still need to create a better messaging system during the fixing process within the UI. Currently, the fixing takes a long time and there is no notification to the user for when the file has been fixed. We also need to improve performance!</p>
+</section>
+
+<section id="whats-next-for-you" class="anchor">
+<h2>What’s next for you?</h2>
+
+<p>What can we fix next? It’s up to you! <a href="{{ path('ma_contact') }}">Let us know</a> what are the most important issues you have with your video files.</p>
+{% endblock %}

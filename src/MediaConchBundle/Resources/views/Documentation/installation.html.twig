@@ -1,0 +1,42 @@
+{% extends 'MediaConchBundle::base.html.twig' %}
+
+{% block title %}MediaConch Installation{% endblock %}
+
+{% block body %}
+<h1 id="mediaconch-installation-instructions">MediaConch Installation Instructions</h1>
+
+<section id="command-line" class="anchor">
+<h2>Command Line</h2>
+
+<h3>With installer</h3>
+
+<p>Your operating system can be selected from the list available on our <a href="{{ path('mc_download') }}">downloads page</a>. There, select the CLI download option. After download is complete, open the installer and select the download package. Follow the instructions according to the installer. You can test the functionality by typing <code>mediaconch --version</code> into your command line prompt.</p>
+
+<h3>Compile from source</h3>
+
+<p>Source and documentation are available <a href="https://github.com/MediaArea/MediaConch_SourceCode" target="_blank">on Github</a>.</p>
+
+<h3>Homebrew and Linuxbrew</h3>
+
+<p>Mac users using <a href="http://brew.sh/" target="_blank">Homebrew</a> can install MediaConch by typing <code>brew install mediaconch</code> into the Terminal.</p>
+
+<p>Linux users using <a href="https://github.com/Homebrew/linuxbrew" target="_blank">Linuxbrew</a> can also install MediaConch by typing <code>brew install mediaconch</code> into your command line prompt.</p>
+</section>
+
+<section id="graphical-user-interface" class="anchor">
+<h2>Graphical User Interface</h2>
+
+<h3>With installer</h3>
+
+<p>Your operating system can be selected from the list available on our <a href="{{ path('mc_download') }}">downloads page</a>. There, select the GUI download option. After download is complete, open the installer and select the download package. Follow the instructions according to the installer. You can test the functionality by opening the software on your machine.</p>
+
+<h3>Compile from source</h3>
+
+<p>Source and documentation are available <a href="https://github.com/MediaArea/MediaConch_SourceCode" target="_blank">on Github</a>.</p>
+</section>
+
+<section id="mediaconchonline" class="anchor">
+<h2>MediaConchOnline</h2>
+
+<p>MediaConchOnline is <a href="https://mediaarea.net/MediaConchOnline/">available online as a test instance</a>. For integration into your institution’s workflow, MediaConchOnline can be installed locally and run on any machine within your network. The source code for MediaConchOnline is available <a href="https://github.com/MediaArea/MediaConchOnline" target="_blank">here</a>.</p>
+{% endblock %}

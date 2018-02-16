@@ -6,6 +6,9 @@ use Knp\Menu\FactoryInterface;
 use Knp\Menu\ItemInterface;
 use Symfony\Component\Security\Core\Authorization\AuthorizationCheckerInterface;
 
+/**
+ * @SuppressWarnings(PHPMD.TooManyPublicMethods)
+ */
 class MenuBuilder
 {
     private $factory;
@@ -249,6 +252,49 @@ class MenuBuilder
         return $menu;
     }
 
+    /**
+     * @SuppressWarnings(PHPMD.UnusedFormalParameter)
+     */
+    public function createMediaConchMenu(array $options)
+    {
+        $menu = $this->factory->createItem('root');
+        $menu->setChildrenAttribute('class', 'nav navbar-nav main-menu');
+
+        $menu = $this->mediaAreaMenu($menu);
+
+        $menu->addChild('menu.mediaconch', ['route' => 'mc_home'])->setExtras(['dropdown' => true])->setCurrent(true);
+        $menu['menu.mediaconch']->addChild('menu.mediaconch.about', ['route' => 'mc_home']);
+        $menu['menu.mediaconch']->addChild('menu.mediaconch.download', ['route' => 'mc_download']);
+        $menu['menu.mediaconch']->addChild('menu.mediaconch.team', ['route' => 'mc_team']);
+        $menu['menu.mediaconch']->addChild('menu.mediaconch.community', ['route' => 'mc_community']);
+        $menu['menu.mediaconch']->addChild('menu.mediaconch.documentation');
+        $menu['menu.mediaconch']['menu.mediaconch.documentation']->addChild(
+            'menu.mediaconch.documentation.fixity',
+            ['route' => 'mc_documentation_fixity']
+        );
+        $menu['menu.mediaconch']['menu.mediaconch.documentation']->addChild(
+            'menu.mediaconch.documentation.faq',
+            ['route' => 'mc_documentation_faq']
+        );
+        $menu['menu.mediaconch']['menu.mediaconch.documentation']->addChild(
+            'menu.mediaconch.documentation.howtouse',
+            ['route' => 'mc_documentation_howtouse']
+        );
+        $menu['menu.mediaconch']['menu.mediaconch.documentation']->addChild(
+            'menu.mediaconch.documentation.dataformat',
+            ['route' => 'mc_documentation_dataformat']
+        );
+        $menu['menu.mediaconch']['menu.mediaconch.documentation']->addChild(
+            'menu.mediaconch.documentation.installation',
+            ['route' => 'mc_documentation_installation']
+        );
+
+        $menu = $this->projectsMenu($menu);
+        $menu = $this->supportUsMenu($menu);
+
+        return $menu;
+    }
+
     private function mediaAreaMenu(ItemInterface $menu)
     {
         $menu->addChild('menu.mediaarea', ['route' => 'homepage'])->setExtras(['dropdown' => true]);
@@ -268,7 +314,7 @@ class MenuBuilder
     {
         $menu->addChild('menu.projects', ['route' => 'mi_home'])->setExtras(['dropdown' => true]);
         $menu['menu.projects']->addChild('menu.projects.mediainfo', ['route' => 'mi_home'])->setCurrent(false);
-        $menu['menu.projects']->addChild('menu.projects.mediaconch', ['uri' => '/MediaConch/'])->setCurrent(false);
+        $menu['menu.projects']->addChild('menu.projects.mediaconch', ['route' => 'mc_home'])->setCurrent(false);
         $menu['menu.projects']->addChild('menu.projects.mediatrace', ['route' => 'mediatrace_home'])->setCurrent(false);
         $menu['menu.projects']->addChild('menu.projects.qctools', ['route' => 'qc_home'])->setCurrent(false);
         $menu['menu.projects']->addChild('menu.projects.bwfmetaedit', ['route' => 'bwf_home'])->setCurrent(false);

@@ -1,0 +1,27 @@
+{% extends 'MediaConchBundle::base.html.twig' %}
+
+{% block title %}MediaConch - Download MediaConch for Fedora{% endblock %}
+
+{% block body %}
+<h1>Download - Fedora</h1>
+{% image '@AppBundle/Resources/public/img/OS/Fedora.png' %}
+<img src="{{ asset_url }}" alt="Fedora" title="Fedora" width="250" height="89"><br>
+{% endimage %}
+
+<div class="table-responsive">
+<table class="download table table-bordered table-condensed">
+<thead>
+<tr class="table-header">
+    <th>Version</th>
+    <th>Architecture</th>
+    <th>Interface</th>
+    <td>Version</td>
+    <td>Comment</td>
+</tr>
+</thead>
+<tbody>
+{{ include('@MediaConch/Download/fedoraTable.html.twig') }}
+</tbody>
+</table>
+</div>
+{% endblock %}

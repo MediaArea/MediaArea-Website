@@ -1,0 +1,13 @@
+services:
+    _defaults:
+        autowire: true
+        autoconfigure: true
+        public: false
+
+    MediaConchBundle\:
+        resource: '../../*'
+        exclude: '../../{Entity,Repository,Tests}'
+
+    MediaConchBundle\Controller\:
+        resource: '../../Controller'
+        tags: ['controller.service_arguments']
