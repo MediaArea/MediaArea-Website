@@ -2,6 +2,35 @@ services:
 #    user.example:
 #        class: UserBundle\Example
 #        arguments: ["@service_id", "plain_value", "%parameter%"]
+    fos_user.profile.controller:
+        class: UserBundle\Controller\ProfileController
+        arguments:
+            - "@event_dispatcher"
+            - "@fos_user.profile.form.factory"
+            - "@fos_user.user_manager"
+
+    fos_user.registration.controller:
+        class: UserBundle\Controller\RegistrationController
+        arguments:
+            - "@event_dispatcher"
+            - "@fos_user.registration.form.factory"
+            - "@fos_user.user_manager"
+            - "@security.token_storage"
+
+    fos_user.resetting.controller:
+        class: UserBundle\Controller\ResettingController
+        arguments:
+            - "@event_dispatcher"
+            - "@fos_user.profile.form.factory"
+            - "@fos_user.user_manager"
+            - "@fos_user.util.token_generator"
+            - "@fos_user.mailer"
+            - "%fos_user.resetting.retry_ttl%"
+
+    fos_user.security.controller:
+        class: UserBundle\Controller\SecurityController
+        arguments:
+            - "@security.csrf.token_manager"
 
     user.util.donor_manipulator:
         class: UserBundle\Lib\DonorManipulator
