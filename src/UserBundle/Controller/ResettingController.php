@@ -27,6 +27,6 @@ class ResettingController extends BaseController
         // Get request from service to keep function signature from parent controller
         $request = $this->get('request_stack')->getCurrentRequest();
 
-        return $this->render('@FOSUser/Resetting/request.html.twig', array('email' => $request->query->get('email')));
+        return $this->render('@FOSUser/Resetting/request.html.twig', ['email' => $request->query->get('email')]);
     }
 }

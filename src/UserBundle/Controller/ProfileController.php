@@ -38,7 +38,7 @@ class ProfileController extends BaseController
 
         $userVotesFeatures = $this->getDoctrine()->getRepository(Feature::class)->getFeaturesVotedByUser($user);
 
-        return $this->render('@FOSUser/Profile/show.html.twig', array(
+        return $this->render('@FOSUser/Profile/show.html.twig', [
             'user' => $user,
             'language' => $language ?? null,
             'country' => $country ?? null,
@@ -55,6 +55,6 @@ class ProfileController extends BaseController
             ],
             'userVotes' => $userVotes,
             'userVotesFeatures' => $userVotesFeatures,
-        ));
+        ]);
     }
 }
