@@ -21,7 +21,7 @@ services:
         class: UserBundle\Controller\ResettingController
         arguments:
             - "@event_dispatcher"
-            - "@fos_user.profile.form.factory"
+            - "@fos_user.resetting.form.factory"
             - "@fos_user.user_manager"
             - "@fos_user.util.token_generator"
             - "@fos_user.mailer"
