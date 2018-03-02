@@ -12,9 +12,9 @@
         </trans-unit>
         <trans-unit id="vote.list.text" approved="yes">
             <source>vote.list.text</source>
-            <target><![CDATA[MediaArea lets you vote to your favourite features.<br>
-                By voting to your most important features you priorize the features we will worked on and accelerate their development.<br>
-                You can vote for a feature (adding or removing points) until we start the development, after that we freeze the vote and the points you put on, when the development is finished we take the points definitively.<br>
+            <target><![CDATA[MediaArea lets you vote for your favourite features.<br>
+                By voting for your most important features you prioritize the features we will work on and accelerate their development.<br>
+                You can vote for a feature (adding or removing points) until we start the development. After that we freeze the vote and the points you put on, when the development is finished we take the points definitively.<br>
                 After a feature is developed, we select the next feature to develop by checking features with the highest ratio, with a minimal ratio of 100%; we may also work on a feature even if it has not reached 100% depending on our workload.]]></target>
         </trans-unit>
         <trans-unit id="vote.list.user.points" approved="yes">
@@ -27,7 +27,7 @@
         </trans-unit>
         <trans-unit id="vote.list.user.not.login" approved="yes">
             <source>vote.list.user.not.login</source>
-            <target><![CDATA[You are not loggued you cannot vote for a feature, please <a href="%login%">login</a> or <a href="%register%">register</a> then <a href="%supportUS%">support us</a> a if you want to be able to vote.]]></target>
+            <target><![CDATA[You are not logged in. You cannot vote for a feature, please <a href="%login%">login</a> or <a href="%register%">register</a> then <a href="%supportUS%">support us</a> if you want to be able to vote.]]></target>
         </trans-unit>
         <trans-unit id="vote.list.missing.feature" approved="yes">
             <source>vote.list.missing.feature</source>
@@ -35,7 +35,7 @@
         </trans-unit>
         <trans-unit id="vote.feature.status" approved="yes">
             <source>vote.feature.status</source>
-            <target><![CDATA[This feature have <span class="vote-feature-count">%count%</span> points for a target of <span class="vote-feature-target">%target%</span>, the completion ratio is <span class="vote-feature-ratio">%ratio%</span>%]]></target>
+            <target><![CDATA[This feature has <span class="vote-feature-count">%count%</span> points for a target of <span class="vote-feature-target">%target%</span>, the completion ratio is <span class="vote-feature-ratio">%ratio%</span>%]]></target>
         </trans-unit>
         <trans-unit id="vote.feature.user.points" approved="yes">
             <source>vote.feature.user.points</source>
@@ -51,7 +51,7 @@
         </trans-unit>
         <trans-unit id="vote.feature.user.not.login" approved="yes">
             <source>vote.feature.user.not.login</source>
-            <target><![CDATA[You are not loggued you cannot vote for this feature, please <a href="%login%">login</a> or <a href="%register%">register</a> then <a href="%supportUS%">support us</a> a if you want to be able to vote.]]></target>
+            <target><![CDATA[You are not logged in. You cannot vote for this feature, please <a href="%login%">login</a> or <a href="%register%">register</a> then <a href="%supportUS%">support us</a> if you want to be able to vote.]]></target>
         </trans-unit>
         <trans-unit id="vote.feature.return.list" approved="yes">
             <source>vote.feature.return.list</source>
@@ -92,3 +92,4 @@
     </body>
   </file>
 </xliff>
+
