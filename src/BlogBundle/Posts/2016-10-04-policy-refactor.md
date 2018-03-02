@@ -1,7 +1,7 @@
 ---
 title:  "Policies vs Reality: MediaConch's Policy Update"
 date:   2016-10-04 20:00:00 CET
-tags: mediaconch, policy
+tags: MediaConch, Policies
 ---
 
 # Policies vs Reality

@@ -1,7 +1,7 @@
 ---
 title:  "MediaConch Displays: Simple and CSV"
 date:   2016-10-05
-tags: mediaconch, policies
+tags: MediaConch, Policies
 ---
 
 ---

@@ -1,7 +1,7 @@
 ---
 title:  "Interview with Patricia Falcao and Francesca Colussi"
 date:   2017-10-27
-tags: mediaconch, interview
+tags: MediaConch, Interview
 ---
 
 # Interview with Patricia Falcao and Francesca Colussi of Tate  

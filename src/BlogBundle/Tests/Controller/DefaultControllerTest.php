@@ -30,6 +30,54 @@ class DefaultControllerTest extends WebTestCase
         );
     }
 
+    public function testIndexPageNotFound()
+    {
+        $client = static::createClient();
+
+        $client->request('GET', '/blog/2');
+
+        $this->assertEquals(404, $client->getResponse()->getStatusCode());
+    }
+
+    public function testIndexRedirectPage1()
+    {
+        $client = static::createClient();
+
+        $client->request('GET', '/blog/1');
+
+        $this->assertEquals(301, $client->getResponse()->getStatusCode());
+        $this->assertTrue($client->getResponse()->isRedirect('/blog'));
+    }
+
+    public function testFilterByTag()
+    {
+        $client = static::createClient();
+
+        $crawler = $client->request('GET', '/blog/mediaconch');
+
+        $this->assertEquals(200, $client->getResponse()->getStatusCode());
+        $this->assertEquals('MediaConch ×', $crawler->filter('.blog-tag-list .label')->text());
+    }
+
+    public function testFilterByTagPageNotFound()
+    {
+        $client = static::createClient();
+
+        $client->request('GET', '/blog/mediaconch/2');
+
+        $this->assertEquals(404, $client->getResponse()->getStatusCode());
+    }
+
+    public function testFilterByTagRedirectPage1()
+    {
+        $client = static::createClient();
+
+        $client->request('GET', '/blog/mediaconch/1');
+
+        $this->assertEquals(301, $client->getResponse()->getStatusCode());
+        $this->assertTrue($client->getResponse()->isRedirect('/blog/mediaconch'));
+    }
+
     public function testPost()
     {
         $client = static::createClient();
@@ -38,5 +86,7 @@ class DefaultControllerTest extends WebTestCase
 
         $this->assertEquals(200, $client->getResponse()->getStatusCode());
         $this->assertEquals('Interview with Julia Kim', $crawler->filter('h1')->text());
+        $this->assertEquals(2, count($crawler->filter('.blog-tag-list .label')));
+        $this->assertEquals('MediaConch', $crawler->filter('.blog-tag-list .label')->first()->text());
     }
 }

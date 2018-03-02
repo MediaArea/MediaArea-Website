@@ -1,7 +1,7 @@
 ---
 title: "Interview with Hermann Lewetz and Peter Bubestinger"
 date:   2014-12-16
-tags: mediaconch, interview
+tags: MediaConch, Interview
 ---
 
 # Interview with Hermann Lewetz and Peter Bubestinger

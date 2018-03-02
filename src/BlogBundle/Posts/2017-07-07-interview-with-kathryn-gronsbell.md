@@ -1,7 +1,7 @@
 ---
 title:  "Interview with Kathryn Gronsbell"
 date:   2017-07-07
-tags: mediaconch, interview
+tags: MediaConch, Interview
 ---
 
 # Interview with Kathryn Gronsbell

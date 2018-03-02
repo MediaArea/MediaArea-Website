@@ -4,11 +4,15 @@
 
 {% block body %}
 <h1>MediaArea blog</h1>
-{% for post in posts %}
-    <h2><a href="{{ path('ma_blog_post', post.getUrlParams)}}">{{ post.title }}</a></h2>
-    <p>{% if post.excerpt %}{{ post.excerpt }}{% else %}{{ post.htmlContent|striptags|truncate(400, true, '…')|raw}}{% endif %} <a href="{{ path('ma_blog_post', post.getUrlParams)}}">[continue]</a></p>
+<div>
+    Filter by popular tags :
+        <span class="label label-default"><a href="{{ path('ma_blog_tag_index', {'tag': 'mediaconch'}) }}">MediaConch</a></span>
+        <span class="label label-default"><a href="{{ path('ma_blog_tag_index', {'tag': 'interview'}) }}">Interview</a></span>
+        <span class="label label-default"><a href="{{ path('ma_blog_tag_index', {'tag': 'newsletter'}) }}">Newsletter</a></span>
+</div>
 
-{% endfor %}
+{{ include('@Blog/Default/postsList.html.twig', {posts: posts}, with_context = false) }}
+
 <div class="text-center">
     {{ include('@App/paginator.html.twig', {paginator: paginator}, with_context = false) }}
 </div>

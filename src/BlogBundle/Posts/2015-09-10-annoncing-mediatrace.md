@@ -1,7 +1,7 @@
 ---
 title:  "Announcing MediaTrace!"
 date:   2015-09-10 16:00:00 CET
-tags: mediatrace
+tags: MediaTrace
 ---
 
 # Announcing MediaTrace: A Comprehensive Architecture Report for AudioVisual Data

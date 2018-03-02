@@ -1,7 +1,7 @@
 ---
 title: "Interview with Christopher Kummer"
 date:   2014-12-23
-tags: mediaconch, interview
+tags: MediaConch, Interview
 ---
 
 # Interview with Christopher Kummer

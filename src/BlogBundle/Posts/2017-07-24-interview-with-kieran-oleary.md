@@ -1,7 +1,7 @@
 ---
 title:  "Interview with Kieran O'Leary"
 date:   2017-07-24
-tags: mediaconch, interview
+tags: MediaConch, Interview
 ---
 
 # Interview with Kieran O'Leary

@@ -1,7 +1,7 @@
 ---
 title:  "MediaArea presents at AMIA"
 date:   2015-12-02 08:00:00 CET
-tags: mediaconch, presentations, amia
+tags: MediaConch, Presentations, AMIA
 ---
 
 # MediaArea presents at AMIA

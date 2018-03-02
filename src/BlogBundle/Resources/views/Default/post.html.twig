@@ -3,5 +3,13 @@
 {% block title %}{{ post.title }}{% endblock %}
 
 {% block body %}
+{% if post.tags %}
+    <div class="blog-tag-list">
+        Tags :
+        {% for tagSlug, tag in post.tags %}
+            <span class="label label-default"><a href="{{ path('ma_blog_tag_index', {'tag': tagSlug}) }}">{{ tag }}</a></span>
+        {% endfor %}
+    </div>
+{% endif %}
 {{ post.htmlContent|raw }}
 {% endblock %}

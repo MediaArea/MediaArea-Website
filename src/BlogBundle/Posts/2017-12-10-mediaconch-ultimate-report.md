@@ -1,7 +1,7 @@
 ---
 title:  "MediaConch Ultimate Report"
 date:   2017-12-10
-tags: mediaconch
+tags: MediaConch
 ---
 
 ![](/bundles/mediaconch/img/ms-icon-310x310.png)  

@@ -1,7 +1,7 @@
 ---
 title:  "Interview with Brian E. Davis"
 date:   2017-11-06
-tags: mediaconch, interview
+tags: MediaConch, Interview
 ---
 
 # Interview with Brian E. Davis of Oregon State University  

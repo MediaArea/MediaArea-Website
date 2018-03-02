@@ -1,7 +1,7 @@
 ---
 title:  "MediaArea presents at FIAT/IFTA"
 date:   2015-11-04 08:00:00 CET
-tags: mediaconch presentations standardization
+tags: MediaConch, Presentations, Standardization
 ---
 
 # MediaArea presents at FIAT/IFTA

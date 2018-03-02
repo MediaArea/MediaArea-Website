@@ -11,6 +11,7 @@ use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 use AppBundle\Lib\Paginator;
 use BlogBundle\Lib\Parser\PostParser;
 use BlogBundle\Lib\Posts;
+use BlogBundle\Lib\PostsTagFilter;
 
 /**
  * @Route("/blog")
@@ -26,14 +27,15 @@ class DefaultController extends Controller
      */
     public function indexAction(Request $request, int $page)
     {
-        $posts = new LimitIterator(
-            new Posts($this->getParameter('blog.files.path')),
+        $posts = new Posts($this->getParameter('blog.files.path'));
+        $showPosts = new LimitIterator(
+            $posts,
             ($page - 1) * self::POSTS_PER_PAGE,
             self::POSTS_PER_PAGE
         );
 
-        // Throw 404 if page is out of range
-        if ($posts->count() < ($page - 1) * self::POSTS_PER_PAGE) {
+        // Throw 404 if there is no post
+        if (0 == iterator_count($showPosts)) {
             throw new NotFoundHttpException();
         }
 
@@ -50,7 +52,47 @@ class DefaultController extends Controller
             $page
         );
 
-        return ['posts' => $posts, 'paginator' => $paginator];
+        return ['posts' => $showPosts, 'paginator' => $paginator];
+    }
+
+    /**
+     * @Route("/{tag}", defaults={"page" = 1}, requirements={"tag" = "[a-zA-Z0-9 -]+"}, name="ma_blog_tag_index")
+     * @Route("/{tag}/{page}", requirements={"page" = "\d+", "tag" = "[a-zA-Z0-9 -]+"}, name="ma_blog_tag_index_page")
+     * @Template()
+     */
+    public function listingByTagAction(Request $request, int $page, $tag)
+    {
+        $posts = new PostsTagFilter(new Posts($this->getParameter('blog.files.path')), $tag);
+        $showPosts = new LimitIterator(
+                $posts,
+                ($page - 1) * self::POSTS_PER_PAGE,
+                self::POSTS_PER_PAGE
+            );
+
+        // Throw 404 if there is no post
+        if (0 == iterator_count($showPosts)) {
+            throw new NotFoundHttpException();
+        }
+
+        // Redirect paginated page 1 to index
+        if ('ma_blog_tag_index_page' == $request->get('_route') && 1 == $page) {
+            return $this->redirectToRoute('ma_blog_tag_index', ['tag' => $tag], 301);
+        }
+
+        $paginator = new Paginator(
+            iterator_count($posts),
+            self::POSTS_PER_PAGE,
+            'ma_blog_tag_index_page',
+            'ma_blog_tag_index',
+            $page
+        );
+        $paginator->setPageRouteParams(['tag' => $tag]);
+
+        // Get first result to get tag (instead of slug)
+        $showPosts->rewind();
+        $post = $showPosts->current();
+
+        return ['posts' => $showPosts, 'paginator' => $paginator, 'tag' => $post->getTagBySlug($tag)];
     }
 
     /**

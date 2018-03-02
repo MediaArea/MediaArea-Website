@@ -1,7 +1,7 @@
 ---
 title:  "MediaConch Newsletter No. 10 (1 June 2017)"
 date:   2017-06-01 10:00:00 CET
-tags: newsletter
+tags: Newsletter
 ---
 
 ![Complete logo](/bundles/mediaconch/img/ms-icon-310x310.png)

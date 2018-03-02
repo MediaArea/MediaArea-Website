@@ -2,11 +2,14 @@
 
 namespace BlogBundle\Model;
 
+use Gedmo\Sluggable\Util\Urlizer;
+
 class Post
 {
     protected $title;
     protected $date;
     protected $excerpt;
+    protected $tags = [];
     protected $content;
     protected $urlParams;
 
@@ -44,6 +47,31 @@ class Post
     public function getExcerpt()
     {
         return $this->excerpt;
+    }
+
+    /**
+     * @SuppressWarnings(PHPMD.StaticAccess)
+     */
+    public function addTag($tag)
+    {
+        $this->tags[Urlizer::urlize($tag)] = $tag;
+
+        return $this;
+    }
+
+    public function getTags()
+    {
+        return $this->tags;
+    }
+
+    public function getTagBySlug($tagSlug)
+    {
+        return $this->tags[$tagSlug] ?? false;
+    }
+
+    public function hasTagSlug($tagSlug)
+    {
+        return isset($this->tags[$tagSlug]);
     }
 
     public function setContent($content)

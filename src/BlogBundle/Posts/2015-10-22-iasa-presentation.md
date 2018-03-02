@@ -1,7 +1,7 @@
 ---
 title:  "MediaConch at IASA"
 date:   2015-10-22 08:00:00 CET
-tags: mediaconch standardization
+tags: MediaConch, Standardization
 ---
 
 # The MediaConch Presentation at IASA

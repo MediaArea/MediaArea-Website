@@ -1,7 +1,7 @@
 ---
 title:  "MediaConch Newsletter No. 8 (5 October 2016)"
 date:   2016-10-05
-tags: newsletter
+tags: Newsletter
 ---
 
 ![Complete logo](/bundles/mediaconch/img/ms-icon-310x310.png)

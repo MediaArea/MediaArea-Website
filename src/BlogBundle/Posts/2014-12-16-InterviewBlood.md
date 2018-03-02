@@ -1,7 +1,7 @@
 ---
 title: "Interview with George Blood"
 date:   2014-12-16
-tags: mediaconch, interview
+tags: MediaConch, Interview
 ---
 
 # Interview with George Blood

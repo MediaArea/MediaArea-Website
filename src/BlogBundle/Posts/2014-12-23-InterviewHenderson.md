@@ -1,7 +1,7 @@
 ---
 title: "Interview with Ian Henderson"
 date:   2014-12-23
-tags: mediaconch, interview
+tags: MediaConch, Interview
 ---
 
 # Interview with Ian Henderson

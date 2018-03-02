@@ -1,7 +1,7 @@
 ---
 title:  "File Analysis, Conformity Checks, and XML Power"
 date:   2015-12-02 08:00:00 CET
-tags: mediaconch mediatrace xml xslt
+tags: MediaConch, MediaTrace, XML, XSLT
 ---
 
 # Building a Conformance Check Framework for the Future

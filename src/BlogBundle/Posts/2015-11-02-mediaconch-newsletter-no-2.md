@@ -1,7 +1,7 @@
 ---
 title:  "MediaConch Newsletter No. 2 (2 Nov 2015)"
 date:   2015-11-02 16:00:00 CET
-tags: newsletter
+tags: Newsletter
 ---
 
 #MediaConch Newsletter No. 2 (2 Nov 2015)

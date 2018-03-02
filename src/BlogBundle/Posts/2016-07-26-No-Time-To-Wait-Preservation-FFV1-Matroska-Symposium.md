@@ -1,7 +1,7 @@
 ---
 title:  "No Time to Wait: Standardizing FFV1 and Matroska for Preservation"
 date:   2016-07-26 08:00:00 CET
-tags: mediaconch, presentations, amia
+tags: MediaConch, Presentations, No Time to Wait
 ---
 
 # No Time to Wait: Standardizing FFV1 and Matroska for Preservation

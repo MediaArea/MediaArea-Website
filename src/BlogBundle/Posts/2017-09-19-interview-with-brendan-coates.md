@@ -1,7 +1,7 @@
 ---
 title:  "Interview with Brendan Coates"
 date:   2017-09-19
-tags: mediaconch, interview
+tags: MediaConch, Interview
 ---
 
 # Interview with Brendan Coates

@@ -1,7 +1,7 @@
 ---
 title:  "MediaConch Newsletter No. 9 (4 November 2016)"
 date:   2016-11-01 10:00:00 CET
-tags: newsletter
+tags: Newsletter
 ---
 
 ![Complete logo](/bundles/mediaconch/img/ms-icon-310x310.png)

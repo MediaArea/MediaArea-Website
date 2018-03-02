@@ -375,7 +375,7 @@ p {
     color: white;
 }
 
-.blue .btn-default {
+.blue .btn-default, .blue .label-default {
     color: white;
     background-color: #0070bb;
     background-image: -webkit-linear-gradient(top,#0070bb 0,#0082da 100%);
@@ -388,7 +388,12 @@ p {
     background-repeat: repeat-x;
 }
 
-.blue .btn-default:hover, .blue .btn-default:focus {
+.blue .label-default a {
+    color: white;
+    text-decoration: none;
+}
+
+.blue .btn-default:hover, .blue .btn-default:focus, .blue .label-default:hover, .blue .label-default:focus {
     background-color: #0082da;
     background-position: 0 -20px;
 }

@@ -1,0 +1,17 @@
+{% extends 'BlogBundle::base.html.twig' %}
+
+{% block head %}<meta name="robots" content="noindex">{% endblock %}
+{% block title %}{{ tag }} - MediaArea blog{% endblock %}
+
+{% block body %}
+<h1>{{ tag }} - MediaArea blog</h1>
+<div class="blog-tag-list">
+    Tag : <span class="label label-default">{{ tag }} <a href="{{ path('ma_blog_index') }}" title="Remove tag filter">&times;</a></span>
+</div>
+
+{{ include('@Blog/Default/postsList.html.twig', {posts: posts}, with_context = false) }}
+
+<div class="text-center">
+    {{ include('@App/paginator.html.twig', {paginator: paginator}, with_context = false) }}
+</div>
+{% endblock %}

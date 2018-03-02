@@ -1,7 +1,7 @@
 ---
 title:  "Interview with Eddy Colloton"
 date:   2017-06-13
-tags: mediaconch, interview
+tags: MediaConch, Interview
 ---
 
 # Interview with Eddy Colloton

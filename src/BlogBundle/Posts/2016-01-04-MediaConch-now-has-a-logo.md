@@ -1,7 +1,7 @@
 ---
 title:  "MediaConch now has a logo!"
 date:   2016-01-04 00:00:00 CET
-tags: mediaconch, logo
+tags: MediaConch, Logo
 ---
 
 # MediaConch now has a logo!
