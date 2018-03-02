@@ -7,6 +7,10 @@
 <h1>{{ tag }} - MediaArea blog</h1>
 <div class="blog-tag-list">
     Tag : <span class="label label-default">{{ tag }} <a href="{{ path('ma_blog_index') }}" title="Remove tag filter">&times;</a></span>
+
+    <div class="rss pull-right">
+        <a href="{{ path('ma_blog_tag_feed', {'tag': app.request.attributes.get('tag')}) }}" class="rss-updates" title="Subscribe to MediaArea blog feed filtered by &quot;{{ tag }}&quot; tag"></a>
+    </div>
 </div>
 
 {{ include('@Blog/Default/postsList.html.twig', {posts: posts}, with_context = false) }}

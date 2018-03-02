@@ -9,6 +9,10 @@
         <span class="label label-default"><a href="{{ path('ma_blog_tag_index', {'tag': 'mediaconch'}) }}">MediaConch</a></span>
         <span class="label label-default"><a href="{{ path('ma_blog_tag_index', {'tag': 'interview'}) }}">Interview</a></span>
         <span class="label label-default"><a href="{{ path('ma_blog_tag_index', {'tag': 'newsletter'}) }}">Newsletter</a></span>
+
+    <div class="rss pull-right">
+        <a href="{{ path('ma_blog_feed') }}" class="rss-updates" title="Subscribe to MediaArea blog feed"></a>
+    </div>
 </div>
 
 {{ include('@Blog/Default/postsList.html.twig', {posts: posts}, with_context = false) }}

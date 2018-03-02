@@ -1,0 +1,11 @@
+{% for post in posts %}
+    <item>
+       <title>{{ post.title }}</title>
+       <description>
+           <![CDATA[{% if post.excerpt %}{{ post.excerpt }}{% else %}{{ post.htmlContent|striptags|truncate(400, true, '…')|raw}}{% endif %}]]>
+       </description>
+       <link>{{ absolute_url(path('ma_blog_post', post.getUrlParams)) }}</link>
+       <pubDate>{{ post.date|date('r') }}</pubDate>
+       <guid>{{ absolute_url(path('ma_blog_post', post.getUrlParams)) }}</guid>
+   </item>
+{% endfor %}

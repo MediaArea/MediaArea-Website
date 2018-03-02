@@ -56,8 +56,29 @@ class DefaultController extends Controller
     }
 
     /**
-     * @Route("/{tag}", defaults={"page" = 1}, requirements={"tag" = "[a-zA-Z0-9 -]+"}, name="ma_blog_tag_index")
-     * @Route("/{tag}/{page}", requirements={"page" = "\d+", "tag" = "[a-zA-Z0-9 -]+"}, name="ma_blog_tag_index_page")
+     * @Route("/feed", defaults={"_format": "xml"}, name="ma_blog_feed")
+     * @Template()
+     */
+    public function feedAction()
+    {
+        $posts = new Posts($this->getParameter('blog.files.path'));
+        $showPosts = new LimitIterator(
+                $posts,
+                0,
+                self::POSTS_PER_PAGE
+            );
+
+        // Throw 404 if there is no post
+        if (0 == iterator_count($showPosts)) {
+            throw new NotFoundHttpException();
+        }
+
+        return ['posts' => $showPosts];
+    }
+
+    /**
+     * @Route("/{tag}", defaults={"page" = 1}, requirements={"tag" = "[a-z0-9-]+"}, name="ma_blog_tag_index")
+     * @Route("/{tag}/{page}", requirements={"page" = "\d+", "tag" = "[a-z0-9-]+"}, name="ma_blog_tag_index_page")
      * @Template()
      */
     public function listingByTagAction(Request $request, int $page, $tag)
@@ -93,6 +114,36 @@ class DefaultController extends Controller
         $post = $showPosts->current();
 
         return ['posts' => $showPosts, 'paginator' => $paginator, 'tag' => $post->getTagBySlug($tag)];
+    }
+
+    /**
+     * @Route(
+     *     "/{tag}/feed",
+     *     requirements={"tag" = "[a-z0-9-]+"},
+     *     defaults={"_format": "xml"},
+     *     name="ma_blog_tag_feed"
+     * )
+     * @Template()
+     */
+    public function listingByTagFeedAction($tag)
+    {
+        $posts = new PostsTagFilter(new Posts($this->getParameter('blog.files.path')), $tag);
+        $showPosts = new LimitIterator(
+                    $posts,
+                    0,
+                    self::POSTS_PER_PAGE
+                );
+
+        // Throw 404 if there is no post
+        if (0 == iterator_count($showPosts)) {
+            throw new NotFoundHttpException();
+        }
+
+        // Get first result to get tag (instead of slug)
+        $showPosts->rewind();
+        $post = $showPosts->current();
+
+        return ['posts' => $showPosts, 'tag' => $post->getTagBySlug($tag)];
     }
 
     /**

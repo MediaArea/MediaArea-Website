@@ -49,6 +49,24 @@ class DefaultControllerTest extends WebTestCase
         $this->assertTrue($client->getResponse()->isRedirect('/blog'));
     }
 
+    public function testFeed()
+    {
+        $client = static::createClient();
+
+        $crawler = $client->request('GET', '/blog/feed');
+
+        $this->assertEquals(200, $client->getResponse()->getStatusCode());
+        $this->assertEquals(
+            'Wed, 06 Sep 2017 00:00:00',
+            substr($crawler->filterXPath('//lastBuildDate')->text(), 0, -6)
+        );
+        $this->assertEquals(2, count($crawler->filterXPath('//item')));
+        $this->assertEquals(
+            'Wed, 06 Sep 2017 00:00:00',
+            substr($crawler->filterXPath('//item/pubDate')->text(), 0, -6)
+        );
+    }
+
     public function testFilterByTag()
     {
         $client = static::createClient();
@@ -76,6 +94,42 @@ class DefaultControllerTest extends WebTestCase
 
         $this->assertEquals(301, $client->getResponse()->getStatusCode());
         $this->assertTrue($client->getResponse()->isRedirect('/blog/mediaconch'));
+    }
+
+    public function testFilterByTagNotExistantTag()
+    {
+        $client = static::createClient();
+
+        $client->request('GET', '/blog/test');
+
+        $this->assertEquals(404, $client->getResponse()->getStatusCode());
+    }
+
+    public function testFilterByTagFeed()
+    {
+        $client = static::createClient();
+
+        $crawler = $client->request('GET', '/blog/mediaconch/feed');
+
+        $this->assertEquals(200, $client->getResponse()->getStatusCode());
+        $this->assertEquals(
+            'Wed, 06 Sep 2017 00:00:00',
+            substr($crawler->filterXPath('//lastBuildDate')->text(), 0, -6)
+        );
+        $this->assertEquals(2, count($crawler->filterXPath('//item')));
+        $this->assertEquals(
+            'Wed, 06 Sep 2017 00:00:00',
+            substr($crawler->filterXPath('//item/pubDate')->text(), 0, -6)
+        );
+    }
+
+    public function testFilterByTagFeedNotExistantTag()
+    {
+        $client = static::createClient();
+
+        $client->request('GET', '/blog/test/feed');
+
+        $this->assertEquals(404, $client->getResponse()->getStatusCode());
     }
 
     public function testPost()

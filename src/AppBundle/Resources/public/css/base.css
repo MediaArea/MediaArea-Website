@@ -254,7 +254,7 @@ p {
 /* RSS icon */
 .rss-updates {
     background: transparent url('../img/Feed-icon.png') no-repeat;
-    padding: 3px 0px 1px 19px;
+    padding-left: 19px;
     text-decoration: none;
 }
 
