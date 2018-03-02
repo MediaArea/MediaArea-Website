@@ -30,7 +30,7 @@ class RegistrationController extends BaseController
     /**
      * {@inheritdoc}
      */
-    public function confirmedAction()
+    public function confirmedAction(Request $request)
     {
         $user = $this->getUser();
         if (!is_object($user) || !$user instanceof UserInterface) {
