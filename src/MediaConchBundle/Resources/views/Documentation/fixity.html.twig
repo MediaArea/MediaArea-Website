@@ -35,7 +35,7 @@ The new fixer feature in MediaConch is able to resolve this issue.</p>
 
 <p>Demo below:</p>
 
-<p>Download <a href="https://mediaarea.net/MediaConch/files/FFV1+PCM_WithChecksum_VideoBitFlip.mkv">this file</a>. This is a file created by FFmpeg with handmade flipped bit.</p>
+<p>Download <a href="https://mediaarea.net/_/static/FFV1+PCM_WithChecksum_VideoBitFlip.mkv">this file</a>. This is a file created by FFmpeg with handmade flipped bit.</p>
 
 <p>The 9th bit (most significant bit of 2nd byte) of the FFV1 1st slice of the 1st video frame is flipped. Also, the 17th bit (less significant bit of 3rd byte) of the FFV1 4th slice of the 1st video frame is flipped. Why these bits? Because it creates nice display of bugs during decoding. Touching some other bits just make FFmpeg decoder create a black image and displaying a black image is not interesting!</p>
 
@@ -77,7 +77,7 @@ The new fixer feature in MediaConch is able to resolve this issue.</p>
 
 <p>Demo below:</p>
 
-<p>Download <a href="https://mediaarea.net/MediaConch/files/FFV1+PCM_WithChecksum_AudioBitFlip.mkv">this file</a>. This is a file created by FFmpeg with hand made flipped bit. The1st bit (most significant bit of 1st byte) of the PCM packet is flipped. The resulting decoded packet (e.g. file opened in open source audio editor <a href="https://www.audacityteam.org/" target="_blank">Audacity</a>) starts with:</p>
+<p>Download <a href="https://mediaarea.net/_/static/FFV1+PCM_WithChecksum_AudioBitFlip.mkv">this file</a>. This is a file created by FFmpeg with hand made flipped bit. The1st bit (most significant bit of 1st byte) of the PCM packet is flipped. The resulting decoded packet (e.g. file opened in open source audio editor <a href="https://www.audacityteam.org/" target="_blank">Audacity</a>) starts with:</p>
 
 <p>
     {% image '@MediaConchBundle/Resources/public/img/audio_bitflip_detected.png' %}

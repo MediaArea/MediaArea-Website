@@ -20,7 +20,7 @@ With an introduction of a database built into the GUI, the most noticeable impro
 
 * New logo
 
-MediaConch finally has its own logo, never to be confused with MediaInfo again! More details about the logo can be found in this [blog post](https://mediaarea.net/MediaConch/2016/01/04/MediaConch-now-has-a-logo/) about the design.
+MediaConch finally has its own logo, never to be confused with MediaInfo again! More details about the logo can be found in this [blog post](https://mediaarea.net/blog/2016/01/04/MediaConch-now-has-a-logo) about the design.
 
 * More explicit licences
 
@@ -72,9 +72,9 @@ Conference website: [https://fosdem.org/2016/](https://fosdem.org/2016/)
 
 In case you missed it, MediaConch was represented at the Association of Moving Image Archivists  in Portland (20 November) and Fédération Internationale des Archives de Télévision / The International Federation of Television Archives (FIAT/IFTA) World Conference in Vienna (8 October). If you weren’t able to make it, we covered the events on our blog.
 
-AMIA: [https://mediaarea.net/MediaConch/2015/12/02/MediaArea-presents-at-AMIA/](https://mediaarea.net/MediaConch/2015/12/02/MediaArea-presents-at-AMIA/)
+AMIA: [https://mediaarea.net/blog/2015/12/02/MediaArea-presents-at-AMIA](https://mediaarea.net/blog/2015/12/02/MediaArea-presents-at-AMIA)
 
-FIAT/IFTA: [https://mediaarea.net/MediaConch/2015/12/02/MediaArea-presents-at-AMIA/](https://mediaarea.net/MediaConch/2015/12/02/MediaArea-presents-at-AMIA/)
+FIAT/IFTA: [https://mediaarea.net/blog/2015/11/04/MediaArea-presents-at-FIAT-IFTA](https://mediaarea.net/blog/2015/11/04/MediaArea-presents-at-FIAT-IFTA)
 
 MediaConch will be holding a webinar in January or February. More details to come soon.
 
@@ -86,10 +86,10 @@ In July, MediaConch will be attending the IETF conference held in Berlin (17-22 
 
 ## Feedback
 
-MediaArea is eager to build a community of collaborators and testers to participate in and use the results of the project. You can contact us [here](https://mediaarea.net/newsletter/lt.php?id=LEkECU0EAURUBQ) for more information.
+MediaArea is eager to build a community of collaborators and testers to participate in and use the results of the project. You can contact us [here](https://mediaarea.net/Contact) for more information.
 
 Best,
 
 The MediaConch Team
 
-Follow us on Twitter: [@MediaConch](https://mediaarea.net/newsletter/lt.php?id=LEkGAU0EAURUBQ)
+Follow us on Twitter: [@MediaConch](https://twitter.com/MediaConch)

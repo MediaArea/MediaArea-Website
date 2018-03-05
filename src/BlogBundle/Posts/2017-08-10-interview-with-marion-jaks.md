@@ -6,7 +6,7 @@ tags: MediaConch, Interview
 
 # Interview with Marion Jaks
 
-*Editor's note: This is the fourth in a series of interviews with people using MediaConch within their institutions. You can find and read the previous entries [here](https://mediaarea.net/MediaConch/blog.html).*
+*Editor's note: This is the fourth in a series of interviews with people using MediaConch within their institutions. You can find and read the previous entries [here](https://mediaarea.net/blog/interview).*
 
 ![Marion at work](/bundles/mediaconch/img/marion.jpg)  
 *Marion at work*

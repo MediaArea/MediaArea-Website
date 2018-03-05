@@ -46,7 +46,7 @@ There have been a total of 1365 posts made to the [CELLAR listserv](https://mail
 
 # **2** Conferences
 
-MediaArea initiated the [No Time To Wait! conference](https://mediaarea.net/MediaConch/notimetowait.html) in Berlin alongside the IETF conference in 2016 to celebrate and support the integration of open formats and standards by cultural heritage institutions, with a goal of bringing together preservationists, specification authors, and developers together. A second conference was held in [Vienna](https://mediaarea.net/MediaConch/notimetowait2.html) of this year.
+MediaArea initiated the [No Time To Wait! conference](https://mediaarea.net/MediaConch/NoTimeToWait) in Berlin alongside the IETF conference in 2016 to celebrate and support the integration of open formats and standards by cultural heritage institutions, with a goal of bringing together preservationists, specification authors, and developers together. A second conference was held in [Vienna](https://mediaarea.net/MediaConch/NoTimeToWait2) of this year.
 
 These are in addition to the number of [conferences and workshops](http://preforma-project.eu/events.html) hosted by the PREFORMA project with participation from MediaArea and the other suppliers.
 
@@ -55,9 +55,9 @@ These are in addition to the number of [conferences and workshops](http://prefor
 ## 2015
 - February - Code4lib: PREFORMA - [on Events page](https://mediaarea.net/Events)
 - July - IETF: IETF standardization of FFV1 and Matroska - [on Events page](IETF standardization of FFV1 and Matroska)
-- September - IASA: MediaConch [blog](https://mediaarea.net/MediaConch/2015/10/22/iasa-presentation/)
-- October - FIAT/IFTA [blog](https://mediaarea.net/MediaConch/2015/12/02/MediaArea-presents-at-AMIA/)
-- November - AMIA [blog](https://mediaarea.net/MediaConch/2015/12/02/MediaArea-presents-at-AMIA/)
+- September - IASA: MediaConch [blog](https://mediaarea.net/blog/2015/10/22/iasa-presentation)
+- October - FIAT/IFTA [blog](https://mediaarea.net/blog/2015/11/04/MediaArea-presents-at-FIAT-IFTA)
+- November - AMIA [blog](https://mediaarea.net/blog/2015/12/02/MediaArea-presents-at-AMIA)
 
 ## 2016
 - January - FOSDEM - [on Events page](https://mediaarea.net/Events)
@@ -81,7 +81,7 @@ These are in addition to the number of [conferences and workshops](http://prefor
 # **8** Workshops
 
 ## 2015
-- October - FIAT/IFTA [blog](https://mediaarea.net/MediaConch/2015/12/02/MediaArea-presents-at-AMIA/)
+- October - FIAT/IFTA [blog](https://mediaarea.net//blog/2015/11/04/MediaArea-presents-at-FIAT-IFTA)
 
 ## 2016
 - April - PREFORMA Open Source Preservation Workshop - [on Events page](https://mediaarea.net/Events)
@@ -98,21 +98,21 @@ These are in addition to the number of [conferences and workshops](http://prefor
 
 Eleven MediaConch users across nine institutions were interviewed about their usage of MediaConch in production.
 
-- [Brian E. Davis](https://mediaarea.net/MediaConch/2017/11/06/interview-with-brian-e-davis-oregon-state-university/)  
-- [Patricia Falcao and Francesca Colussi](https://mediaarea.net/MediaConch/2017/10/27/interview-with-patricia-falcao-francesca-colussi-tate/)  
-- [Brendan Coates/](https://mediaarea.net/MediaConch/2017/09/19/interview-with-brendan-coates/)  
-- [Ben Turkus and Genevieve Havemeyer-King](https://mediaarea.net/MediaConch/2017/09/06/interview-with-ben-turkus-genevieve-havemeyer-king-nypl/)  
-- [Julia Kim](https://mediaarea.net/MediaConch/2017/08/22/interview-with-julia-kim/)  
-- [Marion Jaks](https://mediaarea.net/MediaConch/2017/08/10/interview-with-marion-jaks/)  
-- [Kieran O'Leary](https://mediaarea.net/MediaConch/2017/07/24/interview-with-kieran-oleary/)  
-- [Kathryn Gronsbell](https://mediaarea.net/MediaConch/2017/07/07/interview-with-kathryn-gronsbell/)  
-- [Eddy Colloton](https://mediaarea.net/MediaConch/2017/06/13/interview-with-eddy-colloton/)  
+- [Brian E. Davis](https://mediaarea.net/blog/2017/11/06/interview-with-brian-e-davis-oregon-state-university)  
+- [Patricia Falcao and Francesca Colussi](https://mediaarea.net/blog/2017/10/27/interview-with-patricia-falcao-francesca-colussi-tate)  
+- [Brendan Coates/](https://mediaarea.net/blog/2017/09/19/interview-with-brendan-coates)  
+- [Ben Turkus and Genevieve Havemeyer-King](https://mediaarea.net/blog/2017/09/06/interview-with-ben-turkus-genevieve-havemeyer-king-nypl)  
+- [Julia Kim](https://mediaarea.net/blog/2017/08/22/interview-with-julia-kim)  
+- [Marion Jaks](https://mediaarea.net/blog/2017/08/10/interview-with-marion-jaks)  
+- [Kieran O'Leary](https://mediaarea.net/blog/2017/07/24/interview-with-kieran-oleary)  
+- [Kathryn Gronsbell](https://mediaarea.net/blog/2017/07/07/interview-with-kathryn-gronsbell)  
+- [Eddy Colloton](https://mediaarea.net/blog/2017/06/13/interview-with-eddy-colloton)  
 
 Bonus: sometimes we were interviewed, too. Here's an interview by Kate Murray for the [Library of Congress's Signal blog](https://blogs.loc.gov/thesignal/2015/09/improving-technical-options-for-audiovisual-collections-through-the-preforma-project/).
 
 # **10** Newsletters
 
-MediaArea produced ten newsletters highlighting recent/upcoming events and noting new features. A roundup of all of the newsletters can be found [here](https://mediaarea.net/MediaConch/newsletters.html).
+MediaArea produced ten newsletters highlighting recent/upcoming events and noting new features. A roundup of all of the newsletters can be found [here](https://mediaarea.net/blog/newsletter).
 
 # **412** Tweets
 

@@ -6,7 +6,7 @@ tags: MediaConch, Interview
 
 # Interview with Kathryn Gronsbell
 
-*Editor's note: This is the second in a series of interviews with people using MediaConch within their institutions. You can read the first [here](https://mediaarea.net/MediaConch/2017/06/13/interview-with-eddy-colloton/)!*
+*Editor's note: This is the second in a series of interviews with people using MediaConch within their institutions. You can read the first [here](https://mediaarea.net/blog/2017/06/13/interview-with-eddy-colloton)!*
 
 ![Kathryn with MediaConch](/bundles/mediaconch/img/gronsbell-mediaconch.jpg)  
 *Kathryn with MediaConch*

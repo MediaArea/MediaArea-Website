@@ -6,7 +6,7 @@ tags: MediaConch, Interview
 
 # Interview with Kieran O'Leary
 
-*Editor's note: This is the third in a series of interviews with people using MediaConch within their institutions. You can read the first [here](https://mediaarea.net/MediaConch/2017/06/13/interview-with-eddy-colloton/) and second [here](https://mediaarea.net/MediaConch/2017/07/07/interview-with-kathryn-gronsbell/)!*
+*Editor's note: This is the third in a series of interviews with people using MediaConch within their institutions. You can read the first [here](https://mediaarea.net/blog/2017/06/13/interview-with-eddy-colloton) and second [here](https://mediaarea.net/blog/2017/07/07/interview-with-kathryn-gronsbell)!*
 
 ![Kieran's workstation](/bundles/mediaconch/img/kieran.png)  
 *Kieran's workstation*

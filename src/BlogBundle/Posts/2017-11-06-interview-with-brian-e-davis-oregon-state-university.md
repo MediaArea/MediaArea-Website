@@ -6,7 +6,7 @@ tags: MediaConch, Interview
 
 # Interview with Brian E. Davis of Oregon State University  
 
-*Editor's note: This is the seventh in a series of interviews with people using MediaConch within their institutions. You can find and read the previous entries [here](https://mediaarea.net/MediaConch/blog.html).*  
+*Editor's note: This is the seventh in a series of interviews with people using MediaConch within their institutions. You can find and read the previous entries [here](https://mediaarea.net/blog/interview).*  
 
 ![](/bundles/mediaconch/img/brian1.jpg)  
 
@@ -32,7 +32,7 @@ Neither of our digital repositories is currently being used as preservation repo
 
 I don’t utilize watched folders as much as I probably could, so most of the processes are somewhat manual. I prefer using command-line tools for most things. However, I often wrap terminal commands inside AppleScripts and install them as “right-click actions” across our macOS workstations. This is how I’ve implemented BagIt, [FFmpeg](https://ffmpeg.org/), and a few other tools we use daily. I chose this route both to ease my students into taking on some digital preservation work and also to make certain tasks easier for myself. These actions are connected to a number of command-line tools and keeping things updated is key to making it all work. Thank God for [Homebrew](https://brew.sh).
 
-Quality control for PDF files can be burdensome and being the only reviewer, I need to find ways to be more efficient. In that spirit, I’ve abandoned Adobe Acrobat Pro‘s Preflight and moved to using [Quick Look](https://en.wikipedia.org/wiki/Quick_Look) to scroll through the PDF and validating with [MediaConch](https://mediaarea.net/MediaConch/) (GUI). Things move quite a bit faster this way. I’ve used command-line versions of [veraPDF](http://verapdf.org/) and [Ghostscript](https://www.ghostscript.com/) in the past, but I like the speed of my new workflow.
+Quality control for PDF files can be burdensome and being the only reviewer, I need to find ways to be more efficient. In that spirit, I’ve abandoned Adobe Acrobat Pro‘s Preflight and moved to using [Quick Look](https://en.wikipedia.org/wiki/Quick_Look) to scroll through the PDF and validating with [MediaConch](https://mediaarea.net/MediaConch) (GUI). Things move quite a bit faster this way. I’ve used command-line versions of [veraPDF](http://verapdf.org/) and [Ghostscript](https://www.ghostscript.com/) in the past, but I like the speed of my new workflow.
 
 We produce hundreds of TIFF files each week - more than any other filetype. I use [DPF Manager](http://dpfmanager.org) for quality control on TIFF files since it can parse file directories and determine if files are valid and whether digitization specifications have been followed based. Verifying this information in a batch process eliminates the extra steps of manually checking with Photoshop or Bridge. I generally use the command-line version of DPF Manager on my Linux machine for this task since my other two workstations are often busy processing video files and PDFs.
 

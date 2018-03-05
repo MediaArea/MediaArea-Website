@@ -43,6 +43,6 @@ MediaTrace can also be used to identify embedded fixity features in files, such 
 <data offset="1132" name="crc_parity" moreinfo="OK">1326302792</data>
 ```
 
-Instructions for the creation of MediaTrace reports may be found at the [MediaTrace namespace](https://mediaarea.net/mediatrace/). The development history and issue tracker are at [GitHub](https://github.com/MediaArea/MediaTrace). The MediaTrace format is documented by both an [XML Schema](https://mediaarea.net/mediatrace/mediatrace.xsd) and a [Data Dictionary](https://github.com/MediaArea/MediaTrace/blob/master/DataDictionary.md).
+Instructions for the creation of MediaTrace reports may be found at the [MediaTrace namespace](https://mediaarea.net/MediaTrace). The development history and issue tracker are at [GitHub](https://github.com/MediaArea/MediaTrace). The MediaTrace format is documented by both an [XML Schema](https://mediaarea.net/mediatrace/mediatrace.xsd) and a [Data Dictionary](https://github.com/MediaArea/MediaTrace/blob/master/DataDictionary.md).
 
 MediaTrace has been developed by [MediaArea](https://mediaarea.net) with collaboration with the [Museum of Modern Art](https://www.moma.org). MediaTrace is also developed as part of the [MediaConch](https://mediaarea.net/MediaConch/), a [PREFORMA](http://preforma-project.eu/) project, where it serves an integral role of communicating the architectural data of digital media for the purposes of conformance checking.

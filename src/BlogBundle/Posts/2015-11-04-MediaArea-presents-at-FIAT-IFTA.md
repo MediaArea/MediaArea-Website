@@ -32,7 +32,7 @@ Fallon also discussed the current efforts form the IETF working group Codec Enco
 
 *"Why does FFV1 need to be standardized?"  Here are some answers...*
 
-The presentation concluded with a brief preview of the MediaConch conformance checker currently under development (more about MediaConch [here](https://mediaarea.net/MediaConch/about.html))
+The presentation concluded with a brief preview of the MediaConch conformance checker currently under development (more about MediaConch [here](https://mediaarea.net/MediaConch))
 
 The workshop was well-received, and informal feedback from attendees was encouraging.  It appeared that a number of attendees were hearing about FFV1 in depth for the first time, and it was a great opportunity to bring FFV1 to the attention of broadcast and film archives.
 

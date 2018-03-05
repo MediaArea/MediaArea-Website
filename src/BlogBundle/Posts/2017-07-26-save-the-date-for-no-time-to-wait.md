@@ -20,10 +20,10 @@ Thursday, November 9 and Friday, November 10, 2017
 *Photo Credit: [Austrian Film Museum](https://www.filmmuseum.at/en/press/presse_detail?presse_subkategorie_id=1466964180163&presse_kategorie_id=1466964180159)*
 
 ## Where Can I Find Out More?
-Please watch the [website for No Time to Wait 2](/MediaConch/notimetowait2.html) for updates. The source code of the website is available [at GitHub](https://github.com/MediaArea/MediaConch-Website/blob/master/notimetowait2.md).
+Please watch the [website for No Time to Wait 2](/MediaConch/NoTimeToWait2) for updates. The source code of the website is available [at GitHub](https://github.com/MediaArea/MediaConch-Website/blob/master/notimetowait2.md).
 
 Feel welcome to send any questions to [MediaArea](mailto:info@mediaarea.net).
 
 ## What Happened Last time?
 
-Information regarding the 1st No Time to Wait symposium may be found at: [the symposium's webpage](https://mediaarea.net/MediaConch/notimetowait.html), [a GitHub repository of resulting materials](https://github.com/preforma/notimetowait), [a blog post here](https://mediaarea.net/MediaConch/2016/07/26/No-Time-To-Wait-Preservation-FFV1-Matroska-Symposium/), [another blog post here](https://www.beeldengeluid.nl/en/blogs/research-amp-development-en/201607/tools-trade), and [a Storify of our tweets](https://storify.com/ablwr/no-time-to-wait).
+Information regarding the 1st No Time to Wait symposium may be found at: [the symposium's webpage](https://mediaarea.net/MediaConch/NoTimeToWait), [a GitHub repository of resulting materials](https://github.com/preforma/notimetowait), [a blog post here](https://mediaarea.net/blog/2016/07/26/No-Time-To-Wait-Preservation-FFV1-Matroska-Symposium), [another blog post here](https://www.beeldengeluid.nl/en/blogs/research-amp-development-en/201607/tools-trade), and [a Storify of our tweets](https://storify.com/ablwr/no-time-to-wait).

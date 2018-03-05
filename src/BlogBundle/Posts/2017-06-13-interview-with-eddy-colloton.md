@@ -65,6 +65,6 @@ Also, using MediaConch as a policy checker saves me time, and prevents me from m
 **Anything else you'd like to add?**
 
 
-Just want to offer a big thanks to the MediaConch team for everything that they do! I know there’s a pretty big overlap betwixt [team Conch](https://mediaarea.net/MediaConch/team.html), [CELLAR](https://datatracker.ietf.org/wg/cellar/charter/), and the [QCTools](https://www.bavc.org/preserve-media/preservation-tools/qctools) peeps - you’re all doing great work, and regularly making my job easier. So thanks for that.
+Just want to offer a big thanks to the MediaConch team for everything that they do! I know there’s a pretty big overlap betwixt [team Conch](https://mediaarea.net/MediaConch/Team), [CELLAR](https://datatracker.ietf.org/wg/cellar/charter/), and the [QCTools](https://www.bavc.org/preserve-media/preservation-tools/qctools) peeps - you’re all doing great work, and regularly making my job easier. So thanks for that.
 
 *To read more from Eddy, check out his [Louisiana Public Broadcasting Digital Preservation Plan](https://aapbndsr.files.wordpress.com/2017/03/lpb_digital_preservation_plan_aapb_ndsr.pdf)*
