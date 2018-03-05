@@ -3,7 +3,31 @@
 {% block title %}No Time To Wait{% endblock %}
 
 {% block body %}
+  <header>
+    <hgroup>
+      {% image '@NoTimeToWaitBundle/Resources/public/img/nttw.jpg' %}
+          <img src="{{ asset_url }}" alt="No Time To Wait logo" class="img-responsive center-xs" title="No Time To Wait logo">
+      {% endimage %}
+      <h1>No Time To Wait</h1>
+      <p>Open Media, Open Formats, Open Archives</p>  
+    </hgroup>
+  </header>
   <div class="grid-container">
+    <section>
+      <h2 class="title">What</h2>
+      <div class="content">
+        <p>
+          No Time To Wait! Symposium originally was formed as part of the PREFORMA project as a "3 day symposium of workshops & presentations on the standardization & use of FFV1 & Matroska in archives" held before an IETF event in Berlin and hosted by Deutsche Kinemathek, Zuse Institute Berlin and MediaArea.net. The following year, the conference continued in Vienna, hosted by Austrian Film Museum and MediaArea.net with support of AV-RD, with a broader scope defined as "A symposium focused on open media, open standards, and digital audiovisual preservation." and "A 2 day symposium on the intersection of open media, standardization, and audiovisual preservation." The Year 2 theme was "Open Media, Open Formats, Open Archives".
+        </p>
+        <p>
+          Both conferences used the tagline of:
+          "Audiovisual Archivists (people who use the formats) +
+          Developers (people who design the formats) +
+          Open Standards Working Group (people who write specification for formats)
+          Together!" 
+        </p>
+      </div>
+    </section>
     <section>
       <h2 class="title">Next</h2>
       <div class="content">
