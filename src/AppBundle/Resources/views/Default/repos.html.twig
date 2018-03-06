@@ -7,16 +7,16 @@
 {% block body %}
 <h1>{% trans %}repos.title{% endtrans %}</h1>
 
-<p>MediaArea softwares repositories are available for automatic update of our softwares for the distributions listed below.<br />
+<p>MediaArea softwares repositories are available for automatic update of our softwares for the distributions listed below.<br>
 </p>
 
 <p>You can also enable snapshots repository to get the latest development builds of our softwares.</p>
 <p>Repositories key fingerprint is: C5CD F62C 7AE0 5CC8 4765 7390 C10E 1109 0EC0 E438</p>
-<p>Up to date packages are: mediainfo, mediainfo-gui, mediaconch, mediaconch-gui, qctools.</p>
+<p>Up to date packages are: mediainfo, mediainfo-gui, mediaconch, mediaconch-gui, qctools, qcli.</p>
 
 <div id='rpm'>
 <h2>Commands for rpm based distributions</h2>
-<p>For releases repository, download and install <a href='https://mediaarea.net/repo/rpm/releases/repo-MediaArea-1.0-5.noarch.rpm'>this package</a><br/>or type the following command in a root terminal:</p>
+<p>For releases repository, download and install <a href='https://mediaarea.net/repo/rpm/releases/repo-MediaArea-1.0-5.noarch.rpm'>this package</a><br>or type the following command in a root terminal:</p>
 <table class="download table table-bordered table-condensed">
 <thead>
   <tr class="table-header">
@@ -39,7 +39,7 @@
 
 <div id='deb'>
 <h2>Commands for deb based distributions</h2>
-<p>For releases repository, download and install <a href='https://mediaarea.net/repo/deb/repo-mediaarea_1.0-5_all.deb'>this package</a> (don't forget to do 'apt-get update' before trying to install something)<br/>or type the following command in a root terminal:</p>
+<p>For releases repository, download and install <a href='https://mediaarea.net/repo/deb/repo-mediaarea_1.0-5_all.deb'>this package</a> (don't forget to do 'apt-get update' before trying to install something)<br> or type the following command in a root terminal: </p>
 <table class="download table table-bordered table-condensed">
 <thead>
 <tr class="table-header">
@@ -71,6 +71,7 @@
 </tr>
 </thead>
 <tbody>
+
 <tr>
 <td>9 (Stretch)</td>
 <td>i586, x86_64</td>
@@ -86,7 +87,6 @@
 </tbody>
 </table>
 </div>
-
 <div id='Ubuntu/LinuxMint'>
 <h3>Ubuntu/LinuxMint</h3>
 <table class="download table table-bordered table-condensed">
@@ -97,9 +97,10 @@
 </tr>
 </thead>
 <tbody>
+
 <tr>
 <td>Ubuntu 17.10 (Artful Aardvark)</td>
-<td>i586, x86_64</td>
+<td>x86_64, i586</td>
 </tr>
 <tr>
 <td>Ubuntu 17.04 (Zesty Zapus)</td>
@@ -110,17 +111,16 @@
 <td>i586, x86_64</td>
 </tr>
 <tr>
-<td>Ubuntu 16.04 (Xenial Xerus)</td>
+<td>Ubuntu 16.04 (Xenial Xerus)<br>Linux Mint 18.3 (Sylvia)</td>
 <td>i586, x86_64</td>
 </tr>
 <tr>
-<td>Ubuntu 14.04 (Trusty Tahr)<br />Linux Mint 17 (Qiana)<br />Linux Mint 17.1 (Rebecca)<br />Linux Mint 17.2 (Rafaela)<br />Linux Mint 17.3 (Rosa)</td>
+<td>Ubuntu 14.04 (Trusty Tahr)<br>Linux Mint 17 (Qiana)<br>Linux Mint 17.1 (Rebecca)<br>Linux Mint 17.2 (Rafaela)<br>Linux Mint 17.3 (Rosa)</td>
 <td>x86_64, i586</td>
 </tr>
 </tbody>
 </table>
 </div>
-
 <div id='CentOS'>
 <h3>CentOS</h3>
 <table class="download table table-bordered table-condensed">
@@ -131,6 +131,7 @@
 </tr>
 </thead>
 <tbody>
+
 <tr>
 <td>7</td>
 <td>x86_64</td>
@@ -142,7 +143,6 @@
 </tbody>
 </table>
 </div>
-
 <div id='RHEL'>
 <h3>RHEL</h3>
 <table class="download table table-bordered table-condensed">
@@ -153,6 +153,7 @@
 </tr>
 </thead>
 <tbody>
+
 <tr>
 <td>7</td>
 <td>ppc64, x86_64</td>
@@ -164,7 +165,6 @@
 </tbody>
 </table>
 </div>
-
 <div id='Fedora'>
 <h3>Fedora</h3>
 <table class="download table table-bordered table-condensed">
@@ -175,6 +175,11 @@
 </tr>
 </thead>
 <tbody>
+
+<tr>
+<td>27</td>
+<td>x86_64</td>
+</tr>
 <tr>
 <td>26</td>
 <td>x86_64</td>
@@ -190,7 +195,6 @@
 </tbody>
 </table>
 </div>
-
 <div id='SLE'>
 <h3>SLE</h3>
 <table class="download table table-bordered table-condensed">
@@ -201,6 +205,7 @@
 </tr>
 </thead>
 <tbody>
+
 <tr>
 <td>12 SP3</td>
 <td>x86_64</td>
@@ -220,7 +225,6 @@
 </tbody>
 </table>
 </div>
-
 <div id='openSUSE'>
 <h3>openSUSE</h3>
 <table class="download table table-bordered table-condensed">
@@ -231,6 +235,11 @@
 </tr>
 </thead>
 <tbody>
+
+<tr>
+<td>Tumbleweed</td>
+<td>x86_64, i586</td>
+</tr>
 <tr>
 <td>Leap 42.3</td>
 <td>x86_64</td>
