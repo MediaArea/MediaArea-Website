@@ -798,6 +798,10 @@ ul.events-list li {
     display: none;
 }
 
+#contact div.form-group:nth-child(3) {
+    display: none;
+}
+
 /* Feature box */
 .featureBox {
     border: 1px solid #ddd;
