@@ -5,21 +5,30 @@ namespace AppBundle\Menu;
 use Knp\Menu\FactoryInterface;
 use Knp\Menu\ItemInterface;
 use Symfony\Component\Security\Core\Authorization\AuthorizationCheckerInterface;
+use Symfony\Component\HttpFoundation\RequestStack;
 
+/**
+ * @SuppressWarnings(PHPMD.TooManyPublicMethods)
+ */
 class MenuBuilder
 {
     private $factory;
     private $authChecker;
+    private $request;
 
     /**
      * @param FactoryInterface $factory
      *
      * Add any other dependency you need
      */
-    public function __construct(FactoryInterface $factory, AuthorizationCheckerInterface $authChecker)
-    {
+    public function __construct(
+        FactoryInterface $factory,
+        AuthorizationCheckerInterface $authChecker,
+        RequestStack $requestStack
+    ) {
         $this->factory = $factory;
         $this->authChecker = $authChecker;
+        $this->request = $requestStack->getCurrentRequest();
     }
 
     /**
@@ -249,13 +258,81 @@ class MenuBuilder
         return $menu;
     }
 
+    /**
+     * @SuppressWarnings(PHPMD.UnusedFormalParameter)
+     */
+    public function createMediaConchMenu(array $options)
+    {
+        $menu = $this->factory->createItem('root');
+        $menu->setChildrenAttribute('class', 'nav navbar-nav main-menu');
+
+        $menu = $this->mediaAreaMenu($menu);
+
+        $menu->addChild('menu.mediaconch', ['route' => 'mc_home'])->setExtras(['dropdown' => true])->setCurrent(true);
+        $menu['menu.mediaconch']->addChild('menu.mediaconch.about', ['route' => 'mc_home']);
+        $menu['menu.mediaconch']->addChild('menu.mediaconch.download', ['route' => 'mc_download']);
+        $menu['menu.mediaconch']->addChild('menu.mediaconch.team', ['route' => 'mc_team']);
+        $menu['menu.mediaconch']->addChild('menu.mediaconch.community', ['route' => 'mc_community']);
+        $menu['menu.mediaconch']->addChild('menu.mediaconch.documentation');
+        $menu['menu.mediaconch']['menu.mediaconch.documentation']->addChild(
+            'menu.mediaconch.documentation.fixity',
+            ['route' => 'mc_documentation_fixity']
+        );
+        $menu['menu.mediaconch']['menu.mediaconch.documentation']->addChild(
+            'menu.mediaconch.documentation.faq',
+            ['route' => 'mc_documentation_faq']
+        );
+        $menu['menu.mediaconch']['menu.mediaconch.documentation']->addChild(
+            'menu.mediaconch.documentation.howtouse',
+            ['route' => 'mc_documentation_howtouse']
+        );
+        $menu['menu.mediaconch']['menu.mediaconch.documentation']->addChild(
+            'menu.mediaconch.documentation.dataformat',
+            ['route' => 'mc_documentation_dataformat']
+        );
+        $menu['menu.mediaconch']['menu.mediaconch.documentation']->addChild(
+            'menu.mediaconch.documentation.installation',
+            ['route' => 'mc_documentation_installation']
+        );
+
+        $menu = $this->projectsMenu($menu);
+        $menu = $this->supportUsMenu($menu);
+
+        return $menu;
+    }
+
     private function mediaAreaMenu(ItemInterface $menu)
     {
         $menu->addChild('menu.mediaarea', ['route' => 'homepage'])->setExtras(['dropdown' => true]);
         $menu['menu.mediaarea']->addChild('menu.mediaarea.about', ['route' => 'homepage']);
         $menu['menu.mediaarea']->addChild('menu.mediaarea.pro', ['route' => 'ma_professional_services']);
         $menu['menu.mediaarea']->addChild('menu.mediaarea.events', ['route' => 'ma_events']);
-        $menu['menu.mediaarea']->addChild('menu.mediaarea.blog', ['route' => 'ma_blog_index']);
+        $menu['menu.mediaarea']->addChild('menu.mediaarea.blog', ['route' => 'ma_blog_index'])
+            ->setDisplayChildren(false)
+            ->addChild(
+                'menu.mediaarea.blog.pagination',
+                ['route' => 'ma_blog_index_page', 'routeParameters' => ['page' => $this->request->get('page', 0)]]
+            )
+            ->addChild(
+                'menu.mediaarea.blog.tag',
+                ['route' => 'ma_blog_tag_index', 'routeParameters' => ['tag' => $this->request->get('tag', 'zzz')]]
+            )
+            ->addChild(
+                'menu.mediaarea.blog.tag.pagination',
+                ['route' => 'ma_blog_tag_index_page', 'routeParameters' => [
+                    'tag' => $this->request->get('tag', 'zzz'),
+                    'page' => $this->request->get('page', 0),
+                ]]
+            )
+            ->addChild(
+                'menu.mediaarea.blog.post',
+                ['route' => 'ma_blog_post', 'routeParameters' => [
+                    'year' => $this->request->get('year', '0000'),
+                    'month' => $this->request->get('month', '00'),
+                    'day' => $this->request->get('day', '00'),
+                    'slug' => $this->request->get('slug', 'zzz'),
+                ]]
+            );
         $menu['menu.mediaarea']->addChild('menu.mediaarea.conduct', ['route' => 'ma_conduct']);
         $menu['menu.mediaarea']->addChild('menu.mediaarea.teamrules', ['route' => 'ma_team_rules']);
         $menu['menu.mediaarea']->addChild('menu.mediaarea.legal', ['route' => 'ma_legal']);
@@ -268,7 +345,7 @@ class MenuBuilder
     {
         $menu->addChild('menu.projects', ['route' => 'mi_home'])->setExtras(['dropdown' => true]);
         $menu['menu.projects']->addChild('menu.projects.mediainfo', ['route' => 'mi_home'])->setCurrent(false);
-        $menu['menu.projects']->addChild('menu.projects.mediaconch', ['uri' => '/MediaConch/'])->setCurrent(false);
+        $menu['menu.projects']->addChild('menu.projects.mediaconch', ['route' => 'mc_home'])->setCurrent(false);
         $menu['menu.projects']->addChild('menu.projects.mediatrace', ['route' => 'mediatrace_home'])->setCurrent(false);
         $menu['menu.projects']->addChild('menu.projects.qctools', ['route' => 'qc_home'])->setCurrent(false);
         $menu['menu.projects']->addChild('menu.projects.bwfmetaedit', ['route' => 'bwf_home'])->setCurrent(false);

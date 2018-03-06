@@ -1,0 +1,30 @@
+{% extends 'MediaConchBundle::base.html.twig' %}
+
+{% block title %}MediaConch - Download MediaConch for Ubuntu (Ubuntu, Kubuntu, Xbuntu...) and Linux Mint{% endblock %}
+
+{% block body %}
+<h1>Download - Ubuntu (Ubuntu, Kubuntu, Xbuntu...) and Linux Mint</h1>
+{% image '@AppBundle/Resources/public/img/OS/Ubuntu.png' %}
+<img src="{{ asset_url }}" alt="Ubuntu" title="Ubuntu" width="304" height="79">
+{% endimage %}
+{% image '@AppBundle/Resources/public/img/OS/Linux_Mint.png' %}
+<img src="{{ asset_url }}" alt="Linux Mint" title="Linux Mint" width="256" height="75"><br>
+{% endimage %}
+
+<div class="table-responsive">
+<table class="download table table-bordered table-condensed">
+<thead>
+<tr class="table-header">
+    <th>Version</th>
+    <th>Architecture</th>
+    <th>Interface</th>
+    <td>Version</td>
+    <td>Comment</td>
+</tr>
+</thead>
+<tbody>
+{{ include('@MediaConch/Download/ubuntuTable.html.twig') }}
+</tbody>
+</table>
+</div>
+{% endblock %}

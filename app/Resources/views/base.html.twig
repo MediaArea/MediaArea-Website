@@ -14,6 +14,8 @@
         <meta name="description" lang="en" content="{% block description %}MediaInfo{% endblock %}">
         <meta name="keywords" lang="en" content="{% block keywords %}MediaInfo{% endblock %}">
         <link rel="alternate" type="application/rss+xml" title="MediaInfo new releases feed" href="/rss/mediainfo_updates.xml" />
+        <link rel="alternate" type="application/rss+xml" title="MediaConch new releases feed" href="/rss/mediaconch_updates.xml" />
+        <link rel="alternate" type="application/rss+xml" title="MediaArea blog" href="{{ path('ma_blog_feed') }}" />
         {% block head %}{% endblock %}
         {% stylesheets
             'bundles/app/css/bootstrap.css'

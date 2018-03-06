@@ -1,0 +1,27 @@
+{% extends 'MediaConchBundle::base.html.twig' %}
+
+{% block title %}MediaConch - Download MediaConch for Debian{% endblock %}
+
+{% block body %}
+<h1>Download - Debian</h1>
+{% image '@AppBundle/Resources/public/img/OS/Debian.png' %}
+<img src="{{ asset_url }}" alt="Debian" title="Debian" width="229" height="61"><br>
+{% endimage %}
+
+<div class="table-responsive">
+<table class="download table table-bordered table-condensed">
+<thead>
+<tr class="table-header">
+    <th>Version</th>
+    <th>Architecture</th>
+    <th>Interface</th>
+    <td>Version</td>
+    <td>Comment</td>
+</tr>
+</thead>
+<tbody>
+{{ include('@MediaConch/Download/debianTable.html.twig') }}
+</tbody>
+</table>
+</div>
+{% endblock %}

@@ -1,7 +1,8 @@
 ---
 title:  "Using QtWebEngine on the Mac App Store"
-date:   2018-02-14
+date:   2018-02-14 16:00:00 CET
 excerpt: "Building an QtWebEngine-based app for the Mac App Store is not easy, below are the modifications we have made to Qt 5.8 in order to have our QtWebEngine-based app validated by Apple."
+tags: MediaConch, Mac App Store
 ---
 
 # Using QtWebEngine on the Mac App Store

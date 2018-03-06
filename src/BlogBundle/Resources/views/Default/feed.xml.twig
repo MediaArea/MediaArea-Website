@@ -1,0 +1,12 @@
+{% set firstPost = posts|first %}
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+    <channel>
+        <title>MediaArea blog</title>
+        <link>https://mediaarea.net/blog</link>
+        <description>MediaArea blog feed</description>
+        <language>en-us</language>
+        <lastBuildDate>{{ firstPost.date|date('r') }}</lastBuildDate>
+        {{ include('@Blog/Default/feedList.xml.twig', {posts: posts}, with_context = false) }}
+    </channel>
+</rss>

@@ -1,0 +1,19 @@
+{% if paginator.totalPages > 1 %}
+    <ul class="pagination">
+        {% if paginator.previousPage %}
+            <li><a href="{{ path(paginator.pageRoute(paginator.previousPage), paginator.pageRouteParams(paginator.previousPage)) }}">&lsaquo;</a></li>
+        {% endif %}
+
+        {% for page in paginator.pages %}
+            {% if page == 'slide' %}
+                <li class="disabled"><span>&hellip;</span></li>
+            {% else %}
+                <li{{ paginator.isCurrent(page) ? ' class="active"' : '' }}><a href="{{ path(paginator.pageRoute(page), paginator.pageRouteParams(page)) }}">{{ page }}</a></li>
+            {% endif %}
+        {% endfor %}
+
+        {% if paginator.nextPage %}
+            <li><a href="{{ path(paginator.pageRoute(paginator.nextPage), paginator.pageRouteParams(paginator.nextPage)) }}">&rsaquo;</a></li>
+        {% endif %}
+    </ul>
+{% endif %}

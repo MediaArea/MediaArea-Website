@@ -122,6 +122,32 @@ p {
     background-color: #88cfff;
 }
 
+.dropdown-menu > li > span {
+    display: block;
+    padding: 3px 20px;
+    clear: both;
+    font-weight: normal;
+    line-height: 1.42857143;
+    color: #333;
+    white-space: nowrap;
+}
+.menu_level_2 > li > a {
+  display: block;
+  padding: 3px 20px 3px 30px;
+  clear: both;
+  font-weight: normal;
+  line-height: 1.42857143;
+  color: #333;
+  white-space: nowrap;
+}
+
+.menu_level_2 > li > a:hover,
+.menu_level_2 > li > a:focus {
+  color: #262626;
+  text-decoration: none;
+  background-color: #f5f5f5;
+}
+
 /* Footer */
 #footer {
     margin-top: 24px;
@@ -228,7 +254,7 @@ p {
 /* RSS icon */
 .rss-updates {
     background: transparent url('../img/Feed-icon.png') no-repeat;
-    padding: 3px 0px 1px 19px;
+    padding-left: 19px;
     text-decoration: none;
 }
 
@@ -349,7 +375,7 @@ p {
     color: white;
 }
 
-.blue .btn-default {
+.blue .btn-default, .blue .label-default {
     color: white;
     background-color: #0070bb;
     background-image: -webkit-linear-gradient(top,#0070bb 0,#0082da 100%);
@@ -362,7 +388,12 @@ p {
     background-repeat: repeat-x;
 }
 
-.blue .btn-default:hover, .blue .btn-default:focus {
+.blue .label-default a {
+    color: white;
+    text-decoration: none;
+}
+
+.blue .btn-default:hover, .blue .btn-default:focus, .blue .label-default:hover, .blue .label-default:focus {
     background-color: #0082da;
     background-position: 0 -20px;
 }

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="en" datatype="plaintext" original="file.ext" target-language="en">
+    <body>
+      <trans-unit id="menu.mediaconch" approved="yes">
+        <source><![CDATA[menu.mediaconch]]></source>
+        <target><![CDATA[MediaConch]]></target>
+      </trans-unit>
+      <trans-unit id="menu.mediaconch.about" approved="yes">
+        <source><![CDATA[menu.mediaconch.about]]></source>
+        <target><![CDATA[About]]></target>
+      </trans-unit>
+      <trans-unit id="menu.mediaconch.team" approved="yes">
+        <source><![CDATA[menu.mediaconch.team]]></source>
+        <target><![CDATA[Team]]></target>
+      </trans-unit>
+      <trans-unit id="menu.mediaconch.download" approved="yes">
+        <source><![CDATA[menu.mediaconch.download]]></source>
+        <target><![CDATA[Download]]></target>
+      </trans-unit>
+      <trans-unit id="menu.mediaconch.community" approved="yes">
+        <source><![CDATA[menu.mediaconch.community]]></source>
+        <target><![CDATA[Community]]></target>
+      </trans-unit>
+      <trans-unit id="menu.mediaconch.documentation" approved="yes">
+        <source><![CDATA[menu.mediaconch.documentation]]></source>
+        <target><![CDATA[Documentation]]></target>
+      </trans-unit>
+      <trans-unit id="menu.mediaconch.documentation.fixity" approved="yes">
+        <source><![CDATA[menu.mediaconch.documentation.fixity]]></source>
+        <target><![CDATA[Fixity]]></target>
+      </trans-unit>
+      <trans-unit id="menu.mediaconch.documentation.faq" approved="yes">
+        <source><![CDATA[menu.mediaconch.documentation.faq]]></source>
+        <target><![CDATA[FAQ]]></target>
+      </trans-unit>
+      <trans-unit id="menu.mediaconch.documentation.howtouse" approved="yes">
+        <source><![CDATA[menu.mediaconch.documentation.howtouse]]></source>
+        <target><![CDATA[How to Use]]></target>
+      </trans-unit>
+      <trans-unit id="menu.mediaconch.documentation.dataformat" approved="yes">
+        <source><![CDATA[menu.mediaconch.documentation.dataformat]]></source>
+        <target><![CDATA[Data Format]]></target>
+      </trans-unit>
+      <trans-unit id="menu.mediaconch.documentation.installation" approved="yes">
+        <source><![CDATA[menu.mediaconch.documentation.installation]]></source>
+        <target><![CDATA[Installation]]></target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

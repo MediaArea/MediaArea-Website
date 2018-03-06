@@ -51,6 +51,13 @@ class PostParser
         if (preg_match('#excerpt:\s*"(.*?)"#', $postInfos, $matches)) {
             $this->post->setExcerpt($matches[1]);
         }
+
+        // Parse tags
+        if (preg_match('#tags:\s*(.*)#', $postInfos, $matches)) {
+            foreach (explode(',', $matches[1]) as $tag) {
+                $this->post->addTag(trim($tag));
+            }
+        }
     }
 
     protected function hydratePostContent($postContent)

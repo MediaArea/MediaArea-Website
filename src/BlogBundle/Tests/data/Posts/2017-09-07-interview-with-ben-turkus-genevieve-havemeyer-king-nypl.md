@@ -2,7 +2,7 @@
 layout: default
 title:  "Interview with Ben Turkus and Genevieve Havemeyer-King"
 date:   2017-09-06
-categories: mediaconch, interview
+tags: MediaConch, Interview
 ---
 
 # Interview with Ben Turkus and Genevieve Havemeyer-King of NYPL

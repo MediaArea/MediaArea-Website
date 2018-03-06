@@ -2,7 +2,7 @@
 layout: default
 title:  "Interview with Julia Kim"
 date:   2017-08-22
-categories: mediaconch, interview
+tags: MediaConch, Interview
 ---
 
 # Interview with Julia Kim
