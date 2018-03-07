@@ -62,7 +62,7 @@
 
                 <div class="projectDescription">
                     <div class="downloadDetails">
-                        Development version {{ downloadInfo.version }}{% if downloadInfo.name %}, for {{ downloadInfo.name }}{% endif %}
+                        Version {{ downloadInfo.version }}{% if downloadInfo.name %}, for {{ downloadInfo.name }}{% endif %}
                     <br>
                     Other versions (packaging, OS, interface...) are also <a href="{{ path('qc_download') }}">available</a>
                     {% image '@AppBundle/Resources/public/img/blank.gif' %}
