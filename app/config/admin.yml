@@ -60,3 +60,15 @@ easy_admin:
                     - { property: 'votesTarget', type: 'integer', type_options: {'attr': {'min': 0}} }
                     - { property: 'votesCountCache', type: 'integer', type_options: {'attr': {'min': 0}} }
                     - { property: 'status', type: 'integer', type_options: {'attr': {'min': 0, 'max': 3}}, help: 'Close : 0 - Open : 1 - In progress : 2 - Finish : 3' }
+
+        Vote:
+            class: VoteBundle\Entity\Vote
+            disabled_actions: ['new', 'show', 'delete', 'edit']
+            search:
+                fields: ['user', 'points', 'date']
+            list:
+                fields:
+                    - 'user'
+                    - 'points'
+                    - 'date'
+                    - 'feature'
