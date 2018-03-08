@@ -101,6 +101,10 @@
             <source>vote.feature.finish</source>
             <target><![CDATA[This feature was developped thanks to support from the community.]]></target>
         </trans-unit>
+        <trans-unit id="vote.feature.show.finish" approved="yes">
+            <source>vote.feature.show.finish</source>
+            <target><![CDATA[Show features already developped thanks to support from the community]]></target>
+        </trans-unit>
     </body>
   </file>
 </xliff>
