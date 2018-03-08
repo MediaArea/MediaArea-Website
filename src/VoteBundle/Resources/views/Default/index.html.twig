@@ -32,7 +32,7 @@
 <table id="features-table" class="table table-striped table-bordered">
     <thead>
         <tr>
-            <td>Title</td>{% if app.user %}<td>Your vote</td>{% endif %}<td>Votes</td><td>Target</td><td>Ratio (%)</td>
+            <td>Title</td>{% if app.user %}<td>Your vote</td>{% endif %}<td>Votes</td><td>Target</td><td>Ratio (%)</td><td class="hidden">Status</td>
         </tr>
     </thead>
     <tbody>
@@ -41,7 +41,7 @@
             {% set totalPoints = feature.totalPoints %}
             {% set feature = feature.0 %}
         {% endif %}
-        <tr>
+        <tr{% if constant('STATUS_FINISH', feature) == feature.status %} class="hidden"{% endif %}>
             <td><a href="{{ path('vote_show_feature', {slug: feature.slug, id: feature.id}) }}">{{ feature.title }}</a></td>
             {% if app.user %}
                 <td>{{ totalPoints ?? 0 }}</td>
@@ -49,6 +49,7 @@
             <td>{{ feature.votesCountCache }}</td>
             <td>{{ feature.votesTarget }}</td>
             <td>{{ feature.completionRatio|round }}</td>
+            <td class="hidden">{{ feature.status }}</td>
         </tr>
     {% endfor %}
     </tbody>
@@ -75,9 +76,57 @@
 
 <script>
     $(document).ready(function() {
-        $('#features-table').DataTable({
+        var table = $('#features-table').DataTable({
             order: [[ {% if app.user %}4{% else %}3{% endif %}, 'desc' ], [ 0, 'asc' ]],
             pageLength: 50,
+        });
+
+        // Hide finish features
+        var hideFinishFeatures = function() {
+            var column = {% if app.user %}5{% else %}4{% endif %};
+            var status = {{ constant('VoteBundle\\Model\\FeatureInterface::STATUS_FINISH') }};
+            $.fn.dataTable.ext.search.length = 0;
+            $.fn.dataTable.ext.search.push(function(settings, data, dataIndex) {
+                if (data[column] < status) {
+                    return true;
+                } else {
+                    return false;
+                }
+            });
+        };
+
+        // Show finish features
+        var showFinishFeatures = function() {
+            var column = {% if app.user %}5{% else %}4{% endif %};
+            var status = {{ constant('VoteBundle\\Model\\FeatureInterface::STATUS_FINISH') }};
+            $.fn.dataTable.ext.search.length = 0;
+            $.fn.dataTable.ext.search.push(function(settings, data, dataIndex) {
+                if (data[column] == status) {
+                    return true;
+                } else {
+                    return false;
+                }
+            });
+        };
+
+        // Add checkbox button to change display of finish features
+        $('#features-table_wrapper div.row:nth-child(1)').after('<input id="show-finish-features" type="checkbox"> <label for="show-finish-features">{% trans %}vote.feature.show.finish{% endtrans %}</label>')
+
+        $('#show-finish-features').on('change', function() {
+            if (this.checked) {
+                showFinishFeatures();
+            } else {
+                hideFinishFeatures();
+            }
+            table.draw();
+        });
+
+        // Hide finish features by default
+        hideFinishFeatures();
+        table.draw();
+        // Remove hidden class of finish features (added to avoid flickering)
+        table.$('tr.hidden').each(function() {
+            $(this).removeClass('hidden');
         });
     });
 </script>

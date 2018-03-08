@@ -89,7 +89,22 @@
             <source>vote.feature.vote.success.remove</source>
             <target><![CDATA[You have successfully removed %points% voting points to this feature]]></target>
         </trans-unit>
+        <trans-unit id="vote.feature.inprogress.withvotes" approved="yes">
+            <source>vote.feature.inprogress.withvotes</source>
+            <target><![CDATA[This feature is in development, you cannot remove your vote.]]></target>
+        </trans-unit>
+        <trans-unit id="vote.feature.inprogress" approved="yes">
+            <source>vote.feature.inprogress</source>
+            <target><![CDATA[This feature is in development, you cannot vote for this feature anymore.]]></target>
+        </trans-unit>
+        <trans-unit id="vote.feature.finish" approved="yes">
+            <source>vote.feature.finish</source>
+            <target><![CDATA[This feature was developped thanks to support from the community.]]></target>
+        </trans-unit>
+        <trans-unit id="vote.feature.show.finish" approved="yes">
+            <source>vote.feature.show.finish</source>
+            <target><![CDATA[Show features already developped thanks to support from the community]]></target>
+        </trans-unit>
     </body>
   </file>
 </xliff>
-

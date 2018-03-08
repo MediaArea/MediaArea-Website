@@ -18,7 +18,7 @@ class DefaultControllerTest extends UserAbstractControllerTest
         $client = $this->createBetaUserClient();
         $crawler = $client->request('GET', '/Vote');
         $this->assertEquals(2, $crawler->filter('#features-table tbody tr')->count());
-        $this->assertEquals(5, $crawler->filter('#features-table tbody tr:nth-child(1) td')->count());
+        $this->assertEquals(6, $crawler->filter('#features-table tbody tr:nth-child(1) td')->count());
         $this->assertEquals('A super feature title', $crawler->filter('#features-table tbody tr:nth-child(1) td')
             ->first()->text());
         $this->assertEquals('0', $crawler->filter('#features-table tbody tr:nth-child(1) td')->eq(1)->text());
