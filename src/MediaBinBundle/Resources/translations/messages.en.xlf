@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="en" datatype="plaintext" original="file.ext" target-language="en">
+    <body>
+      <trans-unit id="mediabin.page.title" approved="yes">
+        <source><![CDATA[mediabin.page.title]]></source>
+        <target><![CDATA[MediaBin]]></target>
+      </trans-unit>
+      <trans-unit id="mediabin.page.description" approved="yes">
+        <source><![CDATA[mediabin.page.description]]></source>
+        <target><![CDATA[MediaBin]]></target>
+      </trans-unit>
+      <trans-unit id="mediabin.page.keywords" approved="yes">
+        <source><![CDATA[mediabin.page.keywords]]></source>
+        <target><![CDATA[MediaArea MediaInfo MediaBin media pastebin paste bin]]></target>
+      </trans-unit>
+      <trans-unit id="mediabin.intro" approved="yes">
+        <source><![CDATA[mediabin.intro]]></source>
+        <target><![CDATA[MediaBin is a tool for sharing your MediaInfo reports.<br>To create a MediaBin for now you have to analyze a file with <a href="%mediainfoonline%">MediaInfoOnline</a> (you will be a able to do it with <a href="%mediainfo%">MediaInfo</a> software soon).<br>Below are the list of the public MediaBin shared by our users and yours if you have ones and are <a href="%login%">loggued in</a>.]]></target>
+      </trans-unit>
+      <trans-unit id="mediabin.list.public" approved="yes">
+        <source><![CDATA[mediabin.list.public]]></source>
+        <target><![CDATA[Latests public MediaBin]]></target>
+      </trans-unit>
+      <trans-unit id="mediabin.list.private" approved="yes">
+        <source><![CDATA[mediabin.list.private]]></source>
+        <target><![CDATA[Your MediaBin]]></target>
+      </trans-unit>
+      <trans-unit id="mediabin.list.private.empty" approved="yes">
+        <source><![CDATA[mediabin.list.private.empty]]></source>
+        <target><![CDATA[You do not have a MediaBin (or they are expired)]]></target>
+      </trans-unit>
+      <trans-unit id="mediabin.panel.title" approved="yes">
+        <source><![CDATA[mediabin.panel.title]]></source>
+        <target><![CDATA[Update settings of your MediaBin]]></target>
+      </trans-unit>
+      <trans-unit id="mediabin.panel.content" approved="yes">
+        <source><![CDATA[mediabin.panel.content]]></source>
+        <target><![CDATA[You are the owner of this MediaBin, you can update its settings or delete it.]]></target>
+      </trans-unit>
+        <trans-unit id="mediabin.create.expiration.label" approved="yes">
+        <source><![CDATA[mediabin.create.expiration.label]]></source>
+        <target><![CDATA[Expiration]]></target>
+      </trans-unit>
+      <trans-unit id="mediabin.create.expiration.10m" approved="yes">
+        <source><![CDATA[mediabin.create.expiration.10m]]></source>
+        <target><![CDATA[10 minutes]]></target>
+      </trans-unit>
+      <trans-unit id="mediabin.create.expiration.1h" approved="yes">
+        <source><![CDATA[mediabin.create.expiration.1h]]></source>
+        <target><![CDATA[1 hour]]></target>
+      </trans-unit>
+      <trans-unit id="mediabin.create.expiration.1d" approved="yes">
+        <source><![CDATA[mediabin.create.expiration.1d]]></source>
+        <target><![CDATA[1 day]]></target>
+      </trans-unit>
+      <trans-unit id="mediabin.create.expiration.1w" approved="yes">
+        <source><![CDATA[mediabin.create.expiration.1w]]></source>
+        <target><![CDATA[1 week]]></target>
+      </trans-unit>
+      <trans-unit id="mediabin.create.expiration.1m" approved="yes">
+        <source><![CDATA[mediabin.create.expiration.1m]]></source>
+        <target><![CDATA[1 month]]></target>
+      </trans-unit>
+      <trans-unit id="mediabin.create.expiration.1y" approved="yes">
+        <source><![CDATA[mediabin.create.expiration.1y]]></source>
+        <target><![CDATA[1 year]]></target>
+      </trans-unit>
+      <trans-unit id="mediabin.create.expiration.never" approved="yes">
+        <source><![CDATA[mediabin.create.expiration.never]]></source>
+        <target><![CDATA[Never]]></target>
+      </trans-unit>
+      <trans-unit id="mediabin.create.title.label" approved="yes">
+        <source><![CDATA[mediabin.create.title.label]]></source>
+        <target><![CDATA[Title]]></target>
+      </trans-unit>
+      <trans-unit id="mediabin.create.title.placeholder" approved="yes">
+        <source><![CDATA[mediabin.create.title.placeholder]]></source>
+        <target><![CDATA[Untitled]]></target>
+      </trans-unit>
+      <trans-unit id="mediabin.help.expiration.title" approved="yes">
+        <source><![CDATA[mediabin.help.expiration.title]]></source>
+        <target><![CDATA[MediaBin expiration]]></target>
+      </trans-unit>
+      <trans-unit id="mediabin.help.expiration.content" approved="yes">
+        <source><![CDATA[mediabin.help.expiration.content]]></source>
+        <target><![CDATA[Select the period for which your MediaBin will be available.<br>After your MediaBin expired it will no longer available and would be deleted]]></target>
+      </trans-unit>
+      <trans-unit id="mediabin.help.title.title" approved="yes">
+        <source><![CDATA[mediabin.help.title.title]]></source>
+        <target><![CDATA[MediaBin title]]></target>
+      </trans-unit>
+      <trans-unit id="mediabin.help.title.content" approved="yes">
+        <source><![CDATA[mediabin.help.title.content]]></source>
+        <target><![CDATA[Give a name to your MediaBin<br>Not mandatory]]></target>
+      </trans-unit>
+      <trans-unit id="mediabin.create.visibility.label" approved="yes">
+        <source><![CDATA[mediabin.create.visibility.label]]></source>
+        <target><![CDATA[Visibility]]></target>
+      </trans-unit>
+      <trans-unit id="mediabin.create.visibility.public" approved="yes">
+        <source><![CDATA[mediabin.create.visibility.public]]></source>
+        <target><![CDATA[Public]]></target>
+      </trans-unit>
+      <trans-unit id="mediabin.create.visibility.hidden" approved="yes">
+        <source><![CDATA[mediabin.create.visibility.hidden]]></source>
+        <target><![CDATA[Public but not listed]]></target>
+      </trans-unit>
+      <trans-unit id="mediabin.help.visibility.title" approved="yes">
+        <source><![CDATA[mediabin.help.visibility.title]]></source>
+        <target><![CDATA[MediaBin visibility]]></target>
+      </trans-unit>
+      <trans-unit id="mediabin.help.visibility.content" approved="yes">
+        <source><![CDATA[mediabin.help.visibility.content]]></source>
+        <target><![CDATA[<b>Public</b> :<br>Your MediaBin is accessible via its URL and could be listed on MediaArea website<br><b>Public but not listed</b> :<br>Your MediaBin is accessible via its URL but is not listed on MediaArea website]]></target>
+      </trans-unit>
+      <trans-unit id="mediabin.create.anonymize.label" approved="yes">
+        <source><![CDATA[mediabin.create.anonymize.label]]></source>
+        <target><![CDATA[Anonymize]]></target>
+      </trans-unit>
+      <trans-unit id="mediabin.help.anonymize.title" approved="yes">
+        <source><![CDATA[mediabin.help.anonymize.title]]></source>
+        <target><![CDATA[MediaBin privacy]]></target>
+      </trans-unit>
+      <trans-unit id="mediabin.help.anonymize.content" approved="yes">
+        <source><![CDATA[mediabin.help.anonymize.content]]></source>
+        <target><![CDATA[If checked, private datas like filename are removed from your MediaBin]]></target>
+      </trans-unit>
+      <trans-unit id="mediabin.create.button" approved="yes">
+        <source><![CDATA[mediabin.create.button]]></source>
+        <target><![CDATA[Create MediaBin]]></target>
+      </trans-unit>
+      <trans-unit id="mediabin.create.success" approved="yes">
+        <source><![CDATA[mediabin.create.success]]></source>
+        <target><![CDATA[<a title="View the MediaBin page" class="alert-link mediabin-url">MediaBin</a> successfuly created]]></target>
+      </trans-unit>
+      <trans-unit id="mediabin.create.success.url" approved="yes">
+        <source><![CDATA[mediabin.create.success.url]]></source>
+        <target><![CDATA[URL of your bin]]></target>
+      </trans-unit>
+      <trans-unit id="mediabin.create.success.copy" approved="yes">
+        <source><![CDATA[mediabin.create.success.copy]]></source>
+        <target><![CDATA[Copy]]></target>
+      </trans-unit>
+      <trans-unit id="mediabin.create.error" approved="yes">
+        <source><![CDATA[mediabin.create.error]]></source>
+        <target><![CDATA[Error - MediaBin not created]]></target>
+      </trans-unit>
+      <trans-unit id="mediabin.update.button" approved="yes">
+        <source><![CDATA[mediabin.update.button]]></source>
+        <target><![CDATA[Update your MediaBin]]></target>
+      </trans-unit>
+      <trans-unit id="mediabin.update.success" approved="yes">
+        <source><![CDATA[mediabin.update.success]]></source>
+        <target><![CDATA[MediaBin successfuly updated]]></target>
+      </trans-unit>
+      <trans-unit id="mediabin.update.error" approved="yes">
+        <source><![CDATA[mediabin.update.error]]></source>
+        <target><![CDATA[Error - MediaBin not updated]]></target>
+      </trans-unit>
+      <trans-unit id="mediabin.delete.button" approved="yes">
+        <source><![CDATA[mediabin.delete.button]]></source>
+        <target><![CDATA[Delete your MediaBin]]></target>
+      </trans-unit>
+      <trans-unit id="mediabin.delete.success" approved="yes">
+        <source><![CDATA[mediabin.delete.success]]></source>
+        <target><![CDATA[MediaBin successfuly deleted (you have a week to change your mind, after that it will be completely removed from our system)]]></target>
+      </trans-unit>
+      <trans-unit id="mediabin.delete.error" approved="yes">
+        <source><![CDATA[mediabin.delete.error]]></source>
+        <target><![CDATA[Error - MediaBin not deleted]]></target>
+      </trans-unit>
+      <trans-unit id="mediabin.cancel.button" approved="yes">
+        <source><![CDATA[mediabin.cancel.button]]></source>
+        <target><![CDATA[Cancel deletion]]></target>
+      </trans-unit>
+      <trans-unit id="mediabin.cancel.success" approved="yes">
+        <source><![CDATA[mediabin.cancel.success]]></source>
+        <target><![CDATA[MediaBin deletion have been successfuly canceled]]></target>
+      </trans-unit>
+      <trans-unit id="mediabin.cancel.error" approved="yes">
+        <source><![CDATA[mediabin.cancel.error]]></source>
+        <target><![CDATA[Error - MediaBin deletion not canceled]]></target>
+      </trans-unit>
+      <trans-unit id="mediabin.reload" approved="yes">
+        <source><![CDATA[mediabin.reload]]></source>
+        <target><![CDATA[You need to <a href="%url%" class="alert-link">reload</a> the page to see your changes]]></target>
+      </trans-unit>
+  </body>
+</file>
+</xliff>

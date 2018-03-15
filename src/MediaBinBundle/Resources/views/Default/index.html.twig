@@ -1,0 +1,76 @@
+{% extends 'MediaBinBundle::base.html.twig' %}
+
+{% block title %}{% trans %}mediabin.page.title{% endtrans %}{% endblock %}
+{% block description %}{% trans %}mediabin.page.description{% endtrans %}{% endblock %}
+{% block keywords %}{% trans %}mediabin.page.keywords{% endtrans %}{% endblock %}
+
+{% block body %}
+<h1>MediaBin</h1>
+
+<p>
+    {% trans with { '%mediainfoonline%': path('mi_online'), '%mediainfo%': path('mi_home'), '%login%': path('fos_user_security_login') } %}mediabin.intro{% endtrans %}
+</p>
+<div class="help-block"></div>
+
+{% set defaultBinTitle = 'mediabin.create.title.placeholder'|trans %}
+<div class="row">
+    <div class="col-md-6">
+        {% if latestsPublicBin %}
+            <div class="panel panel-default">
+                <div class="panel-heading">{% trans %}mediabin.list.public{% endtrans %}</div>
+                <div class="panel-body">
+                    <ul id="listing-latests-public">
+                    {% for bin in latestsPublicBin  %}
+                        <li><a href="{{ path('mediabin_show', {hash : bin.hash}) }}">{{ bin.title|default(defaultBinTitle) }}</a></li>
+                    {% endfor %}
+                    </ul>
+                    <div class="text-center">
+                        <ul id="pagination-latests-public" class="pagination pagination-sm"></ul>
+                    </div>
+                </div>
+            </div>
+        {% endif %}
+    </div>
+    <div class="col-md-6">
+        {% if userBin is not null %}
+            <div class="panel panel-default">
+                <div class="panel-heading">{% trans %}mediabin.list.private{% endtrans %}</div>
+                <div class="panel-body">
+                    {% if userBin|length >= 1 %}
+                        <ul id="listing-user">
+                        {% for bin in userBin  %}
+                            <li><a href="{{ path('mediabin_show', {hash : bin.hash}) }}">{{ bin.titleListing(defaultBinTitle) }}</a></li>
+                        {% endfor %}
+                        </ul>
+                    {% else %}
+                        {% trans %}mediabin.list.private.empty{% endtrans %}
+                    {% endif %}
+                    <div class="text-center">
+                        <ul id="pagination-user" class="pagination pagination-sm"></ul>
+                    </div>
+                </div>
+            </div>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}
+
+{% block javascripts %}
+{% javascripts
+    '@AppBundle/Resources/public/js/simplePagination.js'
+    '@MediaBinBundle/Resources/public/js/listing.js'
+    filter='?jsqueeze' output='js/mediabinListing.js'
+ %}
+<script type="text/javascript" src="{{ preload(asset_url, { as: 'script', nopush: true }) }}"></script>
+{% endjavascripts %}
+<script src="{{ asset('bundles/fosjsrouting/js/router.js') }}"></script>
+<script src="{{ path('fos_js_routing_js', { callback: 'fos.Router.setData' }) }}"></script>
+<script>
+$(document).ready(function() {
+    latestsPublicListing.init({{ latestsPublicBinCount }}, {{ itemsPerPage }});
+    {% if userBin is not null and userBinCount is not null %}
+        userListing.init({{ userBinCount }}, {{ itemsPerPage }});
+    {% endif %}
+});
+</script>
+{% endblock %}

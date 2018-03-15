@@ -1,7 +1,7 @@
 {% extends 'MediaInfoBundle::base.html.twig' %}
 
-{% set MIJS = '/_/js/MediaInfo-17.12.js' %}
-{% set MIWASM = '/_/js/MediaInfoWasm' %}
+{% set MIJS = '/_/js/MediaInfo_20180314.js' %}
+{% set MIWASM = '/_/js/MediaInfoWasm_20180314' %}
 
 {% block title %}{% trans %}mediainfoonline.page.title{% endtrans %}{% endblock %}
 {% block description %}{% trans %}mediainfoonline.page.description{% endtrans %}{% endblock %}
@@ -32,22 +32,80 @@
             <input type="file" id="mediainfo-file-input" />
         </p>
     </div>
-    <div class="row">
-        <div class="col-md-7 col-sm-12">
-            {% trans %}mediainfoonline.output{% endtrans %} <select id="mediainfo-format-list" class="form-control"></select>
+    {% if app.user and is_granted('ROLE_BETA') %}
+    <div class="panel panel-default mediabin-container hidden">
+        <div class="panel-heading">
+            <h3 class="panel-title">
+                <a data-toggle="collapse" data-target="#mediabin-panel" class="collapsed">{% trans %}mediainfoonline.mediabin.panel.title{% endtrans %}</a>
+            </h3>
         </div>
-        <div class="col-md-5 col-sm-12">
+        <div id="mediabin-panel" class="panel-collapse collapse">
+            <div class="panel-body">
+                <p>
+                    {% trans %}mediainfoonline.mediabin.panel.content{% endtrans %}
+                </p>
+                {% if app.user and is_granted('ROLE_BETA') %}
+                    <div class="row">
+                        <div class="mediabin-create-container form-horizontal">
+                            {{ include('@MediaBin/Form/BinParamsForm.html.twig', {'bin': {'title': null, 'visibility': 0, 'anonymize': 0}}, with_context = false) }}
+                            <div class="clearfix"></div>
+                            <div class="col-sm-12">
+                                <button class="btn btn-primary mediabin-create">{% trans %}mediabin.create.button{% endtrans %}</button>
+                            </div>
+                        </div>
+                        <div class="mediabin-alert mediabin-success hidden">
+                            <div class="col-md-4">
+                                <div class="alert alert-success" role="alert">
+                                        <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> {% trans %}mediabin.create.success{% endtrans %}
+                                </div>
+                            </div>
+                            <div class="col-md-8 mediabin-url-copy-container">
+                                <label class="pull-left" for="mediabin-url-copy">{% trans %}mediabin.create.success.url{% endtrans %} </label>
+                                <div class="input-group">
+                                  <span class="input-group-btn">
+                                    <button class="btn btn-primary mediabin-url-copy-to-clipboard" data-clipboard-target="#mediabin-url-copy" data-container="body" type="button" data-toggle="tooltip" data-placement="bottom" title="Copied to clipboard"><span class="glyphicon glyphicon-copy" aria-hidden="true"></span> {% trans %}mediabin.create.success.copy{% endtrans %}</button>
+                                  </span>
+                                  <input type="text" id="mediabin-url-copy" class="form-control" readonly>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 mediabin-alert mediabin-error hidden">
+                            <div class="alert alert-danger" role="alert">
+                                <span class="glyphicon glyphicon-remove text-danger" aria-hidden="true"></span> {% trans %}mediabin.create.error{% endtrans %}
+                            </div>
+                        </div>
+                    </div>
+                {% else %}
+                    <p>
+                        {% trans with { '%login%': path('fos_user_security_login'), '%register%': path('fos_user_registration_register') } %}mediainfoonline.mediabin.user.not.login{% endtrans %}
+                    </p>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+    {% endif %}
+
+    <div class="row mediainfo-tools-container">
+        <div class="col-lg-7 col-md-6">
+            <label for="mediainfo-format-list">{% trans %}mediainfoonline.output{% endtrans %}</label>
+            <select id="mediainfo-format-list" class="form-control"></select>
+        </div>
+        <div class="col-lg-5 col-md-6">
             <div class="btn-group mediainfo-format-list-download-container hidden">
-                <button class="btn btn-primary mediainfo-format-list-download">Download MediaInfo report</button>
+                <button class="btn btn-primary mediainfo-format-list-download"><span class="glyphicon glyphicon-download" aria-hidden="true"></span> {% trans %}mediainfoonline.report.download{% endtrans %}</button>
                 <button class="btn btn-primary dropdown-toggle mediainfo-format-list-download-format" data-toggle="dropdown"><span class="caret"></span></button>
                 <ul class="dropdown-menu col-md-12"></ul>
             </div>
             <div class="pull-right mediainfo-copy-to-clipboard-container hidden">
-                <button class="btn btn-primary mediainfo-copy-to-clipboard" data-toggle="tooltip" data-placement="bottom" title="Copied to clipboard">Copy to clipboard</button>
+                <button class="btn btn-primary mediainfo-copy-to-clipboard" data-toggle="tooltip" data-placement="bottom" title="{% trans %}mediainfoonline.report.copy.tooltip{% endtrans %}"><span class="glyphicon glyphicon-copy" aria-hidden="true"></span> {% trans %}mediainfoonline.report.copy{% endtrans %}</button>
             </div>
         </div>
     </div>
-    <p class="mediainfo-report-filename-container hidden">{% trans %}mediainfoonline.analyzed.filename{% endtrans %} "<span class="mediainfo-report-filename"></span>" :</p>
+
+    <p class="mediainfo-report-filename-container hidden">
+        {% trans %}mediainfoonline.analyzed.filename{% endtrans %} "<span class="mediainfo-report-filename"></span>" :
+    </p>
+
     <div class="mediainfo-report-container hidden"><pre><code id="mediainfo-report"></code></pre></div>
     <div class="mediainfo-report-error alert alert-danger hidden"></div>
 </div>
@@ -102,4 +160,6 @@ script.onload = script.onreadystatechange = function() {
 var s = document.getElementsByTagName('script')[0];
 s.parentNode.insertBefore(script, s);
 </script>
+<script src="{{ asset('bundles/fosjsrouting/js/router.js') }}"></script>
+<script src="{{ path('fos_js_routing_js', { callback: 'fos.Router.setData' }) }}"></script>
 {% endblock %}

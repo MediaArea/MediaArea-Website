@@ -17,6 +17,7 @@ imports:
     - { resource: "@BlogBundle/Resources/config/services.yml" }
     - { resource: "@VoteBundle/Resources/config/services.yml" }
     - { resource: "@MediaConchBundle/Resources/config/services.yml" }
+    - { resource: "@MediaBinBundle/Resources/config/services.yml" }
 
 # Put parameters here that don't need to change on each machine where the app is deployed
 # https://symfony.com/doc/current/best_practices/configuration.html#application-related-configuration
@@ -94,6 +95,7 @@ stof_doctrine_extensions:
     orm:
         default:
             sluggable: true
+            timestampable: true
 
 # Swiftmailer Configuration
 swiftmailer:
@@ -148,6 +150,13 @@ fos_js_routing:
         - supportUs_supporters_list
         - invoice_ajax_modal_data
         - invoice_download_pdf
+        - mediabin_show
+        - mediabin_api_new
+        - mediabin_api_update
+        - mediabin_api_cancel_expiration
+        - mediabin_api_delete
+        - mediabin_api_listing_latests_public
+        - mediabin_api_listing_user
 
 jms_payment_core:
     encryption:
@@ -166,3 +175,16 @@ jms_payment_paypal:
 
 blog:
     post_files_path: "%kernel.project_dir%/src/BlogBundle/Posts/"
+
+media_bin:
+    local:
+        path: "%mediabin_local_path%"
+    external:
+        enabled: "%mediabin_external_enabled%"
+        openstack:
+            auth_url: "%mediabin_external_openstack_auth_url%"
+            region: "%mediabin_external_openstack_region%"
+            container: "%mediabin_external_openstack_container%"
+            username: "%mediabin_external_openstack_username%"
+            password: "%mediabin_external_openstack_password%"
+            tenant_id: "%mediabin_external_openstack_tenant_id%"

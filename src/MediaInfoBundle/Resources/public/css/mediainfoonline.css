@@ -22,9 +22,14 @@
     margin-left: 0;
 }
 
-.mediainfo-report-filename-container {
-    margin-top: 10px;
+.mediainfo-tools-container, .mediainfo-tools-container-temp {
+    margin-bottom: 10px;
 }
+
+.mediainfo-tools-container-temp {
+    height: 34px;
+}
+
 .mediainfo-report-container .hljs, .mediainfo-report-container h2 {
     background: #f5f5f5;
 }
@@ -52,5 +57,67 @@
 
     .mediainfo-format-list-download-container {
         margin-right: 10px;
+    }
+}
+
+/* MediaBin */
+.mediabin-container {
+    margin-bottom: 10px;
+}
+
+.mediabin-create-container {
+    margin-top: 10px;
+}
+
+.mediabin-create-container label {
+    padding-right: 0;
+}
+
+.mediabin-alert .alert {
+    display: inline-block;
+    margin-top: 0;
+    margin-bottom: 5px;
+    font-size: 16px;
+    padding: 6px 12px;
+    line-height: 1.42857143;
+}
+
+.mediabin-success a {
+    text-decoration: underline;
+}
+
+.mediabin-container .panel-heading a:after {
+    font-family:'Glyphicons Halflings';
+    content:"\e114";
+    float: right;
+    color: grey;
+}
+.mediabin-container .panel-heading a.collapsed:after {
+    content:"\e080";
+}
+
+.mediabin-expiration-with-edit {
+    display: inline-block;
+    width: inherit;
+}
+
+.mediabin-expiration-edit {
+    padding-top: 7px;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.mediabin-expiration-cancel {
+    cursor: pointer;
+}
+
+.mediabin-url-copy-container label {
+    line-height: 34px;
+    margin-right: 5px;
+}
+
+@media (max-width: 991px) {
+    .mediabin-url-copy-container {
+        margin-top: 15px;
     }
 }
