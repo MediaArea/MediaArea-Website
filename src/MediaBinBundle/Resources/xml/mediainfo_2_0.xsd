@@ -2,7 +2,15 @@
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
     targetNamespace="https://mediaarea.net/mediainfo"
     xmlns="https://mediaarea.net/mediainfo" elementFormDefault="qualified"
-    version="2.0beta1">
+    version="2.0">
+	<xsd:annotation>
+		<xsd:documentation>
+            Version 18.03
+            Update from upstream MediaInfo fields info.
+            
+            Previous versions made by Dave Rice.
+        </xsd:documentation>
+	</xsd:annotation>
     <xsd:element name="MediaInfo" type="mediainfoType"/>
     <xsd:complexType name="mediainfoType">
         <xsd:sequence>
@@ -25,7 +33,11 @@
         <xsd:sequence>
             <xsd:choice maxOccurs="unbounded">
                 <xsd:element name="Accompaniment" minOccurs="0" maxOccurs="1" type="xsd:string"/>
-                <xsd:element name="ActiveFormatDescription" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+                <xsd:element name="ActiveFormatDescription" minOccurs="0" maxOccurs="1" type="xsd:string">
+                    <xsd:annotation>
+                        <xsd:documentation>This element describes Active Format Description (AFD) codes as described in the DVB standard TS 101 154.</xsd:documentation>
+                    </xsd:annotation>
+                </xsd:element>
                 <xsd:element name="Actor" minOccurs="0" maxOccurs="1" type="xsd:string"/>
                 <xsd:element name="Actor_Character" minOccurs="0" maxOccurs="1" type="xsd:string"/>
                 <xsd:element name="Added_Date" minOccurs="0" maxOccurs="1" type="xsd:string"/>
@@ -33,8 +45,16 @@
                 <xsd:element name="Album_More" minOccurs="0" maxOccurs="1" type="xsd:string"/>
                 <xsd:element name="Album_Performer" minOccurs="0" maxOccurs="1" type="xsd:string"/>
                 <xsd:element name="Album_Performer_Sort" minOccurs="0" maxOccurs="1" type="xsd:string"/>
-                <xsd:element name="Album_ReplayGain_Gain" minOccurs="0" maxOccurs="1" type="xsd:string"/>
-                <xsd:element name="Album_ReplayGain_Peak" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+                <xsd:element name="Album_ReplayGain_Gain" minOccurs="0" maxOccurs="1" type="xsd:string">
+                    <xsd:annotation>
+                        <xsd:documentation>This element describes album-gain values to attenuate the signal on a per-album basis.</xsd:documentation>
+                    </xsd:annotation>
+                </xsd:element>
+                <xsd:element name="Album_ReplayGain_Peak" minOccurs="0" maxOccurs="1" type="xsd:string">
+                    <xsd:annotation>
+                        <xsd:documentation>This element describes peak loudness levels when measuring a signal on a per-album basis.</xsd:documentation>
+                    </xsd:annotation>
+                </xsd:element>
                 <xsd:element name="Album_Sort" minOccurs="0" maxOccurs="1" type="xsd:string"/>
                 <xsd:element name="Alignment" minOccurs="0" maxOccurs="1" type="xsd:string"/>
                 <xsd:element name="AlternateGroup" minOccurs="0" maxOccurs="1" type="xsd:string"/>
@@ -56,10 +76,10 @@
                 <xsd:element name="BPM" minOccurs="0" maxOccurs="1" type="xsd:string"/>
                 <xsd:element name="BufferSize" minOccurs="0" maxOccurs="1" type="xsd:string"/>
                 <xsd:element name="CatalogNumber" minOccurs="0" maxOccurs="1" type="xsd:string"/>
-                <xsd:element name="Channels" minOccurs="0" maxOccurs="1" type="xsd:integer"/>
-                <xsd:element name="Channels_Original" minOccurs="0" maxOccurs="1" type="xsd:integer"/>
                 <xsd:element name="ChannelLayout" minOccurs="0" maxOccurs="1" type="xsd:string"/>
                 <xsd:element name="ChannelPositions" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+                <xsd:element name="Channels" minOccurs="0" maxOccurs="1" type="xsd:integer"/>
+                <xsd:element name="Channels_Original" minOccurs="0" maxOccurs="1" type="xsd:integer"/>
                 <xsd:element name="Chapter" minOccurs="0" maxOccurs="1" type="xsd:string"/>
                 <xsd:element name="Choregrapher" minOccurs="0" maxOccurs="1" type="xsd:string"/>
                 <xsd:element name="ChromaSubsampling" minOccurs="0" maxOccurs="1" type="xsd:string"/>
@@ -79,6 +99,7 @@
                 <xsd:element name="Comment" minOccurs="0" maxOccurs="1" type="xsd:string"/>
                 <xsd:element name="CommissionedBy" minOccurs="0" maxOccurs="1" type="xsd:string"/>
                 <xsd:element name="Compilation" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+                <xsd:element name="CompleteName" minOccurs="0" maxOccurs="1" type="xsd:string"/>
                 <xsd:element name="CompleteName_Last" minOccurs="0" maxOccurs="1" type="xsd:string"/>
                 <xsd:element name="Composer" minOccurs="0" maxOccurs="1" type="xsd:string"/>
                 <xsd:element name="Composer_Nationality" minOccurs="0" maxOccurs="1" type="xsd:string"/>
@@ -180,6 +201,7 @@
                 <xsd:element name="Format_Settings_Matrix_Data" minOccurs="0" maxOccurs="1" type="xsd:string"/>
                 <xsd:element name="Format_Settings_Mode" minOccurs="0" maxOccurs="1" type="xsd:string"/>
                 <xsd:element name="Format_Settings_ModeExtension" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+                <xsd:element name="Format_Settings_Packing" minOccurs="0" maxOccurs="1" type="xsd:string"/>
                 <xsd:element name="Format_Settings_PictureStructure" minOccurs="0" maxOccurs="1" type="xsd:string"/>
                 <xsd:element name="Format_Settings_PS" minOccurs="0" maxOccurs="1" type="xsd:string"/>
                 <xsd:element name="Format_Settings_Pulldown" minOccurs="0" maxOccurs="1" type="xsd:string"/>
@@ -234,6 +256,7 @@
                 <xsd:element name="MasteredBy" minOccurs="0" maxOccurs="1" type="xsd:string"/>
                 <xsd:element name="Matrix_Channels" minOccurs="0" maxOccurs="1" type="xsd:integer"/>
                 <xsd:element name="Matrix_ChannelPositions" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+                <xsd:element name="Matrix_Channels" minOccurs="0" maxOccurs="1" type="xsd:integer"/>
                 <xsd:element name="matrix_coefficients" minOccurs="0" maxOccurs="1" type="xsd:string"/>
                 <xsd:element name="matrix_coefficients_Original" minOccurs="0" maxOccurs="1" type="xsd:string"/>
                 <xsd:element name="Matrix_Format" minOccurs="0" maxOccurs="1" type="xsd:string"/>
@@ -246,6 +269,9 @@
                 <xsd:element name="MultiView_BaseProfile" minOccurs="0" maxOccurs="1" type="xsd:string"/>
                 <xsd:element name="MultiView_Count" minOccurs="0" maxOccurs="1" type="xsd:string"/>
                 <xsd:element name="MultiView_Layout" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+                <xsd:element name="DolbyVision_Version" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+                <xsd:element name="DolbyVision_Profile" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+                <xsd:element name="DolbyVision_Layers" minOccurs="0" maxOccurs="1" type="xsd:string"/>
                 <xsd:element name="MusicBy" minOccurs="0" maxOccurs="1" type="xsd:string"/>
                 <xsd:element name="MuxingMode" minOccurs="0" maxOccurs="1" type="xsd:string"/>
                 <xsd:element name="MuxingMode_MoreInfo" minOccurs="0" maxOccurs="1" type="xsd:string"/>
@@ -334,7 +360,7 @@
                 <xsd:element name="Standard" minOccurs="0" maxOccurs="1" type="xsd:string"/>
                 <xsd:element name="Stored_Height" minOccurs="0" maxOccurs="1" type="xsd:integer"/>
                 <xsd:element name="Stored_Width" minOccurs="0" maxOccurs="1" type="xsd:integer"/>
-                <xsd:element name="StreamOrder" minOccurs="0" maxOccurs="1" type="xsd:integer"/>
+                <xsd:element name="StreamOrder" minOccurs="0" maxOccurs="1" type="xsd:string"/>
                 <xsd:element name="StreamSize" minOccurs="0" maxOccurs="1" type="xsd:integer"/>
                 <xsd:element name="StreamSize_Encoded" minOccurs="0" maxOccurs="1" type="xsd:integer"/>
                 <xsd:element name="StreamSize_Proportion" minOccurs="0" maxOccurs="1" type="xsd:string"/>
@@ -351,7 +377,7 @@
                 <xsd:element name="TimeCode_Settings" minOccurs="0" maxOccurs="1" type="xsd:string"/>
                 <xsd:element name="TimeCode_Source" minOccurs="0" maxOccurs="1" type="xsd:string"/>
                 <xsd:element name="TimeCode_Striped" minOccurs="0" maxOccurs="1" type="xsd:string"/>
-                <xsd:element name="TimeStamp_FirstFrame" minOccurs="0" maxOccurs="1" type="xsd:integer"/>
+                <xsd:element name="TimeStamp_FirstFrame" minOccurs="0" maxOccurs="1" type="xsd:float"/>
                 <xsd:element name="TimeZone" minOccurs="0" maxOccurs="1" type="xsd:string"/>
                 <xsd:element name="TimeZones" minOccurs="0" maxOccurs="1" type="xsd:string"/>
                 <xsd:element name="Title" minOccurs="0" maxOccurs="1" type="xsd:string"/>
