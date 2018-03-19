@@ -1,48 +1,48 @@
 {% if 'Y' == app.request.attributes.get('donated') %}
-    {% set downloadLink = '//mediaarea.net/download/donors/17.12/MediaInfo_GUI_17.12_Windows.exe' %}
+    {% set downloadLink = '//mediaarea.net/download/donors/18.03/MediaInfo_GUI_18.03_Windows.exe' %}
 {% elseif 1 <= app.request.attributes.get('donated', -1) %}
-    {% set downloadLink = '//mediaarea.net/download/current/MediaInfo_GUI_17.12_Windows.exe' %}
+    {% set downloadLink = '//mediaarea.net/download/current/MediaInfo_GUI_18.03_Windows.exe' %}
 {% else %}
-    {% set downloadLink = '//mediaarea.net/download/binary/mediainfo-gui/17.12/MediaInfo_GUI_17.12_Windows.exe' %}
+    {% set downloadLink = '//mediaarea.net/download/binary/mediainfo-gui/18.03/MediaInfo_GUI_18.03_Windows.exe' %}
 {% endif %}
 <tr>
     <th rowspan="7">XP, Vista, 7, 8, 10</th>
     <th>Universal installer (32/64 bit)</th>
     <th><abbr title="Graphical User Interface">GUI</abbr></th>
-    <td><a href="{{ downloadLink }}">v17.12</a></td>
+    <td><a href="{{ downloadLink }}">v18.03</a></td>
     <td>If you don't know which one to download, download this one</td>
 </tr>
 <tr>
     <th rowspan="3">64 bit</th>
     <th><abbr title="Graphical User Interface">GUI</abbr></th>
-    <td><a href="{{ downloadLink }}">v17.12 Universal (32/64 bit)</a> <small>(<a href="//mediaarea.net/download/binary/mediainfo-gui/17.12/MediaInfo_GUI_17.12_Windows_x64_WithoutInstaller.7z">64 bit only without installer</a>)</small></td>
+    <td><a href="{{ downloadLink }}">v18.03 Universal (32/64 bit)</a> <small>(<a href="//mediaarea.net/download/binary/mediainfo-gui/18.03/MediaInfo_GUI_18.03_Windows_x64_WithoutInstaller.7z">64 bit only without installer</a>)</small></td>
     <td></td>
 </tr>
 <tr>
     <th><abbr title="Command Line Interface">CLI</abbr></th>
-    <td><a href="//mediaarea.net/download/binary/mediainfo/17.12/MediaInfo_CLI_17.12_Windows_x64.zip">v17.12</a></td>
+    <td><a href="//mediaarea.net/download/binary/mediainfo/18.03/MediaInfo_CLI_18.03_Windows_x64.zip">v18.03</a></td>
     <td>&nbsp;</td>
 </tr>
 <tr>
     <th><abbr title="Dynamic Link Library">DLL</abbr></th>
-    <td><a href="//mediaarea.net/download/binary/libmediainfo0/17.12/MediaInfo_DLL_17.12_Windows_x64.exe">v17.12</a><small> (<a href="//mediaarea.net/download/binary/libmediainfo0/17.12/MediaInfo_DLL_17.12_Windows_x64_WithoutInstaller.7z">without installer</a>)</small></td>
+    <td><a href="//mediaarea.net/download/binary/libmediainfo0/18.03/MediaInfo_DLL_18.03_Windows_x64.exe">v18.03</a><small> (<a href="//mediaarea.net/download/binary/libmediainfo0/18.03/MediaInfo_DLL_18.03_Windows_x64_WithoutInstaller.7z">without installer</a>)</small></td>
     <td>&nbsp;</td>
 </tr>
 
 <tr>
     <th rowspan="3">32 bit</th>
     <th><abbr title="Graphical User Interface">GUI</abbr></th>
-    <td><a href="{{ downloadLink }}">v17.12 Universal (32/64 bit)</a> <small> (<a href="//mediaarea.net/download/binary/mediainfo-gui/17.12/MediaInfo_GUI_17.12_Windows_i386_WithoutInstaller.7z">32 bit only without installer</a>)</small></td>
+    <td><a href="{{ downloadLink }}">v18.03 Universal (32/64 bit)</a> <small> (<a href="//mediaarea.net/download/binary/mediainfo-gui/18.03/MediaInfo_GUI_18.03_Windows_i386_WithoutInstaller.7z">32 bit only without installer</a>)</small></td>
     <td></td>
 </tr>
 <tr>
     <th><abbr title="Command Line Interface">CLI</abbr></th>
-    <td><a href="//mediaarea.net/download/binary/mediainfo/17.12/MediaInfo_CLI_17.12_Windows_i386.zip">v17.12</a></td>
+    <td><a href="//mediaarea.net/download/binary/mediainfo/18.03/MediaInfo_CLI_18.03_Windows_i386.zip">v18.03</a></td>
     <td>&nbsp;</td>
 </tr>
 <tr>
     <th><abbr title="Dynamic Link Library">DLL</abbr></th>
-    <td><a href="//mediaarea.net/download/binary/libmediainfo0/17.12/MediaInfo_DLL_17.12_Windows_i386.exe">v17.12</a><small> (<a href="//mediaarea.net/download/binary/libmediainfo0/17.12/MediaInfo_DLL_17.12_Windows_i386_WithoutInstaller.7z">without installer</a>)</small></td>
+    <td><a href="//mediaarea.net/download/binary/libmediainfo0/18.03/MediaInfo_DLL_18.03_Windows_i386.exe">v18.03</a><small> (<a href="//mediaarea.net/download/binary/libmediainfo0/18.03/MediaInfo_DLL_18.03_Windows_i386_WithoutInstaller.7z">without installer</a>)</small></td>
     <td>&nbsp;</td>
 </tr>
 

@@ -5,7 +5,34 @@
         <link>https://mediaarea.net/MediaInfo</link>
         <description>MediaInfo updates feed</description>
         <language>en-us</language>
-        <lastBuildDate>Thu, 21 Dec 2017 12:00:00 +0000</lastBuildDate>
+        <lastBuildDate>Mon, 19 Mar 2018 12:00:00 +0000</lastBuildDate>
+         <item>
+            <title>MediaInfo 18.03</title>
+            <description>
+                <![CDATA[+ AV1: support of AOmedia AV1 based on latest specifications draft, raw (OBU) and in MKV<br />
+                    + MXF: HDR metadata support<br />
+                    + MXF: detection and parsing of ProRes (SMPTE RDD 44)<br />
+                    + MXF: framerate container/stream incoherence detection<br />
+                    + DPX: endianess, packing mode, compression mode<br />
+                    + AVC: add consumer camera recording date/time<br/>
+                    + AVC: add consumer camera model name and iris F number<br />
+                    + JPEG: ICC parsing, display of ICC color space<br />
+                    + EBUCore: possibility to inject external metadata in the output from MediaInfo<br />
+                    + JSON output<br />
+                    + Attachments: do not provide anymore attachments content in XML by default, reducing XML output size<br />
+                    x colour description: trying (again!) to have more coherent labeling<br />
+                    x DCP/IMF: fix crash with some CPL files<br />
+                    x I782, FFV1: Golomb Rice parsing was wrong<br />
+                    x I210, FFV1: remove sar_den test must be 0 if sar_num is 0<br />
+                    x AAC: SBR parsing issue with 3+ channel streams, with sometimes false-positive PS detection<br />
+                    x BMP: was wrongly considering 4-bit without palette as with palette so wrong bit depth<br />
+                    x DPX: some elements in trace were wrongly displayed (wrong endianess)<br />
+                    x B1082, Ancillary data: fix infinite loop]]>
+            </description>
+            <link>https://mediaarea.net/MediaInfo</link>
+            <pubDate>Mon, 19 Mar 2018 12:00:00 +0000</pubDate>
+            <guid>MediaInfo-18.03</guid>
+         </item>
          <item>
             <title>MediaInfo 17.12</title>
             <description>
@@ -33,7 +60,7 @@
             <link>https://mediaarea.net/MediaInfo</link>
             <pubDate>Thu, 21 Dec 2017 12:00:00 +0000</pubDate>
             <guid>MediaInfo-17.12</guid>
-        </item>
+         </item>
          <item>
             <title>MediaInfo 17.10</title>
             <description>
