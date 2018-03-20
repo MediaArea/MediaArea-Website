@@ -5,7 +5,31 @@
         <link>https://mediaarea.net/MediaConch/</link>
         <description>MediaConch updates feed</description>
         <language>en-us</language>
-        <lastBuildDate>Thu, 21 Dec 2017 12:00:00 +0000</lastBuildDate>
+        <lastBuildDate>Mon, 19 Mar 2018 12:00:00 +0000</lastBuildDate>
+          <item>
+            <title>MediaConch 18.03</title>
+            <description>
+                <![CDATA[x I782, FFV1: Golomb Rice parsing was wrong<br>
+                    x I210, FFV1: remove sar_den test must be 0 if sar_num is 0<br>
+                    x Do not apply policies to attachments<br>
+                    x Print error if data directory isn't writable And polices can be applied on fields provided by new MediaInfo library:<br>
+                    + AV1: support of AOmedia AV1 based on latest specifications draft, raw (OBU) and in MKV<br>
+                    + DPX: endianess, packing mode, compression mode<br>
+                    + MXF: detection and parsing of ProRes (SMPTE RDD 44)<br>
+                    + MXF: HDR metadata support<br>
+                    + AVC: add consumer camera recording date/time<br>
+                    + AVC: add consumer camera model name and iris F number<br>
+                    + JPEG: ICC parsing, display of ICC color space<br>
+                    + MediaInfo JSON output<br>
+                    x colour description: trying (again!) to have more coherent labeling<br>
+                    x AAC: SBR parsing issue with 3+ channel streams, with sometimes false-positive PS detection<br>
+                    x DPX: some elements in trace were wrongly displayed (wrong endianess)<br>
+                    + License change]]>
+            </description>
+            <link>https://mediaarea.net/MediaConch/download.html</link>
+            <pubDate>Mon, 19 Mar 2018 12:00:00 +0000</pubDate>
+            <guid>MediaConch-18.03</guid>
+          </item>
           <item>
             <title>MediaConch 17.12</title>
             <description>
