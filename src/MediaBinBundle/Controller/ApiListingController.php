@@ -9,12 +9,10 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Translation\TranslatorInterface;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
 use MediaBinBundle\Entity\Bin;
 
 /**
  * @Route("/api/v1/MediaBin/list")
- * @Security("has_role('ROLE_BETA')")
  */
 class ApiListingController extends Controller
 {

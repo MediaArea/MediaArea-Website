@@ -10,14 +10,6 @@ class DefaultControllerTest extends UserAbstractControllerTest
     {
         // User not loggued in (beta period)
         $client = static::createClient();
-        $client->request('GET', '/MediaBin');
-        $this->assertEquals(302, $client->getResponse()->getStatusCode());
-        // User loggued in without ROLE_BETA
-        $client = $this->createRegularUserClient();
-        $client->request('GET', '/MediaBin');
-        $this->assertEquals(403, $client->getResponse()->getStatusCode());
-        // User loggued in with ROLE_BETA
-        $client = $this->createBetaUserClient();
         $crawler = $client->request('GET', '/MediaBin');
         $this->assertEquals(200, $client->getResponse()->getStatusCode());
         $this->assertEquals('MediaBin', $crawler->filter('h1')->text());
@@ -26,5 +18,12 @@ class DefaultControllerTest extends UserAbstractControllerTest
             'MediaBin',
             trim($crawler->filter('#main-navbar ul.nav li.active ul.menu_level_1 li.active a')->text())
         );
+        $this->assertEquals(0, $crawler->filter('.panel-listing-user')->count());
+
+        // User loggued in
+        $client = $this->createRegularUserClient();
+        $crawler = $client->request('GET', '/MediaBin');
+        $this->assertEquals(200, $client->getResponse()->getStatusCode());
+        $this->assertEquals(1, $crawler->filter('.panel-listing-user')->count());
     }
 }
