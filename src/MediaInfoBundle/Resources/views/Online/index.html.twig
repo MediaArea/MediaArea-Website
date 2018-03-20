@@ -32,7 +32,7 @@
             <input type="file" id="mediainfo-file-input" />
         </p>
     </div>
-    {% if app.user and is_granted('ROLE_BETA') %}
+
     <div class="panel panel-default mediabin-container hidden">
         <div class="panel-heading">
             <h3 class="panel-title">
@@ -44,7 +44,7 @@
                 <p>
                     {% trans %}mediainfoonline.mediabin.panel.content{% endtrans %}
                 </p>
-                {% if app.user and is_granted('ROLE_BETA') %}
+                {% if app.user %}
                     <div class="row">
                         <div class="mediabin-create-container form-horizontal">
                             {{ include('@MediaBin/Form/BinParamsForm.html.twig', {'bin': {'title': null, 'visibility': 0, 'anonymize': 0}}, with_context = false) }}
@@ -83,7 +83,6 @@
             </div>
         </div>
     </div>
-    {% endif %}
 
     <div class="row mediainfo-tools-container">
         <div class="col-lg-7 col-md-6">

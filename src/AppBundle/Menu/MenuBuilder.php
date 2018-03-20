@@ -69,16 +69,14 @@ class MenuBuilder
         $menu['menu.mediainfo']->addChild('menu.screenshots', ['route' => 'mi_screenshots']);
         $menu['menu.mediainfo']->addChild('menu.donate', ['route' => 'mi_donate']);
         $menu['menu.mediainfo']->addChild('menu.mediainfoonline', ['route' => 'mi_online']);
-        if ($this->authChecker->isGranted('ROLE_BETA')) {
-            $menu['menu.mediainfo']->addChild('menu.mediabin', ['route' => 'mediabin_home'])
-                ->setDisplayChildren(false)
-                ->addChild(
-                    'menu.mediainfo.mediabin.show',
-                    ['route' => 'mediabin_show', 'routeParameters' => [
-                        'hash' => $this->request->get('hash', '00000000'),
-                        ]]
-                );
-        }
+        $menu['menu.mediainfo']->addChild('menu.mediabin', ['route' => 'mediabin_home'])
+            ->setDisplayChildren(false)
+            ->addChild(
+                'menu.mediainfo.mediabin.show',
+                ['route' => 'mediabin_show', 'routeParameters' => [
+                    'hash' => $this->request->get('hash', '00000000'),
+                    ]]
+            );
         $menu['menu.mediainfo']
             ->addChild('menu.support', ['route' => 'mi_support'])->setDisplayChildren(false)
             ->addChild('menu.support.faq', ['route' => 'mi_support_faq'])

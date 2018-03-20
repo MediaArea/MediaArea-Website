@@ -9,7 +9,6 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Generator\UrlGeneratorInterface;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
 use MediaBinBundle\Entity\Bin;
 use MediaBinBundle\Lib\KeyGenerator;
 use MediaBinBundle\Lib\XMLValidator;
@@ -18,7 +17,6 @@ use MediaBinBundle\Model\BinInterface;
 
 /**
  * @Route("/api/v1/MediaBin")
- * @Security("has_role('ROLE_BETA')")
  */
 class ApiController extends Controller
 {

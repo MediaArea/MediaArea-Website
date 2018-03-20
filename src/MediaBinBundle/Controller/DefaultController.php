@@ -7,7 +7,6 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpKernel\Exception\GoneHttpException;
 use Symfony\Component\HttpKernel\Exception\ServiceUnavailableHttpException;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use MediaBinBundle\Entity\Bin;
 use MediaBinBundle\Lib\File\File;
@@ -15,7 +14,6 @@ use MediaBinBundle\Lib\MediaInfoCLI;
 
 /**
  * @Route("/MediaBin")
- * @Security("has_role('ROLE_BETA')").
  */
 class DefaultController extends Controller
 {
