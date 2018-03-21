@@ -52,7 +52,7 @@
 
 <div class="form-group pay">
     <div>
-        {% if not app.user %}{% trans with { '%login%': path('fos_user_security_login'), '%register%': path('fos_user_registration_register') } %}donate.not_loggued_in{% endtrans %}{% endif %}
+        {% if not app.user %}{% trans with { '%login%': path('fos_user_security_login'), '%register%': path('fos_user_registration_register') } %}donate.not_logged_in{% endtrans %}{% endif %}
         <p>Pay with:</p>
     </div>
     <div class="row">

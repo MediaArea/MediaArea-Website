@@ -11,7 +11,7 @@
 
 <h2>{% trans %}donate.paypal.title{% endtrans %}</h2>
 {% if country %}{% trans with { '%country%': country, '%currency%': currency, '%contact%': path('ma_contact') } %}donate.location_currency{% endtrans %}<br>{% endif %}
-{% if not app.user %}{% trans with { '%login%': path('fos_user_security_login'), '%register%': path('fos_user_registration_register') } %}donate.not_loggued_in{% endtrans %}<br>{% endif %}
+{% if not app.user %}{% trans with { '%login%': path('fos_user_security_login'), '%register%': path('fos_user_registration_register') } %}donate.not_logged_in{% endtrans %}<br>{% endif %}
 {{ include('@Payment/form.html.twig') }}
 
 <h2>{% trans %}donate.flattr.title{% endtrans %}</h2>

@@ -392,7 +392,7 @@ If you want to use other compilers or options, you must <a href="%buildFromSourc
         <source><![CDATA[support.faq.dll.AccessIsDenied.content]]></source>
         <target><![CDATA[On some production servers, users have this message:
 <pre>Unable to load DLL 'MediaInfo.dll': Access is denied. (Exception from HRESULT: 0x80070005 (E_ACCESSDENIED))</pre>
-For certain strict server setups, the Local Service account that is executing the DLL is only allowed read permission. However, for personal development machine, it is sometimes less strict and given full access and works fine for the developer.<br/>
+For certain strict server setups, the Local Service account that is executing the DLL is only allowed read permission. However, for a personal development machine, it is sometimes less strict and given full access and works fine for the developer.<br/>
 You need to set "Read &amp; execute" rights for MediaInfo.dll when deploying.<br/>
 If you want to access HTTP(S)/FTP(S) files, you also need to set the same rights for the sidecar libcurl.dll file.<br/>
 If you use IIS, <code>IIS_IUSRS</code> user must have the "Read &amp; execute" rights on these files.]]></target>
@@ -823,9 +823,9 @@ Please choose your preferred method below.]]></target>
         <source><![CDATA[donate.location_currency]]></source>
         <target><![CDATA[We have located you in "%country%" your payment will be made in "%currency%". <a href="%contact%">Contact us</a> if we have not located you correctly.]]></target>
       </trans-unit>
-      <trans-unit id="donate.not_loggued_in" approved="yes">
-        <source><![CDATA[donate.not_loggued_in]]></source>
-        <target><![CDATA[You are not loggued you will not have the features reserved to our donators (like no ads) and the new features, please <a href="%login%">login</a> or <a href="%register%">register</a>.]]></target>
+      <trans-unit id="donate.not_logged_in" approved="yes">
+        <source><![CDATA[donate.not_logged_in]]></source>
+        <target><![CDATA[You are not logged in, you will not have access to the features reserved to our donors (like no ads) and new features, please <a href="%login%">login</a> or <a href="%register%">register</a>.]]></target>
       </trans-unit>
       <trans-unit id="177" approved="yes">
         <source><![CDATA[donate.flattr.title]]></source>
