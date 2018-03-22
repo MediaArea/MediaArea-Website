@@ -19,7 +19,7 @@
                 {% endimage %}
             </div>
             <div class="projectDescription center-font-xs">
-                <strong>MediaConch</strong> is an extensible, open source software project consisting of an implementation checker, policy checker, reporter, and fixer that targets preservation-level audiovisual files (specifically <a href="https://www.matroska.org/" target="_blank">Matroska</a>, Linear Pulse Code Modulation (LPCM) and FF Video Codec 1 (<a href="https://github.com/FFmpeg/FFV1/blob/master/ffv1.md" target="_blank">FFV1</a>)) for use in memory institutions, providing detailed and batch-level conformance checking via an adaptable and flexible application program interface accessible by the command line, a graphical user interface, or a <a href="https://mediaarea.net/MediaConchOnline" target="_blank">web interface</a>.
+                <strong>MediaConch</strong> is an extensible, open source software project consisting of an implementation checker, policy checker, reporter, and fixer that targets preservation-level audiovisual files (specifically <a href="https://www.matroska.org/" target="_blank">Matroska</a>, Linear Pulse Code Modulation (LPCM) and FF Video Codec 1 (<a href="https://github.com/FFmpeg/FFV1/blob/master/ffv1.md" target="_blank">FFV1</a>)) for use in memory institutions, providing detailed and batch-level conformance checking via an adaptable and flexible application program interface accessible by the command line, a graphical user interface, or a <a href="{{ path('mco_home') }}">web interface</a>.
             </div>
 
             {% if 'Windows' == downloadInfo.name %}
@@ -92,7 +92,7 @@
                         <br>
                         See <a href="https://github.com/MediaArea/MediaConch_SourceCode/blob/master/History_GUI.txt">ChangeLog</a> or <a href="{{ path('mc_download_snapshots') }}">very latest snapshots</a>
                         <br>
-                        You can also use <a href="https://mediaarea.net/MediaConchOnline" target="_blank">MediaConchOnline</a> to test MediaConch without installing any software on your computer.
+                        You can also use <a href="{{ path('mco_home') }}">MediaConchOnline</a> to test MediaConch without installing any software on your computer.
                     </div>
                     <div class="alert alert-info text-center">
                         {% trans with {'%donateRoute%': path('supportUs_individual')} %}about.what.donate{% endtrans %}

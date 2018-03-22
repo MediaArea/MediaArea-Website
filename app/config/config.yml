@@ -18,6 +18,7 @@ imports:
     - { resource: "@VoteBundle/Resources/config/services.yml" }
     - { resource: "@MediaConchBundle/Resources/config/services.yml" }
     - { resource: "@MediaBinBundle/Resources/config/services.yml" }
+    - { resource: "@MediaConchOnlineBundle/Resources/config/services.yml" }
 
 # Put parameters here that don't need to change on each machine where the app is deployed
 # https://symfony.com/doc/current/best_practices/configuration.html#application-related-configuration
@@ -140,6 +141,8 @@ fos_user:
         form:
             type: UserBundle\Form\Type\ProfileFormType
             validation_groups: [UserProfile]
+    service:
+        mailer: MediaConchOnlineBundle\Mailer\UserMailer
 
 fos_js_routing:
     routes_to_expose:
@@ -157,6 +160,38 @@ fos_js_routing:
         - mediabin_api_delete
         - mediabin_api_listing_latests_public
         - mediabin_api_listing_user
+        - mco_api_connected_policy_public
+        - mco_api_connected_policy_unpublish
+        - mco_api_public_policy
+        - mco_api_public_policy_public_export
+        - mco_checker_ajaxform
+        - mco_checker_create_policy
+        - mco_checker_force_analyze
+        - mco_checker_mediainfo_outputlist
+        - mco_checker_policy_status
+        - mco_checker_report
+        - mco_checker_report_download
+        - mco_checker_report_status
+        - mco_checker_report_status_multi
+        - mco_checker_status
+        - mco_policy_create
+        - mco_policy_create_from_file
+        - mco_policy_delete
+        - mco_policy_duplicate
+        - mco_policy_edit
+        - mco_policy_export
+        - mco_policy_import
+        - mco_policy_move
+        - mco_policy_public_export
+        - mco_policy_public_import
+        - mco_policy_rule_create
+        - mco_policy_rule_delete
+        - mco_policy_rule_duplicate
+        - mco_policy_rule_edit
+        - mco_policy_rule_fields_list
+        - mco_policy_rule_move
+        - mco_policy_rule_values_list
+        - mco_policy_tree
 
 jms_payment_core:
     encryption:
@@ -173,6 +208,35 @@ jms_payment_paypal:
     signature: "%jms_payment_paypal_signature%"
     debug: false
 
+nelmio_cors:
+    defaults:
+        allow_credentials: false
+        allow_origin: []
+        allow_headers: []
+        allow_methods: []
+        expose_headers: []
+        max_age: 0
+        hosts: []
+        origin_regex: false
+    paths:
+        '^/MediaConchOnline/api/public/':
+            allow_origin: ['*']
+            allow_methods: ['GET', 'POST']
+            max_age: 3600
+        '^/MediaConchOnline/api/protected/':
+            allow_origin: ['*']
+            allow_headers: ['X-apiKey', 'accept', 'content-type']
+            allow_methods: ['GET', 'POST', 'PUT']
+            max_age: 3600
+
+vich_uploader:
+    db_driver: orm
+    mappings:
+        display:
+            upload_destination: "%kernel.project_dir%/files/display"
+            namer:              "vich_uploader.namer_origname"
+            directory_namer:    "mco.directory_namer.policy"
+
 blog:
     post_files_path: "%kernel.project_dir%/src/BlogBundle/Posts/"
 
@@ -188,3 +252,42 @@ media_bin:
             username: "%mediabin_external_openstack_username%"
             password: "%mediabin_external_openstack_password%"
             tenant_id: "%mediabin_external_openstack_tenant_id%"
+
+media_conch_online:
+    mediaconch:
+        host: "%mco_mc_host%"
+        port: "%mco_mc_port%"
+        api_version: "%mco_mc_api_version%"
+    absolute_url_for_mail:
+        host: "%mco_mail_host%"
+        scheme: "%mco_mail_scheme%"
+        baseUrl: "%mco_mail_base_url%"
+    quotas :
+        enabled: true
+        default:
+            policies: 10
+            uploads: 3
+            urls: 3
+            policyChecks: 100
+            period: 3600
+        by_role:
+            ROLE_ADMIN:
+                policies: 200
+                uploads: 100
+                urls: 100
+                policyChecks: 2000
+            ROLE_BETA:
+                policies: 20
+                uploads: 10
+                urls: 10
+                policyChecks: 200
+            ROLE_BASIC:
+                policies: 20
+                uploads: 10
+                urls: 10
+                policyChecks: 200
+            ROLE_GUEST:
+                policies: 10
+                uploads: 3
+                urls: 3
+                policyChecks: 100

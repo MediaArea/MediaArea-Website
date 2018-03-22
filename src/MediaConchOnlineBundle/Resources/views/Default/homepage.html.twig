@@ -1,0 +1,28 @@
+{% extends 'MediaConchOnlineBundle::base.html.twig' %}
+
+{% block title %}
+MediaConchOnline (Conformance and policy checker)
+{% endblock %}
+
+{% block body %}
+<h1 class="headline">
+    {% image '@MediaConchOnlineBundle/Resources/public/img/MediaConch-122x75.png' %}
+        <img src="{{ asset_url }}" alt="🐚" title="MediaConch" />
+    {% endimage %}
+    MediaConchOnline
+</h1>
+<p>
+    MediaConch is an extensible, open source software project consisting of an implementation checker, policy checker, reporter, and fixer that targets preservation-level audiovisual files (specifically Matroska, Linear Pulse Code Modulation (LPCM) and FF Video Codec 1 (FFV1)) for use in memory institutions, providing detailed and batch-level conformance checking via an adaptable and flexible application program interface accessible by the command line, a graphical user interface, or a web-based shell. MediaConch is currently being developed by the MediaArea team, notable for the creation of open source media checker software, MediaInfo. Furthermore, the MediaArea team is dedicated to the further development of the standardization of the Matroska and FFV1 formats to ensure their longevity as a recommended digital preservation file format.
+</p>
+<div class="row mco-home-actions">
+    <div class="col-xs-4 text-center">
+        <a href="{{ path('mco_checker') }}" class="btn btn-default btn-lg">Checker</a>
+    </div>
+    <div class="col-xs-4 text-center">
+        <a href="{{ path('mco_policy_tree') }}" class="btn btn-default btn-lg">Policy editor</a>
+    </div>
+    <div class="col-xs-4 text-center">
+        <a href="{{ path('mco_policy_public') }}" class="btn btn-default btn-lg">Public policies</a>
+    </div>
+</div>
+{% endblock %}

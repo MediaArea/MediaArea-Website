@@ -309,6 +309,31 @@ class MenuBuilder
         return $menu;
     }
 
+    /**
+     * @SuppressWarnings(PHPMD.UnusedFormalParameter)
+     */
+    public function createMediaConchOnlineMenu(array $options)
+    {
+        $menu = $this->factory->createItem('root');
+        $menu->setChildrenAttribute('class', 'nav navbar-nav main-menu');
+
+        $menu = $this->mediaAreaMenu($menu);
+
+        $menu->addChild('menu.mediaconchonline', ['route' => 'mco_home'])->setExtras(['dropdown' => true]);
+        $menu['menu.mediaconchonline']->addChild('menu.mediaconchonline.about', ['route' => 'mco_home']);
+        $menu['menu.mediaconchonline']->addChild('menu.mediaconchonline.checker', ['route' => 'mco_checker']);
+        $menu['menu.mediaconchonline']->addChild('menu.mediaconchonline.policy', ['route' => 'mco_policy_tree']);
+        $menu['menu.mediaconchonline']->addChild('menu.mediaconchonline.policy.public', [
+            'route' => 'mco_policy_public',
+        ]);
+        $menu['menu.mediaconchonline']->addChild('menu.mediaconchonline.display', ['route' => 'mco_display']);
+
+        $menu = $this->projectsMenu($menu);
+        $menu = $this->supportUsMenu($menu);
+
+        return $menu;
+    }
+
     private function mediaAreaMenu(ItemInterface $menu)
     {
         $menu->addChild('menu.mediaarea', ['route' => 'homepage'])->setExtras(['dropdown' => true]);

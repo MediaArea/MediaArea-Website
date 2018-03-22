@@ -11,7 +11,7 @@ use Symfony\Component\Form\FormEvents;
 class ProfileFormType extends AbstractType
 {
     /**
-     * @SuppressWarnings(PHPMD.UnusedFormalParameter)
+     * {@inheritdoc}
      */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
@@ -67,10 +67,5 @@ class ProfileFormType extends AbstractType
     public function getParent()
     {
         return 'FOS\UserBundle\Form\Type\ProfileFormType';
-    }
-
-    public function getBlockPrefix()
-    {
-        return 'app_user_profile';
     }
 }

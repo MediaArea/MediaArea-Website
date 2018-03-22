@@ -13,6 +13,7 @@
                 <li><a href="{{ path('ma_events') }}">{% trans %}menu.mediaarea.events{% endtrans %}</a></li>
                 <li><a href="{{ path('ma_conduct') }}">{% trans %}menu.mediaarea.conduct{% endtrans %}</a></li>
                 <li><a href="{{ path('ma_legal') }}">{% trans %}menu.mediaarea.legal{% endtrans %}</a></li>
+                <li><a href="{{ path('ma_contact') }}">{% trans %}menu.mediaarea.contact{% endtrans %}</a></li>
             </ul>
         </div>
         <div class="col-sm-4 col-md-3">
@@ -48,7 +49,13 @@
                 </form>
             </div>
             <div class="rss">
-                <a href="/rss/mediainfo_updates.xml" class="rss-updates">New releases feed</a>
+                <a href="{{ path('ma_blog_feed') }}" class="rss-updates">MediaArea blog feed</a>
+            </div>
+            <div class="rss">
+                <a href="/rss/mediainfo_updates.xml" class="rss-updates">MediaInfo new releases feed</a>
+            </div>
+            <div class="rss">
+                <a href="/rss/mediaconch_updates.xml" class="rss-updates">MediaConch new releases feed</a>
             </div>
             </div>
         </div>

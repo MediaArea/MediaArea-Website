@@ -1,13 +1,15 @@
 services:
-#    user.example:
-#        class: UserBundle\Example
-#        arguments: ["@service_id", "plain_value", "%parameter%"]
-    fos_user.profile.controller:
-        class: UserBundle\Controller\ProfileController
-        arguments:
-            - "@event_dispatcher"
-            - "@fos_user.profile.form.factory"
-            - "@fos_user.user_manager"
+    _defaults:
+        autowire: true
+        autoconfigure: true
+        public: false
+
+    UserBundle\:
+        resource: '../../*'
+        exclude: '../../{Entity,Repository,Tests,Controller}'
+
+    UserBundle\Controller\UserController:
+        tags: ['controller.service_arguments']
 
     fos_user.registration.controller:
         class: UserBundle\Controller\RegistrationController
@@ -35,3 +37,15 @@ services:
     user.util.donor_manipulator:
         class: UserBundle\Lib\DonorManipulator
         arguments: ["@fos_user.user_manager", "@fos_user.util.token_generator"]
+        public: true
+
+    UserBundle\Lib\Quotas\Quotas:
+        lazy: true
+        arguments:
+            $options: '%mco.mediaconch.quotas%'
+
+    Symfony\Component\Security\Http\RememberMe\RememberMeServicesInterface: '@security.authentication.rememberme.services.simplehash.main'
+
+    UserBundle\EventSubscriber\GuestSubscriber:
+        arguments:
+            - "%fos_user.firewall_name%"

@@ -10,6 +10,7 @@ use Symfony\Component\Validator\Constraints as Assert;
  * @ORM\Entity
  * @ORM\Table(name="users")
  * @ORM\HasLifecycleCallbacks
+ * @SuppressWarnings(PHPMD.TooManyFields)
  */
 class User extends BaseUser
 {
@@ -19,6 +20,42 @@ class User extends BaseUser
      * @ORM\GeneratedValue(strategy="AUTO")
      */
     protected $id;
+
+    /**
+     * @ORM\OneToMany(targetEntity="MediaConchOnlineBundle\Entity\DisplayFile", mappedBy="user", cascade={"persist", "remove"})
+     * @Assert\Valid()
+     */
+    protected $display;
+
+    /**
+     * @ORM\OneToOne(targetEntity="UserQuotas", mappedBy="user", cascade={"persist", "remove"})
+     * @Assert\Valid()
+     */
+    protected $quotas;
+
+    /**
+     * @ORM\OneToOne(targetEntity="UserQuotasDefault", mappedBy="user", cascade={"persist", "remove"})
+     * @Assert\Valid()
+     */
+    protected $quotasDefault;
+
+    /**
+     * @ORM\OneToMany(targetEntity="Settings", mappedBy="user", cascade={"persist", "remove"})
+     * @Assert\Valid()
+     */
+    protected $settings;
+
+    /**
+     * @ORM\OneToOne(targetEntity="GuestToken", mappedBy="user", cascade={"persist", "remove"})
+     * @Assert\Valid()
+     */
+    protected $guestToken;
+
+    /**
+     * @ORM\OneToMany(targetEntity="ApiKey", mappedBy="user", cascade={"persist", "remove"}, fetch="EXTRA_LAZY")
+     * @Assert\Valid()
+     */
+    protected $apiKey;
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
@@ -437,5 +474,185 @@ class User extends BaseUser
         }
 
         return $this->getEmail();
+    }
+
+    /**
+     * Add display.
+     *
+     * @param \MediaConchOnlineBundle\Entity\DisplayFile $display
+     *
+     * @return User
+     */
+    public function addDisplay(\MediaConchOnlineBundle\Entity\DisplayFile $display)
+    {
+        $this->display[] = $display;
+
+        return $this;
+    }
+
+    /**
+     * Remove display.
+     *
+     * @param \MediaConchOnlineBundle\Entity\DisplayFile $display
+     *
+     * @return bool TRUE if this collection contained the specified element, FALSE otherwise
+     */
+    public function removeDisplay(\MediaConchOnlineBundle\Entity\DisplayFile $display)
+    {
+        return $this->display->removeElement($display);
+    }
+
+    /**
+     * Get display.
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getDisplay()
+    {
+        return $this->display;
+    }
+
+    /**
+     * Set quotas.
+     *
+     * @param \UserBundle\Entity\UserQuotas|null $quotas
+     *
+     * @return User
+     */
+    public function setQuotas(\UserBundle\Entity\UserQuotas $quotas = null)
+    {
+        $this->quotas = $quotas;
+
+        return $this;
+    }
+
+    /**
+     * Get quotas.
+     *
+     * @return \UserBundle\Entity\UserQuotas|null
+     */
+    public function getQuotas()
+    {
+        return $this->quotas;
+    }
+
+    /**
+     * Set quotasDefault.
+     *
+     * @param \UserBundle\Entity\UserQuotasDefault|null $quotasDefault
+     *
+     * @return User
+     */
+    public function setQuotasDefault(\UserBundle\Entity\UserQuotasDefault $quotasDefault = null)
+    {
+        $this->quotasDefault = $quotasDefault;
+
+        return $this;
+    }
+
+    /**
+     * Get quotasDefault.
+     *
+     * @return \UserBundle\Entity\UserQuotasDefault|null
+     */
+    public function getQuotasDefault()
+    {
+        return $this->quotasDefault;
+    }
+
+    /**
+     * Add setting.
+     *
+     * @param \UserBundle\Entity\Settings $setting
+     *
+     * @return User
+     */
+    public function addSetting(\UserBundle\Entity\Settings $setting)
+    {
+        $this->settings[] = $setting;
+
+        return $this;
+    }
+
+    /**
+     * Remove setting.
+     *
+     * @param \UserBundle\Entity\Settings $setting
+     *
+     * @return bool TRUE if this collection contained the specified element, FALSE otherwise
+     */
+    public function removeSetting(\UserBundle\Entity\Settings $setting)
+    {
+        return $this->settings->removeElement($setting);
+    }
+
+    /**
+     * Get settings.
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getSettings()
+    {
+        return $this->settings;
+    }
+
+    /**
+     * Set guestToken.
+     *
+     * @param \UserBundle\Entity\GuestToken|null $guestToken
+     *
+     * @return User
+     */
+    public function setGuestToken(\UserBundle\Entity\GuestToken $guestToken = null)
+    {
+        $this->guestToken = $guestToken;
+
+        return $this;
+    }
+
+    /**
+     * Get guestToken.
+     *
+     * @return \UserBundle\Entity\GuestToken|null
+     */
+    public function getGuestToken()
+    {
+        return $this->guestToken;
+    }
+
+    /**
+     * Add apiKey.
+     *
+     * @param \UserBundle\Entity\ApiKey $apiKey
+     *
+     * @return User
+     */
+    public function addApiKey(\UserBundle\Entity\ApiKey $apiKey)
+    {
+        $this->apiKey[] = $apiKey;
+
+        return $this;
+    }
+
+    /**
+     * Remove apiKey.
+     *
+     * @param \UserBundle\Entity\ApiKey $apiKey
+     *
+     * @return bool TRUE if this collection contained the specified element, FALSE otherwise
+     */
+    public function removeApiKey(\UserBundle\Entity\ApiKey $apiKey)
+    {
+        return $this->apiKey->removeElement($apiKey);
+    }
+
+    /**
+     * Get apiKey.
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getApiKey()
+    {
+        return $this->apiKey;
     }
 }

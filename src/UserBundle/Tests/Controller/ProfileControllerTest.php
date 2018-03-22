@@ -23,7 +23,7 @@ class ProfileControllerTest extends UserAbstractControllerTest
         $this->assertEquals(200, $client->getResponse()->getStatusCode());
         $this->assertEquals(
             'Email: test@mediaarea.net',
-            trim($crawler->filter('.fos_user_user_show p')->text())
+            trim($crawler->filter('.fos_user_user_show .panel-body p')->text())
         );
     }
 

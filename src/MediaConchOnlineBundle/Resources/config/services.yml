@@ -1,0 +1,36 @@
+services:
+    _defaults:
+        autowire: true
+        autoconfigure: true
+        public: false
+
+    MediaConchOnlineBundle\:
+        resource: '../../*'
+        exclude: '../../{Entity,Repository,Tests,Lib/MediaConch/MediaConchServerException.php}'
+
+    MediaConchOnlineBundle\Controller\:
+        resource: '../../Controller'
+        tags: ['controller.service_arguments']
+
+    MediaConchOnlineBundle\Lib\MediaConch\MediaConchServer:
+        arguments:
+            $address: '%mco.mediaconch.host%'
+            $port: '%mco.mediaconch.port%'
+            $apiVersion: '%mco.mediaconch.api.version%'
+
+    mco.directory_namer.policy:
+        alias: MediaConchOnlineBundle\Lib\VichUploaderBundle\UserDirectoryNamer
+        public: true
+
+    MediaConchOnlineBundle\Mailer\UserMailer:
+        arguments:
+            - '@mailer'
+            - '@router'
+            - '@templating'
+            -
+                confirmation.template: '%fos_user.registration.confirmation.template%'
+                resetting.template: '%fos_user.resetting.email.template%'
+                from_email:
+                    confirmation: '%fos_user.registration.confirmation.from_email%'
+                    resetting: '%fos_user.resetting.email.from_email%'
+                absolute_url_for_mail: '%mco.mediaconch.absolute_url_for_mail%'

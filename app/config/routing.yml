@@ -3,15 +3,15 @@ easy_admin_bundle:
     type:     annotation
     prefix:   /admin
 
+user:
+    resource: "@UserBundle/Controller/"
+    type:     annotation
+
 fos_user:
     resource: "@FOSUserBundle/Resources/config/routing/all.xml"
 
 fos_js_routing:
     resource: "@FOSJsRoutingBundle/Resources/config/routing/routing.xml"
-
-user:
-    resource: "@UserBundle/Controller/"
-    type:     annotation
 
 blog:
     resource: "@BlogBundle/Controller/"
@@ -47,6 +47,10 @@ bwf_meta_edit:
 
 media_conch:
     resource: "@MediaConchBundle/Controller/"
+    type:     annotation
+
+media_conch_online:
+    resource: "@MediaConchOnlineBundle/Controller/"
     type:     annotation
 
 media_trace:

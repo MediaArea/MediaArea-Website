@@ -1,0 +1,160 @@
+{% extends 'MediaConchOnlineBundle::base.html.twig' %}
+
+{% form_theme importPolicyForm 'bootstrap_3_layout.html.twig' %}
+{% form_theme policyCreateFromFileForm 'bootstrap_3_layout.html.twig' %}
+{% form_theme policyInfoForm 'bootstrap_3_layout.html.twig' %}
+{% form_theme policyRuleForm 'bootstrap_3_layout.html.twig' %}
+{% form_theme policyRuleMtForm 'bootstrap_3_layout.html.twig' %}
+
+{% block title %}
+MediaConchOnline Policy Management
+{% endblock %}
+
+{% block body %}
+<h1>Policy editor</h1>
+
+<div class="col-md-8">
+    <h2 class="no-bg">Policy list:</h2>
+
+    <div class="row">
+        <div class="col-md-6">
+            <i class="glyphicon glyphicon-search"></i><input type="text" value="" class="jstreeSearch" id="policiesTreeSearch" placeholder="Search" />
+        </div>
+        <div class="col-md-12">
+            <div id="policiesTree"></div>
+        </div>
+    </div>
+</div>
+<div class="col-md-4 policyRightCol">
+    <div id="policyFix" class="row">
+        <div id="policyInfo">
+            <div></div>
+        </div>
+        <div class="policyManage">
+            {% if importPolicyForm is defined and importPolicyForm %}
+                <div>
+                    <h2 class="no-bg">Import a policy</h2>
+                    {{ form_start(importPolicyForm) }}
+                    {{ form_widget(importPolicyForm) }}
+                    <div class="form-group">
+                        <button type="submit" id="xslPolicyImport_ImportPolicy" name="xslPolicyImport[ImportPolicy]" class="btn-warning btn">Import policy</button>
+                    </div>
+                    {{ form_end(importPolicyForm) }}
+                </div>
+                <hr>
+                <div>
+                    <h2 class="no-bg">Create a new policy</h2>
+                    <button class="policyCreate btn btn-warning">Add a new policy</button>
+                </div>
+                <hr>
+                <div>
+                    <h2 class="no-bg">Policy from a file</h2>
+                    {{ form_start(policyCreateFromFileForm) }}
+                    {{ form_widget(policyCreateFromFileForm) }}
+                    <div class="form-group">
+                        <button type="submit" id="xslPolicyCreateFromFile_CreatePolicyFromFile" name="xslPolicyCreateFromFile[CreatePolicyFromFile]" class="btn-warning btn">Create policy from file</button>
+                    </div>
+                    {{ form_end(policyCreateFromFileForm) }}
+                </div>
+            {% else %}
+                {{ include('MediaConchOnlineBundle:Default:quotaExceeded.html.twig') }}
+            {% endif %}
+        </div>
+
+        <div class="policyEdit hidden">
+            <div>
+                <h4>Edition:</h4>
+                {{ form_start(policyInfoForm) }}
+                {{ form_widget(policyInfoForm) }}
+                <div class="form-group">
+                    <button type="submit" id="xslPolicyInfo_SavePolicyInfo" name="xslPolicyInfo[SavePolicyInfo]" class="btn-warning btn">Save policy info</button>
+                </div>
+                {{ form_end(policyInfoForm) }}
+
+                <div class="policyEditActions policyEditUser">
+                    <button class="policyCreate btn btn-warning">Add a new policy</button>
+                    <button id="policyRuleCreate" class="btn btn-warning">Add a new rule</button>
+                </div>
+            </div>
+
+            <div class="policyEditActions">
+                <h4>Actions:</h4>
+                <button id="policyDuplicate" class="btn btn-warning">Duplicate</button>
+                <button id="policyExport" class="btn btn-warning">Export</button>
+                <button id="policyDelete" class="btn btn-danger">Delete</button>
+            </div>
+        </div>
+
+        <div class="policyEditRule hidden">
+            <div class="form-group">
+                <label class="control-label">Rule type</label>
+                <div class="btn-group btn-group-sm" role="group">
+                    <button type="button" class="btn btn-white ruleMediaInfo active">MediaInfo</button>
+                    <button type="button" class="btn btn-white ruleMediaTrace">MediaTrace</button>
+                </div>
+            </div>
+            <div class="ruleMediaInfoActions">
+                {{ form_start(policyRuleForm) }}
+                {{ form_widget(policyRuleForm) }}
+                <div class="form-group xslPolicyRuleSaveButton">
+                    <button type="submit" id="xslPolicyRule_SaveRule" name="xslPolicyRule[SaveRule]" class="btn-warning btn">Save</button>
+                </div>
+                <div class="form-group xslPolicyRuleDuplicateButton">
+                    <button type="submit" id="xslPolicyRule_DuplicateRule" name="xslPolicyRule[DuplicateRule]" class="btn-warning btn">Duplicate</button>
+                </div>
+                <div class="form-group xslPolicyRuleDeleteButton">
+                    <button type="submit" id="xslPolicyRule_DeleteRule" name="xslPolicyRule[DeleteRule]" class="btn-danger btn">Delete</button>
+                </div>
+                {{ form_end(policyRuleForm) }}
+            </div>
+            <div class="ruleMediaTraceActions">
+                {{ form_start(policyRuleMtForm) }}
+                {{ form_widget(policyRuleMtForm) }}
+                <div class="form-group xslPolicyRuleSaveButton">
+                    <button type="submit" id="xslPolicyRuleMt_SaveRule" name="xslPolicyRuleMt[SaveRule]" class="btn-warning btn">Save</button>
+                </div>
+                <div class="form-group xslPolicyRuleDuplicateButton">
+                    <button type="submit" id="xslPolicyRuleMt_DuplicateRule" name="xslPolicyRuleMt[DuplicateRule]" class="btn-warning btn">Duplicate</button>
+                </div>
+                <div class="form-group xslPolicyRuleDeleteButton">
+                    <button type="submit" id="xslPolicyRuleMt_DeleteRule" name="xslPolicyRuleMt[DeleteRule]" class="btn-danger btn">Delete</button>
+                </div>
+                {{ form_end(policyRuleMtForm) }}
+            </div>
+            <p>Fields marked by asterisks (*) are required</p>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block javascripts %}
+    <script src="{{ asset('bundles/fosjsrouting/js/router.js') }}"></script>
+    <script src="{{ path('fos_js_routing_js', {'callback': 'fos.Router.setData'}) }}"></script>
+    {% javascripts filter='?jsqueeze' output='js/policy.js'
+        '@AppBundle/Resources/public/js/jstree.min.js'
+        '@AppBundle/Resources/public/js/select2.js'
+        '@MediaConchOnlineBundle/Resources/public/js/message.js'
+        '@MediaConchOnlineBundle/Resources/public/js/policyTree.js'
+        '@MediaConchOnlineBundle/Resources/public/js/policyTreeAffix.js'
+        '@MediaConchOnlineBundle/Resources/public/js/policyTreePolicies.js'
+        '@MediaConchOnlineBundle/Resources/public/js/policyTreeRules.js'
+        '@MediaConchOnlineBundle/Resources/public/js/policyTreeRulesMI.js'
+        '@MediaConchOnlineBundle/Resources/public/js/policyTreeRulesMT.js'
+        '@MediaConchOnlineBundle/Resources/public/js/policyAjax.js'
+        '@MediaConchOnlineBundle/Resources/public/js/policy.js'
+        '@MediaConchOnlineBundle/Resources/public/js/utils/size.js'
+    %}
+        <script src="{{ asset_url }}"></script>
+    {% endjavascripts %}
+{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    {% stylesheets filter='cssrewrite' filter='?scssphp' output='css/policy.css'
+        'bundles/app/css/jstree.css'
+        '@AppBundle/Resources/public/css/select2.css'
+        '@AppBundle/Resources/public/css/select2-bootstrap.min.css'
+    %}
+        <link rel="stylesheet" type="text/css" href="{{ asset_url }}"/>
+    {% endstylesheets %}
+{% endblock %}

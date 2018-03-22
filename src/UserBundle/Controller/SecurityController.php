@@ -16,7 +16,7 @@ class SecurityController extends BaseController
     public function loginAction(Request $request)
     {
         // Redirect logged in user to profile page
-        if ($this->get('security.authorization_checker')->isGranted('ROLE_USER')) {
+        if ($this->get('security.authorization_checker')->isGranted('ROLE_BASIC')) {
             return $this->redirectToRoute('fos_user_profile_show');
         }
 
