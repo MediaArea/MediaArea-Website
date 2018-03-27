@@ -5,7 +5,16 @@
         <link>https://mediaarea.net/MediaConch/</link>
         <description>MediaConch updates feed</description>
         <language>en-us</language>
-        <lastBuildDate>Mon, 19 Mar 2018 12:00:00 +0000</lastBuildDate>
+        <lastBuildDate>Mon, 26 Mar 2018 12:00:00 +0000</lastBuildDate>
+          <item>
+            <title>MediaConch 18.03.1</title>
+            <description>
+                <![CDATA[x Fix regression on Windows with directory names beginning by n or r.]]>
+            </description>
+            <link>https://mediaarea.net/MediaConch/download.html</link>
+            <pubDate>Mon, 26 Mar 2018 12:00:00 +0000</pubDate>
+            <guid>MediaConch-18.03.1</guid>
+          </item>
           <item>
             <title>MediaConch 18.03</title>
             <description>
