@@ -122,6 +122,7 @@ class GuestSubscriber implements EventSubscriberInterface
             1,
             0
         );
+        $user->setName(null);
 
         // Update last login date
         $user->setLastLogin(new \DateTime());
