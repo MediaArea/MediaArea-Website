@@ -467,7 +467,7 @@ class User extends BaseUser
      */
     public function getNameForDisplay()
     {
-        if (null !== $this->getName()) {
+        if (null !== $this->getName() && '' !== $this->getName()) {
             return $this->getName();
         } elseif (1 == $this->getRealUserName()) {
             return $this->getUsername();
