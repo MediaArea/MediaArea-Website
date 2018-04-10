@@ -25,3 +25,12 @@ parameters:
     jms_payment_paypal_username: Travis
     jms_payment_paypal_password: Travis
     jms_payment_paypal_signature: Travis
+
+    # MediaConch config
+    mco_check_folder: /some/folder/
+    mco_mc_host: 127.0.0.1
+    mco_mc_port: 4242
+    mco_mc_api_version: 1.15
+    mco_mail_host: ~
+    mco_mail_scheme: ~
+    mco_mail_base_url: ~

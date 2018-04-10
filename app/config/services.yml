@@ -47,4 +47,5 @@ services:
             - { name: knp_menu.menu_builder, method: createOllistdMenu, alias: ollistd }
             - { name: knp_menu.menu_builder, method: createRAWcookedMenu, alias: rc }
             - { name: knp_menu.menu_builder, method: createMediaConchMenu, alias: mc }
+            - { name: knp_menu.menu_builder, method: createMediaConchOnlineMenu, alias: mco }
         public: true

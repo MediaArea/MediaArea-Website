@@ -1,11 +1,17 @@
 # To get started with security, check out the documentation:
 # https://symfony.com/doc/current/security.html
 security:
+    # Refresh authenticated user after role change
+    always_authenticate_before_granting:  true
+    # https://symfony.com/doc/current/security.html#encoding-the-user-s-password
     encoders:
         FOS\UserBundle\Model\UserInterface: bcrypt
 
     role_hierarchy:
-        ROLE_BETA:        ROLE_USER
+        ROLE_BOT:         ROLE_USER
+        ROLE_GUEST:       ROLE_USER
+        ROLE_BASIC:       ROLE_USER
+        ROLE_BETA:        ROLE_BASIC
         ROLE_ADMIN:       ROLE_BETA
         ROLE_SUPER_ADMIN: ROLE_ADMIN
 
@@ -13,12 +19,28 @@ security:
     providers:
         fos_userbundle:
             id: fos_user.user_provider.username_email
+        api_key_user_provider:
+            id: UserBundle\Security\ApiKeyUserProvider
 
     firewalls:
         # disables authentication for assets and the profiler, adapt it according to your needs
         dev:
             pattern: ^/(_(profiler|wdt)|css|images|js)/
             security: false
+
+        # Firewall for MCO public API
+        public_api:
+            pattern: ^/MediaConchOnline/api/public/
+            stateless: true
+            security: false
+
+        # Firewall for MCO protected API
+        protected_api:
+            pattern: ^/MediaConchOnline/api/protected/
+            stateless: true
+            simple_preauth:
+                authenticator: UserBundle\Security\ApiKeyAuthenticator
+            provider: api_key_user_provider
 
         main:
             pattern: ^/

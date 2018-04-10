@@ -1,0 +1,15 @@
+{% extends 'AppBundle::base.html.twig' %}
+
+{% block title %}Your settings{% endblock %}
+
+{% block body %}
+<h1>Settings</h1>
+
+<div class="panel panel-default">
+    <div class="panel-heading">MediaConchOnline settings</div>
+    <div class="panel-body">
+        {{ form(form) }}
+    </div>
+</div>
+
+{% endblock %}

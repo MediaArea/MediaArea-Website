@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="en" datatype="plaintext" original="file.ext" target-language="en">
+    <body>
+      <trans-unit id="menu.mediaconchonline" approved="yes">
+        <source><![CDATA[menu.mediaconchonline]]></source>
+        <target><![CDATA[MediaConchOnline]]></target>
+      </trans-unit>
+      <trans-unit id="menu.mediaconchonline.about" approved="yes">
+        <source><![CDATA[menu.mediaconchonline.about]]></source>
+        <target><![CDATA[About]]></target>
+      </trans-unit>
+      <trans-unit id="menu.mediaconchonline.display" approved="yes">
+        <source><![CDATA[menu.mediaconchonline.display]]></source>
+        <target><![CDATA[Display]]></target>
+      </trans-unit>
+      <trans-unit id="menu.mediaconchonline.checker" approved="yes">
+        <source><![CDATA[menu.mediaconchonline.checker]]></source>
+        <target><![CDATA[Checker]]></target>
+      </trans-unit>
+      <trans-unit id="menu.mediaconchonline.policy" approved="yes">
+        <source><![CDATA[menu.mediaconchonline.policy]]></source>
+        <target><![CDATA[Policy editor]]></target>
+      </trans-unit>
+      <trans-unit id="menu.mediaconchonline.policy.public" approved="yes">
+        <source><![CDATA[menu.mediaconchonline.policy.public]]></source>
+        <target><![CDATA[Public policies]]></target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

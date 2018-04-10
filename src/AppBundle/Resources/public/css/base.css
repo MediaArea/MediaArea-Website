@@ -745,7 +745,7 @@ form[name=ma_choose_payment_method] {
     margin-left: 20px;
 }
 
-ul.pagination li {
+ul.pagination li, ul.mi-select-output li, ul.platform-icons li, .jstree-grid-wrapper ul li {
     list-style-type: none;
     padding-bottom: 0;
     margin-left: 0;
@@ -753,13 +753,6 @@ ul.pagination li {
 
 ul.thumbnails li {
     list-style-type: none;
-}
-
-
-ul.platform-icons li {
-    list-style-type: none;
-    padding-bottom: 0;
-    margin-left: 0;
 }
 
 ul.events-list li {
@@ -800,11 +793,7 @@ ul.events-list li {
     vertical-align: middle;
 }
 
-#fos_user_registration_form div.form-group:nth-child(9) {
-    display: none;
-}
-
-#contact div.form-group:nth-child(3) {
+.fos_user_registration_register div.form-group:nth-child(9), #contact div.form-group:nth-child(3) {
     display: none;
 }
 
@@ -906,7 +895,7 @@ ul.icons li {
 }
 
 /* User */
-#fos_user_registration_form .required:after, #fos_user_profile_form .required:after, #contact .required:after {
+.fos_user_registration_register .required:after, #fos_user_profile_form .required:after, #contact .required:after {
     content: " *";
 }
 

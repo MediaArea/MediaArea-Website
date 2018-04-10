@@ -72,3 +72,20 @@ easy_admin:
                     - 'points'
                     - 'date'
                     - 'feature'
+
+        UserQuotas:
+            class: UserBundle\Entity\UserQuotas
+            list:
+                fields: ['user', 'policies', 'uploads', 'uploadsTimestamp', 'urls', 'urlsTimestamp', 'policyChecks', 'policyChecksTimestamp']
+            disabled_actions: ['new', 'edit', 'delete', 'show']
+
+        UserQuotasDefault:
+            class: UserBundle\Entity\UserQuotasDefault
+            list:
+                fields: ['user', 'policies', 'uploads', 'urls', 'policyChecks']
+            new:
+                fields: ['user', 'policies', 'uploads', 'urls', 'policyChecks']
+            edit:
+                fields: [{ property: 'user', type: 'AppBundle\Form\Type\EntityDisabledType'}, 'policies', 'uploads', 'urls', 'policyChecks']
+            show:
+                fields: ['user', 'policies', 'uploads', 'urls', 'policyChecks']

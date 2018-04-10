@@ -26,7 +26,9 @@ class AppKernel extends Kernel
             new JMS\Payment\CoreBundle\JMSPaymentCoreBundle(),
             new JMS\Payment\PaypalBundle\JMSPaymentPaypalBundle(),
             new KJ\Payment\StripeBundle\KJPaymentStripeBundle(),
+            new Nelmio\CorsBundle\NelmioCorsBundle(),
             new TFox\MpdfPortBundle\TFoxMpdfPortBundle(),
+            new Vich\UploaderBundle\VichUploaderBundle(),
             new MediaTraceBundle\MediaTraceBundle(),
             new BWFMetaEditBundle\BWFMetaEditBundle(),
             new QCToolsBundle\QCToolsBundle(),
@@ -43,6 +45,7 @@ class AppKernel extends Kernel
             new RAWcookedBundle\RAWcookedBundle(),
             new MediaConchBundle\MediaConchBundle(),
             new MediaBinBundle\MediaBinBundle(),
+            new MediaConchOnlineBundle\MediaConchOnlineBundle(),
         ];
 
         if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {

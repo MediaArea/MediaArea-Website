@@ -1,0 +1,133 @@
+{% extends 'MediaConchOnlineBundle::base.html.twig' %}
+
+{% block title %}
+MediaConch checker
+{% endblock %}
+
+{% block body %}
+<h1>Check files</h1>
+
+<div class="col-md-12">
+    <!-- Nav tabs -->
+    <ul class="nav nav-tabs" role="tablist">
+        <li role="presentation"><a href="#file" aria-controls="file" role="tab" data-toggle="tab">Check by file upload</a></li>
+        <li role="presentation" class="{% if repositoryEnable is not defined or not repositoryEnable %}active{% endif %}"><a href="#url" aria-controls="url" role="tab" data-toggle="tab">Check online files</a></li>
+        {% if repositoryEnable is defined and repositoryEnable %}
+            <li role="presentation" class="active"><a href="#repository" aria-controls="repository" role="tab" data-toggle="tab">Check server files</a></li>
+        {% endif %}
+    </ul>
+
+    <!-- Tab panes -->
+    <div class="tab-content">
+        <div role="tabpanel" class="tab-pane panel col-md-12" id="file">
+            {% if formUpload is defined and formUpload %}
+                {% form_theme formUpload 'bootstrap_3_horizontal_layout.html.twig' %}
+                {% form_theme formUpload.verbosity 'MediaConchOnlineBundle:Form:verbosity_row.html.twig' %}
+                {{ form_start(formUpload) }}
+                <div class="col-md-4">{{ form_row(formUpload.policy) }}</div>
+                <div class="col-md-4">{{ form_row(formUpload.display) }}</div>
+                <div class="col-md-4">{{ form_row(formUpload.verbosity) }}</div>
+                <div class="col-md-10">{{ form_row(formUpload.file) }}</div>
+                <div class="col-md-2">{{ form_row(formUpload.check) }}</div>
+                {{ form_end(formUpload) }}
+            {% else %}
+                {{ include('MediaConchOnlineBundle:Default:quotaExceeded.html.twig') }}
+            {% endif %}
+        </div>
+        <div role="tabpanel" class="tab-pane panel col-md-12{% if repositoryEnable is not defined or not repositoryEnable %} active{% endif %}" id="url">
+            {% if formOnline is defined and formOnline %}
+                {% form_theme formOnline 'bootstrap_3_horizontal_layout.html.twig' %}
+                {% form_theme formOnline.verbosity 'MediaConchOnlineBundle:Form:verbosity_row.html.twig' %}
+                {{ form_start(formOnline) }}
+                <div class="col-md-4">{{ form_row(formOnline.policy) }}</div>
+                <div class="col-md-4">{{ form_row(formOnline.display) }}</div>
+                <div class="col-md-4">{{ form_row(formOnline.verbosity) }}</div>
+                <div class="col-md-10">{{ form_row(formOnline.file) }}</div>
+                <div class="col-md-2">{{ form_row(formOnline.check) }}</div>
+                {{ form_end(formOnline) }}
+            {% else %}
+                {{ include('MediaConchOnlineBundle:Default:quotaExceeded.html.twig') }}
+            {% endif %}
+        </div>
+        {% if repositoryEnable is defined and repositoryEnable %}
+            <div role="tabpanel" class="tab-pane panel col-md-12 active" id="repository">
+                {% if formRepository is defined and formRepository %}
+                    {% form_theme formRepository 'bootstrap_3_horizontal_layout.html.twig' %}
+                    {% form_theme formRepository.verbosity 'MediaConchOnlineBundle:Form:verbosity_row.html.twig' %}
+                    {{ form_start(formRepository) }}
+                    <div class="col-md-4">{{ form_row(formRepository.policy) }}</div>
+                    <div class="col-md-4">{{ form_row(formRepository.display) }}</div>
+                    <div class="col-md-4">{{ form_row(formRepository.verbosity) }}</div>
+                    <div class="col-md-10"></div>
+                    <div class="col-md-2">{{ form_row(formRepository.check) }}</div>
+                    {{ form_end(formRepository) }}
+                {% else %}
+                    {{ include('MediaConchOnlineBundle:Default:quotaExceeded.html.twig') }}
+                {% endif %}
+            </div>
+        {% endif %}
+    </div>
+</div>
+
+<div class="col-md-12" id="checkerInfo">
+    <div></div>
+</div>
+
+<div class="col-md-12" id="checkerResults">
+    <div id="checkerResultTitle">
+        <h2>Results</h2>
+        <button type="button" class="close h2 hidden">&times; Close all results</button>
+    </div>
+    <div id="checkerApplyAll" class="col-md-12 hidden"></div>
+    <div class="table-responsive col-md-12">
+        <table id="result-table" class="table table-hover checker-results display">
+            <thead>
+                <tr>
+                    <th>Files</th>
+                    <th class="text-center"><span title="Implementation">Implem</span></th>
+                    <th class="text-center">Policy</th>
+                    <th class="text-center">MediaInfo</th>
+                    <th class="text-center">MediaTrace</th>
+                    <th class="text-center">Status</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+    <div class="result-container"></div>
+</div>
+{% endblock %}
+
+{% block javascripts %}
+    <script src="{{ asset('bundles/fosjsrouting/js/router.js') }}"></script>
+    <script src="{{ path('fos_js_routing_js', {'callback': 'fos.Router.setData'}) }}"></script>
+    {% javascripts filter='?jsqueeze' output='js/checker.js'
+        '@MediaConchOnlineBundle/Resources/public/js/checker/base.js'
+        '@MediaConchOnlineBundle/Resources/public/js/checker/table.js'
+        '@MediaConchOnlineBundle/Resources/public/js/checker/cellStatus.js'
+        '@MediaConchOnlineBundle/Resources/public/js/checker/cellImplementation.js'
+        '@MediaConchOnlineBundle/Resources/public/js/checker/cellPolicy.js'
+        '@MediaConchOnlineBundle/Resources/public/js/checker/cellMediaInfo.js'
+        '@MediaConchOnlineBundle/Resources/public/js/checker/cellMediaTrace.js'
+        '@MediaConchOnlineBundle/Resources/public/js/checker/ajax.js'
+        '@AppBundle/Resources/public/js/jstree.min.js'
+        '@MediaConchOnlineBundle/Resources/public/js/jstreegrid.js'
+        '@VoteBundle/Resources/public/js/datatables.min.js'
+        '@MediaConchOnlineBundle/Resources/public/js/utils/size.js'
+        '@MediaConchOnlineBundle/Resources/public/js/utils/text.js'
+        '@MediaConchOnlineBundle/Resources/public/js/message.js'
+    %}
+        <script type="text/javascript" src="{{ asset_url }}"></script>
+    {% endjavascripts %}
+{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    {% stylesheets filter='cssrewrite' filter='?scssphp' output='css/checker.css'
+        'bundles/app/css/jstree.css'
+        '@VoteBundle/Resources/public/css/datatables.min.css'
+    %}
+        <link rel="stylesheet" type="text/css" href="{{ asset_url }}"/>
+    {% endstylesheets %}
+{% endblock %}

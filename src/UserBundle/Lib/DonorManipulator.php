@@ -40,6 +40,7 @@ class DonorManipulator
 
         if (!$user) {
             $user = $this->createDonor($email);
+            $user->addRole('ROLE_BASIC');
         }
 
         if (null !== $name) {
