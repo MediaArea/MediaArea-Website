@@ -5,7 +5,16 @@
         <link>https://mediaarea.net/MediaConch/</link>
         <description>MediaConch updates feed</description>
         <language>en-us</language>
-        <lastBuildDate>Mon, 26 Mar 2018 12:00:00 +0000</lastBuildDate>
+        <lastBuildDate>Tue, 10 Apr 2018 12:00:00 +0000</lastBuildDate>
+          <item>
+            <title>MediaConch 18.03.2</title>
+            <description>
+                <![CDATA[x Fix incomplete initialization of checker window with old Qt versions.]]>
+            </description>
+            <link>https://mediaarea.net/MediaConch/download.html</link>
+            <pubDate>Tue, 10 Apr 2018 12:00:00 +0000</pubDate>
+            <guid>MediaConch-18.03.2</guid>
+          </item>
           <item>
             <title>MediaConch 18.03.1</title>
             <description>
