@@ -108,6 +108,7 @@
 {% endblock %}
 
 {% block head %}
+<meta name="robots" content="noindex">
 <!--preload:{{ preload(MIWASM ~ '.js', { as: 'script', nopush: true }) }}-->
 <!--prefetch:{{ prefetch(MIWASM ~ '.wasm', { as: 'script', nopush: true }) }}-->
 {% endblock %}
