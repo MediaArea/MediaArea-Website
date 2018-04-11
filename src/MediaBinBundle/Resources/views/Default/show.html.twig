@@ -1,7 +1,7 @@
 {% extends 'MediaBinBundle::base.html.twig' %}
 
-{% set MIJS = '/_/js/MediaInfo-18.03.js' %}
-{% set MIWASM = '/_/js/MediaInfoWasm-18.03' %}
+{% set MIJS = '/_/js/MediaInfoLite-18.03.1.js' %}
+{% set MIWASM = '/_/js/MediaInfoLiteWasm-18.03.1' %}
 
 {% block title %}{% if bin.title %}{{ bin.title }} - {% endif %}{% trans %}mediabin.page.title{% endtrans %}{% endblock %}
 {% block description %}{% trans %}mediabin.page.description{% endtrans %}{% endblock %}
@@ -108,6 +108,7 @@
 {% endblock %}
 
 {% block head %}
+<meta name="robots" content="noindex">
 <!--preload:{{ preload(MIWASM ~ '.js', { as: 'script', nopush: true }) }}-->
 <!--prefetch:{{ prefetch(MIWASM ~ '.wasm', { as: 'script', nopush: true }) }}-->
 {% endblock %}
