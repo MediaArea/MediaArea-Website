@@ -1,0 +1,26 @@
+{% extends 'NoTimeToWaitBundle::base.html.twig' %}
+
+{% block title %}No Time To Wait{% endblock %}
+
+{% block body %}
+  <div class="grid-container">
+    <section>
+      <h2 class="title">Next</h2>
+      <div class="content">
+        <p>
+          <a href="{{ path('notimetowait_3') }}">No Time To Wait 3 (2018, TBA)</a>  
+        </p>
+      </div>
+    </section>
+    <section>
+      <h2 class="title">Past</h2>
+      <div class="content">
+        <p>
+          <a href="{{ path('notimetowait_2') }}">No Time To Wait 2 (2017, Vienna)</a>  
+          <br>
+          <a href="{{ path('notimetowait_1') }}">No Time To Wait 1 (2016, Berlin)</a>
+        </p>
+      </div>
+    </section>
+  </div>
+{% endblock %}

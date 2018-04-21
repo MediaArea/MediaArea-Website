@@ -187,6 +187,27 @@ class MenuBuilder
     /**
      * @SuppressWarnings(PHPMD.UnusedFormalParameter)
      */
+    public function createNoTimeToWaitMenu(array $options)
+    {
+        $menu = $this->factory->createItem('root');
+        $menu->setChildrenAttribute('class', 'nav navbar-nav main-menu');
+
+        $menu = $this->mediaAreaMenu($menu);
+
+        $menu->addChild('menu.notimetowait', ['route' => 'notimetowait_home'])->setExtras(['dropdown' => true])->setCurrent(true);
+        $menu['menu.notimetowait']->addChild('menu.notimetowait.3', ['route' => 'notimetowait_3']);
+        $menu['menu.notimetowait']->addChild('menu.notimetowait.2', ['route' => 'notimetowait_2']);
+        $menu['menu.notimetowait']->addChild('menu.notimetowait.1', ['route' => 'notimetowait_1']);
+
+        $menu = $this->projectsMenu($menu);
+        $menu = $this->supportUsMenu($menu);
+
+        return $menu;
+    }
+
+    /**
+     * @SuppressWarnings(PHPMD.UnusedFormalParameter)
+     */
     public function createQCToolsMenu(array $options)
     {
         $menu = $this->factory->createItem('root');
@@ -385,6 +406,7 @@ class MenuBuilder
         $menu['menu.projects']->addChild('menu.projects.avimetaedit', ['route' => 'avi_home'])->setCurrent(false);
         $menu['menu.projects']->addChild('menu.projects.movmetaedit', ['route' => 'mov_home'])->setCurrent(false);
         $menu['menu.projects']->addChild('menu.projects.dvanalyzer', ['route' => 'dv_home'])->setCurrent(false);
+        $menu['menu.projects']->addChild('menu.projects.notimetowait', ['route' => 'notimetowait_home'])->setCurrent(false);
         $menu['menu.projects']->addChild('menu.projects.ollistd', ['route' => 'ollistd_home'])->setCurrent(false);
         $menu['menu.projects']->addChild('menu.projects.rawcooked', ['route' => 'rawcooked_home'])->setCurrent(false);
 

@@ -14,6 +14,7 @@ imports:
     - { resource: "@PaymentBundle/Resources/config/services.yml" }
     - { resource: "@SupportUsBundle/Resources/config/services.yml" }
     - { resource: "@MOVMetaEditBundle/Resources/config/services.yml" }
+    - { resource: "@NoTimeToWaitBundle/Resources/config/services.yml" }
     - { resource: "@BlogBundle/Resources/config/services.yml" }
     - { resource: "@VoteBundle/Resources/config/services.yml" }
     - { resource: "@MediaConchBundle/Resources/config/services.yml" }

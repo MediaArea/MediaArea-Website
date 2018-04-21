@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="en" datatype="plaintext" original="file.ext" target-language="en">
+    <body>
+      <trans-unit id="menu.notimetowait" approved="yes">
+        <source><![CDATA[menu.notimetowait]]></source>
+        <target><![CDATA[No Time To Wait]]></target>
+      </trans-unit>
+      <trans-unit id="menu.notimetowait.1" approved="yes">
+        <source><![CDATA[menu.notimetowait.1]]></source>
+        <target><![CDATA[No Time To Wait 1 (2016, Berlin)]]></target>
+      </trans-unit>
+      <trans-unit id="menu.notimetowait.2" approved="yes">
+        <source><![CDATA[menu.notimetowait.2]]></source>
+        <target><![CDATA[No Time To Wait 2 (2017, Vienna)]]></target>
+      </trans-unit>
+      <trans-unit id="menu.notimetowait.3" approved="yes">
+        <source><![CDATA[menu.notimetowait.3]]></source>
+        <target><![CDATA[No Time To Wait 3 (2018)]]></target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

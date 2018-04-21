@@ -25,6 +25,10 @@ avi_meta_edit:
     resource: "@AVIMetaEditBundle/Controller/"
     type:     annotation
 
+no_time_to_wait:
+    resource: "@NoTimeToWaitBundle/Controller/"
+    type:     annotation
+
 ollistd:
     resource: "@OllistdBundle/Controller/"
     type:     annotation
