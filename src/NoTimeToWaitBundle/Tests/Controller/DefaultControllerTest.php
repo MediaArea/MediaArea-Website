@@ -1,6 +1,6 @@
 <?php
 
-namespace MediaConchBundle\Tests\Controller;
+namespace NoTimeToWaitBundle\Tests\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 
@@ -10,11 +10,10 @@ class DefaultControllerTest extends WebTestCase
     {
         $client = static::createClient();
 
-        $crawler = $client->request('GET', '/MediaConch');
+        $crawler = $client->request('GET', '/NoTimeToWait');
 
         $this->assertEquals(200, $client->getResponse()->getStatusCode());
-        $this->assertEquals(' MediaConch', $crawler->filter('h1')->text());
-        $this->assertEquals('MediaConch', trim($crawler->filter('#main-navbar ul.nav li.active a')->text()));
+        $this->assertEquals('No Time To Wait', $crawler->filter('h1')->text());
     }
 
     /**
@@ -31,8 +30,10 @@ class DefaultControllerTest extends WebTestCase
     public function urlProvider()
     {
         return [
-            ['/MediaConch/Team'],
-            ['/MediaConch/Community'],
+            ['/NoTimeToWait'],
+            ['/NoTimeToWait1'],
+            ['/NoTimeToWait2'],
+            ['/NoTimeToWait3'],
         ];
     }
 }

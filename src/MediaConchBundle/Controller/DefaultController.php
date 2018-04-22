@@ -45,22 +45,4 @@ class DefaultController extends Controller
     {
         return [];
     }
-
-    /**
-     * @Route("/NoTimeToWait", name="mc_nttw")
-     * @Template()
-     */
-    public function nttwAction()
-    {
-        return [];
-    }
-
-    /**
-     * @Route("/NoTimeToWait2", name="mc_nttw2")
-     * @Template()
-     */
-    public function nttw2Action()
-    {
-        return [];
-    }
 }

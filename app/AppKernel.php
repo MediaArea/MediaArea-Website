@@ -40,6 +40,7 @@ class AppKernel extends Kernel
             new PaymentBundle\PaymentBundle(),
             new SupportUsBundle\SupportUsBundle(),
             new MOVMetaEditBundle\MOVMetaEditBundle(),
+            new NoTimeToWaitBundle\NoTimeToWaitBundle(),
             new BlogBundle\BlogBundle(),
             new VoteBundle\VoteBundle(),
             new RAWcookedBundle\RAWcookedBundle(),
