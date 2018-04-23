@@ -46,6 +46,15 @@ class UserController extends Controller
     }
 
     /**
+     * @Route("/guest", name="user_guest_help")
+     * @Template()
+     */
+    public function guestHelpAction()
+    {
+        return [];
+    }
+
+    /**
      * @Route("/guest/register", name="user_guest_register")
      */
     public function guestRegisterAction(Request $request, Quotas $quotas)
