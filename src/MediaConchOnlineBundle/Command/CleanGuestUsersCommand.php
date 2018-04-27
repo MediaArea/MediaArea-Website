@@ -46,7 +46,7 @@ EOT
 
         $em = $this->getContainer()->get('doctrine.orm.entity_manager');
         $query = $em->createQueryBuilder()->select('u')
-            ->from('AppBundle:User', 'u')
+            ->from('UserBundle:User', 'u')
             ->where('u.lastLogin < :date')
             ->setParameter('date', $date)
             ->getQuery();

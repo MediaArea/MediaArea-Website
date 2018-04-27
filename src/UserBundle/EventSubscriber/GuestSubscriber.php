@@ -12,8 +12,8 @@ use Symfony\Component\HttpFoundation\Cookie;
 use Symfony\Component\Security\Core\Exception\AccessDeniedException;
 use Symfony\Component\Security\Http\RememberMe\RememberMeServicesInterface;
 use Doctrine\ORM\NoResultException;
-use MediaConchOnlineBundle\Controller\MCOControllerInterface;
 use MediaConchOnlineBundle\Controller\PublicApiController;
+use UserBundle\Controller\GuestControllerInterface;
 use UserBundle\Entity\GuestToken;
 use DeviceDetector\Parser\Bot as BotParser;
 use FOS\UserBundle\Model\UserInterface;
@@ -31,7 +31,7 @@ class GuestSubscriber implements EventSubscriberInterface
         $firewallName,
         ContainerInterface $container,
         RememberMeServicesInterface $rememberMeServices
-        ) {
+    ) {
         $this->firewallName = $firewallName;
         $this->container = $container;
         $this->rememberMeServices = $rememberMeServices;
@@ -65,7 +65,7 @@ class GuestSubscriber implements EventSubscriberInterface
         // Public API user
         if ($ctrl instanceof PublicApiController) {
             $this->publicApiUser();
-        } elseif (!$ctrl instanceof MCOControllerInterface) {
+        } elseif (!$ctrl instanceof GuestControllerInterface) {
             return;
         }
 
@@ -94,7 +94,7 @@ class GuestSubscriber implements EventSubscriberInterface
 
         // Check if guest cookie attribute has been set and add cookie to response
         if (null !== $cookie = $event->getRequest()->attributes->get('guest_cookie')) {
-            $cookie = new Cookie('guest', $cookie);
+            $cookie = new Cookie('guest', $cookie, strtotime('now + 1 month'));
             $event->getResponse()->headers->setCookie($cookie);
         }
 

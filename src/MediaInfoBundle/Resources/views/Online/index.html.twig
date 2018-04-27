@@ -44,42 +44,41 @@
                 <p>
                     {% trans %}mediainfoonline.mediabin.panel.content{% endtrans %}
                 </p>
-                {% if app.user %}
-                    <div class="row">
-                        <div class="mediabin-create-container form-horizontal">
-                            {{ include('@MediaBin/Form/BinParamsForm.html.twig', {'bin': {'title': null, 'visibility': 0, 'anonymize': 0}}, with_context = false) }}
-                            <div class="clearfix"></div>
-                            <div class="col-sm-12">
-                                <button class="btn btn-primary mediabin-create">{% trans %}mediabin.create.button{% endtrans %}</button>
+                <div class="row">
+                    <div class="mediabin-create-container form-horizontal">
+                        {{ include('@MediaBin/Form/BinParamsForm.html.twig', {'bin': {'title': null, 'visibility': 0, 'anonymize': 0}}, with_context = false) }}
+                        <div class="clearfix"></div>
+                        <div class="col-sm-12">
+                            <button class="btn btn-primary mediabin-create">{% trans %}mediabin.create.button{% endtrans %}</button>
+                            {% if not app.user %}
+                                <p>
+                                    {% trans with { '%login%': path('fos_user_security_login'), '%guest%': path('user_guest_help') } %}mediainfoonline.mediabin.user.not.login{% endtrans %}
+                                </p>
+                            {% endif %}
+                        </div>
+                    </div>
+                    <div class="mediabin-alert mediabin-success hidden">
+                        <div class="col-md-4">
+                            <div class="alert alert-success" role="alert">
+                                    <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> {% trans %}mediabin.create.success{% endtrans %}
                             </div>
                         </div>
-                        <div class="mediabin-alert mediabin-success hidden">
-                            <div class="col-md-4">
-                                <div class="alert alert-success" role="alert">
-                                        <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> {% trans %}mediabin.create.success{% endtrans %}
-                                </div>
-                            </div>
-                            <div class="col-md-8 mediabin-url-copy-container">
-                                <label class="pull-left" for="mediabin-url-copy">{% trans %}mediabin.create.success.url{% endtrans %} </label>
-                                <div class="input-group">
-                                  <span class="input-group-btn">
-                                    <button class="btn btn-primary mediabin-url-copy-to-clipboard" data-clipboard-target="#mediabin-url-copy" data-container="body" type="button" data-toggle="tooltip" data-placement="bottom" title="Copied to clipboard"><span class="glyphicon glyphicon-copy" aria-hidden="true"></span> {% trans %}mediabin.create.success.copy{% endtrans %}</button>
-                                  </span>
-                                  <input type="text" id="mediabin-url-copy" class="form-control" readonly>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-12 mediabin-alert mediabin-error hidden">
-                            <div class="alert alert-danger" role="alert">
-                                <span class="glyphicon glyphicon-remove text-danger" aria-hidden="true"></span> {% trans %}mediabin.create.error{% endtrans %}
+                        <div class="col-md-8 mediabin-url-copy-container">
+                            <label class="pull-left" for="mediabin-url-copy">{% trans %}mediabin.create.success.url{% endtrans %} </label>
+                            <div class="input-group">
+                              <span class="input-group-btn">
+                                <button class="btn btn-primary mediabin-url-copy-to-clipboard" data-clipboard-target="#mediabin-url-copy" data-container="body" type="button" data-toggle="tooltip" data-placement="bottom" title="Copied to clipboard"><span class="glyphicon glyphicon-copy" aria-hidden="true"></span> {% trans %}mediabin.create.success.copy{% endtrans %}</button>
+                              </span>
+                              <input type="text" id="mediabin-url-copy" class="form-control" readonly>
                             </div>
                         </div>
                     </div>
-                {% else %}
-                    <p>
-                        {% trans with { '%login%': path('fos_user_security_login'), '%register%': path('fos_user_registration_register') } %}mediainfoonline.mediabin.user.not.login{% endtrans %}
-                    </p>
-                {% endif %}
+                    <div class="col-sm-12 mediabin-alert mediabin-error hidden">
+                        <div class="alert alert-danger" role="alert">
+                            <span class="glyphicon glyphicon-remove text-danger" aria-hidden="true"></span> {% trans %}mediabin.create.error{% endtrans %}
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

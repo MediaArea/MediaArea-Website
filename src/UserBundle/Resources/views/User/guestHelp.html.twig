@@ -1,0 +1,14 @@
+{% extends 'AppBundle::base.html.twig' %}
+
+{% block title %}Guest users help{% endblock %}
+
+{% block body %}
+<h1>Guest users help</h1>
+
+<p>
+    Guest users are automatically created for you to easily test services of MediaArea website without registering.<br>
+    They are only available during 1 month on the computer and web browser which created them (we use <a href="https://en.wikipedia.org/wiki/HTTP_cookie" target="_blank">cookie</a> for this feature).<br>
+    If you are happy with our services and want to continue to use them after 1 month or on a different computer/web browser you can {% if app.user and is_granted('ROLE_GUEST') %}<a href="{{ path('user_guest_register') }}">register your account</a>{% else %}register your account{% endif %} and all your datas will be kept.<br>
+    If you don't {% if app.user and is_granted('ROLE_GUEST') %}<a href="{{ path('user_guest_register') }}">register your account</a>{% else %}register your account{% endif %} within 1 month all your datas will be deleted from our servers.
+</p>
+{% endblock %}

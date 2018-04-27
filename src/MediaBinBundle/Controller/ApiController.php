@@ -14,11 +14,12 @@ use MediaBinBundle\Lib\KeyGenerator;
 use MediaBinBundle\Lib\XMLValidator;
 use MediaBinBundle\Lib\File\File;
 use MediaBinBundle\Model\BinInterface;
+use UserBundle\Controller\GuestControllerInterface;
 
 /**
  * @Route("/api/v1/MediaBin")
  */
-class ApiController extends Controller
+class ApiController extends Controller implements GuestControllerInterface
 {
     /**
      * @Route("", name="mediabin_api_new")
