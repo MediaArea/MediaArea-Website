@@ -121,3 +121,42 @@
         margin-top: 15px;
     }
 }
+
+#compare.table {
+    margin-bottom: 0;
+}
+
+#compare.table > tbody > tr > th {
+    padding: 2px;
+}
+
+.remove-file {
+    cursor: pointer;
+}
+
+.truncate-cell > div {
+	position: relative;
+	overflow: hidden;
+	height: 24px;
+}
+
+.truncate-cell > div > span {
+	display: block;
+	position: absolute;
+	max-width: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+    line-height: 24px;
+}
+
+.truncate-cell > div:after {
+	content: attr(title);
+	overflow: hidden;
+	height: 0;
+	display: block;
+}
+
+#compare-filter-container {
+    min-height: 35px;
+}

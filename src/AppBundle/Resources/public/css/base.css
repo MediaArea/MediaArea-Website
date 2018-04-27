@@ -797,6 +797,30 @@ ul.events-list li {
     display: none;
 }
 
+/* Bootstrap spinner */
+.glyphicon-spin {
+    animation: spin 1s infinite linear;
+    -webkit-animation: spin 1s infinite linear;
+}
+
+@keyframes spin {
+    0% {
+        transform: scale(1) rotate(0deg);
+    }
+    100% {
+        transform: scale(1) rotate(360deg);
+    }
+}
+
+@-webkit-keyframes spin {
+    from {
+        -webkit-transform: rotate(0deg);
+    }
+    to {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
 /* Feature box */
 .featureBox {
     border: 1px solid #ddd;

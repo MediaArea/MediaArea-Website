@@ -1,0 +1,103 @@
+{% extends 'MediaInfoBundle::base.html.twig' %}
+
+{% set MIJS = '/_/js/MediaInfo-18.03.1.js' %}
+{% set MIWASM = '/_/js/MediaInfoWasm-18.03.1' %}
+
+{% block title %}{% trans %}mediacompare.page.title{% endtrans %}{% endblock %}
+{% block description %}{% trans %}mediacompare.page.description{% endtrans %}{% endblock %}
+{% block keywords %}{% trans %}mediacompare.page.keywords{% endtrans %}{% endblock %}
+
+{% block body %}
+<h1>{% trans %}mediacompare.title{% endtrans %}</h1>
+
+<p>
+    {% trans %}mediacompare.about{% endtrans %}
+</p>
+{% if not app.user %}
+    <p id="not-member">
+        {% trans with {'%supportfaq%': path('supportUs_faq'), '%supportUs_individual%': path('supportUs_individual'), '%login%': path('fos_user_security_login')} %}mediacompare.not_logged_in{% endtrans %}
+    </p>
+{% elseif not app.user.isMember %}
+    <p id="not-member">
+        {% trans with {'%supportfaq%': path('supportUs_faq'), '%supportUs_individual%': path('supportUs_individual')} %}mediacompare.not_member{% endtrans %}
+    </p>
+{% endif %}
+
+<div id="mediainfo-loader">
+    <span>{% trans %}mediainfoonline.loading{% endtrans %}</span>
+</div>
+<div id="mediainfo-compare-container" class="hidden">
+    <div class="mediainfo-file-drop" draggable="true">
+        <p>
+            {% trans %}mediacompare.drop.help{% endtrans %}
+        </p>
+        <p>
+            <input type="file" id="mediainfo-file-input" multiple>
+        </p>
+    </div>
+    <div id="error-container"></div>
+    <div id="compare-filter-container">
+        <div id="compare-filter-buttons" class="form-group hidden">
+            <label class="radio-inline"><input type="radio" name="compare-filter" value="all" checked>{% trans %}mediacompare.display.filter.all{% endtrans %}</label>
+            <label class="radio-inline"><input type="radio" name="compare-filter" value="diff">{% trans %}mediacompare.display.filter.diff{% endtrans %}</label>
+            <label class="radio-inline"><input type="radio" name="compare-filter" value="match">{% trans %}mediacompare.display.filter.match{% endtrans %}</label>
+        </div>
+    </div>
+    <div class="table-responsive">
+        <table id="compare" class="table table-bordered table-hover"></table>
+        <div id="compare-loading" class="hidden"><i class="glyphicon glyphicon-refresh glyphicon-spin"></i></div>
+    </div>
+</div>
+{% endblock %}
+
+{% block stylesheets %}
+{% stylesheets
+    '@MediaInfoBundle/Resources/public/css/mediainfoonline.css'
+    filter='?scssphp' output='css/compare.css'
+ %}
+    <link rel="stylesheet" href="{{ preload(asset_url, { as: 'style', nopush: true }) }}" />
+{% endstylesheets %}
+{% endblock %}
+
+{% block javascripts %}
+{% javascripts
+    '@MediaInfoBundle/Resources/public/js/compare/base.js'
+    '@MediaInfoBundle/Resources/public/js/compare/compare.js'
+    '@MediaInfoBundle/Resources/public/js/compare/analyze.js'
+    '@MediaConchOnlineBundle/Resources/public/js/utils/text.js'
+    filter='?jsqueeze' output='js/compare.js'
+%}
+<script type="text/javascript" src="{{ preload(asset_url, { as: 'script', nopush: true }) }}"></script>
+{% endjavascripts %}
+
+<script>
+if (('WebAssembly' in window)) {
+    var mediainfoSrc = '{{ MIWASM }}.js';
+    var mediainfoMemSrc = '{{ MIWASM }}.wasm';
+} else {
+    var mediainfoSrc = '{{ MIJS }}';
+    var mediainfoMemSrc = '{{ MIJS }}.mem';
+}
+
+var mediainfo;
+var script = document.createElement('script');
+script.src = mediainfoSrc;
+script.type = 'text/javascript';
+script.async = 'true';
+script.onload = script.onreadystatechange = function() {
+    var rs = script.readyState;
+    if (rs && rs != 'complete' && rs != 'loaded') return;
+    try {
+        mediainfo = MediaCompareAnalyze();
+        MediaCompareBase.setMediaCompareAnalyze(mediainfo);
+        MediaCompare.setMediaCompareAnalyze(mediainfo);
+        mediainfo.init(mediainfoMemSrc, MediaCompareBase.init);
+    } catch (e) {}
+};
+var s = document.getElementsByTagName('script')[0];
+s.parentNode.insertBefore(script, s);
+
+MediaCompareBase.setList({{ app.user and app.user.isMember ? 'true' : 'false'}});
+MediaCompareBase.setMediaCompare(MediaCompare);
+</script>
+{% endblock %}

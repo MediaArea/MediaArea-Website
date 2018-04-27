@@ -1032,7 +1032,7 @@ Don't hesitate to <a href="%contact%">contact us</a> if you're interested in con
       </trans-unit>
       <trans-unit id="mediainfoonline.loading" approved="yes">
         <source><![CDATA[mediainfoonline.loading]]></source>
-        <target><![CDATA[Please wait while MediaInfo is loading...]]></target>
+        <target><![CDATA[<i class="glyphicon glyphicon-refresh glyphicon-spin"></i> Please wait while MediaInfo is loading...]]></target>
       </trans-unit>
       <trans-unit id="mediainfoonline.drop.help" approved="yes">
         <source><![CDATA[mediainfoonline.drop.help]]></source>
@@ -1069,6 +1069,50 @@ Don't hesitate to <a href="%contact%">contact us</a> if you're interested in con
       <trans-unit id="mediainfoonline.mediabin.user.not.login" approved="yes">
         <source><![CDATA[mediainfoonline.mediabin.user.not.login]]></source>
         <target><![CDATA[You are not logged in, <a href="%login%">login</a> if you already have an account or a guest user will be automatically created for you (<a href="%guest%">more information about guest users</a>).]]></target>
+      </trans-unit>
+      <trans-unit id="mediacompare.page.title" approved="yes">
+        <source><![CDATA[mediacompare.page.title]]></source>
+        <target><![CDATA[MediaCompare - Compare multiple files with MediaInfo in your browser]]></target>
+      </trans-unit>
+      <trans-unit id="mediacompare.page.description" approved="yes">
+        <source><![CDATA[mediacompare.page.description]]></source>
+        <target><![CDATA[MediaCompare is an online file analyzer that allows you to compare multiple files with MediaInfo in your browser without installing any software on your computer]]></target>
+      </trans-unit>
+      <trans-unit id="mediacompare.page.keywords" approved="yes">
+        <source><![CDATA[mediacompare.page.keywords]]></source>
+        <target><![CDATA[MediaCompare MediaInfoCompare MediaInfo comparison compare file analyzer metadata parser browser]]></target>
+      </trans-unit>
+      <trans-unit id="mediacompare.title" approved="yes">
+        <source><![CDATA[mediacompare.title]]></source>
+        <target><![CDATA[MediaCompare - Compare multiple files with MediaInfo]]></target>
+      </trans-unit>
+      <trans-unit id="mediacompare.about" approved="yes">
+        <source><![CDATA[mediacompare.about]]></source>
+        <target><![CDATA[MediaCompare allows you to compare multiple files with MediaInfo in your browser without installing any software on your computer. Your information is kept safe because everything stays on your machine (nothing is uploaded to our servers).]]></target>
+      </trans-unit>
+      <trans-unit id="mediacompare.drop.help" approved="yes">
+        <source><![CDATA[mediacompare.drop.help]]></source>
+        <target><![CDATA[Drop your files here or select files below (you can drop or select one or many files).]]></target>
+      </trans-unit>
+      <trans-unit id="mediacompare.not_logged_in" approved="yes">
+        <source><![CDATA[mediacompare.not_logged_in]]></source>
+        <target><![CDATA[You can compare 2 files, comparing 3 or more files simultaneously is available only to our <a href="%supportfaq%#membership">members</a>, if you are already a member please <a href="%login%">log in</a> or if you want to become a member check <a href="%supportUs_individual%">our plans</a>.]]></target>
+      </trans-unit>
+      <trans-unit id="mediacompare.not_member" approved="yes">
+        <source><![CDATA[mediacompare.not_member]]></source>
+        <target><![CDATA[You can compare 2 files, comparing 3 or more files simultaneously is available only to our <a href="%supportfaq%#membership">members</a>, if you want to become a member check <a href="%supportUs_individual%">our plans</a>.]]></target>
+      </trans-unit>
+      <trans-unit id="mediacompare.display.filter.all" approved="yes">
+        <source><![CDATA[mediacompare.display.filter.all]]></source>
+        <target><![CDATA[Show all fields]]></target>
+      </trans-unit>
+      <trans-unit id="mediacompare.display.filter.diff" approved="yes">
+        <source><![CDATA[mediacompare.display.filter.diff]]></source>
+        <target><![CDATA[Show only fields with differences]]></target>
+      </trans-unit>
+      <trans-unit id="mediacompare.display.filter.match" approved="yes">
+        <source><![CDATA[mediacompare.display.filter.match]]></source>
+        <target><![CDATA[Show only identical fields]]></target>
       </trans-unit>
     </body>
   </file>
