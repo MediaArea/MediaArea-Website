@@ -11,6 +11,8 @@ use Symfony\Component\Validator\Constraints as Assert;
  * @ORM\Table(name="users")
  * @ORM\HasLifecycleCallbacks
  * @SuppressWarnings(PHPMD.TooManyFields)
+ * @SuppressWarnings(PHPMD.TooManyPublicMethods)
+ * @SuppressWarnings(PHPMD.ExcessivePublicCount)
  */
 class User extends BaseUser
 {
@@ -654,5 +656,19 @@ class User extends BaseUser
     public function getApiKey()
     {
         return $this->apiKey;
+    }
+
+    /**
+     * Is user is active member.
+     *
+     * @return bool
+     */
+    public function isMember()
+    {
+        if ($this->hasRole('ROLE_ADMIN')) {
+            return true;
+        }
+
+        return $this->getEndDate() > new \DateTime();
     }
 }

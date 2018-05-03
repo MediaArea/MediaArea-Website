@@ -6,7 +6,10 @@ var textUtils = (function() {
             '<': '&lt;',
             '>': '&gt;',
             '"': '&quot;',
-            "'": '&#039;'
+            "'": '&#039;',
+            '/': '&#x2F;',
+            '`': '&#x60;',
+            '=': '&#x3D;'
         };
 
         return str.replace(/[&<>"']/g, function(m) { return map[m]; });

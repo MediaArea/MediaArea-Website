@@ -22,6 +22,10 @@
         <source><![CDATA[menu.mediainfoonline]]></source>
         <target><![CDATA[MediaInfoOnline]]></target>
       </trans-unit>
+      <trans-unit id="menu.mediacompare" approved="yes">
+        <source><![CDATA[menu.mediacompare]]></source>
+        <target><![CDATA[MediaCompare]]></target>
+      </trans-unit>
       <trans-unit id="menu.mediabin" approved="yes">
         <source><![CDATA[menu.mediabin]]></source>
         <target><![CDATA[MediaBin]]></target>

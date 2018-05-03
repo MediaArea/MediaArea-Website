@@ -69,6 +69,7 @@ class MenuBuilder
         $menu['menu.mediainfo']->addChild('menu.screenshots', ['route' => 'mi_screenshots']);
         $menu['menu.mediainfo']->addChild('menu.donate', ['route' => 'mi_donate']);
         $menu['menu.mediainfo']->addChild('menu.mediainfoonline', ['route' => 'mi_online']);
+        $menu['menu.mediainfo']->addChild('menu.mediacompare', ['route' => 'mi_compare']);
         $menu['menu.mediainfo']->addChild('menu.mediabin', ['route' => 'mediabin_home'])
             ->setDisplayChildren(false)
             ->addChild(
