@@ -5,7 +5,20 @@
         <link>https://mediaarea.net/MediaInfo</link>
         <description>MediaInfo updates feed</description>
         <language>en-us</language>
-        <lastBuildDate>Mon, 26 Mar 2018 12:00:00 +0000</lastBuildDate>
+        <lastBuildDate>Wed, 09 May 2018 12:00:00 +0000</lastBuildDate>
+         <item>
+            <title>MediaInfo 18.05</title>
+            <description>
+                <![CDATA[+ PBCore 2.1 export update, sponsored by WGBH as part of the NEH-funded PBCore Development and Preservation Project
+                    + TIFF: more IFDs are supported (density, software...)
+                    + NISO Z39.87 output
+                    x Mastering Display Color Primaries: was always showing BT.709 instead of real value, when present
+                    x Attachments: do not provide anymore attachments content in XML by default, fixes]]>
+            </description>
+            <link>https://mediaarea.net/MediaInfo</link>
+            <pubDate>Wed, 09 May 2018 12:00:00 +0000</pubDate>
+            <guid>MediaInfo-18.05</guid>
+         </item>
          <item>
             <title>MediaInfo 18.03.1</title>
             <description>
