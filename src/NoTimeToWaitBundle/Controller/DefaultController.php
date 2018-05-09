@@ -14,7 +14,7 @@ class DefaultController extends Controller
      */
     public function indexAction()
     {
-        return [];
+        return ['noAds' => true];
     }
 
     /**
@@ -23,7 +23,7 @@ class DefaultController extends Controller
      */
     public function nttw1Action()
     {
-        return [];
+        return ['noAds' => true];
     }
 
     /**
@@ -32,7 +32,7 @@ class DefaultController extends Controller
      */
     public function nttw2Action()
     {
-        return [];
+        return ['noAds' => true];
     }
 
     /**
@@ -41,6 +41,6 @@ class DefaultController extends Controller
      */
     public function nttw3Action()
     {
-        return [];
+        return ['noAds' => true];
     }
 }
