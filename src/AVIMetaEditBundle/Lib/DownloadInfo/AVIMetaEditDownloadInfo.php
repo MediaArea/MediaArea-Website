@@ -41,6 +41,6 @@ class AVIMetaEditDownloadInfo extends AbstractDownloadInfo
     public function parse()
     {
         $this->downloadInfo = $this->detectOS();
-        $this->downloadInfo['version'] = '1.0.1';
+        $this->downloadInfo['version'] = '1.0.2';
     }
 }
