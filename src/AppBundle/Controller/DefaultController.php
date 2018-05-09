@@ -42,7 +42,7 @@ class DefaultController extends Controller
      */
     public function conductAction()
     {
-        return array();
+        return ['noAds' => true];
     }
 
     /**
