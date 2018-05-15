@@ -70,7 +70,7 @@ var MediaBin = (function () {
         });
 
         // Copy to clipboard
-        var clipboard = new Clipboard('.mediainfo-copy-to-clipboard', {
+        var clipboard = new ClipboardJS('.mediainfo-copy-to-clipboard', {
             text: function() {
                 if (processing) {
                     MI.Option('Inform', $('#mediainfo-format-list').val());
@@ -201,7 +201,7 @@ var MediaBin = (function () {
         });
 
         // MediaBin copy bin URL to clipboard
-        var clipboardMediaBinUrl = new Clipboard('.mediabin-url-copy-to-clipboard');
+        var clipboardMediaBinUrl = new ClipboardJS('.mediabin-url-copy-to-clipboard');
         $('.mediabin-url-copy-to-clipboard').tooltip({trigger: 'manual'});
 
         // Display tooltip on copy
