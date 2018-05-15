@@ -63,7 +63,7 @@
  %}
 <script type="text/javascript" src="{{ preload(asset_url, { as: 'script', nopush: true }) }}"></script>
 {% endjavascripts %}
-<script src="{{ asset('bundles/fosjsrouting/js/router.js') }}"></script>
+<script src="{{ asset('bundles/fosjsrouting/js/router.min.js') }}"></script>
 <script src="{{ path('fos_js_routing_js', { callback: 'fos.Router.setData' }) }}"></script>
 <script>
 $(document).ready(function() {

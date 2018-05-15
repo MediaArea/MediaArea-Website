@@ -5,11 +5,10 @@ namespace PaymentBundle\Controller;
 use FOS\UserBundle\Model\UserInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
-use Symfony\Component\HttpFoundation\Response;
-use Symfony\Component\HttpFoundation\ResponseHeaderBag;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
+use TFox\MpdfPortBundle\Response\PDFResponse;
 use PaymentBundle\Entity\Invoice;
 
 /**
@@ -49,12 +48,10 @@ class InvoiceController extends Controller
         // Get html for pdf rendering
         $html = $this->renderView('PaymentBundle:Invoice:pdf.html.twig', ['data' => $data]);
 
-        $response = $this->get('tfox.mpdfport')->generatePdfResponse($html);
-        $disposition = $this->downloadFileDisposition($response, $data['date'].'-MediaArea-Invoice-'.$id.'.pdf');
-        $response->headers->set('Content-Disposition', $disposition);
-        $response->headers->set('Content-length', strlen($response->getContent()));
-
-        return $response;
+        return new PDFResponse(
+            $this->get('t_fox_mpdf_port.pdf')->generatePdf($html),
+            $data['date'].'-MediaArea-Invoice-'.$id.'.pdf'
+        );
     }
 
     /**
@@ -109,41 +106,5 @@ class InvoiceController extends Controller
             'country' => $invoice->getCountry(),
             'currency' => $invoice->getCurrency(),
         ];
-    }
-
-    /**
-     * Make the content-disposition string to download a file
-     * Handle unauthorized and non ASCII characters.
-     *
-     * @param Response response the response object
-     * @param string filename the name of the file to download
-     *
-     * @return string
-     */
-    protected function downloadFileDisposition(Response $response, $filename)
-    {
-        // Store current locale and set locale temporary to en_US
-        $locale = setlocale(LC_ALL, 0);
-        setlocale(LC_ALL, 'en_US.UTF8');
-
-        // $filename can not contain '/' and '\\'
-        $filename = str_replace(array('/', '\\'), '-', $filename);
-
-        // $filenameFallback should be ASCII only and can not contain '%', '/' and '\\' (already stripped in $filename)
-        if (function_exists('iconv')) {
-            $filenameFallback = iconv('UTF-8', 'ASCII//TRANSLIT', $filename);
-        } else {
-            $filenameFallback = preg_replace('/[^\x20-\x7E]/', '-', $filename);
-        }
-        $filenameFallback = str_replace('%', '-', $filenameFallback);
-
-        // Restore locale
-        setlocale(LC_ALL, $locale);
-
-        return $response->headers->makeDisposition(
-            ResponseHeaderBag::DISPOSITION_ATTACHMENT,
-            $filename,
-            $filenameFallback
-        );
     }
 }
