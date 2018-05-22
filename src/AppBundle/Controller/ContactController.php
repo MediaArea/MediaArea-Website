@@ -53,7 +53,7 @@ class ContactController extends Controller
                 );
             $this->get('mailer')->send($message);
 
-            $this->addFlash('success', 'Your message have been sent');
+            $this->addFlash('success', 'Your message has been sent');
 
             return $this->redirectToRoute('ma_contact');
         }

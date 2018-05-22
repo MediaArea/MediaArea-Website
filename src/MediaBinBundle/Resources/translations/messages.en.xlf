@@ -176,7 +176,7 @@
       </trans-unit>
       <trans-unit id="mediabin.cancel.success" approved="yes">
         <source><![CDATA[mediabin.cancel.success]]></source>
-        <target><![CDATA[MediaBin deletion have been successfuly canceled]]></target>
+        <target><![CDATA[MediaBin deletion has been successfully canceled]]></target>
       </trans-unit>
       <trans-unit id="mediabin.cancel.error" approved="yes">
         <source><![CDATA[mediabin.cancel.error]]></source>

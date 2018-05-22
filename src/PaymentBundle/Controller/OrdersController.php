@@ -122,7 +122,7 @@ class OrdersController extends Controller
         // Add flash message
         $ipToCurrency = new IpToCurrency($request->getClientIp());
         $message = sprintf(
-            'Thank you, your payment of %s have been successfully processed',
+            'Thank you, your payment of %s has been successfully processed',
             $ipToCurrency->amountWithCurrency((int) $order->getAmount())
         );
 
