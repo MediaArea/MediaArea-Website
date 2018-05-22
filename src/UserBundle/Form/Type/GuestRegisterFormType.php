@@ -6,6 +6,7 @@ use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
 use Symfony\Component\Form\Extension\Core\Type\HiddenType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
+use Symfony\Component\OptionsResolver\OptionsResolver;
 
 class GuestRegisterFormType extends RegistrationFormType
 {
@@ -26,7 +27,8 @@ class GuestRegisterFormType extends RegistrationFormType
             ->remove('realUserName')
             ->add('email', EmailType::class, [
                 'label' => 'form.email',
-                'translation_domain' => 'FOSUserBundle', 'data' => null,
+                'translation_domain' => 'FOSUserBundle',
+                'data' => null,
             ])
             ->add('username', null, [
                 'label' => 'form.username',
@@ -42,6 +44,13 @@ class GuestRegisterFormType extends RegistrationFormType
             ->add('companyName')
             ->add('newsletter')
             ->add('realUserName', HiddenType::class);
+    }
+
+    public function configureOptions(OptionsResolver $resolver)
+    {
+        $resolver->setDefaults(array(
+            'validation_groups' => array('UserRegistration'),
+        ));
     }
 
     public function getParent()
