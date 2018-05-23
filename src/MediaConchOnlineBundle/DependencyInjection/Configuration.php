@@ -41,6 +41,14 @@ class Configuration implements ConfigurationInterface
                         ->scalarNode('baseUrl')->defaultValue(null)->end()
                     ->end()
                 ->end() // absolute_url_for_mail
+                ->arrayNode('api')
+                    ->info('MediaConch API settings')
+                    ->addDefaultsIfNotSet()
+                    ->children()
+                        ->scalarNode('baseUrl')->defaultValue(null)->end()
+                        ->scalarNode('token')->defaultValue(null)->end()
+                    ->end()
+                ->end() // api
                 ->arrayNode('quotas')
                     ->info('User quotas')
                     ->treatTrueLike(['enabled' => true])

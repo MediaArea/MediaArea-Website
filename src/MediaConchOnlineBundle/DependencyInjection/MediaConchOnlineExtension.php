@@ -25,5 +25,6 @@ class MediaConchOnlineExtension extends Extension
         $container->setParameter('mco.mediaconch.api.version', $config['mediaconch']['api_version']);
         $container->setParameter('mco.mediaconch.absolute_url_for_mail', $config['absolute_url_for_mail']);
         $container->setParameter('mco.mediaconch.quotas', $config['quotas']);
+        $container->setParameter('mco.api', $config['api']);
     }
 }

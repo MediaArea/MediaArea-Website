@@ -44,3 +44,5 @@ parameters:
     mco_mail_host: ~
     mco_mail_scheme: ~
     mco_mail_base_url: ~
+    mco_api_base_url: https://mediaarea.net/
+    mco_api_token: ThisTokenIsNotSoSecretChangeIt
