@@ -6,14 +6,13 @@ use Symfony\Component\Security\Core\Authentication\Token\Storage\TokenStorageInt
 use Doctrine\ORM\EntityManagerInterface;
 use FOS\UserBundle\Model\UserInterface;
 use UserBundle\Entity\UserQuotas;
-use MediaConchOnlineBundle\Lib\XslPolicy\XslPolicyGetPoliciesCount;
-use MediaConchOnlineBundle\Lib\MediaConch\MediaConchServerException;
+use MediaConchOnlineBundle\Lib\Api\Client as MediaConchApiClient;
 
 class Quotas
 {
     protected $user;
     protected $em;
-    protected $policiesCount;
+    protected $mcApiClient;
     protected $defaultQuotas;
     protected $date;
     protected $datePeriod;
@@ -22,13 +21,13 @@ class Quotas
     public function __construct(
         TokenStorageInterface $tokenStorage,
         EntityManagerInterface $em,
-        XslPolicyGetPoliciesCount $policiesCount,
+        MediaConchApiClient $mcApiClient,
         $options
-        ) {
+    ) {
         $this->options = $options;
         $this->user = $this->getUser($tokenStorage);
         $this->em = $em;
-        $this->policiesCount = $policiesCount;
+        $this->mcApiClient = $mcApiClient;
         $this->defaultQuotas = $this->getDefaultQuotas();
         $this->date = new \DateTime();
         // Clone DateTime object as add/sub method modify the object itself
@@ -185,12 +184,7 @@ class Quotas
 
     private function countPolicies()
     {
-        try {
-            $this->policiesCount->getPoliciesCount();
-            $xslPolicy = $this->policiesCount->getResponse()->getCount();
-        } catch (MediaConchServerException $e) {
-            $xslPolicy = 0;
-        }
+        $xslPolicy = $this->mcApiClient->getPoliciesCount($this->user->getId());
 
         $display = $this->em
             ->getRepository('MediaConchOnlineBundle:DisplayFile')

@@ -263,6 +263,9 @@ media_conch_online:
         host: "%mco_mail_host%"
         scheme: "%mco_mail_scheme%"
         baseUrl: "%mco_mail_base_url%"
+    api:
+        baseUrl: "%mco_api_base_url%"
+        token: "%mco_api_token%"
     quotas :
         enabled: true
         default:

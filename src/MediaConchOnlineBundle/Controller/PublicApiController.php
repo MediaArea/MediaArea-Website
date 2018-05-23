@@ -11,6 +11,7 @@ use Symfony\Component\HttpFoundation\JsonResponse;
 use UserBundle\Lib\ApiKey\ApiKeyManager;
 use MediaConchOnlineBundle\Lib\MediaConch\InitInstanceId;
 use MediaConchOnlineBundle\Lib\MediaConch\MediaConchServerException;
+use MediaConchOnlineBundle\Lib\XslPolicy\XslPolicyGetPoliciesCount;
 use MediaConchOnlineBundle\Lib\XslPolicy\XslPolicyExport;
 use MediaConchOnlineBundle\Lib\XslPolicy\XslPolicyGetPolicy;
 use MediaConchOnlineBundle\Lib\XslPolicy\XslPolicyGetPublicPolicies;
@@ -173,5 +174,30 @@ class PublicApiController extends Controller
         }
 
         return new JsonResponse(['error' => 'Invalid user or password'], 401);
+    }
+
+    /**
+     * Count policies for a user.
+     *
+     * @return json
+     * @Route("/policies/count/{userId}", requirements={"userId": "\d+"},
+     *   name="mco_api_public_policies_count")
+     * @Method({"GET"})
+     */
+    public function policiesCountAction(XslPolicyGetPoliciesCount $policiesCount, Request $request, $userId)
+    {
+        $apiConfig = $this->getParameter('mco.api');
+        if ($apiConfig['token'] != $request->headers->get('X-API-TOKEN')) {
+            return new JsonResponse(['error' => 'Invalid token'], 401);
+        }
+
+        try {
+            $policiesCount->getPoliciesCountByUser($userId);
+            $xslPolicy = $policiesCount->getResponse()->getCount();
+        } catch (MediaConchServerException $e) {
+            $xslPolicy = 0;
+        }
+
+        return new JsonResponse(['policiesCount' => $xslPolicy]);
     }
 }

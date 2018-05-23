@@ -8,4 +8,9 @@ class XslPolicyGetPoliciesCount extends XslPolicyBase
     {
         $this->response = $this->mc->policyGetPoliciesCount($this->user->getId());
     }
+
+    public function getPoliciesCountByUser($userId)
+    {
+        $this->response = $this->mc->policyGetPoliciesCount($userId);
+    }
 }
