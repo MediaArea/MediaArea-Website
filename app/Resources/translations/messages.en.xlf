@@ -70,6 +70,10 @@
         <source><![CDATA[menu.mediaarea.legal]]></source>
         <target><![CDATA[Legal]]></target>
       </trans-unit>
+      <trans-unit id="menu.mediaarea.privacy" approved="yes">
+        <source><![CDATA[menu.mediaarea.privacy]]></source>
+        <target><![CDATA[Privacy]]></target>
+      </trans-unit>
       <trans-unit id="menu.mediaarea.contact" approved="yes">
         <source><![CDATA[menu.mediaarea.contact]]></source>
         <target><![CDATA[Contact us]]></target>
