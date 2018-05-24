@@ -6,14 +6,6 @@ use UserBundle\Tests\Controller\UserAbstractControllerTest;
 
 class DefaultControllerTest extends UserAbstractControllerTest
 {
-    public function testHomeMediaArea()
-    {
-        $client = static::createClient();
-
-        $client->request('GET', '/');
-        $this->assertEquals(200, $client->getResponse()->getStatusCode());
-    }
-
     public function testMediaInfoPageDoesNotExist()
     {
         $client = static::createClient();
@@ -52,73 +44,31 @@ class DefaultControllerTest extends UserAbstractControllerTest
         $this->assertEquals(200, $client->getResponse()->getStatusCode());
     }
 
-    public function testRepos()
+    /**
+     * @dataProvider urlProvider
+     */
+    public function testResponse200($url)
     {
         $client = static::createClient();
 
-        $client->request('GET', '/en/Repos');
+        $client->request('GET', $url);
         $this->assertEquals(200, $client->getResponse()->getStatusCode());
     }
 
-    public function testProfessionalServices()
+    public function urlProvider()
     {
-        $client = $this->createBetaUserClient();
-        $client->request('GET', '/Services');
-        $this->assertEquals(200, $client->getResponse()->getStatusCode());
-    }
-
-    public function testEvents()
-    {
-        $client = static::createClient();
-
-        $client->request('GET', '/Events');
-        $this->assertEquals(200, $client->getResponse()->getStatusCode());
-    }
-
-    public function testCodeOfConduct()
-    {
-        $client = static::createClient();
-
-        $client->request('GET', '/Conduct');
-        $this->assertEquals(200, $client->getResponse()->getStatusCode());
-    }
-
-    public function testTeamRules()
-    {
-        $client = static::createClient();
-
-        $client->request('GET', '/TeamRules');
-        $this->assertEquals(200, $client->getResponse()->getStatusCode());
-    }
-
-    public function testLegal()
-    {
-        $client = static::createClient();
-        $client->request('GET', '/Legal');
-        $this->assertEquals(200, $client->getResponse()->getStatusCode());
-    }
-
-    public function testdivx()
-    {
-        $client = static::createClient();
-
-        $client->request('GET', '/en/DIVX');
-        $this->assertEquals(200, $client->getResponse()->getStatusCode());
-    }
-
-    public function testdx50()
-    {
-        $client = static::createClient();
-
-        $client->request('GET', '/en/DX50');
-        $this->assertEquals(200, $client->getResponse()->getStatusCode());
-    }
-
-    public function testxvid()
-    {
-        $client = static::createClient();
-
-        $client->request('GET', '/en/XVID');
-        $this->assertEquals(200, $client->getResponse()->getStatusCode());
+        return [
+            ['/'],
+            ['/en/Repos'],
+            ['/Services'],
+            ['/Events'],
+            ['/Conduct'],
+            ['/TeamRules'],
+            ['/Legal'],
+            ['/Privacy'],
+            ['/en/DIVX'],
+            ['/en/DX50'],
+            ['/en/XVID'],
+        ];
     }
 }
