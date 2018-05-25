@@ -20,7 +20,7 @@ class ResettingController extends BaseController
     public function requestAction()
     {
         // Redirect logged in user to profile page
-        if ($this->get('security.authorization_checker')->isGranted('ROLE_USER')) {
+        if ($this->get('security.authorization_checker')->isGranted('ROLE_BASIC')) {
             return $this->redirectToRoute('fos_user_profile_show');
         }
 
