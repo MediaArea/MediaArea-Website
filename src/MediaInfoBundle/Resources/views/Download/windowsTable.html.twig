@@ -1,4 +1,4 @@
-{% if 'Y' == app.request.attributes.get('donated') %}
+{% if 'Y' == app.request.attributes.get('donated') or (app.user and app.user.isDonor) %}
     {% set downloadLink = '//mediaarea.net/download/donors/18.05/MediaInfo_GUI_18.05_Windows.exe' %}
 {% elseif 1 <= app.request.attributes.get('donated', -1) %}
     {% set downloadLink = '//mediaarea.net/download/current/MediaInfo_GUI_18.05_Windows.exe' %}
