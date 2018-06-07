@@ -280,7 +280,9 @@ class MenuBuilder
 
         $menu = $this->mediaAreaMenu($menu);
 
-        $menu->addChild('menu.rawcooked', ['route' => 'rawcooked_home']);
+        $menu->addChild('menu.rawcooked', ['route' => 'rawcooked_home'])->setExtras(['dropdown' => true])->setCurrent(true);
+        $menu['menu.rawcooked']->addChild('menu.rawcooked.about', ['route' => 'rawcooked_home']);
+        $menu['menu.rawcooked']->addChild('menu.rawcooked.download', ['route' => 'rawcooked_download']);
 
         $menu = $this->projectsMenu($menu);
         $menu = $this->supportUsMenu($menu);

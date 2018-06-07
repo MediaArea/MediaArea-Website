@@ -1,0 +1,27 @@
+{% extends 'RAWcookedBundle::base.html.twig' %}
+
+{% block title %}RAWcooked - Download RAWcooked for Mageia{% endblock %}
+
+{% block body %}
+<h1>Download - Mageia</h1>
+{% image '@AppBundle/Resources/public/img/OS/Mageia.png' %}
+<img src="{{ asset_url }}" alt="Mageia" title="Mageia" width="250" height="89"><br />
+{% endimage %}
+
+<div class="table-responsive">
+<table class="download table table-bordered table-condensed">
+<thead>
+<tr class="table-header">
+    <th>Version</th>
+    <th>Architecture</th>
+    <th>Interface</th>
+    <td>Version</td>
+    <td>Comment</td>
+</tr>
+</thead>
+<tbody>
+{{ include('@RAWcooked/Download/mageiaTable.html.twig') }}
+</tbody>
+</table>
+</div>
+{% endblock %}

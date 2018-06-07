@@ -1,0 +1,27 @@
+{% extends 'RAWcookedBundle::base.html.twig' %}
+
+{% block title %}RAWcooked - Download RAWcooked for CentOS{% endblock %}
+
+{% block body %}
+<h1>Download - CentOS</h1>
+{% image '@AppBundle/Resources/public/img/OS/CentOS.png' %}
+<img src="{{ asset_url }}" alt="CentOS" title="CentOS" width="271" height="60"><br />
+{% endimage %}
+
+<div class="table-responsive">
+<table class="download table table-bordered table-condensed">
+<thead>
+<tr class="table-header">
+    <th>Version</th>
+    <th>Architecture</th>
+    <th>Interface</th>
+    <td>Version</td>
+    <td>Comment</td>
+</tr>
+</thead>
+<tbody>
+{{ include('@RAWcooked/Download/centosTable.html.twig') }}
+</tbody>
+</table>
+</div>
+{% endblock %}
