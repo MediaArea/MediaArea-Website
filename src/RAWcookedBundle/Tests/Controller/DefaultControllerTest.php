@@ -16,4 +16,13 @@ class DefaultControllerTest extends WebTestCase
         $this->assertEquals('RAWcooked', $crawler->filter('h1')->text());
         $this->assertEquals('RAWcooked', trim($crawler->filter('#main-navbar ul.nav li.active a')->text()));
     }
+
+    public function testLicense()
+    {
+        $client = static::createClient();
+
+        $crawler = $client->request('GET', '/RAWcooked/License');
+
+        $this->assertEquals(200, $client->getResponse()->getStatusCode());
+    }
 }

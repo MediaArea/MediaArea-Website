@@ -2,3 +2,7 @@ services:
 #    raw_cooked.example:
 #        class: RAWcookedBundle\Example
 #        arguments: ["@service_id", "plain_value", "%parameter%"]
+
+    rawcooked.download_info:
+        class: RAWcookedBundle\Lib\DownloadInfo\RAWcookedDownloadInfo
+        public: true

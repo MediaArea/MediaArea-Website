@@ -6,6 +6,14 @@
         <source><![CDATA[menu.rawcooked]]></source>
         <target><![CDATA[RAWcooked]]></target>
       </trans-unit>
+      <trans-unit id="menu.rawcooked.about" approved="yes">
+        <source><![CDATA[menu.rawcooked.about]]></source>
+        <target><![CDATA[About]]></target>
+      </trans-unit>
+      <trans-unit id="menu.rawcooked.download" approved="yes">
+        <source><![CDATA[menu.rawcooked.download]]></source>
+        <target><![CDATA[Download]]></target>
+      </trans-unit>
     </body>
   </file>
 </xliff>
