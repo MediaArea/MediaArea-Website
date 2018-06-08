@@ -36,7 +36,7 @@ class PublicPoliciesController extends BaseController
         // Init MediaConch-Server-ID
         $init->init();
 
-        return [];
+        return ['noAds' => true];
     }
 
     /**
