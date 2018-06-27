@@ -78,6 +78,20 @@ class DownloadController extends Controller
 
     /**
      * @Route(
+     *     "/{_locale}/MediaInfo/Download/Snap",
+     *     name="mi_download_snap",
+     *     requirements={"_locale": "%app.locales%"
+     *     }
+     * )
+     * @Template()
+     */
+    public function snapAction()
+    {
+        return array();
+    }
+
+    /**
+     * @Route(
      *     "/{_locale}/MediaInfo/Download/Debian",
      *     name="mi_download_debian",
      *     requirements={"_locale": "%app.locales%"

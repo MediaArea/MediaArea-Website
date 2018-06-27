@@ -38,6 +38,12 @@
     <td><a href="{{ path('mi_download_flatpak') }}">{% trans %}download.table.official_release{% endtrans %}</a></td>
 </tr>
 <tr>
+    {% image '@AppBundle/Resources/public/img/OS/Snap.png' %}
+    <th><a href="{{ path('mi_download_snap') }}"><img src="{{ asset_url }}" width="250" height="80" alt="Snap" title="Snap"></a></th>
+    {% endimage %}
+    <td><a href="{{ path('mi_download_snap') }}">{% trans %}download.table.official_release{% endtrans %}</a></td>
+</tr>
+<tr>
     {% image '@AppBundle/Resources/public/img/OS/Debian.png' %}
     <th><a href="{{ path('mi_download_debian') }}"><img src="{{ asset_url }}" width="229" height="61" alt="Debian" title="Debian"></a></th>
     {% endimage %}

@@ -90,6 +90,12 @@
     <td><a href="{{ path('mc_download_flatpak') }}">MediaArea releases</a></td>
 </tr>
 <tr>
+    {% image '@AppBundle/Resources/public/img/OS/Snap.png' %}
+    <th><a href="{{ path('mc_download_snap') }}"><img src="{{ asset_url }}" width="250" height="80" alt="Snap" title="Snap"></a></th>
+    {% endimage %}
+    <td><a href="{{ path('mc_download_snap') }}">MediaArea releases</a></td>
+</tr>
+<tr>
     {% image '@AppBundle/Resources/public/img/OS/AppImage.png' %}
     <th><a href="{{ path('mc_download_appimage') }}"><img src="{{ asset_url }}" width="250" height="76" alt="AppImage" title="AppImage"></a></th>
     {% endimage %}

@@ -1,0 +1,26 @@
+{% extends 'MediaConchBundle::base.html.twig' %}
+
+{% block title %}MediaConch - Download Snap package for all Linux distributions{% endblock %}
+
+{% block body %}
+<h1>Download - Snap</h1>
+{% image '@AppBundle/Resources/public/img/OS/Snap.png' %}
+<img src="{{ asset_url }}" alt="Snap" title="Snap" width="250" height="80"><br>
+{% endimage %}
+
+<div class="table-responsive">
+<table class="download table table-bordered table-condensed">
+<thead>
+<tr class="table-header">
+    <th>Architecture</th>
+    <th>Interface</th>
+    <th>Version</th>
+    <th>Comment</th>
+</tr>
+</thead>
+<tbody>
+{{ include('@MediaConch/Download/snapTable.html.twig') }}
+</tbody>
+</table>
+</div>
+{% endblock %}

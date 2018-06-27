@@ -1,0 +1,28 @@
+{% extends 'MediaInfoBundle::base.html.twig' %}
+
+{% block title %}{% trans %}download.snap.page.title{% endtrans %}{% endblock %}
+{% block description %}{% trans %}about.page.description{% endtrans %}{% endblock %}
+{% block keywords %}{% trans %}about.page.keywords{% endtrans %}{% endblock %}
+
+{% block body %}
+<h1>{% trans %}download.snap.title{% endtrans %}</h1>
+{% image '@AppBundle/Resources/public/img/OS/Snap.png' %}
+<img src="{{ asset_url }}" alt="Snap" title="Snap" width="250" height="80"><br />
+{% endimage %}
+
+<div class="table-responsive">
+<table class="download table table-bordered table-condensed">
+<thead>
+<tr class="table-header">
+    <th>Architecture</th>
+    <th>Interface</th>
+    <th>Version</th>
+    <th>Comment</th>
+</tr>
+</thead>
+<tbody>
+{{ include('@MediaInfo/Download/snapTable.html.twig') }}
+</tbody>
+</table>
+</div>
+{% endblock %}

@@ -58,6 +58,15 @@ class DownloadController extends Controller
     }
 
     /**
+     * @Route("/Snap", name="mc_download_snap")
+     * @Template()
+     */
+    public function snapAction()
+    {
+        return [];
+    }
+
+    /**
      * @Route("/Debian", name="mc_download_debian")
      * @Template()
      */
