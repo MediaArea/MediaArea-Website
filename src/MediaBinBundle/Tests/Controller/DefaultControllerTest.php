@@ -8,7 +8,7 @@ class DefaultControllerTest extends UserAbstractControllerTest
 {
     public function testIndex()
     {
-        // User not loggued in (beta period)
+        // User not logged in (beta period)
         $client = static::createClient();
         $crawler = $client->request('GET', '/MediaBin');
         $this->assertEquals(200, $client->getResponse()->getStatusCode());
@@ -20,7 +20,7 @@ class DefaultControllerTest extends UserAbstractControllerTest
         );
         $this->assertEquals(0, $crawler->filter('.panel-listing-user')->count());
 
-        // User loggued in
+        // User logged in
         $client = $this->createRegularUserClient();
         $crawler = $client->request('GET', '/MediaBin');
         $this->assertEquals(200, $client->getResponse()->getStatusCode());

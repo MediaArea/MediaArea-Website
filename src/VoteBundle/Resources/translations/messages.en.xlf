@@ -71,7 +71,7 @@
         </trans-unit>
         <trans-unit id="vote.feature.vote.login" approved="yes">
             <source>vote.feature.vote.login</source>
-            <target><![CDATA[You need to be <a href="%login%" class="alert-link">loggued</a> to vote for this feature]]></target>
+            <target><![CDATA[You need to be <a href="%login%" class="alert-link">logged</a> to vote for this feature]]></target>
         </trans-unit>
         <trans-unit id="vote.feature.vote.low" approved="yes">
             <source>vote.feature.vote.low</source>

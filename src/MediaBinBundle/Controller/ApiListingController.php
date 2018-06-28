@@ -24,7 +24,7 @@ class ApiListingController extends Controller
     {
         $user = $this->getUser();
         if (!is_object($user) || !$user instanceof UserInterface) {
-            return new JsonResponse(['error' => 'User not loggued'], 401);
+            return new JsonResponse(['error' => 'User not logged'], 401);
         }
 
         (int) $start = $request->query->get('start', 0);

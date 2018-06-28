@@ -8,17 +8,17 @@ class DefaultControllerTest extends UserAbstractControllerTest
 {
     public function testAbout()
     {
-        // User not loggued in
+        // User not logged in
         $client = static::createClient();
         $client->request('GET', '/SupportUs');
         $this->assertEquals(200, $client->getResponse()->getStatusCode());
 
-        // User loggued in without ROLE_BETA
+        // User logged in without ROLE_BETA
         $client = $this->createRegularUserClient();
         $client->request('GET', '/SupportUs');
         $this->assertEquals(200, $client->getResponse()->getStatusCode());
 
-        // User loggued in with ROLE_BETA
+        // User logged in with ROLE_BETA
         $client = $this->createBetaUserClient();
         $crawler = $client->request('GET', '/SupportUs');
         $this->assertEquals(200, $client->getResponse()->getStatusCode());

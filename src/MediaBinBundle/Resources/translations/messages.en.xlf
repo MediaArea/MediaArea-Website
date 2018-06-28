@@ -16,7 +16,7 @@
       </trans-unit>
       <trans-unit id="mediabin.intro" approved="yes">
         <source><![CDATA[mediabin.intro]]></source>
-        <target><![CDATA[MediaBin is a tool for sharing your MediaInfo reports.<br>To create a MediaBin for now you have to analyze a file with <a href="%mediainfoonline%">MediaInfoOnline</a> (you will be a able to do it with <a href="%mediainfo%">MediaInfo</a> software soon).<br>Below are the list of the public MediaBin shared by our users and yours if you have ones and are <a href="%login%">loggued in</a>.]]></target>
+        <target><![CDATA[MediaBin is a tool for sharing your MediaInfo reports.<br>To create a MediaBin for now you have to analyze a file with <a href="%mediainfoonline%">MediaInfoOnline</a> (you will be a able to do it with <a href="%mediainfo%">MediaInfo</a> software soon).<br>Below are the list of the public MediaBin shared by our users and yours if you have ones and are <a href="%login%">logged in</a>.]]></target>
       </trans-unit>
       <trans-unit id="mediabin.list.public" approved="yes">
         <source><![CDATA[mediabin.list.public]]></source>
