@@ -30,7 +30,7 @@ class ApiController extends Controller implements GuestControllerInterface
     {
         $user = $this->getUser();
         if (!is_object($user) || !$user instanceof UserInterface) {
-            return new JsonResponse(['error' => 'User not loggued'], 401);
+            return new JsonResponse(['error' => 'User not logged'], 401);
         }
 
         // Get the XML
@@ -154,7 +154,7 @@ class ApiController extends Controller implements GuestControllerInterface
     protected function checkBinOwner($user, $binOwner)
     {
         if (!is_object($user) || !$user instanceof UserInterface) {
-            return new JsonResponse(['error' => 'User not loggued'], 401);
+            return new JsonResponse(['error' => 'User not logged'], 401);
         }
 
         if ($user != $binOwner) {
