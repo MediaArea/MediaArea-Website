@@ -14,6 +14,7 @@
     "require": {
         "php": ">=5.5.9",
         "brightnucleus/geolite2-country": "^0.2.3",
+        "doctrine/common": "~2.7.0|~2.8.0",
         "doctrine/doctrine-bundle": "^1.6",
         "doctrine/doctrine-migrations-bundle": "^1.0",
         "doctrine/orm": "^2.5",
