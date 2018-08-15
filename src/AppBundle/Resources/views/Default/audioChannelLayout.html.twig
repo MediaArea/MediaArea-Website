@@ -1,0 +1,1024 @@
+{% extends 'AppBundle::base.html.twig' %}
+
+{% block title %}Audio Channel Layout{% endblock %}
+
+{% block stylesheets %}
+<style>
+table, th, td {
+  border: 1px solid black;
+  padding-right:1px;
+  padding-left:1px;
+}
+.ColHeader{
+ 	vertical-align:top;
+  word-wrap:break-word;
+ 	background:#F0F0F0;
+}
+.LineHeader{
+ 	background:#F0F0F0;
+}
+.ChannelSure{
+ 	vertical-align:middle;
+ 	background:#B0D080;
+}
+.ChannelUnsure{
+ 	vertical-align:middle;
+ 	background:#D0D080;
+}
+</style>
+{% endblock %}
+
+{% block body %}
+<h1>Audio channel layout mapping between AAC, AC-3, E-AC-3, TrueHD, Atmos, DTS, DTS-HD, USAC, BS 2051, IEC 62574, QuickTime, WAVE...</h1>
+
+<p>We try at MediaArea to have a common output whatever is the format, in order to be able to compare formats.<br>
+Unfortunately, each audio format "vendor" has its own method for naming channels, and worse it sometimes change over time.<br>
+Below is an attempt to map each names of channels for each audio format specification to a common name in <a href="{{ path('mi_home') }}">MediaInfo</a> and other tools developed by MediaArea.</p>
+
+<p>Disclaimer: nothing "official" from any standardization body, this attempt is just for us but may be useful for someone else so we make the mapping public. As every standardization body and format vendor has different point of view on channel location, there are definitely some disagreements but if you think that there is an issue with an obvious fix don't hesitate to contact us for debating about it.</p>
+
+<p>This page contains:
+<ul>
+<li>A table with for each channel a generic description, its classicly used azimuth and elevation, the expected mapping from each format specification, the channel name used in channel layout field by <a href="{{ path('mi_home') }}">MediaInfo</a> 18.08 and later</li>
+<li>An image showing how we split the space surround the user (names used are the one from <a href="{{ path('mi_home') }}">MediaInfo</a> 18.08 and later)</li> 
+<li>Some remarks about the mapping, when the mapping is not obvious and/or has some known issues</li> 
+<li>Some references / links</li> 
+</ul>
+</p>
+
+<div>
+<h2>Audio channel layout mapping</h2>
+
+<table>
+ <tr>
+  <th class="ColHeader">Generic<br>Descriptive<br>Name</th>
+  <th class="ColHeader"><abbr title="Elevation">&#8597;</abbr></th>
+  <th class="ColHeader"><abbr title="Azimuth">&#8596;</abbr></th>
+  <th class="ColHeader">ST<br>428-12<br>2013</th>
+  <th class="ColHeader">BS<br>2051-0<br>System&nbsp;H<br>+ IEC<br>62574</th>
+  <th class="ColHeader">TS<br>102<br>366<br>v1.4.1<br>(E-AC-3)</th>
+  <th class="ColHeader">TS<br>103<br>420<br>v1.1.1<br>(JOC)</th>
+  <th class="ColHeader">TS<br>103<br>190-1<br>v1.3.1<br>(AC-4)</th>
+  <th class="ColHeader">TS<br>102<br>366<br>v1.4.2<br>(E-AC-3)<br>draft</th>
+  <th class="ColHeader">TS<br>103<br>420<br>v1.2.1<br>(JOC)<br>draft</th>
+  <th class="ColHeader">TS<br>103<br>190-1<br>v1.4.1<br>(AC-4)<br>draft</th>
+  <th class="ColHeader">Quick<br>Time</th>
+  <th class="ColHeader">TS<br>102<br>114<br>v1.4.1<br>(DTS)</th>
+  <th class="ColHeader">TS<br>102<br>114<br>v1.4.1<br>(DTS<br>-HD)</th>
+  <th class="ColHeader">Micro<br>soft<br>WAV</th>
+  <th class="ColHeader">MPEG<br>(AAC,<br>USAC)</th>
+  <th class="ColHeader">MediaInfo<br>Name</th>
+ </tr>
+ <tr>
+  <td class="LineHeader">Bottom Front Centre</td>
+  <td class="LineHeader" align="right">-30</td>
+  <td class="LineHeader" align="right">0</td>
+  <td></td>
+  <td class="ChannelSure">BtFC</td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td class="ChannelSure">Bfc</td>
+  <td></td>
+  <td></td>
+  <td class="ChannelSure">CI</td>
+  <td></td>
+  <td class="ChannelSure">Cb</td>
+  <td>Bfc</td>
+ </tr>
+ <tr>
+  <td class="LineHeader">Bottom Front Left</td>
+  <td class="LineHeader" align="right">-30</td>
+  <td class="LineHeader" align="right">45</td>
+  <td></td>
+  <td class="ChannelSure">BtFL</td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td class="ChannelUnsure">Bfl</td>
+  <td></td>
+  <td></td>
+  <td class="ChannelUnsure">LI</td>
+  <td></td>
+  <td class="ChannelUnsure">Lb</td>
+  <td>Bfl</td>
+ </tr>
+ <tr>
+  <td class="LineHeader">Bottom Front Right</td>
+  <td class="LineHeader" align="right">-30</td>
+  <td class="LineHeader" align="right">-45</td>
+  <td></td>
+  <td class="ChannelSure">BtFR</td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td class="ChannelUnsure">Bfr</td>
+  <td></td>
+  <td></td>
+  <td class="ChannelUnsure">RI</td>
+  <td></td>
+  <td class="ChannelUnsure">Rb</td>
+  <td>Bfr</td>
+ </tr>
+ <tr>
+  <td class="LineHeader">Low-frequency Effects</td>
+  <td class="LineHeader" align="right">-30</td>
+  <td class="LineHeader" align="right">60</td>
+  <td class="ChannelSure">LFE</td>
+  <td class="ChannelSure">LFE1</td>
+  <td class="ChannelSure">LFE</td>
+  <td class="ChannelSure">LFE</td>
+  <td class="ChannelSure">LFE</td>
+  <td class="ChannelSure">LFE</td>
+  <td class="ChannelSure">LFE</td>
+  <td class="ChannelSure">LFE</td>
+  <td class="ChannelSure">LFE</td>
+  <td class="ChannelSure">LFE</td>
+  <td class="ChannelSure">LFE</td>
+  <td class="ChannelSure">LFE</td>
+  <td class="ChannelSure">LFE</td>
+  <td>LFE</td>
+ </tr>
+ <tr>
+  <td class="LineHeader">Low-frequency Effects 2</td>
+  <td class="LineHeader" align="right">-30</td>
+  <td class="LineHeader" align="right">-60</td>
+  <td></td>
+  <td class="ChannelSure">LFE2</td>
+  <td class="ChannelSure">LFE2</td>
+  <td class="ChannelSure">LFE2</td>
+  <td class="ChannelSure">LFE2</td>
+  <td class="ChannelSure">LFE2</td>
+  <td class="ChannelSure">LFE2</td>
+  <td class="ChannelSure">LFE2</td>
+  <td class="ChannelSure">LFE2</td>
+  <td></td>
+  <td class="ChannelSure">LFE2</td>
+  <td></td>
+  <td class="ChannelSure">LFE2</td>
+  <td>LFE2</td>
+ </tr>
+ <tr>
+  <td class="LineHeader">Half-way left screen</td>
+  <td class="LineHeader" align="right">0</td>
+  <td class="LineHeader" align="right">N/A</td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td class="ChannelSure">Hwbcal</td>
+  <td></td>
+ </tr>
+ <tr>
+  <td class="LineHeader">Half-way right screen</td>
+  <td class="LineHeader" align="right">0</td>
+  <td class="LineHeader" align="right">N/A</td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td class="ChannelSure">Hwbcalr</td>
+  <td></td>
+ </tr>
+ <tr>
+  <td class="LineHeader">Left
+  Screen</td>
+  <td class="LineHeader" align="right">0</td>
+  <td class="LineHeader" align="right">N/A</td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td class="ChannelUnsure">Lscr</td>
+  <td class="ChannelUnsure">Lscr</td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td class="ChannelSure">Leos</td>
+  <td>Lscr</td>
+ </tr>
+ <tr>
+  <td class="LineHeader">Right
+  Screen</td>
+  <td class="LineHeader" align="right">0</td>
+  <td class="LineHeader" align="right">N/A</td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td class="ChannelUnsure">Rscr</td>
+  <td class="ChannelUnsure">Rscr</td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td class="ChannelSure">Reos</td>
+  <td>Rscr</td>
+ </tr>
+ <tr>
+  <td class="LineHeader">Center</td>
+  <td class="LineHeader" align="right">0</td>
+  <td class="LineHeader" align="right">0</td>
+  <td class="ChannelSure">C</td>
+  <td class="ChannelSure">FC</td>
+  <td class="ChannelSure">C</td>
+  <td class="ChannelSure">C</td>
+  <td class="ChannelSure">C</td>
+  <td class="ChannelSure">C</td>
+  <td class="ChannelSure">C</td>
+  <td class="ChannelSure">C</td>
+  <td class="ChannelSure">C</td>
+  <td class="ChannelSure">C</td>
+  <td class="ChannelSure">C</td>
+  <td class="ChannelSure">FC</td>
+  <td class="ChannelSure">C</td>
+  <td>C</td>
+ </tr>
+ <tr>
+  <td rowspan=2 class="LineHeader">Center Left</td>
+  <td class="LineHeader" align="right">0</td>
+  <td class="LineHeader" align="right">15</td>
+  <td class="ChannelSure">Lc</td>
+  <td class="ChannelSure"></td>
+  <td class="ChannelUnsure">Lc</td>
+  <td></td>
+  <td class="ChannelUnsure">Lc</td>
+  <td class="ChannelUnsure">N/A</td>
+  <td></td>
+  <td class="ChannelUnsure">N/A</td>
+  <td class="ChannelUnsure">Lc</td>
+  <td></td>
+  <td class="ChannelSure">Lc</td>
+  <td class="ChannelUnsure"></td>
+  <td class="ChannelUnsure"></td>
+  <td rowspan=2>Lc</td>
+ </tr>
+ <tr>
+  <td class="LineHeader" align="right">0</td>
+  <td class="LineHeader" align="right">22</td>
+  <td class="ChannelSure"></td>
+  <td class="ChannelSure">FLc</td>
+  <td class="ChannelUnsure"></td>
+  <td></td>
+  <td class="ChannelUnsure"></td>
+  <td class="ChannelUnsure"></td>
+  <td></td>
+  <td class="ChannelUnsure"></td>
+  <td class="ChannelUnsure"></td>
+  <td></td>
+  <td class="ChannelSure"></td>
+  <td class="ChannelUnsure">FLC</td>
+  <td class="ChannelUnsure">Lc</td>
+ </tr>
+ <tr>
+  <td rowspan=2 class="LineHeader">Center Right</td>
+  <td class="LineHeader" align="right">0</td>
+  <td class="LineHeader" align="right">-15</td>
+  <td class="ChannelSure">Rc</td>
+  <td class="ChannelSure"></td>
+  <td class="ChannelUnsure">Rc</td>
+  <td></td>
+  <td class="ChannelUnsure">Rc</td>
+  <td class="ChannelUnsure">N/A</td>
+  <td></td>
+  <td class="ChannelUnsure">N/A</td>
+  <td class="ChannelUnsure">Rc</td>
+  <td></td>
+  <td class="ChannelSure">Rc</td>
+  <td class="ChannelUnsure"></td>
+  <td class="ChannelUnsure"></td>
+  <td rowspan=2>Rc</td>
+ </tr>
+ <tr>
+  <td class="LineHeader" align="right">0</td>
+  <td class="LineHeader" align="right">-22</td>
+  <td class="ChannelSure"></td>
+  <td class="ChannelSure">FRc</td>
+  <td class="ChannelUnsure"></td>
+  <td></td>
+  <td class="ChannelUnsure"></td>
+  <td class="ChannelUnsure"></td>
+  <td></td>
+  <td class="ChannelUnsure"></td>
+  <td class="ChannelUnsure"></td>
+  <td></td>
+  <td class="ChannelSure"></td>
+  <td class="ChannelUnsure">FRC</td>
+  <td class="ChannelUnsure">Rc</td>
+ </tr>
+ <tr>
+  <td rowspan=2 class="LineHeader">Left</td>
+  <td class="LineHeader" align="right">0</td>
+  <td class="LineHeader" align="right">30</td>
+  <td class="ChannelSure">L</td>
+  <td class="ChannelSure"></td>
+  <td class="ChannelUnsure">L</td>
+  <td class="ChannelUnsure">L</td>
+  <td class="ChannelUnsure">L</td>
+  <td class="ChannelUnsure">L</td>
+  <td class="ChannelUnsure">L</td>
+  <td class="ChannelUnsure">L</td>
+  <td class="ChannelUnsure">L</td>
+  <td class="ChannelSure">L</td>
+  <td class="ChannelSure">L</td>
+  <td class="ChannelSure"></td>
+  <td class="ChannelUnsure"></td>
+  <td rowspan=2>L</td>
+ </tr>
+ <tr>
+  <td class="LineHeader" align="right">0</td>
+  <td class="LineHeader" align="right">45</td>
+  <td class="ChannelSure"></td>
+  <td class="ChannelSure">FL</td>
+  <td class="ChannelUnsure"></td>
+  <td class="ChannelUnsure"></td>
+  <td class="ChannelUnsure"></td>
+  <td class="ChannelUnsure"></td>
+  <td class="ChannelUnsure"></td>
+  <td class="ChannelUnsure"></td>
+  <td class="ChannelUnsure"></td>
+  <td class="ChannelSure"></td>
+  <td class="ChannelSure"></td>
+  <td class="ChannelSure">FL</td>
+  <td class="ChannelUnsure">L</td>
+ </tr>
+ <tr>
+  <td rowspan=2 class="LineHeader">Right</td>
+  <td class="LineHeader" align="right">0</td>
+  <td class="LineHeader" align="right">-30</td>
+  <td class="ChannelSure">R</td>
+  <td class="ChannelSure"></td>
+  <td class="ChannelUnsure">R</td>
+  <td class="ChannelUnsure">R</td>
+  <td class="ChannelUnsure">R</td>
+  <td class="ChannelUnsure">R</td>
+  <td class="ChannelUnsure">R</td>
+  <td class="ChannelUnsure">R</td>
+  <td class="ChannelUnsure">R</td>
+  <td class="ChannelSure">R</td>
+  <td class="ChannelSure">R</td>
+  <td class="ChannelSure"></td>
+  <td class="ChannelUnsure"></td>
+  <td rowspan=2>R</td>
+ </tr>
+ <tr>
+  <td class="LineHeader" align="right">0</td>
+  <td class="LineHeader" align="right">-45</td>
+  <td class="ChannelSure"></td>
+  <td class="ChannelSure">FR</td>
+  <td class="ChannelUnsure"></td>
+  <td class="ChannelUnsure"></td>
+  <td class="ChannelUnsure"></td>
+  <td class="ChannelUnsure"></td>
+  <td class="ChannelUnsure"></td>
+  <td class="ChannelUnsure"></td>
+  <td class="ChannelUnsure"></td>
+  <td class="ChannelSure"></td>
+  <td class="ChannelSure"></td>
+  <td class="ChannelSure">FR</td>
+  <td class="ChannelUnsure">R</td>
+ </tr>
+ <tr>
+  <td class="LineHeader">Left Front Wide</td>
+  <td class="LineHeader" align="right">0</td>
+  <td class="LineHeader" align="right">60</td>
+  <td></td>
+  <td class="ChannelUnsure">FLw</td>
+  <td class="ChannelUnsure">Lw</td>
+  <td class="ChannelUnsure">Lw</td>
+  <td class="ChannelUnsure">Lw</td>
+  <td class="ChannelUnsure">Lw</td>
+  <td class="ChannelUnsure">Lw</td>
+  <td class="ChannelUnsure">Lw</td>
+  <td class="ChannelUnsure">Lw</td>
+  <td></td>
+  <td class="ChannelUnsure">Lw</td>
+  <td></td>
+  <td class="ChannelUnsure">Lw</td>
+  <td>Lw</td>
+ </tr>
+ <tr>
+  <td class="LineHeader">Right Front Wide</td>
+  <td class="LineHeader" align="right">0</td>
+  <td class="LineHeader" align="right">-60</td>
+  <td></td>
+  <td class="ChannelUnsure">FRw</td>
+  <td class="ChannelUnsure">Rw</td>
+  <td class="ChannelUnsure">Rw</td>
+  <td class="ChannelUnsure">Rw</td>
+  <td class="ChannelUnsure">Rw</td>
+  <td class="ChannelUnsure">Rw</td>
+  <td class="ChannelUnsure">Rw</td>
+  <td class="ChannelUnsure">Rw</td>
+  <td></td>
+  <td class="ChannelUnsure">Rw</td>
+  <td></td>
+  <td class="ChannelUnsure">Rw</td>
+  <td>Rw</td>
+ </tr>
+ <tr>
+  <td class="LineHeader">Left Side Surround</td>
+  <td class="LineHeader" align="right">0</td>
+  <td class="LineHeader" align="right">90</td>
+  <td class="ChannelSure">Lss</td>
+  <td class="ChannelSure">SiL</td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td class="ChannelSure">Lss</td>
+  <td></td>
+  <td class="ChannelUnsure">Lss</td>
+  <td>Lss</td>
+ </tr>
+ <tr>
+  <td class="LineHeader">Right Side Surround</td>
+  <td class="LineHeader" align="right">0</td>
+  <td class="LineHeader" align="right">-90</td>
+  <td class="ChannelSure">Rss</td>
+  <td class="ChannelSure">SiR</td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td class="ChannelSure">Rss</td>
+  <td></td>
+  <td class="ChannelUnsure">Rss</td>
+  <td>Rss</td>
+ </tr>
+ <tr>
+  <td class="LineHeader">Left Surround</td>
+  <td class="LineHeader" align="right">0</td>
+  <td class="LineHeader" align="right">110</td>
+  <td class="ChannelSure">Ls</td>
+  <td class="ChannelUnsure">LS</td>
+  <td class="ChannelUnsure">Ls</td>
+  <td class="ChannelUnsure">Ls</td>
+  <td class="ChannelUnsure">Ls</td>
+  <td class="ChannelUnsure"></td>
+  <td class="ChannelUnsure">Ls</td>
+  <td class="ChannelUnsure">Ls</td>
+  <td class="ChannelUnsure">Ls</td>
+  <td class="ChannelSure">CL</td>
+  <td class="ChannelSure">Ls</td>
+  <td class="ChannelSure">SL</td>
+  <td class="ChannelUnsure">Ls</td>
+  <td>Ls</td>
+ </tr>
+ <tr>
+  <td class="LineHeader">Right Surround</td>
+  <td class="LineHeader" align="right">0</td>
+  <td class="LineHeader" align="right">-110</td>
+  <td class="ChannelSure">Rs</td>
+  <td class="ChannelUnsure">RS</td>
+  <td class="ChannelUnsure">Rs</td>
+  <td class="ChannelUnsure">Rs</td>
+  <td class="ChannelUnsure">Rs</td>
+  <td class="ChannelUnsure"></td>
+  <td class="ChannelUnsure">Rs</td>
+  <td class="ChannelUnsure">Rs</td>
+  <td class="ChannelUnsure">Rs</td>
+  <td class="ChannelSure">CR</td>
+  <td class="ChannelSure">Rs</td>
+  <td class="ChannelSure">SR</td>
+  <td class="ChannelUnsure">Rs</td>
+  <td>Rs</td>
+ </tr>
+ <tr>
+  <td class="LineHeader">Left Surround Direct</td>
+  <td class="LineHeader" align="right">0</td>
+  <td class="LineHeader" align="right">N/A</td>
+  <td></td>
+  <td class="ChannelUnsure">LSd</td>
+  <td class="ChannelUnsure">Lsd</td>
+  <td></td>
+  <td></td>
+  <td class="ChannelUnsure">N/A</td>
+  <td></td>
+  <td></td>
+  <td class="ChannelUnsure">Lsd</td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td class="ChannelUnsure">Lsd</td>
+  <td>Lsd</td>
+ </tr>
+ <tr>
+  <td class="LineHeader">Right Surround Direct</td>
+  <td class="LineHeader" align="right">0</td>
+  <td class="LineHeader" align="right">N/A</td>
+  <td></td>
+  <td class="ChannelUnsure">RSd</td>
+  <td class="ChannelUnsure">Rsd</td>
+  <td></td>
+  <td></td>
+  <td class="ChannelUnsure">N/A</td>
+  <td></td>
+  <td></td>
+  <td class="ChannelUnsure">Rsd</td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td class="ChannelUnsure">Rsd</td>
+  <td>Rsd</td>
+ </tr>
+ <tr>
+  <td rowspan=2 class="LineHeader">Left Rear Surround</td>
+  <td class="LineHeader" align="right">0</td>
+  <td class="LineHeader" align="right">135</td>
+  <td class="ChannelSure"></td>
+  <td class="ChannelSure">BL</td>
+  <td class="ChannelUnsure"></td>
+  <td class="ChannelUnsure"></td>
+  <td class="ChannelUnsure"></td>
+  <td class="ChannelUnsure"></td>
+  <td class="ChannelUnsure"></td>
+  <td class="ChannelUnsure"></td>
+  <td class="ChannelUnsure"></td>
+  <td class="ChannelSure"></td>
+  <td class="ChannelSure"></td>
+  <td class="ChannelSure">BL</td>
+  <td class="ChannelUnsure">Lsr</td>
+  <td rowspan=2>Lb</td>
+ </tr>
+ <tr>
+  <td class="LineHeader" align="right">0</td>
+  <td class="LineHeader" align="right">150</td>
+  <td class="ChannelSure">Lrs</td>
+  <td class="ChannelSure"></td>
+  <td class="ChannelUnsure">Lrs</td>
+  <td class="ChannelUnsure">Lrs</td>
+  <td class="ChannelUnsure">Lrs</td>
+  <td class="ChannelUnsure">Lb</td>
+  <td class="ChannelUnsure">Lb</td>
+  <td class="ChannelUnsure">Lb</td>
+  <td class="ChannelUnsure">Lrs</td>
+  <td class="ChannelSure">SL</td>
+  <td class="ChannelSure">Lsr</td>
+  <td class="ChannelSure"></td>
+  <td class="ChannelUnsure"></td>
+ </tr>
+ <tr>
+  <td rowspan=2 class="LineHeader">Right Rear Surround</td>
+  <td class="LineHeader" align="right">0</td>
+  <td class="LineHeader" align="right">-135</td>
+  <td class="ChannelSure"></td>
+  <td class="ChannelSure">BR</td>
+  <td class="ChannelUnsure"></td>
+  <td class="ChannelUnsure"></td>
+  <td class="ChannelUnsure"></td>
+  <td class="ChannelUnsure"></td>
+  <td class="ChannelUnsure"></td>
+  <td class="ChannelUnsure"></td>
+  <td class="ChannelUnsure"></td>
+  <td class="ChannelSure"></td>
+  <td class="ChannelSure"></td>
+  <td class="ChannelSure">BR</td>
+  <td class="ChannelUnsure">Rsr</td>
+  <td rowspan=2>Rb</td>
+ </tr>
+ <tr>
+  <td class="LineHeader" align="right">0</td>
+  <td class="LineHeader" align="right">-150</td>
+  <td class="ChannelSure">Rrs</td>
+  <td class="ChannelSure"></td>
+  <td class="ChannelUnsure">Rrs</td>
+  <td class="ChannelUnsure">Rrs</td>
+  <td class="ChannelUnsure">Rrs</td>
+  <td class="ChannelUnsure">Rb</td>
+  <td class="ChannelUnsure">Rb</td>
+  <td class="ChannelUnsure">Rb</td>
+  <td class="ChannelUnsure">Rrs</td>
+  <td class="ChannelSure">SR</td>
+  <td class="ChannelSure">Rsr</td>
+  <td class="ChannelSure"></td>
+  <td class="ChannelUnsure"></td>
+ </tr>
+ <tr>
+  <td class="LineHeader">Back Centre</td>
+  <td class="LineHeader" align="right">0</td>
+  <td class="LineHeader" align="right">-180</td>
+  <td class="ChannelSure">Cs</td>
+  <td class="ChannelSure">BC</td>
+  <td class="ChannelSure">Cs</td>
+  <td></td>
+  <td class="ChannelSure">Cs</td>
+  <td></td>
+  <td class="ChannelSure">Cb</td>
+  <td class="ChannelSure">Cb</td>
+  <td class="ChannelSure">Cs</td>
+  <td class="ChannelSure">S</td>
+  <td class="ChannelSure">Cs</td>
+  <td class="ChannelSure">BC</td>
+  <td class="ChannelSure">Cs</td>
+  <td>Cb</td>
+ </tr>
+ <tr>
+  <td class="LineHeader">Top Front Centre</td>
+  <td class="LineHeader" align="right">45</td>
+  <td class="LineHeader" align="right">0</td>
+  <td></td>
+  <td class="ChannelSure">TpFC</td>
+  <td class="ChannelSure"><span title="aka Cvh">Vhc</span></td>
+  <td></td>
+  <td class="ChannelSure">Vhc</td>
+  <td></td>
+  <td class="ChannelSure">Tfc</td>
+  <td class="ChannelSure">Tfc</td>
+  <td class="ChannelSure">Vhc</td>
+  <td></td>
+  <td class="ChannelSure">Ch</td>
+  <td class="ChannelSure">TFC</td>
+  <td class="ChannelSure">Cv</td>
+  <td>Tfc</td>
+ </tr>
+ <tr>
+  <td class="LineHeader">Vertical Height Left</td>
+  <td class="LineHeader" align="right">45</td>
+  <td class="LineHeader" align="right">N/A</td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td class="ChannelUnsure">Vhl</td>
+  <td></td>
+  <td></td>
+  <td class="ChannelUnsure">N/A</td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td>Vhl</td>
+ </tr>
+ <tr>
+  <td class="LineHeader">Vertical Height Right</td>
+  <td class="LineHeader" align="right">45</td>
+  <td class="LineHeader" align="right">N/A</td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td class="ChannelUnsure">Vhr</td>
+  <td></td>
+  <td></td>
+  <td class="ChannelUnsure">N/A</td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td>Vhr</td>
+ </tr>
+ <tr>
+  <td class="LineHeader">Left Front High</td>
+  <td class="LineHeader" align="right">45</td>
+  <td class="LineHeader" align="right">45</td>
+  <td></td>
+  <td class="ChannelSure">TpFL</td>
+  <td class="ChannelUnsure">Lvh</td>
+  <td class="ChannelUnsure"><span title="aka Lvh">Lfh</span></td>
+  <td></td>
+  <td></td>
+  <td class="ChannelUnsure">Tfl</td>
+  <td class="ChannelUnsure">Tfl</td>
+  <td class="ChannelUnsure">Vhl</td>
+  <td></td>
+  <td class="ChannelUnsure">Lh</td>
+  <td class="ChannelUnsure">TFL</td>
+  <td class="ChannelUnsure">Lv</td>
+  <td>Tfl</td>
+ </tr>
+ <tr>
+  <td class="LineHeader">Right Front High</td>
+  <td class="LineHeader" align="right">45</td>
+  <td class="LineHeader" align="right">-45</td>
+  <td></td>
+  <td class="ChannelSure">TpFR</td>
+  <td class="ChannelUnsure">Rvh</td>
+  <td class="ChannelUnsure"><span title="aka Rvh">Rfh</span></td>
+  <td></td>
+  <td></td>
+  <td class="ChannelUnsure">Tfr</td>
+  <td class="ChannelUnsure">Tfr</td>
+  <td class="ChannelUnsure">Vhr</td>
+  <td></td>
+  <td class="ChannelUnsure">Rh</td>
+  <td class="ChannelUnsure">TFR</td>
+  <td class="ChannelUnsure">Rv</td>
+  <td>Tfr</td>
+ </tr>
+ <tr>
+  <td class="LineHeader">Left Top Middle</td>
+  <td class="LineHeader" align="right">45</td>
+  <td class="LineHeader" align="right">90</td>
+  <td></td>
+  <td class="ChannelSure">TpSiL</td>
+  <td class="ChannelUnsure">Lts</td>
+  <td class="ChannelUnsure">Ltm</td>
+  <td></td>
+  <td></td>
+  <td class="ChannelUnsure">Tsl</td>
+  <td class="ChannelUnsure">Tsl</td>
+  <td></td>
+  <td></td>
+  <td class="ChannelUnsure">Lhs</td>
+  <td></td>
+  <td class="ChannelUnsure">Lvss</td>
+  <td>Tsl</td>
+ </tr>
+ <tr>
+  <td class="LineHeader">Right Top Middle</td>
+  <td class="LineHeader" align="right">45</td>
+  <td class="LineHeader" align="right">-90</td>
+  <td></td>
+  <td class="ChannelSure">TpSiR</td>
+  <td class="ChannelUnsure">Rts</td>
+  <td class="ChannelUnsure">Rtm</td>
+  <td></td>
+  <td></td>
+  <td class="ChannelUnsure">Tsr</td>
+  <td class="ChannelUnsure">Tsr</td>
+  <td></td>
+  <td></td>
+  <td class="ChannelUnsure">Rhs</td>
+  <td></td>
+  <td class="ChannelUnsure">Rvss</td>
+  <td>Tsr</td>
+ </tr>
+ <tr>
+  <td class="LineHeader">Left Top Surround</td>
+  <td class="LineHeader" align="right">45</td>
+  <td class="LineHeader" align="right">110</td>
+  <td></td>
+  <td class="ChannelUnsure">TpLS</td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td class="ChannelUnsure">Lvs</td>
+  <td>Lvs</td>
+ </tr>
+ <tr>
+  <td class="LineHeader">Right Top Surround</td>
+  <td class="LineHeader" align="right">45</td>
+  <td class="LineHeader" align="right">-110</td>
+  <td></td>
+  <td class="ChannelUnsure">TpRS</td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td class="ChannelUnsure">Rvs</td>
+  <td>Rvs</td>
+ </tr>
+ <tr>
+  <td class="LineHeader">Left Rear High</td>
+  <td class="LineHeader" align="right">45</td>
+  <td class="LineHeader" align="right">135</td>
+  <td></td>
+  <td class="ChannelSure">TpBL</td>
+  <td></td>
+  <td class="ChannelUnsure">Lrh</td>
+  <td></td>
+  <td class="ChannelUnsure"></td>
+  <td class="ChannelUnsure">Tbl</td>
+  <td class="ChannelUnsure">Tbl</td>
+  <td></td>
+  <td></td>
+  <td class="ChannelUnsure">Lhr</td>
+  <td class="ChannelUnsure">TBL</td>
+  <td class="ChannelUnsure">Lvr</td>
+  <td>Tbl</td>
+ </tr>
+ <tr>
+  <td class="LineHeader">Right Rear High</td>
+  <td class="LineHeader" align="right">45</td>
+  <td class="LineHeader" align="right">-135</td>
+  <td></td>
+  <td class="ChannelSure">TpBR</td>
+  <td></td>
+  <td class="ChannelUnsure">Rrh</td>
+  <td></td>
+  <td class="ChannelUnsure"></td>
+  <td class="ChannelUnsure">Tbr</td>
+  <td class="ChannelUnsure">Tbr</td>
+  <td></td>
+  <td></td>
+  <td class="ChannelUnsure">Rhr</td>
+  <td class="ChannelUnsure">TBR</td>
+  <td class="ChannelUnsure">Rvr</td>
+  <td>Tbr</td>
+ </tr>
+ <tr>
+  <td class="LineHeader">Top Back Centre</td>
+  <td class="LineHeader" align="right">45</td>
+  <td class="LineHeader" align="right">180</td>
+  <td></td>
+  <td class="ChannelSure">TpBC</td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td class="ChannelSure">Tbc</td>
+  <td class="ChannelSure">Tbc</td>
+  <td></td>
+  <td></td>
+  <td class="ChannelSure">Chr</td>
+  <td class="ChannelSure">TBC</td>
+  <td class="ChannelSure">Cvr</td>
+  <td>Tbc</td>
+ </tr>
+ <tr>
+  <td class="LineHeader">Top Centre</td>
+  <td class="LineHeader" align="right">-90</td>
+  <td class="LineHeader" align="right">N/A</td>
+  <td></td>
+  <td class="ChannelSure">TpC</td>
+  <td class="ChannelSure">Ts</td>
+  <td></td>
+  <td class="ChannelSure">Ts</td>
+  <td class="ChannelSure"></td>
+  <td class="ChannelSure">Tc</td>
+  <td class="ChannelSure">Tc</td>
+  <td class="ChannelSure">Ts</td>
+  <td></td>
+  <td class="ChannelSure">Oh</td>
+  <td class="ChannelSure">TC</td>
+  <td class="ChannelSure">Ts</td>
+  <td>Tc</td>
+ </tr>
+ <tr>
+  <td class="LineHeader">Left Matrix Total</td>
+  <td class="LineHeader"></td>
+  <td class="LineHeader"></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td class="ChannelSure">Lt</td>
+  <td class="ChannelSure">Lt</td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td>Lt</td>
+ </tr>
+ <tr>
+  <td class="LineHeader">Right Matrix Total</td>
+  <td class="LineHeader"></td>
+  <td class="LineHeader"></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td class="ChannelSure">Rt</td>
+  <td class="ChannelSure">Rt</td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td>Rt</td>
+ </tr>
+ <tr>
+  <td class="LineHeader">Mono 1</td>
+  <td class="LineHeader"></td>
+  <td class="LineHeader"></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td>M</td>
+ </tr>
+ <tr>
+  <td class="LineHeader">Mono 2</td>
+  <td class="LineHeader"></td>
+  <td class="LineHeader"></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td>M</td>
+ </tr>
+</table>
+</div>
+
+<div>
+<h2>How we split the space surround the user</h2>
+<p>
+Outer circle: bottom layer.
+Middle circle: middle layer.
+Inner circles: up layer.
+Blue rectangle: the screen.
+Black rectangles: LFE.
+</p>
+
+{% image '@AppBundle/Resources/public/img/AudioChannelLayout.png' %}
+<img class="center-block" src="{{ asset_url }}" alt="Audio channel Layout graphic">
+{% endimage %}
+</div>
+
+<div>
+<h2>Remarks</h2>
+<ul>
+<li>Positive Azimuth is on the left (counterclockwise), negative azimuth is on the right (clockwise)</li>
+<li>Azimuth values are arbitrary choosen from our understanding of the most suitable location of corresponding hypothetical loudspeakers, specs may have a range (sometimes conflicting with another spec) or may have a slightly different location</li>
+<li>MediaInfo column is about names used by MediaInfo 18.08 and later</li>
+<li>Microsoft WAV: SL/SR is displayed as -90/+90 ("Side Surround") in several docs but they are usually used for -110/+110 ("Surround")</li>
+<li>BS 2051-0 System H: FL/FR is noted with "60" but Table 3 indicates that +/-45° is in tolerated range &amp; Table 7 displays them at +/-45°. IEC 62574:2011 maps FL/FR to L/R (usually between 30° and 45°)</li>
+<li>AC-4: L/R are mapped to FLc/FRc and Lw/Rw to FL/FR in table A.42 but it appears that this mapping is conflicting with USAC specifications which maps Lw/Rw to new FRw/FLw; additionally, Lw/Rw are intended to be at +/-60°</li>
+<li>AC-4: vhl/Vhr are synonym of Tfl and are deprecated</li>
+</ul>
+</div>
+
+<div>
+<h2>References / links</h2>
+<ul>
+<li><a href="https://ieeexplore.ieee.org/document/7291368/" target="_blank">SMPTE ST 428-12:2013</a>
+<li><a href="https://www.itu.int/dms_pubrec/itu-r/rec/bs/R-REC-BS.2051-0-201402-S!!PDF-E.pdf" target="_blank">ITU BS.2051-0</a></li>
+<li><a href="https://books.google.de/books?id=6grUOg_kkUgC&amp;pg=PA160" target="_blank">IEC 100/1706/CDV</a> with image about 22.2 channel layout using ITU BS.2051 System H names (found from a <a href="https://www.google.com/search?q=TpFL+tpFR+TpFC+TpBL">Google search</a>)</li>
+<li><a href="https://www.ecma-international.org/publications/files/ECMA-ST/ECMA-407.pdf" target="_blank">ECMA 407</a> used by USAC and includes channel position according to IEC 62574:2011 and has names similar to ITU BS.2051 but with more channel names</li>
+<li><a href="https://www.sis.se/api/document/preview/919377/" target="_blank">ISO/IEC 23001-8:2013/Amd 1:2015</a> also includes channel position according to IEC 62574:2011 with even more channel position names for MPEG related formats</li>
+<li><a href="https://www.etsi.org/deliver/etsi_ts/102300_102399/102366/01.04.01_60/ts_102366v010401p.pdf" target="_blank">ETSI TS 102 366 V1.4.1</a> used by AC-3 and E-AC-3</li>
+<li><a href="https://www.etsi.org/deliver/etsi_ts/103100_103199/10319002/01.01.01_60/ts_10319002v010101p.pdf" target="_blank">ETSI TS 103 190-2 V1.1.1</a> used by AC-4</li>
+<li><a href="https://www.etsi.org/deliver/etsi_ts/103100_103199/10319002/01.02.01_60/ts_10319002v010201p.pdf" target="_blank">ETSI TS 103 190-2 V1.2.1</a> used by AC-4</li>
+<li><a href="https://www.etsi.org/deliver/etsi_ts/103400_103499/103420/01.01.01_60/ts_103420v010101p.pdf" target="_blank">ETSI TS 103 420 V1.1.1</a> used by JOC (Atmos)</li>
+<li><a href="https://www.dolby.com/us/en/technologies/dolby-atmos/dolby-atmos-home-theater-installation-guidelines.pdf" target="_blank">Dolby Atmos guidelines</a> which indicates position of some channels</li>
+<li><a href="https://docs.microsoft.com/en-us/windows-hardware/drivers/ddi/content/ksmedia/ns-ksmedia-waveformatextensible" target="_blank">Microsoft WAVEFORMATEXTENSIBLE structure</a></li>
+<li><a href="https://docs.microsoft.com/en-us/windows-hardware/drivers/audio/channel-mask" target="_blank">Microsoft Channel Mask</a> with a image about the location of some channels</li>
+<li><a href="https://www.google.com/search?q=%22CoreAudioTypes.h%22" target="_blank">Apple CoreAudioTypes.h</a> used for QuickTime</li>
+</ul>
+</div>
+
+{% endblock %}
