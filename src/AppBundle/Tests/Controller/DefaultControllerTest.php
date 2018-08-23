@@ -66,6 +66,7 @@ class DefaultControllerTest extends UserAbstractControllerTest
             ['/TeamRules'],
             ['/Legal'],
             ['/Privacy'],
+            ['/AudioChannelLayout'],
             ['/en/DIVX'],
             ['/en/DX50'],
             ['/en/XVID'],

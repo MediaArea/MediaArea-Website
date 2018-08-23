@@ -110,4 +110,13 @@ class DefaultController extends Controller
     {
         return ['noAds' => true];
     }
+
+    /**
+     * @Route("/AudioChannelLayout", name="ma_audiochannellayout")
+     * @Template()
+     */
+    public function audioChannelLayoutAction()
+    {
+        return ['noAds' => true];
+    }
 }
