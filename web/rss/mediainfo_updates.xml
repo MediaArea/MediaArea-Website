@@ -5,7 +5,16 @@
         <link>https://mediaarea.net/MediaInfo</link>
         <description>MediaInfo updates feed</description>
         <language>en-us</language>
-        <lastBuildDate>Fri, 31 Aug 2018 12:00:00 +0000</lastBuildDate>
+        <lastBuildDate>Mon, 10 Sep 2018 12:00:00 +0000</lastBuildDate>
+         <item>
+            <title>MediaInfo 18.08.1</title>
+            <description>
+                <![CDATA[x Fix XML/MPEG-7/PBCore2 output discarding non ANSI characters]]>
+            </description>
+            <link>https://mediaarea.net/MediaInfo</link>
+            <pubDate>Mon, 10 Sep 2018 12:00:00 +0000</pubDate>
+            <guid>MediaInfo-18.08.1</guid>
+         </item>
          <item>
             <title>MediaInfo 18.08</title>
             <description>
