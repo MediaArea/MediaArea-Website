@@ -2,6 +2,10 @@ var supportUs = (function () {
     var currency,
         currencyMultiply;
 
+    var initCustom = function() {
+        paymentButtonsBindings();
+    };
+
     var initCorporate = function(corporateCurrency) {
         currency = corporateCurrency;
 
@@ -357,6 +361,7 @@ var supportUs = (function () {
     };
 
       return {
+          initCustom: initCustom,
           initCorporate: initCorporate,
           initIndividual: initIndividual,
       };

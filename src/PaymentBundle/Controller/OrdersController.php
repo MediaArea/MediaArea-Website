@@ -53,6 +53,21 @@ class OrdersController extends Controller
         );
     }
 
+    /**
+     * @Route("/{id}/payment/create/custom")
+     */
+    public function paymentCreateCustomAction(Order $order, Request $request)
+    {
+        return $this->paymentCreate(
+            $order,
+            $this->generateUrl(
+                'payment_orders_paymentcompletecustom',
+                ['id' => $order->getId(), 'routeParams' => $request->get('routeParams', [])]
+            ),
+            $this->generateUrl('supportUs_custom', $request->get('routeParams', []))
+        );
+    }
+
     private function paymentCreate(Order $order, $paymentCompleteUrl, $paymentErrorReturnUrl)
     {
         $payment = $this->createPayment($order);
@@ -117,6 +132,18 @@ class OrdersController extends Controller
         return $this->paymentComplete($request, $order, $this->generateUrl('supportUs_corporate'));
     }
 
+    /**
+     * @Route("/{id}/payment/complete/custom")
+     */
+    public function paymentCompleteCustomAction(Request $request, Order $order)
+    {
+        return $this->paymentComplete(
+            $request,
+            $order,
+            $this->generateUrl('supportUs_custom', $request->get('routeParams', []))
+        );
+    }
+
     private function paymentComplete(Request $request, Order $order, $paymentErrorUrl)
     {
         // Redirect if user have already completed his payment
@@ -143,7 +170,9 @@ class OrdersController extends Controller
         $ipToCurrency = new IpToCurrency($request->getClientIp());
         $message = sprintf(
             'Thank you, your payment of %s has been successfully processed',
-            $ipToCurrency->amountWithCurrency((int) $order->getAmount())
+            'custom' == $order->getType() ?
+                (int) $order->getAmount().' '.$order->getPaymentInstruction()->getCurrency() :
+                $ipToCurrency->amountWithCurrency((int) $order->getAmount())
         );
 
         $this->addFlash('success', $message);

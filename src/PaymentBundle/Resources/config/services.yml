@@ -3,7 +3,7 @@ services:
         class: PaymentBundle\EventListener\OrdersListener
         tags:
             - { name: kernel.event_listener, event: payment.state_change, method: onPaymentStateChange }
-        arguments: [ "@payment.invoice.create", "@security.token_storage", "@user.util.donor_manipulator", "@payment.clean.payment_instruction" ]
+        arguments: [ "@payment.invoice.create", "@security.token_storage", "@user.util.donor_manipulator", "@payment.clean.payment_instruction", "@doctrine.orm.entity_manager" ]
 
     payment.invoice.create:
         class: PaymentBundle\Lib\CreateInvoice

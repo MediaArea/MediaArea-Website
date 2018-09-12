@@ -42,7 +42,8 @@ class DefaultController extends Controller
             $request,
             'payment_orders_paymentcreateindividual',
             'supportUs_individual',
-            $ipToCurrency->getCurrency()
+            $ipToCurrency->getCurrency(),
+            'individual'
         );
 
         if ($form instanceof RedirectResponse) {
@@ -75,7 +76,8 @@ class DefaultController extends Controller
                 $request,
                 'payment_orders_paymentcreatecorporate',
                 'supportUs_corporate',
-                $ipToCurrency->getCurrency()
+                $ipToCurrency->getCurrency(),
+                'corporate'
             );
 
             if ($form instanceof RedirectResponse) {
@@ -92,11 +94,53 @@ class DefaultController extends Controller
         ];
     }
 
+    /**
+     * @Route("/SupportUs/Custom", name="supportUs_custom")
+     * @Template()
+     */
+    public function customAction(Request $request)
+    {
+        $ipToCountry = new IpToCountry($request->getClientIp());
+
+        if (!in_array($request->get('currency'), ['AUD', 'CAD', 'EUR', 'GBP', 'JPY', 'USD'])) {
+            $this->addFlash('danger', 'Currency error');
+        } else {
+            if (!$request->get('amount') || 1 > (int) $request->get('amount')) {
+                $this->addFlash('danger', 'Amount error');
+            } else {
+                $form = $this->paymentForm(
+                    $request,
+                    'payment_orders_paymentcreatecustom',
+                    'supportUs_custom',
+                    $request->get('currency'),
+                    'custom',
+                    ['amount' => (int) $request->get('amount'), 'currency' => $request->get('currency')],
+                    (int) $request->get('amount')
+                );
+
+                if ($form instanceof RedirectResponse) {
+                    return $form;
+                }
+            }
+        }
+
+        return [
+            'noAds' => true,
+            'country' => $ipToCountry,
+            'currency' => $request->get('currency'),
+            'amount' => $request->get('amount'),
+            'form' => isset($form) ? $form->createView() : false,
+        ];
+    }
+
     protected function paymentForm(
         Request $request,
         string $returnRoute,
         string $cancelRoute,
-        string $currency
+        string $currency,
+        string $type = 'individual',
+        array $cancelRouteParams = [],
+        int $amount = 1
     ) {
         if ('POST' === $request->getMethod() &&
             null !== $payment = $request->request->get('ma_choose_payment_method')) {
@@ -107,20 +151,25 @@ class DefaultController extends Controller
 
             $em = $this->getDoctrine()->getManager();
             $order = new Order($amount);
+            $order->setType($type);
             $em->persist($order);
             $em->flush($order);
 
             $returnUrl = $this->generateUrl(
                 $returnRoute,
-                ['id' => $order->getId()],
+                ['id' => $order->getId(), 'routeParams' => $cancelRouteParams],
                 UrlGeneratorInterface::ABSOLUTE_URL
             );
-            $cancerlUrl = $this->generateUrl($cancelRoute, [], UrlGeneratorInterface::ABSOLUTE_URL);
+            $cancerlUrl = $this->generateUrl(
+                $cancelRoute,
+                $cancelRouteParams,
+                UrlGeneratorInterface::ABSOLUTE_URL
+            );
         }
 
         $form = $this->createForm(ChoosePaymentMethodType::class, null, [
             'amount_field_type' => 'text',
-            'amount' => $amount ?? 1,
+            'amount' => $amount,
             'currency' => $currency,
             'default_method' => 'stripe_credit_card',
             'predefined_data' => [
@@ -154,7 +203,9 @@ class DefaultController extends Controller
             $em->persist($order);
             $em->flush($order);
 
-            return $this->redirect($this->generateUrl($returnRoute, ['id' => $order->getId()]));
+            return $this->redirect(
+                $this->generateUrl($returnRoute, ['id' => $order->getId(), 'routeParams' => $cancelRouteParams])
+            );
         }
 
         return $form;
