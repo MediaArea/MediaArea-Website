@@ -41,7 +41,19 @@ class OrdersController extends Controller
         );
     }
 
-    public function paymentCreate(Order $order, $paymentCompleteUrl, $paymentErrorReturnUrl)
+    /**
+     * @Route("/{id}/payment/create/corporate")
+     */
+    public function paymentCreateCorporateAction(Order $order)
+    {
+        return $this->paymentCreate(
+            $order,
+            $this->generateUrl('payment_orders_paymentcompletecorporate', ['id' => $order->getId()]),
+            $this->generateUrl('supportUs_corporate')
+        );
+    }
+
+    private function paymentCreate(Order $order, $paymentCompleteUrl, $paymentErrorReturnUrl)
     {
         $payment = $this->createPayment($order);
 
@@ -97,20 +109,28 @@ class OrdersController extends Controller
         return $this->paymentComplete($request, $order, $this->generateUrl('supportUs_individual'));
     }
 
-    public function paymentComplete(Request $request, Order $order, $paymentSuccessUrl)
+    /**
+     * @Route("/{id}/payment/complete/corporate")
+     */
+    public function paymentCompleteCorporateAction(Request $request, Order $order)
+    {
+        return $this->paymentComplete($request, $order, $this->generateUrl('supportUs_corporate'));
+    }
+
+    private function paymentComplete(Request $request, Order $order, $paymentErrorUrl)
     {
         // Redirect if user have already completed his payment
         if (Order::STATUS_COMPLETED === $order->getStatus()) {
             $this->addFlash('danger', 'Order already completed');
 
-            return $this->redirect($paymentSuccessUrl);
+            return $this->redirect($paymentErrorUrl);
         }
 
         // Redirect if payment is not complete
         if ($order->getPaymentInstruction()->getAmount() !== $order->getPaymentInstruction()->getApprovedAmount()) {
             $this->addFlash('danger', 'The requested payment is not complete');
 
-            return $this->redirect($paymentSuccessUrl);
+            return $this->redirect($paymentErrorUrl);
         }
 
         // Set order completed

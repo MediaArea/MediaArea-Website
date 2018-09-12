@@ -5,6 +5,7 @@ namespace SupportUsBundle\Controller;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
+use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Generator\UrlGeneratorInterface;
 use PaymentBundle\Entity\Order;
@@ -37,6 +38,66 @@ class DefaultController extends Controller
         $vat = new VatCalculator();
         $vat->setCountry($ipToCountry->getCountryIsoCode('FR'));
 
+        $form = $this->paymentForm(
+            $request,
+            'payment_orders_paymentcreateindividual',
+            'supportUs_individual',
+            $ipToCurrency->getCurrency()
+        );
+
+        if ($form instanceof RedirectResponse) {
+            return $form;
+        }
+
+        return [
+            'noAds' => true,
+            'country' => $ipToCountry,
+            'currency' => $ipToCurrency,
+            'vatRate' => $vat->getVatRate(),
+            'form' => $form->createView(),
+            'individual' => new Individual(),
+        ];
+    }
+
+    /**
+     * @Route("/SupportUs/Corporate", name="supportUs_corporate")
+     * @Template()
+     */
+    public function corporateAction(Request $request)
+    {
+        $ipToCurrency = new IpToCurrency($request->getClientIp());
+        $ipToCountry = new IpToCountry($request->getClientIp());
+        $vat = new VatCalculator();
+        $vat->setCountry($ipToCountry->getCountryIsoCode('FR'));
+
+        if (0 == $vat->getVatRate()) {
+            $form = $this->paymentForm(
+                $request,
+                'payment_orders_paymentcreatecorporate',
+                'supportUs_corporate',
+                $ipToCurrency->getCurrency()
+            );
+
+            if ($form instanceof RedirectResponse) {
+                return $form;
+            }
+        }
+
+        return [
+            'noAds' => true,
+            'country' => $ipToCountry,
+            'currency' => $ipToCurrency,
+            'form' => isset($form) ? $form->createView() : false,
+            'corporate' => new Corporate(),
+        ];
+    }
+
+    protected function paymentForm(
+        Request $request,
+        string $returnRoute,
+        string $cancelRoute,
+        string $currency
+    ) {
         if ('POST' === $request->getMethod() &&
             null !== $payment = $request->request->get('ma_choose_payment_method')) {
             $amount = $payment['amount'];
@@ -50,17 +111,17 @@ class DefaultController extends Controller
             $em->flush($order);
 
             $returnUrl = $this->generateUrl(
-                'payment_orders_paymentcreateindividual',
+                $returnRoute,
                 ['id' => $order->getId()],
                 UrlGeneratorInterface::ABSOLUTE_URL
             );
-            $cancerlUrl = $this->generateUrl('supportUs_individual', [], UrlGeneratorInterface::ABSOLUTE_URL);
+            $cancerlUrl = $this->generateUrl($cancelRoute, [], UrlGeneratorInterface::ABSOLUTE_URL);
         }
 
         $form = $this->createForm(ChoosePaymentMethodType::class, null, [
             'amount_field_type' => 'text',
             'amount' => $amount ?? 1,
-            'currency' => $ipToCurrency->getCurrency(),
+            'currency' => $currency,
             'default_method' => 'stripe_credit_card',
             'predefined_data' => [
                 'adyen_credit_card' => [
@@ -93,36 +154,10 @@ class DefaultController extends Controller
             $em->persist($order);
             $em->flush($order);
 
-            return $this->redirect($this->generateUrl('payment_orders_paymentcreateindividual', [
-                'id' => $order->getId(),
-            ]));
+            return $this->redirect($this->generateUrl($returnRoute, ['id' => $order->getId()]));
         }
 
-        return [
-            'noAds' => true,
-            'country' => $ipToCountry,
-            'currency' => $ipToCurrency,
-            'vatRate' => $vat->getVatRate(),
-            'form' => $form->createView(),
-            'individual' => new Individual(),
-        ];
-    }
-
-    /**
-     * @Route("/SupportUs/Corporate", name="supportUs_corporate")
-     * @Template()
-     */
-    public function corporateAction(Request $request)
-    {
-        $ipToCurrency = new IpToCurrency($request->getClientIp());
-        $ipToCountry = new IpToCountry($request->getClientIp());
-
-        return [
-            'noAds' => true,
-            'country' => $ipToCountry->getCountryName(false),
-            'currency' => $ipToCurrency,
-            'corporate' => new Corporate(),
-        ];
+        return $form;
     }
 
     /**
