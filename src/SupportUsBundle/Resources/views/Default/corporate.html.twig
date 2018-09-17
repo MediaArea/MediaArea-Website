@@ -13,7 +13,7 @@
 </p>
 
 <p>
-    {% if country %}{% trans with { '%country%': country, '%currency%': currency.currency } %}supportUs.individual.location_currency{% endtrans %}{% else %}{% trans with { '%currency%': currency.currency } %}supportUs.individual.currency{% endtrans %}{% endif %}  (VAT excluded)
+    {% if country %}{% trans with { '%country%': country.countryName(false), '%currency%': currency.currency, '%contact%': path('ma_contact') } %}supportUs.individual.location_currency{% endtrans %}{% else %}{% trans with { '%currency%': currency.currency } %}supportUs.individual.currency{% endtrans %}{% endif %}  (VAT excluded)
 </p>
 
 <p>Select a plan:</p>
@@ -43,10 +43,30 @@
 </div>
 
 <div class="form-group">
-    <div class="col-sm-12">
-        <a class="btn btn-default btn-lg btn-block corporate-quote-btn btn-support" href="{{ path('ma_contact', {sponsor: 'Bronze Sponsor', amount: corporate.localizedAmountWithCurrency(3000, currency.currency) })}}">Contact us for a formal quote</a>
-    </div>
+    <a class="btn btn-default btn-lg btn-block corporate-quote-btn btn-support" href="{{ path('ma_contact', {sponsor: 'Bronze Sponsor', amount: corporate.localizedAmountWithCurrency(3000, currency.currency) })}}">Contact us for a formal quote</a>
 </div>
+
+{% if form %}
+    <div class="form-group pay">
+        <div>
+            {% if not app.user %}{% trans with { '%login%': path('fos_user_security_login'), '%register%': path('fos_user_registration_register') } %}donate.not_logged_in{% endtrans %}{% endif %}
+            <p>Or you can pay with:</p>
+        </div>
+        <div class="row">
+            <div class="col-sm-6 individual-payment">
+                <div class="col-sm-12 support-us-features-list">
+                    {{ include('@SupportUs/individualPaymentForm.html.twig') }}
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="col-sm-12 support-us-features-list">
+                    <button type="submit" class="btn btn-default btn-lg btn-block btn-paypal">Pay with Paypal</button>
+                </div>
+                {{ include('@SupportUs/Default/BankWire/index.html.twig', {'isoCode': country.countryIsoCode | lower}, with_context = false) }}
+            </div>
+        </div>
+    </div>
+{% endif %}
 {% endblock %}
 
 {% block stylesheets %}

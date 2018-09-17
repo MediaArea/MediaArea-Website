@@ -243,7 +243,7 @@ class Invoice
     /**
      * Set paymentInstruction.
      *
-     * @param \JMS\Payment\CoreBundle\Entity\PaymentInstruction $paymentInstruction
+     * @param \JMS\Payment\CoreBundle\Entity\PaymentInstruction|null $paymentInstruction
      *
      * @return Invoice
      */
@@ -257,7 +257,7 @@ class Invoice
     /**
      * Get paymentInstruction.
      *
-     * @return \JMS\Payment\CoreBundle\Entity\PaymentInstruction
+     * @return \JMS\Payment\CoreBundle\Entity\PaymentInstruction|null
      */
     public function getPaymentInstruction()
     {

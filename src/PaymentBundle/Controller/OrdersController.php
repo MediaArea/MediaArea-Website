@@ -41,7 +41,34 @@ class OrdersController extends Controller
         );
     }
 
-    public function paymentCreate(Order $order, $paymentCompleteUrl, $paymentErrorReturnUrl)
+    /**
+     * @Route("/{id}/payment/create/corporate")
+     */
+    public function paymentCreateCorporateAction(Order $order)
+    {
+        return $this->paymentCreate(
+            $order,
+            $this->generateUrl('payment_orders_paymentcompletecorporate', ['id' => $order->getId()]),
+            $this->generateUrl('supportUs_corporate')
+        );
+    }
+
+    /**
+     * @Route("/{id}/payment/create/custom")
+     */
+    public function paymentCreateCustomAction(Order $order, Request $request)
+    {
+        return $this->paymentCreate(
+            $order,
+            $this->generateUrl(
+                'payment_orders_paymentcompletecustom',
+                ['id' => $order->getId(), 'routeParams' => $request->get('routeParams', [])]
+            ),
+            $this->generateUrl('supportUs_custom', $request->get('routeParams', []))
+        );
+    }
+
+    private function paymentCreate(Order $order, $paymentCompleteUrl, $paymentErrorReturnUrl)
     {
         $payment = $this->createPayment($order);
 
@@ -97,20 +124,40 @@ class OrdersController extends Controller
         return $this->paymentComplete($request, $order, $this->generateUrl('supportUs_individual'));
     }
 
-    public function paymentComplete(Request $request, Order $order, $paymentSuccessUrl)
+    /**
+     * @Route("/{id}/payment/complete/corporate")
+     */
+    public function paymentCompleteCorporateAction(Request $request, Order $order)
+    {
+        return $this->paymentComplete($request, $order, $this->generateUrl('supportUs_corporate'));
+    }
+
+    /**
+     * @Route("/{id}/payment/complete/custom")
+     */
+    public function paymentCompleteCustomAction(Request $request, Order $order)
+    {
+        return $this->paymentComplete(
+            $request,
+            $order,
+            $this->generateUrl('supportUs_custom', $request->get('routeParams', []))
+        );
+    }
+
+    private function paymentComplete(Request $request, Order $order, $paymentErrorUrl)
     {
         // Redirect if user have already completed his payment
         if (Order::STATUS_COMPLETED === $order->getStatus()) {
             $this->addFlash('danger', 'Order already completed');
 
-            return $this->redirect($paymentSuccessUrl);
+            return $this->redirect($paymentErrorUrl);
         }
 
         // Redirect if payment is not complete
         if ($order->getPaymentInstruction()->getAmount() !== $order->getPaymentInstruction()->getApprovedAmount()) {
             $this->addFlash('danger', 'The requested payment is not complete');
 
-            return $this->redirect($paymentSuccessUrl);
+            return $this->redirect($paymentErrorUrl);
         }
 
         // Set order completed
@@ -123,7 +170,9 @@ class OrdersController extends Controller
         $ipToCurrency = new IpToCurrency($request->getClientIp());
         $message = sprintf(
             'Thank you, your payment of %s has been successfully processed',
-            $ipToCurrency->amountWithCurrency((int) $order->getAmount())
+            'custom' == $order->getType() ?
+                (int) $order->getAmount().' '.$order->getPaymentInstruction()->getCurrency() :
+                $ipToCurrency->amountWithCurrency((int) $order->getAmount())
         );
 
         $this->addFlash('success', $message);

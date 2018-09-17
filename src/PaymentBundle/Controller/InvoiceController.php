@@ -61,6 +61,7 @@ class InvoiceController extends Controller
      * @param UserInterface $user
      *
      * @return array Datas
+     * @SuppressWarnings(PHPMD.CyclomaticComplexity)
      */
     protected function getInvoiceDatas($id, $user)
     {
@@ -82,7 +83,15 @@ class InvoiceController extends Controller
         }
 
         $total = $invoice->getAmount() + $invoice->getVat();
-        if ($total >= 500) {
+        if ($total >= 20000) {
+            $product = 'Gold Sponsor';
+        } elseif ($total >= 8000) {
+            $product = 'Silver Sponsor';
+        } elseif ($total >= 3000) {
+            $product = 'Bronze Sponsor';
+        } elseif ($total >= 1000) {
+            $product = 'Sponsor';
+        } elseif ($total >= 500) {
             $product = 'Supporter++';
         } elseif ($total >= 300) {
             $product = 'Supporter+';

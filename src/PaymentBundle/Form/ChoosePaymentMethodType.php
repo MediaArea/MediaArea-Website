@@ -30,7 +30,7 @@ class ChoosePaymentMethodType extends BaseType
         if ('text' == $options['amount_field_type']) {
             $builder->add('amount', TextType::class, [
                 'mapped' => false,
-                'data' => $ipToCurrency->getAmountDefault(),
+                'data' => $options['amount'],
             ]);
         } else {
             $builder->add('amount', ChoiceType::class, [

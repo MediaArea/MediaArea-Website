@@ -31,6 +31,11 @@ class Order
     private $amount;
 
     /**
+     * @ORM\Column(type="string", length=10, nullable=true)
+     */
+    protected $type;
+
+    /**
      * @ORM\Column(type="smallint", nullable=false, options={"default":0})
      */
     protected $status = 0;
@@ -75,9 +80,57 @@ class Order
     }
 
     /**
+     * Set type.
+     *
+     * @param string|null $type
+     *
+     * @return Order
+     */
+    public function setType($type = null)
+    {
+        $this->type = $type;
+
+        return $this;
+    }
+
+    /**
+     * Get type.
+     *
+     * @return string|null
+     */
+    public function getType()
+    {
+        return $this->type;
+    }
+
+    /**
+     * Set status.
+     *
+     * @param int $status
+     *
+     * @return Order
+     */
+    public function setStatus($status)
+    {
+        $this->status = $status;
+
+        return $this;
+    }
+
+    /**
+     * Get status.
+     *
+     * @return int
+     */
+    public function getStatus()
+    {
+        return $this->status;
+    }
+
+    /**
      * Set paymentInstruction.
      *
-     * @param \JMS\Payment\CoreBundle\Entity\PaymentInstruction $paymentInstruction
+     * @param \JMS\Payment\CoreBundle\Entity\PaymentInstruction|null $paymentInstruction
      *
      * @return Order
      */
@@ -91,34 +144,10 @@ class Order
     /**
      * Get paymentInstruction.
      *
-     * @return \JMS\Payment\CoreBundle\Entity\PaymentInstruction
+     * @return \JMS\Payment\CoreBundle\Entity\PaymentInstruction|null
      */
     public function getPaymentInstruction()
     {
         return $this->paymentInstruction;
-    }
-
-    /**
-     * Set status
-     *
-     * @param integer $status
-     *
-     * @return Order
-     */
-    public function setStatus($status)
-    {
-        $this->status = $status;
-
-        return $this;
-    }
-
-    /**
-     * Get status
-     *
-     * @return integer
-     */
-    public function getStatus()
-    {
-        return $this->status;
     }
 }

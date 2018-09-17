@@ -2,9 +2,11 @@
 
 namespace PaymentBundle\EventListener;
 
+use Doctrine\ORM\EntityManagerInterface;
 use FOS\UserBundle\Model\UserInterface;
 use JMS\Payment\CoreBundle\PluginController\Event\PaymentStateChangeEvent;
 use JMS\Payment\CoreBundle\Model\PaymentInterface;
+use PaymentBundle\Entity\Order;
 use PaymentBundle\Lib\CleanPaymentInstruction;
 use PaymentBundle\Lib\CreateInvoice;
 use SupportUsBundle\Lib\Individual;
@@ -17,6 +19,7 @@ class OrdersListener
     protected $user;
     protected $donorManipulator;
     protected $cleanPaymentInstruction;
+    protected $em;
 
     /**
      * @param CreateInvoice         $createInvoice
@@ -27,12 +30,14 @@ class OrdersListener
         CreateInvoice $createInvoice,
         TokenStorageInterface $tokenStorage,
         DonorManipulator $donorManipulator,
-        CleanPaymentInstruction $cleanPaymentInstruction
+        CleanPaymentInstruction $cleanPaymentInstruction,
+        EntityManagerInterface $entityManager
     ) {
         $this->createInvoice = $createInvoice;
         $this->user = $tokenStorage->getToken() ? $tokenStorage->getToken()->getUser() : null;
         $this->donorManipulator = $donorManipulator;
         $this->cleanPaymentInstruction = $cleanPaymentInstruction;
+        $this->em = $entityManager;
     }
 
     /**
@@ -43,11 +48,14 @@ class OrdersListener
     public function onPaymentStateChange(PaymentStateChangeEvent $event)
     {
         if (PaymentInterface::STATE_DEPOSITED === $event->getNewState()) {
+            $order = $this->em->getRepository(Order::class)->findOneByPaymentInstruction(
+                $event->getPayment()->getPaymentInstruction()
+            );
             // Create invoice
-            $this->createInvoice->create($event->getPayment()->getPaymentInstruction());
+            $this->createInvoice->create($event->getPayment()->getPaymentInstruction(), $order);
 
             // Add donation to user if user is connected
-            if ($this->user instanceof UserInterface) {
+            if ($this->user instanceof UserInterface && 'individual' == $order->getType()) {
                 $individual = new Individual();
                 $votes = $individual->amountToVotes(
                     $event->getPayment()->getPaymentInstruction()->getApprovedAmount(),

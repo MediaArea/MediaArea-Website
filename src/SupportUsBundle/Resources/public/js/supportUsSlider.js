@@ -2,6 +2,10 @@ var supportUs = (function () {
     var currency,
         currencyMultiply;
 
+    var initCustom = function() {
+        paymentButtonsBindings();
+    };
+
     var initCorporate = function(corporateCurrency) {
         currency = corporateCurrency;
 
@@ -32,6 +36,7 @@ var supportUs = (function () {
         setSliderPosition(3);
         corporateSlider();
         corporateButtons();
+        paymentButtonsBindings();
     };
 
     var corporateSlider = function() {
@@ -133,6 +138,9 @@ var supportUs = (function () {
 
         // Request quote
         $('a.corporate-quote-btn').attr('href', Routing.generate('ma_contact', {sponsor: name, amount: displayAmountWithCurrency(amount) }));
+
+        // Payment buttons update
+        updatePaymentButtons(amount);
     };
 
     var initIndividual = function(individualCurrency) {
@@ -292,6 +300,10 @@ var supportUs = (function () {
         $('#individual-label').html(total.value);
 
         // Payment buttons update
+        updatePaymentButtons(amount);
+    };
+
+    var updatePaymentButtons = function(amount) {
         $('.btn-paypal').text('Pay ' + displayAmountWithCurrency(amount) + ' with Paypal');
         $('.btn-cb').val('Pay ' + displayAmountWithCurrency(amount) + ' by Credit Card');
         $('#ma_choose_payment_method_amount').val(amount);
@@ -349,6 +361,7 @@ var supportUs = (function () {
     };
 
       return {
+          initCustom: initCustom,
           initCorporate: initCorporate,
           initIndividual: initIndividual,
       };

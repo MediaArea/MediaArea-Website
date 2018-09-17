@@ -6,6 +6,7 @@ use Doctrine\ORM\EntityManager;
 use FOS\UserBundle\Model\UserInterface;
 use JMS\Payment\CoreBundle\Model\PaymentInstructionInterface;
 use PaymentBundle\Entity\Invoice;
+use PaymentBundle\Entity\Order;
 use Symfony\Component\HttpFoundation\RequestStack;
 use Symfony\Component\Security\Core\Authentication\Token\Storage\TokenStorageInterface;
 
@@ -35,7 +36,7 @@ class CreateInvoice
      *
      * @param PaymentInstructionInterface $paymentInstruction
      */
-    public function create(PaymentInstructionInterface $paymentInstruction)
+    public function create(PaymentInstructionInterface $paymentInstruction, Order $order)
     {
         // Check if user is connected
         if (!$this->user instanceof UserInterface) {
@@ -49,7 +50,7 @@ class CreateInvoice
         // Calculate VAT
         $vat = new VatCalculator();
         $vat->setGross($paymentInstruction->getApprovedAmount())
-            ->setCountry($country)
+            ->setCountry('custom' == $order->getType() ? 'XX' : $country)
             ->calculateNet();
 
         // Create invoice

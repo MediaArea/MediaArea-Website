@@ -4,14 +4,13 @@ namespace PaymentBundle\Lib;
 
 use Doctrine\ORM\EntityManager;
 use JMS\Payment\CoreBundle\Model\PaymentInstructionInterface;
-use JMS\Payment\CoreBundle\Entity\PaymentInstruction;
 
 class CleanPaymentInstruction
 {
     protected $em;
 
     /**
-     * @param EntityManager         $entityManager
+     * @param EntityManager $entityManager
      */
     public function __construct(EntityManager $entityManager)
     {
@@ -31,8 +30,9 @@ class CleanPaymentInstruction
     }
 
     /**
-     * Clean stripe credit card payment instruction
-     * @param  PaymentInstructionInterface $paymentInstruction
+     * Clean stripe credit card payment instruction.
+     *
+     * @param PaymentInstructionInterface $paymentInstruction
      */
     protected function cleanStripeCreditCard(PaymentInstructionInterface $paymentInstruction)
     {
