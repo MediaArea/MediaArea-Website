@@ -43,4 +43,13 @@ class DefaultController extends Controller
     {
         return ['noAds' => true];
     }
+
+    /**
+     * @Route("/QCWorkshop2018", name="qcworkshop2018")
+     * @Template()
+     */
+    public function qcworkshop2018Action()
+    {
+        return ['noAds' => true];
+    }
 }
