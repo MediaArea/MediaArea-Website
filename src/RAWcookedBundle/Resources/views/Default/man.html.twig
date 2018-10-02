@@ -1,0 +1,233 @@
+{% extends 'RAWcookedBundle::base.html.twig' %}
+
+{% block title %}RAWcooked(1){% endblock %}
+
+{% block body %}
+
+
+<table style="width: 100%;">
+  <tbody><tr>
+    <td style="text-align: left;">RAWcooked(1)</td>
+    <td style="text-align: center;">Bit-by-bit fidelity</td>
+    <td style="text-align: right;">RAWcooked(1)</td>
+  </tr>
+</tbody></table>
+<div class="manual-text">
+<h1 class="Sh" title="Sh" id="NAME"><a class="selflink" href="#NAME">NAME</a></h1>
+<b>RAWcooked</b> - encode and decode audio-visual RAW data with Matroska, FFV1
+  and FLAC
+<h1 class="Sh" title="Sh" id="SYNOPSIS"><a class="selflink" href="#SYNOPSIS">SYNOPSIS</a></h1>
+<b>rawcooked </b>[<i>option</i> ...] (<i>folder</i> | <i>file</i> ...)
+  [<i>option</i> ...]
+<h1 class="Sh" title="Sh" id="DESCRIPTION"><a class="selflink" href="#DESCRIPTION">DESCRIPTION</a></h1>
+<dl class="Bl-tag">
+  <dt class="It-tag"><b>RAWcooked</b> encodes audio-visual RAW data into the
+    Matroska container (MKV), using the video codec FFV1 for the image and the
+    audio codec FLAC for the sound. The metadata accompanying the RAW data are
+    preserved, and sidecar files, like MD5, LUT or XML, can be added into the
+    Matroska container as attachments. This allows for the management of these
+    audio-visual file formats in an effective and transparent way (e.g. native
+    playback in VLC), while saving typically between one to two thirds of the
+    needed storage, and speeding up file writing and reading (e.g. to/from
+    harddisk, over network or for backup on LTO).</dt>
+  <dd class="It-tag"></dd>
+</dl>
+<dl class="Bl-tag">
+  <dt class="It-tag">When needed, the uncompressed source is retrieved
+    <b>bit-by-bit</b>, in a manner faster than uncompressed sources.</dt>
+  <dd class="It-tag"></dd>
+</dl>
+<dl class="Bl-tag">
+  <dt class="It-tag"><i>folder</i></dt>
+  <dd class="It-tag">Encodes with the FFV1 video codec all single-image video
+      files in the <i>folder</i>, encodes with the FLAC audio codec all audio
+      files in the <i>folder</i>, and muxes these into a Matroska container
+      (.mkv).
+    <br>
+    The filenames of the single image files must end with a numbered sequence.
+      <b>RAWcooked</b> will generate the regex to parse in the correct order all
+      the frames in the folder.</dd>
+</dl>
+<dl class="Bl-tag">
+  <dt class="It-tag"><i>file</i></dt>
+  <dd class="It-tag"><b>contains RAW data (e.g. a .dpx or .wav file):</b>
+    <br>
+    Encodes with the FFV1 video codec all single-image video files in the folder
+      containing the <i>file</i>, encodes with the FLAC audio codec all audio
+      files in the folder containing the <i>file</i>, and muxes these into a
+      Matroska container (.mkv).
+    <br>
+    The filenames usually end with a numbered sequence. Enter one frame and the
+      tool will generate the regex to parse all the frames in the folder.</dd>
+</dl>
+<dl class="Bl-tag">
+  <dt class="It-tag"><i>file</i></dt>
+  <dd class="It-tag"><b>is a Matroska container (.mkv):</b>
+    <br>
+    Decodes back the video and the audio of <i>file</i> to its original formats.
+      All metadata accompanying the original data are preserved bit-by-bit.</dd>
+</dl>
+<h1 class="Sh" title="Sh" id="OPTIONS"><a class="selflink" href="#OPTIONS">OPTIONS</a></h1>
+<h2 class="Ss" title="Ss" id="GENERAL_OPTIONS"><a class="selflink" href="#GENERAL_OPTIONS">GENERAL
+  OPTIONS</a></h2>
+<dl class="Bl-tag">
+  <dt class="It-tag"><b>--help |<b> -h</b></b></dt>
+  <dd class="It-tag">Displays a help message.</dd>
+</dl>
+<dl class="Bl-tag">
+  <dt class="It-tag"><b>--version</b></dt>
+  <dd class="It-tag">Displays the installed version.</dd>
+</dl>
+<dl class="Bl-tag">
+  <dt class="It-tag"><b>--attachment-max-size <i>value</i> | <b>-s
+    </b><i>value</i></b></dt>
+  <dd class="It-tag">Set maximum size of attachment to <i>value</i> (in bytes).
+    <br>
+    Default value is <i>1048576</i>.</dd>
+</dl>
+<dl class="Bl-tag">
+  <dt class="It-tag"><b>--check <i>value</i></b></dt>
+  <dd class="It-tag">Do or don't do costly (in terms of analysis duration or
+      bytes read) checks.
+    <br>
+     <i>partial</i> (or <i>0</i>) is quicker but may lead to partial
+      reversibility with non conform files.
+    <br>
+     <i>full</i> (or <i>1</i>) is slower but guaranties reversability with e.g.
+      DPX files with non zero padding bits.
+    <br>
+    Default value is 'partial'.</dd>
+</dl>
+<dl class="Bl-tag">
+  <dt class="It-tag"><b>--display-command |<b> -d</b></b></dt>
+  <dd class="It-tag">When an external encoder/decoder is used, display the
+      command to launch instead of launching it.</dd>
+</dl>
+<dl class="Bl-tag">
+  <dt class="It-tag"><b>--output-name <i>value</i> | <b>-o
+    </b><i>value</i></b></dt>
+  <dd class="It-tag">Set the name of the output file or folder to <i>value</i>.
+    <br>
+    Default value is <i>${Input}.mkv</i> (if input is a folder) or
+      <i>${Input}.RAWcooked</i> (if input is a file).</dd>
+</dl>
+<dl class="Bl-tag">
+  <dt class="It-tag"><b>--rawcooked-file-name <i>value</i> | <b>-r
+    </b><i>value</i></b></dt>
+  <dd class="It-tag">Set (encoding) or get (decoding) the name of the
+      <b>RAWcooked</b> reversibility data file to <i>value</i>.
+    <br>
+    Default name is <i>${Input}.rawcooked_reversibility_data</i>
+    <br>
+     Note: If the <b>RAWcooked</b> reversibility data file is included in
+      the output A/V file during the encoding, this file is deleted after
+      encoding.
+    <br>
+     Note: Not yet implemented for decoding.</dd>
+</dl>
+<dl class="Bl-tag">
+  <dt class="It-tag"><b>--quiet</b></dt>
+  <dd class="It-tag">Do not show information related to RAWcooked.
+    <br>
+    External encoder/decoder may need an additional option.</dd>
+</dl>
+<h2 class="Ss" title="Ss" id="INPUT_RELATED_OPTIONS"><a class="selflink" href="#INPUT_RELATED_OPTIONS">INPUT
+  RELATED OPTIONS</a></h2>
+<dl class="Bl-tag">
+  <dt class="It-tag"><b>--file</b></dt>
+  <dd class="It-tag">Unlock compression of files (e.g. a .dpx or .wav).</dd>
+</dl>
+<dl class="Bl-tag">
+  <dt class="It-tag"><b>-framerate <i>value</i></b></dt>
+  <dd class="It-tag">Force video frame rate to <i>value</i>.
+    <br>
+    Default value is the one found in the image files if available, otherwise
+      <i>24</i>.</dd>
+</dl>
+<h2 class="Ss" title="Ss" id="ENCODING_RELATED_OPTIONS"><a class="selflink" href="#ENCODING_RELATED_OPTIONS">ENCODING
+  RELATED OPTIONS</a></h2>
+<dl class="Bl-tag">
+  <dt class="It-tag"><b>-c:a <i>value</i></b></dt>
+  <dd class="It-tag">Force the audio encoding format to <i>value</i>:
+      <i>copy</i> (copy PCM to PCM, without modification), <i>flac</i>.
+    <br>
+    Default value is <i>flac</i>.</dd>
+</dl>
+<dl class="Bl-tag">
+  <dt class="It-tag"><b>-c:v <i>value</i></b></dt>
+  <dd class="It-tag">Force the video encoding format <i>value</i>: only
+      <i>ffv1</i> is currently allowed.
+    <br>
+    Default value is <i>ffv1</i>.</dd>
+</dl>
+<dl class="Bl-tag">
+  <dt class="It-tag"><b>-coder <i>value</i></b></dt>
+  <dd class="It-tag">If video encoding format is <i>ffv1</i>, set the coder to
+      <i>value</i>: <i>0</i> (Golomb-Rice), <i>1</i> (Range Coder), <i>2</i>
+      (Range Coder with custom state transition table).
+    <br>
+    Default value is <i>1</i>.</dd>
+</dl>
+<dl class="Bl-tag">
+  <dt class="It-tag"><b>-context <i>value</i></b></dt>
+  <dd class="It-tag">If video encoding format is <i>ffv1</i>, set the context to
+      <i>value</i>: <i>0</i> (small), <i>1</i> (large).
+    <br>
+    Default value is <i>0</i>.</dd>
+</dl>
+<dl class="Bl-tag">
+  <dt class="It-tag"><b>-format <i>value</i></b></dt>
+  <dd class="It-tag">Set the container format to <i>value</i>: only
+      <i>matroska</i> is currently allowed.
+    <br>
+    Default value is <i>matroska</i>.</dd>
+</dl>
+<dl class="Bl-tag">
+  <dt class="It-tag"><b>-g <i>value</i></b></dt>
+  <dd class="It-tag">If video encoding format is <i>ffv1</i>, set the GOP size
+      to <i>value</i> any integer &gt;=1.
+    <br>
+    Default value is <i>1</i>.</dd>
+</dl>
+<dl class="Bl-tag">
+  <dt class="It-tag"><b>-level <i>value</i></b></dt>
+  <dd class="It-tag">If video encoding format is <i>ffv1</i>, set the version to
+      <i>value</i>: <i>0</i>, <i>1</i>, <i>3</i>.
+    <br>
+    Default value is <i>3</i>.</dd>
+</dl>
+<dl class="Bl-tag">
+  <dt class="It-tag"><b>-slicecrc <i>value</i></b></dt>
+  <dd class="It-tag">If video encoding format is <i>ffv1</i>, set the CRC to
+      <i>value</i>: <i>0</i> (CRC not present), <i>1</i> (CRC present).
+    <br>
+    Default value is <i>1</i>.</dd>
+</dl>
+<dl class="Bl-tag">
+  <dt class="It-tag"><b>-slices <i>value</i></b></dt>
+  <dd class="It-tag">If video encoding format is <i>ffv1</i>, set the count of
+      slices to <i>value</i>: any integer &gt;=1 and making sense (2, 4, 6, 9,
+      16, 24...).
+    <br>
+    Default value is between <i>16</i> and <i>512</i>, depending on video frame
+      size and depth.</dd>
+</dl>
+<h1 class="Sh" title="Sh" id="COPYRIGHT"><a class="selflink" href="#COPYRIGHT">COPYRIGHT</a></h1>
+Copyright (c) 2018 MediaArea.net SARL &amp; AV Preservation by reto.ch
+<h1 class="Sh" title="Sh" id="LICENSE"><a class="selflink" href="#LICENSE">LICENSE</a></h1>
+<b>RAWcooked</b> is released under a BSD License.
+<h1 class="Sh" title="Sh" id="DISCLAIMER"><a class="selflink" href="#DISCLAIMER">DISCLAIMER</a></h1>
+<b>RAWcooked</b> is provided &quot;as is&quot; without warranty or support of
+  any kind.</div>
+<div>
+<br>
+<table style="width: 100%;">
+  <tbody><tr>
+    <td style="text-align: left;">18.09</td>
+    <td style="text-align: center;">https://MediaArea.net/RAWcooked</td>
+    <td style="text-align: right;">RAWcooked(1)</td>
+  </tr>
+</tbody></table>
+</div>
+
+{% endblock %}

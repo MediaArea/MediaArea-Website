@@ -14,6 +14,10 @@
         <source><![CDATA[menu.rawcooked.download]]></source>
         <target><![CDATA[Download]]></target>
       </trans-unit>
+      <trans-unit id="menu.rawcooked.man" approved="yes">
+        <source><![CDATA[menu.rawcooked.man]]></source>
+        <target><![CDATA[Command line manual]]></target>
+      </trans-unit>
     </body>
   </file>
 </xliff>

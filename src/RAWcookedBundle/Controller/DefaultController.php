@@ -33,4 +33,13 @@ class DefaultController extends Controller
     {
         return array();
     }
+
+    /**
+     * @Route("/RAWcooked/man", name="rawcooked_man")
+     * @Template()
+     */
+    public function manAction()
+    {
+        return array();
+    }
 }

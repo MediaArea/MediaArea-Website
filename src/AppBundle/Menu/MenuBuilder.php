@@ -284,6 +284,7 @@ class MenuBuilder
         $menu->addChild('menu.rawcooked', ['route' => 'rawcooked_home'])->setExtras(['dropdown' => true])->setCurrent(true);
         $menu['menu.rawcooked']->addChild('menu.rawcooked.about', ['route' => 'rawcooked_home']);
         $menu['menu.rawcooked']->addChild('menu.rawcooked.download', ['route' => 'rawcooked_download']);
+        $menu['menu.rawcooked']->addChild('menu.rawcooked.man', ['route' => 'rawcooked_man']);
 
         $menu = $this->projectsMenu($menu);
         $menu = $this->supportUsMenu($menu);
