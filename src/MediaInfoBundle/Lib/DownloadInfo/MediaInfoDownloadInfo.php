@@ -14,6 +14,7 @@ class MediaInfoDownloadInfo extends AbstractDownloadInfo
         'Fedora' => array('name' => 'Fedora', 'route' => 'mi_download_fedora', 'installer' => false),
         'Kubuntu' => array('name' => 'Ubuntu', 'route' => 'mi_download_ubuntu', 'installer' => false),
         'Lubuntu' => array('name' => 'Ubuntu', 'route' => 'mi_download_ubuntu', 'installer' => false),
+        'Android' => array('name' => 'Android', 'route' => 'mi_download_android', 'installer' => false),
         'Mac' => array('name' => 'macOS', 'route' => 'mi_download_mac', 'installer' => true),
         'Mandriva' => array('name' => 'Mandriva', 'route' => 'mi_download_mandriva', 'installer' => false),
         'Mint' => array('name' => 'Linux Mint', 'route' => 'mi_download_ubuntu', 'installer' => false),

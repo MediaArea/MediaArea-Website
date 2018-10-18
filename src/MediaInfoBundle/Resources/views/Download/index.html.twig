@@ -26,6 +26,12 @@
     <td><a href="{{ path('mi_download_mac') }}">{% trans %}download.table.official_release{% endtrans %}</a></td>
 </tr>
 <tr>
+    {% image '@AppBundle/Resources/public/img/OS/Android.png' %}
+    <th><a href="{{ path('mi_download_android') }}"><img src="{{ asset_url }}" width="200" height="80" alt="Android" title="Android"></a></th>
+    {% endimage %}
+    <td><a href="{{ path('mi_download_android') }}">{% trans %}download.table.official_release{% endtrans %}</a></td>
+</tr>
+<tr>
     {% image '@AppBundle/Resources/public/img/OS/AppImage.png' %}
     <th><a href="{{ path('mi_download_appimage') }}"><img src="{{ asset_url }}" width="250" height="76" alt="AppImage" title="AppImage"></a></th>
     {% endimage %}
