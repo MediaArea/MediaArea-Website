@@ -1,0 +1,27 @@
+{% extends 'MediaInfoBundle::base.html.twig' %}
+
+{% block title %}{% trans %}download.android.page.title{% endtrans %}{% endblock %}
+{% block description %}{% trans %}about.page.description{% endtrans %}{% endblock %}
+{% block keywords %}{% trans %}about.page.keywords{% endtrans %}{% endblock %}
+
+{% block body %}
+<h1>{% trans %}download.android.title{% endtrans %}</h1>
+{% image '@AppBundle/Resources/public/img/OS/Android.png' %}
+<img src="{{ asset_url }}" alt="Android" title="Android" width="200" height="80"><br />
+{% endimage %}
+
+<div class="table-responsive">
+<table class="download table table-bordered table-condensed">
+<thead>
+<tr class="table-header">
+    <th>Android version</th>
+    <th>Version</th>
+    <th>Comment</th>
+</tr>
+</thead>
+<tbody>
+{{ include('@MediaInfo/Download/androidTable.html.twig') }}
+</tbody>
+</table>
+</div>
+{% endblock %}

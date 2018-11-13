@@ -13,6 +13,10 @@
             {% image '@MediaInfoBundle/Resources/public/img/Screenshot/MediaInfo_Mac_Easy_en-thumb-about.png' %}
                 <a href="{{ path('mi_screenshots') }}"><img src="{{ asset_url }}" alt="{% trans %}about.screenshot_img.alt{% endtrans %}" class="img-responsive center-xs" title="{% trans %}about.screenshot_img.title{% endtrans %}" /></a>
             {% endimage %}
+            {% elseif 'Android' == downloadInfo.name %}
+            {% image '@MediaInfoBundle/Resources/public/img/Screenshot/MediaInfo_Android_Html_en-thumb-about.png' %}
+                <a href="{{ path('mi_screenshots') }}"><img src="{{ asset_url }}" alt="{% trans %}about.screenshot_img.alt{% endtrans %}" class="img-responsive center-xs" title="{% trans %}about.screenshot_img.title{% endtrans %}" /></a>
+            {% endimage %}
             {% else %}
             {% image '@MediaInfoBundle/Resources/public/img/Screenshot/MediaInfo_Windows_Easy_en-thumb-about.jpg' %}
                 <a href="{{ path('mi_screenshots') }}"><img src="{{ asset_url }}" alt="{% trans %}about.screenshot_img.alt{% endtrans %}" class="img-responsive center-xs" title="{% trans %}about.screenshot_img.title{% endtrans %}" /></a>
@@ -46,6 +50,10 @@
                     <a class="btn btn-default btn-lg btn-dl" href="https://itunes.apple.com/app/mediainfo/id510620098" target="_blank">
                         <span class="downloadText">{% trans %}about.download.button.text{% endtrans %}</span>
                     </a>
+                    {% elseif 'Android' == downloadInfo.name %}
+                    <a class="btn btn-default btn-lg btn-dl" href="https://market.android.com/details?id=net.mediaarea.mediainfo" target="_blank">
+                        <span class="downloadText">{% trans %}about.download.button.text{% endtrans %}</span>
+                    </a>
                     {% else %}
                     <a class="btn btn-default btn-lg btn-dl " href="{{ downloadLink }}">
                         <span class="downloadText">{% trans %}about.download.button.text{% endtrans %}</span>
@@ -57,6 +65,7 @@
                     <ul class="dropdown-menu dropdown-default platform-icons">
                         <li><a href="{{ path('mi_download_windows') }}">Windows</a></li>
                         <li><a href="{{ path('mi_download_mac') }}">macOS</a></li>
+                        <li><a href="{{ path('mi_download_android') }}">Android</a></li>
                         <li><a href="{{ path('mi_download_debian') }}">Debian</a></li>
                         <li><a href="{{ path('mi_download_ubuntu') }}">Ubuntu</a></li>
                         <li><a href="{{ path('mi_download_ubuntu') }}">Linux Mint</a></li>
@@ -77,6 +86,10 @@
                     <a class="btn btn-default btn-lg btn-dl" href="https://itunes.apple.com/app/mediainfo/id510620098" target="_blank">
                         <span class="downloadText">{% trans %}about.download.button.text{% endtrans %}</span>
                     </a>
+                    {% elseif 'Android' == downloadInfo.name %}
+                    <a class="btn btn-default btn-lg btn-dl" href="https://market.android.com/details?id=net.mediaarea.mediainfo" target="_blank">
+                        <span class="downloadText">{% trans %}about.download.button.text{% endtrans %}</span>
+                    </a>
                     {% else %}
                     <a class="btn btn-default btn-lg btn-dl " href="{{ path(downloadInfo.route) }}">
                         <span class="downloadText">{% trans %}about.download.button.text{% endtrans %}</span>
@@ -86,7 +99,7 @@
 
                 <div class="projectDescription">
                     <div class="downloadDetails">
-                        {% trans %}about.download.version{% endtrans %} {{ downloadInfo.version }}{% if downloadInfo.installer %}, {% trans %}about.download.installer{% endtrans %}{% endif %}{% if downloadInfo.name %}, {% if 'macOS' == downloadInfo.name %}Mac App Store{% else %}{% trans %}about.download.for{% endtrans %} {{ downloadInfo.name }}{% endif %}{% endif %}
+                        {% trans %}about.download.version{% endtrans %} {{ downloadInfo.version }}{% if downloadInfo.installer %}, {% trans %}about.download.installer{% endtrans %}{% endif %}{% if downloadInfo.name %}, {% if 'macOS' == downloadInfo.name %}Mac App Store{% elseif 'Android' == downloadInfo.name %}Google Play{% else %}{% trans %}about.download.for{% endtrans %} {{ downloadInfo.name }}{% endif %}{% endif %}
                     <br/>
                     {% trans with {'%downloadRoute%': path('mi_download')} %}about.download.other{% endtrans %}
                     {% image '@AppBundle/Resources/public/img/blank.gif' %}
@@ -99,7 +112,8 @@
                     <a href="{{ path('mi_download_centos') }}"><img src="{{ asset_url }}" width="16" height="16" alt="CentOS" title="CentOS" class="sprite CentOS"></a>
                     <a href="{{ path('mi_download_fedora') }}"><img src="{{ asset_url }}" width="16" height="16" alt="Fedora" title="Fedora" class="sprite Fedora"></a>
                     <a href="{{ path('mi_download_opensuse') }}"><img src="{{ asset_url }}" width="16" height="16" alt="openSUSE" title="openSUSE" class="sprite openSUSE"></a>
-                    <a href="{{ path('mi_download_archlinux') }}"><img src="{{ asset_url }}" width="16" height="16" alt="ArchLinux" title="ArchLinux" class="sprite ArchLinux"></a>)
+                    <a href="{{ path('mi_download_archlinux') }}"><img src="{{ asset_url }}" width="16" height="16" alt="ArchLinux" title="ArchLinux" class="sprite ArchLinux"></a>
+                    <a href="{{ path('mi_download_android') }}"><img src="{{ asset_url }}" width="16" height="16" alt="Android" title="Android" class="sprite Android"></a>)
                     {% endimage %}
                     <br>
                     {% trans with {'%changelogRoute%': path('mi_changelog')} %}about.what.changelog{% endtrans %}
