@@ -41,8 +41,8 @@ class RAWcookedDownloadInfo extends AbstractDownloadInfo
     public function parse()
     {
         $this->downloadInfo = $this->detectOS();
-        $this->downloadInfo['version'] = '18.10';
-        $this->downloadInfo['versionPath'] = '18.10';
+        $this->downloadInfo['version'] = '18.10.1';
+        $this->downloadInfo['versionPath'] = '18.10.1';
     }
 
     public function getVersionPath()
