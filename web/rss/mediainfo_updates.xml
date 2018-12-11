@@ -5,7 +5,32 @@
         <link>https://mediaarea.net/MediaInfo</link>
         <description>MediaInfo updates feed</description>
         <language>en-us</language>
-        <lastBuildDate>Mon, 10 Sep 2018 12:00:00 +0000</lastBuildDate>
+        <lastBuildDate>Mon, 10 Dec 2018 12:00:00 +0000</lastBuildDate>
+         <item>
+            <title>MediaInfo 18.12</title>
+            <description>
+                <![CDATA[+ Android version: https://play.google.com/store/apps/details?id=net.mediaarea.mediainfo<br />
+                    + DCP: support of multi-reel packages<br />
+                    + EBUCore: added some FFV1 related metadata<br />
+                    + JPEG: better info display of CYMK files<br />
+                    + Provide source of the color related metadata (container or stream) (hidden by default)<br />
+                    + MXF: display more information when wrapper/essence values are detected as not same<br />
+                    + MXF: ProRes profiles<br />
+                    + MPEG-4: ProRes RAW support<br />
+                    + MPEG-TS: add support of parsing some ETSI TS 103-433 messages<br />
+                    x MPEG-2 Video: variable GOP detection fix<br />
+                    x MPEG-7 export: some fields were missing due to the removal of some legacy fields<br />
+                    x ADTS: Fix display of channel count for 8-channel streams<br />
+                    x ID3v2: fix some date related issues<br />
+                    x I298, ID3v2: fix wrong read of recording date in some cases<br />
+                    x I1032, PBCore2: fix essenceFrameSize with non Video tracks<br />
+                    x I1096, JPEG: fix crash with one file<br />
+                    x Several other crash and memory leak fixes]]>
+            </description>
+            <link>https://mediaarea.net/MediaInfo</link>
+            <pubDate>Mon, 10 Dec 2018 12:00:00 +0000</pubDate>
+            <guid>MediaInfo-18.12</guid>
+         </item>
          <item>
             <title>MediaInfo 18.08.1</title>
             <description>
