@@ -24,6 +24,7 @@
         "friendsofsymfony/user-bundle": "~2.0",
         "geoip2/geoip2": "^2.6",
         "incenteev/composer-parameter-handler": "^2.0",
+        "jms/payment-core-bundle": "1.3.0",
         "jms/payment-paypal-bundle": "^1.1",
         "knplabs/knp-menu-bundle": "^2.0",
         "leafo/scssphp": "^0.7",
