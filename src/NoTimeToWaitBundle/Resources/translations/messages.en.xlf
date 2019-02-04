@@ -22,6 +22,10 @@
         <source><![CDATA[menu.qcworkshop.2018]]></source>
         <target><![CDATA[QC workshop (2018, Luxembourg)]]></target>
       </trans-unit>
+      <trans-unit id="menu.notimetowait.4" approved="yes">
+        <source><![CDATA[menu.notimetowait.4]]></source>
+        <target><![CDATA[No Time To Wait 4 (2018, Budapest)]]></target>
+      </trans-unit>
     </body>
   </file>
 </xliff>
