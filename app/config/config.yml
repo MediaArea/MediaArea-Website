@@ -193,7 +193,7 @@ fos_js_routing:
         - mco_policy_rule_fields_list
         - mco_policy_rule_move
         - mco_policy_rule_values_list
-        - mco_policy_tree
+        - mco_policy_tree_data
 
 jms_payment_core:
     encryption:
