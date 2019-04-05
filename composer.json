@@ -43,7 +43,7 @@
         "symfony/symfony": "~3.3.17",
         "tfox/mpdf-port-bundle": "^2.0",
         "twig/extensions": "^1.5",
-        "twig/twig": "^2.0",
+        "twig/twig": "~2.6.0",
         "vich/uploader-bundle": "^1.7"
     },
     "require-dev": {
