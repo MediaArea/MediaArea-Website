@@ -40,9 +40,9 @@ class AddPaymentMethodFormTypesPass implements CompilerPassInterface
                 );
             }
 
-            $paymentMethodFormTypes[$attrs[0]['alias']] = Legacy::supportsFormTypeName()
-                ? $attrs[0]['alias']
-                : $definition->getClass()
+            $paymentMethodFormTypes[$attrs[0]['alias']] = Legacy::supportsFormTypeClass()
+                ? $definition->getClass()
+                : $attrs[0]['alias']
             ;
         }
 

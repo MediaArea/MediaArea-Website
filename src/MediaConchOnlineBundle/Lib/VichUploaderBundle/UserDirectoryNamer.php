@@ -8,9 +8,9 @@ use Vich\UploaderBundle\Mapping\PropertyMapping;
 class UserDirectoryNamer implements DirectoryNamerInterface
 {
     /**
-     * {@inheritDoc}
+     * {@inheritdoc}
      */
-    public function directoryName($object, PropertyMapping $mapping)
+    public function directoryName($object, PropertyMapping $mapping): string
     {
         if ($object->getUser()) {
             return $object->getUser()->getId();
