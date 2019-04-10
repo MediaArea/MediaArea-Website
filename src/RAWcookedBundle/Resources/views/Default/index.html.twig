@@ -17,8 +17,8 @@
                 <h1 class="v-align bigtitle">RAWcooked</h1>
             </div>
             <div class="projectDescription center-font-xs">
-                <strong>RAWcooked</strong> encodes RAW audio-visual data into the Matroska container (MKV), using the video codec FFV1 for the image and audio codec FLAC for the sound. The metadata accompanying the RAW data are preserved, and sidecar files, like MD5, LUT or XML, can be added into the Matroska container as attachments. This allows for the management of these audio-visual file formats in an effective and transparent way (e.g. native playback in VLC), while saving typically between one to two thirds of the needed storage, and speeding up the back-up process on LTO cartridges.<br>
-                When needed, the uncompressed source is retrieved <b>bit-by-bit</b>, in a manner faster than uncompressed sources directly stored on LTO cartridges.
+                <strong>RAWcooked</strong> easily encodes RAW audio-visual image sequences into losslessly compressed video streams, reducing the file size by approximately half.  Using FFmpeg the audio-visual data is encoded into a Matroska container (MKV), using the video codec FFV1 and audio codec FLAC. The metadata accompanying the RAW sequence is preserved in the wrapper, along with additional sidecar files such as MD5 checksums, LUT or XML if desired. This allows for the management of these audio-visual file formats in an effective and transparent way. The lossless Matroska video stream can be played in VLC or MPV media players, and writing to storage devices such as LTO will be significantly quicker.<br>
+                If you need to use image sequence in its original form, one line of code will easily restore it <b>bit-by-bit</b>, faster than retrieving uncompressed image sequences directly from LTO tape storage.
             </div>
             <br>
             <div class="projectDescription center-font-xs">
@@ -27,12 +27,12 @@
             <br>
             <div class="projectDescription center-font-xs">
                 {% if 'Windows' == downloadInfo.name %}
-                    You need <a href="https://ffmpeg.zeranoe.com">FFmpeg</a> installed on your machine.
+                    You need to download and install <a href="https://ffmpeg.zeranoe.com">FFmpeg</a> to use RAWcooked.
                 {% else %}
                     {% if 'macOS' == downloadInfo.name %}
-                        You need <a href="https://evermeet.cx/ffmpeg/">FFmpeg</a> installed on your machine.
+                        You need to download and install <a href="https://evermeet.cx/ffmpeg/">FFmpeg</a> to use RAWcooked.
                     {% else %}
-                        You need FFmpeg installed on your machine.
+                        You need to download and install FFmpeg to use RAWcooked.
                     {% endif %}
                 {% endif %}
                 
@@ -97,7 +97,7 @@
                     <a href="{{ path('rawcooked_download_archlinux') }}"><img src="{{ asset_url }}" width="16" height="16" alt="ArchLinux" title="ArchLinux" class="sprite ArchLinux"></a>
                     {% endimage %}
                     <br>
-                    See <a href="https://github.com/MediaArea/RAWcooked/blob/master/History_CLI.txt">ChangeLog</a> or <a href="/download/snapshots/binary/rawcooked">very latest snapshots</a>
+                    See <a href="https://github.com/MediaArea/RAWcooked/blob/master/History_CLI.txt">ChangeLog</a> for <a href="/download/snapshots/binary/rawcooked">very latest snapshots</a>
                     </div>
                 </div>
             </div>
