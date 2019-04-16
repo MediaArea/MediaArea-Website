@@ -17,8 +17,8 @@
                 <h1 class="v-align bigtitle">RAWcooked</h1>
             </div>
             <div class="projectDescription center-font-xs">
-                <strong>RAWcooked</strong> easily encodes RAW audio-visual image sequences into losslessly compressed video streams, reducing the file size by approximately half.  Using FFmpeg the audio-visual data is encoded into a Matroska container (MKV), using the video codec FFV1 and audio codec FLAC. The metadata accompanying the RAW sequence is preserved in the wrapper, along with additional sidecar files such as MD5 checksums, LUT or XML if desired. This allows for the management of these audio-visual file formats in an effective and transparent way. The lossless Matroska video stream can be played in VLC or MPV media players, and writing to storage devices such as LTO will be significantly quicker.<br>
-                If you need to use image sequence in its original form, one line of code will easily restore it <b>bit-by-bit</b>, faster than retrieving uncompressed image sequences directly from LTO tape storage.
+                <strong>RAWcooked</strong>  easily encodes RAW audio-visual image sequences into a lossless video stream, reducing the file size by between one and two thirds.  Using FFmpeg the audio-visual data is encoded into a Matroska container (MKV) using the video codec FFV1, and audio codec FLAC. The metadata accompanying the RAW data is fully preserved, along with additional sidecar files such as MD5 checksums, LUT or XML if desired. This allows for the management of these audio-visual file formats in an effective and transparent way. The lossless Matroska video stream can be played in VLC or MPV media players, and writing and retrieving from storage devices such as LTO is significantly quicker.<br>
+                If you need to use the RAW source in its original form, one line of code will easily restore it <b>bit-by-bit</b>, faster than retrieving the same file from LTO tape storage.
             </div>
             <br>
             <div class="projectDescription center-font-xs">
@@ -119,23 +119,23 @@ An otherwise unviewable image sequence can be viewed easily with VLC or MPV when
 <h2>Matroska file complete reversibility</h2>
 <p>Whenever necessary, <i>RAWcooked</i> can decode the Matroska file back to the original RAW image sequence, including restoration of the original metadata and sidecar files. It is important to stress that the encoded files can be fully decoded, and that this process will be create bit-by-bit identical files to the originals. Not only is the image and/or sound content fully preserved, but also all enclosed metadata and the all of the file’s characteristics. Therefore, an encoded and decoded RAW file cannot be differentiated from its original.</p>
 <h2>A complete ecosystem</h2>
-<p>The Matroska files which have been encoded by <i>RAWcooked</i> can be used on wide range of popular software supporting Matroska/FFV1 and FLAC playback, including:</p>
+<p>The Matroska files that have been encoded by <i>RAWcooked</i> can be used with many popular open source softwares which support FFV1 and FLAC playback, including:</p>
 <ul>
-<li><a href="https://www.videolan.org/vlc/">VLC</a> media player for playback</li>
-<li><a href="https://www.ffmpeg.org/">FFmpeg</a> tools can transcode, playback and probe those files</li>
-<li><a href="{{ path('qc_home') }}">QCTools</a> can performs in-depth analysis</li>
-<li><a href="{{ path('mi_home') }}">MediaInfo</a> can display technical information</li>
-<li><a href="{{ path('mc_home') }}">MediaConch</a> can check the conformance of the file</li>
+<li><a href="https://www.videolan.org/vlc/">VLC</a> media player for quick and simple review</li>
+<li><a href="https://www.ffmpeg.org/">FFmpeg</a> for transcoding, playback, metadata viewing and extraction</li>
+<li><a href="{{ path('qc_home') }}">QCTools</a> advanced quality control software for audio-visual files</li>
+<li><a href="{{ path('mi_home') }}">MediaInfo</a> display and export technical metadata</li>
+<li><a href="{{ path('mc_home') }}">MediaConch</a> for checking the conformance of a file</li>
 </ul>
-<p>This way an archive with limited resources can process the files encoded by <i>RAWcooked</i> on every current computer (e.g. for cataloging or access purposes).</p>
+<p>Being open source, they’re free to use allowing archives with limited resources to process the files encoded by <i>RAWcooked</i> on any computer, such as for cataloging or access purposes.</p>
 <h2>Funding plan</h2>
-<p>MediaArea.net realizes the implementation of the basis module for anticipated costs of 10&nbsp;000&nbsp;&euro; which are guaranteed by AV Preservation by reto.ch.</p>
-<p>The archival community and the industry are invited to <a href="{{ path('ma_contact') }}">buy</a> the flavors (components, bit depths, endianess, packing, etc.) of the formats they actually need. An example file of each flavor of a format will be tested by MediaArea.net and the exact specification implemented into the software.</p>
-<p>This way the contributing bodies and individuals are sure their files can be processed by the software.</p>
-<p>The price is 1&nbsp;000&nbsp;&euro; for basic support (bug fixes) and one non-free flavour, then 500&nbsp;&euro; for each following non-free flavour (additional flavours can be added later if you are not sure of how many flavours you need now, at the same price).</p>
+<p>MediaArea.net has achieved implementation of RAWcooked’s basic module with thanks to AV Preservation reto.ch, who has guaranteed software development with funding of 10,000€.</p>
+<p>The archive community or interested industry users are invited to <a href="{{ path('ma_contact') }}">buy</a> additional flavours required by their institution - such as components, bit depths, endianess, packing, etc.  Required flavours will be fully tested by MediaArea.net to exact specification before being implemented into the software.</p>
+<p>This model allows contributors the assurance that their files will work seamlessly with the software from the outset.</p>
+<p>The price is 1000€ for basic support including bug fixes and one additional flavour, then 500 € for each following flavour.  Additional flavours can be added at a later if you are not sure of how many flavours you need immediately.</p>
 <h2>Status</h2>
-<p>RAWcooked is currently under development. <a href="/download/snapshots/binary/rawcooked/">Development snapshots</a> are available (<a href="https://github.com/MediaArea/RAWcooked">corresponding code</a>), not to be used in production yet. As in January, some DPX flavors are supported, a sequence of DPX is detected, encode is delegated to FFmpeg and decode is native (from another MediaArea project), <code>rawcooked yourdpx.dpx</code> provides the FFmpeg command to run for encode, <code>rawcooked yourdpx.mkv</code> reverts bit-by-bit.<br>
-Priority is given to formats and flavors from our sponsors. You can test with this <a href="https://github.com/MediaArea/RAWcooked-RegressionTestingFiles/blob/master/Features/AV_Package/818_DCDM_P3_IA_FIC_000918/818_OV/818_OV_0086945.dpx?raw=true">file</a> (or a <a href="https://github.com/MediaArea/RAWcooked-RegressionTestingFiles/tree/master/Features/AV_Package/818_DCDM_P3_IA_FIC_000918/818_OV">sequence of files</a>).</p>
+<p>RAWcooked had its first official release October 2018, with support for a limited number of DPX flavours. To use RAWcooked simply type  <code>rawcooked /RAWsequenceDPX/</code> which begins the encoding using FFmpeg to create an MKV encoded file in the same folder, leaving the original DPX sequence in tact.  You can also use this command <code>rawcooked yourdpx.dpx</code> using the first DPX file in a sequence within your folder. To return the MKV back to its RAW source format use <code>rawcooked yourdpx.mkv</code> which uses RAWcooked software to unpack your RAW sequence bit-by-bit, including all original metadata and sidecar files.<br>
+Developments are still ongoing for a future version that will implement checksum hash embedding and reversibility check functions. <a href="/download/snapshots/binary/rawcooked/">Development snapshots</a> are available and you are welcome to contribute to this process by testing the code.</p>
 </section>
 
 <section>
