@@ -70,6 +70,18 @@ class DownloadController extends Controller
 
     /**
      * @Route(
+     *     "/BWFMetaEdit/Download/Raspbian",
+     *     name="bwf_download_raspbian"
+     * )
+     * @Template()
+     */
+    public function raspbianAction()
+    {
+        return array();
+    }
+
+    /**
+     * @Route(
      *     "/BWFMetaEdit/Download/Ubuntu",
      *     name="bwf_download_ubuntu"
      * )

@@ -84,6 +84,12 @@
     <td><a href="{{ path('bwf_download_archlinux') }}">MediaArea releases</a></td>
 </tr>
 <tr>
+    {% image '@AppBundle/Resources/public/img/OS/Raspbian.png' %}
+    <th><a href="{{ path('bwf_download_raspbian') }}"><img src="{{ asset_url }}" width="256" height="48" alt="Raspbian" title="Raspbian"></a></th>
+    {% endimage %}
+    <td><a href="{{ path('bwf_download_debian') }}">MediaArea releases</a></td>
+</tr>
+<tr>
     {% image '@AppBundle/Resources/public/img/OS/Flatpak.png' %}
     <th><a href="{{ path('bwf_download_flatpak') }}"><img src="{{ asset_url }}" width="250" height="72" alt="Flatpak" title="Flatpak"></a></th>
     {% endimage %}
