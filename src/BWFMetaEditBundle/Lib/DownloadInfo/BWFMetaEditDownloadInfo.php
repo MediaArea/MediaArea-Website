@@ -11,6 +11,7 @@ class BWFMetaEditDownloadInfo extends AbstractDownloadInfo
         'Arch Linux' => array('name' => 'Arch Linux', 'route' => 'bwf_download_archlinux'),
         'CentOS' => array('name' => 'CentOS', 'route' => 'bwf_download_centos'),
         'Debian' => array('name' => 'Debian', 'route' => 'bwf_download_debian'),
+        'Raspbian' => array('name' => 'Raspbian', 'route' => 'bwf_download_raspbian'),
         'Fedora' => array('name' => 'Fedora', 'route' => 'bwf_download_fedora'),
         'Flatpak' => array('name' => 'Flatpak', 'route' => 'bwf_download_flatpak'),
         'Kubuntu' => array('name' => 'Ubuntu', 'route' => 'bwf_download_ubuntu'),
@@ -42,6 +43,6 @@ class BWFMetaEditDownloadInfo extends AbstractDownloadInfo
     public function parse()
     {
         $this->downloadInfo = $this->detectOS();
-        $this->downloadInfo['version'] = '1.3.6';
+        $this->downloadInfo['version'] = '1.3.7';
     }
 }

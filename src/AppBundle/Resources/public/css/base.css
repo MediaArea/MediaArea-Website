@@ -252,6 +252,8 @@ p {
 .openSUSE   { background-position: -265px -21px; }
 .Android    { background-position: -291px -21px; }
 .iOS        { background-position: -317px -21px; }
+.Flatpak    { background-position: -343px -21px; }
+.Raspbian   { background-position: -369px -21px; }
 
 /* RSS icon */
 .rss-updates {
