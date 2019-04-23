@@ -160,3 +160,26 @@
 #compare-filter-container {
     min-height: 35px;
 }
+
+
+@media(prefers-color-scheme: dark) {
+    #compare > thead > tr > td.danger, #compare > tbody > tr > td.danger, #compare > tfoot > tr > td.danger, #compare > thead > tr > th.danger, #compare > tbody > tr > th.danger, #compare > tfoot > tr > th.danger, #compare > thead > tr.danger > td, #compare > tbody > tr.danger > td, #compare > tfoot > tr.danger > td, #compare > thead > tr.danger > th, #compare > tbody > tr.danger > th, #compare > tfoot > tr.danger > th {
+        background-color: #a94442;
+    }
+
+    #compare > thead > tr > td:hover, #compare > tbody > tr > td:hover, #compare > tfoot > tr > td:hover, #compare > thead > tr > th:hover, #compare > tbody > tr > th:hover, #compare > tfoot > tr > th:hover, #compare > thead > tr:hover > td, #compare > tbody > tr:hover > td, #compare > tfoot > tr:hover > td, #compare > thead > tr:hover > th, #compare > tbody > tr:hover > th, #compare > tfoot > tr:hover > th {
+        background-color: #111;
+    }
+
+    #mediainfo-file-input {
+        background: transparent;
+    }
+
+    .mediainfo-report-container .hljs {
+        background: #111;
+    }
+
+    .hljs, .hljs-subst {
+        color: #C8C8C8;
+    }
+}

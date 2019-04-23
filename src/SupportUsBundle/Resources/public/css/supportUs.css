@@ -215,3 +215,14 @@ ul.icon-lists li {
 :target .anchor-highlight {
 	background-color: #fafad2;
 }
+
+@media(prefers-color-scheme: dark) {
+    .sponsors-bronze .icon {
+    background-color: #fff; /* keep it white to preserve sponsors logo visibility  */
+    }
+
+    .support-us-features-list {
+        background-color: #272B30;
+        border-color: #333;
+    }
+}
