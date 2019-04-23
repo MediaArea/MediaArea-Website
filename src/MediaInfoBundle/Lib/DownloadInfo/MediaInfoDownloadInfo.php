@@ -11,6 +11,7 @@ class MediaInfoDownloadInfo extends AbstractDownloadInfo
         'Arch Linux' => array('name' => 'Arch Linux', 'route' => 'mi_download_archlinux', 'installer' => false),
         'CentOS' => array('name' => 'CentOS', 'route' => 'mi_download_centos', 'installer' => false),
         'Debian' => array('name' => 'Debian', 'route' => 'mi_download_debian', 'installer' => false),
+        'Raspbian' => array('name' => 'Raspbian', 'route' => 'mi_download_raspbian', 'installer' => false),
         'Fedora' => array('name' => 'Fedora', 'route' => 'mi_download_fedora', 'installer' => false),
         'Kubuntu' => array('name' => 'Ubuntu', 'route' => 'mi_download_ubuntu', 'installer' => false),
         'Lubuntu' => array('name' => 'Ubuntu', 'route' => 'mi_download_ubuntu', 'installer' => false),
@@ -47,6 +48,6 @@ class MediaInfoDownloadInfo extends AbstractDownloadInfo
     public function parse()
     {
         $this->downloadInfo = $this->detectOS();
-        $this->downloadInfo['version'] = '18.12';
+        $this->downloadInfo['version'] = '19.04';
     }
 }

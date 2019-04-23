@@ -654,6 +654,14 @@ MediaInfo can be used in your own program without any difficulties, with a stati
         <source><![CDATA[download.debian.title]]></source>
         <target><![CDATA[Download - Debian]]></target>
       </trans-unit>
+      <trans-unit id="download.raspbian.page.title" approved="yes">
+        <source><![CDATA[download.raspbian.page.title]]></source>
+        <target><![CDATA[MediaInfo - Download MediaInfo for Raspbian]]></target>
+      </trans-unit>
+      <trans-unit id="download.raspbian.title" approved="yes">
+        <source><![CDATA[download.raspbian.title]]></source>
+        <target><![CDATA[Download - Raspbian]]></target>
+      </trans-unit>
       <trans-unit id="139" approved="yes">
         <source><![CDATA[download.fedora.page.title]]></source>
         <target><![CDATA[MediaInfo - Download MediaInfo for Fedora]]></target>

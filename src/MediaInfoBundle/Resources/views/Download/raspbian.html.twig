@@ -1,0 +1,29 @@
+{% extends 'MediaInfoBundle::base.html.twig' %}
+
+{% block title %}{% trans %}download.raspbian.page.title{% endtrans %}{% endblock %}
+{% block description %}{% trans %}about.page.description{% endtrans %}{% endblock %}
+{% block keywords %}{% trans %}about.page.keywords{% endtrans %}{% endblock %}
+
+{% block body %}
+<h1>{% trans %}download.raspbian.title{% endtrans %}</h1>
+{% image '@AppBundle/Resources/public/img/OS/Raspbian.png' %}
+<img src="{{ asset_url }}" alt="Raspbian" title="Raspbian" width="258" height="48"><br />
+{% endimage %}
+
+<div class="table-responsive">
+<table class="download table table-bordered table-condensed">
+<thead>
+<tr class="table-header">
+    <th>Version</th>
+    <th>Architecture</th>
+    <th>Interface</th>
+    <td>Version</td>
+    <td>Comment</td>
+</tr>
+</thead>
+<tbody>
+{{ include('@MediaInfo/Download/raspbianTable.html.twig') }}
+</tbody>
+</table>
+</div>
+{% endblock %}
