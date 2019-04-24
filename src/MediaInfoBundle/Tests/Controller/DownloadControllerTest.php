@@ -67,6 +67,14 @@ class DownloadControllerTest extends WebTestCase
         $this->assertEquals(200, $client->getResponse()->getStatusCode());
     }
 
+    public function testRaspbian()
+    {
+        $client = static::createClient();
+
+        $client->request('GET', '/en/MediaInfo/Download/Raspbian');
+        $this->assertEquals(200, $client->getResponse()->getStatusCode());
+    }
+
     public function testFedora()
     {
         $client = static::createClient();

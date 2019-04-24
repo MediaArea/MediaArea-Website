@@ -8,6 +8,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
 /**
  * @SuppressWarnings(PHPMD.TooManyPublicMethods)
+ * @SuppressWarnings(PHPMD.TooManyMethods)
  */
 class DownloadController extends Controller
 {
@@ -114,6 +115,20 @@ class DownloadController extends Controller
      * @Template()
      */
     public function debianAction()
+    {
+        return array();
+    }
+
+    /**
+     * @Route(
+     *     "/{_locale}/MediaInfo/Download/Raspbian",
+     *     name="mi_download_raspbian",
+     *     requirements={"_locale": "%app.locales%"
+     *     }
+     * )
+     * @Template()
+     */
+    public function raspbianAction()
     {
         return array();
     }

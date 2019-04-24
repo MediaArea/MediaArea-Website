@@ -5,7 +5,37 @@
         <link>https://mediaarea.net/MediaInfo</link>
         <description>MediaInfo updates feed</description>
         <language>en-us</language>
-        <lastBuildDate>Mon, 10 Dec 2018 12:00:00 +0000</lastBuildDate>
+        <lastBuildDate>Tue, 23 Apr 2019 12:00:00 +0000</lastBuildDate>
+         <item>
+            <title>MediaInfo 19.04</title>
+            <description>
+                <![CDATA[+ USAC: DRC effect types, Sample peak level, True peak level, Program loudness<br />
+                         + HDR: SMPTE ST 2094 App 4 (including HDR10+) support<br />
+                         + HDR: move HDR10, Dolby Vision and SL-HDR meta to specific generic "HDR Format" lines<br />
+                         + Matroska: SMPTE ST 2086 (HDR10) support<br />
+                         + Matroska: FieldOrder support<br />
+                         + HEIF image format support<br />
+                         + AV1: support of AV1 in MP4, HEIF, IVF<br />
+                         + MOV: Add a lot more countries to AppleStoreCountry field internal list<br />
+                         + MXF: Fix memory leak when fully parsing big file with acquisition metadata<br />
+                         + HEVC: more HEVC profiles (Multiview, Scalable, Screen Content...)<br />
+                         + AAC: better handling of corrupted streams<br />
+                         + AAC: better handling of unknown channel layouts<br />
+                         + AVC in MP4: better support of corrupted streams<br />
+                         x B1101, AVI: fix crash with some invalid streams<br />
+                         x B1101, SMPTE ST 337: fix crash with some invalid streams<br />
+                         x Matroska: chapters timestamp were not display if chapters have no name<br />
+                         x MXF: Fix false positive truncated file detection when there is no Random Index Pack<br />
+                         x AAC: channel layout typos (Rls instead of Lrs, Lr instead of Rb)<br />
+                         x ProRes: correctly show color space if alpha plane is present<br />
+                         x MPEG Audio: some VBR files use "Info" Xing header, so we ignore the difference between "Info" and "Xing"<br />
+                         x I943, MPEG-4: wrong display aspect ratio in some corner cases (32-bit release only)<br />
+                         x I1096, OGG: assign METADATA_BLOCK_PICTURE tag to cover]]>
+            </description>
+            <link>https://mediaarea.net/MediaInfo</link>
+            <pubDate>Tue, 23 Apr 2019 12:00:00 +0000</pubDate>
+            <guid>MediaInfo-19.04</guid>
+         </item>
          <item>
             <title>MediaInfo 18.12</title>
             <description>

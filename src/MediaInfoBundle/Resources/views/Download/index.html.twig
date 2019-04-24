@@ -68,6 +68,12 @@
     <td><a href="{{ path('mi_download_ubuntu') }}">{% trans %}download.table.official_release{% endtrans %}</a></td>
 </tr>
 <tr>
+    {% image '@AppBundle/Resources/public/img/OS/Raspbian.png' %}
+    <th><a href="{{ path('mi_download_raspbian') }}"><img src="{{ asset_url }}" width="258" height="48" alt="Raspbian" title="Raspbian"></a></th>
+    {% endimage %}
+    <td><a href="{{ path('mi_download_raspbian') }}">{% trans %}download.table.official_release{% endtrans %}</a></td>
+</tr>
+<tr>
     {% image '@AppBundle/Resources/public/img/OS/RedHat.png' %}
     <th><a href="{{ path('mi_download_rhel') }}"><img src="{{ asset_url }}" width="200" height="61" alt="RedHat Entreprise Linux" title="RedHat Entreprise Linux"></a></th>
     {% endimage %}
