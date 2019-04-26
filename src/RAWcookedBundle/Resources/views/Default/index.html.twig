@@ -17,7 +17,7 @@
                 <h1 class="v-align bigtitle">RAWcooked</h1>
             </div>
             <div class="projectDescription center-font-xs">
-                <strong>RAWcooked</strong>  easily encodes RAW audio-visual image sequences into a lossless video stream, reducing the file size by between one and two thirds.  Using FFmpeg the audio-visual data is encoded into a Matroska container (MKV) using the video codec FFV1, and audio codec FLAC. The metadata accompanying the RAW data is fully preserved, along with additional sidecar files such as MD5 checksums, LUT or XML if desired. This allows for the management of these audio-visual file formats in an effective and transparent way. The lossless Matroska video stream can be played in VLC or MPV media players, and writing and retrieving from storage devices such as LTO is significantly quicker.<br>
+                <strong>RAWcooked</strong> easily encodes RAW audio-visual sequences into a lossless video stream, reducing the file size by between one and two thirds. FFmpeg encodes the audio-visual data into a Matroska container (MKV) using the video codec FFV1, and audio codec FLAC. The metadata accompanying the RAW data is fully preserved, along with additional sidecar files such as MD5 checksums, LUT or XML if desired. This allows for the management of these audio-visual file formats in an effective and transparent way. The lossless Matroska video stream can be played in VLC or MPV media players, and writing and retrieving from storage devices such as LTO is significantly quicker.<br>
                 If you need to use the RAW source in its original form, one line of code will easily restore it <b>bit-by-bit</b>, faster than retrieving the same file from LTO tape storage.
             </div>
             <br>
@@ -117,7 +117,7 @@
 <p>The solution MediaArea have created to meet this need is <i>RAWcooked</i>. This software encodes from, and decodes to, «raw» audio-visual image sequences in a revolutionary and transparent way. The image and/or sound content, including all the embedded metadata and sidecar files, is fully preserved at the bit level.<br>
 An otherwise unviewable image sequence can be viewed easily with VLC or MPV when encoded as a Matroska file. Plus this process is fully reversible returning your image sequence back to its original package content.</p>
 <h2>Matroska file complete reversibility</h2>
-<p>Whenever necessary, <i>RAWcooked</i> can decode the Matroska file back to the original RAW image sequence, including restoration of the original metadata and sidecar files. It is important to stress that the encoded files can be fully decoded, and that this process will be create bit-by-bit identical files to the originals. Not only is the image and/or sound content fully preserved, but also all enclosed metadata and the all of the file’s characteristics. Therefore, an encoded and decoded RAW file cannot be differentiated from its original.</p>
+<p>Whenever necessary, <i>RAWcooked</i> can decode the Matroska file back to the original RAW image sequence, including restoration of the original metadata and sidecar files. It is important to stress that the encoded files can be fully decoded, and that this process will be created bit-by-bit identical files to the originals. Not only is the image and/or sound content fully preserved, but also all enclosed metadata and the all of the file’s characteristics. Therefore, an encoded and decoded RAW file cannot be differentiated from its original.</p>
 <h2>A complete ecosystem</h2>
 <p>The Matroska files that have been encoded by <i>RAWcooked</i> can be used with many popular open source softwares which support FFV1 and FLAC playback, including:</p>
 <ul>
@@ -127,14 +127,14 @@ An otherwise unviewable image sequence can be viewed easily with VLC or MPV when
 <li><a href="{{ path('mi_home') }}">MediaInfo</a> display and export technical metadata</li>
 <li><a href="{{ path('mc_home') }}">MediaConch</a> for checking the conformance of a file</li>
 </ul>
-<p>Being open source, they’re free to use allowing archives with limited resources to process the files encoded by <i>RAWcooked</i> on any computer, such as for cataloging or access purposes.</p>
+<p>Being open source, they’re low cost (and free for the many commonly used flavors) allowing archives with limited resources to process the files encoded by <i>RAWcooked</i> on any computer, such as for cataloging or access purposes.</p>
 <h2>Funding plan</h2>
-<p>MediaArea.net has achieved implementation of RAWcooked’s basic module with thanks to AV Preservation reto.ch, who has guaranteed software development with funding of 10,000€.</p>
-<p>The archive community or interested industry users are invited to <a href="{{ path('ma_contact') }}">buy</a> additional flavours required by their institution - such as components, bit depths, endianess, packing, etc.  Required flavours will be fully tested by MediaArea.net to exact specification before being implemented into the software.</p>
+<p>MediaArea.net has achieved implementation of RAWcooked’s basic module with thanks to AV Preservation reto.ch, who has guaranteed software development with funding of 10"&thinsp;"000"&euro".</p>
+<p>The archive community or interested industry users are invited to <a href="{{ path('ma_contact') }}">buy</a> additional flavors required by their institution - such as components, bit depths, endianess, packing, etc. in order to help the long-term sustainability of the project and its further development. Required flavors will be fully tested by MediaArea.net to exact specification before being implemented into the software.</p>
 <p>This model allows contributors the assurance that their files will work seamlessly with the software from the outset.</p>
-<p>The price is 1000€ for basic support including bug fixes and one additional flavour, then 500 € for each following flavour.  Additional flavours can be added at a later if you are not sure of how many flavours you need immediately.</p>
+<p>The price is 1000"&euro" for basic support including bug fixes and one additional flavor, then 500"&euro" for each following flavor which can be added later if you are not sure of how many you need immediately.</p>
 <h2>Status</h2>
-<p>RAWcooked had its first official release October 2018, with support for a limited number of DPX flavours. To use RAWcooked simply type  <code>rawcooked /RAWsequenceDPX/</code> which begins the encoding using FFmpeg to create an MKV encoded file in the same folder, leaving the original DPX sequence in tact.  You can also use this command <code>rawcooked yourdpx.dpx</code> using the first DPX file in a sequence within your folder. To return the MKV back to its RAW source format use <code>rawcooked yourdpx.mkv</code> which uses RAWcooked software to unpack your RAW sequence bit-by-bit, including all original metadata and sidecar files.<br>
+<p>RAWcooked had its first official release October 2018, with support for a limited number of DPX flavors. To use RAWcooked simply type <code>rawcooked /RAWsequenceDPX/</code> which begins the encoding using FFmpeg, creating an MKV encoded file in the same folder, leaving the original DPX sequence intact. You can also use this command <code>rawcooked yourdpx.dpx</code> using the first DPX file in a sequence within your folder. To return the MKV back to its RAW source format use <code>rawcooked yourdpx.mkv</code> which uses RAWcooked software to unpack your RAW sequence bit-by-bit, including all original metadata and sidecar files.<br>
 Developments are still ongoing for a future version that will implement checksum hash embedding and reversibility check functions. <a href="/download/snapshots/binary/rawcooked/">Development snapshots</a> are available and you are welcome to contribute to this process by testing the code.</p>
 </section>
 
@@ -439,7 +439,7 @@ Developments are still ongoing for a future version that will implement checksum
 </table>
 </div>
 
-<p>Another format/flavour you want us to support (e.g. little endian…)? <a href="{{ path('ma_contact') }}">Contact us</a>.</p>
+<p>Another format/flavor you want us to support (e.g. little endian…)? <a href="{{ path('ma_contact') }}">Contact us</a>.</p>
 
 <h2>Supported output formats</h2>
 <div class="table-responsive">
