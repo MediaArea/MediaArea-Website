@@ -48,7 +48,7 @@
                         <li><a href="{{ path('dv_download_debian') }}">Debian</a></li>
                         <li><a href="{{ path('dv_download_ubuntu') }}">Ubuntu</a></li>
                         <li><a href="{{ path('dv_download_ubuntu') }}">Linux Mint</a></li>
-                        <li><a href="{{ path('dv_download_rhel') }}">RedHat Entreprise Linux</a></li>
+                        <li><a href="{{ path('dv_download_rhel') }}">RedHat Enterprise Linux</a></li>
                         <li><a href="{{ path('dv_download_centos') }}">CentOS</a></li>
                         <li><a href="{{ path('dv_download_fedora') }}">Fedora</a></li>
                         <li><a href="{{ path('dv_download_opensuse') }}">openSUSE</a></li>
@@ -81,7 +81,7 @@
                     <a href="{{ path('dv_download_debian') }}"><img src="{{ asset_url }}" width="16" height="16" alt="Debian" title="Debian" class="sprite Debian"></a>
                     <a href="{{ path('dv_download_ubuntu') }}"><img src="{{ asset_url }}" width="16" height="16" alt="Ubuntu" title="Ubuntu" class="sprite Ubuntu"></a>
                     <a href="{{ path('dv_download_ubuntu') }}"><img src="{{ asset_url }}" width="16" height="16" alt="Linux Mint" title="Linux Mint" class="sprite Linux_Mint"></a>
-                    <a href="{{ path('dv_download_rhel') }}"><img src="{{ asset_url }}" width="16" height="16" alt="RedHat Entreprise Linux" title="RedHat Entreprise Linux" class="sprite RedHat"></a>
+                    <a href="{{ path('dv_download_rhel') }}"><img src="{{ asset_url }}" width="16" height="16" alt="RedHat Enterprise Linux" title="RedHat Enterprise Linux" class="sprite RedHat"></a>
                     <a href="{{ path('dv_download_centos') }}"><img src="{{ asset_url }}" width="16" height="16" alt="CentOS" title="CentOS" class="sprite CentOS"></a>
                     <a href="{{ path('dv_download_fedora') }}"><img src="{{ asset_url }}" width="16" height="16" alt="Fedora" title="Fedora" class="sprite Fedora"></a>
                     <a href="{{ path('dv_download_opensuse') }}"><img src="{{ asset_url }}" width="16" height="16" alt="openSUSE" title="openSUSE" class="sprite openSUSE"></a>
@@ -106,7 +106,7 @@
 <p>The reformatting of DV tapes (such as miniDV, DVCam, and DVCPro) to DV file-based formats is a point when the introduction of permanent errors is of particularly high risk. Most capture tools for DV only report errors if they are significant, such as a lost frame, whereas other documented errors are not reviewed. DV Analyzer provides a way to analyze and report audio, video, subcode, and structural errors within a DV file. This enables automated quality control and the ability to verify the accuracy and integrity of the reformatting process on a frame-by-frame basis.</p>
 
 <h2>Explanation of DV Analyzer Views and Documents:</h2>
-<p>The DV format is rich with temporal metadata. Every frame may contain time code, recording date and time information, recording markers, and more. DV Analyzer reports this information which can be used in a variety of meaningful ways when working with and preserving DV content. This is particularly useful in documenting source material of edited DV content.<br/>
+<p>The DV format is rich with temporal metadata. Every frame may contain time code, recording date and time information, recording markers, and more. DV Analyzer reports this information which can be used in a variety of meaningful ways when working with and preserving DV content. This is particularly useful in documenting source material of edited DV content.<br>
 Check a <a href="{{ path('dv_doc_analyze') }}">list of information that DV Analyzer interprets</a>.</p>
 
 <h2>Case study:</h2>
@@ -120,6 +120,6 @@ Check a <a href="{{ path('dv_doc_analyze') }}">list of information that DV Analy
 </ul>
 
 <h2>License:</h2>
-It is <a href="http://en.wikipedia.org/wiki/Open_source">Open-Source</a> software which means that end users and developers have freedom to study, to improve and to redistribute the program (<a href="{{ path('dv_license') }}">GPLv3+</a> for the code developed by us).
+<p>It is <a href="https://en.wikipedia.org/wiki/Open_source">Open-Source</a> software which means that end users and developers have freedom to study, to improve and to redistribute the program (<a href="{{ path('dv_license') }}">GPLv3+</a> for the code developed by us).</p>
 </section>
 {% endblock %}
