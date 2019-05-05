@@ -17,9 +17,9 @@
                 <h1 class="v-align bigtitle">QCTools</h1>
             </div>
             <div class="projectDescription center-font-xs">
-                <acronym title="Quality Control Tools for Video Preservation"><strong>QCTools</strong></acronym> is a software tool that helps users analyze and understand their digitized video files through use of audiovisual analytics and filtering.<br/>
-                Funded by the <a href="https://www.neh.gov/" target="_blank">National Endowment for the Humanities</a> and the <a href="http://www.knightfoundation.org" target="_blank">Knight Foundation</a>; designed and led by Dave Rice and the <a href="https://www.bavc.org/" target="_blank">Bay Area Video Coalition</a>; developed by MediaArea, <a href="https://github.com/utzig">Fabio Utzig</a>, <a href="https://github.com/ElderOrb">Alexander Ivash</a>.<br/>
-                MediaArea was involved in the initial development and provides binaries for all platforms.
+                <p><abbr title="Quality Control Tools for Video Preservation"><strong>QCTools</strong></abbr> is a software tool that helps users analyze and understand their digitized video files through use of audiovisual analytics and filtering.<br>
+                Funded by the <a href="https://www.neh.gov/" target="_blank">National Endowment for the Humanities</a> and the <a href="http://www.knightfoundation.org" target="_blank">Knight Foundation</a>; designed and led by Dave Rice and the <a href="https://www.bavc.org/" target="_blank">Bay Area Video Coalition</a>; developed by MediaArea, <a href="https://github.com/utzig">Fabio Utzig</a>, <a href="https://github.com/ElderOrb">Alexander Ivash</a>.<br>
+                MediaArea was involved in the initial development and provides binaries for all platforms.</p>
             </div>
 
             {% if 'Windows' == downloadInfo.name %}
@@ -44,7 +44,7 @@
                         <li><a href="{{ path('qc_download_debian') }}">Debian</a></li>
                         <li><a href="{{ path('qc_download_ubuntu') }}">Ubuntu</a></li>
                         <li><a href="{{ path('qc_download_ubuntu') }}">Linux Mint</a></li>
-                        <li><a href="{{ path('qc_download_rhel') }}">RedHat Entreprise Linux</a></li>
+                        <li><a href="{{ path('qc_download_rhel') }}">RedHat Enterprise Linux</a></li>
                         <li><a href="{{ path('qc_download_centos') }}">CentOS</a></li>
                         <li><a href="{{ path('qc_download_fedora') }}">Fedora</a></li>
                         <li><a href="{{ path('qc_download_opensuse') }}">openSUSE</a></li>
@@ -62,7 +62,7 @@
 
                 <div class="projectDescription">
                     <div class="downloadDetails">
-                        Version {{ downloadInfo.version }}{% if downloadInfo.name %}, for {{ downloadInfo.name }}{% endif %}
+                    <p>Version {{ downloadInfo.version }}{% if downloadInfo.name %}, for {{ downloadInfo.name }}{% endif %}
                     <br>
                     Other versions (packaging, OS, interface...) are also <a href="{{ path('qc_download') }}">available</a>
                     {% image '@AppBundle/Resources/public/img/blank.gif' %}
@@ -71,7 +71,7 @@
                     <a href="{{ path('qc_download_debian') }}"><img src="{{ asset_url }}" width="16" height="16" alt="Debian" title="Debian" class="sprite Debian"></a>
                     <a href="{{ path('qc_download_ubuntu') }}"><img src="{{ asset_url }}" width="16" height="16" alt="Ubuntu" title="Ubuntu" class="sprite Ubuntu"></a>
                     <a href="{{ path('qc_download_ubuntu') }}"><img src="{{ asset_url }}" width="16" height="16" alt="Linux Mint" title="Linux Mint" class="sprite Linux_Mint"></a>
-                    <a href="{{ path('qc_download_rhel') }}"><img src="{{ asset_url }}" width="16" height="16" alt="RedHat Entreprise Linux" title="RedHat Entreprise Linux" class="sprite RedHat"></a>
+                    <a href="{{ path('qc_download_rhel') }}"><img src="{{ asset_url }}" width="16" height="16" alt="RedHat Enterprise Linux" title="RedHat Enterprise Linux" class="sprite RedHat"></a>
                     <a href="{{ path('qc_download_centos') }}"><img src="{{ asset_url }}" width="16" height="16" alt="CentOS" title="CentOS" class="sprite CentOS"></a>
                     <a href="{{ path('qc_download_fedora') }}"><img src="{{ asset_url }}" width="16" height="16" alt="Fedora" title="Fedora" class="sprite Fedora"></a>
                     <a href="{{ path('qc_download_opensuse') }}"><img src="{{ asset_url }}" width="16" height="16" alt="openSUSE" title="openSUSE" class="sprite openSUSE"></a>
@@ -79,7 +79,7 @@
                     <a href="{{ path('qc_download_flatpak') }}"><img src="{{ asset_url }}" width="16" height="16" alt="Flatpak" title="Flatpak" class="sprite Flatpak"></a>)
                     {% endimage %}
                     <br>
-                    See <a href="https://github.com/MediaArea/QCTools/blob/master/History.txt">ChangeLog</a> or <a href="/download/snapshots/binary/">very latest snapshots</a>
+                    See <a href="https://github.com/MediaArea/QCTools/blob/master/History.txt">ChangeLog</a> or <a href="/download/snapshots/binary/">very latest snapshots</a></p>
                     </div>
                     <div class="alert alert-info text-center">
                         {% trans with {'%donateRoute%': path('supportUs_individual')} %}about.what.donate{% endtrans %}
@@ -105,7 +105,7 @@
      <li>...<a href="{{ path('qc_doc_filter_descriptions') }}">Learn more</a>...</li>
     </ul>
     <h2>QCTools playback filters:</h2>
-    <p>The QCTools preview window is intended as an analytical playback environent that allows the user to review video through multiple filters simultaneously. The playback window includes two viewing windows which may be set to different combinations of filters.</p>
+    <p>The QCTools preview window is intended as an analytical playback environment that allows the user to review video through multiple filters simultaneously. The playback window includes two viewing windows which may be set to different combinations of filters.</p>
     <ul>
      <li>Histogram</li>
      <li>Waveform</li>
@@ -115,7 +115,7 @@
      <li>Vectorscope Target</li>
      <li>Extract Planes Equalized</li>
      <li>Extract Planes UV Equalized</li>
-     <li>Bit Plan </li>
+     <li>Bit Plan</li>
      <li>Bit Plane Noise</li>
      <li>Value Highlight</li>
      <li>Saturation Highlight</li>
@@ -123,6 +123,6 @@
      <li>...<a href="{{ path('qc_doc_playback_filters') }}">Learn more</a>...</li>
     </ul>
     <h2>License:</h2>
-    It is <a href="http://en.wikipedia.org/wiki/Open_source">Open-Source</a> software which means that end users and developers have freedom to study, to improve and to redistribute the program (<a href="{{ path('qc_license') }}">GPLv3 license</a> for the whole program, 3-Clause BSD license for the code developped by BAVC).<br/>
-    </section>
+    <p>It is <a href="http://en.wikipedia.org/wiki/Open_source">Open-Source</a> software which means that end users and developers have freedom to study, to improve and to redistribute the program (<a href="{{ path('qc_license') }}">GPLv3 license</a> for the whole program, 3-Clause BSD license for the code developed by BAVC).</p>
+</section>
 {% endblock %}
