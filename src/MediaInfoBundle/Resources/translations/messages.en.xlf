@@ -849,7 +849,7 @@ Please choose your preferred method below.]]></target>
       </trans-unit>
       <trans-unit id="donate.not_logged_in" approved="yes">
         <source><![CDATA[donate.not_logged_in]]></source>
-        <target><![CDATA[You are not logged in, you will not have access to the features reserved to our donors (like no ads) and new features, please <a href="%login%">login</a> or <a href="%register%">register</a>.]]></target>
+        <target><![CDATA[You are not logged in, you will not have access to the features reserved to our donors (like no ads) and new features, and no invoice, please <a href="%login%">login</a> or <a href="%register%">register</a>.]]></target>
       </trans-unit>
       <trans-unit id="177" approved="yes">
         <source><![CDATA[donate.flattr.title]]></source>
