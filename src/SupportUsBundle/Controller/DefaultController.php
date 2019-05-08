@@ -133,6 +133,39 @@ class DefaultController extends Controller
         ];
     }
 
+    /**
+     * @Route("/SupportUs/NoTimeToWait", name="supportUs_notimetowait")
+     * @Template()
+     */
+    public function noTimeToWaitAction(Request $request)
+    {
+        $ipToCurrency = new IpToCurrency($request->getClientIp());
+        $ipToCountry = new IpToCountry($request->getClientIp());
+        $vat = new VatCalculator();
+        $vat->setCountry($ipToCountry->getCountryIsoCode('FR'));
+
+        $form = $this->paymentForm(
+            $request,
+            'payment_orders_paymentcreateindividual',
+            'supportUs_individual',
+            $ipToCurrency->getCurrency(),
+            'individual'
+        );
+
+        if ($form instanceof RedirectResponse) {
+            return $form;
+        }
+
+        return [
+            'noAds' => true,
+            'country' => $ipToCountry,
+            'currency' => $ipToCurrency,
+            'vatRate' => $vat->getVatRate(),
+            'form' => $form->createView(),
+            'individual' => new Individual(),
+        ];
+    }
+
     protected function paymentForm(
         Request $request,
         string $returnRoute,

@@ -1,0 +1,126 @@
+{% extends 'SupportUsBundle::base.html.twig' %}
+
+{% block title %}Support Us! Become a supporter of MediaArea{% endblock %}
+{% block description %}Support Us! Become a supporter of MediaArea{% endblock %}
+{% block keywords %}Donation subscriber supporter member crowdfunding{% endblock %}
+
+{% block body %}
+<h1>Become a MediaArea supporter</h1>
+
+<p>
+    Although <a href="{{ path('notimetowait_home') }}">No Time to Wait</a> is free, <a href="https://www.youtube.com/watch?v=wPw18K-TWYg">there are many associated costs</a>.<br>
+    Please consider supporting our work and contributing by becoming a MediaArea supporter<br>
+</p>
+
+<p>
+    {% if country.countryName(false) %}{% trans with { '%country%': country.countryName(false), '%currency%': currency.currency, '%contact%': path('ma_contact') } %}supportUs.individual.location_currency{% endtrans %}{% else %}{% trans with { '%currency%': currency.currency } %}supportUs.individual.currency{% endtrans %}{% endif %}  (VAT {% if vatRate %}{{ vatRate }}% {% endif %}included, <a href="{{ path('ma_contact') }}">contact us</a> if your entity has an EU VAT number, we could invoice without VAT)
+</p>
+
+<p>Select a plan:</p>
+<div class="support-us-buttons-bar text-center">
+    <button type="button" class="btn btn-support-us btn-individual-member">
+        <span class="plan-title">Member</span>
+        <hr>
+        <span>{{ individual.localizedAmountWithCurrency(10, currency.currency) }}</span>
+    </button>
+    <button type="button" class="btn btn-support-us btn-individual-voter">
+        <span class="plan-title">Voter</span>
+        <hr>
+        <span>{{ individual.localizedAmountWithCurrency(30, currency.currency) }}</span>
+    </button>
+    <button type="button" class="btn btn-support-us btn-individual-supporter-bronze">
+        <span class="plan-title">Supporter</span>
+        <hr>
+        <span>{{ individual.localizedAmountWithCurrency(100, currency.currency) }}</span>
+    </button>
+    <button type="button" class="btn btn-support-us btn-individual-supporter-silver">
+        <span class="plan-title">Supporter+</span>
+        <hr>
+        <span>{{ individual.localizedAmountWithCurrency(300, currency.currency) }}</span>
+    </button>
+    <button type="button" class="btn btn-support-us btn-individual-supporter-gold">
+        <span class="plan-title">Supporter++</span>
+        <hr>
+        <span>{{ individual.localizedAmountWithCurrency(500, currency.currency) }}</span>
+    </button></div>
+
+<p>Or customize it:</p>
+<input id="slider" data-slider="true" data-slider-range="0,22" data-slider-step="1" data-slider-snap="true" data-slider-highlight="true" style="display: none;" value="14" type="text">
+
+<div class="support-us-features-list">
+    <p id="individual-label"></p>
+</div>
+
+<div>
+<p>
+    (Interested in supporting even more? Check also our <a href="{{ path('supportUs_corporate') }}">corporate page</a>)<br><br>
+</p>
+</div>
+
+<div class="form-group pay">
+    <div>
+        {% if not app.user %}{% trans with { '%login%': path('fos_user_security_login'), '%register%': path('fos_user_registration_register') } %}donate.not_logged_in{% endtrans %}{% endif %}
+        <p>Pay with:</p>
+    </div>
+    <div class="row">
+        <div class="col-sm-6 individual-payment">
+            <div class="col-sm-12 support-us-features-list">
+                {{ include('@SupportUs/individualPaymentForm.html.twig') }}
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="col-sm-12 support-us-features-list">
+                <button type="submit" class="btn btn-default btn-lg btn-block btn-paypal">Pay with Paypal</button>
+            </div>
+            {{ include('@SupportUs/Default/BankWire/index.html.twig', {'isoCode': country.countryIsoCode | lower}, with_context = false) }}
+        </div>
+    </div>
+</div>
+
+<div class="form-group row no-pay hidden">
+    <p>&nbsp;</p>
+    <div class="col-sm-12">
+        <a class="btn btn-primary btn-lg btn-block btn-support" href="{{ path('supportUs_about') }}">Financially embarrassed? Help us spread the word!</a>
+    </div>
+</div>
+
+<div>
+    Alternatively, you can support us on
+    {% image '@AppBundle/Resources/public/img/Patreon.png' %}
+    <a href="https://www.patreon.com/MediaArea"><img src="{{ asset_url }}" width="128" height="25" alt="Patreon" title="Patreon"></a>
+    {% endimage %},
+    <a href="https://www.tipeee.com/mediaarea">Tipee</a>
+or
+    {% image '@AppBundle/Resources/public/img/Liberapay.png' %}
+    <a href="https://liberapay.com/MediaArea/"><img src="{{ asset_url }}" width="70" height="25" alt="Liberapay" title="Liberapay"></a>
+    {% endimage %}
+</div>
+{% endblock %}
+
+{% block stylesheets %}
+{% stylesheets
+    '@SupportUsBundle/Resources/public/css/simple-slider.css'
+    '@SupportUsBundle/Resources/public/css/supportUs.css'
+    filter='?scssphp' output='css/supportUs.css'
+ %}
+    <link rel="stylesheet" href="{{ asset_url }}" />
+{% endstylesheets %}
+{% endblock %}
+
+{% block javascripts %}
+<script src="{{ asset('bundles/fosjsrouting/js/router.min.js') }}"></script>
+<script src="{{ path('fos_js_routing_js', { callback: 'fos.Router.setData' }) }}"></script>
+{% javascripts
+    '@SupportUsBundle/Resources/public/js/simple-slider.min.js'
+    '@SupportUsBundle/Resources/public/js/supportUsSlider.js'
+    filter="?jsqueeze" output='js/supportUs.js'
+ %}
+    <script src="{{ asset_url }}"></script>
+{% endjavascripts %}
+
+<script>
+    $(document).ready(function() {
+        supportUs.initIndividual('{{ currency.currencySymbol }}');
+    });
+</script>
+{% endblock %}
