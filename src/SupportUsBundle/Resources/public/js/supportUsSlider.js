@@ -143,7 +143,7 @@ var supportUs = (function () {
         updatePaymentButtons(amount);
     };
 
-    var initIndividual = function(individualCurrency) {
+    var initIndividual = function(individualCurrency, individualValue) {
         currency = individualCurrency;
 
         switch (currency) {
@@ -169,8 +169,8 @@ var supportUs = (function () {
                 currencyMultiply = 1;
         }
 
-        individualUpdate(7);
-        setSliderPosition(7);
+        individualUpdate(individualValue);
+        setSliderPosition(individualValue);
         individualSlider();
         individualButtons();
         paymentButtonsBindings();
