@@ -142,7 +142,7 @@ Developments are still ongoing for a future version that will implement checksum
 <h2>Supported input flavors</h2>
 <p><span class="supported-default">D = Supported by default</span> /
 <span class="supported-key">K = Supported with a key, please <a href="{{ path('ma_contact') }}">contact us</a></span> /
-<span class="supported-needfile">N = File needed, please <a href="{{ path('ma_contact') }}">contact us</a></span></p>
+<span class="supported-needfile">N = Need file &amp; development if interest, please <a href="{{ path('ma_contact') }}">contact us</a></span></p>
 
 <div class="table-responsive">
 <table class="download table table-bordered table-condensed">
@@ -180,7 +180,7 @@ Developments are still ongoing for a future version that will implement checksum
   </tr>
   <tr>
     <td><abbr title="Little Endian">LE</abbr></td>
-    <td class="supported-needfile"><abbr title="File needed, please contact us">N</abbr></td>
+    <td class="supported-needfile"><abbr title="Need file &amp; development if interest, please contact us">N</abbr></td>
   </tr>
   <tr>
     <td rowspan="2">Filled A</td>
@@ -205,11 +205,11 @@ Developments are still ongoing for a future version that will implement checksum
     <td rowspan="2">16-bit Float (out of FFV1 specs)</td>
     <td rowspan="2"></td>
     <td><abbr title="Big Endian">BE</abbr></td>
-    <td class="supported-key"><abbr title="Supported with a key, please contact us">K</abbr></td>
+    <td class="supported-needfile"><abbr title="Need file &amp; development if interest, please contact us">N</abbr></td>
   </tr>
   <tr>
     <td><abbr title="Little Endian">LE</abbr></td>
-    <td class="supported-needfile"><abbr title="File needed, please contact us">N</abbr></td>
+    <td class="supported-needfile"><abbr title="Need file &amp; development if interest, please contact us">N</abbr></td>
   </tr>
   <tr>
     <td rowspan="9">RGBA</td>
@@ -236,7 +236,7 @@ Developments are still ongoing for a future version that will implement checksum
   </tr>
   <tr>
     <td><abbr title="Little Endian">LE</abbr></td>
-    <td class="supported-needfile"><abbr title="File needed, please contact us">N</abbr></td>
+    <td class="supported-needfile"><abbr title="Need file &amp; development if interest, please contact us">N</abbr></td>
   </tr>
   <tr>
     <td rowspan="2">Filled A</td>
@@ -265,15 +265,44 @@ Developments are still ongoing for a future version that will implement checksum
     <th style="width: 40%">Video format</th>
     <th style="width: 10%">Components</th>
     <th>Bit depth</th>
+    <th>Configuration</th>
     <th>Endianess</th>
     <th style="width: 5%">Support</th>
 </tr>
   <tr>
-    <td><b>TIFF</b><br>Limitations to be defined</td>
-    <td>RGB</td>
-    <td>16-bit</td>
+    <td rowspan="6"><b>TIFF</b><br>Raw Compression<br>Continuous StripOffsets</td>
+    <td rowspan="3">RGB</td>
+    <td>8-bit</td>
+    <td>Chunky</td>
     <td></td>
-    <td class="supported-needfile"><abbr title="File needed, please contact us">N</abbr></td>
+    <td class="supported-key"><abbr title="Supported with a key, please contact us">K</abbr></td>
+  </tr>
+  <tr>
+    <td rowspan="2">16-bit</td>
+    <td rowspan="2">Chunky</td>
+    <td><abbr title="Big Endian">BE</abbr></td>
+    <td class="supported-key"><abbr title="Supported with a key, please contact us">K</abbr></td>
+  </tr>
+  <tr>
+    <td><abbr title="Little Endian">LE</abbr></td>
+    <td class="supported-key"><abbr title="Supported with a key, please contact us">K</abbr></td>
+  </tr>
+  <tr>
+    <td rowspan="3">RGBA</td>
+    <td>8-bit</td>
+    <td>Chunky</td>
+    <td></td>
+    <td class="supported-key"><abbr title="Supported with a key, please contact us">K</abbr></td>
+  </tr>
+  <tr>
+    <td rowspan="2">16-bit</td>
+    <td rowspan="2">Chunky</td>
+    <td><abbr title="Big Endian">BE</abbr></td>
+    <td class="supported-needfile"><abbr title="Need file &amp; development if interest, please contact us">N</abbr></td>
+  </tr>
+  <tr>
+    <td><abbr title="Little Endian">LE</abbr></td>
+    <td class="supported-key"><abbr title="Supported with a key, please contact us">K</abbr></td>
   </tr>
 </table>
 </div>
@@ -291,17 +320,17 @@ Developments are still ongoing for a future version that will implement checksum
     <td rowspan="3">RGB</td>
     <td>16-bit Float</td>
     <td></td>
-    <td class="supported-key"><abbr title="Supported with a key, please contact us">K</abbr></td>
+    <td class="supported-needfile"><abbr title="Need file &amp; development if interest, please contact us">N</abbr></td>
   </tr>
   <tr>
     <td>32-bit</td>
     <td></td>
-    <td class="supported-key"><abbr title="Supported with a key, please contact us">K</abbr></td>
+    <td class="supported-needfile"><abbr title="Need file &amp; development if interest, please contact us">N</abbr></td>
   </tr>
   <tr>
     <td>32-bit Float</td>
     <td></td>
-    <td class="supported-key"><abbr title="Supported with a key, please contact us">K</abbr></td>
+    <td class="supported-needfile"><abbr title="Need file &amp; development if interest, please contact us">N</abbr></td>
   </tr>
 </table>
 </div>
@@ -316,12 +345,12 @@ Developments are still ongoing for a future version that will implement checksum
     <th style="width: 5%">Support</th>
 </tr>
   <tr>
-    <td rowspan="24"><b>PCM</b><br>In WAV, BWF, RF64</td>
+    <td rowspan="24"><b>PCM</b><br>In WAV, BWF, RF64, AIFF</td>
     <td rowspan="8">44.1 kHz</td>
     <td rowspan="4">16-bit</td>
     <td rowspan="2">2-channel</td>
     <td><abbr title="Big Endian">BE</abbr></td>
-    <td class="supported-needfile"><abbr title="File needed, please contact us">N</abbr></td>
+    <td class="supported-key"><abbr title="Supported with a key, please contact us">K</abbr></td>
   </tr>
   <tr>
     <td><abbr title="Little Endian">LE</abbr></td>
@@ -330,7 +359,7 @@ Developments are still ongoing for a future version that will implement checksum
   <tr>
     <td rowspan="2">6-channel</td>
     <td><abbr title="Big Endian">BE</abbr></td>
-    <td class="supported-needfile"><abbr title="File needed, please contact us">N</abbr></td>
+    <td class="supported-key"><abbr title="Supported with a key, please contact us">K</abbr></td>
   </tr>
   <tr>
     <td><abbr title="Little Endian">LE</abbr></td>
@@ -340,7 +369,7 @@ Developments are still ongoing for a future version that will implement checksum
     <td rowspan="4">24-bit</td>
     <td rowspan="2">2-channel</td>
     <td><abbr title="Big Endian">BE</abbr></td>
-    <td class="supported-needfile"><abbr title="File needed, please contact us">N</abbr></td>
+    <td class="supported-key"><abbr title="Supported with a key, please contact us">K</abbr></td>
   </tr>
   <tr>
     <td><abbr title="Little Endian">LE</abbr></td>
@@ -349,7 +378,7 @@ Developments are still ongoing for a future version that will implement checksum
   <tr>
     <td rowspan="2">6-channel</td>
     <td><abbr title="Big Endian">BE</abbr></td>
-    <td class="supported-needfile"><abbr title="File needed, please contact us">N</abbr></td>
+    <td class="supported-key"><abbr title="Supported with a key, please contact us">K</abbr></td>
   </tr>
   <tr>
     <td><abbr title="Little Endian">LE</abbr></td>
@@ -360,26 +389,26 @@ Developments are still ongoing for a future version that will implement checksum
     <td rowspan="4">16-bit</td>
     <td rowspan="2">2-channel</td>
     <td><abbr title="Big Endian">BE</abbr></td>
-    <td class="supported-needfile"><abbr title="File needed, please contact us">N</abbr></td>
-  </tr>
-  <tr>
-    <td><abbr title="Little Endian">LE</abbr></td>
     <td class="supported-key"><abbr title="Supported with a key, please contact us">K</abbr></td>
-  </tr>
-  <tr>
-    <td rowspan="2">6-channel</td>
-    <td><abbr title="Big Endian">BE</abbr></td>
-    <td class="supported-needfile"><abbr title="File needed, please contact us">N</abbr></td>
   </tr>
   <tr>
     <td><abbr title="Little Endian">LE</abbr></td>
     <td class="supported-default"><abbr title="Supported by default">D</abbr></td>
   </tr>
   <tr>
+    <td rowspan="2">6-channel</td>
+    <td><abbr title="Big Endian">BE</abbr></td>
+    <td class="supported-key"><abbr title="Supported with a key, please contact us">K</abbr></td>
+  </tr>
+  <tr>
+    <td><abbr title="Little Endian">LE</abbr></td>
+    <td class="supported-key"><abbr title="Supported with a key, please contact us">K</abbr></td>
+  </tr>
+  <tr>
     <td rowspan="4">24-bit</td>
     <td rowspan="2">2-channel</td>
     <td><abbr title="Big Endian">BE</abbr></td>
-    <td class="supported-needfile"><abbr title="File needed, please contact us">N</abbr></td>
+    <td class="supported-key"><abbr title="Supported with a key, please contact us">K</abbr></td>
   </tr>
   <tr>
     <td><abbr title="Little Endian">LE</abbr></td>
@@ -388,7 +417,7 @@ Developments are still ongoing for a future version that will implement checksum
   <tr>
     <td rowspan="2">6-channel</td>
     <td><abbr title="Big Endian">BE</abbr></td>
-    <td class="supported-needfile"><abbr title="File needed, please contact us">N</abbr></td>
+    <td class="supported-key"><abbr title="Supported with a key, please contact us">K</abbr></td>
   </tr>
   <tr>
     <td><abbr title="Little Endian">LE</abbr></td>
@@ -399,7 +428,7 @@ Developments are still ongoing for a future version that will implement checksum
     <td rowspan="4">16-bit</td>
     <td rowspan="2">2-channel</td>
     <td><abbr title="Big Endian">BE</abbr></td>
-    <td class="supported-needfile"><abbr title="File needed, please contact us">N</abbr></td>
+    <td class="supported-key"><abbr title="Supported with a key, please contact us">K</abbr></td>
   </tr>
   <tr>
     <td><abbr title="Little Endian">LE</abbr></td>
@@ -408,7 +437,7 @@ Developments are still ongoing for a future version that will implement checksum
   <tr>
     <td rowspan="2">6-channel</td>
     <td><abbr title="Big Endian">BE</abbr></td>
-    <td class="supported-needfile"><abbr title="File needed, please contact us">N</abbr></td>
+    <td class="supported-key"><abbr title="Supported with a key, please contact us">K</abbr></td>
   </tr>
   <tr>
     <td><abbr title="Little Endian">LE</abbr></td>
@@ -418,7 +447,7 @@ Developments are still ongoing for a future version that will implement checksum
     <td rowspan="4">24-bit</td>
     <td rowspan="2">2-channel</td>
     <td><abbr title="Big Endian">BE</abbr></td>
-    <td class="supported-needfile"><abbr title="File needed, please contact us">N</abbr></td>
+    <td class="supported-key"><abbr title="Supported with a key, please contact us">K</abbr></td>
   </tr>
   <tr>
     <td><abbr title="Little Endian">LE</abbr></td>
@@ -427,7 +456,7 @@ Developments are still ongoing for a future version that will implement checksum
   <tr>
     <td rowspan="2">6-channel</td>
     <td><abbr title="Big Endian">BE</abbr></td>
-    <td class="supported-needfile"><abbr title="File needed, please contact us">N</abbr></td>
+    <td class="supported-key"><abbr title="Supported with a key, please contact us">K</abbr></td>
   </tr>
   <tr>
     <td><abbr title="Little Endian">LE</abbr></td>
