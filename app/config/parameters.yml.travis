@@ -26,6 +26,10 @@ parameters:
     jms_payment_paypal_password: Travis
     jms_payment_paypal_signature: Travis
 
+    # Recaptcha
+    recaptcha_public: Travis
+    recaptcha_private: Travis
+
     # MediaConch config
     mco_check_folder: /some/folder/
     mco_mc_host: 127.0.0.1

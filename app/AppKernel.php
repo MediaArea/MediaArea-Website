@@ -29,6 +29,7 @@ class AppKernel extends Kernel
             new Nelmio\CorsBundle\NelmioCorsBundle(),
             new TFox\MpdfPortBundle\TFoxMpdfPortBundle(),
             new Vich\UploaderBundle\VichUploaderBundle(),
+            new EWZ\Bundle\RecaptchaBundle\EWZRecaptchaBundle(),
             new MediaTraceBundle\MediaTraceBundle(),
             new BWFMetaEditBundle\BWFMetaEditBundle(),
             new QCToolsBundle\QCToolsBundle(),
