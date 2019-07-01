@@ -1,4 +1,4 @@
-{{ form_start(form) }}
+{{ form_start(form, {'attr': {'class': 'recaptcha-form'}}) }}
     <div class="row">
         <div class="col-md-4">
             {{ form_row(form.amount) }}
@@ -26,11 +26,15 @@
                         <img src="{{ asset_url }}" class="img-responsive">
                     {% endimage %}
                 </div>
+                <div class="clearfix"></div>
+                <div class="col-sm-6 col-sm-offset-2">
+                    {{ form_widget(form.recaptcha) }}
+                </div>
             </div>
         </div>
         <div class="clearfix"></div>
         <div class="col-md-4 text-center">
-            <input type="submit" value="Donate" class="btn btn-default payment-submit-button" />
+            <input type="submit" value="Donate" class="btn btn-default payment-submit-button" id="btn-pay-cb" />
         </div>
     </div>
 {{ form_end(form) }}

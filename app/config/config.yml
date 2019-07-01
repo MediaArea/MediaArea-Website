@@ -239,6 +239,10 @@ vich_uploader:
             namer:              "vich_uploader.namer_origname"
             directory_namer:    "mco.directory_namer.policy"
 
+ewz_recaptcha:
+    public_key:  "%recaptcha_public%"
+    private_key: "%recaptcha_private%"
+
 blog:
     post_files_path: "%kernel.project_dir%/src/BlogBundle/Posts/"
 

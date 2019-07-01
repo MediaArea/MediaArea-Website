@@ -19,6 +19,7 @@
         "doctrine/orm": "^2.5",
         "easycorp/easyadmin-bundle": "^1.17.13",
         "erusev/parsedown": "^1.6",
+        "excelwebzone/recaptcha-bundle": "^1.5",
         "friendsofsymfony/jsrouting-bundle": "^2.0",
         "friendsofsymfony/user-bundle": "~2.0",
         "geoip2/geoip2": "^2.6",
@@ -78,6 +79,9 @@
         "incenteev-parameters": {
             "file": "app/config/parameters.yml"
         },
-        "branch-alias": null
+        "branch-alias": null,
+	"symfony": {
+	    "require": "3.4.*"
+	}
     }
 }

@@ -2,6 +2,7 @@
 
 namespace SupportUsBundle\Controller;
 
+use EWZ\Bundle\RecaptchaBundle\Form\Type\EWZRecaptchaType;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
@@ -224,6 +225,17 @@ class DefaultController extends Controller
                 ],
             ],
             'allowed_methods' => ['paypal_express_checkout', 'stripe_credit_card'],
+        ]);
+
+        $form->add('recaptcha', EWZRecaptchaType::class, [
+            'attr' => [
+                'options' => [
+                    'theme' => 'light',
+                    'type' => 'image',
+                    'size' => 'invisible',
+                    'bind' => 'btn-pay-cb',
+                ],
+            ],
         ]);
 
         $form->handleRequest($request);
