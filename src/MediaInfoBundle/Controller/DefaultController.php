@@ -3,6 +3,7 @@
 namespace MediaInfoBundle\Controller;
 
 use EWZ\Bundle\RecaptchaBundle\Form\Type\EWZRecaptchaType;
+use EWZ\Bundle\RecaptchaBundle\Validator\Constraints\IsTrue as RecaptchaTrue;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
@@ -131,6 +132,10 @@ class DefaultController extends Controller
                     'size' => 'invisible',
                     'bind' => 'btn-pay-cb',
                 ],
+            ],
+            'mapped'      => false,
+            'constraints' => [
+                new RecaptchaTrue()
             ],
         ]);
 
