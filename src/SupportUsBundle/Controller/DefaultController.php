@@ -3,6 +3,7 @@
 namespace SupportUsBundle\Controller;
 
 use EWZ\Bundle\RecaptchaBundle\Form\Type\EWZRecaptchaType;
+use EWZ\Bundle\RecaptchaBundle\Validator\Constraints\IsTrue as RecaptchaTrue;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
@@ -17,6 +18,9 @@ use PaymentBundle\Lib\VatCalculator;
 use SupportUsBundle\Lib\Corporate;
 use SupportUsBundle\Lib\Individual;
 
+/**
+ * @SuppressWarnings(PHPMD.CouplingBetweenObjects)
+ */
 class DefaultController extends Controller
 {
     /**
@@ -235,6 +239,10 @@ class DefaultController extends Controller
                     'size' => 'invisible',
                     'bind' => 'btn-pay-cb',
                 ],
+            ],
+            'mapped'      => false,
+            'constraints' => [
+                new RecaptchaTrue()
             ],
         ]);
 
