@@ -5,7 +5,32 @@
         <link>https://mediaarea.net/MediaInfo</link>
         <description>MediaInfo updates feed</description>
         <language>en-us</language>
-        <lastBuildDate>Tue, 23 Apr 2019 12:00:00 +0000</lastBuildDate>
+        <lastBuildDate>Tue, 16 Jul 2019 12:00:00 +0000</lastBuildDate>
+         <item>
+            <title>MediaInfo 19.07</title>
+            <description>
+                <![CDATA[+ Mac App Store version: File comparison (InApp purchase)<br />
+                         + Dolby E: readout of Dolby E program description<br />
+                         + MXF: Detection of Dolby Vision<br />
+                         + MP4: support of Spatial Audio Metadata<br />
+                         + DV: color space is explicit<br />
+                         + DV: audio format settings<br />
+                         + Matroska: PCM bit rate<br />
+                         + MOV, MXF: Time code frame rate<br />
+                         + DV: DVCAM commercial name for locked audio and PAL 4:2:0<br />
+                         + MXF: Time code track name<br />
+                         x USAC: frame rate was missing in case of non standard sampling rate<br />
+                         x USAC: fix infinite loop with some LATM streams<br />
+                         x WAV: MP3 delay should be added to BWF time reference<br />
+                         x TTML: fix wrong output with standalone files<br />
+                         x N19/STL: fix crash with some uncommon framerates<br />
+                         x VC-3: fix sub sampling with some v2 files<br />
+                         x DV: Time code frame number was wrong (divided by 2) for 50/60 fps content]]>
+            </description>
+            <link>https://mediaarea.net/MediaInfo</link>
+            <pubDate>Tue, 16 Jul 2019 12:00:00 +0000</pubDate>
+            <guid>MediaInfo-19.07</guid>
+         </item>
          <item>
             <title>MediaInfo 19.04</title>
             <description>
