@@ -171,6 +171,9 @@ class DefaultController extends Controller
         ];
     }
 
+    /**
+     * @SuppressWarnings(PHPMD.CyclomaticComplexity)
+     */
     protected function paymentForm(
         Request $request,
         string $returnRoute,
@@ -231,6 +234,12 @@ class DefaultController extends Controller
             'allowed_methods' => ['paypal_express_checkout', 'stripe_credit_card'],
         ]);
 
+        // Do not validate recaptcha for paypal payment method
+        $captchaConstraints = [new RecaptchaTrue()];
+        if (isset($payment) && isset($payment['method']) && 'paypal_express_checkout' == $payment['method']) {
+            $captchaConstraints = [];
+        }
+
         $form->add('recaptcha', EWZRecaptchaType::class, [
             'attr' => [
                 'options' => [
@@ -240,10 +249,8 @@ class DefaultController extends Controller
                     'bind' => 'btn-pay-cb',
                 ],
             ],
-            'mapped'      => false,
-            'constraints' => [
-                new RecaptchaTrue()
-            ],
+            'mapped' => false,
+            'constraints' => $captchaConstraints,
         ]);
 
         $form->handleRequest($request);

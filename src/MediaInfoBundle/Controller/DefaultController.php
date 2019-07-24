@@ -133,9 +133,9 @@ class DefaultController extends Controller
                     'bind' => 'btn-pay-cb',
                 ],
             ],
-            'mapped'      => false,
+            'mapped' => false,
             'constraints' => [
-                new RecaptchaTrue()
+                new RecaptchaTrue(),
             ],
         ]);
 
