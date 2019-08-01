@@ -2,6 +2,8 @@
 
 namespace MediaInfoBundle\Controller;
 
+use EWZ\Bundle\RecaptchaBundle\Form\Type\EWZRecaptchaType;
+use EWZ\Bundle\RecaptchaBundle\Validator\Constraints\IsTrue as RecaptchaTrue;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
@@ -120,6 +122,21 @@ class DefaultController extends Controller
                 ],
             ],
             'allowed_methods' => ['paypal_express_checkout', 'stripe_credit_card'],
+        ]);
+
+        $form->add('recaptcha', EWZRecaptchaType::class, [
+            'attr' => [
+                'options' => [
+                    'theme' => 'light',
+                    'type' => 'image',
+                    'size' => 'invisible',
+                    'bind' => 'btn-pay-cb',
+                ],
+            ],
+            'mapped' => false,
+            'constraints' => [
+                new RecaptchaTrue(),
+            ],
         ]);
 
         $form->handleRequest($request);

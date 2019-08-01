@@ -2,6 +2,8 @@
 
 namespace SupportUsBundle\Controller;
 
+use EWZ\Bundle\RecaptchaBundle\Form\Type\EWZRecaptchaType;
+use EWZ\Bundle\RecaptchaBundle\Validator\Constraints\IsTrue as RecaptchaTrue;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
@@ -16,6 +18,9 @@ use PaymentBundle\Lib\VatCalculator;
 use SupportUsBundle\Lib\Corporate;
 use SupportUsBundle\Lib\Individual;
 
+/**
+ * @SuppressWarnings(PHPMD.CouplingBetweenObjects)
+ */
 class DefaultController extends Controller
 {
     /**
@@ -166,6 +171,9 @@ class DefaultController extends Controller
         ];
     }
 
+    /**
+     * @SuppressWarnings(PHPMD.CyclomaticComplexity)
+     */
     protected function paymentForm(
         Request $request,
         string $returnRoute,
@@ -224,6 +232,25 @@ class DefaultController extends Controller
                 ],
             ],
             'allowed_methods' => ['paypal_express_checkout', 'stripe_credit_card'],
+        ]);
+
+        // Do not validate recaptcha for paypal payment method
+        $captchaConstraints = [new RecaptchaTrue()];
+        if (isset($payment) && isset($payment['method']) && 'paypal_express_checkout' == $payment['method']) {
+            $captchaConstraints = [];
+        }
+
+        $form->add('recaptcha', EWZRecaptchaType::class, [
+            'attr' => [
+                'options' => [
+                    'theme' => 'light',
+                    'type' => 'image',
+                    'size' => 'invisible',
+                    'bind' => 'btn-pay-cb',
+                ],
+            ],
+            'mapped' => false,
+            'constraints' => $captchaConstraints,
         ]);
 
         $form->handleRequest($request);

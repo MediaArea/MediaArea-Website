@@ -26,6 +26,10 @@ parameters:
     jms_payment_paypal_password: ~
     jms_payment_paypal_signature: ~
 
+    # Recaptcha
+    recaptcha_public: ~
+    recaptcha_private: ~
+
     # MediaBin
     mediabin_local_path: ~
     mediabin_external_enabled: false
