@@ -32,7 +32,7 @@
                     x Do not apply policies to attachments<br>
                     x Print error if data directory isn't writable And polices can be applied on fields provided by new MediaInfo library:<br>
                     + AV1: support of AOmedia AV1 based on latest specifications draft, raw (OBU) and in MKV<br>
-                    + DPX: endianess, packing mode, compression mode<br>
+                    + DPX: endianness, packing mode, compression mode<br>
                     + MXF: detection and parsing of ProRes (SMPTE RDD 44)<br>
                     + MXF: HDR metadata support<br>
                     + AVC: add consumer camera recording date/time<br>
@@ -41,7 +41,7 @@
                     + MediaInfo JSON output<br>
                     x colour description: trying (again!) to have more coherent labeling<br>
                     x AAC: SBR parsing issue with 3+ channel streams, with sometimes false-positive PS detection<br>
-                    x DPX: some elements in trace were wrongly displayed (wrong endianess)<br>
+                    x DPX: some elements in trace were wrongly displayed (wrong endianness)<br>
                     + License change]]>
             </description>
             <link>https://mediaarea.net/MediaConch/download.html</link>
@@ -70,7 +70,7 @@
                     Improved Matroska video frame rate detection<br>
                     Support of BWF (bext) loudness info<br>
                     Support of MOV HDR metadata<br>
-                    Support of PCM endianess in Matroska files<br>
+                    Support of PCM endianness in Matroska files<br>
                     Several minor fixes]]>
             </description>
             <link>https://mediaarea.net/MediaConch/download.html</link>
