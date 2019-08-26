@@ -124,7 +124,7 @@ Version 18.03, 2018-03-19
 + MXF: HDR metadata support
 + MXF: detection and parsing of ProRes (SMPTE RDD 44)
 + MXF: framerate container/stream incoherence detection
-+ DPX: endianess, packing mode, compression mode
++ DPX: endianness, packing mode, compression mode
 + AVC: add consumer camera recording date/time
 + AVC: add consumer camera model name and iris F number
 + JPEG: ICC parsing, display of ICC color space
@@ -137,7 +137,7 @@ x I782, FFV1: Golomb Rice parsing was wrong
 x I210, FFV1: remove sar_den test must be 0 if sar_num is 0
 x AAC: SBR parsing issue with 3+ channel streams, with sometimes false-positive PS detection
 x BMP: was wrongly considering 4-bit without palette as with palette so wrong bit depth
-x DPX: some elements in trace were wrongly displayed (wrong endianess)
+x DPX: some elements in trace were wrongly displayed (wrong endianness)
 x B1082, Ancillary data: fix infinite loop
 
 Version 17.12, 2017-12-21
@@ -182,7 +182,7 @@ x B1068, MPEG Audio: Incoherent duration between General and Audio parts, Audio 
 x Matroska: showing "A_MS/ACM" Matroska CodecID
 x MXF: Fix crash with some buggy files
 x MXF: was not well supporting MXF referencing only 1 file
-x PCM in WAV: 8-bit content is unsigned and without endianess
+x PCM in WAV: 8-bit content is unsigned and without endianness
 x PCM in WAV and Matroska: More coherency between Wave info and ExtensibleWave Info (bitdepth, sign)
 x WAV: GUID display was with first 8 bytes in wrong order
 x Several crash fixes
@@ -225,7 +225,7 @@ Version 0.7.97, 2017-06-30
 + AAC: ADTS/ADIF duration in case of full parsing and/or "risky bitrate estimation" option
 x MXF: less false-positive detection of some files as MXF
 x B1053, WAV: metadata coherency, ignore "fact" chunk more often in order to avoid bad information when this chunk is buggy
-x B1029, DPX: DPX endianess not considered with some fields in MediaTrace
+x B1029, DPX: DPX endianness not considered with some fields in MediaTrace
 x Custom template: can check "Other" part as any other parts
 x Matroska: fix parsing issue with small byte blocks are taken from the file e.g. when reading from HTTP link
 x Matroska: files with unknown block size were flagged as truncated
