@@ -16,6 +16,7 @@ class InitInstanceId
     /**
      * Init the InstanceId
      * Use MediaInfoOutputList until MC-server have a dedicated API.
+     * @SuppressWarnings(PHPMD.EmptyCatchBlock)
      */
     public function init()
     {
