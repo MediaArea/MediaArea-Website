@@ -2,6 +2,27 @@
 
 {% block title %}AVI MetaEdit{% endblock %}
 
+{% block head %}
+<script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "AVI MetaEdit",
+    "headline": "AVI MetaEdit is a tool that supports embedding, validating, and exporting of metadata in AVI files",
+    "url": "{{ absolute_url(path('avi_home')) }}",
+    "dateModified": "2017-09-26",
+    "operatingSystem": "Windows, macOS, Linux",
+    "applicationCategory": "Multimedia, Video, Audio",
+    "softwareVersion": "{{ downloadInfo.version }}",
+    "creator": {
+        "@type": "Organization",
+        "name": "MediaArea",
+        "url": "{{ absolute_url(path('homepage')) }}"
+    }
+}
+</script>
+{% endblock %}
+
 {% block body %}
 <section class="download-wrapper">
     <div class="row reorder-xs">

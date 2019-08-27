@@ -2,6 +2,27 @@
 
 {% block title %}BWF MetaEdit{% endblock %}
 
+{% block head %}
+<script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "BWF MetaEdit",
+    "headline": "BWF MetaEdit is a tool that supports embedding, validating, and exporting of metadata in Broadcast WAVE Format (BWF) files",
+    "url": "{{ absolute_url(path('bwf_home')) }}",
+    "dateModified": "2019-04-26",
+    "operatingSystem": "Windows, macOS, Linux",
+    "applicationCategory": "Multimedia, Audio",
+    "softwareVersion": "{{ downloadInfo.version }}",
+    "creator": {
+        "@type": "Organization",
+        "name": "MediaArea",
+        "url": "{{ absolute_url(path('homepage')) }}"
+    }
+}
+</script>
+{% endblock %}
+
 {% block body %}
 <section class="download-wrapper">
     <div class="row reorder-xs">

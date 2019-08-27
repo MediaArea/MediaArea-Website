@@ -2,6 +2,27 @@
 
 {% block title %}QCTools{% endblock %}
 
+{% block head %}
+<script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "QCTools",
+    "headline": "QCTools (Quality Control Tools for Video Preservation) helps users analyze and understand their digitized video files through use of audiovisual analytics and filtering",
+    "url": "{{ absolute_url(path('qc_home')) }}",
+    "dateModified": "2018-09-08",
+    "operatingSystem": "Windows, macOS, Linux",
+    "applicationCategory": "Multimedia, Video, Audio",
+    "softwareVersion": "{{ downloadInfo.version }}",
+    "creator": {
+        "@type": "Organization",
+        "name": "MediaArea",
+        "url": "{{ absolute_url(path('homepage')) }}"
+    }
+}
+</script>
+{% endblock %}
+
 {% block body %}
 <section class="download-wrapper">
     <div class="row reorder-xs">

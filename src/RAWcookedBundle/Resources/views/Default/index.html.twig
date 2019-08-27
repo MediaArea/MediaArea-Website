@@ -2,6 +2,27 @@
 
 {% block title %}RAWcooked{% endblock %}
 
+{% block head %}
+<script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "RAWcooked",
+    "headline": "Encodes RAW A/V data to MKV/FFV1/FLAC while permitting reversibility",
+    "url": "{{ absolute_url(path('rawcooked_home')) }}",
+    "dateModified": "2018-11-13",
+    "operatingSystem": "Windows, macOS, Linux",
+    "applicationCategory": "Multimedia, Video, Audio",
+    "softwareVersion": "{{ downloadInfo.version }}",
+    "creator": {
+        "@type": "Organization",
+        "name": "MediaArea",
+        "url": "{{ absolute_url(path('homepage')) }}"
+    }
+}
+</script>
+{% endblock %}
+
 {% block body %}
 <section class="download-wrapper">
     <div class="row reorder-xs">
@@ -35,7 +56,7 @@
                         You need to download and install FFmpeg to use RAWcooked.
                     {% endif %}
                 {% endif %}
-                
+
             </div>
 
             {% if 'Windows' == downloadInfo.name %}
