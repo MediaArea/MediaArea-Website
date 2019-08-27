@@ -4,6 +4,27 @@
 {% block description %}{% trans %}about.page.description{% endtrans %}{% endblock %}
 {% block keywords %}{% trans %}about.page.keywords{% endtrans %}{% endblock %}
 
+{% block head %}
+<script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "MediaInfo",
+    "headline": "{% trans %}about.page.description{% endtrans %}",
+    "url": "{{ absolute_url(path('mi_locale_redirect')) }}",
+    "dateModified": "2019-07-16",
+    "operatingSystem": "Windows, macOS, Linux, iOS, Android",
+    "applicationCategory": "Multimedia, Video, Audio",
+    "softwareVersion": "{{ downloadInfo.version }}",
+    "creator": {
+        "@type": "Organization",
+        "name": "MediaArea",
+        "url": "{{ absolute_url(path('homepage')) }}"
+    }
+}
+</script>
+{% endblock %}
+
 {% block body %}
 <section class="download-wrapper">
     <div class="row reorder-xs">
