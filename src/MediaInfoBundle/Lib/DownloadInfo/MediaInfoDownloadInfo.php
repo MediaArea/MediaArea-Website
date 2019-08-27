@@ -27,7 +27,7 @@ class MediaInfoDownloadInfo extends AbstractDownloadInfo
         'Windows' => array('name' => 'Windows', 'route' => 'mi_download_windows', 'installer' => true),
         'Xubuntu' => array('name' => 'Ubuntu', 'route' => 'mi_download_ubuntu', 'installer' => false),
         'Android' => array('name' => 'Android', 'route' => 'mi_download_android', 'installer' => true),
-        'iOS' => array('name' => 'iOS', 'route' => 'mi_download', 'installer' => false)
+        'iOS' => array('name' => 'iOS', 'route' => 'mi_download_ios', 'installer' => false)
     );
     protected $userAgent;
     protected $downloadInfo;

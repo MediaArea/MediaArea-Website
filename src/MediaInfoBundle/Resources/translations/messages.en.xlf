@@ -686,6 +686,14 @@ MediaInfo can be used in your own program without any difficulties, with a stati
         <source><![CDATA[download.android.title]]></source>
         <target><![CDATA[Download - Android]]></target>
       </trans-unit>
+      <trans-unit id="download.ios.page.title" approved="yes">
+        <source><![CDATA[download.ios.page.title]]></source>
+        <target><![CDATA[MediaInfo - Download MediaInfo for iOS]]></target>
+      </trans-unit>
+      <trans-unit id="download.ios.title" approved="yes">
+        <source><![CDATA[download.ios.title]]></source>
+        <target><![CDATA[Download - iOS]]></target>
+      </trans-unit>
       <trans-unit id="141" approved="yes">
         <source><![CDATA[download.mac.page.title]]></source>
         <target><![CDATA[MediaInfo - Download MediaInfo for macOS]]></target>

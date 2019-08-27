@@ -51,7 +51,7 @@
                         <span class="downloadText">{% trans %}about.download.button.text{% endtrans %}</span>
                     </a>
                     {% elseif 'iOS' == downloadInfo.name %}
-                    <a class="btn btn-default btn-lg btn-dl" href="https://itunes.apple.com/app/mediainfo/id1448983823" target="_blank">
+                    <a class="btn btn-default btn-lg btn-dl" href="https://apps.apple.com/app/mediainfo/id1448983823" target="_blank">
                         <span class="downloadText">{% trans %}about.download.button.text{% endtrans %}</span>
                     </a>
                     {% elseif 'Android' == downloadInfo.name %}
@@ -70,7 +70,7 @@
                         <li><a href="{{ path('mi_download_windows') }}">Windows</a></li>
                         <li><a href="{{ path('mi_download_mac') }}">macOS</a></li>
                         <li><a href="{{ path('mi_download_android') }}">Android</a></li>
-                        <li><a href="https://itunes.apple.com/app/mediainfo/id1448983823" target="_blank">iOS</a></li>
+                        <li><a href="{{ path('mi_download_ios') }}">iOS</a></li>
                         <li><a href="{{ path('mi_download_debian') }}">Debian</a></li>
                         <li><a href="{{ path('mi_download_ubuntu') }}">Ubuntu</a></li>
                         <li><a href="{{ path('mi_download_ubuntu') }}">Linux Mint</a></li>

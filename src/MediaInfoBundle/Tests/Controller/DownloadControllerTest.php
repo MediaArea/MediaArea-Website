@@ -99,6 +99,14 @@ class DownloadControllerTest extends WebTestCase
         $this->assertEquals(200, $client->getResponse()->getStatusCode());
     }
 
+    public function testIos()
+    {
+        $client = static::createClient();
+
+        $client->request('GET', '/en/MediaInfo/Download/iOS');
+        $this->assertEquals(200, $client->getResponse()->getStatusCode());
+    }
+
     public function testMac()
     {
         $client = static::createClient();
