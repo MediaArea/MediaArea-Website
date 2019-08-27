@@ -51,6 +51,20 @@ class DownloadController extends Controller
 
     /**
      * @Route(
+     *     "/{_locale}/MediaInfo/Download/iOS",
+     *     name="mi_download_ios",
+     *     requirements={"_locale": "%app.locales%"
+     *     }
+     * )
+     * @Template()
+     */
+    public function iosAction()
+    {
+        return array();
+    }
+
+    /**
+     * @Route(
      *     "/{_locale}/MediaInfo/Download/Mac_OS",
      *     name="mi_download_mac",
      *     requirements={"_locale": "%app.locales%"

@@ -1,0 +1,27 @@
+{% extends 'MediaInfoBundle::base.html.twig' %}
+
+{% block title %}{% trans %}download.ios.page.title{% endtrans %}{% endblock %}
+{% block description %}{% trans %}about.page.description{% endtrans %}{% endblock %}
+{% block keywords %}{% trans %}about.page.keywords{% endtrans %}{% endblock %}
+
+{% block body %}
+<h1>{% trans %}download.ios.title{% endtrans %}</h1>
+{% image '@AppBundle/Resources/public/img/OS/iOS.png' %}
+<img src="{{ asset_url }}" alt="iOS" title="iOS" width="196" height="76"><br />
+{% endimage %}
+
+<div class="table-responsive">
+<table class="download table table-bordered table-condensed">
+<thead>
+<tr class="table-header">
+    <th>iOS version</th>
+    <th>Version</th>
+    <th>Comment</th>
+</tr>
+</thead>
+<tbody>
+{{ include('@MediaInfo/Download/iosTable.html.twig') }}
+</tbody>
+</table>
+</div>
+{% endblock %}
