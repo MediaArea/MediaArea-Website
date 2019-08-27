@@ -92,13 +92,35 @@ class OrdersController extends Controller
         // Payment error
         $message = 'We are sorry but there is an error processing your payment';
         if ($result->getReasonCode()) {
-            $message .= ' ('.$result->getReasonCode().')';
+            $errorMessage = [
+                'authentication_required' => 'Your bank requires authentication, which we do not yet support',
+                'approve_with_id' => 'Payment not authorized, please try again',
+                'call_issuer' => 'The card has been declined',
+                'card_not_supported' => 'The card does not support this type of purchase',
+                'card_velocity_exceeded' => 'Credit limit exceeded',
+                'do_not_honor' => 'The card has been declined',
+                'do_not_try_again' => 'The card has been declined',
+                'duplicate_transaction' => 'Duplicate transaction',
+                'expired_card' => 'Expired card',
+                'fraudulent' => 'The payment is suspected to be fraudulent',
+                'incorrect_number' => 'The card number is incorrect',
+                'incorrect_cvc' => 'The CVC number is incorrect',
+                'invalid_cvc' => 'The CVC number is incorrect',
+                'invalid_expiry_year' => 'The expiration year is invalid',
+                'invalid_expiry_month' => 'The expiration month is invalid',
+                'invalid_number' => 'The card number is incorrect',
+                'lost_card' => 'The card is reported lost',
+                'not_permitted' => 'The payment is not permitted',
+                'restricted_card' => 'The card cannot be used to make this payment',
+                'stolen_card' => 'The card is reported stolen',
+            ];
+            $message .= ' ('.($errorMessage[$result->getReasonCode()] ?? $result->getReasonCode()).')';
         }
 
         $message .= '.<br>';
 
         if ('stripe_credit_card' == $result->getPaymentInstruction()->getPaymentSystemName()) {
-            $message .= 'You may also consider to pay with Paypal by credit card.<br>';
+            $message .= 'Please use Paypal instead.<br>';
         }
 
         $message .= '<a href="'.$this->generateUrl('ma_contact').'">Contact us</a> if the problem persists.';
