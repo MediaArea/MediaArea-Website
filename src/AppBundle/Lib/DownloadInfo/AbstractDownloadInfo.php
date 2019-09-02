@@ -34,4 +34,9 @@ abstract class AbstractDownloadInfo implements DownloadInfoInterface
     {
         return $this->downloadInfo['version'];
     }
+
+    public function getDate()
+    {
+        return $this->downloadInfo['date'];
+    }
 }
