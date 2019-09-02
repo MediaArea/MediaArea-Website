@@ -42,5 +42,6 @@ class DVAnalyzerDownloadInfo extends AbstractDownloadInfo
     {
         $this->downloadInfo = $this->detectOS();
         $this->downloadInfo['version'] = '1.4.2';
+        $this->downloadInfo['date'] = '2017-09-26';
     }
 }

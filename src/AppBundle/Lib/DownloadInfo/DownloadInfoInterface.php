@@ -9,4 +9,5 @@ interface DownloadInfoInterface
     public function getName();
     public function getRoute();
     public function getVersion();
+    public function getDate();
 }

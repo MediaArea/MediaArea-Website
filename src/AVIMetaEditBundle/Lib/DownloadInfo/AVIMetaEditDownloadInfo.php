@@ -42,5 +42,6 @@ class AVIMetaEditDownloadInfo extends AbstractDownloadInfo
     {
         $this->downloadInfo = $this->detectOS();
         $this->downloadInfo['version'] = '1.0.2';
+        $this->downloadInfo['date'] = '2017-09-26';
     }
 }

@@ -12,7 +12,7 @@
     "name": "MediaInfo",
     "headline": "{% trans %}about.page.description{% endtrans %}",
     "url": "{{ absolute_url(path('mi_locale_redirect')) }}",
-    "dateModified": "2019-07-16",
+    "dateModified": "{{ downloadInfo.date }}",
     "operatingSystem": "Windows, macOS, Linux, iOS, Android",
     "applicationCategory": "Multimedia, Video, Audio",
     "softwareVersion": "{{ downloadInfo.version }}",
