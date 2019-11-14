@@ -28,6 +28,7 @@
         "knplabs/knp-menu-bundle": "^2.0",
         "leafo/scssphp": "^0.7",
         "mediaarea/kj-payment-stripe-bundle": "dev-dependencies",
+        "monolog/monolog": "^1.25.0",
         "nelmio/cors-bundle": "^1.5",
         "patchwork/jsqueeze": "^2.0",
         "php-opencloud/openstack": "^3.0",
