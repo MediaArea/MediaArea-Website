@@ -1,0 +1,8 @@
+services:
+#    dvrescue.example:
+#        class: DVRescueBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]
+
+    dvrescue.download_info:
+        class: DVRescueBundle\Lib\DownloadInfo\DVRescueDownloadInfo
+        public: true
