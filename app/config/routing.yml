@@ -65,6 +65,10 @@ raw_cooked:
     resource: "@RAWcookedBundle/Controller/"
     type:     annotation
 
+dvrescue:
+    resource: "@DVRescueBundle/Controller/"
+    type:     annotation
+
 support_us:
     resource: "@SupportUsBundle/Controller/"
     type:     annotation

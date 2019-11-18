@@ -45,6 +45,7 @@ class AppKernel extends Kernel
             new BlogBundle\BlogBundle(),
             new VoteBundle\VoteBundle(),
             new RAWcookedBundle\RAWcookedBundle(),
+            new DVRescueBundle\DVRescueBundle(),
             new MediaConchBundle\MediaConchBundle(),
             new MediaBinBundle\MediaBinBundle(),
             new MediaConchOnlineBundle\MediaConchOnlineBundle(),

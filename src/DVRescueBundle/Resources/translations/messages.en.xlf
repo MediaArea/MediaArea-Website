@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="en" datatype="plaintext" original="file.ext" target-language="en">
+    <body>
+      <trans-unit id="menu.dvrescue" approved="yes">
+        <source><![CDATA[menu.dvrescue]]></source>
+        <target><![CDATA[DVRescue]]></target>
+      </trans-unit>
+      <trans-unit id="menu.dvrescue.about" approved="yes">
+        <source><![CDATA[menu.dvrescue.about]]></source>
+        <target><![CDATA[About]]></target>
+      </trans-unit>
+      <trans-unit id="menu.dvrescue.download" approved="yes">
+        <source><![CDATA[menu.dvrescue.download]]></source>
+        <target><![CDATA[Download]]></target>
+      </trans-unit>
+      <trans-unit id="menu.dvrescue.man" approved="yes">
+        <source><![CDATA[menu.dvrescue.man]]></source>
+        <target><![CDATA[Command line manual]]></target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

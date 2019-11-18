@@ -1,0 +1,101 @@
+{% extends 'DVRescueBundle::base.html.twig' %}
+
+{% block title %}DVRescue{% endblock %}
+
+{% block head %}
+<script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "DVRescue",
+    "headline": "Supports improving DV files that have already been created by allowing such files to be assessed, so that the software may selectively retry portions of the tape and incorporate any improvements into the existing file",
+    "url": "{{ absolute_url(path('dvrescue_home')) }}",
+    "dateModified": "{{ downloadInfo.date }}",
+    "operatingSystem": "Windows, macOS, Linux",
+    "applicationCategory": "Multimedia, Video, Audio",
+    "softwareVersion": "{{ downloadInfo.version }}",
+    "creator": {
+        "@type": "Organization",
+        "name": "MediaArea",
+        "url": "{{ absolute_url(path('homepage')) }}"
+    }
+}
+</script>
+{% endblock %}
+
+{% block body %}
+<section class="download-wrapper">
+    <div class="row reorder-xs">
+        <div class="v-align carousel-padding-xs col-xs-12 col-sm-5">
+            <div>
+            {% image '@DVRescueBundle/Resources/public/img/DVRescue_256.png' %}
+                <img src="{{ asset_url }}" alt="DVRescue logo" class="img-responsive center-xs" title="DVRescue logo">
+            {% endimage %}
+            </div>
+        </div>
+        <div class="v-align col-sm-7">
+            <div class="center-font-xs">
+                <h1 class="v-align bigtitle">DVRescue</h1>
+            </div>
+            <div class="projectDescription center-font-xs">
+                <strong>DVRescue</strong> supports improving DV files that have already been created by allowing such files to be assessed, so that the software may selectively retry portions of the tape and incorporate any improvements into the existing file.<br>
+                Funded by the <a href="https://www.neh.gov/" target="_blank">National Endowment for the Humanities</a>; designed and led by Dave Rice and the <a href="https://www.mipops.org/" target="_blank">Moving Image Preservation of Puget Sound (MIPoPS)</a>; developed by MediaArea.<br>
+                Check the <a href="https://www.mipops.org/dvrescue/">DV Rescue project annoncement</a> for more information.<br>
+                Project is at an early stage level, all features are not yet implemented.
+            </div>
+
+            {% if 'Windows' == downloadInfo.name %}
+                {% set downloadLink = '//mediaarea.net/download/binary/dvrescue/' ~ downloadInfo.version ~ '/dvrescue_CLI_' ~ downloadInfo.version ~ '_Windows_x64.zip' %}
+            {% else %}
+                {% set downloadLink = path(downloadInfo.route) %}
+            {% endif %}
+
+            <div class="inner center-xs center-font-xs">
+                <div class="btn-group hidden-xs">
+                    {% if 'macOS' == downloadInfo.name %}
+                    <a class="btn btn-default btn-lg btn-dl" href="http://mediaarea.net/download/binary/dvrescue/0.19.11/dvrescue_CLI_0.19.11_Mac.dmg" target="_blank">
+                        <span class="downloadText">Download DVRescue</span>
+                    </a>
+                    {% else %}
+                    <a class="btn btn-default btn-lg btn-dl " href="{{ downloadLink }}">
+                        <span class="downloadText">Download DVRescue</span>
+                    </a>
+                    {% endif %}
+                    <a href="{{ path('dvrescue_download') }}" class="btn btn-default btn-lg dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                        <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu dropdown-default platform-icons">
+                        <li><a href="{{ path('dvrescue_download_windows') }}">Windows</a></li>
+                        <li><a href="{{ path('dvrescue_download_mac') }}">macOS</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="{{ path('dvrescue_download') }}">Other systems</a></li>
+                    </ul>
+                </div>
+                <div class="btn-group visible-xs visible-xs-inline-block">
+                    <a class="btn btn-default btn-lg btn-dl " href="{{ path(downloadInfo.route) }}">
+                        <span class="downloadText">Download DVRescue</span>
+                    </a>
+                </div>
+
+                <div class="projectDescription">
+                    <div class="downloadDetails">
+                        Version {{ downloadInfo.version }}{% if downloadInfo.name %}, for {{ downloadInfo.name }}{% endif %}
+                    <br>
+                    Other versions (packaging, OS, interface...) are also <a href="{{ path('dvrescue_download') }}">available</a>
+                    {% image '@AppBundle/Resources/public/img/blank.gif' %}
+                    (<a href="{{ path('dvrescue_download_windows') }}"><img src="{{ asset_url }}" width="16" height="16" alt="Microsoft Windows" title="Microsoft Windows" class="sprite Windows"></a>
+                    <a href="{{ path('dvrescue_download_mac') }}"><img src="{{ asset_url }}" width="16" height="16" alt="macOS" title="macOS" class="sprite MacOS"></a>)
+                    {% endimage %}
+                    <br>
+                    See <a href="https://github.com/MediaArea/DVRescue/blob/master/History.txt">ChangeLog</a> or <a href="/download/snapshots/binary/dvrescue">very latest snapshots</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<h2>License:</h2>
+<p>It is <a href="https://en.wikipedia.org/wiki/Open_source">Open-Source</a> software which means that end users and developers have the freedom to study, improve and redistribute the program (<a href="{{ path('dvrescue_license') }}">BSD 3-Clause license</a>).</p>
+</section>
+{% endblock %}

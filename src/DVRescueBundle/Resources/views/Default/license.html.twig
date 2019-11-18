@@ -1,0 +1,56 @@
+{% extends 'DVRescueBundle::base.html.twig' %}
+
+{% block title %}DVRescue License{% endblock %}
+
+{% block body %}
+<h1>DVRescue License</h1>
+
+<p>
+    Copyright (c) 2019-{{ "now"|date('Y') }} Moving Image Preservation of Puget Sound (MIPoPS).
+</p>
+<p>
+    Redistribution and use in source and binary forms, with or without modification,
+    are permitted provided that the following conditions are met:
+</p>
+<ul>
+    <li>1. Redistributions of source code must retain the above copyright notice,
+    this list of conditions and the following disclaimer.</li>
+    <li>2. Redistributions in binary form must reproduce the above copyright notice,
+    this list of conditions and the following disclaimer in the documentation and/or
+    other materials provided with the distribution.</li>
+    <li>3. Neither the name of the copyright holder nor the names of its contributors
+    may be used to endorse or promote products derived from this software
+    without specific prior written permission.</li>
+</ul>
+<p>
+    THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS &ldquo;AS IS&rdquo;
+    AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
+    OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE
+    COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
+    EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE
+    GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED
+    AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
+    NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED
+    OF THE POSSIBILITY OF SUCH DAMAGE.
+</p>
+
+<hr/>
+<h3>Third party libraries</h3>
+<p>
+    The software relies on third party libraries. Such libraries have their own license:
+</p>
+<ul>
+    <li>C++ standard library: <a href="https://gcc.gnu.org/onlinedocs/libstdc++/manual/license.html">libstdc++</a>,
+        <a href="http://llvm.org/docs/DeveloperPolicy.html#license">libc++</a>,
+        <a href="https://msdn.microsoft.com/en-us/library/vstudio/ms235299.aspx">Visual C++ library</a> or any other C++ standard library.
+    </li>
+</ul>
+
+<hr/>
+<h3>Contributors</h3>
+<ul>
+    <li><a href="https://MediaArea.net">Jérôme Martinez</a></li>
+    <li><a href="https://dericed.com/">Dave Rice</a></li>
+    <li><a href="https://ashleyblewer.com/">Ashley Blewer</a></li>
+</ul>
+{% endblock %}
