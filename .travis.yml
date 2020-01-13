@@ -31,7 +31,7 @@ before_install:
   - mysql -e 'CREATE DATABASE IF NOT EXISTS travis;'
 
 install:
-  - COMPOSER_MEMORY_LIMIT=-1 travis_retry composer require --dev friendsofphp/php-cs-fixer:2.13.* phpmd/phpmd --prefer-dist --no-suggest --ansi
+  - COMPOSER_MEMORY_LIMIT=-1 travis_retry composer require --dev friendsofphp/php-cs-fixer:2.13.* phpmd/phpmd:2.7.* --prefer-dist --no-suggest --ansi
   - php bin/console doctrine:database:create --env=test --if-not-exists
   - php bin/console doctrine:migrations:migrate --no-interaction
   - php bin/console doctrine:fixtures:load --env=test --no-interaction
