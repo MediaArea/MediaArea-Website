@@ -17,8 +17,11 @@ class IpToCountry
      */
     public function __construct($ip = '127.0.0.1')
     {
+        /*
         $geoipDb = new Database();
         $reader = new Reader($geoipDb->getLocation());
+        */
+        $reader = new Reader(__DIR__.'/../../../var/data/GeoLite2-Country.mmdb');
         try {
             $this->country = $reader->country($ip)->country;
         } catch (AddressNotFoundException $e) {

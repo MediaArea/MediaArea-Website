@@ -2,11 +2,7 @@
 
 namespace MediaBinBundle\Lib\File;
 
-use GuzzleHttp\Client as GuzzleClient;
-use GuzzleHttp\HandlerStack as GuzzleHandlerStack;
 use OpenStack\OpenStack;
-use OpenStack\Identity\v2\Service as OpenStackService;
-use OpenStack\Common\Transport\Utils as OpenStackUtils;
 
 class ExternalFile
 {
@@ -98,15 +94,12 @@ class ExternalFile
         $this->openstack = new OpenStack([
             'authUrl' => $this->conf['auth_url'],
             'region' => $this->conf['region'],
-            'username' => $this->conf['username'],
-            'password' => $this->conf['password'],
-            'tenantId' => $this->conf['tenant_id'],
-            'identityService' => OpenStackService::factory(
-                new GuzzleClient([
-                    'base_uri' => OpenStackUtils::normalizeUrl($this->conf['auth_url']),
-                    'handler' => GuzzleHandlerStack::create(),
-                ])
-            ),
+            'user' => [
+                'name' => $this->conf['username'],
+                'password' => $this->conf['password'],
+                'domain' => ['name' => 'Default'],
+            ],
+            'scope' => ['project' => ['id' => $this->conf['tenant_id']]],
         ]);
     }
 }
