@@ -36,6 +36,7 @@ class DefaultControllerTest extends WebTestCase
             ['/NoTimeToWait3'],
             ['/QCWorkshop2018'],
             ['/NoTimeToWait4'],
+            ['/NoTimeToWait5'],
         ];
     }
 }
