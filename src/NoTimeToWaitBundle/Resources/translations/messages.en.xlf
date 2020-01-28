@@ -26,6 +26,10 @@
         <source><![CDATA[menu.notimetowait.4]]></source>
         <target><![CDATA[No Time To Wait 4 (2019, Budapest)]]></target>
       </trans-unit>
+      <trans-unit id="menu.notimetowait.5" approved="yes">
+        <source><![CDATA[menu.notimetowait.5]]></source>
+        <target><![CDATA[No Time To Wait 5 (2020, Hilversum)]]></target>
+      </trans-unit>
     </body>
   </file>
 </xliff>
