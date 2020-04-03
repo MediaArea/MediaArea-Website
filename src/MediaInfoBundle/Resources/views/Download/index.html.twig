@@ -164,6 +164,12 @@
     <td><a href="https://www.freshports.org/multimedia/mediainfo/">{% trans %}download.table.freshports_release{% endtrans %} ({% trans %}download.table.unsupported_release{% endtrans %})</a></td>
 </tr>
 <tr>
+    {% image '@AppBundle/Resources/public/img/OS/Lambda.png' %}
+    <th><a href="{{ path('mi_download_lambda') }}"><img src="{{ asset_url }}" width="350" height="99" alt="Lambda" title="Lambda"></a></th>
+    {% endimage %}
+    <td><a href="{{ path('mi_download_lambda') }}">{% trans %}download.table.official_release{% endtrans %}</a></td>
+</tr>
+<tr>
     <th><a href="{{ path('mi_download_javascript') }}">{% trans %}download.table.javascript_release{% endtrans %}</a></th>
     <td><a href="{{ path('mi_download_javascript') }}">{% trans %}download.table.official_release{% endtrans %}</a></td>
 </tr>

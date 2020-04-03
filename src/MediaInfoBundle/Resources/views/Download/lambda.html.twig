@@ -1,0 +1,28 @@
+{% extends 'MediaInfoBundle::base.html.twig' %}
+
+{% block title %}{% trans %}download.lambda.page.title{% endtrans %}{% endblock %}
+{% block description %}{% trans %}about.page.description{% endtrans %}{% endblock %}
+{% block keywords %}{% trans %}about.page.keywords{% endtrans %}{% endblock %}
+
+{% block body %}
+<h1>{% trans %}download.lambda.title{% endtrans %}</h1>
+{% image '@AppBundle/Resources/public/img/OS/Lambda.png' %}
+<img src="{{ asset_url }}" alt="Lambda" title="Lambda" width="350" height="99"><br />
+{% endimage %}
+
+<div class="table-responsive">
+<table class="download table table-bordered table-condensed">
+<thead>
+<tr class="table-header">
+    <th>Architecture</th>
+    <th>Interface</th>
+    <th>Version</th>
+    <th>Comment</th>
+</tr>
+</thead>
+<tbody>
+{{ include('@MediaInfo/Download/lambdaTable.html.twig') }}
+</tbody>
+</table>
+</div>
+{% endblock %}
