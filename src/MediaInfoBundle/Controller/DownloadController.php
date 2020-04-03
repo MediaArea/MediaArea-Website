@@ -118,7 +118,19 @@ class DownloadController extends Controller
     {
         return array();
     }
-
+    /**
+     * @Route(
+     *     "/{_locale}/MediaInfo/Download/Lambda",
+     *     name="mi_download_lambda",
+     *     requirements={"_locale": "%app.locales%"
+     *     }
+     * )
+     * @Template()
+     */
+    public function lambdaAction()
+    {
+        return array();
+    }
     /**
      * @Route(
      *     "/{_locale}/MediaInfo/Download/Debian",
