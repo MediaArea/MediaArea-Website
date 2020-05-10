@@ -3,13 +3,11 @@
 namespace AppBundle\Form;
 
 use AppBundle\Entity\Contact;
+use EWZ\Bundle\RecaptchaBundle\Form\Type\EWZRecaptchaType;
+use EWZ\Bundle\RecaptchaBundle\Validator\Constraints\IsTrue as RecaptchaTrue;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
-use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
-use Symfony\Component\Form\FormError;
-use Symfony\Component\Form\FormEvent;
-use Symfony\Component\Form\FormEvents;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
 class ContactType extends AbstractType
@@ -22,24 +20,27 @@ class ContactType extends AbstractType
         $builder
             ->add('name')
             ->add('company')
-            ->add('companyUrl', TextType::class, array('mapped' => false, 'required' => false))
             ->add('email')
             ->add('subject')
-            ->add('message', TextareaType::class, ['attr' => ['rows' => 10]]);
-
-        $builder->addEventListener(FormEvents::PRE_SUBMIT, function (FormEvent $event) {
-            $data = $event->getData();
-
-            if (!isset($data['companyUrl']) || !empty($data['companyUrl'])) {
-                $event->getForm()->addError(new FormError('Company URL error'));
-            }
-        });
+            ->add('message', TextareaType::class, ['attr' => ['rows' => 10]])
+            ->add('recaptcha', EWZRecaptchaType::class, [
+                'attr' => [
+                    'options' => [
+                        'theme' => 'light',
+                        'type' => 'image',
+                        'size' => 'invisible',
+                        'bind' => 'btn-contact-send',
+                    ],
+                ],
+                'mapped' => false,
+                'constraints' => [new RecaptchaTrue()],
+            ]);
     }
 
     public function configureOptions(OptionsResolver $resolver)
     {
-        $resolver->setDefaults(array(
+        $resolver->setDefaults([
             'data_class' => Contact::class,
-        ));
+        ]);
     }
 }

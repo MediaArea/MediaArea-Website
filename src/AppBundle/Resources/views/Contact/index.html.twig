@@ -12,13 +12,18 @@ You can <a href="mailto:info@mediaarea.net">send us an email</a> directly.
 
 <h2>Leave us a message</h2>
 <p>You can fill this form to send us a message.</p>
-{{ form_start(form) }}
+{{ form_start(form, {'attr': {'class': 'recaptcha-form'}}) }}
+<div class="col-sm-10 col-sm-offset-2">
+    {{ form_widget(form.recaptcha) }}
+</div>
 {{ form_widget(form) }}
 <div class="clearfix"></div>
 <div>
     <div class="form-group">
         <div class="col-sm-2"></div>
-        <div class="col-sm-10"><button type="submit" class="btn-default btn">Send message</button></div>
+        <div class="col-sm-10">
+            <button type="submit" class="btn-default btn" id="btn-contact-send">Send message</button>
+        </div>
     </div>
 </div>
 {{ form_end(form) }}

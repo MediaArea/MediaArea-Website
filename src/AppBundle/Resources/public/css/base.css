@@ -928,7 +928,7 @@ ul.events-list li {
     vertical-align: middle;
 }
 
-.fos_user_registration_register div.form-group:nth-child(9), #contact div.form-group:nth-child(3) {
+.fos_user_registration_register div.form-group:nth-child(9) {
     display: none;
 }
 
