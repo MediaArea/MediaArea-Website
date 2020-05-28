@@ -13,7 +13,8 @@ Bugs and new feature requests were identified through a series of interviews wit
 
 *   Bryan Hoffa and Robert Friedrich from the [Library of Congress National Audio-Visual Conservation Center](https://www.loc.gov/programs/audio-visual-conservation/about-this-program/)
 *   Bryce Roe, Julia Hawkins, Chris Heaney, and Karl Fleck from the [Northeast Document Conservation Center](https://www.nedcc.org/)
-*   Kira Sobers and Dave Walker from the [Smithsonian Institution Archives](https://siarchives.si.edu/)
+*   Kira Sobers from the [Smithsonian Institution Archives](https://siarchives.si.edu/)
+*   Dave Walker from the [Smithsonian Center for Folklife & Cultural Heritage](https://folklife.si.edu/)
 *   Marcos Sueiro Bal and Daniel Sbardella from [WNYC Archives](https://www.wnyc.org/)
 *   Courtney Egan, Ryan Davis, Jessie Sims, and Jerry Jackson from the [National Archives and Records Administration Audio-Video Preservation Lab](https://www.archives.gov/preservation)
 
