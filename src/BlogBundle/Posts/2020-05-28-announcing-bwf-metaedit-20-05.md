@@ -1,13 +1,13 @@
 ---
 title:  "Announcing BWF MetaEdit 20.05!"
 date:   2020-05-28 08:00:00 CET
-excerpt: "Thanks to renewed support from the Library of Congress, MediaArea is proud to present a new and improved version of BWF MetaEdit"
+excerpt: "Thanks to renewed support from the FADGI and the Library of Congress, MediaArea is proud to present a new and improved version of BWF MetaEdit"
 tags: BWF MetaEdit
 ---
 
 Announcing BWF MetaEdit 20.05!
 
-Thanks to renewed support from the Library of Congress, MediaArea is proud to present a new and improved version of BWF MetaEdit, now [available for download](https://mediaarea.net/BWFMetaEdit). BWF MetaEdit is a tool that supports embedding, validating, and exporting of metadata in Broadcast WAVE Format (BWF) files. It also supports the FADGI Broadcast WAVE Metadata Embedding Guidelines. Improvements in this new version include single file form view, ability to toggle md5 endianness value, elimination of `CodingHistory` and `BextVersion` duplication bugs, a "Fill all open files with this value" option, and more. See the bottom of this announcement for a full list.
+Thanks to renewed support from the [FADGI](http://www.digitizationguidelines.gov/) and the [Library of Congress](https://www.loc.gov/), MediaArea is proud to present a new and improved version of BWF MetaEdit, now [available for download](https://mediaarea.net/BWFMetaEdit). BWF MetaEdit is a tool that supports embedding, validating, and exporting of metadata in Broadcast WAVE Format (BWF) files. It also supports the FADGI Broadcast WAVE Metadata Embedding Guidelines. Improvements in this new version include single file form view, ability to toggle md5 endianness value, elimination of `CodingHistory` and `BextVersion` duplication bugs, a "Fill all open files with this value" option, and more. See the bottom of this announcement for a full list.
 
 Bugs and new feature requests were identified through a series of interviews with BWF MetaEdit users. Huge thanks to the follow interviewees for their time and insight:
 
