@@ -41,9 +41,9 @@ class DVRescueDownloadInfo extends AbstractDownloadInfo
     public function parse()
     {
         $this->downloadInfo = $this->detectOS();
-        $this->downloadInfo['version'] = '0.19.11';
-        $this->downloadInfo['date'] = '2019-11-14';
-        $this->downloadInfo['versionPath'] = '0.19.11';
+        $this->downloadInfo['version'] = '0.20.05';
+        $this->downloadInfo['date'] = '2020-05-29';
+        $this->downloadInfo['versionPath'] = '0.20.05';
     }
 
     public function getVersionPath()
