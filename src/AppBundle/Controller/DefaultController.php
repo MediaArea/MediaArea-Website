@@ -5,6 +5,7 @@ namespace AppBundle\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Component\HttpFoundation\Request;
 
 /**
  * @SuppressWarnings(PHPMD.TooManyPublicMethods)
@@ -18,7 +19,7 @@ class DefaultController extends Controller
     public function indexAction()
     {
         //return $this->redirectToRoute('mi_home', array('_locale' => substr($request->getLocale(), 0, 2)));
-        return array('noAds' => true);
+        return ['noAds' => true];
     }
 
     /**
@@ -27,7 +28,15 @@ class DefaultController extends Controller
      */
     public function reposAction()
     {
-        return array();
+        return [];
+    }
+
+    /**
+     * @Route("/Repos", name="ma_repos_wo_locale")
+     */
+    public function reposActionWithoutLocale(Request $request)
+    {
+        return $this->redirectToRoute('ma_repos', ['_locale' => $request->getLocale()], 302);
     }
 
     /**
@@ -36,7 +45,7 @@ class DefaultController extends Controller
      */
     public function eventsAction()
     {
-        return array('noAds' => true);
+        return ['noAds' => true];
     }
 
     /**
@@ -54,7 +63,7 @@ class DefaultController extends Controller
      */
     public function teamRulesAction()
     {
-        return array();
+        return [];
     }
 
     /**
@@ -63,7 +72,7 @@ class DefaultController extends Controller
      */
     public function legalAction()
     {
-        return array();
+        return [];
     }
 
     /**
@@ -72,7 +81,7 @@ class DefaultController extends Controller
      */
     public function divxAction()
     {
-        return array();
+        return [];
     }
 
     /**
@@ -81,7 +90,7 @@ class DefaultController extends Controller
      */
     public function dx50Action()
     {
-        return array();
+        return [];
     }
 
     /**
@@ -90,7 +99,7 @@ class DefaultController extends Controller
      */
     public function xvidAction()
     {
-        return array();
+        return [];
     }
 
     /**
