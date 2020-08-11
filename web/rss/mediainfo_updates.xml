@@ -5,7 +5,26 @@
         <link>https://mediaarea.net/MediaInfo</link>
         <description>MediaInfo updates feed</description>
         <language>en-us</language>
-        <lastBuildDate>Wed, 03 Apr 2020 12:00:00 +0000</lastBuildDate>
+        <lastBuildDate>Tue, 11 Aug 2020 12:00:00 +0000</lastBuildDate>
+         <item>
+            <title>MediaInfo 20.08</title>
+            <description>
+                <![CDATA[+ MPEG-H 3D Audio full featured support (group presets, switch groups, groups, signal groups)<br />
+                         + MP4/MOV: support of more metadata locations<br />
+                         + JSON and XML outputs: authorize "complete" output<br />
+                         + MPEG-4: support of TrueHD<br />
+                         + WM: show legacy value of performer if not same as modern one<br />
+                         + WAV: trace of adtl (Associated Data List) chunk<br />
+                         x URL encoding detection fix for URL having a query part (issue with e.g. pre-signed AWS S3 URLs)<br />
+                         x Don't try to seek to the end (false positive range related error with HTTP)<br />
+                         x DPX: don't load the whole file in RAM<br />
+                         x Opus: fix wrong channel mapping<br />
+                         x Miscellaneous other bug fixes]]>
+            </description>
+            <link>https://mediaarea.net/MediaInfo</link>
+            <pubDate>Tue, 11 Aug 2020 12:00:00 +0000</pubDate>
+            <guid>MediaInfo-20.08</guid>
+         </item>
          <item>
             <title>MediaInfo 20.03</title>
             <description>
