@@ -16,6 +16,6 @@ class UserDirectoryNamer implements DirectoryNamerInterface
             return $object->getUser()->getId();
         }
 
-        return null;
+        return '';
     }
 }
