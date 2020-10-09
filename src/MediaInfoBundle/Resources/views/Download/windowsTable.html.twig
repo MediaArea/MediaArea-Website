@@ -1,48 +1,48 @@
 {% if 'Y' == app.request.attributes.get('donated') or (app.user and app.user.isDonor) %}
-    {% set downloadLink = '//mediaarea.net/download/donors/20.08/MediaInfo_GUI_20.08_Windows.exe' %}
+    {% set downloadLink = '//mediaarea.net/download/donors/20.09/MediaInfo_GUI_20.09_Windows.exe' %}
 {% elseif 1 <= app.request.attributes.get('donated', -1) %}
-    {% set downloadLink = '//mediaarea.net/download/current/MediaInfo_GUI_20.08_Windows.exe' %}
+    {% set downloadLink = '//mediaarea.net/download/current/MediaInfo_GUI_20.09_Windows.exe' %}
 {% else %}
-    {% set downloadLink = '//mediaarea.net/download/binary/mediainfo-gui/20.08/MediaInfo_GUI_20.08_Windows.exe' %}
+    {% set downloadLink = '//mediaarea.net/download/binary/mediainfo-gui/20.09/MediaInfo_GUI_20.09_Windows.exe' %}
 {% endif %}
 <tr>
     <th rowspan="7">XP, Vista, 7, 8, 10</th>
     <th>Universal installer (32/64 bit)</th>
     <th><abbr title="Graphical User Interface">GUI</abbr></th>
-    <td><a href="{{ downloadLink }}">v20.08</a></td>
+    <td><a href="{{ downloadLink }}">v20.09</a></td>
     <td>If you don't know which one to download, download this one</td>
 </tr>
 <tr>
     <th rowspan="3">64 bit</th>
     <th><abbr title="Graphical User Interface">GUI</abbr></th>
-    <td><a href="{{ downloadLink }}">v20.08 Universal (32/64 bit)</a> <small>(<a href="//mediaarea.net/download/binary/mediainfo-gui/20.08/MediaInfo_GUI_20.08_Windows_x64_WithoutInstaller.7z">64 bit only without installer</a>)</small></td>
+    <td><a href="{{ downloadLink }}">v20.09 Universal (32/64 bit)</a> <small>(<a href="//mediaarea.net/download/binary/mediainfo-gui/20.09/MediaInfo_GUI_20.09_Windows_x64_WithoutInstaller.7z">64 bit only without installer</a>)</small></td>
     <td></td>
 </tr>
 <tr>
     <th><abbr title="Command Line Interface">CLI</abbr></th>
-    <td><a href="//mediaarea.net/download/binary/mediainfo/20.08/MediaInfo_CLI_20.08_Windows_x64.zip">v20.08</a></td>
+    <td><a href="//mediaarea.net/download/binary/mediainfo/20.09/MediaInfo_CLI_20.09_Windows_x64.zip">v20.09</a></td>
     <td>&nbsp;</td>
 </tr>
 <tr>
     <th><abbr title="Dynamic Link Library">DLL</abbr></th>
-    <td><a href="//mediaarea.net/download/binary/libmediainfo0/20.08/MediaInfo_DLL_20.08_Windows_x64.exe">v20.08</a><small> (without installer: <a href="//mediaarea.net/download/binary/libmediainfo0/20.08/MediaInfo_DLL_20.08_Windows_x64_WithoutInstaller.7z">7z</a>, <a href="//mediaarea.net/download/binary/libmediainfo0/20.08/MediaInfo_DLL_20.08_Windows_x64_WithoutInstaller.zip">zip</a>)</small></td>
+    <td><a href="//mediaarea.net/download/binary/libmediainfo0/20.09/MediaInfo_DLL_20.09_Windows_x64.exe">v20.09</a><small> (without installer: <a href="//mediaarea.net/download/binary/libmediainfo0/20.09/MediaInfo_DLL_20.09_Windows_x64_WithoutInstaller.7z">7z</a>, <a href="//mediaarea.net/download/binary/libmediainfo0/20.09/MediaInfo_DLL_20.09_Windows_x64_WithoutInstaller.zip">zip</a>)</small></td>
     <td>&nbsp;</td>
 </tr>
 
 <tr>
     <th rowspan="3">32 bit</th>
     <th><abbr title="Graphical User Interface">GUI</abbr></th>
-    <td><a href="{{ downloadLink }}">v20.08 Universal (32/64 bit)</a> <small> (<a href="//mediaarea.net/download/binary/mediainfo-gui/20.08/MediaInfo_GUI_20.08_Windows_i386_WithoutInstaller.7z">32 bit only without installer</a>)</small></td>
+    <td><a href="{{ downloadLink }}">v20.09 Universal (32/64 bit)</a> <small> (<a href="//mediaarea.net/download/binary/mediainfo-gui/20.09/MediaInfo_GUI_20.09_Windows_i386_WithoutInstaller.7z">32 bit only without installer</a>)</small></td>
     <td></td>
 </tr>
 <tr>
     <th><abbr title="Command Line Interface">CLI</abbr></th>
-    <td><a href="//mediaarea.net/download/binary/mediainfo/20.08/MediaInfo_CLI_20.08_Windows_i386.zip">v20.08</a></td>
+    <td><a href="//mediaarea.net/download/binary/mediainfo/20.09/MediaInfo_CLI_20.09_Windows_i386.zip">v20.09</a></td>
     <td>&nbsp;</td>
 </tr>
 <tr>
     <th><abbr title="Dynamic Link Library">DLL</abbr></th>
-    <td><a href="//mediaarea.net/download/binary/libmediainfo0/20.08/MediaInfo_DLL_20.08_Windows_i386.exe">v20.08</a><small> (without installer: <a href="//mediaarea.net/download/binary/libmediainfo0/20.08/MediaInfo_DLL_20.08_Windows_i386_WithoutInstaller.7z">7z</a>, <a href="//mediaarea.net/download/binary/libmediainfo0/20.08/MediaInfo_DLL_20.08_Windows_i386_WithoutInstaller.zip">zip</a>)</small></td>
+    <td><a href="//mediaarea.net/download/binary/libmediainfo0/20.09/MediaInfo_DLL_20.09_Windows_i386.exe">v20.09</a><small> (without installer: <a href="//mediaarea.net/download/binary/libmediainfo0/20.09/MediaInfo_DLL_20.09_Windows_i386_WithoutInstaller.7z">7z</a>, <a href="//mediaarea.net/download/binary/libmediainfo0/20.09/MediaInfo_DLL_20.09_Windows_i386_WithoutInstaller.zip">zip</a>)</small></td>
     <td>&nbsp;</td>
 </tr>
 

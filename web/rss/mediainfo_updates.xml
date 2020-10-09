@@ -5,7 +5,28 @@
         <link>https://mediaarea.net/MediaInfo</link>
         <description>MediaInfo updates feed</description>
         <language>en-us</language>
-        <lastBuildDate>Tue, 11 Aug 2020 12:00:00 +0000</lastBuildDate>
+        <lastBuildDate>Fri, 09 Nov 2020 12:00:00 +0000</lastBuildDate>
+         <item>
+            <title>MediaInfo 20.09</title>
+            <description>
+                <![CDATA[+ Dolby ED2: full featured support (presentations, presentation targets, beds, objects)<br />
+                         + MKV: support of Dolby Vision metadata<br />
+                         + MXF: detection of Dolby E hidden in PCM tracks having more than 2 channels<br />
+                         + WAV: detection of Dolby E hidden in PCM tracks having more than 2 channels<br />
+                         + CineForm: display of color space (including Bayer), bit depth<br />
+                         x WAV: more precise sample count<br />
+                         x SMPTE ST 337: catch of streams starting later than usual (probing increased from 4 to 16 PCM "frames")<br />
+                         x PNG: detection of additional alpha plane in color space<br />
+                         x MXF: detection of additional alpha plane in color space<br />
+                         x AVI: detection of additional alpha plane in color space<br />
+                         x MPEG Audio: was wrongly flagging Xing info tag as CBR<br />
+                         x VorbisTag: does not skip DISCID<br />
+                         x Miscellaneous bug/crash fixes]]>
+            </description>
+            <link>https://mediaarea.net/MediaInfo</link>
+            <pubDate>Fri, 09 Nov 2020 12:00:00 +0000</pubDate>
+            <guid>MediaInfo-20.09</guid>
+         </item>
          <item>
             <title>MediaInfo 20.08</title>
             <description>
