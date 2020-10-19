@@ -182,4 +182,8 @@
     .hljs, .hljs-subst {
         color: #C8C8C8;
     }
+
+    .mediainfo-report-container .hljs, .mediainfo-report-container h2 {
+        background: #111;
+    }
 }

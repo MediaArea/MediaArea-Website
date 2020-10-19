@@ -11,7 +11,7 @@ table, th, td {
 }
 .ColHeader{
  	vertical-align:top;
-  word-wrap:break-word;
+ 	word-wrap:break-word;
  	background:#F0F0F0;
 }
 .LineHeader{
@@ -24,6 +24,23 @@ table, th, td {
 .ChannelUnsure{
  	vertical-align:middle;
  	background:#D0D080;
+}
+@media(prefers-color-scheme: dark) {
+ 	table, th, td {
+ 		border: 1px solid #666;
+ 	}
+ 	.ColHeader{
+ 		background:#333;
+ 	}
+ 	.LineHeader{
+ 		background:#333;
+ 	}
+ 	.ChannelSure{
+ 		background:#2C3420;
+ 	}
+ 	.ChannelUnsure{
+ 		background:#2C2C20;
+ 	}
 }
 </style>
 {% endblock %}
