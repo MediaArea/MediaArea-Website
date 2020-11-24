@@ -786,6 +786,15 @@ code {
     margin: 0;
 }
 
+.prices th.Accent {
+    background-color: #DDDDDD
+}
+
+@media(prefers-color-scheme: dark) {
+    .prices th.Accent {
+        background-color: #333;
+    }
+}
 
 /* Misc */
 img, .normalButton {
@@ -1218,6 +1227,11 @@ form[name="vote"] {
     }
 
     /* Override bootstrap.css */
+    .table .table {
+        background-color: #272B30;
+        color: #C8C8C8;
+    }
+
     .table-striped > tbody > tr:nth-of-type(2n+1) {
         background-color: #474B50;
     }
