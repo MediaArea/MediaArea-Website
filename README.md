@@ -1,6 +1,6 @@
 # MediaArea-Website
 
-[![Build Status](https://travis-ci.org/MediaArea/MediaArea-Website.svg?branch=master)](https://travis-ci.org/MediaArea/MediaArea-Website)
+![Build Status](https://github.com/MediaArea/MediaArea-Website/workflows/Checks/badge.svg)
 
 # How to install
 
@@ -41,7 +41,7 @@ Get dependencies with composer
 cd YOUR_PATH/MediaArea-Website/
 composer install
 ```
-You'll get some configuration questions, you can use [these fake values](blob/master/app/config/parameters.yml.travis) if you don't care about the payments.
+You'll get some configuration questions, you can use [these fake values](blob/master/app/config/parameters.yml.ci) if you don't care about the payments.
 
 ### SQL tables and assets
 
