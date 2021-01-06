@@ -21,7 +21,6 @@ class VatCalculator
         'ES' => 0.21, // Spain
         'FI' => 0.24, // Finland
         'FR' => 0.20, // France
-        'GB' => 0.20, // United Kingdom
         'GR' => 0.24, // Greece
         'HR' => 0.25, // Croatia
         'HU' => 0.27, // Hungary
