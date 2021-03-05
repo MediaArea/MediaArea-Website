@@ -5,6 +5,7 @@ namespace MediaConchOnlineBundle\Form\Type;
 use Symfony\Component\Form\Extension\Core\Type\FileType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\FormBuilderInterface;
+use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Validator\Constraints\File;
 
 class CheckerUploadFormType extends CheckerBaseFormType
@@ -24,5 +25,12 @@ class CheckerUploadFormType extends CheckerBaseFormType
     public function getBlockPrefix()
     {
         return 'checkerUpload';
+    }
+
+    public function configureOptions(OptionsResolver $resolver)
+    {
+        $resolver->setDefaults([
+            'csrf_protection' => false,
+        ]);
     }
 }

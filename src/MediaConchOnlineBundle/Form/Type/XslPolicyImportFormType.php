@@ -5,6 +5,7 @@ namespace MediaConchOnlineBundle\Form\Type;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\FileType;
 use Symfony\Component\Form\FormBuilderInterface;
+use Symfony\Component\OptionsResolver\OptionsResolver;
 
 class XslPolicyImportFormType extends AbstractType
 {
@@ -19,5 +20,12 @@ class XslPolicyImportFormType extends AbstractType
     public function getBlockPrefix()
     {
         return 'xslPolicyImport';
+    }
+
+    public function configureOptions(OptionsResolver $resolver)
+    {
+        $resolver->setDefaults([
+            'csrf_protection' => false,
+        ]);
     }
 }
