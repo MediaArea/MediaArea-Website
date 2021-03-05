@@ -23,6 +23,7 @@ jobs:
         uses: shivammathur/setup-php@v2
         with:
           php-version: 7.2
+          extensions: gd
           ini-values: memory_limit=-1
           tools: composer:v1
           coverage: none

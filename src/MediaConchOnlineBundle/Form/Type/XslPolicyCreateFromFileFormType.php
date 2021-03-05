@@ -5,6 +5,7 @@ namespace MediaConchOnlineBundle\Form\Type;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\FileType;
 use Symfony\Component\Form\FormBuilderInterface;
+use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Validator\Constraints\File;
 
 class XslPolicyCreateFromFileFormType extends AbstractType
@@ -24,5 +25,12 @@ class XslPolicyCreateFromFileFormType extends AbstractType
     public function getBlockPrefix()
     {
         return 'xslPolicyCreateFromFile';
+    }
+
+    public function configureOptions(OptionsResolver $resolver)
+    {
+        $resolver->setDefaults([
+            'csrf_protection' => false,
+        ]);
     }
 }
