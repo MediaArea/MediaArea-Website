@@ -5,7 +5,41 @@
         <link>https://mediaarea.net/MediaInfo</link>
         <description>MediaInfo updates feed</description>
         <language>en-us</language>
-        <lastBuildDate>Fri, 09 Oct 2020 12:00:00 +0000</lastBuildDate>
+        <lastBuildDate>Fri, 26 Mar 2021 08:00:00 +0000</lastBuildDate>
+         <item>
+            <title>MediaInfo 21.03</title>
+            <description>
+                <![CDATA[+ WAV: ADM profile detection of Dolby Atmos Master or MPEG-H<br />
+                         + SMPTE ST 337: support of AC-4<br />
+                         + AC-3/AC-4: show top layer channels after Lw/Rw, as it becomes the defacto standard layout<br />
+                         + Dolby Surround EX and Pro Logic IIz detection<br />
+                         + Matroska: add DV support<br />
+                         + JavaScript module: reduce binary size<br />
+                         + JavaScript module: reserve less memory at startup<br />
+                         + CLI: read from stdin<br />
+                         + DV: remove check of zeroed bytes in timecode, considered again as valid timecode<br />
+                         + TIFF; add support of compression codes 7 and 8<br />
+                         + WAV: show bext (BWF) version in verbose mode / XML / JSON<br />
+                         + MXF: detection fo DCI P3 mastering display color primaries<br />
+                         + Options: add software version to text output (CLI or Windows GUI)<br />
+                         + Options: add report creation timestamp to text output (CLI or Windows GUI)<br />
+                         + macOS: native build for Apple Silicon (arm64)<br />
+                         x HDR: mastering max. luminance precision was wrong<br />
+                         x WM: fix EncodingTime parsing<br />
+                         x MOV/MP4: skip XMP huge atoms, fix<br />
+                         x MPEG-TS: fix inverted supplementary_audio_descriptor mix_type values<br />
+                         x AAC: fix File_Aac::is_intensity according to ISO/IEC 14496-3:2009<br />
+                         x I1353, MP4: Skip user data Xtra and free atoms<br />
+                         x FFV1: fix crash with some bitstreams parsing<br />
+                         x TIFF: fix division by 0<br />
+                         x RF64: fix the WAV malformed chunk size test<br />
+                         x macOS 10.9/10.10: fix crash at startup<br />
+                         x Supported platforms: this is the last version compatible with Windows XP, macOS 10.5-10.9, RHEL/CentOS 6]]>
+            </description>
+            <link>https://mediaarea.net/MediaInfo</link>
+            <pubDate>Fri, 26 Mar 2021 08:00:00 +0000</pubDate>
+            <guid>MediaInfo-21.03</guid>
+         </item>
          <item>
             <title>MediaInfo 20.09</title>
             <description>
