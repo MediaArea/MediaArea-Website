@@ -5,7 +5,27 @@
         <link>https://mediaarea.net/MediaInfo</link>
         <description>MediaInfo updates feed</description>
         <language>en-us</language>
-        <lastBuildDate>Fri, 26 Mar 2021 08:00:00 +0000</lastBuildDate>
+        <lastBuildDate>Fri, 17 Sep 2021 08:00:00 +0000</lastBuildDate>
+         <item>
+            <title>MediaInfo 21.09</title>
+            <description>
+                <![CDATA[+ Graph view for 3D audio streams (thanks to graphviz)<br />
+                         + ADM: full featured support (programmes, content, objects, pack formats...)<br />
+                         + ADM: in WAV (axml, bxml), MXF<br />
+                         + S-ADM in AES3: support of Levels A1 and AX1<br />
+                         + MOV/MP4: support of Dolby Vision Metadata XML<br />
+                         + MXF: detection of IAB<br />
+                         + SMPTE ST 337 (AES3): support of subframe mode<br />
+                         + HEVC: CEA-608/708 caption support<br />
+                         + MP4/QuickTime: Android slow motion real frame rate<br />
+                         + JSON output: add creatingLibrary field<br />
+                         x MPEG-4: read too much data with some predecessor definitions<br />
+                         x EBUCore: fix of fields order and types]]>
+            </description>
+            <link>https://mediaarea.net/MediaInfo</link>
+            <pubDate>Fri, 17 Sep 2021 08:00:00 +0000</pubDate>
+            <guid>MediaInfo-21.09</guid>
+         </item>
          <item>
             <title>MediaInfo 21.03</title>
             <description>
