@@ -237,6 +237,7 @@
                 <xsd:element name="FrameRate_Mode_Original" minOccurs="0" maxOccurs="1" type="xsd:string"/>
                 <xsd:element name="FrameRate_Nominal" minOccurs="0" maxOccurs="1" type="xsd:float"/>
                 <xsd:element name="FrameRate_Original" minOccurs="0" maxOccurs="1" type="xsd:float"/>
+                <xsd:element name="FrameRate_Real" minOccurs="0" maxOccurs="1" type="xsd:float"/>
                 <xsd:element name="GeneralCount" minOccurs="0" maxOccurs="1" type="xsd:integer"/>
                 <xsd:element name="Genre" minOccurs="0" maxOccurs="1" type="xsd:string"/>
                 <xsd:element name="Gop_OpenClosed" minOccurs="0" maxOccurs="1" type="xsd:string"/>
