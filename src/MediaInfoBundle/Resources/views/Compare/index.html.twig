@@ -71,7 +71,7 @@
 {% endjavascripts %}
 
 <script>
-if (('WebAssembly' in window)) {
+if (('WebAssembly' in window) && (typeof Promise !== 'undefined')) {
     var mediainfoSrc = '{{ MIWASM }}.js';
     var mediainfoMemSrc = '{{ MIWASM }}.wasm';
 } else {

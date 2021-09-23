@@ -16,7 +16,15 @@ var MediaCompareAnalyze = (function () {
         };
 
         MediaInfoModule = MediaInfoLib({'locateFile': locateFile, 'postRun': function() {
-            callback();
+            if (typeof Promise !== 'undefined' && MediaInfoModule instanceof Promise) {
+                MediaInfoModule.then(function(module) {
+                    MediaInfoModule = module;
+                    callback();
+                });
+            }
+            else {
+                callback();
+            }
             return;
         }});
     };
