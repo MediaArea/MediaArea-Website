@@ -9,8 +9,17 @@ var MediaBin = (function () {
         };
 
         MediaInfoModule = MediaInfoLib({'locateFile': locateFile, 'postRun': function() {
-            initPage();
-            loadXML(xml, file);
+            if (typeof Promise !== 'undefined' && MediaInfoModule instanceof Promise) {
+                MediaInfoModule.then(function(module) {
+                    MediaInfoModule = module;
+                    initPage();
+                    loadXML(xml, file);
+                });
+            }
+            else {
+                initPage();
+                loadXML(xml, file);
+            }
         }});
     };
 

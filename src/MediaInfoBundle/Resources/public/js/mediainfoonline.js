@@ -8,7 +8,15 @@ var MediaInfoOnline = (function () {
         };
 
         MediaInfoModule = MediaInfoLib({'locateFile': locateFile, 'postRun': function() {
-            initPage();
+            if (typeof Promise !== 'undefined' && MediaInfoModule instanceof Promise) {
+                MediaInfoModule.then(function(module) {
+                    MediaInfoModule = module;
+                    initPage();
+                });
+            }
+            else {
+                initPage();
+            }
         }});
     };
 

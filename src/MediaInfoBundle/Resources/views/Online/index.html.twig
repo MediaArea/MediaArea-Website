@@ -1,7 +1,7 @@
 {% extends 'MediaInfoBundle::base.html.twig' %}
 
-{% set MIJS = '/_/js/MediaInfo-20.03.js' %}
-{% set MIWASM = '/_/js/MediaInfoWasm-20.03' %}
+{% set MIJS = '/_/js/MediaInfo-21.09.js' %}
+{% set MIWASM = '/_/js/MediaInfoWasm-21.09' %}
 
 {% block title %}{% trans %}mediainfoonline.page.title{% endtrans %}{% endblock %}
 {% block description %}{% trans %}mediainfoonline.page.description{% endtrans %}{% endblock %}
@@ -135,7 +135,7 @@
 <script type="text/javascript" src="{{ preload(asset_url, { as: 'script', nopush: true }) }}"></script>
 {% endjavascripts %}
 <script>
-if (('WebAssembly' in window)) {
+if (('WebAssembly' in window) && (typeof Promise !== 'undefined')) {
     var mediainfoSrc = '{{ MIWASM }}.js';
     var mediainfoMemSrc = '{{ MIWASM }}.wasm';
 } else {
