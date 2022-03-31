@@ -26,6 +26,7 @@ class DownloadControllerTest extends WebTestCase
             ['/MediaConch/Download/Arch_Linux'],
             ['/MediaConch/Download/CentOS'],
             ['/MediaConch/Download/Debian'],
+            ['/MediaConch/Download/Raspbian'],
             ['/MediaConch/Download/Fedora'],
             ['/MediaConch/Download/Mac_OS'],
             ['/MediaConch/Download/Mageia'],
@@ -36,6 +37,8 @@ class DownloadControllerTest extends WebTestCase
             ['/MediaConch/Download/Snapshots'],
             ['/MediaConch/Download/Ubuntu'],
             ['/MediaConch/Download/Windows'],
+            ['/MediaConch/Download/Lambda'],
+            ['/MediaConch/Download/JavaScript'],
         ];
     }
 }

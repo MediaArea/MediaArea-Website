@@ -1,275 +1,349 @@
-<tr>
+<tr class="old-files">
     <th colspan="4">For automatic update and easiest installation, enable MediaArea softwares repository for Ubuntu<br>Search for "MediaConch" in your package manager<br>or "apt-get install mediaconch-gui" (for GUI)<br> or "apt-get install mediaconch-server" (for Server)<br> or "apt-get install mediaconch" (for CLI)</th>
     <td><a href="{{ path('ma_repos') }}">Activate MediaArea Repository</a></td>
 </tr>
-<tr>
+<tr class="old-files">
     <th colspan="4">Official distribution packages (Starting from Ubuntu 16.04)<br>Search for "MediaConch" in your package manager<br>or "apt-get install mediaconch-gui" (for GUI)<br> or "apt-get install mediaconch" (for CLI)</th>
     <td><a href="https://packages.ubuntu.com/search?searchon=names&amp;keywords=mediaconch" target="_blank">Ubuntu packages search</a></td>
 </tr>
-<tr>
+<tr class="old-files">
     <th colspan="5">Notes for installing the packages below:<br>"sudo dpkg -i *deb"<br><br>If you get an error message, use:<br>"sudo apt-get -f install"</th>
 </tr>
 <tr>
-    <th rowspan="10" id="18.04">Ubuntu 18.04 (Bionic Beaver)</th>
-    <th rowspan="5" id="18.04.amd64">amd64</th>
+    <th rowspan="6" id="21.10">Ubuntu 21.10 (Impish Indri)</th>
+    <th rowspan="6" id="21.10.amd64">amd64</th>
     <th><abbr title="Graphical User Interface">GUI</abbr></th>
-    <td><a href="//mediaarea.net/download/binary/mediaconch-gui/18.03.2/mediaconch-gui_18.03.2-1_amd64.xUbuntu_18.04.deb">v18.03.2</a></td>
+    <td><a href="//mediaarea.net/download/binary/mediaconch-gui/22.03/mediaconch-gui_22.03-1_amd64.xUbuntu_21.10.deb">v22.03</a></td>
     <td>requires libmediainfo0</td>
 </tr>
 <tr>
     <th><abbr title="Command Line Interface">CLI</abbr></th>
-    <td><a href="//mediaarea.net/download/binary/mediaconch/18.03.2/mediaconch_18.03.2-1_amd64.xUbuntu_18.04.deb">v18.03.2</a></td>
+    <td><a href="//mediaarea.net/download/binary/mediaconch/22.03/mediaconch_22.03-1_amd64.xUbuntu_21.10.deb">v22.03</a></td>
     <td>requires libmediainfo0</td>
 </tr>
 <tr>
     <th><abbr title="Server">Server</abbr></th>
-    <td><a href="//mediaarea.net/download/binary/mediaconch-server/18.03.2/mediaconch-server_18.03.2-1_amd64.xUbuntu_18.04.deb">v18.03.2</a></td>
+    <td><a href="//mediaarea.net/download/binary/mediaconch-server/22.03/mediaconch-server_22.03-1_amd64.xUbuntu_21.10.deb">v22.03</a></td>
+    <td>requires libmediainfo0</td>
+</tr>
+<tr>
+    <th>libmediaconch0</th>
+    <td><a href="//mediaarea.net/download/binary/libmediaconch0/22.03/libmediaconch0_22.03-1_amd64.xUbuntu_21.10.deb">v22.03</a> <small>(<a href="//mediaarea.net/download/binary/libmediaconch0/22.03/libmediaconch-dev_22.03-1_amd64.xUbuntu_21.10.deb">devel</a>)</small></td>
     <td>requires libmediainfo0</td>
 </tr>
 <tr>
     <th>libmediainfo0</th>
-    <td><a href="//mediaarea.net/download/binary/libmediainfo0/18.05/libmediainfo0v5_18.05-1_amd64.xUbuntu_18.04.deb">v18.05</a> <small>(<a href="//mediaarea.net/download/binary/libmediainfo0/18.05/libmediainfo-dev_18.05-1_amd64.xUbuntu_18.04.deb">devel</a>, <a href="//mediaarea.net/download/binary/libmediainfo0/18.05/libmediainfo-doc_18.05-1_amd64.xUbuntu_18.04.deb">doc</a>)</small></td>
+    <td><a href="//mediaarea.net/download/binary/libmediainfo0/22.03/libmediainfo0v5_22.03-1_amd64.xUbuntu_21.10.deb">v22.03</a> <small>(<a href="//mediaarea.net/download/binary/libmediainfo0/22.03/libmediainfo-dev_22.03-1_amd64.xUbuntu_21.10.deb">devel</a>, <a href="//mediaarea.net/download/binary/libmediainfo0/22.03/libmediainfo-doc_22.03-1_amd64.xUbuntu_21.10.deb">doc</a>)</small></td>
     <td>requires libzen0</td>
 </tr>
 <tr>
     <th>libzen0</th>
-    <td><a href="//mediaarea.net/download/binary/libzen0/0.4.37/libzen0v5_0.4.37-1_amd64.xUbuntu_18.04.deb">v0.4.37</a> <small>(<a href="//mediaarea.net/download/binary/libzen0/0.4.37/libzen-dev_0.4.37-1_amd64.xUbuntu_18.04.deb">devel</a>, <a href="//mediaarea.net/download/binary/libzen0/0.4.37/libzen-doc_0.4.37-1_amd64.xUbuntu_18.04.deb">doc</a>)</small></td>
+    <td><a href="//mediaarea.net/download/binary/libzen0/0.4.39/libzen0v5_0.4.39-1_amd64.xUbuntu_21.10.deb">v0.4.39</a> <small>(<a href="//mediaarea.net/download/binary/libzen0/0.4.39/libzen-dev_0.4.39-1_amd64.xUbuntu_21.10.deb">devel</a>, <a href="//mediaarea.net/download/binary/libzen0/0.4.39/libzen-doc_0.4.39-1_amd64.xUbuntu_21.10.deb">doc</a>)</small></td>
     <td>&nbsp;</td>
 </tr>
 <tr>
-    <th rowspan="5" id="18.04.i386">i386</th>
+    <th rowspan="6" id="20.04">Ubuntu 20.04 (Focal Fossa)</th>
+    <th rowspan="6" id="20.04.amd64">amd64</th>
     <th><abbr title="Graphical User Interface">GUI</abbr></th>
-    <td><a href="//mediaarea.net/download/binary/mediaconch-gui/18.03.2/mediaconch-gui_18.03.2-1_i386.xUbuntu_18.04.deb">v18.03.2</a></td>
+    <td><a href="//mediaarea.net/download/binary/mediaconch-gui/22.03/mediaconch-gui_22.03-1_amd64.xUbuntu_20.04.deb">v22.03</a></td>
     <td>requires libmediainfo0</td>
 </tr>
 <tr>
     <th><abbr title="Command Line Interface">CLI</abbr></th>
-    <td><a href="//mediaarea.net/download/binary/mediaconch/18.03.2/mediaconch_18.03.2-1_i386.xUbuntu_18.04.deb">v18.03.2</a></td>
+    <td><a href="//mediaarea.net/download/binary/mediaconch/22.03/mediaconch_22.03-1_amd64.xUbuntu_20.04.deb">v22.03</a></td>
     <td>requires libmediainfo0</td>
 </tr>
 <tr>
     <th><abbr title="Server">Server</abbr></th>
-    <td><a href="//mediaarea.net/download/binary/mediaconch-server/18.03.2/mediaconch-server_18.03.2-1_i386.xUbuntu_18.04.deb">v18.03.2</a></td>
+    <td><a href="//mediaarea.net/download/binary/mediaconch-server/22.03/mediaconch-server_22.03-1_amd64.xUbuntu_20.04.deb">v22.03</a></td>
+    <td>requires libmediainfo0</td>
+</tr>
+<tr>
+    <th>libmediaconch0</th>
+    <td><a href="//mediaarea.net/download/binary/libmediaconch0/22.03/libmediaconch0_22.03-1_amd64.xUbuntu_20.04.deb">v22.03</a> <small>(<a href="//mediaarea.net/download/binary/libmediaconch0/22.03/libmediaconch-dev_22.03-1_amd64.xUbuntu_20.04.deb">devel</a>)</small></td>
     <td>requires libmediainfo0</td>
 </tr>
 <tr>
     <th>libmediainfo0</th>
-    <td><a href="//mediaarea.net/download/binary/libmediainfo0/18.05/libmediainfo0v5_18.05-1_i386.xUbuntu_18.04.deb">v18.05</a> <small>(<a href="//mediaarea.net/download/binary/libmediainfo0/18.05/libmediainfo-dev_18.05-1_i386.xUbuntu_18.04.deb">devel</a>, <a href="//mediaarea.net/download/binary/libmediainfo0/18.05/libmediainfo-doc_18.05-1_i386.xUbuntu_18.04.deb">doc</a>)</small></td>
+    <td><a href="//mediaarea.net/download/binary/libmediainfo0/22.03/libmediainfo0v5_22.03-1_amd64.xUbuntu_20.04.deb">v22.03</a> <small>(<a href="//mediaarea.net/download/binary/libmediainfo0/22.03/libmediainfo-dev_22.03-1_amd64.xUbuntu_20.04.deb">devel</a>, <a href="//mediaarea.net/download/binary/libmediainfo0/22.03/libmediainfo-doc_22.03-1_amd64.xUbuntu_20.04.deb">doc</a>)</small></td>
     <td>requires libzen0</td>
 </tr>
 <tr>
     <th>libzen0</th>
-    <td><a href="//mediaarea.net/download/binary/libzen0/0.4.37/libzen0v5_0.4.37-1_i386.xUbuntu_18.04.deb">v0.4.37</a> <small>(<a href="//mediaarea.net/download/binary/libzen0/0.4.37/libzen-dev_0.4.37-1_i386.xUbuntu_18.04.deb">devel</a>, <a href="//mediaarea.net/download/binary/libzen0/0.4.37/libzen-doc_0.4.37-1_i386.xUbuntu_18.04.deb">doc</a>)</small></td>
+    <td><a href="//mediaarea.net/download/binary/libzen0/0.4.39/libzen0v5_0.4.39-1_amd64.xUbuntu_20.04.deb">v0.4.39</a> <small>(<a href="//mediaarea.net/download/binary/libzen0/0.4.39/libzen-dev_0.4.39-1_amd64.xUbuntu_20.04.deb">devel</a>, <a href="//mediaarea.net/download/binary/libzen0/0.4.39/libzen-doc_0.4.39-1_amd64.xUbuntu_20.04.deb">doc</a>)</small></td>
     <td>&nbsp;</td>
 </tr>
 <tr>
+    <th rowspan="12" id="18.04">Ubuntu 18.04 (Bionic Beaver)</th>
+    <th rowspan="6" id="18.04.amd64">amd64</th>
+    <th><abbr title="Graphical User Interface">GUI</abbr></th>
+    <td><a href="//mediaarea.net/download/binary/mediaconch-gui/22.03/mediaconch-gui_22.03-1_amd64.xUbuntu_18.04.deb">v22.03</a></td>
+    <td>requires libmediainfo0</td>
+</tr>
+<tr>
+    <th><abbr title="Command Line Interface">CLI</abbr></th>
+    <td><a href="//mediaarea.net/download/binary/mediaconch/22.03/mediaconch_22.03-1_amd64.xUbuntu_18.04.deb">v22.03</a></td>
+    <td>requires libmediainfo0</td>
+</tr>
+<tr>
+    <th><abbr title="Server">Server</abbr></th>
+    <td><a href="//mediaarea.net/download/binary/mediaconch-server/22.03/mediaconch-server_22.03-1_amd64.xUbuntu_18.04.deb">v22.03</a></td>
+    <td>requires libmediainfo0</td>
+</tr>
+<tr>
+    <th>libmediaconch0</th>
+    <td><a href="//mediaarea.net/download/binary/libmediaconch0/22.03/libmediaconch0_22.03-1_amd64.xUbuntu_18.04.deb">v22.03</a> <small>(<a href="//mediaarea.net/download/binary/libmediaconch0/22.03/libmediaconch-dev_22.03-1_amd64.xUbuntu_18.04.deb">devel</a>)</small></td>
+    <td>requires libmediainfo0</td>
+</tr>
+<tr>
+    <th>libmediainfo0</th>
+    <td><a href="//mediaarea.net/download/binary/libmediainfo0/22.03/libmediainfo0v5_22.03-1_amd64.xUbuntu_18.04.deb">v22.03</a> <small>(<a href="//mediaarea.net/download/binary/libmediainfo0/22.03/libmediainfo-dev_22.03-1_amd64.xUbuntu_18.04.deb">devel</a>, <a href="//mediaarea.net/download/binary/libmediainfo0/22.03/libmediainfo-doc_22.03-1_amd64.xUbuntu_18.04.deb">doc</a>)</small></td>
+    <td>requires libzen0</td>
+</tr>
+<tr>
+    <th>libzen0</th>
+    <td><a href="//mediaarea.net/download/binary/libzen0/0.4.39/libzen0v5_0.4.39-1_amd64.xUbuntu_18.04.deb">v0.4.39</a> <small>(<a href="//mediaarea.net/download/binary/libzen0/0.4.39/libzen-dev_0.4.39-1_amd64.xUbuntu_18.04.deb">devel</a>, <a href="//mediaarea.net/download/binary/libzen0/0.4.39/libzen-doc_0.4.39-1_amd64.xUbuntu_18.04.deb">doc</a>)</small></td>
+    <td>&nbsp;</td>
+</tr>
+<tr>
+    <th rowspan="6" id="18.04.i386">i386</th>
+    <th><abbr title="Graphical User Interface">GUI</abbr></th>
+    <td><a href="//mediaarea.net/download/binary/mediaconch-gui/22.03/mediaconch-gui_22.03-1_i386.xUbuntu_18.04.deb">v22.03</a></td>
+    <td>requires libmediainfo0</td>
+</tr>
+<tr>
+    <th><abbr title="Command Line Interface">CLI</abbr></th>
+    <td><a href="//mediaarea.net/download/binary/mediaconch/22.03/mediaconch_22.03-1_i386.xUbuntu_18.04.deb">v22.03</a></td>
+    <td>requires libmediainfo0</td>
+</tr>
+<tr>
+    <th><abbr title="Server">Server</abbr></th>
+    <td><a href="//mediaarea.net/download/binary/mediaconch-server/22.03/mediaconch-server_22.03-1_i386.xUbuntu_18.04.deb">v22.03</a></td>
+    <td>requires libmediainfo0</td>
+</tr>
+<tr>
+    <th>libmediaconch0</th>
+    <td><a href="//mediaarea.net/download/binary/libmediaconch0/22.03/libmediaconch0_22.03-1_i386.xUbuntu_18.04.deb">v22.03</a> <small>(<a href="//mediaarea.net/download/binary/libmediaconch0/22.03/libmediaconch-dev_22.03-1_i386.xUbuntu_18.04.deb">devel</a>)</small></td>
+    <td>requires libmediainfo0</td>
+</tr>
+<tr>
+    <th>libmediainfo0</th>
+    <td><a href="//mediaarea.net/download/binary/libmediainfo0/22.03/libmediainfo0v5_22.03-1_i386.xUbuntu_18.04.deb">v22.03</a> <small>(<a href="//mediaarea.net/download/binary/libmediainfo0/22.03/libmediainfo-dev_22.03-1_i386.xUbuntu_18.04.deb">devel</a>, <a href="//mediaarea.net/download/binary/libmediainfo0/22.03/libmediainfo-doc_22.03-1_i386.xUbuntu_18.04.deb">doc</a>)</small></td>
+    <td>requires libzen0</td>
+</tr>
+<tr>
+    <th>libzen0</th>
+    <td><a href="//mediaarea.net/download/binary/libzen0/0.4.39/libzen0v5_0.4.39-1_i386.xUbuntu_18.04.deb">v0.4.39</a> <small>(<a href="//mediaarea.net/download/binary/libzen0/0.4.39/libzen-dev_0.4.39-1_i386.xUbuntu_18.04.deb">devel</a>, <a href="//mediaarea.net/download/binary/libzen0/0.4.39/libzen-doc_0.4.39-1_i386.xUbuntu_18.04.deb">doc</a>)</small></td>
+    <td>&nbsp;</td>
+</tr>
+<tr class="old-files">
     <th rowspan="10" id="17.10">Ubuntu 17.10 (Artful Aardvark)</th>
     <th rowspan="5" id="17.10.amd64">amd64</th>
     <th><abbr title="Graphical User Interface">GUI</abbr></th>
     <td><a href="//mediaarea.net/download/binary/mediaconch-gui/18.03.2/mediaconch-gui_18.03.2-1_amd64.xUbuntu_17.10.deb">v18.03.2</a></td>
     <td>requires libmediainfo0</td>
 </tr>
-<tr>
+<tr class="old-files">
     <th><abbr title="Command Line Interface">CLI</abbr></th>
     <td><a href="//mediaarea.net/download/binary/mediaconch/18.03.2/mediaconch_18.03.2-1_amd64.xUbuntu_17.10.deb">v18.03.2</a></td>
     <td>requires libmediainfo0</td>
 </tr>
-<tr>
+<tr class="old-files">
     <th><abbr title="Server">Server</abbr></th>
     <td><a href="//mediaarea.net/download/binary/mediaconch-server/18.03.2/mediaconch-server_18.03.2-1_amd64.xUbuntu_17.10.deb">v18.03.2</a></td>
     <td>requires libmediainfo0</td>
 </tr>
-<tr>
+<tr class="old-files">
     <th>libmediainfo0</th>
     <td><a href="//mediaarea.net/download/binary/libmediainfo0/18.03.1/libmediainfo0v5_18.03.1-1_amd64.xUbuntu_17.10.deb">v18.03.2</a> <small>(<a href="//mediaarea.net/download/binary/libmediainfo0/18.03.1/libmediainfo-dev_18.03.1-1_amd64.xUbuntu_17.10.deb">devel</a>, <a href="//mediaarea.net/download/binary/libmediainfo0/18.03.1/libmediainfo-doc_18.03.1-1_amd64.xUbuntu_17.10.deb">doc</a>)</small></td>
     <td>requires libzen0</td>
 </tr>
-<tr>
+<tr class="old-files">
     <th>libzen0</th>
     <td><a href="//mediaarea.net/download/binary/libzen0/0.4.37/libzen0v5_0.4.37-1_amd64.xUbuntu_17.10.deb">v0.4.37</a> <small>(<a href="//mediaarea.net/download/binary/libzen0/0.4.37/libzen-dev_0.4.37-1_amd64.xUbuntu_17.10.deb">devel</a>, <a href="//mediaarea.net/download/binary/libzen0/0.4.37/libzen-doc_0.4.37-1_amd64.xUbuntu_17.10.deb">doc</a>)</small></td>
     <td>&nbsp;</td>
 </tr>
-<tr>
+<tr class="old-files">
     <th rowspan="5" id="17.10.i386">i386</th>
     <th><abbr title="Graphical User Interface">GUI</abbr></th>
     <td><a href="//mediaarea.net/download/binary/mediaconch-gui/18.03/mediaconch-gui_18.03-1_i386.xUbuntu_17.10.deb">v18.03</a></td>
     <td>requires libmediainfo0</td>
 </tr>
-<tr>
+<tr class="old-files">
     <th><abbr title="Command Line Interface">CLI</abbr></th>
     <td><a href="//mediaarea.net/download/binary/mediaconch/18.03/mediaconch_18.03-1_i386.xUbuntu_17.10.deb">v18.03</a></td>
     <td>requires libmediainfo0</td>
 </tr>
-<tr>
+<tr class="old-files">
     <th><abbr title="Server">Server</abbr></th>
     <td><a href="//mediaarea.net/download/binary/mediaconch-server/18.03/mediaconch-server_18.03-1_i386.xUbuntu_17.10.deb">v18.03</a></td>
     <td>requires libmediainfo0</td>
 </tr>
-<tr>
+<tr class="old-files">
     <th>libmediainfo0</th>
     <td><a href="//mediaarea.net/download/binary/libmediainfo0/18.03/libmediainfo0v5_18.03-1_i386.xUbuntu_17.10.deb">v18.03</a> <small>(<a href="//mediaarea.net/download/binary/libmediainfo0/18.03/libmediainfo-dev_18.03-1_i386.xUbuntu_17.10.deb">devel</a>, <a href="//mediaarea.net/download/binary/libmediainfo0/18.03/libmediainfo-doc_18.03-1_i386.xUbuntu_17.10.deb">doc</a>)</small></td>
     <td>requires libzen0</td>
 </tr>
-<tr>
+<tr class="old-files">
     <th>libzen0</th>
     <td><a href="//mediaarea.net/download/binary/libzen0/0.4.37/libzen0v5_0.4.37-1_i386.xUbuntu_17.10.deb">v0.4.37</a> <small>(<a href="//mediaarea.net/download/binary/libzen0/0.4.37/libzen-dev_0.4.37-1_i386.xUbuntu_17.10.deb">devel</a>, <a href="//mediaarea.net/download/binary/libzen0/0.4.37/libzen-doc_0.4.37-1_i386.xUbuntu_17.10.deb">doc</a>)</small></td>
     <td>&nbsp;</td>
 </tr>
-<tr>
+<tr class="old-files">
     <th rowspan="10" id="17.04">Ubuntu 17.04 (Zesty Zapus)</th>
     <th rowspan="5" id="17.04.amd64">amd64</th>
     <th><abbr title="Graphical User Interface">GUI</abbr></th>
     <td><a href="//mediaarea.net/download/binary/mediaconch-gui/18.03.2/mediaconch-gui_18.03.2-1_amd64.xUbuntu_17.04.deb">v18.03.2</a></td>
     <td>requires libmediainfo0</td>
 </tr>
-<tr>
+<tr class="old-files">
     <th><abbr title="Command Line Interface">CLI</abbr></th>
     <td><a href="//mediaarea.net/download/binary/mediaconch/18.03.2/mediaconch_18.03.2-1_amd64.xUbuntu_17.04.deb">v18.03.2</a></td>
     <td>requires libmediainfo0</td>
 </tr>
-<tr>
+<tr class="old-files">
     <th><abbr title="Server">Server</abbr></th>
     <td><a href="//mediaarea.net/download/binary/mediaconch-server/18.03.2/mediaconch-server_18.03.2-1_amd64.xUbuntu_17.04.deb">v18.03.2</a></td>
     <td>requires libmediainfo0</td>
 </tr>
-<tr>
+<tr class="old-files">
     <th>libmediainfo0</th>
     <td><a href="//mediaarea.net/download/binary/libmediainfo0/18.03.1/libmediainfo0v5_18.03.1-1_amd64.xUbuntu_17.04.deb">v18.03.2</a> <small>(<a href="//mediaarea.net/download/binary/libmediainfo0/18.03.1/libmediainfo-dev_18.03.1-1_amd64.xUbuntu_17.04.deb">devel</a>, <a href="//mediaarea.net/download/binary/libmediainfo0/18.03.1/libmediainfo-doc_18.03.1-1_amd64.xUbuntu_17.04.deb">doc</a>)</small></td>
     <td>requires libzen0</td>
 </tr>
-<tr>
+<tr class="old-files">
     <th>libzen0</th>
     <td><a href="//mediaarea.net/download/binary/libzen0/0.4.37/libzen0v5_0.4.37-1_amd64.xUbuntu_17.04.deb">v0.4.37</a> <small>(<a href="//mediaarea.net/download/binary/libzen0/0.4.37/libzen-dev_0.4.37-1_amd64.xUbuntu_17.04.deb">devel</a>, <a href="//mediaarea.net/download/binary/libzen0/0.4.37/libzen-doc_0.4.37-1_amd64.xUbuntu_17.04.deb">doc</a>)</small></td>
     <td>&nbsp;</td>
 </tr>
-<tr>
+<tr class="old-files">
     <th rowspan="5" id="17.04.i386">i386</th>
     <th><abbr title="Graphical User Interface">GUI</abbr></th>
     <td><a href="//mediaarea.net/download/binary/mediaconch-gui/18.03.2/mediaconch-gui_18.03.2-1_i386.xUbuntu_17.04.deb">v18.03.2</a></td>
     <td>requires libmediainfo0</td>
 </tr>
-<tr>
+<tr class="old-files">
     <th><abbr title="Command Line Interface">CLI</abbr></th>
     <td><a href="//mediaarea.net/download/binary/mediaconch/18.03.2/mediaconch_18.03.2-1_i386.xUbuntu_17.04.deb">v18.03.2</a></td>
     <td>requires libmediainfo0</td>
 </tr>
-<tr>
+<tr class="old-files">
     <th><abbr title="Server">Server</abbr></th>
     <td><a href="//mediaarea.net/download/binary/mediaconch-server/18.03.2/mediaconch-server_18.03.2-1_i386.xUbuntu_17.04.deb">v18.03.2</a></td>
     <td>requires libmediainfo0</td>
 </tr>
-<tr>
+<tr class="old-files">
     <th>libmediainfo0</th>
     <td><a href="//mediaarea.net/download/binary/libmediainfo0/18.03.1/libmediainfo0v5_18.03.1-1_i386.xUbuntu_17.04.deb">v18.03.2</a> <small>(<a href="//mediaarea.net/download/binary/libmediainfo0/18.03.1/libmediainfo-dev_18.03.1-1_i386.xUbuntu_17.04.deb">devel</a>, <a href="//mediaarea.net/download/binary/libmediainfo0/18.03.1/libmediainfo-doc_18.03.1-1_i386.xUbuntu_17.04.deb">doc</a>)</small></td>
     <td>requires libzen0</td>
 </tr>
-<tr>
+<tr class="old-files">
     <th>libzen0</th>
     <td><a href="//mediaarea.net/download/binary/libzen0/0.4.37/libzen0v5_0.4.37-1_i386.xUbuntu_17.04.deb">v0.4.37</a> <small>(<a href="//mediaarea.net/download/binary/libzen0/0.4.37/libzen-dev_0.4.37-1_i386.xUbuntu_17.04.deb">devel</a>, <a href="//mediaarea.net/download/binary/libzen0/0.4.37/libzen-doc_0.4.37-1_i386.xUbuntu_17.04.deb">doc</a>)</small></td>
     <td>&nbsp;</td>
 </tr>
-<tr>
+<tr class="old-files">
     <th rowspan="10" id="16.10">Ubuntu 16.10 (Yakkety Yak)</th>
     <th rowspan="5" id="16.10.amd64">amd64</th>
     <th><abbr title="Graphical User Interface">GUI</abbr></th>
     <td><a href="//mediaarea.net/download/binary/mediaconch-gui/18.03.2/mediaconch-gui_18.03.2-1_amd64.xUbuntu_16.10.deb">v18.03.2</a></td>
     <td>requires libmediainfo0</td>
 </tr>
-<tr>
+<tr class="old-files">
     <th><abbr title="Command Line Interface">CLI</abbr></th>
     <td><a href="//mediaarea.net/download/binary/mediaconch/18.03.2/mediaconch_18.03.2-1_amd64.xUbuntu_16.10.deb">v18.03.2</a></td>
     <td>requires libmediainfo0</td>
 </tr>
-<tr>
+<tr class="old-files">
     <th><abbr title="Server">Server</abbr></th>
     <td><a href="//mediaarea.net/download/binary/mediaconch-server/18.03.2/mediaconch-server_18.03.2-1_amd64.xUbuntu_16.10.deb">v18.03.2</a></td>
     <td>requires libmediainfo0</td>
 </tr>
-<tr>
+<tr class="old-files">
     <th>libmediainfo0</th>
     <td><a href="//mediaarea.net/download/binary/libmediainfo0/18.03.1/libmediainfo0v5_18.03.1-1_amd64.xUbuntu_16.10.deb">v18.03.2</a> <small>(<a href="//mediaarea.net/download/binary/libmediainfo0/18.03.1/libmediainfo-dev_18.03.1-1_amd64.xUbuntu_16.10.deb">devel</a>, <a href="//mediaarea.net/download/binary/libmediainfo0/18.03.1/libmediainfo-doc_18.03.1-1_amd64.xUbuntu_16.10.deb">doc</a>)</small></td>
     <td>requires libzen0</td>
 </tr>
-<tr>
+<tr class="old-files">
     <th>libzen0</th>
     <td><a href="//mediaarea.net/download/binary/libzen0/0.4.37/libzen0v5_0.4.37-1_amd64.xUbuntu_16.10.deb">v0.4.37</a> <small>(<a href="//mediaarea.net/download/binary/libzen0/0.4.37/libzen-dev_0.4.37-1_amd64.xUbuntu_16.10.deb">devel</a>, <a href="//mediaarea.net/download/binary/libzen0/0.4.37/libzen-doc_0.4.37-1_amd64.xUbuntu_16.10.deb">doc</a>)</small></td>
     <td>&nbsp;</td>
 </tr>
-<tr>
+<tr class="old-files">
     <th rowspan="5" id="16.10.i386">i386</th>
     <th><abbr title="Graphical User Interface">GUI</abbr></th>
     <td><a href="//mediaarea.net/download/binary/mediaconch-gui/18.03.2/mediaconch-gui_18.03.2-1_i386.xUbuntu_16.10.deb">v18.03.2</a></td>
     <td>requires libmediainfo0</td>
 </tr>
-<tr>
+<tr class="old-files">
     <th><abbr title="Command Line Interface">CLI</abbr></th>
     <td><a href="//mediaarea.net/download/binary/mediaconch/18.03.2/mediaconch_18.03.2-1_i386.xUbuntu_16.10.deb">v18.03.2</a></td>
     <td>requires libmediainfo0</td>
 </tr>
-<tr>
+<tr class="old-files">
     <th><abbr title="Server">Server</abbr></th>
     <td><a href="//mediaarea.net/download/binary/mediaconch-server/18.03.2/mediaconch-server_18.03.2-1_i386.xUbuntu_16.10.deb">v18.03.2</a></td>
     <td>requires libmediainfo0</td>
 </tr>
-<tr>
+<tr class="old-files">
     <th>libmediainfo0</th>
     <td><a href="//mediaarea.net/download/binary/libmediainfo0/18.03.1/libmediainfo0v5_18.03.1-1_i386.xUbuntu_16.10.deb">v18.03.2</a> <small>(<a href="//mediaarea.net/download/binary/libmediainfo0/18.03.1/libmediainfo-dev_18.03.1-1_i386.xUbuntu_16.10.deb">devel</a>, <a href="//mediaarea.net/download/binary/libmediainfo0/18.03.1/libmediainfo-doc_18.03.1-1_i386.xUbuntu_16.10.deb">doc</a>)</small></td>
     <td>requires libzen0</td>
 </tr>
-<tr>
+<tr class="old-files">
     <th>libzen0</th>
     <td><a href="//mediaarea.net/download/binary/libzen0/0.4.37/libzen0v5_0.4.37-1_i386.xUbuntu_16.10.deb">v0.4.37</a> <small>(<a href="//mediaarea.net/download/binary/libzen0/0.4.37/libzen-dev_0.4.37-1_i386.xUbuntu_16.10.deb">devel</a>, <a href="//mediaarea.net/download/binary/libzen0/0.4.37/libzen-doc_0.4.37-1_i386.xUbuntu_16.10.deb">doc</a>)</small></td>
     <td>&nbsp;</td>
 </tr>
-<tr>
+<tr class="old-files">
     <th rowspan="10" id="16.04">Ubuntu 16.04 (Xenial Xerus)<br>Linux Mint 18.3 (Sylvia)</th>
     <th rowspan="5" id="16.04.amd64">amd64</th>
     <th><abbr title="Graphical User Interface">GUI</abbr></th>
     <td><a href="//mediaarea.net/download/binary/mediaconch-gui/18.03.2/mediaconch-gui_18.03.2-1_amd64.xUbuntu_16.04.deb">v18.03.2</a></td>
     <td>requires libmediainfo0</td>
 </tr>
-<tr>
+<tr class="old-files">
     <th><abbr title="Command Line Interface">CLI</abbr></th>
     <td><a href="//mediaarea.net/download/binary/mediaconch/18.03.2/mediaconch_18.03.2-1_amd64.xUbuntu_16.04.deb">v18.03.2</a></td>
     <td>requires libmediainfo0</td>
 </tr>
-<tr>
+<tr class="old-files">
     <th><abbr title="Server">Server</abbr></th>
     <td><a href="//mediaarea.net/download/binary/mediaconch-server/18.03.2/mediaconch-server_18.03.2-1_amd64.xUbuntu_16.04.deb">v18.03.2</a></td>
     <td>requires libmediainfo0</td>
 </tr>
-<tr>
+<tr class="old-files">
     <th>libmediainfo0</th>
     <td><a href="//mediaarea.net/download/binary/libmediainfo0/18.03.1/libmediainfo0v5_18.03.1-1_amd64.xUbuntu_16.04.deb">v18.03.2</a> <small>(<a href="//mediaarea.net/download/binary/libmediainfo0/18.03.1/libmediainfo-dev_18.03.1-1_amd64.xUbuntu_16.04.deb">devel</a>, <a href="//mediaarea.net/download/binary/libmediainfo0/18.03.1/libmediainfo-doc_18.03.1-1_amd64.xUbuntu_16.04.deb">doc</a>)</small></td>
     <td>requires libzen0</td>
 </tr>
-<tr>
+<tr class="old-files">
     <th>libzen0</th>
     <td><a href="//mediaarea.net/download/binary/libzen0/0.4.37/libzen0v5_0.4.37-1_amd64.xUbuntu_16.04.deb">v0.4.37</a> <small>(<a href="//mediaarea.net/download/binary/libzen0/0.4.37/libzen-dev_0.4.37-1_amd64.xUbuntu_16.04.deb">devel</a>, <a href="//mediaarea.net/download/binary/libzen0/0.4.37/libzen-doc_0.4.37-1_amd64.xUbuntu_16.04.deb">doc</a>)</small></td>
     <td>&nbsp;</td>
 </tr>
-<tr>
+<tr class="old-files">
     <th rowspan="5" id="16.04.i386">i386</th>
     <th><abbr title="Graphical User Interface">GUI</abbr></th>
     <td><a href="//mediaarea.net/download/binary/mediaconch-gui/18.03.2/mediaconch-gui_18.03.2-1_i386.xUbuntu_16.04.deb">v18.03.2</a></td>
     <td>requires libmediainfo0</td>
 </tr>
-<tr>
+<tr class="old-files">
     <th><abbr title="Command Line Interface">CLI</abbr></th>
     <td><a href="//mediaarea.net/download/binary/mediaconch/18.03.2/mediaconch_18.03.2-1_i386.xUbuntu_16.04.deb">v18.03.2</a></td>
     <td>requires libmediainfo0</td>
 </tr>
-<tr>
+<tr class="old-files">
     <th><abbr title="Server">Server</abbr></th>
     <td><a href="//mediaarea.net/download/binary/mediaconch-server/18.03.2/mediaconch-server_18.03.2-1_i386.xUbuntu_16.04.deb">v18.03.2</a></td>
     <td>requires libmediainfo0</td>
 </tr>
-<tr>
+<tr class="old-files">
     <th>libmediainfo0</th>
     <td><a href="//mediaarea.net/download/binary/libmediainfo0/18.03.1/libmediainfo0v5_18.03.1-1_i386.xUbuntu_16.04.deb">v18.03.2</a> <small>(<a href="//mediaarea.net/download/binary/libmediainfo0/18.03.1/libmediainfo-dev_18.03.1-1_i386.xUbuntu_16.04.deb">devel</a>, <a href="//mediaarea.net/download/binary/libmediainfo0/18.03.1/libmediainfo-doc_18.03.1-1_i386.xUbuntu_16.04.deb">doc</a>)</small></td>
     <td>requires libzen0</td>
 </tr>
-<tr>
+<tr class="old-files">
     <th>libzen0</th>
     <td><a href="//mediaarea.net/download/binary/libzen0/0.4.37/libzen0v5_0.4.37-1_i386.xUbuntu_16.04.deb">v0.4.37</a> <small>(<a href="//mediaarea.net/download/binary/libzen0/0.4.37/libzen-dev_0.4.37-1_i386.xUbuntu_16.04.deb">devel</a>, <a href="//mediaarea.net/download/binary/libzen0/0.4.37/libzen-doc_0.4.37-1_i386.xUbuntu_16.04.deb">doc</a>)</small></td>
     <td>&nbsp;</td>
@@ -433,108 +507,108 @@
     <td><a href="//mediaarea.net/download/binary/libzen0/0.4.35/libzen0_0.4.35-1_i386.xUbuntu_14.10.deb">v0.4.35</a> <small>(<a href="//mediaarea.net/download/binary/libzen0/0.4.35/libzen-dev_0.4.35-1_i386.xUbuntu_14.10.deb">devel</a>, <a href="//mediaarea.net/download/binary/libzen0/0.4.35/libzen-doc_0.4.35-1_i386.xUbuntu_14.10.deb">doc</a>)</small></td>
     <td>&nbsp;</td>
 </tr>
-<tr>
+<tr class="old-files">
     <th rowspan="10" id="14.04">Ubuntu 14.04 (Trusty Tahr)<br><br>Linux Mint 17 (Qiana)<br><br>Linux Mint 17.1 (Rebecca)<br><br>Linux Mint 17.2 (Rafaela)<br><br>Linux Mint 17.3 (Rosa)</th>
     <th rowspan="5" id="14.04.amd64">amd64</th>
     <th><abbr title="Graphical User Interface">GUI</abbr></th>
     <td><a href="//mediaarea.net/download/binary/mediaconch-gui/18.03.2/mediaconch-gui_18.03.2-1_amd64.xUbuntu_14.04.deb">v18.03.2</a></td>
     <td>requires libmediainfo0</td>
 </tr>
-<tr>
+<tr class="old-files">
     <th><abbr title="Command Line Interface">CLI</abbr></th>
     <td><a href="//mediaarea.net/download/binary/mediaconch/18.03.2/mediaconch_18.03.2-1_amd64.xUbuntu_14.04.deb">v18.03.2</a></td>
     <td>requires libmediainfo0</td>
 </tr>
-<tr>
+<tr class="old-files">
     <th><abbr title="Server">Server</abbr></th>
     <td><a href="//mediaarea.net/download/binary/mediaconch-server/18.03.2/mediaconch-server_18.03.2-1_amd64.xUbuntu_14.04.deb">v18.03.2</a></td>
     <td>requires libmediainfo0</td>
 </tr>
-<tr>
+<tr class="old-files">
     <th>libmediainfo0</th>
     <td><a href="//mediaarea.net/download/binary/libmediainfo0/18.03.1/libmediainfo0_18.03.1-1_amd64.xUbuntu_14.04.deb">v18.03.2</a> <small>(<a href="//mediaarea.net/download/binary/libmediainfo0/18.03.1/libmediainfo-dev_18.03.1-1_amd64.xUbuntu_14.04.deb">devel</a>, <a href="//mediaarea.net/download/binary/libmediainfo0/18.03.1/libmediainfo-doc_18.03.1-1_amd64.xUbuntu_14.04.deb">doc</a>)</small></td>
     <td>requires libzen0</td>
 </tr>
-<tr>
+<tr class="old-files">
     <th>libzen0</th>
     <td><a href="//mediaarea.net/download/binary/libzen0/0.4.37/libzen0_0.4.37-1_amd64.xUbuntu_14.04.deb">v0.4.37</a> <small>(<a href="//mediaarea.net/download/binary/libzen0/0.4.37/libzen-dev_0.4.37-1_amd64.xUbuntu_14.04.deb">devel</a>, <a href="//mediaarea.net/download/binary/libzen0/0.4.37/libzen-doc_0.4.37-1_amd64.xUbuntu_14.04.deb">doc</a>)</small></td>
     <td>&nbsp;</td>
 </tr>
-<tr>
+<tr class="old-files">
     <th rowspan="5" id="14.04.i386">i386</th>
     <th><abbr title="Graphical User Interface">GUI</abbr></th>
     <td><a href="//mediaarea.net/download/binary/mediaconch-gui/18.03.2/mediaconch-gui_18.03.2-1_i386.xUbuntu_14.04.deb">v18.03.2</a></td>
     <td>requires libmediainfo0</td>
 </tr>
-<tr>
+<tr class="old-files">
     <th><abbr title="Command Line Interface">CLI</abbr></th>
     <td><a href="//mediaarea.net/download/binary/mediaconch/18.03.2/mediaconch_18.03.2-1_i386.xUbuntu_14.04.deb">v18.03.2</a></td>
     <td>requires libmediainfo0</td>
 </tr>
-<tr>
+<tr class="old-files">
     <th><abbr title="Server">Server</abbr></th>
     <td><a href="//mediaarea.net/download/binary/mediaconch-server/18.03.2/mediaconch-server_18.03.2-1_i386.xUbuntu_14.04.deb">v18.03.2</a></td>
     <td>requires libmediainfo0</td>
 </tr>
-<tr>
+<tr class="old-files">
     <th>libmediainfo0</th>
     <td><a href="//mediaarea.net/download/binary/libmediainfo0/18.03.1/libmediainfo0_18.03.1-1_i386.xUbuntu_14.04.deb">v18.03.2</a> <small>(<a href="//mediaarea.net/download/binary/libmediainfo0/18.03.1/libmediainfo-dev_18.03.1-1_i386.xUbuntu_14.04.deb">devel</a>, <a href="//mediaarea.net/download/binary/libmediainfo0/18.03.1/libmediainfo-doc_18.03.1-1_i386.xUbuntu_14.04.deb">doc</a>)</small></td>
     <td>requires libzen0</td>
 </tr>
-<tr>
+<tr class="old-files">
     <th>libzen0</th>
     <td><a href="//mediaarea.net/download/binary/libzen0/0.4.37/libzen0_0.4.37-1_i386.xUbuntu_14.04.deb">v0.4.37</a> <small>(<a href="//mediaarea.net/download/binary/libzen0/0.4.37/libzen-dev_0.4.37-1_i386.xUbuntu_14.04.deb">devel</a>, <a href="//mediaarea.net/download/binary/libzen0/0.4.37/libzen-doc_0.4.37-1_i386.xUbuntu_14.04.deb">doc</a>)</small></td>
     <td>&nbsp;</td>
 </tr>
-<tr>
+<tr class="old-files">
     <th rowspan="10" id="12.04">Ubuntu 12.04 (Precise Pangolin)<br><br> Linux Mint 13 (Maya)</th>
     <th rowspan="5" id="12.04.amd64">amd64</th>
     <th><abbr title="Graphical User Interface">GUI</abbr></th>
     <td><a href="//mediaarea.net/download/binary/mediaconch-gui/18.03.2/mediaconch-gui_18.03.2-1_amd64.xUbuntu_12.04.deb">v18.03.2</a></td>
     <td>requires libmediainfo0</td>
 </tr>
-<tr>
+<tr class="old-files">
     <th><abbr title="Command Line Interface">CLI</abbr></th>
     <td><a href="//mediaarea.net/download/binary/mediaconch/18.03.2/mediaconch_18.03.2-1_amd64.xUbuntu_12.04.deb">v18.03.2</a></td>
     <td>requires libmediainfo0</td>
 </tr>
-<tr>
+<tr class="old-files">
     <th><abbr title="Server">Server</abbr></th>
     <td><a href="//mediaarea.net/download/binary/mediaconch-server/18.03.2/mediaconch-server_18.03.2-1_amd64.xUbuntu_12.04.deb">v18.03.2</a></td>
     <td>requires libmediainfo0</td>
 </tr>
-<tr>
+<tr class="old-files">
     <th>libmediainfo0</th>
     <td><a href="//mediaarea.net/download/binary/libmediainfo0/18.03.1/libmediainfo0_18.03.1-1_amd64.xUbuntu_12.04.deb">v18.03.2</a> <small>(<a href="//mediaarea.net/download/binary/libmediainfo0/18.03.1/libmediainfo-dev_18.03.1-1_amd64.xUbuntu_12.04.deb">devel</a>, <a href="//mediaarea.net/download/binary/libmediainfo0/18.03.1/libmediainfo-doc_18.03.1-1_amd64.xUbuntu_12.04.deb">doc</a>)</small></td>
     <td>requires libzen0</td>
 </tr>
-<tr>
+<tr class="old-files">
     <th>libzen0</th>
     <td><a href="//mediaarea.net/download/binary/libzen0/0.4.37/libzen0_0.4.37-1_amd64.xUbuntu_12.04.deb">v0.4.37</a> <small>(<a href="//mediaarea.net/download/binary/libzen0/0.4.37/libzen-dev_0.4.37-1_amd64.xUbuntu_12.04.deb">devel</a>, <a href="//mediaarea.net/download/binary/libzen0/0.4.37/libzen-doc_0.4.37-1_amd64.xUbuntu_12.04.deb">doc</a>)</small></td>
     <td>&nbsp;</td>
 </tr>
-<tr>
+<tr class="old-files">
     <th rowspan="5" id="12.04.i386">i386</th>
     <th><abbr title="Graphical User Interface">GUI</abbr></th>
     <td><a href="//mediaarea.net/download/binary/mediaconch-gui/18.03.2/mediaconch-gui_18.03.2-1_i386.xUbuntu_12.04.deb">v18.03.2</a></td>
     <td>requires libmediainfo0</td>
 </tr>
-<tr>
+<tr class="old-files">
     <th><abbr title="Command Line Interface">CLI</abbr></th>
     <td><a href="//mediaarea.net/download/binary/mediaconch/18.03.2/mediaconch_18.03.2-1_i386.xUbuntu_12.04.deb">v18.03.2</a></td>
     <td>requires libmediainfo0</td>
 </tr>
-<tr>
+<tr class="old-files">
     <th><abbr title="Server">Server</abbr></th>
     <td><a href="//mediaarea.net/download/binary/mediaconch-server/18.03.2/mediaconch-server_18.03.2-1_i386.xUbuntu_12.04.deb">v18.03.2</a></td>
     <td>requires libmediainfo0</td>
 </tr>
-<tr>
+<tr class="old-files">
     <th>libmediainfo0</th>
     <td><a href="//mediaarea.net/download/binary/libmediainfo0/18.03.1/libmediainfo0_18.03.1-1_i386.xUbuntu_12.04.deb">v18.03.2</a> <small>(<a href="//mediaarea.net/download/binary/libmediainfo0/18.03.1/libmediainfo-dev_18.03.1-1_i386.xUbuntu_12.04.deb">devel</a>, <a href="//mediaarea.net/download/binary/libmediainfo0/18.03.1/libmediainfo-doc_18.03.1-1_i386.xUbuntu_12.04.deb">doc</a>)</small></td>
     <td>requires libzen0</td>
 </tr>
-<tr>
+<tr class="old-files">
     <th>libzen0</th>
     <td><a href="//mediaarea.net/download/binary/libzen0/0.4.37/libzen0_0.4.37-1_i386.xUbuntu_12.04.deb">v0.4.37</a> <small>(<a href="//mediaarea.net/download/binary/libzen0/0.4.37/libzen-dev_0.4.37-1_i386.xUbuntu_12.04.deb">devel</a>, <a href="//mediaarea.net/download/binary/libzen0/0.4.37/libzen-doc_0.4.37-1_i386.xUbuntu_12.04.deb">doc</a>)</small></td>
     <td>&nbsp;</td>

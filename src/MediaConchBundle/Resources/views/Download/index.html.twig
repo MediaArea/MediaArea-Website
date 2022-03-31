@@ -42,6 +42,12 @@
     <td><a href="{{ path('mc_download_ubuntu') }}">MediaArea releases</a></td>
 </tr>
 <tr>
+    {% image '@AppBundle/Resources/public/img/OS/Raspbian.png' %}
+    <th><a href="{{ path('mc_download_raspbian') }}"><img src="{{ asset_url }}" width="258" height="48" alt="Raspbian" title="Raspbian"></a></th>
+    {% endimage %}
+    <td><a href="{{ path('mc_download_raspbian') }}">{% trans %}download.table.official_release{% endtrans %}</a></td>
+</tr>
+<tr>
     {% image '@AppBundle/Resources/public/img/OS/RedHat.png' %}
     <th><a href="{{ path('mc_download_rhel') }}"><img src="{{ asset_url }}" width="200" height="61" alt="RedHat Entreprise Linux" title="RedHat Entreprise Linux"></a></th>
     {% endimage %}
@@ -100,6 +106,16 @@
     <th><a href="{{ path('mc_download_appimage') }}"><img src="{{ asset_url }}" width="250" height="76" alt="AppImage" title="AppImage"></a></th>
     {% endimage %}
     <td><a href="{{ path('mc_download_appimage') }}">{% trans %}download.table.official_release{% endtrans %}</a></td>
+</tr>
+<tr>
+    {% image '@AppBundle/Resources/public/img/OS/Lambda.png' %}
+    <th><a href="{{ path('mc_download_lambda') }}"><img src="{{ asset_url }}" width="350" height="99" alt="Lambda" title="Lambda"></a></th>
+    {% endimage %}
+    <td><a href="{{ path('mc_download_lambda') }}">{% trans %}download.table.official_release{% endtrans %}</a></td>
+</tr>
+<tr>
+    <th><a href="{{ path('mc_download_javascript') }}">JavaScript</a></th>
+    <td><a href="{{ path('mc_download_javascript') }}">{% trans %}download.table.official_release{% endtrans %}</a></td>
 </tr>
 <tr>
     <th><a href="{{ path('mc_download_linuxbrew') }}">Linuxbrew</a></th>
