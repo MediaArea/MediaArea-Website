@@ -58,6 +58,26 @@ class DownloadController extends Controller
     }
 
     /**
+     * @Route("/Lambda", name="mc_download_lambda")
+     * @Template()
+     */
+    public function lambdaAction()
+    {
+        return [];
+    }
+
+
+    /**
+     * @Route("/JavaScript", name="mc_download_javascript")
+     * @Template()
+     */
+    public function javascriptAction()
+    {
+        return [];
+    }
+
+
+    /**
      * @Route("/Snap", name="mc_download_snap")
      * @Template()
      */
@@ -71,6 +91,15 @@ class DownloadController extends Controller
      * @Template()
      */
     public function debianAction()
+    {
+        return [];
+    }
+
+    /**
+     * @Route("/Raspbian", name="mc_download_raspbian")
+     * @Template()
+     */
+    public function raspbianAction()
     {
         return [];
     }
