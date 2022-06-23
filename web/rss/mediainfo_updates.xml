@@ -5,7 +5,34 @@
         <link>https://mediaarea.net/MediaInfo</link>
         <description>MediaInfo updates feed</description>
         <language>en-us</language>
-        <lastBuildDate>Thu, 31 Mar 2022 08:00:00 +0000</lastBuildDate>
+        <lastBuildDate>Thu, 23 Jun 2022 17:00:00 +0000</lastBuildDate>
+         <item>
+            <title>MediaInfo 22.06</title>
+            <description>
+                <![CDATA[+ MXF: FFV1 support<br />
+                         + Dolby Vision: add info about more profiles<br />
+                         + AAC: check of missing ID_END and incoherent count of channels<br />
+                         + NSV: better handling of buggy StarDiva agenda negative timestamps<br />
+                         + Text: Show text frame rate<br />
+                         + Text: frame rate precise numerator/denominator also for text streams<br />
+                         + CDP: readout of display aspect ratio<br />
+                         + MPEG-4/MOV: support of time codes >30 fps<br />
+                         + TTML: Support of more timeExpression flavors<br />
+                         x ADM: correctly map Dolby binaural render mode to track UID<br />
+                         x Dolby Audio Metadata: first frame of action in HH:MM:SS:FF format<br />
+                         x Dolby Vision: profiles and levels in decimal rather than in hexadecimal<br />
+                         x MXF: fix of Dolby Vision Metadata not displayed if HDR10 metadata is present<br />
+                         x MPEG-4/MOV: avoid buggy frame rates by taking frame rate from stts atom<br />
+                         x CDP: better catching of wrong line21_field value<br />
+                         x NSV: better handling of invalid frames<br />
+                         x MXF: Include frame count in SDTI and SystemScheme1 time codes to time stamp conversion<br />
+                         x TTML: do not show frame rate if it is from MediaInfo options<br />
+                         x DV: timecode trace in HH:MM:SS:FF format]]>
+            </description>
+            <link>https://mediaarea.net/MediaInfo</link>
+            <pubDate>Thu, 23 Jun 2022 17:00:00 +0000</pubDate>
+            <guid>MediaInfo-22.06</guid>
+         </item>
          <item>
             <title>MediaInfo 22.03</title>
             <description>
