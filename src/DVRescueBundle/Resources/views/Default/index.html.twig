@@ -46,21 +46,17 @@
 
             {% if 'Windows' == downloadInfo.name %}
                 {% set downloadLink = '//mediaarea.net/download/binary/dvrescue/' ~ downloadInfo.version ~ '/dvrescue_CLI_' ~ downloadInfo.version ~ '_Windows_x64.zip' %}
+            {% elseif 'macOS' == downloadInfo.name %}
+                {% set downloadLink = '//mediaarea.net/download/binary/dvrescue/' ~ downloadInfo.version ~ '/dvrescue_CLI_' ~ downloadInfo.version ~ '_Mac.dmg' %}
             {% else %}
                 {% set downloadLink = path(downloadInfo.route) %}
             {% endif %}
 
             <div class="inner center-xs center-font-xs">
                 <div class="btn-group hidden-xs">
-                    {% if 'macOS' == downloadInfo.name %}
-                    <a class="btn btn-default btn-lg btn-dl" href="http://mediaarea.net/download/binary/dvrescue/' ~ downloadInfo.version ~ '/dvrescue_CLI_' ~ downloadInfo.version ~ '_Mac.dmg" target="_blank">
-                        <span class="downloadText">Download DVRescue</span>
-                    </a>
-                    {% else %}
                     <a class="btn btn-default btn-lg btn-dl " href="{{ downloadLink }}">
                         <span class="downloadText">Download DVRescue</span>
                     </a>
-                    {% endif %}
                     <a href="{{ path('dvrescue_download') }}" class="btn btn-default btn-lg dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
                         <span class="caret"></span>
                     </a>
