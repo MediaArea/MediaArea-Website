@@ -5,7 +5,32 @@
         <link>https://mediaarea.net/MediaInfo</link>
         <description>MediaInfo updates feed</description>
         <language>en-us</language>
-        <lastBuildDate>Thu, 23 Jun 2022 17:00:00 +0000</lastBuildDate>
+        <lastBuildDate>Tue, 04 Oct 2022 08:00:00 +0000</lastBuildDate>
+         <item>
+            <title>MediaInfo 22.09</title>
+            <description>
+                <![CDATA[+ Italian language update<br />
+                         + USAC: IOD and sampling rate coherency checking<br />
+                         + ADM: support of nested objects and complementary objects<br />
+                         + AC-4: Display of Custom downmix targets<br />
+                         + IAB: Parsing of IAB bitstream and ADM-like output<br />
+                         + Frame rate: store FrameRate_Num/Den also for integer values<br />
+                         + MPEG-4/MOV: support of time codes >30 fps<br />
+                         + MOV/MPEG-4: List of QuickTime time code discontinuities<br />
+                         + Dolby Vision: add info about more profiles<br />
+                         x Text streams: show stream frame rate if not same as container frame rate<br />
+                         x CDP: fix rounding of frame rate<br />
+                         x SCC: fix of CEA-608 FirstDisplay_Delay_Frames<br />
+                         x SCC: fix TimeCode_Last<br />
+                         x MPEG-4/MOV: last time code value for all kind of QuickTime time codes<br />
+                         x MOV/MPEG-4: Fix frame count for NDF non-integer frame rates<br />
+                         x JSON: fix invalid output in some corner cases<br />
+                         x Several other parsing bug/crash fixes (thanks to fuzzing by users)]]>
+            </description>
+            <link>https://mediaarea.net/MediaInfo</link>
+            <pubDate>Tue, 04 Oct 2022 08:00:00 +0000</pubDate>
+            <guid>MediaInfo-22.0Ç</guid>
+         </item>
          <item>
             <title>MediaInfo 22.06</title>
             <description>
