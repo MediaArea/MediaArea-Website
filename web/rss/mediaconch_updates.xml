@@ -5,7 +5,20 @@
         <link>https://mediaarea.net/MediaConch/</link>
         <description>MediaConch updates feed</description>
         <language>en-us</language>
-        <lastBuildDate>Thu 31 Mar 2022 12:00:00 +0000</lastBuildDate>
+        <lastBuildDate>Tue 04 Oct 2022 12:00:00 +0000</lastBuildDate>
+          <item>
+            <title>MediaConch 22.09</title>
+            <description>
+                <![CDATA[Update to MediaInfo library 22.09, see MediaInfo change log for the list of changes in the file formats support<br>
+                         Basic USAC/xHE-AAC conformance checker focused on IOD and sampling rate, more to come<br>
+                         GUI: Support custom parse speed option<br>
+                         Policy creation: Add Warning and Info severity levels in addition to Error<br>
+                         Policy creation: 'all' or 'any' keywords for occurrence field]]>
+            </description>
+            <link>https://mediaarea.net/MediaConch/download.html</link>
+            <pubDate>Tue, 04 Oct 2022 12:00:00 +0000</pubDate>
+            <guid>MediaConch-22.09</guid>
+          </item>
           <item>
             <title>MediaConch 22.03</title>
             <description>
