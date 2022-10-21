@@ -45,9 +45,9 @@
             </div>
 
             {% if 'Windows' == downloadInfo.name %}
-                {% set downloadLink = '//mediaarea.net/download/binary/dvrescue/' ~ downloadInfo.version ~ '/dvrescue_CLI_' ~ downloadInfo.version ~ '_Windows_x64.zip' %}
+                {% set downloadLink = '//mediaarea.net/download/binary/dvrescue-gui/' ~ downloadInfo.version ~ '/dvrescue_GUI_' ~ downloadInfo.version ~ '_Windows.exe' %}
             {% elseif 'macOS' == downloadInfo.name %}
-                {% set downloadLink = '//mediaarea.net/download/binary/dvrescue/' ~ downloadInfo.version ~ '/dvrescue_CLI_' ~ downloadInfo.version ~ '_Mac.dmg' %}
+                {% set downloadLink = '//mediaarea.net/download/binary/dvrescue-gui/' ~ downloadInfo.version ~ '/dvrescue_GUI_' ~ downloadInfo.version ~ '_Mac.dmg' %}
             {% else %}
                 {% set downloadLink = path(downloadInfo.route) %}
             {% endif %}
