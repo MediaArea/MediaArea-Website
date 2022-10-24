@@ -1,0 +1,86 @@
+{% extends 'LeaveSDBundle::base.html.twig' %}
+
+{% block title %}LeaveSD{% endblock %}
+
+{% block head %}
+<script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "LeaveSD",
+    "headline": "Supports leaving STARDIVA® storage format based on NSV but with opaque metadata format and 8-ch single audio track for actually 8 independant tracks.",
+    "url": "{{ absolute_url(path('leavesd_home')) }}",
+    "dateModified": "{{ downloadInfo.date }}",
+    "operatingSystem": "Windows",
+    "applicationCategory": "Multimedia, Video, Audio",
+    "softwareVersion": "{{ downloadInfo.version }}",
+    "creator": {
+        "@type": "Organization",
+        "name": "MediaArea",
+        "url": "{{ absolute_url(path('homepage')) }}"
+    }
+}
+</script>
+{% endblock %}
+
+{% block body %}
+<section class="download-wrapper">
+    <div class="row reorder-xs">
+        <div class="v-align carousel-padding-xs col-xs-12 col-sm-5">
+            <div>
+            </div>
+        </div>
+        <div class="v-align col-sm-7">
+            <div class="center-font-xs">
+                <h1 class="v-align bigtitle">LeaveSD</h1>
+            </div>
+            <div class="projectDescription center-font-xs">
+                <strong>LeaveSD</strong> supports leaving STARDIVA® storage format based on NSV but with opaque metadata format and 8-ch single audio track for actually 8 independant mono content.<br>
+                Source content is remuxed to Matroska container format, video is kept as is (except frame rate fix), audio is decoded then split from 1 track with 8 channels to 8 tracks with 1 channel each then reencoded, metadata is converted to Matroska chapters.<br>
+                Funded by the an anonymous sponsor; designed, led and developed by MediaArea.<br>
+                Project was developed for a specific sponsor with its files, so maybe it needs some tweaks for your files, don't hesitate to <a href="{{ path('ma_contact') }}">contact us</a> for discussing about the issues you may face with the current version of this tool.
+            </div>
+
+                {% set downloadLink = '//mediaarea.net/temp/LeaveSD_CLI_' ~ downloadInfo.version ~ '_Windows.zip' %}
+
+            <div class="inner center-xs center-font-xs">
+                <div class="btn-group hidden-xs">
+                    <a class="btn btn-default btn-lg btn-dl " href="{{ downloadLink }}">
+                        <span class="downloadText">Download LeaveSD</span>
+                    </a>
+                    <a href="{{ path('leavesd_download') }}" class="btn btn-default btn-lg dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                        <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu dropdown-default platform-icons">
+                        <li><a href="{{ path('leavesd_download_windows') }}">Windows</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="{{ path('leavesd_download') }}">Other systems</a></li>
+                    </ul>
+                </div>
+                <div class="btn-group visible-xs visible-xs-inline-block">
+                    <a class="btn btn-default btn-lg btn-dl " href="{{ path(downloadInfo.route) }}">
+                        <span class="downloadText">Download LeaveSD</span>
+                    </a>
+                </div>
+
+                <div class="projectDescription">
+                    <div class="downloadDetails">
+                        Version {{ downloadInfo.version }}{% if downloadInfo.name %}, for {{ downloadInfo.name }}{% endif %}
+                    <br>
+                    Other versions (packaging, OS, interface...) are also <a href="{{ path('leavesd_download') }}">available</a>
+                    {% image '@AppBundle/Resources/public/img/blank.gif' %}
+                    (<a href="{{ path('leavesd_download_windows') }}"><img src="{{ asset_url }}" width="16" height="16" alt="Microsoft Windows" title="Microsoft Windows" class="sprite Windows"></a>)
+                    {% endimage %}
+                    <br>
+                    See <a href="https://github.com/MediaArea/LeaveSD">Source code on GitHub</a>.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<h2>License:</h2>
+<p>It is <a href="https://en.wikipedia.org/wiki/Open_source">Open-Source</a> software which means that end users and developers have the freedom to study, improve and redistribute the program (<a href="{{ path('leavesd_license') }}">BSD 2-Clause license</a>).</p>
+</section>
+{% endblock %}

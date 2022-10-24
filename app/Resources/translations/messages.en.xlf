@@ -134,6 +134,10 @@
         <source><![CDATA[menu.projects.dvrescue]]></source>
         <target><![CDATA[DVRescue]]></target>
       </trans-unit>
+      <trans-unit id="menu.projects.leavesd" approved="yes">
+        <source><![CDATA[menu.projects.leavesd]]></source>
+        <target><![CDATA[LeaveSD]]></target>
+      </trans-unit>
       <trans-unit id="menu.supportUs" approved="yes">
         <source><![CDATA[menu.supportUs]]></source>
         <target><![CDATA[Support Us!]]></target>
