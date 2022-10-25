@@ -69,6 +69,10 @@ dvrescue:
     resource: "@DVRescueBundle/Controller/"
     type:     annotation
 
+leavesd:
+    resource: "@LeaveSDBundle/Controller/"
+    type:     annotation
+
 support_us:
     resource: "@SupportUsBundle/Controller/"
     type:     annotation

@@ -318,6 +318,26 @@ class MenuBuilder
     /**
      * @SuppressWarnings(PHPMD.UnusedFormalParameter)
      */
+    public function createLeaveSDMenu(array $options)
+    {
+        $menu = $this->factory->createItem('root');
+        $menu->setChildrenAttribute('class', 'nav navbar-nav main-menu');
+
+        $menu = $this->mediaAreaMenu($menu);
+
+        $menu->addChild('menu.leavesd', ['route' => 'dvrescue_home'])->setExtras(['dropdown' => true])->setCurrent(true);
+        $menu['menu.leavesd']->addChild('menu.leavesd.about', ['route' => 'leavesd_home']);
+        $menu['menu.leavesd']->addChild('menu.leavesd.download', ['route' => 'leavesd_download']);
+
+        $menu = $this->projectsMenu($menu);
+        $menu = $this->supportUsMenu($menu);
+
+        return $menu;
+    }
+
+    /**
+     * @SuppressWarnings(PHPMD.UnusedFormalParameter)
+     */
     public function createMediaConchMenu(array $options)
     {
         $menu = $this->factory->createItem('root');
@@ -439,6 +459,7 @@ class MenuBuilder
         $menu['menu.projects']->addChild('menu.projects.ollistd', ['route' => 'ollistd_home'])->setCurrent(false);
         $menu['menu.projects']->addChild('menu.projects.rawcooked', ['route' => 'rawcooked_home'])->setCurrent(false);
         $menu['menu.projects']->addChild('menu.projects.dvrescue', ['route' => 'dvrescue_home'])->setCurrent(false);
+        $menu['menu.projects']->addChild('menu.projects.leavesd', ['route' => 'leavesd_home'])->setCurrent(false);
 
         return $menu;
     }
