@@ -4,7 +4,7 @@ on: [push, pull_request]
 
 jobs:
   Check:
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-22.04
     services:
       mysql:
         image: mysql:5.7
@@ -39,9 +39,6 @@ jobs:
       - name: Prepare
         run: |
           cp app/config/parameters.yml.ci app/config/parameters.yml
-      - name: Remove conflicting package
-        run: |
-            sudo apt-get autoremove -y hhvm
       - name: Install dependencies
         run: |
           composer require --no-progress --dev friendsofphp/php-cs-fixer:2.13.* phpmd/phpmd:2.7.* --prefer-dist --no-suggest --ansi
