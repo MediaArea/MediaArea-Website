@@ -39,7 +39,6 @@
             <guid>MediaConch-22.03</guid>
           </item>
           <item>
-          <item>
             <title>MediaConch 18.03.2</title>
             <description>
                 <![CDATA[x Fix incomplete initialization of checker window with old Qt versions.]]>
