@@ -5,7 +5,35 @@
         <link>https://mediaarea.net/MediaInfo</link>
         <description>MediaInfo updates feed</description>
         <language>en-us</language>
-        <lastBuildDate>Tue, 04 Oct 2022 08:00:00 +0000</lastBuildDate>
+        <lastBuildDate>Thu, 22 Dec 2022 08:00:00 +0000</lastBuildDate>
+         <item>
+            <title>MediaInfo 22.12</title>
+            <description>
+                <![CDATA[+ WebVTT: more information (duration, start/end timestamp, count of lines...)<br />
+                         + MP4/MOV: support of FLAC<br />
+                         + MP4/MOV: support of LanguageIETF<br />
+                         + ProRes: parse FFmpeg glbl atom for getting color range<br />
+                         + AVI/WAV: detection of character set<br />
+                         + WAV: display MD5 of raw content<br />
+                         + FLAC: display MD5 of unencoded content<br />
+                         + USAC: trace of UsacFrame() up to after preroll<br />
+                         + MOV/MP4: option for parsing only the header, no parsing of any frame<br />
+                         + MXF: option for parsing only the header, no parsing of any frame<br />
+                         x MXF: quicker parsing when fast parsing is requested<br />
+                         x I662, WAV: fix false-positive detection of DTS in PCM<br />
+                         x I1637, MPEG-Audio: proper support of Helix MP3 encoder detection and encoder settings<br />
+                         x I661, MXF: fix UKDPP FpaPass value sometimes not outputted<br />
+                         x S1182, Teletext subtitle: prioritize subtitle metadata other overs<br />
+                         x Matroska: Better handling in case of buggy AVC stream<br />
+                         x 22.2 audio: Fix name of 1 channel (Tll --> Tsl)<br />
+                         x AAC: fix wrong parsing of some bitstreams<br />
+                         x Fix crash with stdin input and ctrl-c<br />
+                         x Fix memory leak in JSON output]]>
+            </description>
+            <link>https://mediaarea.net/MediaInfo</link>
+            <pubDate>Thu, 22 Dec 2022 08:00:00 +0000</pubDate>
+            <guid>MediaInfo-22.12</guid>
+         </item>
          <item>
             <title>MediaInfo 22.09</title>
             <description>
@@ -29,7 +57,7 @@
             </description>
             <link>https://mediaarea.net/MediaInfo</link>
             <pubDate>Tue, 04 Oct 2022 08:00:00 +0000</pubDate>
-            <guid>MediaInfo-22.0Ç</guid>
+            <guid>MediaInfo-22.09</guid>
          </item>
          <item>
             <title>MediaInfo 22.06</title>
