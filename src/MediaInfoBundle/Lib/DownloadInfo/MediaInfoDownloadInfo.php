@@ -20,6 +20,7 @@ class MediaInfoDownloadInfo extends AbstractDownloadInfo
         'Mandriva' => array('name' => 'Mandriva', 'route' => 'mi_download_mandriva', 'installer' => false),
         'Mint' => array('name' => 'Linux Mint', 'route' => 'mi_download_ubuntu', 'installer' => false),
         'Red Hat' => array('name' => 'RHEL', 'route' => 'mi_download_rhel', 'installer' => false),
+        'RockyLinux' => array('name' => 'RockyLinux', 'route' => 'mi_download_rockylinux', 'installer' => false),
         'SUSE' => array('name' => 'openSUSE', 'route' => 'mi_download_opensuse', 'installer' => false),
         'Slackware' => array('name' => 'Slackware', 'route' => 'mi_download_slackware', 'installer' => false),
         'Solaris' => array('name' => 'Solaris', 'route' => 'mi_download_solaris', 'installer' => false),

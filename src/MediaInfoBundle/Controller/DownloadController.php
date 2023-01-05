@@ -203,6 +203,20 @@ class DownloadController extends Controller
 
     /**
      * @Route(
+     *     "/{_locale}/MediaInfo/Download/RockyLinux",
+     *     name="mi_download_rockylinux",
+     *     requirements={"_locale": "%app.locales%"
+     *     }
+     * )
+     * @Template()
+     */
+    public function rockylinuxAction()
+    {
+        return array();
+    }
+
+    /**
+     * @Route(
      *     "/{_locale}/MediaInfo/Download/Fedora",
      *     name="mi_download_fedora",
      *     requirements={"_locale": "%app.locales%"
