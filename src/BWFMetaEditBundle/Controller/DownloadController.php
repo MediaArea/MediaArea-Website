@@ -106,6 +106,18 @@ class DownloadController extends Controller
 
     /**
      * @Route(
+     *     "/BWFMetaEdit/Download/RockyLinux",
+     *     name="bwf_download_rockylinux"
+     * )
+     * @Template()
+     */
+    public function rockylinuxAction()
+    {
+        return array();
+    }
+
+    /**
+     * @Route(
      *     "/BWFMetaEdit/Download/CentOS",
      *     name="bwf_download_centos"
      * )

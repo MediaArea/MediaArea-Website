@@ -10,6 +10,7 @@ class BWFMetaEditDownloadInfo extends AbstractDownloadInfo
     protected $supportedOS = array(
         'Arch Linux' => array('name' => 'Arch Linux', 'route' => 'bwf_download_archlinux'),
         'CentOS' => array('name' => 'CentOS', 'route' => 'bwf_download_centos'),
+        'RockyLinux' => array('name' => 'RockyLinux', 'route' => 'bwf_download_rockylinux'),
         'Debian' => array('name' => 'Debian', 'route' => 'bwf_download_debian'),
         'Raspbian' => array('name' => 'Raspbian', 'route' => 'bwf_download_raspbian'),
         'Fedora' => array('name' => 'Fedora', 'route' => 'bwf_download_fedora'),
