@@ -5,6 +5,7 @@ namespace MediaInfoBundle\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
 class ZZLastController extends Controller
 {
@@ -116,9 +117,13 @@ class ZZLastController extends Controller
         $pathInfo = $request->getPathInfo();
         $requestUri = $request->getRequestUri();
 
-        $url = str_replace($pathInfo, rtrim($pathInfo, ' /'), $requestUri);
+        $url = str_replace($pathInfo, trim($pathInfo, ' /'), $requestUri);
 
-        return $this->redirect($url, 301);
+        if (preg_match('/^[a-zA-Z0-9\/-]+$/', $url)) {
+            return $this->redirect('/'.$url, 301);
+        } else {
+            throw new NotFoundHttpException();
+        }
     }
 
     /**

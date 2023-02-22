@@ -73,4 +73,24 @@ class ZZLastControllerTest extends WebTestCase
         $client->followRedirect();
         $this->assertEquals(200, $client->getResponse()->getStatusCode());
     }
+
+
+    public function testRemoveTrailingSlash()
+    {
+        $client = static::createClient();
+
+        $client->request('GET', '/test/');
+        $this->assertEquals(301, $client->getResponse()->getStatusCode());
+        $this->assertTrue($client->getResponse()->isRedirect('/test'));
+
+        $client->request('GET', '/test/test/');
+        $this->assertEquals(301, $client->getResponse()->getStatusCode());
+        $this->assertTrue($client->getResponse()->isRedirect('/test/test'));
+
+        $client->request('GET', '/https://test.com/');
+        $this->assertEquals(404, $client->getResponse()->getStatusCode());
+
+        $client->request('GET', '/test>test/');
+        $this->assertEquals(404, $client->getResponse()->getStatusCode());
+    }
 }
