@@ -1,7 +1,7 @@
 {% if 'Y' == app.request.attributes.get('donated') or (noAds is defined and true == noAds) or (app.user and app.user.isDonor) or 'dev' == app.environment %}
 {% set ads = false %}
 {% else %}
-{% set ads = true %}
+{% set ads = displayAds() %}
 {% endif %}
 <!DOCTYPE html>
 <html{% if rtl is defined and true == rtl %} dir="rtl"{% endif %} lang="{{ app.request.locale }}">
