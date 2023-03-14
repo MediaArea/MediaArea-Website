@@ -28,7 +28,15 @@
       </trans-unit>
       <trans-unit id="menu.notimetowait.5" approved="yes">
         <source><![CDATA[menu.notimetowait.5]]></source>
-        <target><![CDATA[No Time To Wait 5 (2020, Hilversum)]]></target>
+        <target><![CDATA[No Time To Wait 5 (2021, online)]]></target>
+      </trans-unit>
+      <trans-unit id="menu.notimetowait.6" approved="yes">
+        <source><![CDATA[menu.notimetowait.6]]></source>
+        <target><![CDATA[No Time To Wait 6 (2022, The Hague)]]></target>
+      </trans-unit>
+      <trans-unit id="menu.notimetowait.7" approved="yes">
+        <source><![CDATA[menu.notimetowait.7]]></source>
+        <target><![CDATA[No Time To Wait 7 (2023, Prague)]]></target>
       </trans-unit>
     </body>
   </file>

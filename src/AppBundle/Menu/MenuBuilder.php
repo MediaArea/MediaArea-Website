@@ -196,6 +196,8 @@ class MenuBuilder
         $menu = $this->mediaAreaMenu($menu);
 
         $menu->addChild('menu.notimetowait', ['route' => 'notimetowait_home'])->setExtras(['dropdown' => true])->setCurrent(true);
+        $menu['menu.notimetowait']->addChild('menu.notimetowait.7', ['route' => 'notimetowait_7']);
+        $menu['menu.notimetowait']->addChild('menu.notimetowait.6', ['route' => 'notimetowait_6']);
         $menu['menu.notimetowait']->addChild('menu.notimetowait.5', ['route' => 'notimetowait_5']);
         $menu['menu.notimetowait']->addChild('menu.notimetowait.4', ['route' => 'notimetowait_4']);
         $menu['menu.notimetowait']->addChild('menu.qcworkshop.2018', ['route' => 'qcworkshop2018']);
