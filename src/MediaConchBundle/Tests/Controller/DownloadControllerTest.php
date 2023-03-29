@@ -32,6 +32,7 @@ class DownloadControllerTest extends WebTestCase
             ['/MediaConch/Download/Mageia'],
             ['/MediaConch/Download/openSUSE'],
             ['/MediaConch/Download/RHEL'],
+            ['/MediaConch/Download/RockyLinux'],
             ['/MediaConch/Download/SLE'],
             ['/MediaConch/Download/Source'],
             ['/MediaConch/Download/Snapshots'],
