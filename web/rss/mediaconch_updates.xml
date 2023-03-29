@@ -5,7 +5,19 @@
         <link>https://mediaarea.net/MediaConch/</link>
         <description>MediaConch updates feed</description>
         <language>en-us</language>
-        <lastBuildDate>Tue 04 Oct 2022 12:00:00 +0000</lastBuildDate>
+        <lastBuildDate>Wed, 29 Mar 2023 08:00:00 +0000</lastBuildDate>
+          <item>
+            <title>MediaConch 23.03</title>
+            <description>
+                <![CDATA[Update to MediaInfo library 23.03, see MediaInfo change log for the list of changes in the file formats support<br>
+                         GUI: Fix parse speed option not applied to dropped files<br>
+                         Add conformance errors description to simple/text displays<br>
+                         Policy XML file: Fix behavior when operator attribute is missing]]>
+            </description>
+            <link>https://mediaarea.net/MediaConch/download.html</link>
+            <pubDate>Wed, 29 Mar 2023 08:00:00 +0000</pubDate>
+            <guid>MediaConch-22.09</guid>
+          </item>
           <item>
             <title>MediaConch 22.09</title>
             <description>
