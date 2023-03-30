@@ -123,6 +123,15 @@ class DownloadController extends Controller
     }
 
     /**
+     * @Route("/RockyLinux", name="mc_download_rockylinux")
+     * @Template()
+     */
+    public function rockylinuxAction()
+    {
+        return [];
+    }
+
+    /**
      * @Route("/CentOS", name="mc_download_centos")
      * @Template()
      */

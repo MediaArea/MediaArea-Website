@@ -18,6 +18,7 @@ class MediaConchDownloadInfo extends AbstractDownloadInfo
         'Mandriva' => ['name' => 'Mandriva', 'route' => 'mc_download_mandriva'],
         'Mint' => ['name' => 'Linux Mint', 'route' => 'mc_download_ubuntu'],
         'Red Hat' => ['name' => 'RHEL', 'route' => 'mc_download_rhel'],
+        'RockyLinux' => ['name' => 'RockyLinux', 'route' => 'mc_download_rockylinux'],
         'SUSE' => ['name' => 'openSUSE', 'route' => 'mc_download_opensuse'],
         'Slackware' => ['name' => 'Slackware', 'route' => 'mc_download_slackware'],
         'Solaris' => ['name' => 'Solaris', 'route' => 'mc_download_solaris'],

@@ -54,6 +54,12 @@
     <td><a href="{{ path('mc_download_rhel') }}">MediaArea releases</a></td>
 </tr>
 <tr>
+    {% image '@AppBundle/Resources/public/img/OS/RockyLinux.png' %}
+    <th><a href="{{ path('mc_download_rockylinux') }}"><img src="{{ asset_url }}" width="350" height="65" alt="Rocky Linux" title="Rocky Linux"></a></th>
+    {% endimage %}
+    <td><a href="{{ path('mc_download_rockylinux') }}">MediaArea releases</a></td>
+</tr>
+<tr>
     {% image '@AppBundle/Resources/public/img/OS/CentOS.png' %}
     <th><a href="{{ path('mc_download_centos') }}"><img src="{{ asset_url }}" width="271" height="60" alt="CentOS" title="CentOS"></a></th>
     {% endimage %}
