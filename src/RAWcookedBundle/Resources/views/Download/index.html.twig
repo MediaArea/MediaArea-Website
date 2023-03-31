@@ -54,6 +54,12 @@
     <td><a href="{{ path('rawcooked_download_centos') }}">MediaArea releases</a></td>
 </tr>
 <tr>
+    {% image '@AppBundle/Resources/public/img/OS/RockyLinux.png' %}
+    <th><a href="{{ path('rawcooked_download_rockylinux') }}"><img src="{{ asset_url }}" width="350" height="65" alt="Rocky Linux" title="Rocky Linux"></a></th>
+    {% endimage %}
+    <td><a href="{{ path('rawcooked_download_rockylinux') }}">MediaArea releases</a></td>
+</tr>
+<tr>
     {% image '@AppBundle/Resources/public/img/OS/Fedora.png' %}
     <th><a href="{{ path('rawcooked_download_fedora') }}"><img src="{{ asset_url }}" width="250" height="89" alt="Fedora" title="Fedora"></a></th>
     {% endimage %}
