@@ -94,6 +94,18 @@ class DownloadController extends Controller
 
     /**
      * @Route(
+     *     "/RAWcooked/Download/RockyLinux",
+     *     name="rawcooked_download_rockylinux"
+     * )
+     * @Template()
+     */
+    public function rockylinuxAction()
+    {
+        return array();
+    }
+
+    /**
+     * @Route(
      *     "/RAWcooked/Download/Fedora",
      *     name="rawcooked_download_fedora"
      * )

@@ -10,6 +10,7 @@ class RAWcookedDownloadInfo extends AbstractDownloadInfo
     protected $supportedOS = array(
         'Arch Linux' => array('name' => 'Arch Linux', 'route' => 'rawcooked_download_archlinux'),
         'CentOS' => array('name' => 'CentOS', 'route' => 'rawcooked_download_centos'),
+        'Rocky Linux' => array('name' => 'Rocky Linux', 'route' => 'rawcooked_download_rockylinux'),
         'Debian' => array('name' => 'Debian', 'route' => 'rawcooked_download_debian'),
         'Fedora' => array('name' => 'Fedora', 'route' => 'rawcooked_download_fedora'),
         'Kubuntu' => array('name' => 'Ubuntu', 'route' => 'rawcooked_download_ubuntu'),
@@ -41,9 +42,9 @@ class RAWcookedDownloadInfo extends AbstractDownloadInfo
     public function parse()
     {
         $this->downloadInfo = $this->detectOS();
-        $this->downloadInfo['version'] = '21.09';
-        $this->downloadInfo['date'] = '2021-09-03';
-        $this->downloadInfo['versionPath'] = '21.09';
+        $this->downloadInfo['version'] = '23.03';
+        $this->downloadInfo['date'] = '2023-03-31';
+        $this->downloadInfo['versionPath'] = '23.03';
     }
 
     public function getVersionPath()
