@@ -1,22 +1,22 @@
 {% extends 'SupportUsBundle::base.html.twig' %}
 
-{% block title %}Support Us! Become a supporter of MediaArea{% endblock %}
-{% block description %}Support Us! Become a supporter of MediaArea{% endblock %}
+{% block title %}No Time to Wait Registration{% endblock %}
+{% block description %}No Time to Wait Registration{% endblock %}
 {% block keywords %}Donation subscriber supporter member crowdfunding{% endblock %}
 
 {% block body %}
-<h1>Become a MediaArea supporter</h1>
+<h1>No Time to Wait Registration</h1>
 
 <p>
     Although <a href="{{ path('notimetowait_home') }}">No Time to Wait</a> is free, <a href="https://www.youtube.com/watch?v=wPw18K-TWYg">there are many associated costs</a>.<br>
-    Please consider supporting our work and contributing by becoming a MediaArea supporter<br>
+    Please consider one of the following registration fees. All registration fees include a MediaArea membership with the benefits listed below at different contributing levels. Also note that registration fees for No Time to Wait are optional and only recommended for those with institutional support or an abundant sense of individual generosity.<br>
 </p>
 
 <p>
     {% if country.countryName(false) %}{% trans with { '%country%': country.countryName(false), '%currency%': currency.currency, '%contact%': path('ma_contact') } %}supportUs.individual.location_currency{% endtrans %}{% else %}{% trans with { '%currency%': currency.currency } %}supportUs.individual.currency{% endtrans %}{% endif %}  (VAT {% if vatRate %}{{ vatRate }}% {% endif %}included, <a href="{{ path('ma_contact') }}">contact us</a> if your entity has an EU VAT number, we could invoice without VAT)
 </p>
 
-<p>Select a plan:</p>
+<p>Select a conference registration fee:</p>
 <div class="support-us-buttons-bar text-center">
     <button type="button" class="btn btn-support-us btn-individual-member">
         <span class="plan-title">Member</span>
