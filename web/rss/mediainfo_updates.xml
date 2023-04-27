@@ -5,44 +5,68 @@
         <link>https://mediaarea.net/MediaInfo</link>
         <description>MediaInfo updates feed</description>
         <language>en-us</language>
-        <lastBuildDate>Wed, 29 Mar 2023 08:00:00 +0000</lastBuildDate>
+        <lastBuildDate>Wed, 26 Apr 2023 08:00:00 +0000</lastBuildDate>
+         <item>
+            <title>MediaInfo 23.04</title>
+            <description>
+                <![CDATA[+ MXF: support of SMPTE ST 381-4 (AAC in MXF)<br />
+                         + DTS: show MA or HRA tip in commercial name for DTS:X<br />
+                         + DTS: detection of DTS:X not lossless<br />
+                         + APT-X100 a.k.a. Cinema DTS: initial support<br />
+                         + Matroska: support of HDR10+<br />
+                         + MP4: more information about thumbnails<br />
+                         + ID3v2: more information about thumbnails<br />
+                         + VP9: initial support, for more information about chroma subsampling<br />
+                         + AWS S3: support for reference files with AccessID:SecretKey@URL<br />
+                         x Windows installer: fix crash with Windows 10/11 having ASLR enabled (NSIS update)<br />
+                         x AWS S3: fix errors with some special chars in SecretKey<br />
+                         x AWS S3: fix random credential issues with non geolocated URLs<br />
+                         x DTS: fix freeze with some DTS-HD not DTS:X files<br />
+                         x MPEG-TS: fix crash in HEVC_timing_and_HRD<br />
+                         x AAC: fix samples per frame with SBR streams<br />
+                         x FLAC: fix missing Tbc Tbr in ChannelLayout]]>
+            </description>
+            <link>https://mediaarea.net/MediaInfo</link>
+            <pubDate>Wed, 26 Apr 2023 08:00:00 +0000</pubDate>
+            <guid>MediaInfo-23.04</guid>
+         </item>
          <item>
             <title>MediaInfo 23.03</title>
             <description>
-                <![CDATA[+ DTS: Detection of IMAX Enhanced
-                         + MOV/MP4: Add HDR Vivid format support
-                         + HEVC: Add HDR Vivid format support
-                         + MXF/PCM: detect silent tracks (full parsing only)
-                         + Monkey's Audio: support of 32-bit files, show version
-                         + MP4 audioProfileLevelIndication: add Low Delay AAC v2 Profile
-                         + MP4/MOV: support of FLAC
-                         + MOV/MP4: support of TTML with images
-                         + MPEG-7: 3 modes (strict, relaxed, extended)
-                         + MPEG-7: more sub-termIDs (AudioPresentationCS)
-                         + MPEG-7: Add more PublicIdentifiers
-                         + MPEG-7: more sub-termIDs (MP4, WAV, AVC, ProRes)
-                         + AVI/WAV: display of the kind of fmt chunk
-                         + AVC: detection of more profiles
-                         + ChannelLayout: difference between M (Mono) and C (Center, part of multichannel content)
-                         + AC-3: detection of channel layout also for encrypted content
-                         + AC-4 and MPEG-H 3D Audio: Merged channel layout (all sub-streams together)
-                         + DTS: Detection of real bit depth e.g. 20 instead of only byte aligned bit depth (16 or 24)
-                         + FLAC: support of BWF in Vorbis comments
-                         + N19/STL: codepage, subtitle count, max line per subtitle, more metadata
-                         + ISAN: detection of descriptions referencing an ISAN
-                         + AAC: detection of eSBR (and fix of random wrong PS detection)
-                         + Extract of time codes, XML format, currently only for for MXF
-                         x MP4/MOV: fix freezes with some unknown udta atoms
-                         x FLV: fix duration of 0 with some buggy files
-                         x AVC: fix PTS of last frame
-                         x FFV1: fix potential crash with malformed files
-                         x AV1: add HDR format line and fix HDR values
-                         x AAC and WAV: fix of channel layout display for 5 front channels
-                         x AC-4: Tl/Tr mapped to to Tsl/Tsr
-                         x FLAC: fix sampling count
-                         x ID3v2: fix Genre not showing ID 0 (Blues)
-                         x MPEG-7: VBR fix
-                         x JSON/XML: Remove minus sign from element names
+                <![CDATA[+ DTS: Detection of IMAX Enhanced<br />
+                         + MOV/MP4: Add HDR Vivid format support<br />
+                         + HEVC: Add HDR Vivid format support<br />
+                         + MXF/PCM: detect silent tracks (full parsing only)<br />
+                         + Monkey's Audio: support of 32-bit files, show version<br />
+                         + MP4 audioProfileLevelIndication: add Low Delay AAC v2 Profile<br />
+                         + MP4/MOV: support of FLAC<br />
+                         + MOV/MP4: support of TTML with images<br />
+                         + MPEG-7: 3 modes (strict, relaxed, extended)<br />
+                         + MPEG-7: more sub-termIDs (AudioPresentationCS)<br />
+                         + MPEG-7: Add more PublicIdentifiers<br />
+                         + MPEG-7: more sub-termIDs (MP4, WAV, AVC, ProRes)<br />
+                         + AVI/WAV: display of the kind of fmt chunk<br />
+                         + AVC: detection of more profiles<br />
+                         + ChannelLayout: difference between M (Mono) and C (Center, part of multichannel content)<br />
+                         + AC-3: detection of channel layout also for encrypted content<br />
+                         + AC-4 and MPEG-H 3D Audio: Merged channel layout (all sub-streams together)<br />
+                         + DTS: Detection of real bit depth e.g. 20 instead of only byte aligned bit depth (16 or 24)<br />
+                         + FLAC: support of BWF in Vorbis comments<br />
+                         + N19/STL: codepage, subtitle count, max line per subtitle, more metadata<br />
+                         + ISAN: detection of descriptions referencing an ISAN<br />
+                         + AAC: detection of eSBR (and fix of random wrong PS detection)<br />
+                         + Extract of time codes, XML format, currently only for for MXF<br />
+                         x MP4/MOV: fix freezes with some unknown udta atoms<br />
+                         x FLV: fix duration of 0 with some buggy files<br />
+                         x AVC: fix PTS of last frame<br />
+                         x FFV1: fix potential crash with malformed files<br />
+                         x AV1: add HDR format line and fix HDR values<br />
+                         x AAC and WAV: fix of channel layout display for 5 front channels<br />
+                         x AC-4: Tl/Tr mapped to to Tsl/Tsr<br />
+                         x FLAC: fix sampling count<br />
+                         x ID3v2: fix Genre not showing ID 0 (Blues)<br />
+                         x MPEG-7: VBR fix<br />
+                         x JSON/XML: Remove minus sign from element names<br />
                          x Normalization of date/time in report]]>
             </description>
             <link>https://mediaarea.net/MediaInfo</link>
