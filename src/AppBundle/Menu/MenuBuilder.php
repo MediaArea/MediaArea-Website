@@ -373,6 +373,23 @@ class MenuBuilder
             'menu.mediaconch.documentation.installation',
             ['route' => 'mc_documentation_installation']
         );
+        $menu['menu.mediaconch']->addChild('menu.mediaconch.database');
+        $menu['menu.mediaconch']['menu.mediaconch.database']->addChild(
+            'menu.mediaconch.database.checks',
+            ['route' => 'checks_home']
+        );
+        $menu['menu.mediaconch']['menu.mediaconch.database']->addChild(
+            'menu.mediaconch.database.specs',
+            ['route' => 'specs_home']
+        );
+        $menu['menu.mediaconch']['menu.mediaconch.database']->addChild(
+            'menu.mediaconch.database.groups',
+            ['route' => 'groups_home']
+        );
+        $menu['menu.mediaconch']['menu.mediaconch.database']->addChild(
+            'menu.mediaconch.database.severities',
+            ['route' => 'severities_home']
+        );
 
         $menu = $this->projectsMenu($menu);
         $menu = $this->supportUsMenu($menu);
