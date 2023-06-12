@@ -46,6 +46,26 @@
         <source><![CDATA[menu.mediaconch.documentation.installation]]></source>
         <target><![CDATA[Installation]]></target>
       </trans-unit>
+      <trans-unit id="menu.mediaconch.database" approved="yes">
+        <source><![CDATA[menu.mediaconch.database]]></source>
+        <target><![CDATA[Database (preview release)]]></target>
+      </trans-unit>
+      <trans-unit id="menu.mediaconch.database.checks" approved="yes">
+        <source><![CDATA[menu.mediaconch.database.checks]]></source>
+        <target><![CDATA[Checks (preview release)]]></target>
+      </trans-unit>
+      <trans-unit id="menu.mediaconch.database.specs" approved="yes">
+        <source><![CDATA[menu.mediaconch.database.specs]]></source>
+        <target><![CDATA[Specifications (preview release)]]></target>
+      </trans-unit>
+      <trans-unit id="menu.mediaconch.database.groups" approved="yes">
+        <source><![CDATA[menu.mediaconch.database.groups]]></source>
+        <target><![CDATA[Groups (preview release)]]></target>
+      </trans-unit>
+      <trans-unit id="menu.mediaconch.database.severities" approved="yes">
+        <source><![CDATA[menu.mediaconch.database.severities]]></source>
+        <target><![CDATA[Severities (preview release)]]></target>
+      </trans-unit>
     </body>
   </file>
 </xliff>

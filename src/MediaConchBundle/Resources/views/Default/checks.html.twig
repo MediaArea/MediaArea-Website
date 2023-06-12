@@ -1,0 +1,26 @@
+{% extends 'MediaConchBundle::base.html.twig' %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block body %}
+<div>
+{% for item in items %}
+<div>
+<h2>{{ item[0] | raw }}</h2>
+<p>
+{% for it in item[1] %}
+{% if it[0] is not null %}
+<p>
+{{ it[0] | raw }}{% if it[1] is not null %}:<br>{% endif %}
+{% endif %}
+{% for i in it[1] %}
+{{ i | raw }}<br>
+{% endfor %}
+{% if it[0] is not null %}
+</p>
+{% endif %}
+{% endfor %}
+</p>
+</div>
+{% endfor %}
+{% endblock %}
