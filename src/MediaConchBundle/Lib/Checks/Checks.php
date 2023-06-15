@@ -229,7 +229,7 @@ $GLOBALS['dbChecks'] =
                 'Configure or update the USAC encoder in order to put a <code>Config</code> element in the <code>AudioPreRoll</code> element, then reencode the content.'
             ),
         ],
-        [ 'Coherency', 'Best_practice' ]
+        [ 'General_compliance', 'Best_practice' ]
     ),
     new Check(
         'Bitstream parsing ran out of data to read before the end of the syntax was reached, most probably the bitstream is malformed',
@@ -319,7 +319,7 @@ $GLOBALS['dbChecks'] =
                 'If the stream format encoder is correctly set (see above), it may be a muxer error, check that the muxer correctly fills <code>sbgp</code> with the right <code>roll_distance</code>, then remux the content.'
             ),
         ],
-        [ 'Coherency', 'Best_practice' ]
+        [ 'General_compliance', 'Best_practice' ]
     ),
     new Check(
         '<code>(container format)</code> <code>(container element for immediate play-out frame (IPF))</code> or <code>(container format)</code> <code>(container element for independent frame (IF))</code> does not indicate this frame is independent but <code>(content format)</code> <code>(content element)</code> <code>(content field)</code> <code>(value)</code> indicates this frame is independent',
@@ -414,7 +414,7 @@ $GLOBALS['dbChecks'] =
                 'Configure or update the USAC encoder in order to put the following count of pre-roll frames:<br>- 1 if no SBR<br>- 2 if SBR without harmonic patching<br>- 3 if SBR with harmonic patching<br>at least for the first frame then reencode the content'
             ),
         ],
-        [ 'Coherency', 'Best_practice' ]
+        [ 'General_compliance', 'Best_practice' ]
     ),
     new Check(
         '<code>(container format)</code> <code>(container element for immediate play-out frame (IPF))</code> does not indicate this frame is an immediate play-out frame (IPF) but <code>USAC</code> <code>AudioPreRoll</code> is present',
@@ -551,7 +551,7 @@ $GLOBALS['dbChecks'] =
                 'Fix the encoder in order to put <code>AudioPreRoll</code> element first, then reencode the content.'
             ),
         ],
-        [ 'Coherency' ],
+        [ 'General_compliance' ],
         [ 'Audio_Coding_Syntax', ]
     ),
     new Check(
@@ -703,7 +703,7 @@ $GLOBALS['dbChecks'] =
     ),
     new Check(
         '<code>usacSamplingFrequency</code> is used but <code>usacSamplingFrequencyIndex</code> <code>(value)</code> could be used instead',
-        'Info',
+        'Warning',
         [
             new Reference(
                 'ISO_IEC_23003-3',
@@ -742,7 +742,7 @@ $GLOBALS['dbChecks'] =
                 'UsacDecoderConfig/usacElementType'
             ),
         ],
-        [ 'Coherency', 'Best_practice' ]
+        [ 'General_compliance', 'Best_practice' ]
     ),
     new Check(
         '<code>(container format)</code> <code>(container element)</code> <code>(container value)</code> does not match <code>(content format)</code> <code>(content element)</code> <code>(content value)</code>',
@@ -779,7 +779,7 @@ $GLOBALS['dbChecks'] =
                 'loudnessInfo'
             ),
         ],
-        [ 'Coherency', 'Best_practice' ]
+        [ 'General_compliance', 'Best_practice' ]
     ),
     new Check(
         '<code>loudnessInfoSet</code> contains a mix of v0 and v1 <code>loudnessInfo</code>',
@@ -797,7 +797,7 @@ $GLOBALS['dbChecks'] =
                 'loudnessInfoSet'
             ),
         ],
-        [ 'Coherency', 'Best_practice' ],
+        [ 'General_compliance', 'Best_practice' ],
         [ 'Audio_Coding_Syntax', ]
     ),
     new Check(
@@ -816,7 +816,7 @@ $GLOBALS['dbChecks'] =
                 'loudnessInfoSet'
             ),
         ],
-        [ 'Coherency', 'Best_practice' ],
+        [ 'General_compliance', 'Best_practice' ],
         [ 'Audio_Coding_Syntax', ]
     ),
     new Check(
@@ -835,7 +835,7 @@ $GLOBALS['dbChecks'] =
                 'loudnessInfoSet'
             ),
         ],
-        [ 'Coherency', 'Best_practice' ],
+        [ 'General_compliance', 'Best_practice' ],
         [ 'Audio_Coding_Syntax', ]
     ),
     new Check(
@@ -866,7 +866,7 @@ $GLOBALS['dbChecks'] =
                 'Configure or update the encoder in order to set only 1 instance of <code>(element)</code>, then reencode the content.'
             ),
         ],
-        [ 'Coherency', 'Best_practice' ]
+        [ 'General_compliance', 'Best_practice' ]
     ),
     new Check(
         'Issue detected while computing <code>(element with issue)</code>',
@@ -904,7 +904,7 @@ $GLOBALS['dbChecks'] =
                 'measurementSystem'
             ),
         ],
-        [ 'Coherency', 'Best_practice' ]
+        [ 'General_compliance', 'Best_practice' ]
     ),
     new Check(
         '<code>(field)</code> <code>(value)</code> is known as reserved in <code>(specificiation)</code>',
@@ -973,7 +973,7 @@ $GLOBALS['dbChecks'] =
                 'Fix the encoder to fill <code>numOutChannels</code> with the correct count of channels computed from the <code>usacElementType</code> sequence, then reencode the content.'
             ),
         ],
-        [ 'Coherency' ],
+        [ 'General_compliance' ],
         [ 'Audio_Coding_Syntax', ]
     ),
     new Check(
@@ -988,7 +988,7 @@ $GLOBALS['dbChecks'] =
                 'Fix the encoder to fill <code>numOutChannels</code> with the correct count of channels computed from the <code>usacElementType</code> sequence, then reencode the content.'
             ),
         ],
-        [ 'Coherency', 'Best_practice' ],
+        [ 'General_compliance', 'Best_practice' ],
         [ 'Audio_Coding_Syntax', ]
     ),
     new Check(
@@ -1003,7 +1003,7 @@ $GLOBALS['dbChecks'] =
                 'Fix the encoder to fill <code>numOutChannels</code> with the correct count of channels computed from the <code>usacElementType</code> sequence of use a SCE for the last element rather that a CPE, then reencode the content.'
             ),
         ],
-        [ 'Coherency', 'Best_practice' ],
+        [ 'General_compliance', 'Best_practice' ],
         [ 'Audio_Coding_Syntax', ]
     ),
     new Check(
@@ -1289,7 +1289,7 @@ function map_message_to_references($formats, $groupId, $elementId, $fieldId, $me
         }
     }
 
-    $errorKey = ($groupId ? ('(' . $groupId . ') ') : null) . $elementId . ($fieldId ? ('/' . $fieldId) : null);
+    $errorKey = ($groupId ? ('(' . str_replace('_', ' ', $groupId) . ') ') : null) . $elementId . ($fieldId ? ('/' . $fieldId) : null);
 
     return [ $errorKey, $errorsList ];
 }
@@ -1338,11 +1338,11 @@ function manage_conformance($formats, $conformance)
                         }
                     }
                 } else {
-                    if ($key1 != "Coherency") {
-                        $fieldId = $key1;
-                    } else {
-                        $groupId = $key1;
+                    if ($key1 != 'GeneralCompliance' || $key1 == 'Coherency') {
+                        $groupId = 'General_compliance';
                         $fieldId = null;
+                    } else {
+                        $fieldId = $key1;
                     }
                     array_push($data, ...map_messages_to_references($formats, $groupId, $key0, $fieldId, $error1));
                 }
