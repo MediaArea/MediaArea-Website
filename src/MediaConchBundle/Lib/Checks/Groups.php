@@ -20,7 +20,7 @@ $GLOBALS['dbGroups'] =
     'Crosscheck' => new Group(
         'Crosscheck between the value in the container (usually from readout of the content) and the actual value in the content'
     ),
-    'Coherency' => new Group(
+    'General_compliance' => new Group(
         'Syntaxically correct but resulting bitstream is not coherent and may not be fit a specific constraint'
     ),
     'Update_needed' => new Group(
