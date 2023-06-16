@@ -1338,7 +1338,7 @@ function manage_conformance($formats, $conformance)
                         }
                     }
                 } else {
-                    if ($key1 != 'GeneralCompliance' || $key1 == 'Coherency') {
+                    if ($key1 == 'GeneralCompliance' || $key1 == 'Coherency') {
                         $groupId = 'General_compliance';
                         $fieldId = null;
                     } else {
