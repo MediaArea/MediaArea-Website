@@ -224,6 +224,14 @@ $GLOBALS['dbSpecs'] =
                     ),
                 ]
             ),
+            'moov/trak/tkhd' => new Element(
+                'Track Header',
+                [
+                    'track_ID' => new Field(
+                        'an integer that uniquely identifies this track over the entire life‐time of this presentation'
+                    ),
+                ]
+            ),
             'AudioSampleEntry' => new Element(
                 null,
                 [
