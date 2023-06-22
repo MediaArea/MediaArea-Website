@@ -1090,6 +1090,19 @@ $GLOBALS['dbChecks'] =
         null,
         [ 'Audio_Coding_Syntax', ]
     ),
+    new Check(
+        '<code>(field)</code> <code>(value)</code> is already used by another <code>(item)</code>',
+        'Error',
+        [
+            new Reference(
+                'ISO_IEC_14496-12',
+                'moov/trak/tkhd',
+                'track_ID',
+                '"Track IDs are never re‐used and cannot be zero."',
+                'Fix the encoder to correctly fill <code>track_ID</code>, then remux the content.'
+            ),
+        ]
+    ),
 ];
 
 $GLOBALS['dbFormatToSpecs'] =
