@@ -5,7 +5,43 @@
         <link>https://mediaarea.net/MediaInfo</link>
         <description>MediaInfo updates feed</description>
         <language>en-us</language>
-        <lastBuildDate>Wed, 26 Apr 2023 08:00:00 +0000</lastBuildDate>
+        <lastBuildDate>Wed, 28 Jun 2023 08:00:00 +0000</lastBuildDate>
+         <item>
+            <title>MediaInfo 23.06</title>
+            <description>
+                <![CDATA[+ USAC/xHE-AAC conformance checker<br />
+                         + S-ADM: support of SMPTE ST 2127-1 / SMPTE ST 2109 / SMPTE ST 2127-10 (S-ADM in MGA in MXF)<br />
+                         + S-ADM: add S-ADM version and support of 1/1.001 frame rates<br />
+                         + ADM: show FFoA/Start/End as timestamp and timecode<br />
+                         + MPEG-7 output update with more extensions<br />
+                         + MPEG-TS: support of JPEG XS<br />
+                         + DTS-UHD: support of DTS-UHD (a.k.a. DTS-X P2) in MP4<br />
+                         + MP4: detection of VVC<br />
+                         + MP4: support of media characteristicd (spoken dialog, translation, easy to read...)<br />
+                         + MP4: support of more Blackmagic RAW Codec IDs<br />
+                         + MP4: support of ipcm CodecID<br />
+                         + MP4: support of service kind<br />
+                         + HEVC: support of SMPTE ST 2094-10<br />
+                         + HDR: display of all formats if more than 1 format is detected<br />
+                         + Matroska: support of SMPTE ST 12 in block additions<br />
+                         + HEVC: time code SEI readout<br />
+                         + AVC &amp; HEVC: active format description readout<br />
+                         + MPEG-TS: support of SMPTE ST 2038 (ancillary data)<br />
+                         x ADM/Dolby: fix wrong FFoA with 1.001 frame rates<br />
+                         + MOV/MP4: more info with tracks having unknown type<br />
+                         x MOV/MP4: avoid to parse too much content with non stripped timecodes<br />
+                         x MOV/MP4: avoid incoherent behavior if 2 tracks have the same ID<br />
+                         x TTML: fix default frame rate<br />
+                         x TimeCode: 1/1.001 frame rate was not always detected<br />
+                         x MediaTrace: fix some random blank outputs<br />
+                         x URL: remove query part of the URL in the FileExtension field<br />
+                         x Referenced files: fix handling of URL encoded with UTF-8 content<br />
+                         x Matroska: fix crash in support of HDR10+]]>
+            </description>
+            <link>https://mediaarea.net/MediaInfo</link>
+            <pubDate>Wed, 28 Jun 2023 08:00:00 +0000</pubDate>
+            <guid>MediaInfo-23.06</guid>
+         </item>
          <item>
             <title>MediaInfo 23.04</title>
             <description>
