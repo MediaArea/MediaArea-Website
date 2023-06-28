@@ -5,7 +5,18 @@
         <link>https://mediaarea.net/MediaConch/</link>
         <description>MediaConch updates feed</description>
         <language>en-us</language>
-        <lastBuildDate>Wed, 29 Mar 2023 08:00:00 +0000</lastBuildDate>
+        <lastBuildDate>Wed, 28 Jun 2023 08:00:00 +0000</lastBuildDate>
+          <item>
+            <title>MediaConch 23.06</title>
+            <description>
+                <![CDATA[Update to MediaInfo library 23.06, see MediaInfo change log for the list of changes in the file formats support<br>
+                         Verbose USAC/xHE-AAC conformance checker<br>
+                         New field Audio_Channels_Total for policies]]>
+            </description>
+            <link>https://mediaarea.net/MediaConch/download.html</link>
+            <pubDate>Wed, 28 Jun 2023 08:00:00 +0000</pubDate>
+            <guid>MediaConch-23.06</guid>
+          </item>
           <item>
             <title>MediaConch 23.03</title>
             <description>
@@ -16,7 +27,7 @@
             </description>
             <link>https://mediaarea.net/MediaConch/download.html</link>
             <pubDate>Wed, 29 Mar 2023 08:00:00 +0000</pubDate>
-            <guid>MediaConch-22.09</guid>
+            <guid>MediaConch-23.03</guid>
           </item>
           <item>
             <title>MediaConch 22.09</title>
