@@ -164,6 +164,15 @@ p {
 
 @media(prefers-color-scheme: dark) {
     .dropdown-menu {
+        background-color: #222;
+    }
+
+    .dropdown-menu > li > a {
+        color: #fff;
+    }
+
+    .dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus {
+        color: #fff;
         background-color: #444;
     }
 }

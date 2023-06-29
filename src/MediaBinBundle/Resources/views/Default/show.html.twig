@@ -115,8 +115,8 @@
 
 {% block stylesheets %}
 {% stylesheets
-    '@MediaInfoBundle/Resources/public/css/mediainfoonline.css'
     '@MediaInfoBundle/Resources/public/css/highlight.css'
+    '@MediaInfoBundle/Resources/public/css/mediainfoonline.css'
     filter='?scssphp' output='css/mediainfoonline.css'
  %}
     <link rel="stylesheet" href="{{ preload(asset_url, { as: 'style', nopush: true }) }}" />
