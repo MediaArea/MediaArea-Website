@@ -1103,6 +1103,20 @@ $GLOBALS['dbChecks'] =
             ),
         ]
     ),
+    new Check(
+        '<code>(container format)</code> <code>(container element)</code> is not present and this is an independent frame (IF), seeking is not optimal',
+        'Info',
+        [
+            new Reference(
+                'ISO_IEC_14496-12',
+                'moov/trak/mdia/minf/stbl/sbgp',
+                'roll_distance',
+                'stts is used for signaling only immediate play-out frames (IPF), but seeking may also be done on independent frames (IF) via sample group mechanics, this would improve seeking behavior through the presence of more seeking points when the player supports sample group mechanics"',
+                'Update the muxer to put sbgp and sgpd atoms with a grouping_type of prol, then remux the content.'
+            ),
+        ],
+        [ 'General_compliance', 'Best_practice' ]
+    ),
 ];
 
 $GLOBALS['dbFormatToSpecs'] =
