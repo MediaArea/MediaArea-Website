@@ -257,7 +257,7 @@ $GLOBALS['dbChecks'] =
                 'ISO_IEC_23003-3',
                 'AudioPreRoll',
                 null,
-                'Fix the encoder in order to correctly fill the impacted element, then reencode the content.'
+                'Fix the muxer in order to correctly fill the impacted element, then remux the content.'
             ),
             new Reference(
                 'ISO_IEC_23003-3',
@@ -275,7 +275,7 @@ $GLOBALS['dbChecks'] =
                 'ISO_IEC_23003-3',
                 'AudioPreRoll',
                 null,
-                'Fix the muxer in order to correctly fill the impacted element, then reencode the content.'
+                'Fix the muxer in order to correctly fill the impacted element, then remux the content.'
             ),
             new Reference(
                 'ISO_IEC_23003-3',
@@ -1077,7 +1077,7 @@ $GLOBALS['dbChecks'] =
     ),
     new Check(
         '<code>(field)</code> <code>(value)</code> is present <code>(value)</code> times but only 1 instance is permitted',
-        'Warning',
+        'Error',
         [
             new Reference(
                 'ISO_IEC_23003-3',
