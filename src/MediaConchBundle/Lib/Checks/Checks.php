@@ -257,7 +257,7 @@ $GLOBALS['dbChecks'] =
                 'ISO_IEC_23003-3',
                 'AudioPreRoll',
                 null,
-                'Fix the encoder in order to correctly fill the impacted element, then reencode the content.'
+                'Fix the muxer in order to correctly fill the impacted element, then remux the content.'
             ),
             new Reference(
                 'ISO_IEC_23003-3',
@@ -275,7 +275,7 @@ $GLOBALS['dbChecks'] =
                 'ISO_IEC_23003-3',
                 'AudioPreRoll',
                 null,
-                'Fix the muxer in order to correctly fill the impacted element, then reencode the content.'
+                'Fix the muxer in order to correctly fill the impacted element, then remux the content.'
             ),
             new Reference(
                 'ISO_IEC_23003-3',
@@ -1077,7 +1077,7 @@ $GLOBALS['dbChecks'] =
     ),
     new Check(
         '<code>(field)</code> <code>(value)</code> is present <code>(value)</code> times but only 1 instance is permitted',
-        'Warning',
+        'Error',
         [
             new Reference(
                 'ISO_IEC_23003-3',
@@ -1102,6 +1102,20 @@ $GLOBALS['dbChecks'] =
                 'Fix the encoder to correctly fill <code>track_ID</code>, then remux the content.'
             ),
         ]
+    ),
+    new Check(
+        '<code>(container format)</code> <code>(container element)</code> is not present and this is an independent frame (IF), seeking is not optimal',
+        'Info',
+        [
+            new Reference(
+                'ISO_IEC_14496-12',
+                'moov/trak/mdia/minf/stbl/sbgp',
+                'roll_distance',
+                'stts is used for signaling only immediate play-out frames (IPF), but seeking may also be done on independent frames (IF) via sample group mechanics, this would improve seeking behavior through the presence of more seeking points when the player supports sample group mechanics"',
+                'Update the muxer to put sbgp and sgpd atoms with a grouping_type of prol, then remux the content.'
+            ),
+        ],
+        [ 'General_compliance', 'Best_practice' ]
     ),
 ];
 
