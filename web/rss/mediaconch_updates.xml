@@ -5,7 +5,17 @@
         <link>https://mediaarea.net/MediaConch/</link>
         <description>MediaConch updates feed</description>
         <language>en-us</language>
-        <lastBuildDate>Wed, 28 Jun 2023 08:00:00 +0000</lastBuildDate>
+        <lastBuildDate>Wed, 12 Jul 2023 08:00:00 +0000</lastBuildDate>
+          <item>
+            <title>MediaConch 23.07</title>
+            <description>
+                <![CDATA[Update to MediaInfo library 23.07, see MediaInfo change log for the list of changes in the file formats support<br>
+                         Small update of USAC/xHE-AAC conformance checker]]>
+            </description>
+            <link>https://mediaarea.net/MediaConch/download.html</link>
+            <pubDate>Wed, 12 Jul 2023 08:00:00 +0000</pubDate>
+            <guid>MediaConch-23.07</guid>
+          </item>
           <item>
             <title>MediaConch 23.06</title>
             <description>
