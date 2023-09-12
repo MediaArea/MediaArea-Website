@@ -1162,6 +1162,15 @@ Don't hesitate to <a href="%contact%">contact us</a> if you're interested in con
         <source><![CDATA[mediacompare.display.filter.match]]></source>
         <target><![CDATA[Show only identical fields]]></target>
       </trans-unit>
+      <trans-unit id="support.faq.general.SupportLifecycle.title" approved="yes">
+        <source><![CDATA[support.faq.general.SupportLifecycle.title]]></source>
+        <target><![CDATA[The support lifecycle]]></target>
+      </trans-unit>
+      <trans-unit id="support.faq.general.SupportLifecycle.content" approved="yes">
+        <source><![CDATA[support.faq.general.SupportLifecycle.content]]></source>
+        <target><![CDATA[With free support, support is provided only on the latest release provided on our website i.e. the day of a release the previous release is considered as at end of life. In practice we advice any entity needing a fix for their specific problem to update to the latest release when it is ready and includes the fix they need.<br/>
+If you need a different end of life date and/or a backport of an update to a previous release, don't hesitate to <a href="%contact%">contact us</a> for a quotation.]]></target>
+      </trans-unit>
     </body>
   </file>
 </xliff>
