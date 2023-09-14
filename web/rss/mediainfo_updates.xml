@@ -5,7 +5,22 @@
         <link>https://mediaarea.net/MediaInfo</link>
         <description>MediaInfo updates feed</description>
         <language>en-us</language>
-        <lastBuildDate>Wed, 12 Jul 2023 08:00:00 +0000</lastBuildDate>
+        <lastBuildDate>Thu, 14 Sep 2023 08:00:00 +0000</lastBuildDate>
+         <item>
+            <title>MediaInfo 23.09</title>
+            <description>
+                <![CDATA[+ DTS-UHD support (contribution from Xperi)<br />
+                         + MPEG-7 output update, supporting collections for DVD Video<br />
+                         + ISO 9660: more metadata<br />
+                         + AVC: read out of time code<br />
+                         x DVD Video: better support of ISO having several episode<br />s
+                         x MPEG Video: fix duration not including last field duration (interlaced content only)<br />
+                         x I754, AVC&HEVC: fix risk of crash with some streams]]>
+            </description>
+            <link>https://mediaarea.net/MediaInfo</link>
+            <pubDate>Thu, 14 Sep 2023 08:00:00 +0000</pubDate>
+            <guid>MediaInfo-23.09</guid>
+         </item>
          <item>
             <title>MediaInfo 23.07</title>
             <description>
