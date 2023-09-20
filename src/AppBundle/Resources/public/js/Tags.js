@@ -22,7 +22,7 @@ function Line_Hide(tableBody) {
 
 function Col_Show(elem) {
     document.getElementById(elem).className = "hidden";
-    for (var i = 0; i <= 200; i++) {
+    for (var i = 0; i <= 1000; i++) {
         if (document.getElementById(elem + i)) {
             document.getElementById(elem + i).className = elem;
         }
@@ -31,7 +31,7 @@ function Col_Show(elem) {
 
 function Col_Hide(elem) {
     document.getElementById(elem).className = "showed";
-    for (var i = 0; i <= 200; i++) {
+    for (var i = 0; i <= 1000; i++) {
         if (document.getElementById(elem + i)) {
             document.getElementById(elem + i).className = "hidden";
         }

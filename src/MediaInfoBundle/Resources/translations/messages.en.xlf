@@ -93,6 +93,7 @@
 </ul>
 You can find more detailed information here:
 <ul>
+    <li>List of <a href="%supportFieldsRoute%">MediaInfo fields (and their mapping to other export formats)</a></li>
     <li>List of <a href="%supportFormatRoute%">supported formats</a></li>
     <li>List of <a href="%supportTagsRoute%">supported tags</a></li>
 </ul>
@@ -400,6 +401,60 @@ If you use IIS, <code>IIS_IUSRS</code> user must have the "Read &amp; execute" r
       <trans-unit id="82" approved="yes">
         <source><![CDATA[support.wip.warning]]></source>
         <target><![CDATA[WARNING : WORK IN PROGRESS, SOME DETAILS MAY BE WRONG]]></target>
+      </trans-unit>
+      <trans-unit id="support.fields.page.title" approved="yes">
+        <source><![CDATA[support.fields.page.title]]></source>
+        <target><![CDATA[MediaInfo - Fields]]></target>
+      </trans-unit>
+      <trans-unit id="support.fields.title" approved="yes">
+        <source><![CDATA[support.fields.title]]></source>
+        <target><![CDATA[MediaInfo Fields]]></target>
+      </trans-unit>
+      <trans-unit id="support.fields.status" approved="yes">
+        <source><![CDATA[support.fields.status]]></source>
+        <target><![CDATA[List of MediaInfo fields, their description and their mapping to other export formats, as known for version ]]></target>
+      </trans-unit>
+      <trans-unit id="support.fields.status2" approved="yes">
+        <source><![CDATA[support.fields.status2]]></source>
+        <target><![CDATA[.<br/>
+<a href="#Details">Click here for more details</a>.]]></target>
+      </trans-unit>
+      <trans-unit id="support.fields.how" approved="yes">
+        <source><![CDATA[support.fields.how]]></source>
+        <target><![CDATA[How this works:
+<ul>
+    <li>Click on a column header ("MediaInfo"...) to hide it</li>
+    <li>Click on a group header ("General"...) to hide it</li>
+    <li><a onclick="Fields_Col_Show_All()">Expand all columns</a></li>
+    <li><a onclick="Fields_Col_Hide_All()">Collapse all columns</a></li>
+    <li><a onclick="Fields_Line_Show_All()">Expand all groups</a></li>
+    <li><a onclick="Fields_Line_Hide_All()">Collapse all groups</a></li>
+</ul>]]></target>
+      </trans-unit>
+      <trans-unit id="support.fields.details" approved="yes">
+        <source><![CDATA[support.fields.details]]></source>
+        <target><![CDATA[<h1>Information about the mappings</h1>
+<p>MediaInfo provides technical information and tags about audiovisual files in a generic way, trying as much as possible to have a typing of the information allowing its users not to depend on the format of the analyzed file to know an information. For example, the format of a video track has the same name regardless of the format of the file analyzed, and the way in which the authors of the container format specification of the analyzed file have described this video track format.</p>
+<p>MediaInfo developers use a "pivot" format that is available to users in XML (called MIXML) or JSON.</p>
+<p>The first step is to transform the data extracted during file analysis into this pivot storage. A dated, non-exhaustive overview is available at <a href="MediaInfo/Support/Tags">this page</a></p>
+<p>A second step is to transform this pivot storage into the format desired by the user, e.g. MIXML (exhaustive list of content analyzed by MediaInfo), MPEG-7, EBUCore or PBCore.</p>
+<p>Each format has its advantages and disadvantages, for example:</p>
+<ul>
+  <li>MIXML is exhaustive, but although the output is relatively stable, there is no guarantee of compatibility between versions, and this format is unique to MediaInfo, and has no official dictionary.</li>
+  <li>MPEG-7 and EBUCore both have a dictionary for formats, but both suffer from the same shortcoming: the lack of an official dictionary.</li>
+  <li>MPEG-7 is not suitable for multiple tracks of the same type, some track-specific data is outside the track element (GOP, language), and has no Text type.</li>
+  <li>EBUCore is extensible via "technicalAttributeString", "technicalAttributeInteger" or "TechnicalAttributeBoolean", as is PBCore via "essenceTrackAnnotation".</li>
+  <li>EBUCore also has other track types: "timeCodeTrack" (for time code tracks) and "metadataTrack" (mainly using AMWA AS/11 metadata).</li>
+  <li>MPEG-7, EBUCore and PBCore are all 3 "frozen", they don't evolve according to new needs, for example the list of formats isn't updated, new features like 3D (video or audio) or HDR aren't managed, subtitles are very poorly supported and cases like forced subtitles aren't taken into account, and they all lack useful elements for users.</li>
+</ul> 
+<p>From the point of view of the MediaInfo developers, EBUCore has the advantage of being more open (specification freely available to all) and has been updated more often than the others.</p>
+<p>Below is a list of known MIXML elements, a brief description, and mapping to MPEG-7, EBUCore and PBCore. To the best of the MediaInfo developers' knowledge, all the information in MIXML that could be converted to another format has been. The main difficulty for MediaInfo developers is to find out how to store information requested by a user in the various formats, when the formats do not support this type of information and have no active working group.</p>
+<p>This list was created from :</p>
+<ul>
+  <li><a href="https://github.com/MediaArea/MediaInfoLib/tree/master/Source/Resource/Text/Stream">MediaInfo field descriptions</a></li>
+  <li><a href="https://github.com/MediaArea/MediaInfoLib/tree/master/Source/Resource/Text/Mapping">MediaInfo export mapping description</a> (based on <a href="https://github.com/MediaArea/MediaInfoLib/tree/master/Source/MediaInfo/Export">MediaInfo source code for the various export formats</a>)</li>
+</ul>
+<p>Please note that MediaInfo also stores MIXML elements in EBUCore and PBCore formats in a raw form via the output format extensions. The list of elements currently stored via the extensions is not given as it is of little use, these elements have been arbitrarily selected according to sponsor requests, may change between each version, and could contain all MediaInfo fields if requested.</p>]]></target>
       </trans-unit>
       <trans-unit id="83" approved="yes">
         <source><![CDATA[support.formats.page.title]]></source>

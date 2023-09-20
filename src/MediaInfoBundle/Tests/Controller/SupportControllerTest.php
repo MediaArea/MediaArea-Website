@@ -22,6 +22,14 @@ class SupportControllerTest extends WebTestCase
         $this->assertEquals(200, $client->getResponse()->getStatusCode());
     }
 
+    public function testFields()
+    {
+        $client = static::createClient();
+
+        $client->request('GET', '/en/MediaInfo/Support/Fields');
+        $this->assertEquals(200, $client->getResponse()->getStatusCode());
+    }
+
     public function testFormats()
     {
         $client = static::createClient();

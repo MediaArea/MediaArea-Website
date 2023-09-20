@@ -81,6 +81,7 @@ class MenuBuilder
         $menu['menu.mediainfo']
             ->addChild('menu.support', ['route' => 'mi_support'])->setDisplayChildren(false)
             ->addChild('menu.support.faq', ['route' => 'mi_support_faq'])
+            ->addChild('menu.support.fields', ['route' => 'mi_support_fields'])
             ->addChild('menu.support.formats', ['route' => 'mi_support_formats'])
             ->addChild('menu.support.tags', ['route' => 'mi_support_tags'])
             ->addChild('menu.support.build', ['route' => 'mi_support_build'])

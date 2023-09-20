@@ -28,6 +28,20 @@ class SupportController extends Controller
 
     /**
      * @Route(
+     *     "/{_locale}/MediaInfo/Support/Fields",
+     *     name="mi_support_fields",
+     *     requirements={"_locale": "%app.locales%"
+     *     }
+     * )
+     * @Template()
+     */
+    public function fieldsAction()
+    {
+        return array();
+    }
+
+    /**
+     * @Route(
      *     "/{_locale}/MediaInfo/Support/Formats",
      *     name="mi_support_formats",
      *     requirements={"_locale": "%app.locales%"
