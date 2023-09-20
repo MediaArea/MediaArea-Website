@@ -669,15 +669,9 @@ div.map:hover ul {
 }
 
 #Tags th {
-    background-color: #999;
+    background-color: #222;
     border: 1px solid black;
     font-size: small;
-}
-
-@media(prefers-color-scheme: dark) {
-    #Tags th {
-        border-color: #666;
-    }
 }
 
 #Tags td {
@@ -737,6 +731,16 @@ div.map:hover ul {
 #Tags .ri,
 #Tags .dc {
     width: 5%;
+}
+
+@media(prefers-color-scheme: dark) {
+    #Tags th {
+        border-color: #666;
+    }
+
+    #Tags .xheader {
+        background-color: #444;
+    }
 }
 
 /* Support */
