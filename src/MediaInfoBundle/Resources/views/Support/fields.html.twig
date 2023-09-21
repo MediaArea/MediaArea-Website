@@ -1,0 +1,4931 @@
+{% extends 'MediaInfoBundle::base.html.twig' %}
+
+{% block title %}{% trans %}support.fields.page.title{% endtrans %}{% endblock %}
+{% block description %}{% trans %}about.page.description{% endtrans %}{% endblock %}
+{% block keywords %}{% trans %}about.page.keywords{% endtrans %}{% endblock %}
+
+{% block body %}
+<h1>{% trans %}support.fields.title{% endtrans %}</h1>
+<p>{% trans %}support.fields.status{% endtrans %}23.09{% trans %}support.fields.status2{% endtrans %}<br/></p>
+<div id="Tags">
+{% trans %}support.fields.how{% endtrans %}
+{% trans %}support.tags.hidden{% endtrans %}
+<a onclick="Col_Show('mi')" id="mi">MediaInfo,</a>
+<a onclick="Col_Show('de')" id="de">Description,</a>
+<a onclick="Col_Show('mp')" id="mp">MPEG-7,</a>
+<a onclick="Col_Show('eb')" id="eb">EBUCore 1.8,</a>
+<a onclick="Col_Show('pb')" id="pb">PBCore 2.0,</a>
+<br/>
+<br/>
+<table summary="Fields" class="download">
+ <thead>
+  <tr>
+   <th id="mi0" onclick="Col_Hide('mi')" style="cursor: pointer">MediaInfo</th>
+   <th id="de0" onclick="Col_Hide('de')" style="cursor: pointer">Description</th>
+   <th id="mp0" onclick="Col_Hide('mp')" style="cursor: pointer; width: 10%">MPEG-7</th>
+   <th id="eb0" onclick="Col_Hide('eb')" style="cursor: pointer; width: 10%">EBUCore 1.8</th>
+   <th id="pb0" onclick="Col_Hide('pb')" style="cursor: pointer; width: 10%">PBCore 2.0</th>
+  </tr>
+ </thead>
+ <thead>
+  <tr onclick="Line_Show('General')" id="GeneralH" style="cursor: pointer">
+   <td colspan="5" class="xheader">General</td>
+  </tr>
+  <tr onclick="Line_Hide('General')" id="GeneralS" style="cursor: pointer">
+   <td colspan="5" class="xheader">General</td>
+  </tr>
+ </thead>
+ <tbody id="General">
+  <tr>
+   <td id="mi1">StreamOrder</td>
+   <td id="de1">Stream order in the file for type of stream. Counting starts at 0</td>
+   <td id="mp1">&nbsp;</td>
+   <td id="eb1">&nbsp;</td>
+   <td id="pb1">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi2">ID</td>
+   <td id="de2">The identification number for this stream in this file</td>
+   <td id="mp2">&nbsp;</td>
+   <td id="eb2">containerFormatId</td>
+   <td id="pb2">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi3">OriginalSourceMedium_ID</td>
+   <td id="de3">Identification for this stream in the original medium of the material, taken from Tag metadata</td>
+   <td id="mp3">&nbsp;</td>
+   <td id="eb3">&nbsp;</td>
+   <td id="pb3">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi4">UniqueID</td>
+   <td id="de4">The unique ID for this stream, should be copied with stream copy</td>
+   <td id="mp4">&nbsp;</td>
+   <td id="eb4">&nbsp;</td>
+   <td id="pb4">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi5">MenuID</td>
+   <td id="de5">The menu ID for this stream in this file</td>
+   <td id="mp5">&nbsp;</td>
+   <td id="eb5">&nbsp;</td>
+   <td id="pb5">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi6">CompleteName</td>
+   <td id="de6">Full path for this file (Folder+Name+Extension)</td>
+   <td id="mp6">DescriptionMetadata/PrivateIdentifiert (Name+Extension only)</td>
+   <td id="eb6">fileName (Name+Extension only),
+locator</td>
+   <td id="pb6">instantiationIdentifier (Name+Extension only)</td>
+  </tr>
+  <tr>
+   <td id="mi7">CompleteName_Last</td>
+   <td id="de7">Complete name (Folder+Name+Extension) of the last file (in the case of a sequence of files)</td>
+   <td id="mp7">&nbsp;</td>
+   <td id="eb7">&nbsp;</td>
+   <td id="pb7">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi8">Format</td>
+   <td id="de8">Format used</td>
+   <td id="mp8">MediaFormat/FileFormat</td>
+   <td id="eb8">containerFormatName</td>
+   <td id="pb8">instantiationStandard</td>
+  </tr>
+  <tr>
+   <td id="mi9">Format_Commercial_IfAny</td>
+   <td id="de9">Commercial name used by vendor for these settings if there is one</td>
+   <td id="mp9">&nbsp;</td>
+   <td id="eb9">&nbsp;</td>
+   <td id="pb9">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi10">Format_Version</td>
+   <td id="de10">Version for the identified format</td>
+   <td id="mp10">&nbsp;</td>
+   <td id="eb10">containerFormatVersionId</td>
+   <td id="pb10">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi11">Format_Profile</td>
+   <td id="de11">Profile of the Format</td>
+   <td id="mp11">&nbsp;</td>
+   <td id="eb11">&nbsp;</td>
+   <td id="pb11">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi12">Format_Level</td>
+   <td id="de12">Level of the Format</td>
+   <td id="mp12">&nbsp;</td>
+   <td id="eb12">&nbsp;</td>
+   <td id="pb12">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi13">Format_Compression</td>
+   <td id="de13">Compression method used</td>
+   <td id="mp13">&nbsp;</td>
+   <td id="eb13">&nbsp;</td>
+   <td id="pb13">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi14">Format_Settings</td>
+   <td id="de14">Settings used and required by decoder</td>
+   <td id="mp14">&nbsp;</td>
+   <td id="eb14">&nbsp;</td>
+   <td id="pb14">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi15">Format_AdditionalFeatures</td>
+   <td id="de15">Features required to fully support the file content</td>
+   <td id="mp15">&nbsp;</td>
+   <td id="eb15">&nbsp;</td>
+   <td id="pb15">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi16">InternetMediaType</td>
+   <td id="de16">Internet Media Type (aka MIME Type, Content-Type)</td>
+   <td id="mp16">&nbsp;</td>
+   <td id="eb16">&nbsp;</td>
+   <td id="pb16">instantiationDigital</td>
+  </tr>
+  <tr>
+   <td id="mi17">CodecID</td>
+   <td id="de17">Codec ID, if defined by the container</td>
+   <td id="mp17">&nbsp;</td>
+   <td id="eb17">codecIdentifier/identifier</td>
+   <td id="pb17">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi18">CodecID_Description</td>
+   <td id="de18">Codec description, as defined by the container</td>
+   <td id="mp18">&nbsp;</td>
+   <td id="eb18">codecIdentifier/name</td>
+   <td id="pb18">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi19">CodecID_Version</td>
+   <td id="de19">Version of the CodecID</td>
+   <td id="mp19">&nbsp;</td>
+   <td id="eb19">&nbsp;</td>
+   <td id="pb19">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi20">CodecID_Compatible</td>
+   <td id="de20">List of codecs that are compatible with the identified container</td>
+   <td id="mp20">&nbsp;</td>
+   <td id="eb20">&nbsp;</td>
+   <td id="pb20">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi21">Interleaved</td>
+   <td id="de21">If Audio and video are muxed</td>
+   <td id="mp21">&nbsp;</td>
+   <td id="eb21">&nbsp;</td>
+   <td id="pb21">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi22">FileSize</td>
+   <td id="de22">File size, in bytes</td>
+   <td id="mp22">MediaFormat/FileSize</td>
+   <td id="eb22">fileSize</td>
+   <td id="pb22">instantiationFileSize</td>
+  </tr>
+  <tr>
+   <td id="mi23">Duration</td>
+   <td id="de23">Play time of the content, in s (ms for text output)</td>
+   <td id="mp23">MediaTime/MediaDuration</td>
+   <td id="eb23">duration/normalPlayTime</td>
+   <td id="pb23">instantiationDuration</td>
+  </tr>
+  <tr>
+   <td id="mi24">Duration_Start</td>
+   <td id="de24">Start time of stream, in UTC</td>
+   <td id="mp24">&nbsp;</td>
+   <td id="eb24">&nbsp;</td>
+   <td id="pb24">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi25">Duration_End</td>
+   <td id="de25">End time of stream, in UTC</td>
+   <td id="mp25">&nbsp;</td>
+   <td id="eb25">&nbsp;</td>
+   <td id="pb25">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi26">OverallBitRate_Mode</td>
+   <td id="de26">Bit rate mode of all streams (CBR, VBR)</td>
+   <td id="mp26">MediaFormat/BitRate variable</td>
+   <td id="eb26">&nbsp;</td>
+   <td id="pb26">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi27">OverallBitRate</td>
+   <td id="de27">Bit rate of all streams, in bps</td>
+   <td id="mp27">MediaFormat/BitRate</td>
+   <td id="eb27">&nbsp;</td>
+   <td id="pb27">instantiationDataRate</td>
+  </tr>
+  <tr>
+   <td id="mi28">OverallBitRate_Minimum</td>
+   <td id="de28">Minimum total bit rate of all streams, in bps</td>
+   <td id="mp28">&nbsp;</td>
+   <td id="eb28">&nbsp;</td>
+   <td id="pb28">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi29">OverallBitRate_Nominal</td>
+   <td id="de29">Nominal bit rate of all streams, in bps</td>
+   <td id="mp29">&nbsp;</td>
+   <td id="eb29">&nbsp;</td>
+   <td id="pb29">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi30">OverallBitRate_Maximum</td>
+   <td id="de30">Maximum bit rate of all streams, in bps</td>
+   <td id="mp30">&nbsp;</td>
+   <td id="eb30">&nbsp;</td>
+   <td id="pb30">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi31">FrameRate</td>
+   <td id="de31">Frames per second</td>
+   <td id="mp31">&nbsp;</td>
+   <td id="eb31">&nbsp;</td>
+   <td id="pb31">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi32">FrameCount</td>
+   <td id="de32">Frame count, if a stream has the same frame rate everywhere</td>
+   <td id="mp32">&nbsp;</td>
+   <td id="eb32">&nbsp;</td>
+   <td id="pb32">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi33">Delay</td>
+   <td id="de33">Delay fixed in the stream (relative), is s (ms for text output)</td>
+   <td id="mp33">MediaTime/MediaTimePoint</td>
+   <td id="eb33">&nbsp;</td>
+   <td id="pb33">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi34">Delay_Settings</td>
+   <td id="de34">Delay settings (in case of timecode, for example)</td>
+   <td id="mp34">&nbsp;</td>
+   <td id="eb34">&nbsp;</td>
+   <td id="pb34">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi35">Delay_DropFrame</td>
+   <td id="de35">Delay drop frame</td>
+   <td id="mp35">&nbsp;</td>
+   <td id="eb35">&nbsp;</td>
+   <td id="pb35">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi36">Delay_Source</td>
+   <td id="de36">Delay source (Container, Stream, or empty)</td>
+   <td id="mp36">&nbsp;</td>
+   <td id="eb36">&nbsp;</td>
+   <td id="pb36">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi37">StreamSize</td>
+   <td id="de37">Size of this stream, in bytes</td>
+   <td id="mp37">&nbsp;</td>
+   <td id="eb37">&nbsp;</td>
+   <td id="pb37">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi38">HeaderSize</td>
+   <td id="de38">Header field size, in bytes</td>
+   <td id="mp38">&nbsp;</td>
+   <td id="eb38">&nbsp;</td>
+   <td id="pb38">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi39">DataSize</td>
+   <td id="de39">Data field size, in bytes</td>
+   <td id="mp39">&nbsp;</td>
+   <td id="eb39">&nbsp;</td>
+   <td id="pb39">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi40">FooterSize</td>
+   <td id="de40">Footer field size, in bytes</td>
+   <td id="mp40">&nbsp;</td>
+   <td id="eb40">&nbsp;</td>
+   <td id="pb40">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi41">IsStreamable</td>
+   <td id="de41">Set if this file is streamable or not (Yes, No)</td>
+   <td id="mp41">&nbsp;</td>
+   <td id="eb41">&nbsp;</td>
+   <td id="pb41">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi42">Album_ReplayGain_Gain</td>
+   <td id="de42">The gain to apply to reach 89dB SPL on playback</td>
+   <td id="mp42">&nbsp;</td>
+   <td id="eb42">&nbsp;</td>
+   <td id="pb42">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi43">Album_ReplayGain_Peak</td>
+   <td id="de43">The maximum absolute peak value of the item</td>
+   <td id="mp43">&nbsp;</td>
+   <td id="eb43">&nbsp;</td>
+   <td id="pb43">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi44">Encryption</td>
+   <td id="de44">Encryption</td>
+   <td id="mp44">&nbsp;</td>
+   <td id="eb44">&nbsp;</td>
+   <td id="pb44">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi45">Encryption_Format</td>
+   <td id="de45">Encryption format</td>
+   <td id="mp45">&nbsp;</td>
+   <td id="eb45">&nbsp;</td>
+   <td id="pb45">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi46">Encryption_Length</td>
+   <td id="de46">Encryption length (128, 192 or 256 bits)</td>
+   <td id="mp46">&nbsp;</td>
+   <td id="eb46">&nbsp;</td>
+   <td id="pb46">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi47">Encryption_Method</td>
+   <td id="de47">Encryption method</td>
+   <td id="mp47">&nbsp;</td>
+   <td id="eb47">&nbsp;</td>
+   <td id="pb47">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi48">Encryption_Mode</td>
+   <td id="de48">Encryption mode</td>
+   <td id="mp48">&nbsp;</td>
+   <td id="eb48">&nbsp;</td>
+   <td id="pb48">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi49">Encryption_Padding</td>
+   <td id="de49">Encryption padding</td>
+   <td id="mp49">&nbsp;</td>
+   <td id="eb49">&nbsp;</td>
+   <td id="pb49">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi50">Encryption_InitializationVector</td>
+   <td id="de50">Encryption initialization vector</td>
+   <td id="mp50">&nbsp;</td>
+   <td id="eb50">&nbsp;</td>
+   <td id="pb50">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi51">UniversalAdID_Registry</td>
+   <td id="de51">Universal Ad-ID registry</td>
+   <td id="mp51">&nbsp;</td>
+   <td id="eb51">&nbsp;</td>
+   <td id="pb51">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi52">UniversalAdID_Value</td>
+   <td id="de52">Universal Ad-ID value</td>
+   <td id="mp52">&nbsp;</td>
+   <td id="eb52">&nbsp;</td>
+   <td id="pb52">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi53">Title</td>
+   <td id="de53">Title of file</td>
+   <td id="mp53">Creation/Title@type=songTitle</td>
+   <td id="eb53">&nbsp;</td>
+   <td id="pb53">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi54">Title_More</td>
+   <td id="de54">More title information</td>
+   <td id="mp54">&nbsp;</td>
+   <td id="eb54">&nbsp;</td>
+   <td id="pb54">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi55">Domain</td>
+   <td id="de55">Universe that the file's contents belong to (e.g. Star Wars, Stargate, Buffy, Dragonball)</td>
+   <td id="mp55">&nbsp;</td>
+   <td id="eb55">&nbsp;</td>
+   <td id="pb55">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi56">Collection</td>
+   <td id="de56">Name of the series (e.g. Star Wars movies, Stargate SG-1, Angel)</td>
+   <td id="mp56">&nbsp;</td>
+   <td id="eb56">&nbsp;</td>
+   <td id="pb56">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi57">Season</td>
+   <td id="de57">Name of the season (e.g. first Star Wars Trilogy, Season 1)</td>
+   <td id="mp57">&nbsp;</td>
+   <td id="eb57">&nbsp;</td>
+   <td id="pb57">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi58">Season_Position</td>
+   <td id="de58">Number of the Season</td>
+   <td id="mp58">&nbsp;</td>
+   <td id="eb58">&nbsp;</td>
+   <td id="pb58">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi59">Season_Position_Total</td>
+   <td id="de59">Total number of seasons</td>
+   <td id="mp59">&nbsp;</td>
+   <td id="eb59">&nbsp;</td>
+   <td id="pb59">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi60">Movie</td>
+   <td id="de60">Name of the movie (e.g. Star Wars: A New Hope)</td>
+   <td id="mp60">&nbsp;</td>
+   <td id="eb60">&nbsp;</td>
+   <td id="pb60">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi61">Movie_More</td>
+   <td id="de61">More information about the Movie</td>
+   <td id="mp61">&nbsp;</td>
+   <td id="eb61">&nbsp;</td>
+   <td id="pb61">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi62">Movie/Country</td>
+   <td id="de62">Country where the movie was produced</td>
+   <td id="mp62">&nbsp;</td>
+   <td id="eb62">&nbsp;</td>
+   <td id="pb62">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi63">Movie/Url</td>
+   <td id="de63">Homepage for the movie</td>
+   <td id="mp63">&nbsp;</td>
+   <td id="eb63">&nbsp;</td>
+   <td id="pb63">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi64">Album</td>
+   <td id="de64">Name of the album (e.g. The Joshua Tree)</td>
+   <td id="mp64">Creation/Title@type=albumTitle</td>
+   <td id="eb64">&nbsp;</td>
+   <td id="pb64">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi65">Album_More</td>
+   <td id="de65">More information about the Album</td>
+   <td id="mp65">&nbsp;</td>
+   <td id="eb65">&nbsp;</td>
+   <td id="pb65">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi66">Album/Sort</td>
+   <td id="de66">Alternate name of the album, optimized for sorting purposes (e.g. Joshua Tree, The)</td>
+   <td id="mp66">&nbsp;</td>
+   <td id="eb66">&nbsp;</td>
+   <td id="pb66">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi67">Album/Performer</td>
+   <td id="de67">Album performer/artist of this file</td>
+   <td id="mp67">&nbsp;</td>
+   <td id="eb67">&nbsp;</td>
+   <td id="pb67">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi68">Album/Performer/Sort</td>
+   <td id="de68">Alternate name for the performer, optimized for sorting purposes (e.g. Beatles, The)</td>
+   <td id="mp68">&nbsp;</td>
+   <td id="eb68">&nbsp;</td>
+   <td id="pb68">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi69">Album/Performer/Url</td>
+   <td id="de69">Homepage of the album performer/artist</td>
+   <td id="mp69">&nbsp;</td>
+   <td id="eb69">&nbsp;</td>
+   <td id="pb69">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi70">Comic</td>
+   <td id="de70">Name of the comic book series</td>
+   <td id="mp70">&nbsp;</td>
+   <td id="eb70">&nbsp;</td>
+   <td id="pb70">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi71">Comic_More</td>
+   <td id="de71">More information about the comic book series</td>
+   <td id="mp71">&nbsp;</td>
+   <td id="eb71">&nbsp;</td>
+   <td id="pb71">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi72">Comic/Position_Total</td>
+   <td id="de72">Total number of comics</td>
+   <td id="mp72">&nbsp;</td>
+   <td id="eb72">&nbsp;</td>
+   <td id="pb72">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi73">Part</td>
+   <td id="de73">Name of the part (e.g. CD1, CD2)</td>
+   <td id="mp73">Creation/Title@type=songTitle</td>
+   <td id="eb73">&nbsp;</td>
+   <td id="pb73">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi74">Part/Position</td>
+   <td id="de74">Number of the part</td>
+   <td id="mp74">Creation/Title@type=urn:x-mpeg7-mediainfo:cs:TitleTypeCS:2009:PART</td>
+   <td id="eb74">&nbsp;</td>
+   <td id="pb74">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi75">Part/Position_Total</td>
+   <td id="de75">Total number of parts</td>
+   <td id="mp75">Creation/Title@type=urn:x-mpeg7-mediainfo:cs:TitleTypeCS:2009:PART</td>
+   <td id="eb75">&nbsp;</td>
+   <td id="pb75">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi76">Reel</td>
+   <td id="de76">Name of the reel</td>
+   <td id="mp76">&nbsp;</td>
+   <td id="eb76">&nbsp;</td>
+   <td id="pb76">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi77">Reel/Position</td>
+   <td id="de77">Number of the reel</td>
+   <td id="mp77">&nbsp;</td>
+   <td id="eb77">&nbsp;</td>
+   <td id="pb77">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi78">Reel/Position_Total</td>
+   <td id="de78">Total number of reel</td>
+   <td id="mp78">&nbsp;</td>
+   <td id="eb78">&nbsp;</td>
+   <td id="pb78">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi79">Track</td>
+   <td id="de79">Name of the track (e.g. track 1, track 2)</td>
+   <td id="mp79">&nbsp;</td>
+   <td id="eb79">&nbsp;</td>
+   <td id="pb79">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi80">Track_More</td>
+   <td id="de80">More information about the Track</td>
+   <td id="mp80">&nbsp;</td>
+   <td id="eb80">&nbsp;</td>
+   <td id="pb80">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi81">Track/Url</td>
+   <td id="de81">Link to a site about this Track</td>
+   <td id="mp81">&nbsp;</td>
+   <td id="eb81">&nbsp;</td>
+   <td id="pb81">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi82">Track/Sort</td>
+   <td id="de82">Alternate name for the track, optimized for sorting purposes</td>
+   <td id="mp82">&nbsp;</td>
+   <td id="eb82">&nbsp;</td>
+   <td id="pb82">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi83">Track/Position</td>
+   <td id="de83">Number of this Track</td>
+   <td id="mp83">Creation/Title@type=urn:x-mpeg7-mediainfo:cs:TitleTypeCS:2009:TRACK</td>
+   <td id="eb83">&nbsp;</td>
+   <td id="pb83">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi84">Track/Position_Total</td>
+   <td id="de84">Total number of tracks</td>
+   <td id="mp84">Creation/Title@type=urn:x-mpeg7-mediainfo:cs:TitleTypeCS:2009:TRACK</td>
+   <td id="eb84">&nbsp;</td>
+   <td id="pb84">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi85">PackageName</td>
+   <td id="de85">MXF package name</td>
+   <td id="mp85">&nbsp;</td>
+   <td id="eb85">&nbsp;</td>
+   <td id="pb85">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi86">Grouping</td>
+   <td id="de86">iTunes grouping</td>
+   <td id="mp86">&nbsp;</td>
+   <td id="eb86">&nbsp;</td>
+   <td id="pb86">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi87">Chapter</td>
+   <td id="de87">Name of the Chapter</td>
+   <td id="mp87">&nbsp;</td>
+   <td id="eb87">&nbsp;</td>
+   <td id="pb87">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi88">SubTrack</td>
+   <td id="de88">Name of the Subtrack</td>
+   <td id="mp88">&nbsp;</td>
+   <td id="eb88">&nbsp;</td>
+   <td id="pb88">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi89">Original/Album</td>
+   <td id="de89">Original name of the Album</td>
+   <td id="mp89">&nbsp;</td>
+   <td id="eb89">&nbsp;</td>
+   <td id="pb89">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi90">Original/Movie</td>
+   <td id="de90">Original name of the Movie</td>
+   <td id="mp90">&nbsp;</td>
+   <td id="eb90">&nbsp;</td>
+   <td id="pb90">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi91">Original/Part</td>
+   <td id="de91">Original name of the Part</td>
+   <td id="mp91">&nbsp;</td>
+   <td id="eb91">&nbsp;</td>
+   <td id="pb91">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi92">Original/Track</td>
+   <td id="de92">Original name of the Track</td>
+   <td id="mp92">&nbsp;</td>
+   <td id="eb92">&nbsp;</td>
+   <td id="pb92">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi93">Compilation</td>
+   <td id="de93">iTunes compilation</td>
+   <td id="mp93">&nbsp;</td>
+   <td id="eb93">&nbsp;</td>
+   <td id="pb93">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi94">Performer</td>
+   <td id="de94">Main performer(s)/artist(s)</td>
+   <td id="mp94">Creation/Creator/Role@type=urn:mpeg:mpeg7:cs:RoleCS:2001:PERFORMER</td>
+   <td id="eb94">&nbsp;</td>
+   <td id="pb94">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi95">Performer/Sort</td>
+   <td id="de95">Alternate name for the performer, optimized for sorting purposes (e.g. Beatles, The)</td>
+   <td id="mp95">&nbsp;</td>
+   <td id="eb95">&nbsp;</td>
+   <td id="pb95">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi96">Performer/Url</td>
+   <td id="de96">Homepage of the performer/artist</td>
+   <td id="mp96">&nbsp;</td>
+   <td id="eb96">&nbsp;</td>
+   <td id="pb96">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi97">Original/Performer</td>
+   <td id="de97">Original artist(s)/performer(s)</td>
+   <td id="mp97">&nbsp;</td>
+   <td id="eb97">&nbsp;</td>
+   <td id="pb97">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi98">Accompaniment</td>
+   <td id="de98">Band/orchestra/accompaniment/musician</td>
+   <td id="mp98">&nbsp;</td>
+   <td id="eb98">&nbsp;</td>
+   <td id="pb98">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi99">Composer</td>
+   <td id="de99">Name of the original composer</td>
+   <td id="mp99">Creation/Creator/Role@type=urn:mpeg:mpeg7:cs:RoleCS:2001:COMPOSER</td>
+   <td id="eb99">&nbsp;</td>
+   <td id="pb99">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi100">Composer/Nationality</td>
+   <td id="de100">Nationality of the primary composer of the piece</td>
+   <td id="mp100">&nbsp;</td>
+   <td id="eb100">&nbsp;</td>
+   <td id="pb100">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi101">Composer/Sort</td>
+   <td id="de101">Nationality of the primary composer of the piece (e.g. Mozart, Wolfgang Amadeus)</td>
+   <td id="mp101">&nbsp;</td>
+   <td id="eb101">&nbsp;</td>
+   <td id="pb101">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi102">Arranger</td>
+   <td id="de102">The person who arranged the piece (e.g. Ravel)</td>
+   <td id="mp102">&nbsp;</td>
+   <td id="eb102">&nbsp;</td>
+   <td id="pb102">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi103">Lyricist</td>
+   <td id="de103">The person who wrote the lyrics for the piece</td>
+   <td id="mp103">&nbsp;</td>
+   <td id="eb103">&nbsp;</td>
+   <td id="pb103">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi104">Original/Lyricist</td>
+   <td id="de104">Original lyricist(s)/text writer(s)</td>
+   <td id="mp104">&nbsp;</td>
+   <td id="eb104">&nbsp;</td>
+   <td id="pb104">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi105">Conductor</td>
+   <td id="de105">The artist(s) who performed the work. In classical music this would be the conductor, orchestra, soloists, etc</td>
+   <td id="mp105">&nbsp;</td>
+   <td id="eb105">&nbsp;</td>
+   <td id="pb105">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi106">Director</td>
+   <td id="de106">Name of the director</td>
+   <td id="mp106">Creation/Creator/Role@type=urn:mpeg:mpeg7:cs:RoleCS:2001:PRODUCER</td>
+   <td id="eb106">&nbsp;</td>
+   <td id="pb106">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi107">CoDirector</td>
+   <td id="de107">Name of the codirector</td>
+   <td id="mp107">&nbsp;</td>
+   <td id="eb107">&nbsp;</td>
+   <td id="pb107">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi108">AssistantDirector</td>
+   <td id="de108">Name of the assistant director</td>
+   <td id="mp108">&nbsp;</td>
+   <td id="eb108">&nbsp;</td>
+   <td id="pb108">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi109">DirectorOfPhotography</td>
+   <td id="de109">Name of the director of photography, also known as cinematographer</td>
+   <td id="mp109">&nbsp;</td>
+   <td id="eb109">&nbsp;</td>
+   <td id="pb109">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi110">SoundEngineer</td>
+   <td id="de110">Name of the sound engineer or sound recordist</td>
+   <td id="mp110">&nbsp;</td>
+   <td id="eb110">&nbsp;</td>
+   <td id="pb110">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi111">ArtDirector</td>
+   <td id="de111">Name of the person who oversees the artists and craftspeople who build the sets</td>
+   <td id="mp111">&nbsp;</td>
+   <td id="eb111">&nbsp;</td>
+   <td id="pb111">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi112">ProductionDesigner</td>
+   <td id="de112">Name of the person responsible for designing the overall visual appearance of a movie</td>
+   <td id="mp112">Creation/Creator/Role@type=urn:mpeg:mpeg7:cs:RoleCS:2001:PRODUCTION-DESIGNER</td>
+   <td id="eb112">&nbsp;</td>
+   <td id="pb112">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi113">Choreographer</td>
+   <td id="de113">Name of the choreographer</td>
+   <td id="mp113">&nbsp;</td>
+   <td id="eb113">&nbsp;</td>
+   <td id="pb113">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi114">CostumeDesigner</td>
+   <td id="de114">Name of the costume designer</td>
+   <td id="mp114">Creation/Creator/Role@type=urn:mpeg:mpeg7:cs:RoleCS:2001:COSTUME-SUPERVISOR</td>
+   <td id="eb114">&nbsp;</td>
+   <td id="pb114">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi115">Actor</td>
+   <td id="de115">Real name of an actor/actress playing a role in the movie</td>
+   <td id="mp115">&nbsp;</td>
+   <td id="eb115">&nbsp;</td>
+   <td id="pb115">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi116">Actor_Character</td>
+   <td id="de116">Name of the character an actor or actress plays in this movie</td>
+   <td id="mp116">&nbsp;</td>
+   <td id="eb116">&nbsp;</td>
+   <td id="pb116">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi117">WrittenBy</td>
+   <td id="de117">Author of the story or script</td>
+   <td id="mp117">Creation/Creator/Role@type=urn:mpeg:mpeg7:cs:RoleCS:2001:AUTHOR</td>
+   <td id="eb117">&nbsp;</td>
+   <td id="pb117">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi118">ScreenplayBy</td>
+   <td id="de118">Author of the screenplay or scenario (used for movies and TV shows)</td>
+   <td id="mp118">&nbsp;</td>
+   <td id="eb118">&nbsp;</td>
+   <td id="pb118">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi119">EditedBy</td>
+   <td id="de119">Editors name</td>
+   <td id="mp119">&nbsp;</td>
+   <td id="eb119">&nbsp;</td>
+   <td id="pb119">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi120">CommissionedBy</td>
+   <td id="de120">Name of the person or organization that commissioned the subject of the file</td>
+   <td id="mp120">&nbsp;</td>
+   <td id="eb120">&nbsp;</td>
+   <td id="pb120">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi121">Producer</td>
+   <td id="de121">Name of the producer of the media</td>
+   <td id="mp121">Creation/Creator/Role@type=urn:mpeg:mpeg7:cs:RoleCS:2001:PRODUCER</td>
+   <td id="eb121">&nbsp;</td>
+   <td id="pb121">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi122">CoProducer</td>
+   <td id="de122">Name of a co-producer of the media</td>
+   <td id="mp122">&nbsp;</td>
+   <td id="eb122">&nbsp;</td>
+   <td id="pb122">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi123">ExecutiveProducer</td>
+   <td id="de123">Name of an executive producer of the media</td>
+   <td id="mp123">Creation/Creator/Role@type=urn:mpeg:mpeg7:cs:RoleCS:2001:EXECUTIVE-PRODUCER</td>
+   <td id="eb123">&nbsp;</td>
+   <td id="pb123">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi124">MusicBy</td>
+   <td id="de124">Main musical artist for the media</td>
+   <td id="mp124">&nbsp;</td>
+   <td id="eb124">&nbsp;</td>
+   <td id="pb124">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi125">DistributedBy</td>
+   <td id="de125">Company responsible for distribution of the content</td>
+   <td id="mp125">Creation/Creator/Role@type=urn:mpeg:mpeg7:cs:RoleCS:2001:DISTRIBUTOR</td>
+   <td id="eb125">&nbsp;</td>
+   <td id="pb125">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi126">OriginalSourceForm/DistributedBy</td>
+   <td id="de126">Name of the person or organization who supplied the original subject</td>
+   <td id="mp126">&nbsp;</td>
+   <td id="eb126">&nbsp;</td>
+   <td id="pb126">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi127">MasteredBy</td>
+   <td id="de127">The engineer who mastered the content for a physical medium or for digital distribution</td>
+   <td id="mp127">&nbsp;</td>
+   <td id="eb127">&nbsp;</td>
+   <td id="pb127">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi128">EncodedBy</td>
+   <td id="de128">Name of the person/organisation that encoded/ripped the audio file</td>
+   <td id="mp128">&nbsp;</td>
+   <td id="eb128">&nbsp;</td>
+   <td id="pb128">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi129">RemixedBy</td>
+   <td id="de129">Name of the artist(s) that interpreted, remixed, or otherwise modified the content</td>
+   <td id="mp129">&nbsp;</td>
+   <td id="eb129">&nbsp;</td>
+   <td id="pb129">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi130">ProductionStudio</td>
+   <td id="de130">Main production studio of the media</td>
+   <td id="mp130">&nbsp;</td>
+   <td id="eb130">&nbsp;</td>
+   <td id="pb130">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi131">ThanksTo</td>
+   <td id="de131">A very general metadata tag for everyone else that wants to be listed</td>
+   <td id="mp131">&nbsp;</td>
+   <td id="eb131">&nbsp;</td>
+   <td id="pb131">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi132">Publisher</td>
+   <td id="de132">Name of the organization publishing the media (i.e. the record label)</td>
+   <td id="mp132">Creation/Creator/Role@type=urn:mpeg:mpeg7:cs:RoleCS:2001:PUBLISHER</td>
+   <td id="eb132">&nbsp;</td>
+   <td id="pb132">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi133">Publisher/URL</td>
+   <td id="de133">Publisher's official webpage</td>
+   <td id="mp133">&nbsp;</td>
+   <td id="eb133">&nbsp;</td>
+   <td id="pb133">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi134">Label</td>
+   <td id="de134">Brand or trademark associated with the marketing of music recordings and music videos</td>
+   <td id="mp134">Creation/Creator/Role@type=urn:mpeg:mpeg7:cs:RoleCS:2001:RECORD-LABEL</td>
+   <td id="eb134">&nbsp;</td>
+   <td id="pb134">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi135">Genre</td>
+   <td id="de135">Main genre of the media (e.g. classical, ambient-house, synthpop, sci-fi, drama, etc.)</td>
+   <td id="mp135">&nbsp;</td>
+   <td id="eb135">&nbsp;</td>
+   <td id="pb135">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi136">PodcastCategory</td>
+   <td id="de136">Podcast category</td>
+   <td id="mp136">&nbsp;</td>
+   <td id="eb136">&nbsp;</td>
+   <td id="pb136">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi137">Mood</td>
+   <td id="de137">Intended to reflect the mood of the item with a few keywords (e.g. Romantic, Sad, Uplifting, etc.)</td>
+   <td id="mp137">&nbsp;</td>
+   <td id="eb137">&nbsp;</td>
+   <td id="pb137">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi138">ContentType</td>
+   <td id="de138">The type or genre of the content (e.g. Documentary, Feature Film, Cartoon, Music Video, Music, Sound FX, etc.)</td>
+   <td id="mp138">&nbsp;</td>
+   <td id="eb138">&nbsp;</td>
+   <td id="pb138">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi139">Subject</td>
+   <td id="de139">Describes the topic of the file (e.g. Aerial view of Seattle.)</td>
+   <td id="mp139">&nbsp;</td>
+   <td id="eb139">&nbsp;</td>
+   <td id="pb139">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi140">Description</td>
+   <td id="de140">A short description of the contents (e.g. Two birds flying.)</td>
+   <td id="mp140">&nbsp;</td>
+   <td id="eb140">&nbsp;</td>
+   <td id="pb140">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi141">Keywords</td>
+   <td id="de141">Keywords for the content separated by a comma, used for searching</td>
+   <td id="mp141">&nbsp;</td>
+   <td id="eb141">&nbsp;</td>
+   <td id="pb141">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi142">Summary</td>
+   <td id="de142">Plot outline or a summary of the story</td>
+   <td id="mp142">&nbsp;</td>
+   <td id="eb142">&nbsp;</td>
+   <td id="pb142">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi143">Synopsis</td>
+   <td id="de143">Description of the story line of the item</td>
+   <td id="mp143">&nbsp;</td>
+   <td id="eb143">&nbsp;</td>
+   <td id="pb143">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi144">Period</td>
+   <td id="de144">Describes the period that the piece is from or about (e.g. Renaissance)</td>
+   <td id="mp144">&nbsp;</td>
+   <td id="eb144">&nbsp;</td>
+   <td id="pb144">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi145">LawRating</td>
+   <td id="de145">Legal rating of a movie. Format depends on country of origin (e.g. PG, 16)</td>
+   <td id="mp145">&nbsp;</td>
+   <td id="eb145">&nbsp;</td>
+   <td id="pb145">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi146">LawRating_Reason</td>
+   <td id="de146">Reason for the law rating</td>
+   <td id="mp146">&nbsp;</td>
+   <td id="eb146">&nbsp;</td>
+   <td id="pb146">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi147">ICRA</td>
+   <td id="de147">The ICRA rating (previously RSACi)</td>
+   <td id="mp147">&nbsp;</td>
+   <td id="eb147">&nbsp;</td>
+   <td id="pb147">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi148">Released_Date</td>
+   <td id="de148">Date/year that the content was released</td>
+   <td id="mp148">&nbsp;</td>
+   <td id="eb148">&nbsp;</td>
+   <td id="pb148">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi149">Original/Released_Date</td>
+   <td id="de149">Date/year that the content was originally released</td>
+   <td id="mp149">&nbsp;</td>
+   <td id="eb149">&nbsp;</td>
+   <td id="pb149">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi150">Recorded_Date</td>
+   <td id="de150">Time/date/year that the recording began</td>
+   <td id="mp150">Creation/CreationCoordinates/Date</td>
+   <td id="eb150">dateCreated</td>
+   <td id="pb150">instantiationDate</td>
+  </tr>
+  <tr>
+   <td id="mi151">Encoded_Date</td>
+   <td id="de151">Time/date/year that the encoding of this content was completed</td>
+   <td id="mp151">Creation/CreationCoordinates/Date</td>
+   <td id="eb151">dateModified</td>
+   <td id="pb151">instantiationDate</td>
+  </tr>
+  <tr>
+   <td id="mi152">Tagged_Date</td>
+   <td id="de152">Time/date/year that the tags were added to this content</td>
+   <td id="mp152">&nbsp;</td>
+   <td id="eb152">&nbsp;</td>
+   <td id="pb152">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi153">Written_Date</td>
+   <td id="de153">Time/date/year that the composition of the music/script began</td>
+   <td id="mp153">&nbsp;</td>
+   <td id="eb153">&nbsp;</td>
+   <td id="pb153">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi154">Mastered_Date</td>
+   <td id="de154">Time/date/year that the content was digitally mastered</td>
+   <td id="mp154">&nbsp;</td>
+   <td id="eb154">&nbsp;</td>
+   <td id="pb154">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi155">File_Created_Date</td>
+   <td id="de155">Time that the file was created on the file system</td>
+   <td id="mp155">&nbsp;</td>
+   <td id="eb155">&nbsp;</td>
+   <td id="pb155">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi156">File_Created_Date_Local</td>
+   <td id="de156">Local time that the file was created on the file system (not to be used in an international database)</td>
+   <td id="mp156">&nbsp;</td>
+   <td id="eb156">&nbsp;</td>
+   <td id="pb156">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi157">Recorded_Location</td>
+   <td id="de157">Location where track was recorded, as Longitude+Latitude</td>
+   <td id="mp157">&nbsp;</td>
+   <td id="eb157">&nbsp;</td>
+   <td id="pb157">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi158">Written_Location</td>
+   <td id="de158">Location that the item was originally designed/written</td>
+   <td id="mp158">&nbsp;</td>
+   <td id="eb158">&nbsp;</td>
+   <td id="pb158">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi159">Archival_Location</td>
+   <td id="de159">Location where an item is archived (e.g. Louvre, Paris, France)</td>
+   <td id="mp159">&nbsp;</td>
+   <td id="eb159">&nbsp;</td>
+   <td id="pb159">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi160">Encoded_Application</td>
+   <td id="de160">Name of the software package used to create the file (e.g. Microsoft WaveEdiTY)</td>
+   <td id="mp160">Creation/CreationTool/Tool/Name</td>
+   <td id="eb160">&nbsp;</td>
+   <td id="pb160">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi161">Encoded_Application_CompanyName</td>
+   <td id="de161">Name of the company of the encoding application</td>
+   <td id="mp161">&nbsp;</td>
+   <td id="eb161">&nbsp;</td>
+   <td id="pb161">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi162">Encoded_Application_Name</td>
+   <td id="de162">Name of the encoding product</td>
+   <td id="mp162">&nbsp;</td>
+   <td id="eb162">&nbsp;</td>
+   <td id="pb162">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi163">Encoded_Application_Version</td>
+   <td id="de163">Version of the encoding product</td>
+   <td id="mp163">&nbsp;</td>
+   <td id="eb163">&nbsp;</td>
+   <td id="pb163">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi164">Encoded_Application_Url</td>
+   <td id="de164">URL associated with the encoding software</td>
+   <td id="mp164">&nbsp;</td>
+   <td id="eb164">&nbsp;</td>
+   <td id="pb164">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi165">Encoded_Library</td>
+   <td id="de165">Software used to create the file</td>
+   <td id="mp165">Creation/CreationTool/Tool/Name</td>
+   <td id="eb165">&nbsp;</td>
+   <td id="pb165">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi166">Encoded_Library_CompanyName</td>
+   <td id="de166">Name of the encoding software company</td>
+   <td id="mp166">&nbsp;</td>
+   <td id="eb166">&nbsp;</td>
+   <td id="pb166">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi167">Encoded_Library_Name</td>
+   <td id="de167">Name of the encoding software</td>
+   <td id="mp167">&nbsp;</td>
+   <td id="eb167">&nbsp;</td>
+   <td id="pb167">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi168">Encoded_Library_Version</td>
+   <td id="de168">Version of the encoding software</td>
+   <td id="mp168">&nbsp;</td>
+   <td id="eb168">&nbsp;</td>
+   <td id="pb168">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi169">Encoded_Library_Date</td>
+   <td id="de169">Release date of the encoding software, in UTC</td>
+   <td id="mp169">&nbsp;</td>
+   <td id="eb169">&nbsp;</td>
+   <td id="pb169">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi170">Encoded_Library_Settings</td>
+   <td id="de170">Parameters used by the encoding software</td>
+   <td id="mp170">&nbsp;</td>
+   <td id="eb170">&nbsp;</td>
+   <td id="pb170">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi171">Encoded_OperatingSystem</td>
+   <td id="de171">Operating System of the encoding software</td>
+   <td id="mp171">&nbsp;</td>
+   <td id="eb171">&nbsp;</td>
+   <td id="pb171">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi172">Cropped</td>
+   <td id="de172">Describes whether an image has been cropped and, if so, how it was cropped</td>
+   <td id="mp172">&nbsp;</td>
+   <td id="eb172">&nbsp;</td>
+   <td id="pb172">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi173">Dimensions</td>
+   <td id="de173">Specifies the size of the original subject of the file (e.g. 8.5 in h, 11 in w)</td>
+   <td id="mp173">&nbsp;</td>
+   <td id="eb173">&nbsp;</td>
+   <td id="pb173">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi174">DotsPerInch</td>
+   <td id="de174">Stores dots per inch setting of the digitization mechanism used to produce the file</td>
+   <td id="mp174">&nbsp;</td>
+   <td id="eb174">&nbsp;</td>
+   <td id="pb174">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi175">Lightness</td>
+   <td id="de175">Describes the changes in lightness settings on the digitization mechanism made during the production of the file</td>
+   <td id="mp175">&nbsp;</td>
+   <td id="eb175">&nbsp;</td>
+   <td id="pb175">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi176">OriginalSourceMedium</td>
+   <td id="de176">Original medium of the material (e.g. vinyl, Audio-CD, Super8 or BetaMax)</td>
+   <td id="mp176">&nbsp;</td>
+   <td id="eb176">&nbsp;</td>
+   <td id="pb176">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi177">OriginalSourceForm</td>
+   <td id="de177">Original form of the material (e.g. slide, paper, map)</td>
+   <td id="mp177">&nbsp;</td>
+   <td id="eb177">&nbsp;</td>
+   <td id="pb177">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi178">OriginalSourceForm/NumColors</td>
+   <td id="de178">Number of colors requested when digitizing (e.g. 256 for images or 32 bit RGB for video)</td>
+   <td id="mp178">&nbsp;</td>
+   <td id="eb178">&nbsp;</td>
+   <td id="pb178">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi179">OriginalSourceForm/Name</td>
+   <td id="de179">Name of the product the file was originally intended for</td>
+   <td id="mp179">&nbsp;</td>
+   <td id="eb179">&nbsp;</td>
+   <td id="pb179">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi180">OriginalSourceForm/Cropped</td>
+   <td id="de180">Describes whether the original image has been cropped and, if so, how it was cropped (e.g. 16:9 to 4:3, top and bottom)</td>
+   <td id="mp180">&nbsp;</td>
+   <td id="eb180">&nbsp;</td>
+   <td id="pb180">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi181">OriginalSourceForm/Sharpness</td>
+   <td id="de181">Identifies changes in sharpness the digitization mechanism made during the production of the file</td>
+   <td id="mp181">&nbsp;</td>
+   <td id="eb181">&nbsp;</td>
+   <td id="pb181">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi182">Tagged_Application</td>
+   <td id="de182">Software used to tag the file</td>
+   <td id="mp182">&nbsp;</td>
+   <td id="eb182">&nbsp;</td>
+   <td id="pb182">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi183">BPM</td>
+   <td id="de183">Average number of beats per minute</td>
+   <td id="mp183">&nbsp;</td>
+   <td id="eb183">&nbsp;</td>
+   <td id="pb183">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi184">ISRC</td>
+   <td id="de184">International Standard Recording Code, excluding the ISRC prefix and including hyphens</td>
+   <td id="mp184">DescriptionMetadata/PublicIdentifier@type="ISRC"</td>
+   <td id="eb184">&nbsp;</td>
+   <td id="pb184">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi185">ISBN</td>
+   <td id="de185">International Standard Book Number</td>
+   <td id="mp185">&nbsp;</td>
+   <td id="eb185">&nbsp;</td>
+   <td id="pb185">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi186">ISAN</td>
+   <td id="de186">International Standard Audiovisual Number</td>
+   <td id="mp186">DescriptionMetadata/PublicIdentifier@type="ISAN"</td>
+   <td id="eb186">&nbsp;</td>
+   <td id="pb186">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi187">BarCode</td>
+   <td id="de187">EAN-13 (13-digit European Article Numbering) or UPC-A (12-digit Universal Product Code) bar code identifier</td>
+   <td id="mp187">&nbsp;</td>
+   <td id="eb187">&nbsp;</td>
+   <td id="pb187">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi188">LCCN</td>
+   <td id="de188">Library of Congress Control Number</td>
+   <td id="mp188">&nbsp;</td>
+   <td id="eb188">&nbsp;</td>
+   <td id="pb188">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi189">UMID</td>
+   <td id="de189">Universal Media Identifier</td>
+   <td id="mp189">DescriptionMetadata/PublicIdentifier@type="UMID"</td>
+   <td id="eb189">&nbsp;</td>
+   <td id="pb189">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi190">CatalogNumber</td>
+   <td id="de190">A label-specific catalogue number used to identify the release (e.g. TIC 01)</td>
+   <td id="mp190">&nbsp;</td>
+   <td id="eb190">&nbsp;</td>
+   <td id="pb190">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi191">LabelCode</td>
+   <td id="de191">Label code (e.g. 12345, meaning LC-12345)</td>
+   <td id="mp191">&nbsp;</td>
+   <td id="eb191">&nbsp;</td>
+   <td id="pb191">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi192">Owner</td>
+   <td id="de192">Owner of the file</td>
+   <td id="mp192">&nbsp;</td>
+   <td id="eb192">&nbsp;</td>
+   <td id="pb192">instantiationRights/rightsSummary</td>
+  </tr>
+  <tr>
+   <td id="mi193">Copyright</td>
+   <td id="de193">Copyright attribution</td>
+   <td id="mp193">&nbsp;</td>
+   <td id="eb193">&nbsp;</td>
+   <td id="pb193">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi194">Copyright/Url</td>
+   <td id="de194">Link to a site with copyright/legal information</td>
+   <td id="mp194">&nbsp;</td>
+   <td id="eb194">&nbsp;</td>
+   <td id="pb194">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi195">Producer_Copyright</td>
+   <td id="de195">Copyright information as per the production copyright holder</td>
+   <td id="mp195">&nbsp;</td>
+   <td id="eb195">&nbsp;</td>
+   <td id="pb195">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi196">TermsOfUse</td>
+   <td id="de196">License information (e.g. All Rights Reserved, Any Use Permitted)</td>
+   <td id="mp196">&nbsp;</td>
+   <td id="eb196">&nbsp;</td>
+   <td id="pb196">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi197">ServiceName</td>
+   <td id="de197">Name of assisted service</td>
+   <td id="mp197">&nbsp;</td>
+   <td id="eb197">&nbsp;</td>
+   <td id="pb197">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi198">ServiceChannel</td>
+   <td id="de198">Channel of assisted service</td>
+   <td id="mp198">&nbsp;</td>
+   <td id="eb198">&nbsp;</td>
+   <td id="pb198">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi199">Service/Url</td>
+   <td id="de199">URL of of assisted service</td>
+   <td id="mp199">&nbsp;</td>
+   <td id="eb199">&nbsp;</td>
+   <td id="pb199">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi200">ServiceProvider</td>
+   <td id="de200">Provider of assisted service</td>
+   <td id="mp200">&nbsp;</td>
+   <td id="eb200">&nbsp;</td>
+   <td id="pb200">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi201">ServiceProvider/Url</td>
+   <td id="de201">URL of provider of assisted service</td>
+   <td id="mp201">&nbsp;</td>
+   <td id="eb201">&nbsp;</td>
+   <td id="pb201">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi202">ServiceType</td>
+   <td id="de202">Type of assisted service</td>
+   <td id="mp202">&nbsp;</td>
+   <td id="eb202">&nbsp;</td>
+   <td id="pb202">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi203">NetworkName</td>
+   <td id="de203">Television network name</td>
+   <td id="mp203">&nbsp;</td>
+   <td id="eb203">&nbsp;</td>
+   <td id="pb203">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi204">OriginalNetworkName</td>
+   <td id="de204">Television network name of original broadcast</td>
+   <td id="mp204">&nbsp;</td>
+   <td id="eb204">&nbsp;</td>
+   <td id="pb204">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi205">Country</td>
+   <td id="de205">Country information of the content</td>
+   <td id="mp205">&nbsp;</td>
+   <td id="eb205">&nbsp;</td>
+   <td id="pb205">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi206">TimeZone</td>
+   <td id="de206">Time zone information of the content</td>
+   <td id="mp206">&nbsp;</td>
+   <td id="eb206">&nbsp;</td>
+   <td id="pb206">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi207">Cover</td>
+   <td id="de207">Is there a cover? Result will be Yes if present, empty if not</td>
+   <td id="mp207">&nbsp;</td>
+   <td id="eb207">&nbsp;</td>
+   <td id="pb207">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi208">Cover_Description</td>
+   <td id="de208">Short description of cover image file (e.g. Earth in space)</td>
+   <td id="mp208">&nbsp;</td>
+   <td id="eb208">&nbsp;</td>
+   <td id="pb208">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi209">Cover_Type</td>
+   <td id="de209">Cover type (e.g. Cover (front))</td>
+   <td id="mp209">&nbsp;</td>
+   <td id="eb209">&nbsp;</td>
+   <td id="pb209">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi210">Cover_Mime</td>
+   <td id="de210">MIME type of cover file (e.g. image/png)</td>
+   <td id="mp210">&nbsp;</td>
+   <td id="eb210">&nbsp;</td>
+   <td id="pb210">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi211">Cover_Data</td>
+   <td id="de211">Cover, in binary format, encoded as Base64</td>
+   <td id="mp211">&nbsp;</td>
+   <td id="eb211">&nbsp;</td>
+   <td id="pb211">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi212">Lyrics</td>
+   <td id="de212">Text of a song</td>
+   <td id="mp212">&nbsp;</td>
+   <td id="eb212">&nbsp;</td>
+   <td id="pb212">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi213">Comment</td>
+   <td id="de213">Any comment related to the content</td>
+   <td id="mp213">&nbsp;</td>
+   <td id="eb213">&nbsp;</td>
+   <td id="pb213">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi214">Rating</td>
+   <td id="de214">A numeric value defining how much a person likes the song/movie, 1 to 5 (e.g. 2, 5.0)</td>
+   <td id="mp214">&nbsp;</td>
+   <td id="eb214">&nbsp;</td>
+   <td id="pb214">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi215">Added_Date</td>
+   <td id="de215">Date/year the item was added to the owners collection</td>
+   <td id="mp215">&nbsp;</td>
+   <td id="eb215">&nbsp;</td>
+   <td id="pb215">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi216">Played_First_Date</td>
+   <td id="de216">Date the owner first played an item</td>
+   <td id="mp216">&nbsp;</td>
+   <td id="eb216">&nbsp;</td>
+   <td id="pb216">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi217">Played_Last_Date</td>
+   <td id="de217">Date the owner last played an item</td>
+   <td id="mp217">&nbsp;</td>
+   <td id="eb217">&nbsp;</td>
+   <td id="pb217">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi218">Played_Count</td>
+   <td id="de218">Number of times an item was played</td>
+   <td id="mp218">&nbsp;</td>
+   <td id="eb218">&nbsp;</td>
+   <td id="pb218">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi219">EPG_Positions_Begin</td>
+   <td id="de219">Beginning position for Electronic Program Guide</td>
+   <td id="mp219">&nbsp;</td>
+   <td id="eb219">&nbsp;</td>
+   <td id="pb219">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi220">EPG_Positions_End</td>
+   <td id="de220">Ending position for Electronic Program Guide</td>
+   <td id="mp220">&nbsp;</td>
+   <td id="eb220">&nbsp;</td>
+   <td id="pb220">&nbsp;</td>
+  </tr>
+ </tbody>
+ <thead>
+  <tr onclick="Line_Show('Video')" id="VideoH" style="cursor: pointer">
+   <td colspan="5" class="xheader">Video</td>
+  </tr>
+  <tr onclick="Line_Hide('Video')" id="VideoS" style="cursor: pointer">
+   <td colspan="5" class="xheader">Video</td>
+  </tr>
+ </thead>
+ <tbody id="Video">
+  <tr>
+   <td id="mi221">StreamOrder</td>
+   <td id="de221">Stream order in the file for type of stream. Counting starts at 0</td>
+   <td id="mp221">&nbsp;</td>
+   <td id="eb221">&nbsp;</td>
+   <td id="pb221">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi222">ID</td>
+   <td id="de222">The identification number for this stream in this file</td>
+   <td id="mp222">&nbsp;</td>
+   <td id="eb222">videoTrack@trackId</td>
+   <td id="pb222">essenceTrackIdentifier</td>
+  </tr>
+  <tr>
+   <td id="mi223">OriginalSourceMedium_ID</td>
+   <td id="de223">Identification for this stream in the original medium of the material</td>
+   <td id="mp223">&nbsp;</td>
+   <td id="eb223">&nbsp;</td>
+   <td id="pb223">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi224">UniqueID</td>
+   <td id="de224">The unique ID for this stream, should be copied with stream copy</td>
+   <td id="mp224">&nbsp;</td>
+   <td id="eb224">&nbsp;</td>
+   <td id="pb224">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi225">MenuID</td>
+   <td id="de225">The menu ID for this stream in this file</td>
+   <td id="mp225">&nbsp;</td>
+   <td id="eb225">&nbsp;</td>
+   <td id="pb225">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi226">Format</td>
+   <td id="de226">Format used</td>
+   <td id="mp226">Format</td>
+   <td id="eb226">videoFormat@videoFormatName,
+videoEncoding@typeLabel</td>
+   <td id="pb226">essenceTrackEncoding</td>
+  </tr>
+  <tr>
+   <td id="mi227">Format_Commercial_IfAny</td>
+   <td id="de227">Commercial name used by vendor for these settings, if available</td>
+   <td id="mp227">&nbsp;</td>
+   <td id="eb227">&nbsp;</td>
+   <td id="pb227">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi228">Format_Version</td>
+   <td id="de228">Version for the identified format</td>
+   <td id="mp228">Format</td>
+   <td id="eb228">videoFormat@@videoFormatVersionId,
+videoEncoding@typeLabel</td>
+   <td id="pb228">essenceTrackEncoding@version</td>
+  </tr>
+  <tr>
+   <td id="mi229">Format_Profile</td>
+   <td id="de229">Profile of the Format</td>
+   <td id="mp229">Format</td>
+   <td id="eb229">videoEncoding@typeLabel</td>
+   <td id="pb229">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi230">Format_Level</td>
+   <td id="de230">Level of the Format</td>
+   <td id="mp230">Format</td>
+   <td id="eb230">videoEncoding@typeLabel</td>
+   <td id="pb230">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi231">Format_Tier</td>
+   <td id="de231">Tier of the Format</td>
+   <td id="mp231">&nbsp;</td>
+   <td id="eb231">&nbsp;</td>
+   <td id="pb231">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi232">Format_Compression</td>
+   <td id="de232">Compression method used</td>
+   <td id="mp232">&nbsp;</td>
+   <td id="eb232">&nbsp;</td>
+   <td id="pb232">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi233">Format_AdditionalFeatures</td>
+   <td id="de233">Features from the format that are required to fully support the file content</td>
+   <td id="mp233">&nbsp;</td>
+   <td id="eb233">&nbsp;</td>
+   <td id="pb233">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi234">MultiView_BaseProfile</td>
+   <td id="de234">Profile of the base stream for Multiview Video Coding</td>
+   <td id="mp234">&nbsp;</td>
+   <td id="eb234">&nbsp;</td>
+   <td id="pb234">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi235">MultiView_Count</td>
+   <td id="de235">View count for Multiview Video Coding</td>
+   <td id="mp235">&nbsp;</td>
+   <td id="eb235">flag_3D</td>
+   <td id="pb235">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi236">MultiView_Layout</td>
+   <td id="de236">How views are muxed in the container for Multiview Video Coding</td>
+   <td id="mp236">&nbsp;</td>
+   <td id="eb236">&nbsp;</td>
+   <td id="pb236">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi237">HDR_Format</td>
+   <td id="de237">High Dynamic Range Format used</td>
+   <td id="mp237">&nbsp;</td>
+   <td id="eb237">&nbsp;</td>
+   <td id="pb237">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi238">HDR_Format_Commercial</td>
+   <td id="de238">Commercial name used by vendor for these HDR settings or HDR Format field if there is no difference</td>
+   <td id="mp238">&nbsp;</td>
+   <td id="eb238">&nbsp;</td>
+   <td id="pb238">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi239">HDR_Format_Version</td>
+   <td id="de239">Version of HDR Format</td>
+   <td id="mp239">&nbsp;</td>
+   <td id="eb239">&nbsp;</td>
+   <td id="pb239">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi240">HDR_Format_Profile</td>
+   <td id="de240">Profile of HDR Format</td>
+   <td id="mp240">&nbsp;</td>
+   <td id="eb240">&nbsp;</td>
+   <td id="pb240">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi241">HDR_Format_Level</td>
+   <td id="de241">Level of HDR Format</td>
+   <td id="mp241">&nbsp;</td>
+   <td id="eb241">&nbsp;</td>
+   <td id="pb241">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi242">HDR_Format_Settings</td>
+   <td id="de242">HDR Format settings</td>
+   <td id="mp242">&nbsp;</td>
+   <td id="eb242">&nbsp;</td>
+   <td id="pb242">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi243">HDR_Format_Compatibility</td>
+   <td id="de243">HDR Format compatibility with commercial products (e.g. HDR10)</td>
+   <td id="mp243">&nbsp;</td>
+   <td id="eb243">&nbsp;</td>
+   <td id="pb243">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi244">Format_Settings_BVOP</td>
+   <td id="de244">Whether BVOP settings are required for decoding MPEG (Yes, No)</td>
+   <td id="mp244">&nbsp;</td>
+   <td id="eb244">&nbsp;</td>
+   <td id="pb244">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi245">Format_Settings_QPel</td>
+   <td id="de245">Whether Quarter-pixel motion settings are required for decoding MPEG (Yes, No)</td>
+   <td id="mp245">&nbsp;</td>
+   <td id="eb245">&nbsp;</td>
+   <td id="pb245">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi246">Format_Settings_GMC</td>
+   <td id="de246">Whether Global Motion Compensation settings are required for decoding MPEG (Yes, No)</td>
+   <td id="mp246">&nbsp;</td>
+   <td id="eb246">&nbsp;</td>
+   <td id="pb246">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi247">Format_Settings_Matrix</td>
+   <td id="de247">Whether Matrix settings are required for decoding MPEG (Yes, No)</td>
+   <td id="mp247">&nbsp;</td>
+   <td id="eb247">&nbsp;</td>
+   <td id="pb247">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi248">Format_Settings_CABAC</td>
+   <td id="de248">Whether CABAC support is required for decoding MPEG (Yes, No)</td>
+   <td id="mp248">&nbsp;</td>
+   <td id="eb248">&nbsp;</td>
+   <td id="pb248">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi249">Format_Settings_RefFrames</td>
+   <td id="de249">Whether reference frames settings are required for decoding AVC (Yes, No)</td>
+   <td id="mp249">&nbsp;</td>
+   <td id="eb249">&nbsp;</td>
+   <td id="pb249">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi250">Format_Settings_Pulldown</td>
+   <td id="de250">Pulldown method (for film transferred to video)</td>
+   <td id="mp250">&nbsp;</td>
+   <td id="eb250">&nbsp;</td>
+   <td id="pb250">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi251">Format_Settings_Endianness</td>
+   <td id="de251">Order of bytes required for decoding (Big, Little)</td>
+   <td id="mp251">&nbsp;</td>
+   <td id="eb251">&nbsp;</td>
+   <td id="pb251">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi252">Format_Settings_Packing</td>
+   <td id="de252">Data packing method used in DPX frames (e.g. Packed, Filled A, Filled B)</td>
+   <td id="mp252">&nbsp;</td>
+   <td id="eb252">&nbsp;</td>
+   <td id="pb252">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi253">Format_Settings_FrameMode</td>
+   <td id="de253">Frame mode for decoding (e.g. Frame doubling, Frame tripling)</td>
+   <td id="mp253">&nbsp;</td>
+   <td id="eb253">&nbsp;</td>
+   <td id="pb253">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi254">Format_Settings_GOP</td>
+   <td id="de254">GOP method set for format (e.g. N=1, Variable)</td>
+   <td id="mp254">CodingHints@intraFrameDistance @anchorFrameDistance</td>
+   <td id="eb254">&nbsp;</td>
+   <td id="pb254">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi255">Format_Settings_PictureStructure</td>
+   <td id="de255">Picture structure method set for format (e.g. Frame, Field)</td>
+   <td id="mp255">&nbsp;</td>
+   <td id="eb255">&nbsp;</td>
+   <td id="pb255">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi256">Format_Settings_Wrapping</td>
+   <td id="de256">Wrapping mode set for format (e.g. Frame, Clip)</td>
+   <td id="mp256">&nbsp;</td>
+   <td id="eb256">&nbsp;</td>
+   <td id="pb256">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi257">InternetMediaType</td>
+   <td id="de257">Internet Media Type a.k.a. MIME Type, Content-Type</td>
+   <td id="mp257">&nbsp;</td>
+   <td id="eb257">&nbsp;</td>
+   <td id="pb257">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi258">MuxingMode</td>
+   <td id="de258">How this file is muxed in the container (e.g. Muxed in Video #1)</td>
+   <td id="mp258">&nbsp;</td>
+   <td id="eb258">&nbsp;</td>
+   <td id="pb258">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi259">CodecID</td>
+   <td id="de259">Codec identifier as indicated by the container</td>
+   <td id="mp259">&nbsp;</td>
+   <td id="eb259">codec/codecIdentifier</td>
+   <td id="pb259">essenceTrackEncoding</td>
+  </tr>
+  <tr>
+   <td id="mi260">CodecID_Description</td>
+   <td id="de260">Codec description, as defined by the container</td>
+   <td id="mp260">&nbsp;</td>
+   <td id="eb260">&nbsp;</td>
+   <td id="pb260">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi261">Duration</td>
+   <td id="de261">Play time of the stream, in s (ms for text output)</td>
+   <td id="mp261">&nbsp;</td>
+   <td id="eb261">&nbsp;</td>
+   <td id="pb261">essenceTrackDuration</td>
+  </tr>
+  <tr>
+   <td id="mi262">Duration_FirstFrame</td>
+   <td id="de262">Duration of the first frame (if different than other frames), in ms</td>
+   <td id="mp262">&nbsp;</td>
+   <td id="eb262">&nbsp;</td>
+   <td id="pb262">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi263">Duration_LastFrame</td>
+   <td id="de263">Duration of the last frame (if different than other frames), in ms</td>
+   <td id="mp263">&nbsp;</td>
+   <td id="eb263">&nbsp;</td>
+   <td id="pb263">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi264">Source_Duration</td>
+   <td id="de264">Duration of the file, of content stored in the file, in ms</td>
+   <td id="mp264">&nbsp;</td>
+   <td id="eb264">&nbsp;</td>
+   <td id="pb264">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi265">Source_Duration_FirstFrame</td>
+   <td id="de265">Duration of the first frame, of content stored in the file, in ms</td>
+   <td id="mp265">&nbsp;</td>
+   <td id="eb265">&nbsp;</td>
+   <td id="pb265">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi266">Source_Duration_LastFrame</td>
+   <td id="de266">Duration of the last frame, of content stored in the file, in ms</td>
+   <td id="mp266">&nbsp;</td>
+   <td id="eb266">&nbsp;</td>
+   <td id="pb266">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi267">BitRate_Mode</td>
+   <td id="de267">Bit rate mode of this stream (CBR, VBR)</td>
+   <td id="mp267">&nbsp;</td>
+   <td id="eb267">bitRateMode</td>
+   <td id="pb267">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi268">BitRate</td>
+   <td id="de268">Bit rate of this stream, in bps</td>
+   <td id="mp268">&nbsp;</td>
+   <td id="eb268">bitRate</td>
+   <td id="pb268">essenceTrackDataRate</td>
+  </tr>
+  <tr>
+   <td id="mi269">BitRate_Minimum</td>
+   <td id="de269">Minimum bit rate of this stream, in bps</td>
+   <td id="mp269">&nbsp;</td>
+   <td id="eb269">&nbsp;</td>
+   <td id="pb269">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi270">BitRate_Nominal</td>
+   <td id="de270">Nominal bit rate of this stream, in bps</td>
+   <td id="mp270">&nbsp;</td>
+   <td id="eb270">&nbsp;</td>
+   <td id="pb270">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi271">BitRate_Maximum</td>
+   <td id="de271">Maximum bit rate of this stream, in bps</td>
+   <td id="mp271">&nbsp;</td>
+   <td id="eb271">bitRateMax</td>
+   <td id="pb271">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi272">BitRate_Encoded</td>
+   <td id="de272">Encoded bit rate (with forced padding), if container padding is present, in bps</td>
+   <td id="mp272">&nbsp;</td>
+   <td id="eb272">&nbsp;</td>
+   <td id="pb272">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi273">Width</td>
+   <td id="de273">Width of frame (trimmed to clean aperture size if present) in pixels, as integer (e.g. 1920)</td>
+   <td id="mp273">Frame@width</td>
+   <td id="eb273">width</td>
+   <td id="pb273">essenceTrackFrameSize (custom text)</td>
+  </tr>
+  <tr>
+   <td id="mi274">Width_Offset</td>
+   <td id="de274">Offset between original width and displayed width, in pixels</td>
+   <td id="mp274">&nbsp;</td>
+   <td id="eb274">&nbsp;</td>
+   <td id="pb274">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi275">Width_CleanAperture</td>
+   <td id="de275">Width of frame (trimmed to clean aperture size if present) in pixels, presented as integer (e.g. 1920)</td>
+   <td id="mp275">&nbsp;</td>
+   <td id="eb275">&nbsp;</td>
+   <td id="pb275">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi276">Height</td>
+   <td id="de276">Height of frame (including aperture size if present) in pixels, presented as integer (e.g. 1080)</td>
+   <td id="mp276">Frame@height</td>
+   <td id="eb276">height</td>
+   <td id="pb276">essenceTrackFrameSize (custom text)</td>
+  </tr>
+  <tr>
+   <td id="mi277">Height_Offset</td>
+   <td id="de277">Offset between original height and displayed height, in pixels</td>
+   <td id="mp277">&nbsp;</td>
+   <td id="eb277">&nbsp;</td>
+   <td id="pb277">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi278">Height_CleanAperture</td>
+   <td id="de278">Height of frame (trimmed to clean aperture size if present) in pixels, presented as integer (e.g. 1080)</td>
+   <td id="mp278">&nbsp;</td>
+   <td id="eb278">&nbsp;</td>
+   <td id="pb278">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi279">Stored_Width</td>
+   <td id="de279">Width of frame, considering data stored in the codec</td>
+   <td id="mp279">&nbsp;</td>
+   <td id="eb279">&nbsp;</td>
+   <td id="pb279">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi280">Stored_Height</td>
+   <td id="de280">Height of frame, considering data stored in the codec</td>
+   <td id="mp280">&nbsp;</td>
+   <td id="eb280">&nbsp;</td>
+   <td id="pb280">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi281">Sampled_Width</td>
+   <td id="de281">Width of frame, from data derived from video stream</td>
+   <td id="mp281">&nbsp;</td>
+   <td id="eb281">&nbsp;</td>
+   <td id="pb281">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi282">Sampled_Height</td>
+   <td id="de282">Height of frame, from data derived from video stream</td>
+   <td id="mp282">&nbsp;</td>
+   <td id="eb282">&nbsp;</td>
+   <td id="pb282">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi283">PixelAspectRatio</td>
+   <td id="de283">Width of a pixel as compared to the height (e.g. 1.422)</td>
+   <td id="mp283">Pixel@aspectRatio</td>
+   <td id="eb283">&nbsp;</td>
+   <td id="pb283">essenceTrackAspectRatio</td>
+  </tr>
+  <tr>
+   <td id="mi284">PixelAspectRatio_CleanAperture</td>
+   <td id="de284">Width of a pixel as compared to the height, considering clean aperture dimensions (e.g. 1.422). This field is only shown if the values are different</td>
+   <td id="mp284">&nbsp;</td>
+   <td id="eb284">&nbsp;</td>
+   <td id="pb284">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi285">DisplayAspectRatio</td>
+   <td id="de285">The proportional relationship between the width and height of a frame (e.g. 4:3)</td>
+   <td id="mp285">Frame@aspectRatio</td>
+   <td id="eb285">aspectRatio</td>
+   <td id="pb285">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi286">DisplayAspectRatio_CleanAperture</td>
+   <td id="de286">The proportional relationship between the width and height of a frame, considering clean aperture dimensions (e.g. 4:3)</td>
+   <td id="mp286">&nbsp;</td>
+   <td id="eb286">&nbsp;</td>
+   <td id="pb286">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi287">ActiveFormatDescription</td>
+   <td id="de287">Active Format Description, as value code (e.g. 001)</td>
+   <td id="mp287">&nbsp;</td>
+   <td id="eb287">&nbsp;</td>
+   <td id="pb287">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi288">ActiveFormatDescription_MuxingMode</td>
+   <td id="de288">Muxing mode used for Active Format Description (AFD value). Options are A/53 (for Raw) or SMPTE ST 2016-3 (for Ancillary)</td>
+   <td id="mp288">&nbsp;</td>
+   <td id="eb288">&nbsp;</td>
+   <td id="pb288">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi289">Rotation</td>
+   <td id="de289">Rotation of video, derived from track header data, in degrees</td>
+   <td id="mp289">&nbsp;</td>
+   <td id="eb289">&nbsp;</td>
+   <td id="pb289">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi290">FrameRate_Mode</td>
+   <td id="de290">Frame rate mode, as acronym (e.g. CFR, VFR)</td>
+   <td id="mp290">Frame@variableRate (Extended only)</td>
+   <td id="eb290">&nbsp;</td>
+   <td id="pb290">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi291">FrameRate</td>
+   <td id="de291">Frames per second, as float (e.g. 29.970)</td>
+   <td id="mp291">Frame@rate</td>
+   <td id="eb291">frameRate</td>
+   <td id="pb291">essenceTrackFrameRate</td>
+  </tr>
+  <tr>
+   <td id="mi292">FrameRate_Minimum</td>
+   <td id="de292">Minimum frames per second (e.g. 25.000)</td>
+   <td id="mp292">&nbsp;</td>
+   <td id="eb292">&nbsp;</td>
+   <td id="pb292">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi293">FrameRate_Nominal</td>
+   <td id="de293">Frames per second rounded to closest standard (e.g. 24.98)</td>
+   <td id="mp293">&nbsp;</td>
+   <td id="eb293">&nbsp;</td>
+   <td id="pb293">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi294">FrameRate_Maximum</td>
+   <td id="de294">Maximum frames per second</td>
+   <td id="mp294">&nbsp;</td>
+   <td id="eb294">&nbsp;</td>
+   <td id="pb294">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi295">FrameRate_Real</td>
+   <td id="de295">Real (capture) frames per second</td>
+   <td id="mp295">&nbsp;</td>
+   <td id="eb295">&nbsp;</td>
+   <td id="pb295">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi296">FrameCount</td>
+   <td id="de296">Numer of frames</td>
+   <td id="mp296">&nbsp;</td>
+   <td id="eb296">&nbsp;</td>
+   <td id="pb296">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi297">Source_FrameCount</td>
+   <td id="de297">Number of frames according to media header (media/stts atom) data</td>
+   <td id="mp297">&nbsp;</td>
+   <td id="eb297">&nbsp;</td>
+   <td id="pb297">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi298">Standard</td>
+   <td id="de298">Either the NTSC or PAL color encoding system, as stored in the content</td>
+   <td id="mp298">&nbsp;</td>
+   <td id="eb298">&nbsp;</td>
+   <td id="pb298">essenceTrackStandard</td>
+  </tr>
+  <tr>
+   <td id="mi299">ColorSpace</td>
+   <td id="de299">Color profile of the image (e.g. YUV)</td>
+   <td id="mp299">&nbsp;</td>
+   <td id="eb299">&nbsp;</td>
+   <td id="pb299">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi300">ChromaSubsampling</td>
+   <td id="de300">Ratio of chroma to luma in encoded image (e.g. 4:2:2)</td>
+   <td id="mp300">Format@colorDomain (for color vs gray)
+Format/ColorSampling</td>
+   <td id="eb300">&nbsp;</td>
+   <td id="pb300">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi301">ChromaSubsampling_Position</td>
+   <td id="de301">Position type of chroma subsampling</td>
+   <td id="mp301">&nbsp;</td>
+   <td id="eb301">&nbsp;</td>
+   <td id="pb301">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi302">BitDepth</td>
+   <td id="de302">Color information stored in the video frames, as integer (e.g. 10)</td>
+   <td id="mp302">Pixel@bitsPer</td>
+   <td id="eb302">sampleSize</td>
+   <td id="pb302">essenceTrackBitDepth</td>
+  </tr>
+  <tr>
+   <td id="mi303">ScanType</td>
+   <td id="de303">Way in which lines of video are displayed (e.g. Progressive)</td>
+   <td id="mp303">Format@structure</td>
+   <td id="eb303">scanningFormat</td>
+   <td id="pb303">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi304">ScanType_StoreMethod</td>
+   <td id="de304">Whether the video's ScanType is stored with fields separated or interleaved</td>
+   <td id="mp304">&nbsp;</td>
+   <td id="eb304">&nbsp;</td>
+   <td id="pb304">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi305">ScanType_StoreMethod_FieldsPerBlock</td>
+   <td id="de305">Count of fields per container block</td>
+   <td id="mp305">&nbsp;</td>
+   <td id="eb305">&nbsp;</td>
+   <td id="pb305">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi306">ScanOrder</td>
+   <td id="de306">Order in which lines are encoded, as acronym (e.g. TFF)</td>
+   <td id="mp306">MediaFormat/System</td>
+   <td id="eb306">scanningOrder</td>
+   <td id="pb306">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi307">ScanOrder_Stored</td>
+   <td id="de307">Stored ScanOrder, displayed when the stored order is not same as the display order</td>
+   <td id="mp307">&nbsp;</td>
+   <td id="eb307">&nbsp;</td>
+   <td id="pb307">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi308">Compression_Mode</td>
+   <td id="de308">Compression mode (Lossy, Lossless)</td>
+   <td id="mp308">&nbsp;</td>
+   <td id="eb308">&nbsp;</td>
+   <td id="pb308">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi309">Delay</td>
+   <td id="de309">Delay fixed in the stream (relative), in ms</td>
+   <td id="mp309">&nbsp;</td>
+   <td id="eb309">&nbsp;</td>
+   <td id="pb309">essenceTrackTimeStart</td>
+  </tr>
+  <tr>
+   <td id="mi310">TimeStamp_FirstFrame</td>
+   <td id="de310">Timestamp fixed in the stream (relative), in ms</td>
+   <td id="mp310">&nbsp;</td>
+   <td id="eb310">&nbsp;</td>
+   <td id="pb310">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi311">TimeCode_FirstFrame</td>
+   <td id="de311">Time code for first frame in format HH:MM:SS:FF, with last colon replaced by semicolon for drop frame if available</td>
+   <td id="mp311">&nbsp;</td>
+   <td id="eb311">&nbsp;</td>
+   <td id="pb311">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi312">TimeCode_LastFrame</td>
+   <td id="de312">Time code for last frame (excluding the duration of the last frame) in format HH:MM:SS:FF, with last colon replaced by semicolon for drop frame if available</td>
+   <td id="mp312">&nbsp;</td>
+   <td id="eb312">&nbsp;</td>
+   <td id="pb312">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi313">TimeCode_Settings</td>
+   <td id="de313">Additional time code settings</td>
+   <td id="mp313">&nbsp;</td>
+   <td id="eb313">&nbsp;</td>
+   <td id="pb313">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi314">TimeCode_Source</td>
+   <td id="de314">Time code source (Container, Stream, SystemScheme1, SDTI, ANC, etc.)</td>
+   <td id="mp314">&nbsp;</td>
+   <td id="eb314">&nbsp;</td>
+   <td id="pb314">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi315">Gop_OpenClosed</td>
+   <td id="de315">Time code information about Open/Closed GOP</td>
+   <td id="mp315">CodingHints@openGOP (Extended only)</td>
+   <td id="eb315">&nbsp;</td>
+   <td id="pb315">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi316">Gop_OpenClosed_FirstFrame</td>
+   <td id="de316">Time code information about Open/Closed of first frame if GOP is Open for the other GOPs</td>
+   <td id="mp316">CodingHints@openFirstGOP (Extended only)</td>
+   <td id="eb316">&nbsp;</td>
+   <td id="pb316">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi317">StreamSize</td>
+   <td id="de317">Size of this stream, in bytes</td>
+   <td id="mp317">&nbsp;</td>
+   <td id="eb317">&nbsp;</td>
+   <td id="pb317">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi318">Source_StreamSize</td>
+   <td id="de318">Size of content stored in the file, in bytes</td>
+   <td id="mp318">&nbsp;</td>
+   <td id="eb318">&nbsp;</td>
+   <td id="pb318">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi319">StreamSize_Encoded</td>
+   <td id="de319">Size of this stream when encoded, in bytes</td>
+   <td id="mp319">&nbsp;</td>
+   <td id="eb319">&nbsp;</td>
+   <td id="pb319">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi320">Source_StreamSize_Encoded</td>
+   <td id="de320">Size of content stored in the file when encoded, in bytes</td>
+   <td id="mp320">&nbsp;</td>
+   <td id="eb320">&nbsp;</td>
+   <td id="pb320">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi321">Alignment</td>
+   <td id="de321">How this stream is aligned in the container (e.g. Aligned, Split)</td>
+   <td id="mp321">&nbsp;</td>
+   <td id="eb321">&nbsp;</td>
+   <td id="pb321">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi322">Title</td>
+   <td id="de322">Title of track</td>
+   <td id="mp322">&nbsp;</td>
+   <td id="eb322">trackName</td>
+   <td id="pb322">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi323">Encoded_Application</td>
+   <td id="de323">Name of the software package used to create the file (e.g. Microsoft WaveEdiTY)</td>
+   <td id="mp323">&nbsp;</td>
+   <td id="eb323">&nbsp;</td>
+   <td id="pb323">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi324">Encoded_Application_CompanyName</td>
+   <td id="de324">Name of the company of the encoding application</td>
+   <td id="mp324">&nbsp;</td>
+   <td id="eb324">&nbsp;</td>
+   <td id="pb324">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi325">Encoded_Application_Name</td>
+   <td id="de325">Name of the encoding product</td>
+   <td id="mp325">&nbsp;</td>
+   <td id="eb325">&nbsp;</td>
+   <td id="pb325">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi326">Encoded_Application_Version</td>
+   <td id="de326">Version of the encoding product</td>
+   <td id="mp326">&nbsp;</td>
+   <td id="eb326">&nbsp;</td>
+   <td id="pb326">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi327">Encoded_Application_Url</td>
+   <td id="de327">URL associated with the encoding software</td>
+   <td id="mp327">&nbsp;</td>
+   <td id="eb327">&nbsp;</td>
+   <td id="pb327">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi328">Encoded_Library</td>
+   <td id="de328">Software used to create the file</td>
+   <td id="mp328">&nbsp;</td>
+   <td id="eb328">&nbsp;</td>
+   <td id="pb328">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi329">Encoded_Library_CompanyName</td>
+   <td id="de329">Name of the encoding software company</td>
+   <td id="mp329">&nbsp;</td>
+   <td id="eb329">&nbsp;</td>
+   <td id="pb329">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi330">Encoded_Library_Name</td>
+   <td id="de330">Name of the encoding software</td>
+   <td id="mp330">&nbsp;</td>
+   <td id="eb330">&nbsp;</td>
+   <td id="pb330">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi331">Encoded_Library_Version</td>
+   <td id="de331">Version of the encoding software</td>
+   <td id="mp331">&nbsp;</td>
+   <td id="eb331">&nbsp;</td>
+   <td id="pb331">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi332">Encoded_Library_Date</td>
+   <td id="de332">Release date of the encoding software, in UTC</td>
+   <td id="mp332">&nbsp;</td>
+   <td id="eb332">&nbsp;</td>
+   <td id="pb332">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi333">Encoded_Library_Settings</td>
+   <td id="de333">Parameters used by the encoding software</td>
+   <td id="mp333">&nbsp;</td>
+   <td id="eb333">&nbsp;</td>
+   <td id="pb333">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi334">Encoded_OperatingSystem</td>
+   <td id="de334">Operating System of the encoding software</td>
+   <td id="mp334">&nbsp;</td>
+   <td id="eb334">&nbsp;</td>
+   <td id="pb334">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi335">Language</td>
+   <td id="de335">Language, formatted as 2-letter ISO 639-1 if exists, else 3-letter ISO 639-2, and with optional ISO 3166-1 country separated by a dash if available (e.g. en, en-US, en-CN)</td>
+   <td id="mp335">&nbsp;</td>
+   <td id="eb335">&nbsp;</td>
+   <td id="pb335">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi336">Language_More</td>
+   <td id="de336">More information about Language (e.g. Director's Comment)</td>
+   <td id="mp336">&nbsp;</td>
+   <td id="eb336">&nbsp;</td>
+   <td id="pb336">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi337">ServiceKind</td>
+   <td id="de337">Type of assisted service (e.g. visually impaired, commentary, voice over)</td>
+   <td id="mp337">&nbsp;</td>
+   <td id="eb337">&nbsp;</td>
+   <td id="pb337">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi338">Disabled</td>
+   <td id="de338">Set if this stream should not be used (Yes, No)</td>
+   <td id="mp338">&nbsp;</td>
+   <td id="eb338">&nbsp;</td>
+   <td id="pb338">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi339">Default</td>
+   <td id="de339">Flag set if this stream should be used if no language found matches the user preference (Yes, No)</td>
+   <td id="mp339">&nbsp;</td>
+   <td id="eb339">&nbsp;</td>
+   <td id="pb339">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi340">Forced</td>
+   <td id="de340">Flag set if this stream should be used regardless of user preferences, often used for sparse subtitle dialogue in an otherwise unsubtitled movie (Yes, No)</td>
+   <td id="mp340">&nbsp;</td>
+   <td id="eb340">&nbsp;</td>
+   <td id="pb340">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi341">AlternateGroup</td>
+   <td id="de341">Number of a group in order to provide versions of the same track</td>
+   <td id="mp341">&nbsp;</td>
+   <td id="eb341">&nbsp;</td>
+   <td id="pb341">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi342">Encoded_Date</td>
+   <td id="de342">Time that the encoding of this item was completed, in UTC</td>
+   <td id="mp342">&nbsp;</td>
+   <td id="eb342">&nbsp;</td>
+   <td id="pb342">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi343">Tagged_Date</td>
+   <td id="de343">Time that the tags were added to this item, in UTC</td>
+   <td id="mp343">&nbsp;</td>
+   <td id="eb343">&nbsp;</td>
+   <td id="pb343">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi344">Encryption</td>
+   <td id="de344">Whether this stream is encrypted and, if available, how it is encrypted</td>
+   <td id="mp344">Encryption (Extended only)</td>
+   <td id="eb344">&nbsp;</td>
+   <td id="pb344">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi345">BufferSize</td>
+   <td id="de345">The minimum size of the buffer needed to decode the sequence</td>
+   <td id="mp345">&nbsp;</td>
+   <td id="eb345">&nbsp;</td>
+   <td id="pb345">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi346">colour_description_present</td>
+   <td id="de346">Presence of color description (Yes, No)</td>
+   <td id="mp346">&nbsp;</td>
+   <td id="eb346">&nbsp;</td>
+   <td id="pb346">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi347">colour_description_present_Source</td>
+   <td id="de347">Presence of colour description (source)</td>
+   <td id="mp347">&nbsp;</td>
+   <td id="eb347">&nbsp;</td>
+   <td id="pb347">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi348">colour_range</td>
+   <td id="de348">Color range for YUV color space</td>
+   <td id="mp348">&nbsp;</td>
+   <td id="eb348">&nbsp;</td>
+   <td id="pb348">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi349">colour_range_Source</td>
+   <td id="de349">Colour range for YUV colour space (source)</td>
+   <td id="mp349">&nbsp;</td>
+   <td id="eb349">&nbsp;</td>
+   <td id="pb349">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi350">colour_primaries</td>
+   <td id="de350">Chromaticity coordinates of the source primaries</td>
+   <td id="mp350">&nbsp;</td>
+   <td id="eb350">&nbsp;</td>
+   <td id="pb350">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi351">colour_primaries_Source</td>
+   <td id="de351">Chromaticity coordinates of the source primaries (source)</td>
+   <td id="mp351">&nbsp;</td>
+   <td id="eb351">&nbsp;</td>
+   <td id="pb351">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi352">transfer_characteristics</td>
+   <td id="de352">Opto-electronic transfer characteristic of the source picture</td>
+   <td id="mp352">&nbsp;</td>
+   <td id="eb352">&nbsp;</td>
+   <td id="pb352">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi353">transfer_characteristics_Source</td>
+   <td id="de353">Opto-electronic transfer characteristic of the source picture (source)</td>
+   <td id="mp353">&nbsp;</td>
+   <td id="eb353">&nbsp;</td>
+   <td id="pb353">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi354">matrix_coefficients</td>
+   <td id="de354">Matrix coefficients used in deriving luma and chroma signals from the green, blue, and red primaries</td>
+   <td id="mp354">&nbsp;</td>
+   <td id="eb354">&nbsp;</td>
+   <td id="pb354">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi355">matrix_coefficients_Source</td>
+   <td id="de355">Matrix coefficients used in deriving luma and chroma signals from the green, blue, and red primaries (source)</td>
+   <td id="mp355">&nbsp;</td>
+   <td id="eb355">&nbsp;</td>
+   <td id="pb355">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi356">MasteringDisplay_ColorPrimaries</td>
+   <td id="de356">Chromaticity coordinates of the source primaries of the mastering display</td>
+   <td id="mp356">&nbsp;</td>
+   <td id="eb356">&nbsp;</td>
+   <td id="pb356">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi357">MasteringDisplay_ColorPrimaries_Source</td>
+   <td id="de357">Chromaticity coordinates of the source primaries of the mastering display (source)</td>
+   <td id="mp357">&nbsp;</td>
+   <td id="eb357">&nbsp;</td>
+   <td id="pb357">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi358">MasteringDisplay_Luminance</td>
+   <td id="de358">Luminance of the mastering display</td>
+   <td id="mp358">&nbsp;</td>
+   <td id="eb358">&nbsp;</td>
+   <td id="pb358">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi359">MasteringDisplay_Luminance_Source</td>
+   <td id="de359">Luminance of the mastering display (source)</td>
+   <td id="mp359">&nbsp;</td>
+   <td id="eb359">&nbsp;</td>
+   <td id="pb359">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi360">MaxCLL</td>
+   <td id="de360">Maximum content light level</td>
+   <td id="mp360">&nbsp;</td>
+   <td id="eb360">&nbsp;</td>
+   <td id="pb360">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi361">MaxCLL_Source</td>
+   <td id="de361">Maximum content light level (source)</td>
+   <td id="mp361">&nbsp;</td>
+   <td id="eb361">&nbsp;</td>
+   <td id="pb361">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi362">MaxFALL</td>
+   <td id="de362">Maximum frame average light level</td>
+   <td id="mp362">&nbsp;</td>
+   <td id="eb362">&nbsp;</td>
+   <td id="pb362">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi363">MaxFALL_Source</td>
+   <td id="de363">Maximum frame average light level (source)</td>
+   <td id="mp363">&nbsp;</td>
+   <td id="eb363">&nbsp;</td>
+   <td id="pb363">&nbsp;</td>
+  </tr>
+ </tbody>
+ <thead>
+  <tr onclick="Line_Show('Audio')" id="AudioH" style="cursor: pointer">
+   <td colspan="5" class="xheader">Audio</td>
+  </tr>
+  <tr onclick="Line_Hide('Audio')" id="AudioS" style="cursor: pointer">
+   <td colspan="5" class="xheader">Audio</td>
+  </tr>
+ </thead>
+ <tbody id="Audio">
+  <tr>
+   <td id="mi364">StreamOrder</td>
+   <td id="de364">Stream order in the file for type of stream. Counting starts at 0</td>
+   <td id="mp364">&nbsp;</td>
+   <td id="eb364">&nbsp;</td>
+   <td id="pb364">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi365">ID</td>
+   <td id="de365">The identification number for this stream in this file</td>
+   <td id="mp365">&nbsp;</td>
+   <td id="eb365">audioTrack@trackId</td>
+   <td id="pb365">essenceTrackIdentifier</td>
+  </tr>
+  <tr>
+   <td id="mi366">OriginalSourceMedium_ID</td>
+   <td id="de366">Identification for this stream in the original medium of the material</td>
+   <td id="mp366">&nbsp;</td>
+   <td id="eb366">&nbsp;</td>
+   <td id="pb366">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi367">UniqueID</td>
+   <td id="de367">The unique ID for this stream, should be copied with stream copy</td>
+   <td id="mp367">&nbsp;</td>
+   <td id="eb367">&nbsp;</td>
+   <td id="pb367">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi368">MenuID</td>
+   <td id="de368">The menu ID for this stream in this file</td>
+   <td id="mp368">&nbsp;</td>
+   <td id="eb368">&nbsp;</td>
+   <td id="pb368">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi369">Format</td>
+   <td id="de369">Format used</td>
+   <td id="mp369">Format</td>
+   <td id="eb369">audioFormat@audioFormatName,
+audioEncoding@typeLabel</td>
+   <td id="pb369">essenceTrackEncoding</td>
+  </tr>
+  <tr>
+   <td id="mi370">Format_Commercial_IfAny</td>
+   <td id="de370">Commercial name used by vendor for these settings, if available</td>
+   <td id="mp370">&nbsp;</td>
+   <td id="eb370">&nbsp;</td>
+   <td id="pb370">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi371">Format_Version</td>
+   <td id="de371">Version for the identified format</td>
+   <td id="mp371">Format</td>
+   <td id="eb371">audioFormat@@audioFormatVersionId,
+audioEncoding@typeLabel</td>
+   <td id="pb371">essenceTrackEncoding@version</td>
+  </tr>
+  <tr>
+   <td id="mi372">Format_Profile</td>
+   <td id="de372">Profile of the Format</td>
+   <td id="mp372">Format</td>
+   <td id="eb372">audioEncoding@typeLabel</td>
+   <td id="pb372">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi373">Format_Level</td>
+   <td id="de373">Level of the Format</td>
+   <td id="mp373">Format</td>
+   <td id="eb373">audioEncoding@typeLabel</td>
+   <td id="pb373">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi374">Format_Compression</td>
+   <td id="de374">Compression method used</td>
+   <td id="mp374">&nbsp;</td>
+   <td id="eb374">&nbsp;</td>
+   <td id="pb374">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi375">Format_Settings_SBR</td>
+   <td id="de375">Whether Spectral band replication settings used in encoding. Options are Yes (NBC)/No (Explicit). Note: NBC stands for Not Backwards Compatable</td>
+   <td id="mp375">&nbsp;</td>
+   <td id="eb375">&nbsp;</td>
+   <td id="pb375">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi376">Format_Settings_PS</td>
+   <td id="de376">Whether Parametric Stereo settings used in encoding. Options are Yes (NBC)/No (Explicit). Note: NBC stands for Not Backwards Compatable</td>
+   <td id="mp376">&nbsp;</td>
+   <td id="eb376">&nbsp;</td>
+   <td id="pb376">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi377">Format_Settings_Mode</td>
+   <td id="de377">Profile for format settings used in encoding (e.g. Joint Stereo)</td>
+   <td id="mp377">&nbsp;</td>
+   <td id="eb377">&nbsp;</td>
+   <td id="pb377">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi378">Format_Settings_ModeExtension</td>
+   <td id="de378">Extended format settings profile for Joint Stereo, derived from header data (e.g. Intensity Stereo + MS Stereo)</td>
+   <td id="mp378">&nbsp;</td>
+   <td id="eb378">&nbsp;</td>
+   <td id="pb378">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi379">Format_Settings_Emphasis</td>
+   <td id="de379">Emphasis format settings for MPEG audio, derived from header data (e.g. 50/15ms)</td>
+   <td id="mp379">Emphasis</td>
+   <td id="eb379">&nbsp;</td>
+   <td id="pb379">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi380">Format_Settings_Floor</td>
+   <td id="de380">Settings for Vorbis spectral floor (a low-resolution representation of the audio spectrum for the given channel in the current frame) vector (e.g. Floor0)</td>
+   <td id="mp380">&nbsp;</td>
+   <td id="eb380">&nbsp;</td>
+   <td id="pb380">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi381">Format_Settings_Firm</td>
+   <td id="de381">Agency or company responsible for format settings used in encoding (e.g. Microsoft)</td>
+   <td id="mp381">&nbsp;</td>
+   <td id="eb381">&nbsp;</td>
+   <td id="pb381">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi382">Format_Settings_Endianness</td>
+   <td id="de382">Order of bytes required for decoding. Options are Big/Little</td>
+   <td id="mp382">&nbsp;</td>
+   <td id="eb382">&nbsp;</td>
+   <td id="pb382">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi383">Format_Settings_Sign</td>
+   <td id="de383">How numbers are stored in stream's encoding. Options are Signed/Unsigned</td>
+   <td id="mp383">&nbsp;</td>
+   <td id="eb383">&nbsp;</td>
+   <td id="pb383">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi384">Format_Settings_Law</td>
+   <td id="de384">U-law or A-law</td>
+   <td id="mp384">&nbsp;</td>
+   <td id="eb384">&nbsp;</td>
+   <td id="pb384">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi385">Format_Settings_ITU</td>
+   <td id="de385">ITU Telecommunication Standardization Sector compression standard used in encoding (e.g. G.726)</td>
+   <td id="mp385">&nbsp;</td>
+   <td id="eb385">&nbsp;</td>
+   <td id="pb385">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi386">Format_Settings_Wrapping</td>
+   <td id="de386">Wrapping mode set for format (e.g. Frame, Clip)</td>
+   <td id="mp386">&nbsp;</td>
+   <td id="eb386">&nbsp;</td>
+   <td id="pb386">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi387">Format_AdditionalFeatures</td>
+   <td id="de387">Features from the format that are required to fully support the file content</td>
+   <td id="mp387">&nbsp;</td>
+   <td id="eb387">&nbsp;</td>
+   <td id="pb387">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi388">Matrix_Format</td>
+   <td id="de388">Matrix format used in encoding (e.g. DTS Neural Audio)</td>
+   <td id="mp388">&nbsp;</td>
+   <td id="eb388">&nbsp;</td>
+   <td id="pb388">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi389">InternetMediaType</td>
+   <td id="de389">Internet Media Type (aka MIME Type, Content-Type)</td>
+   <td id="mp389">&nbsp;</td>
+   <td id="eb389">&nbsp;</td>
+   <td id="pb389">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi390">MuxingMode</td>
+   <td id="de390">How this file is muxed in the container (e.g. Muxed in Video #1)</td>
+   <td id="mp390">&nbsp;</td>
+   <td id="eb390">&nbsp;</td>
+   <td id="pb390">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi391">CodecID</td>
+   <td id="de391">Codec identifier as indicated by the container</td>
+   <td id="mp391">&nbsp;</td>
+   <td id="eb391">codec/codecIdentifier</td>
+   <td id="pb391">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi392">CodecID_Description</td>
+   <td id="de392">Codec description indicated by the container</td>
+   <td id="mp392">&nbsp;</td>
+   <td id="eb392">&nbsp;</td>
+   <td id="pb392">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi393">Duration</td>
+   <td id="de393">Play time of the stream, in s (ms for text output)</td>
+   <td id="mp393">&nbsp;</td>
+   <td id="eb393">&nbsp;</td>
+   <td id="pb393">essenceTrackDuration</td>
+  </tr>
+  <tr>
+   <td id="mi394">Duration_FirstFrame</td>
+   <td id="de394">Duration of the first frame (if different than other frames), in ms</td>
+   <td id="mp394">&nbsp;</td>
+   <td id="eb394">&nbsp;</td>
+   <td id="pb394">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi395">Duration_LastFrame</td>
+   <td id="de395">Duration of the last frame (if different than other frames), in ms</td>
+   <td id="mp395">&nbsp;</td>
+   <td id="eb395">&nbsp;</td>
+   <td id="pb395">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi396">Source_Duration</td>
+   <td id="de396">Duration of content stored in the file, in ms</td>
+   <td id="mp396">&nbsp;</td>
+   <td id="eb396">&nbsp;</td>
+   <td id="pb396">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi397">Source_Duration_FirstFrame</td>
+   <td id="de397">Duration of the first frame of content stored in the file (if different than other frames), in ms</td>
+   <td id="mp397">&nbsp;</td>
+   <td id="eb397">&nbsp;</td>
+   <td id="pb397">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi398">Source_Duration_LastFrame</td>
+   <td id="de398">Duration of the last frame of content stored in the file (if different than other frames), in ms</td>
+   <td id="mp398">&nbsp;</td>
+   <td id="eb398">&nbsp;</td>
+   <td id="pb398">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi399">BitRate_Mode</td>
+   <td id="de399">Bit rate mode of this stream (CBR, VBR)</td>
+   <td id="mp399">&nbsp;</td>
+   <td id="eb399">bitRateMode</td>
+   <td id="pb399">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi400">BitRate</td>
+   <td id="de400">Bit rate of this stream, in bps</td>
+   <td id="mp400">&nbsp;</td>
+   <td id="eb400">bitRate</td>
+   <td id="pb400">essenceTrackDataRate</td>
+  </tr>
+  <tr>
+   <td id="mi401">BitRate_Minimum</td>
+   <td id="de401">Minimum bit rate of this stream, in bps</td>
+   <td id="mp401">&nbsp;</td>
+   <td id="eb401">&nbsp;</td>
+   <td id="pb401">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi402">BitRate_Nominal</td>
+   <td id="de402">Nominal bit rate of this stream, in bps</td>
+   <td id="mp402">&nbsp;</td>
+   <td id="eb402">&nbsp;</td>
+   <td id="pb402">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi403">BitRate_Maximum</td>
+   <td id="de403">Maximum bit rate of this stream, in bps</td>
+   <td id="mp403">&nbsp;</td>
+   <td id="eb403">bitRateMax</td>
+   <td id="pb403">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi404">BitRate_Encoded</td>
+   <td id="de404">Encoded bit rate (with forced padding), if container padding is present, in bps</td>
+   <td id="mp404">&nbsp;</td>
+   <td id="eb404">&nbsp;</td>
+   <td id="pb404">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi405">Channel(s)</td>
+   <td id="de405">Number of channels (e.g. 2)</td>
+   <td id="mp405">AudioChannels</td>
+   <td id="eb405">channels</td>
+   <td id="pb405">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi406">Matrix_Channel(s)</td>
+   <td id="de406">Number of channels after matrix decoding</td>
+   <td id="mp406">&nbsp;</td>
+   <td id="eb406">&nbsp;</td>
+   <td id="pb406">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi407">ChannelPositions</td>
+   <td id="de407">Position of channels (e.g. Front: L C R, Side: L R, Back: L R, LFE)</td>
+   <td id="mp407">&nbsp;</td>
+   <td id="eb407">&nbsp;</td>
+   <td id="pb407">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi408">Matrix_ChannelPositions</td>
+   <td id="de408">Position of channels after matrix decoding</td>
+   <td id="mp408">&nbsp;</td>
+   <td id="eb408">&nbsp;</td>
+   <td id="pb408">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi409">ChannelLayout</td>
+   <td id="de409">Layout of channels (e.g. L R C LFE Ls Rs Lb Rb)</td>
+   <td id="mp409">AudioChannels@front @side @surround @back @lfe,
+Presentation</td>
+   <td id="eb409">audioTrackConfiguration</td>
+   <td id="pb409">instantiationChannelConfiguration</td>
+  </tr>
+  <tr>
+   <td id="mi410">ChannelLayoutID</td>
+   <td id="de410">ID of layout of channels (e.g. MXF descriptor channel assignment). Warning, sometimes this is not enough for uniquely identifying a layout (e.g. MXF descriptor channel assignment is SMPTE 377-4). For AC-3, the form is x,y with x=acmod and y=lfeon</td>
+   <td id="mp410">&nbsp;</td>
+   <td id="eb410">&nbsp;</td>
+   <td id="pb410">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi411">SamplesPerFrame</td>
+   <td id="de411">Samples per frame (e.g. 1536)</td>
+   <td id="mp411">&nbsp;</td>
+   <td id="eb411">&nbsp;</td>
+   <td id="pb411">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi412">SamplingRate</td>
+   <td id="de412">Sampling rate, in Hertz (e.g. 48000)</td>
+   <td id="mp412">Sample@rate</td>
+   <td id="eb412">samplingRate</td>
+   <td id="pb412">essenceTrackSamplingRate</td>
+  </tr>
+  <tr>
+   <td id="mi413">SamplingCount</td>
+   <td id="de413">Sample count (based on sampling rate)</td>
+   <td id="mp413">&nbsp;</td>
+   <td id="eb413">&nbsp;</td>
+   <td id="pb413">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi414">Source_SamplingCount</td>
+   <td id="de414">Source Sample count (based on sampling rate), with information derived from header metadata</td>
+   <td id="mp414">&nbsp;</td>
+   <td id="eb414">&nbsp;</td>
+   <td id="pb414">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi415">FrameRate</td>
+   <td id="de415">Frames per second, as float (e.g. 29.970)</td>
+   <td id="mp415">&nbsp;</td>
+   <td id="eb415">&nbsp;</td>
+   <td id="pb415">essenceTrackFrameRate</td>
+  </tr>
+  <tr>
+   <td id="mi416">FrameCount</td>
+   <td id="de416">Frame count</td>
+   <td id="mp416">&nbsp;</td>
+   <td id="eb416">&nbsp;</td>
+   <td id="pb416">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi417">Source_FrameCount</td>
+   <td id="de417">Source frame count</td>
+   <td id="mp417">&nbsp;</td>
+   <td id="eb417">&nbsp;</td>
+   <td id="pb417">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi418">BitDepth</td>
+   <td id="de418">Number of bits in each sample (resolution) of stream (e.g. 16). This field will show the significant bits if the stored bit depth is different</td>
+   <td id="mp418">Sample@bitsPer</td>
+   <td id="eb418">sampleSize</td>
+   <td id="pb418">essenceTrackBitDepth</td>
+  </tr>
+  <tr>
+   <td id="mi419">BitDepth_Detected</td>
+   <td id="de419">Number of bits in each sample (resolution), as detected during scan of the input by the muxer, in bits (e.g. 24)</td>
+   <td id="mp419">&nbsp;</td>
+   <td id="eb419">&nbsp;</td>
+   <td id="pb419">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi420">BitDepth_Stored</td>
+   <td id="de420">Stored number of bits in each sample (resolution), in bits (e.g. 24)</td>
+   <td id="mp420">&nbsp;</td>
+   <td id="eb420">&nbsp;</td>
+   <td id="pb420">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi421">Compression_Mode</td>
+   <td id="de421">Compression mode (Lossy, Lossless)</td>
+   <td id="mp421">&nbsp;</td>
+   <td id="eb421">&nbsp;</td>
+   <td id="pb421">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi422">Delay</td>
+   <td id="de422">Delay fixed in the stream (relative), in ms</td>
+   <td id="mp422">&nbsp;</td>
+   <td id="eb422">&nbsp;</td>
+   <td id="pb422">essenceTrackTimeStart</td>
+  </tr>
+  <tr>
+   <td id="mi423">TimeCode_FirstFrame</td>
+   <td id="de423">Time code for first frame in format HH:MM:SS:FF, with last colon replaced by semicolon for drop frame if available</td>
+   <td id="mp423">&nbsp;</td>
+   <td id="eb423">&nbsp;</td>
+   <td id="pb423">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi424">TimeCode_LastFrame</td>
+   <td id="de424">Time code for last frame (excluding the duration of the last frame) in format HH:MM:SS:FF, with last colon replaced by semicolon for drop frame if available</td>
+   <td id="mp424">&nbsp;</td>
+   <td id="eb424">&nbsp;</td>
+   <td id="pb424">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi425">TimeCode_Settings</td>
+   <td id="de425">Additional time code settings</td>
+   <td id="mp425">&nbsp;</td>
+   <td id="eb425">&nbsp;</td>
+   <td id="pb425">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi426">TimeCode_Source</td>
+   <td id="de426">Time code source (Container, Stream, SystemScheme1, SDTI, ANC, etc.)</td>
+   <td id="mp426">&nbsp;</td>
+   <td id="eb426">&nbsp;</td>
+   <td id="pb426">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi427">ReplayGain_Gain</td>
+   <td id="de427">The gain to apply to reach 89dB SPL on playback</td>
+   <td id="mp427">&nbsp;</td>
+   <td id="eb427">&nbsp;</td>
+   <td id="pb427">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi428">ReplayGain_Peak</td>
+   <td id="de428">The maximum absolute peak value of the item</td>
+   <td id="mp428">&nbsp;</td>
+   <td id="eb428">&nbsp;</td>
+   <td id="pb428">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi429">StreamSize</td>
+   <td id="de429">Size of this stream, in bytes</td>
+   <td id="mp429">&nbsp;</td>
+   <td id="eb429">&nbsp;</td>
+   <td id="pb429">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi430">Source_StreamSize</td>
+   <td id="de430">Size of content stored in the file, in bytes</td>
+   <td id="mp430">&nbsp;</td>
+   <td id="eb430">&nbsp;</td>
+   <td id="pb430">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi431">StreamSize_Encoded</td>
+   <td id="de431">Size of this stream when encoded, in bytes</td>
+   <td id="mp431">&nbsp;</td>
+   <td id="eb431">&nbsp;</td>
+   <td id="pb431">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi432">Source_StreamSize_Encoded</td>
+   <td id="de432">Size of content stored in the file when encoded, in bytes</td>
+   <td id="mp432">&nbsp;</td>
+   <td id="eb432">&nbsp;</td>
+   <td id="pb432">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi433">Alignment</td>
+   <td id="de433">How this stream is aligned in the container (e.g. Aligned, Split)</td>
+   <td id="mp433">&nbsp;</td>
+   <td id="eb433">&nbsp;</td>
+   <td id="pb433">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi434">Interleave_VideoFrames</td>
+   <td id="de434">For interleaved video, between how many video frames this stream is inserted (e.g. 0.51 video frame)</td>
+   <td id="mp434">&nbsp;</td>
+   <td id="eb434">&nbsp;</td>
+   <td id="pb434">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi435">Interleave_Duration</td>
+   <td id="de435">For interleaved video, between how much time, in ms, this stream is inserted (e.g. 21 ms)</td>
+   <td id="mp435">&nbsp;</td>
+   <td id="eb435">&nbsp;</td>
+   <td id="pb435">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi436">Interleave_Preload</td>
+   <td id="de436">How much time is buffered before the first video frame, in ms (e.g. 500)</td>
+   <td id="mp436">&nbsp;</td>
+   <td id="eb436">&nbsp;</td>
+   <td id="pb436">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi437">Title</td>
+   <td id="de437">Title of track</td>
+   <td id="mp437">&nbsp;</td>
+   <td id="eb437">trackName</td>
+   <td id="pb437">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi438">Encoded_Application</td>
+   <td id="de438">Name of the software package used to create the file (e.g. Microsoft WaveEdiTY)</td>
+   <td id="mp438">&nbsp;</td>
+   <td id="eb438">&nbsp;</td>
+   <td id="pb438">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi439">Encoded_Application_CompanyName</td>
+   <td id="de439">Name of the company of the encoding application</td>
+   <td id="mp439">&nbsp;</td>
+   <td id="eb439">&nbsp;</td>
+   <td id="pb439">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi440">Encoded_Application_Name</td>
+   <td id="de440">Name of the encoding product</td>
+   <td id="mp440">&nbsp;</td>
+   <td id="eb440">&nbsp;</td>
+   <td id="pb440">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi441">Encoded_Application_Version</td>
+   <td id="de441">Version of the encoding product</td>
+   <td id="mp441">&nbsp;</td>
+   <td id="eb441">&nbsp;</td>
+   <td id="pb441">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi442">Encoded_Application_Url</td>
+   <td id="de442">URL associated with the encoding software</td>
+   <td id="mp442">&nbsp;</td>
+   <td id="eb442">&nbsp;</td>
+   <td id="pb442">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi443">Encoded_Library</td>
+   <td id="de443">Software used to create the file</td>
+   <td id="mp443">&nbsp;</td>
+   <td id="eb443">&nbsp;</td>
+   <td id="pb443">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi444">Encoded_Library_CompanyName</td>
+   <td id="de444">Name of the encoding software company</td>
+   <td id="mp444">&nbsp;</td>
+   <td id="eb444">&nbsp;</td>
+   <td id="pb444">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi445">Encoded_Library_Name</td>
+   <td id="de445">Name of the encoding software</td>
+   <td id="mp445">&nbsp;</td>
+   <td id="eb445">&nbsp;</td>
+   <td id="pb445">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi446">Encoded_Library_Version</td>
+   <td id="de446">Version of the encoding software</td>
+   <td id="mp446">&nbsp;</td>
+   <td id="eb446">&nbsp;</td>
+   <td id="pb446">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi447">Encoded_Library_Date</td>
+   <td id="de447">Release date of the encoding software, in UTC</td>
+   <td id="mp447">&nbsp;</td>
+   <td id="eb447">&nbsp;</td>
+   <td id="pb447">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi448">Encoded_Library_Settings</td>
+   <td id="de448">Parameters used by the encoding software</td>
+   <td id="mp448">&nbsp;</td>
+   <td id="eb448">&nbsp;</td>
+   <td id="pb448">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi449">Encoded_OperatingSystem</td>
+   <td id="de449">Operating System of the encoding software</td>
+   <td id="mp449">&nbsp;</td>
+   <td id="eb449">&nbsp;</td>
+   <td id="pb449">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi450">Language</td>
+   <td id="de450">Language, formatted as 2-letter ISO 639-1 if exists, else 3-letter ISO 639-2, and with optional ISO 3166-1 country separated by a dash if available (e.g. en, en-US, en-CN)</td>
+   <td id="mp450">Classification/Language</td>
+   <td id="eb450">trackLanguage</td>
+   <td id="pb450">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi451">Language_More</td>
+   <td id="de451">More information about Language (e.g. Director's Comment)</td>
+   <td id="mp451">&nbsp;</td>
+   <td id="eb451">&nbsp;</td>
+   <td id="pb451">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi452">ServiceKind</td>
+   <td id="de452">Type of assisted service (e.g. visually impaired, commentary, voice over)</td>
+   <td id="mp452">&nbsp;</td>
+   <td id="eb452">&nbsp;</td>
+   <td id="pb452">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi453">Disabled</td>
+   <td id="de453">Set if this stream should not be used (Yes, No)</td>
+   <td id="mp453">&nbsp;</td>
+   <td id="eb453">&nbsp;</td>
+   <td id="pb453">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi454">Default</td>
+   <td id="de454">Flag set if this stream should be used if no language found matches the user preference (Yes, No)</td>
+   <td id="mp454">&nbsp;</td>
+   <td id="eb454">&nbsp;</td>
+   <td id="pb454">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi455">Forced</td>
+   <td id="de455">Flag set if this stream should be used regardless of user preferences, often used for sparse subtitle dialogue in an otherwise unsubtitled movie (Yes, No)</td>
+   <td id="mp455">&nbsp;</td>
+   <td id="eb455">&nbsp;</td>
+   <td id="pb455">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi456">AlternateGroup</td>
+   <td id="de456">Number of a group in order to provide versions of the same track</td>
+   <td id="mp456">&nbsp;</td>
+   <td id="eb456">&nbsp;</td>
+   <td id="pb456">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi457">Encoded_Date</td>
+   <td id="de457">Time that the encoding of this item was completed, in UTC</td>
+   <td id="mp457">&nbsp;</td>
+   <td id="eb457">&nbsp;</td>
+   <td id="pb457">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi458">Tagged_Date</td>
+   <td id="de458">Time that the tags were added to this item, in UTC</td>
+   <td id="mp458">&nbsp;</td>
+   <td id="eb458">&nbsp;</td>
+   <td id="pb458">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi459">Encryption</td>
+   <td id="de459">Whether this stream is encrypted and, if available, how it is encrypted</td>
+   <td id="mp459">Encryption (Extended only)</td>
+   <td id="eb459">&nbsp;</td>
+   <td id="pb459">&nbsp;</td>
+  </tr>
+ </tbody>
+ <thead>
+  <tr onclick="Line_Show('Text')" id="TextH" style="cursor: pointer">
+   <td colspan="5" class="xheader">Text</td>
+  </tr>
+  <tr onclick="Line_Hide('Text')" id="TextS" style="cursor: pointer">
+   <td colspan="5" class="xheader">Text</td>
+  </tr>
+ </thead>
+ <tbody id="Text">
+  <tr>
+   <td id="mi460">StreamOrder</td>
+   <td id="de460">Stream order in the file for type of stream. Counting starts at 0</td>
+   <td id="mp460">&nbsp;</td>
+   <td id="eb460">&nbsp;</td>
+   <td id="pb460">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi461">ID</td>
+   <td id="de461">The identification number for this stream in this file</td>
+   <td id="mp461">&nbsp;</td>
+   <td id="eb461">textTrack@trackId</td>
+   <td id="pb461">essenceTrackIdentifier</td>
+  </tr>
+  <tr>
+   <td id="mi462">OriginalSourceMedium_ID</td>
+   <td id="de462">Identification for this stream in the original medium of the material</td>
+   <td id="mp462">&nbsp;</td>
+   <td id="eb462">&nbsp;</td>
+   <td id="pb462">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi463">UniqueID</td>
+   <td id="de463">The unique ID for this stream, should be copied with stream copy</td>
+   <td id="mp463">&nbsp;</td>
+   <td id="eb463">&nbsp;</td>
+   <td id="pb463">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi464">MenuID</td>
+   <td id="de464">The menu ID for this stream in this file</td>
+   <td id="mp464">&nbsp;</td>
+   <td id="eb464">&nbsp;</td>
+   <td id="pb464">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi465">Format</td>
+   <td id="de465">Format used</td>
+   <td id="mp465">Format (Extended only)</td>
+   <td id="eb465">captioningFormatName</td>
+   <td id="pb465">essenceTrackEncoding</td>
+  </tr>
+  <tr>
+   <td id="mi466">Format_Commercial_IfAny</td>
+   <td id="de466">Commercial name used by vendor for these settings, if available</td>
+   <td id="mp466">&nbsp;</td>
+   <td id="eb466">&nbsp;</td>
+   <td id="pb466">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi467">Format_Version</td>
+   <td id="de467">Version for the identified format</td>
+   <td id="mp467">Format (Extended only)</td>
+   <td id="eb467">&nbsp;</td>
+   <td id="pb467">essenceTrackEncoding@version</td>
+  </tr>
+  <tr>
+   <td id="mi468">Format_Profile</td>
+   <td id="de468">Profile of the Format</td>
+   <td id="mp468">Format (Extended only)</td>
+   <td id="eb468">&nbsp;</td>
+   <td id="pb468">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi469">Format_Compression</td>
+   <td id="de469">Compression method used</td>
+   <td id="mp469">&nbsp;</td>
+   <td id="eb469">&nbsp;</td>
+   <td id="pb469">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi470">Format_Settings</td>
+   <td id="de470">Settings used and required by decoder</td>
+   <td id="mp470">&nbsp;</td>
+   <td id="eb470">&nbsp;</td>
+   <td id="pb470">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi471">Format_Settings_Wrapping</td>
+   <td id="de471">Wrapping mode set for format (e.g. Frame, Clip)</td>
+   <td id="mp471">&nbsp;</td>
+   <td id="eb471">&nbsp;</td>
+   <td id="pb471">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi472">Format_AdditionalFeatures</td>
+   <td id="de472">Features from the format that are required to fully support the file content</td>
+   <td id="mp472">&nbsp;</td>
+   <td id="eb472">&nbsp;</td>
+   <td id="pb472">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi473">InternetMediaType</td>
+   <td id="de473">Internet Media Type (aka MIME Type, Content-Type)</td>
+   <td id="mp473">&nbsp;</td>
+   <td id="eb473">&nbsp;</td>
+   <td id="pb473">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi474">MuxingMode</td>
+   <td id="de474">How this file is muxed in the container (e.g. Muxed in Video #1)</td>
+   <td id="mp474">&nbsp;</td>
+   <td id="eb474">&nbsp;</td>
+   <td id="pb474">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi475">MuxingMode_MoreInfo</td>
+   <td id="de475">More information about MuxingMode</td>
+   <td id="mp475">&nbsp;</td>
+   <td id="eb475">&nbsp;</td>
+   <td id="pb475">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi476">CodecID</td>
+   <td id="de476">Codec identifier as indicated by the container</td>
+   <td id="mp476">&nbsp;</td>
+   <td id="eb476">&nbsp;</td>
+   <td id="pb476">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi477">CodecID_Description</td>
+   <td id="de477">Codec description, as defined by the container</td>
+   <td id="mp477">&nbsp;</td>
+   <td id="eb477">&nbsp;</td>
+   <td id="pb477">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi478">Duration</td>
+   <td id="de478">Play time of the stream, in ms</td>
+   <td id="mp478">&nbsp;</td>
+   <td id="eb478">&nbsp;</td>
+   <td id="pb478">essenceTrackDuration</td>
+  </tr>
+  <tr>
+   <td id="mi479">Duration_Start2End</td>
+   <td id="de479">Play time from first display to last display, in ms</td>
+   <td id="mp479">&nbsp;</td>
+   <td id="eb479">&nbsp;</td>
+   <td id="pb479">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi480">Duration_Start_Command</td>
+   <td id="de480">Timestamp of first command, in ms</td>
+   <td id="mp480">&nbsp;</td>
+   <td id="eb480">&nbsp;</td>
+   <td id="pb480">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi481">Duration_Start</td>
+   <td id="de481">Timestamp of first display, in ms</td>
+   <td id="mp481">&nbsp;</td>
+   <td id="eb481">&nbsp;</td>
+   <td id="pb481">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi482">Duration_End</td>
+   <td id="de482">Play time of the stream, in s (ms for text output)</td>
+   <td id="mp482">&nbsp;</td>
+   <td id="eb482">&nbsp;</td>
+   <td id="pb482">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi483">Duration_End_Command</td>
+   <td id="de483">Play time of the stream, in s (ms for text output)</td>
+   <td id="mp483">&nbsp;</td>
+   <td id="eb483">&nbsp;</td>
+   <td id="pb483">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi484">Duration_FirstFrame</td>
+   <td id="de484">Duration of the first frame (if different than other frames), in ms</td>
+   <td id="mp484">&nbsp;</td>
+   <td id="eb484">&nbsp;</td>
+   <td id="pb484">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi485">Duration_LastFrame</td>
+   <td id="de485">Duration of the last frame (if different than other frames), in ms</td>
+   <td id="mp485">&nbsp;</td>
+   <td id="eb485">&nbsp;</td>
+   <td id="pb485">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi486">Duration_Base</td>
+   <td id="de486">Temporal coordinate system used for timestamps</td>
+   <td id="mp486">&nbsp;</td>
+   <td id="eb486">&nbsp;</td>
+   <td id="pb486">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi487">Source_Duration</td>
+   <td id="de487">Duration of content stored in the file (if different than duration), in ms</td>
+   <td id="mp487">&nbsp;</td>
+   <td id="eb487">&nbsp;</td>
+   <td id="pb487">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi488">Source_Duration_FirstFrame</td>
+   <td id="de488">Duration of the first frame of content stored in the file (if different than other frames),in ms</td>
+   <td id="mp488">&nbsp;</td>
+   <td id="eb488">&nbsp;</td>
+   <td id="pb488">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi489">Source_Duration_LastFrame</td>
+   <td id="de489">Duration of the last frame of content stored in the file (if different than other frames),in ms</td>
+   <td id="mp489">&nbsp;</td>
+   <td id="eb489">&nbsp;</td>
+   <td id="pb489">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi490">BitRate_Mode</td>
+   <td id="de490">Bit rate mode of this stream (CBR, VBR)</td>
+   <td id="mp490">&nbsp;</td>
+   <td id="eb490">bitRateMode</td>
+   <td id="pb490">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi491">BitRate</td>
+   <td id="de491">Bit rate of this stream, in bps</td>
+   <td id="mp491">&nbsp;</td>
+   <td id="eb491">bitRate</td>
+   <td id="pb491">essenceTrackDataRate</td>
+  </tr>
+  <tr>
+   <td id="mi492">BitRate_Minimum</td>
+   <td id="de492">Minimum bit rate of this stream, in bps</td>
+   <td id="mp492">&nbsp;</td>
+   <td id="eb492">&nbsp;</td>
+   <td id="pb492">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi493">BitRate_Nominal</td>
+   <td id="de493">Nominal bit rate of this stream, in bps</td>
+   <td id="mp493">&nbsp;</td>
+   <td id="eb493">&nbsp;</td>
+   <td id="pb493">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi494">BitRate_Maximum</td>
+   <td id="de494">Maximum bit rate of this stream, in bps</td>
+   <td id="mp494">&nbsp;</td>
+   <td id="eb494">bitRateMax</td>
+   <td id="pb494">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi495">BitRate_Encoded</td>
+   <td id="de495">Encoded bit rate (with forced padding), if container padding is present, in bps</td>
+   <td id="mp495">&nbsp;</td>
+   <td id="eb495">&nbsp;</td>
+   <td id="pb495">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi496">Width</td>
+   <td id="de496">Width of frame (trimmed to clean aperture size if present) in characters</td>
+   <td id="mp496">&nbsp;</td>
+   <td id="eb496">&nbsp;</td>
+   <td id="pb496">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi497">Height</td>
+   <td id="de497">Height of frame (including aperture size if present) in characters</td>
+   <td id="mp497">&nbsp;</td>
+   <td id="eb497">&nbsp;</td>
+   <td id="pb497">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi498">DisplayAspectRatio</td>
+   <td id="de498">The proportional relationship between the width and height of a frame (e.g. 4:3)</td>
+   <td id="mp498">&nbsp;</td>
+   <td id="eb498">&nbsp;</td>
+   <td id="pb498">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi499">DisplayAspectRatio_Original</td>
+   <td id="de499">The proportional relationship between the width and height of a frame (e.g. 4:3)</td>
+   <td id="mp499">&nbsp;</td>
+   <td id="eb499">&nbsp;</td>
+   <td id="pb499">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi500">FrameRate_Mode</td>
+   <td id="de500">Frame rate mode, as acronym (e.g. CFR, VFR)</td>
+   <td id="mp500">&nbsp;</td>
+   <td id="eb500">&nbsp;</td>
+   <td id="pb500">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi501">FrameRate_Mode_Original</td>
+   <td id="de501">Frame rate mode, as acronym (e.g. CFR, VFR)</td>
+   <td id="mp501">&nbsp;</td>
+   <td id="eb501">&nbsp;</td>
+   <td id="pb501">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi502">FrameRate</td>
+   <td id="de502">Frames per second, as float (e.g. 29.970)</td>
+   <td id="mp502">&nbsp;</td>
+   <td id="eb502">&nbsp;</td>
+   <td id="pb502">essenceTrackFrameRate</td>
+  </tr>
+  <tr>
+   <td id="mi503">FrameRate_Minimum</td>
+   <td id="de503">Minimum frames per second (e.g. 25.000)</td>
+   <td id="mp503">&nbsp;</td>
+   <td id="eb503">&nbsp;</td>
+   <td id="pb503">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi504">FrameRate_Nominal</td>
+   <td id="de504">Frames per second rounded to closest standard (e.g. 29.97)</td>
+   <td id="mp504">&nbsp;</td>
+   <td id="eb504">&nbsp;</td>
+   <td id="pb504">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi505">FrameRate_Maximum</td>
+   <td id="de505">Maximum frames per second</td>
+   <td id="mp505">&nbsp;</td>
+   <td id="eb505">&nbsp;</td>
+   <td id="pb505">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi506">FrameRate_Original</td>
+   <td id="de506">Frames per second</td>
+   <td id="mp506">&nbsp;</td>
+   <td id="eb506">&nbsp;</td>
+   <td id="pb506">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi507">ColorSpace</td>
+   <td id="de507">Color profile of the image (e.g. YUV)</td>
+   <td id="mp507">&nbsp;</td>
+   <td id="eb507">&nbsp;</td>
+   <td id="pb507">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi508">ChromaSubsampling</td>
+   <td id="de508">Ratio of chroma to luma in encoded image (e.g. 4:2:2)</td>
+   <td id="mp508">&nbsp;</td>
+   <td id="eb508">&nbsp;</td>
+   <td id="pb508">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi509">BitDepth</td>
+   <td id="de509">Color information stored in the video frames, as integer (e.g. 10)</td>
+   <td id="mp509">&nbsp;</td>
+   <td id="eb509">&nbsp;</td>
+   <td id="pb509">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi510">Compression_Mode</td>
+   <td id="de510">Compression mode (Lossy, Lossless)</td>
+   <td id="mp510">&nbsp;</td>
+   <td id="eb510">&nbsp;</td>
+   <td id="pb510">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi511">Delay</td>
+   <td id="de511">Delay fixed in the stream (relative), in ms</td>
+   <td id="mp511">&nbsp;</td>
+   <td id="eb511">&nbsp;</td>
+   <td id="pb511">essenceTrackTimeStart</td>
+  </tr>
+  <tr>
+   <td id="mi512">TimeCode_FirstFrame</td>
+   <td id="de512">Time code for first frame in format HH:MM:SS:FF, with last colon replaced by semicolon for drop frame if available</td>
+   <td id="mp512">&nbsp;</td>
+   <td id="eb512">&nbsp;</td>
+   <td id="pb512">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi513">TimeCode_LastFrame</td>
+   <td id="de513">Time code for last frame (excluding the duration of the last frame) in format HH:MM:SS:FF, with last colon replaced by semicolon for drop frame if available</td>
+   <td id="mp513">&nbsp;</td>
+   <td id="eb513">&nbsp;</td>
+   <td id="pb513">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi514">TimeCode_Settings</td>
+   <td id="de514">Additional time code settings</td>
+   <td id="mp514">&nbsp;</td>
+   <td id="eb514">&nbsp;</td>
+   <td id="pb514">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi515">TimeCode_Source</td>
+   <td id="de515">Time code source (Container, Stream, SystemScheme1, SDTI, ANC, etc.)</td>
+   <td id="mp515">&nbsp;</td>
+   <td id="eb515">&nbsp;</td>
+   <td id="pb515">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi516">TimeCode_MaxFrameNumber</td>
+   <td id="de516">Maximum frame number in time codes</td>
+   <td id="mp516">&nbsp;</td>
+   <td id="eb516">&nbsp;</td>
+   <td id="pb516">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi517">TimeCode_MaxFrameNumber_Theory</td>
+   <td id="de517">Theoritical maximum frame number in time codes</td>
+   <td id="mp517">&nbsp;</td>
+   <td id="eb517">&nbsp;</td>
+   <td id="pb517">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi518">StreamSize</td>
+   <td id="de518">Size of this stream, in bytes</td>
+   <td id="mp518">&nbsp;</td>
+   <td id="eb518">&nbsp;</td>
+   <td id="pb518">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi519">Source_StreamSize</td>
+   <td id="de519">Size of content stored in the file, in bytes</td>
+   <td id="mp519">&nbsp;</td>
+   <td id="eb519">&nbsp;</td>
+   <td id="pb519">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi520">StreamSize_Encoded</td>
+   <td id="de520">Size of this stream when encoded, in bytes</td>
+   <td id="mp520">&nbsp;</td>
+   <td id="eb520">&nbsp;</td>
+   <td id="pb520">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi521">Source_StreamSize_Encoded</td>
+   <td id="de521">Size of content stored in the file when encoded, in bytes</td>
+   <td id="mp521">&nbsp;</td>
+   <td id="eb521">&nbsp;</td>
+   <td id="pb521">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi522">Title</td>
+   <td id="de522">Title of file</td>
+   <td id="mp522">&nbsp;</td>
+   <td id="eb522">trackName</td>
+   <td id="pb522">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi523">Encoded_Application</td>
+   <td id="de523">Name of the software package used to create the file (e.g. Microsoft WaveEdiTY)</td>
+   <td id="mp523">&nbsp;</td>
+   <td id="eb523">&nbsp;</td>
+   <td id="pb523">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi524">Encoded_Application_CompanyName</td>
+   <td id="de524">Name of the company of the encoding application</td>
+   <td id="mp524">&nbsp;</td>
+   <td id="eb524">&nbsp;</td>
+   <td id="pb524">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi525">Encoded_Application_Name</td>
+   <td id="de525">Name of the encoding product</td>
+   <td id="mp525">&nbsp;</td>
+   <td id="eb525">&nbsp;</td>
+   <td id="pb525">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi526">Encoded_Application_Version</td>
+   <td id="de526">Version of the encoding product</td>
+   <td id="mp526">&nbsp;</td>
+   <td id="eb526">&nbsp;</td>
+   <td id="pb526">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi527">Encoded_Application_Url</td>
+   <td id="de527">URL associated with the encoding software</td>
+   <td id="mp527">&nbsp;</td>
+   <td id="eb527">&nbsp;</td>
+   <td id="pb527">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi528">Encoded_Library</td>
+   <td id="de528">Software used to create the file</td>
+   <td id="mp528">&nbsp;</td>
+   <td id="eb528">&nbsp;</td>
+   <td id="pb528">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi529">Encoded_Library_CompanyName</td>
+   <td id="de529">Name of the encoding software company</td>
+   <td id="mp529">&nbsp;</td>
+   <td id="eb529">&nbsp;</td>
+   <td id="pb529">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi530">Encoded_Library_Name</td>
+   <td id="de530">Name of the encoding software</td>
+   <td id="mp530">&nbsp;</td>
+   <td id="eb530">&nbsp;</td>
+   <td id="pb530">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi531">Encoded_Library_Version</td>
+   <td id="de531">Version of the encoding software</td>
+   <td id="mp531">&nbsp;</td>
+   <td id="eb531">&nbsp;</td>
+   <td id="pb531">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi532">Encoded_Library_Date</td>
+   <td id="de532">Release date of the encoding software, in UTC</td>
+   <td id="mp532">&nbsp;</td>
+   <td id="eb532">&nbsp;</td>
+   <td id="pb532">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi533">Encoded_Library_Settings</td>
+   <td id="de533">Parameters used by the encoding software</td>
+   <td id="mp533">&nbsp;</td>
+   <td id="eb533">&nbsp;</td>
+   <td id="pb533">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi534">Encoded_OperatingSystem</td>
+   <td id="de534">Operating System of the encoding software</td>
+   <td id="mp534">&nbsp;</td>
+   <td id="eb534">&nbsp;</td>
+   <td id="pb534">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi535">Language</td>
+   <td id="de535">Language, formatted as 2-letter ISO 639-1 if exists, else 3-letter ISO 639-2, and with optional ISO 3166-1 country separated by a dash if available (e.g. en, en-US, en-CN)</td>
+   <td id="mp535">Classification/CaptionLanguage</td>
+   <td id="eb535">&nbsp;</td>
+   <td id="pb535">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi536">Language_More</td>
+   <td id="de536">More information about Language (e.g. Director's Comment)</td>
+   <td id="mp536">&nbsp;</td>
+   <td id="eb536">&nbsp;</td>
+   <td id="pb536">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi537">ServiceKind</td>
+   <td id="de537">Type of assisted service (e.g. visually impaired, commentary, voice over)</td>
+   <td id="mp537">&nbsp;</td>
+   <td id="eb537">&nbsp;</td>
+   <td id="pb537">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi538">Disabled</td>
+   <td id="de538">Set if this stream should not be used (Yes, No)</td>
+   <td id="mp538">&nbsp;</td>
+   <td id="eb538">&nbsp;</td>
+   <td id="pb538">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi539">Default</td>
+   <td id="de539">Flag set if this stream should be used if no language found matches the user preference (Yes, No)</td>
+   <td id="mp539">&nbsp;</td>
+   <td id="eb539">&nbsp;</td>
+   <td id="pb539">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi540">Forced</td>
+   <td id="de540">Flag set if this stream should be used regardless of user preferences, often used for sparse subtitle dialogue in an otherwise unsubtitled movie (Yes, No)</td>
+   <td id="mp540">&nbsp;</td>
+   <td id="eb540">&nbsp;</td>
+   <td id="pb540">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi541">AlternateGroup</td>
+   <td id="de541">Number of a group in order to provide versions of the same track</td>
+   <td id="mp541">&nbsp;</td>
+   <td id="eb541">&nbsp;</td>
+   <td id="pb541">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi542">Summary</td>
+   <td id="de542">Plot outline or a summary of the story</td>
+   <td id="mp542">&nbsp;</td>
+   <td id="eb542">&nbsp;</td>
+   <td id="pb542">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi543">Encoded_Date</td>
+   <td id="de543">Time/date/year that the encoding of this content was completed</td>
+   <td id="mp543">&nbsp;</td>
+   <td id="eb543">&nbsp;</td>
+   <td id="pb543">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi544">Tagged_Date</td>
+   <td id="de544">Time/date/year that the tags were added to this content</td>
+   <td id="mp544">&nbsp;</td>
+   <td id="eb544">&nbsp;</td>
+   <td id="pb544">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi545">Encryption</td>
+   <td id="de545">Whether this stream is encrypted and, if available, how it is encrypted</td>
+   <td id="mp545">Encryption (Extended only)</td>
+   <td id="eb545">&nbsp;</td>
+   <td id="pb545">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi546">Events_MinDuration</td>
+   <td id="de546">Minimum duration per event, in ms</td>
+   <td id="mp546">&nbsp;</td>
+   <td id="eb546">&nbsp;</td>
+   <td id="pb546">&nbsp;</td>
+  </tr>
+ </tbody>
+ <thead>
+  <tr onclick="Line_Show('Other')" id="OtherH" style="cursor: pointer">
+   <td colspan="5" class="xheader">Other</td>
+  </tr>
+  <tr onclick="Line_Hide('Other')" id="OtherS" style="cursor: pointer">
+   <td colspan="5" class="xheader">Other</td>
+  </tr>
+ </thead>
+ <tbody id="Other">
+  <tr>
+   <td id="mi547">StreamOrder</td>
+   <td id="de547">Stream order in the file, whatever is the kind of stream (base=0)</td>
+   <td id="mp547">&nbsp;</td>
+   <td id="eb547">&nbsp;</td>
+   <td id="pb547">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi548">ID</td>
+   <td id="de548">The ID for this stream in this file</td>
+   <td id="mp548">&nbsp;</td>
+   <td id="eb548">&nbsp;</td>
+   <td id="pb548">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi549">OriginalSourceMedium_ID</td>
+   <td id="de549">The ID for this stream in the original medium of the material</td>
+   <td id="mp549">&nbsp;</td>
+   <td id="eb549">&nbsp;</td>
+   <td id="pb549">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi550">UniqueID</td>
+   <td id="de550">The unique ID for this stream, should be copied with stream copy</td>
+   <td id="mp550">&nbsp;</td>
+   <td id="eb550">&nbsp;</td>
+   <td id="pb550">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi551">MenuID</td>
+   <td id="de551">The menu ID for this stream in this file</td>
+   <td id="mp551">&nbsp;</td>
+   <td id="eb551">&nbsp;</td>
+   <td id="pb551">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi552">Type</td>
+   <td id="de552">Type</td>
+   <td id="mp552">&nbsp;</td>
+   <td id="eb552">&nbsp;</td>
+   <td id="pb552">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi553">Format</td>
+   <td id="de553">Format used</td>
+   <td id="mp553">&nbsp;</td>
+   <td id="eb553">&nbsp;</td>
+   <td id="pb553">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi554">Format_Commercial_IfAny</td>
+   <td id="de554">Commercial name used by vendor for theses setings if there is one</td>
+   <td id="mp554">&nbsp;</td>
+   <td id="eb554">&nbsp;</td>
+   <td id="pb554">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi555">Format_AdditionalFeatures</td>
+   <td id="de555">Format features needed for fully supporting the content</td>
+   <td id="mp555">&nbsp;</td>
+   <td id="eb555">&nbsp;</td>
+   <td id="pb555">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi556">MuxingMode</td>
+   <td id="de556">How this file is muxed in the container</td>
+   <td id="mp556">&nbsp;</td>
+   <td id="eb556">&nbsp;</td>
+   <td id="pb556">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi557">CodecID</td>
+   <td id="de557">Codec ID (found in some containers)</td>
+   <td id="mp557">&nbsp;</td>
+   <td id="eb557">&nbsp;</td>
+   <td id="pb557">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi558">CodecID_Description</td>
+   <td id="de558">Manual description given by the container</td>
+   <td id="mp558">&nbsp;</td>
+   <td id="eb558">&nbsp;</td>
+   <td id="pb558">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi559">Duration</td>
+   <td id="de559">Play time of the stream in ms</td>
+   <td id="mp559">&nbsp;</td>
+   <td id="eb559">&nbsp;</td>
+   <td id="pb559">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi560">Source_Duration</td>
+   <td id="de560">Source Play time of the stream, in ms</td>
+   <td id="mp560">&nbsp;</td>
+   <td id="eb560">&nbsp;</td>
+   <td id="pb560">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi561">Source_Duration_FirstFrame</td>
+   <td id="de561">Source Duration of the first frame if it is longer than others, in ms</td>
+   <td id="mp561">&nbsp;</td>
+   <td id="eb561">&nbsp;</td>
+   <td id="pb561">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi562">Source_Duration_LastFrame</td>
+   <td id="de562">Source Duration of the last frame if it is longer than others, in ms</td>
+   <td id="mp562">&nbsp;</td>
+   <td id="eb562">&nbsp;</td>
+   <td id="pb562">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi563">BitRate_Mode</td>
+   <td id="de563">Bit rate mode (VBR, CBR)</td>
+   <td id="mp563">&nbsp;</td>
+   <td id="eb563">&nbsp;</td>
+   <td id="pb563">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi564">BitRate</td>
+   <td id="de564">Bit rate in bps</td>
+   <td id="mp564">&nbsp;</td>
+   <td id="eb564">&nbsp;</td>
+   <td id="pb564">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi565">BitRate_Minimum</td>
+   <td id="de565">Minimum Bit rate in bps</td>
+   <td id="mp565">&nbsp;</td>
+   <td id="eb565">&nbsp;</td>
+   <td id="pb565">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi566">BitRate_Nominal</td>
+   <td id="de566">Nominal Bit rate in bps</td>
+   <td id="mp566">&nbsp;</td>
+   <td id="eb566">&nbsp;</td>
+   <td id="pb566">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi567">BitRate_Maximum</td>
+   <td id="de567">Maximum Bit rate in bps</td>
+   <td id="mp567">&nbsp;</td>
+   <td id="eb567">&nbsp;</td>
+   <td id="pb567">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi568">BitRate_Encoded</td>
+   <td id="de568">Encoded (with forced padding) bit rate in bps, if some container padding is present</td>
+   <td id="mp568">&nbsp;</td>
+   <td id="eb568">&nbsp;</td>
+   <td id="pb568">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi569">FrameRate</td>
+   <td id="de569">Frames per second</td>
+   <td id="mp569">&nbsp;</td>
+   <td id="eb569">&nbsp;</td>
+   <td id="pb569">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi570">Delay</td>
+   <td id="de570">Delay fixed in the stream (relative) IN MS</td>
+   <td id="mp570">&nbsp;</td>
+   <td id="eb570">&nbsp;</td>
+   <td id="pb570">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi571">TimeStamp_FirstFrame</td>
+   <td id="de571">TimeStamp fixed in the stream (relative) IN MS</td>
+   <td id="mp571">&nbsp;</td>
+   <td id="eb571">&nbsp;</td>
+   <td id="pb571">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi572">TimeCode_FirstFrame</td>
+   <td id="de572">Time code in HH:MM:SS:FF, last colon replaced by semicolon for drop frame if available format</td>
+   <td id="mp572">&nbsp;</td>
+   <td id="eb572">&nbsp;</td>
+   <td id="pb572">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi573">TimeCode_LastFrame</td>
+   <td id="de573">Time code of the last frame (excluding the duration of the last frame) in HH:MM:SS:FF, last colon replaced by semicolon for drop frame if available format</td>
+   <td id="mp573">&nbsp;</td>
+   <td id="eb573">&nbsp;</td>
+   <td id="pb573">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi574">TimeCode_Settings</td>
+   <td id="de574">Time code settings</td>
+   <td id="mp574">&nbsp;</td>
+   <td id="eb574">&nbsp;</td>
+   <td id="pb574">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi575">TimeCode_Stripped</td>
+   <td id="de575">Time code is Stripped (only 1st time code, no discontinuity)</td>
+   <td id="mp575">&nbsp;</td>
+   <td id="eb575">&nbsp;</td>
+   <td id="pb575">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi576">TimeCode_Source</td>
+   <td id="de576">Time code source (Container, Stream, SystemScheme1, SDTI, ANC...)</td>
+   <td id="mp576">&nbsp;</td>
+   <td id="eb576">&nbsp;</td>
+   <td id="pb576">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi577">StreamSize</td>
+   <td id="de577">Streamsize in bytes</td>
+   <td id="mp577">&nbsp;</td>
+   <td id="eb577">&nbsp;</td>
+   <td id="pb577">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi578">Source_StreamSize</td>
+   <td id="de578">Source Streamsize in bytes</td>
+   <td id="mp578">&nbsp;</td>
+   <td id="eb578">&nbsp;</td>
+   <td id="pb578">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi579">StreamSize_Encoded</td>
+   <td id="de579">Encoded Streamsize in bytes</td>
+   <td id="mp579">&nbsp;</td>
+   <td id="eb579">&nbsp;</td>
+   <td id="pb579">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi580">Source_StreamSize_Encoded</td>
+   <td id="de580">Source Encoded Streamsize in bytes</td>
+   <td id="mp580">&nbsp;</td>
+   <td id="eb580">&nbsp;</td>
+   <td id="pb580">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi581">Title</td>
+   <td id="de581">Name of this menu</td>
+   <td id="mp581">&nbsp;</td>
+   <td id="eb581">&nbsp;</td>
+   <td id="pb581">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi582">Language</td>
+   <td id="de582">Language (2-letter ISO 639-1 if exists, else 3-letter ISO 639-2, and with optional ISO 3166-1 country separated by a dash if available, e.g. en, en-us, zh-cn)</td>
+   <td id="mp582">&nbsp;</td>
+   <td id="eb582">&nbsp;</td>
+   <td id="pb582">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi583">Language_More</td>
+   <td id="de583">More info about Language (e.g. Director's Comment)</td>
+   <td id="mp583">&nbsp;</td>
+   <td id="eb583">&nbsp;</td>
+   <td id="pb583">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi584">ServiceKind</td>
+   <td id="de584">Service kind, e.g. visually impaired, commentary, voice over</td>
+   <td id="mp584">&nbsp;</td>
+   <td id="eb584">&nbsp;</td>
+   <td id="pb584">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi585">Disabled</td>
+   <td id="de585">Set if that track should not be used</td>
+   <td id="mp585">&nbsp;</td>
+   <td id="eb585">&nbsp;</td>
+   <td id="pb585">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi586">Default</td>
+   <td id="de586">Set if that track should be used if no language found matches the user preference.</td>
+   <td id="mp586">&nbsp;</td>
+   <td id="eb586">&nbsp;</td>
+   <td id="pb586">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi587">Forced</td>
+   <td id="de587">Set if that track should be used if no language found matches the user preference.</td>
+   <td id="mp587">&nbsp;</td>
+   <td id="eb587">&nbsp;</td>
+   <td id="pb587">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi588">AlternateGroup</td>
+   <td id="de588">Number of a group in order to provide versions of the same track</td>
+   <td id="mp588">&nbsp;</td>
+   <td id="eb588">&nbsp;</td>
+   <td id="pb588">&nbsp;</td>
+  </tr>
+ </tbody>
+ <thead>
+  <tr onclick="Line_Show('Image')" id="ImageH" style="cursor: pointer">
+   <td colspan="5" class="xheader">Image</td>
+  </tr>
+  <tr onclick="Line_Hide('Image')" id="ImageS" style="cursor: pointer">
+   <td colspan="5" class="xheader">Image</td>
+  </tr>
+ </thead>
+ <tbody id="Image">
+  <tr>
+   <td id="mi589">StreamOrder</td>
+   <td id="de589">Stream order in the file for type of stream. Counting starts at 0</td>
+   <td id="mp589">&nbsp;</td>
+   <td id="eb589">&nbsp;</td>
+   <td id="pb589">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi590">ID</td>
+   <td id="de590">The identification number for this stream in this file</td>
+   <td id="mp590">&nbsp;</td>
+   <td id="eb590">&nbsp;</td>
+   <td id="pb590">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi591">OriginalSourceMedium_ID</td>
+   <td id="de591">Identification for this stream in the original medium of the material</td>
+   <td id="mp591">&nbsp;</td>
+   <td id="eb591">&nbsp;</td>
+   <td id="pb591">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi592">UniqueID</td>
+   <td id="de592">The unique ID for this stream, should be copied with stream copy</td>
+   <td id="mp592">&nbsp;</td>
+   <td id="eb592">&nbsp;</td>
+   <td id="pb592">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi593">MenuID</td>
+   <td id="de593">The menu ID for this stream in this file</td>
+   <td id="mp593">&nbsp;</td>
+   <td id="eb593">&nbsp;</td>
+   <td id="pb593">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi594">Title</td>
+   <td id="de594">Title of track</td>
+   <td id="mp594">&nbsp;</td>
+   <td id="eb594">&nbsp;</td>
+   <td id="pb594">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi595">Format</td>
+   <td id="de595">Format used</td>
+   <td id="mp595">&nbsp;</td>
+   <td id="eb595">&nbsp;</td>
+   <td id="pb595">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi596">Format_Commercial_IfAny</td>
+   <td id="de596">Commercial name used by vendor for these settings, if available</td>
+   <td id="mp596">&nbsp;</td>
+   <td id="eb596">&nbsp;</td>
+   <td id="pb596">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi597">Format_Settings_Endianness</td>
+   <td id="de597">Order of bytes required for decoding. Options are Big/Little</td>
+   <td id="mp597">&nbsp;</td>
+   <td id="eb597">&nbsp;</td>
+   <td id="pb597">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi598">Format_Settings_Packing</td>
+   <td id="de598">Data packing method used in DPX frames (e.g. Packed, Filled A, Filled B)</td>
+   <td id="mp598">&nbsp;</td>
+   <td id="eb598">&nbsp;</td>
+   <td id="pb598">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi599">Format_Compression</td>
+   <td id="de599">Compression method used</td>
+   <td id="mp599">&nbsp;</td>
+   <td id="eb599">&nbsp;</td>
+   <td id="pb599">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi600">Format_Settings_Wrapping</td>
+   <td id="de600">Wrapping mode set for format (e.g. Frame, Clip)</td>
+   <td id="mp600">&nbsp;</td>
+   <td id="eb600">&nbsp;</td>
+   <td id="pb600">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi601">Format_AdditionalFeatures</td>
+   <td id="de601">Format features needed for fully supporting the content</td>
+   <td id="mp601">&nbsp;</td>
+   <td id="eb601">&nbsp;</td>
+   <td id="pb601">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi602">InternetMediaType</td>
+   <td id="de602">Internet Media Type (aka MIME Type, Content-Type)</td>
+   <td id="mp602">&nbsp;</td>
+   <td id="eb602">&nbsp;</td>
+   <td id="pb602">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi603">CodecID</td>
+   <td id="de603">Codec identifier as indicated by the container</td>
+   <td id="mp603">&nbsp;</td>
+   <td id="eb603">&nbsp;</td>
+   <td id="pb603">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi604">CodecID_Description</td>
+   <td id="de604">Codec description, as defined by the container</td>
+   <td id="mp604">&nbsp;</td>
+   <td id="eb604">&nbsp;</td>
+   <td id="pb604">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi605">Width</td>
+   <td id="de605">Width of frame (trimmed to clean aperture size if present) in pixels, as integer (e.g. 1920)</td>
+   <td id="mp605">&nbsp;</td>
+   <td id="eb605">&nbsp;</td>
+   <td id="pb605">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi606">Width_Offset</td>
+   <td id="de606">Offset between original width and displayed width, in pixels</td>
+   <td id="mp606">&nbsp;</td>
+   <td id="eb606">&nbsp;</td>
+   <td id="pb606">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi607">Width_Original</td>
+   <td id="de607">Width of frame (not including aperture size if present) in pixels, presented as integer (e.g. 1920)</td>
+   <td id="mp607">&nbsp;</td>
+   <td id="eb607">&nbsp;</td>
+   <td id="pb607">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi608">Height</td>
+   <td id="de608">Height of frame (including aperture size if present) in pixels, presented as integer (e.g. 1080)</td>
+   <td id="mp608">&nbsp;</td>
+   <td id="eb608">&nbsp;</td>
+   <td id="pb608">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi609">Height_Offset</td>
+   <td id="de609">Offset between original height and displayed height, in pixels</td>
+   <td id="mp609">&nbsp;</td>
+   <td id="eb609">&nbsp;</td>
+   <td id="pb609">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi610">Height_Original</td>
+   <td id="de610">Height of frame (not including aperture size if present) in pixels, presented as integer (e.g. 1080)</td>
+   <td id="mp610">&nbsp;</td>
+   <td id="eb610">&nbsp;</td>
+   <td id="pb610">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi611">PixelAspectRatio</td>
+   <td id="de611">Pixel Aspect ratio</td>
+   <td id="mp611">&nbsp;</td>
+   <td id="eb611">&nbsp;</td>
+   <td id="pb611">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi612">PixelAspectRatio_Original</td>
+   <td id="de612">Original (in the raw stream) Pixel Aspect ratio</td>
+   <td id="mp612">&nbsp;</td>
+   <td id="eb612">&nbsp;</td>
+   <td id="pb612">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi613">DisplayAspectRatio</td>
+   <td id="de613">The proportional relationship between the width and height of a frame (e.g. 4:3)</td>
+   <td id="mp613">&nbsp;</td>
+   <td id="eb613">&nbsp;</td>
+   <td id="pb613">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi614">DisplayAspectRatio_Original</td>
+   <td id="de614">The proportional relationship between the width and height of a frame (e.g. 4:3)</td>
+   <td id="mp614">&nbsp;</td>
+   <td id="eb614">&nbsp;</td>
+   <td id="pb614">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi615">ColorSpace</td>
+   <td id="de615">Color profile of the image (e.g. YUV)</td>
+   <td id="mp615">&nbsp;</td>
+   <td id="eb615">&nbsp;</td>
+   <td id="pb615">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi616">ChromaSubsampling</td>
+   <td id="de616">Ratio of chroma to luma in encoded image (e.g. 4:2:2)</td>
+   <td id="mp616">&nbsp;</td>
+   <td id="eb616">&nbsp;</td>
+   <td id="pb616">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi617">BitDepth</td>
+   <td id="de617">Color information stored in the frame, as integer (e.g. 10)</td>
+   <td id="mp617">&nbsp;</td>
+   <td id="eb617">&nbsp;</td>
+   <td id="pb617">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi618">Compression_Mode</td>
+   <td id="de618">Compression mode (Lossy, Lossless)</td>
+   <td id="mp618">&nbsp;</td>
+   <td id="eb618">&nbsp;</td>
+   <td id="pb618">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi619">StreamSize</td>
+   <td id="de619">Size of this stream, in bytes</td>
+   <td id="mp619">&nbsp;</td>
+   <td id="eb619">&nbsp;</td>
+   <td id="pb619">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi620">Encoded_Library</td>
+   <td id="de620">Software used to create the file</td>
+   <td id="mp620">&nbsp;</td>
+   <td id="eb620">&nbsp;</td>
+   <td id="pb620">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi621">Encoded_Library_Name</td>
+   <td id="de621">Name of the encoding software</td>
+   <td id="mp621">&nbsp;</td>
+   <td id="eb621">&nbsp;</td>
+   <td id="pb621">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi622">Encoded_Library_Version</td>
+   <td id="de622">Version of the encoding software</td>
+   <td id="mp622">&nbsp;</td>
+   <td id="eb622">&nbsp;</td>
+   <td id="pb622">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi623">Encoded_Library_Date</td>
+   <td id="de623">Release date of the encoding software, in UTC</td>
+   <td id="mp623">&nbsp;</td>
+   <td id="eb623">&nbsp;</td>
+   <td id="pb623">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi624">Encoded_Library_Settings</td>
+   <td id="de624">Parameters used by the encoding software</td>
+   <td id="mp624">&nbsp;</td>
+   <td id="eb624">&nbsp;</td>
+   <td id="pb624">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi625">Language</td>
+   <td id="de625">Language, formatted as 2-letter ISO 639-1 if exists, else 3-letter ISO 639-2, and with optional ISO 3166-1 country separated by a dash if available (e.g. en, en-US, en-CN)</td>
+   <td id="mp625">&nbsp;</td>
+   <td id="eb625">&nbsp;</td>
+   <td id="pb625">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi626">Language_More</td>
+   <td id="de626">More information about Language (e.g. Director's Comment)</td>
+   <td id="mp626">&nbsp;</td>
+   <td id="eb626">&nbsp;</td>
+   <td id="pb626">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi627">ServiceKind</td>
+   <td id="de627">Type of assisted service (e.g. visually impaired, commentary, voice over)</td>
+   <td id="mp627">&nbsp;</td>
+   <td id="eb627">&nbsp;</td>
+   <td id="pb627">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi628">Disabled</td>
+   <td id="de628">Set if this stream should not be used (Yes, No)</td>
+   <td id="mp628">&nbsp;</td>
+   <td id="eb628">&nbsp;</td>
+   <td id="pb628">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi629">Default</td>
+   <td id="de629">Flag set if this stream should be used if no language found matches the user preference (Yes, No)</td>
+   <td id="mp629">&nbsp;</td>
+   <td id="eb629">&nbsp;</td>
+   <td id="pb629">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi630">Forced</td>
+   <td id="de630">Flag set if this stream should be used regardless of user preferences, often used for sparse subtitle dialogue in an otherwise unsubtitled movie (Yes, No)</td>
+   <td id="mp630">&nbsp;</td>
+   <td id="eb630">&nbsp;</td>
+   <td id="pb630">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi631">AlternateGroup</td>
+   <td id="de631">Number of a group in order to provide versions of the same track</td>
+   <td id="mp631">&nbsp;</td>
+   <td id="eb631">&nbsp;</td>
+   <td id="pb631">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi632">Summary</td>
+   <td id="de632">Plot outline or a summary of the story</td>
+   <td id="mp632">&nbsp;</td>
+   <td id="eb632">&nbsp;</td>
+   <td id="pb632">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi633">Encoded_Date</td>
+   <td id="de633">Time that the encoding of this item was completed, in UTC</td>
+   <td id="mp633">&nbsp;</td>
+   <td id="eb633">&nbsp;</td>
+   <td id="pb633">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi634">Tagged_Date</td>
+   <td id="de634">Time that the tags were added to this item, in UTC</td>
+   <td id="mp634">&nbsp;</td>
+   <td id="eb634">&nbsp;</td>
+   <td id="pb634">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi635">Encryption</td>
+   <td id="de635">Whether this stream is encrypted and, if available, how it is encrypted</td>
+   <td id="mp635">&nbsp;</td>
+   <td id="eb635">&nbsp;</td>
+   <td id="pb635">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi636">colour_description_present</td>
+   <td id="de636">Presence of color description (Yes, No)</td>
+   <td id="mp636">&nbsp;</td>
+   <td id="eb636">&nbsp;</td>
+   <td id="pb636">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi637">colour_primaries</td>
+   <td id="de637">Chromaticity coordinates of the source primaries</td>
+   <td id="mp637">&nbsp;</td>
+   <td id="eb637">&nbsp;</td>
+   <td id="pb637">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi638">transfer_characteristics</td>
+   <td id="de638">Opto-electronic transfer characteristic of the source picture</td>
+   <td id="mp638">&nbsp;</td>
+   <td id="eb638">&nbsp;</td>
+   <td id="pb638">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi639">matrix_coefficients</td>
+   <td id="de639">Matrix coefficients used in deriving luma and chroma signals from the green, blue, and red primaries</td>
+   <td id="mp639">&nbsp;</td>
+   <td id="eb639">&nbsp;</td>
+   <td id="pb639">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi640">colour_description_present_Original</td>
+   <td id="de640">Presence of colour description (if incoherencies)</td>
+   <td id="mp640">&nbsp;</td>
+   <td id="eb640">&nbsp;</td>
+   <td id="pb640">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi641">colour_primaries_Original</td>
+   <td id="de641">Chromaticity coordinates of the source primaries (if incoherencies)</td>
+   <td id="mp641">&nbsp;</td>
+   <td id="eb641">&nbsp;</td>
+   <td id="pb641">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi642">transfer_characteristics_Original</td>
+   <td id="de642">Opto-electronic transfer characteristic of the source picture (if incoherencies)</td>
+   <td id="mp642">&nbsp;</td>
+   <td id="eb642">&nbsp;</td>
+   <td id="pb642">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi643">matrix_coefficients_Original</td>
+   <td id="de643">Matrix coefficients used in deriving luma and chroma signals from the green, blue, and red primaries (if incoherencies)</td>
+   <td id="mp643">&nbsp;</td>
+   <td id="eb643">&nbsp;</td>
+   <td id="pb643">&nbsp;</td>
+  </tr>
+ </tbody>
+ <thead>
+  <tr onclick="Line_Show('Menu')" id="MenuH" style="cursor: pointer">
+   <td colspan="5" class="xheader">Menu</td>
+  </tr>
+  <tr onclick="Line_Hide('Menu')" id="MenuS" style="cursor: pointer">
+   <td colspan="5" class="xheader">Menu</td>
+  </tr>
+ </thead>
+ <tbody id="Menu">
+  <tr>
+   <td id="mi644">StreamOrder</td>
+   <td id="de644">Stream order in the file for type of stream. Counting starts at 0</td>
+   <td id="mp644">&nbsp;</td>
+   <td id="eb644">&nbsp;</td>
+   <td id="pb644">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi645">ID</td>
+   <td id="de645">The identification number for this stream in this file</td>
+   <td id="mp645">&nbsp;</td>
+   <td id="eb645">&nbsp;</td>
+   <td id="pb645">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi646">OriginalSourceMedium_ID</td>
+   <td id="de646">Identification for this stream in the original medium of the material</td>
+   <td id="mp646">&nbsp;</td>
+   <td id="eb646">&nbsp;</td>
+   <td id="pb646">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi647">UniqueID</td>
+   <td id="de647">The unique ID for this stream, should be copied with stream copy</td>
+   <td id="mp647">&nbsp;</td>
+   <td id="eb647">&nbsp;</td>
+   <td id="pb647">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi648">MenuID</td>
+   <td id="de648">The menu ID for this stream in this file</td>
+   <td id="mp648">&nbsp;</td>
+   <td id="eb648">&nbsp;</td>
+   <td id="pb648">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi649">Format</td>
+   <td id="de649">Format used</td>
+   <td id="mp649">&nbsp;</td>
+   <td id="eb649">&nbsp;</td>
+   <td id="pb649">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi650">Format_Commercial_IfAny</td>
+   <td id="de650">Commercial name used by vendor for these settings, if available</td>
+   <td id="mp650">&nbsp;</td>
+   <td id="eb650">&nbsp;</td>
+   <td id="pb650">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi651">Format_AdditionalFeatures</td>
+   <td id="de651">Features from the format that are required to fully support the file content</td>
+   <td id="mp651">&nbsp;</td>
+   <td id="eb651">&nbsp;</td>
+   <td id="pb651">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi652">CodecID</td>
+   <td id="de652">Codec identifier as indicated by the container</td>
+   <td id="mp652">&nbsp;</td>
+   <td id="eb652">&nbsp;</td>
+   <td id="pb652">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi653">CodecID_Description</td>
+   <td id="de653">Codec description, as defined by the container</td>
+   <td id="mp653">&nbsp;</td>
+   <td id="eb653">&nbsp;</td>
+   <td id="pb653">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi654">Duration</td>
+   <td id="de654">Play time of the stream, in s (ms for text output)</td>
+   <td id="mp654">&nbsp;</td>
+   <td id="eb654">&nbsp;</td>
+   <td id="pb654">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi655">Duration_Start</td>
+   <td id="de655">Start time of stream, in UTC</td>
+   <td id="mp655">&nbsp;</td>
+   <td id="eb655">&nbsp;</td>
+   <td id="pb655">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi656">Duration_End</td>
+   <td id="de656">End time of stream, in UTC</td>
+   <td id="mp656">&nbsp;</td>
+   <td id="eb656">&nbsp;</td>
+   <td id="pb656">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi657">Delay</td>
+   <td id="de657">Delay fixed in the stream (relative), in ms</td>
+   <td id="mp657">&nbsp;</td>
+   <td id="eb657">&nbsp;</td>
+   <td id="pb657">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi658">FrameRate_Mode</td>
+   <td id="de658">Frame rate mode, as acronym (e.g. CFR, VFR)</td>
+   <td id="mp658">&nbsp;</td>
+   <td id="eb658">&nbsp;</td>
+   <td id="pb658">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi659">FrameRate</td>
+   <td id="de659">Frames per second, as float (e.g. 29.970)</td>
+   <td id="mp659">&nbsp;</td>
+   <td id="eb659">&nbsp;</td>
+   <td id="pb659">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi660">List_StreamKind</td>
+   <td id="de660">List of programs available</td>
+   <td id="mp660">&nbsp;</td>
+   <td id="eb660">&nbsp;</td>
+   <td id="pb660">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi661">List_StreamPos</td>
+   <td id="de661">List of programs available</td>
+   <td id="mp661">&nbsp;</td>
+   <td id="eb661">&nbsp;</td>
+   <td id="pb661">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi662">List</td>
+   <td id="de662">List of programs available</td>
+   <td id="mp662">&nbsp;</td>
+   <td id="eb662">&nbsp;</td>
+   <td id="pb662">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi663">Title</td>
+   <td id="de663">Name of this menu</td>
+   <td id="mp663">&nbsp;</td>
+   <td id="eb663">&nbsp;</td>
+   <td id="pb663">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi664">Language</td>
+   <td id="de664">Language, formatted as 2-letter ISO 639-1 if exists, else 3-letter ISO 639-2, and with optional ISO 3166-1 country separated by a dash if available (e.g. en, en-US, en-CN)</td>
+   <td id="mp664">&nbsp;</td>
+   <td id="eb664">&nbsp;</td>
+   <td id="pb664">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi665">Language_More</td>
+   <td id="de665">More information about Language (e.g. Director's Comment)</td>
+   <td id="mp665">&nbsp;</td>
+   <td id="eb665">&nbsp;</td>
+   <td id="pb665">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi666">ServiceKind</td>
+   <td id="de666">Type of assisted service (e.g. visually impaired, commentary, voice over)</td>
+   <td id="mp666">&nbsp;</td>
+   <td id="eb666">&nbsp;</td>
+   <td id="pb666">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi667">ServiceName</td>
+   <td id="de667">Name of assisted service</td>
+   <td id="mp667">&nbsp;</td>
+   <td id="eb667">&nbsp;</td>
+   <td id="pb667">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi668">ServiceChannel</td>
+   <td id="de668">Channel of assisted service</td>
+   <td id="mp668">&nbsp;</td>
+   <td id="eb668">&nbsp;</td>
+   <td id="pb668">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi669">Service/Url</td>
+   <td id="de669">URL of assisted service</td>
+   <td id="mp669">&nbsp;</td>
+   <td id="eb669">&nbsp;</td>
+   <td id="pb669">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi670">ServiceProvider</td>
+   <td id="de670">Provider of assisted service</td>
+   <td id="mp670">&nbsp;</td>
+   <td id="eb670">&nbsp;</td>
+   <td id="pb670">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi671">ServiceProvider/Url</td>
+   <td id="de671">URL of provider of assisted service</td>
+   <td id="mp671">&nbsp;</td>
+   <td id="eb671">&nbsp;</td>
+   <td id="pb671">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi672">ServiceType</td>
+   <td id="de672">Type of assisted service</td>
+   <td id="mp672">&nbsp;</td>
+   <td id="eb672">&nbsp;</td>
+   <td id="pb672">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi673">NetworkName</td>
+   <td id="de673">Television network name</td>
+   <td id="mp673">&nbsp;</td>
+   <td id="eb673">&nbsp;</td>
+   <td id="pb673">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi674">Original/NetworkName</td>
+   <td id="de674">Television network name of original broadcast</td>
+   <td id="mp674">&nbsp;</td>
+   <td id="eb674">&nbsp;</td>
+   <td id="pb674">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi675">Countries</td>
+   <td id="de675">Country information of the content</td>
+   <td id="mp675">&nbsp;</td>
+   <td id="eb675">&nbsp;</td>
+   <td id="pb675">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi676">TimeZones</td>
+   <td id="de676">TimeZone information of the content</td>
+   <td id="mp676">&nbsp;</td>
+   <td id="eb676">&nbsp;</td>
+   <td id="pb676">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi677">LawRating</td>
+   <td id="de677">Legal rating of a movie. Format depends on country of origin (e.g. PG, 16)</td>
+   <td id="mp677">&nbsp;</td>
+   <td id="eb677">&nbsp;</td>
+   <td id="pb677">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi678">LawRating_Reason</td>
+   <td id="de678">Reason of the law rating</td>
+   <td id="mp678">&nbsp;</td>
+   <td id="eb678">&nbsp;</td>
+   <td id="pb678">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi679">Disabled</td>
+   <td id="de679">Set if this stream should not be used (Yes, No)</td>
+   <td id="mp679">&nbsp;</td>
+   <td id="eb679">&nbsp;</td>
+   <td id="pb679">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi680">Default</td>
+   <td id="de680">Flag set if this stream should be used if no language found matches the user preference (Yes, No)</td>
+   <td id="mp680">&nbsp;</td>
+   <td id="eb680">&nbsp;</td>
+   <td id="pb680">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi681">Forced</td>
+   <td id="de681">Flag set if this stream should be used regardless of user preferences, often used for sparse subtitle dialogue in an otherwise unsubtitled movie (Yes, No)</td>
+   <td id="mp681">&nbsp;</td>
+   <td id="eb681">&nbsp;</td>
+   <td id="pb681">&nbsp;</td>
+  </tr>
+  <tr>
+   <td id="mi682">AlternateGroup</td>
+   <td id="de682">Number of a group in order to provide versions of the same track</td>
+   <td id="mp682">&nbsp;</td>
+   <td id="eb682">&nbsp;</td>
+   <td id="pb682">&nbsp;</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="Details">
+{% trans %}support.fields.details{% endtrans %}
+</div>
+
+{% endblock %}
+
+{% block javascripts %}
+<script type="text/javascript">
+    function Fields_Line_Show_All() {
+        Line_Show("General");
+        Line_Show("Video");
+        Line_Show("Audio");
+        Line_Show("Text");
+        Line_Show("Other");
+        Line_Show("Image");
+        Line_Show("Menu");
+    }
+
+    function Fields_Line_Hide_All() {
+        Line_Hide("General");
+        Line_Hide("Video");
+        Line_Hide("Audio");
+        Line_Hide("Text");
+        Line_Hide("Other");
+        Line_Hide("Image");
+        Line_Hide("Menu");
+    }
+
+    function Fields_Col_Show_All() {
+        Col_Show("mi");
+        Col_Show("de");
+        Col_Show("mp");
+        Col_Show("eb");
+        Col_Show("pb");
+    }
+
+    function Fields_Col_Hide_All() {
+        Col_Hide("mi");
+        Col_Hide("de");
+        Col_Hide("mp");
+        Col_Hide("eb");
+        Col_Hide("pb");
+    }
+    $(document).ready(function() {
+        Fields_Line_Show_All();Fields_Col_Hide_All();Col_Show("mi");Col_Show("de");
+    });
+</script>
+{% endblock %}
