@@ -669,7 +669,8 @@ div.map:hover ul {
 }
 
 #Tags th {
-    background-color: #222;
+    color: #F0F0F0;
+    background-color: #444;
     border: 1px solid black;
     font-size: small;
 }
