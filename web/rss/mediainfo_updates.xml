@@ -5,7 +5,23 @@
         <link>https://mediaarea.net/MediaInfo</link>
         <description>MediaInfo updates feed</description>
         <language>en-us</language>
-        <lastBuildDate>Thu, 14 Sep 2023 08:00:00 +0000</lastBuildDate>
+        <lastBuildDate>Wed, 04 Oct 2023 08:00:00 +0000</lastBuildDate>
+         <item>
+            <title>MediaInfo 23.10</title>
+            <description>
+                <![CDATA[+ Italian language update<br />
+                         + Languages: add 'fil' (Filipino)<br />
+                         + Support of MPEG-H in MPEG-TS<br />
+                         + MOV/MP4: caption probing time expanded from ~15s to ~30s<br />
+                         + MPEG-7 and DVD-Video: provide title duration based on frame rate<br />
+                         + WAV: better display of buggy WAV files have 2 fmt/data chunks<br />
+                         x MOV/MP4: fix lack of detection of CEA-608/708 if junk at end of stream<br />
+                         x DVD-Video: fix duration if more than 1 menu]]>
+            </description>
+            <link>https://mediaarea.net/MediaInfo</link>
+            <pubDate>Wed, 04 Oct 2023 08:00:00 +0000</pubDate>
+            <guid>MediaInfo-23.10</guid>
+         </item>
          <item>
             <title>MediaInfo 23.09</title>
             <description>

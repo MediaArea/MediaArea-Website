@@ -1,58 +1,58 @@
 {% if 'Y' == app.request.attributes.get('donated') or (app.user and app.user.isDonor) %}
-    {% set downloadLink = '//mediaarea.net/download/donors/23.09/MediaInfo_GUI_23.09_Windows.exe' %}
+    {% set downloadLink = '//mediaarea.net/download/donors/23.10/MediaInfo_GUI_23.10_Windows.exe' %}
 {% elseif 1 <= app.request.attributes.get('donated', -1) %}
-    {% set downloadLink = '//mediaarea.net/download/current/MediaInfo_GUI_23.09_Windows.exe' %}
+    {% set downloadLink = '//mediaarea.net/download/current/MediaInfo_GUI_23.10_Windows.exe' %}
 {% else %}
-    {% set downloadLink = '//mediaarea.net/download/binary/mediainfo-gui/23.09/MediaInfo_GUI_23.09_Windows.exe' %}
+    {% set downloadLink = '//mediaarea.net/download/binary/mediainfo-gui/23.10/MediaInfo_GUI_23.10_Windows.exe' %}
 {% endif %}
 <tr>
     <th rowspan="9">Windows Vista, 7, 8, 10, 11</th>
     <th>Universal installer (32/64 bit)</th>
     <th><abbr title="Graphical User Interface">GUI</abbr></th>
-    <td><a href="{{ downloadLink }}">v23.09</a></td>
+    <td><a href="{{ downloadLink }}">v23.10</a></td>
     <td>If you don't know which one to download, download this one</td>
 </tr>
 <tr>
     <th rowspan="4">64 bit</th>
     <th><abbr title="Graphical User Interface">GUI</abbr></th>
-    <td><a href="{{ downloadLink }}">v23.09 Universal (32/64 bit)</a> <small>(<a href="//mediaarea.net/download/binary/mediainfo-gui/23.09/MediaInfo_GUI_23.09_Windows_x64_WithoutInstaller.7z">64 bit only without installer</a>)</small></td>
+    <td><a href="{{ downloadLink }}">v23.10 Universal (32/64 bit)</a> <small>(<a href="//mediaarea.net/download/binary/mediainfo-gui/23.10/MediaInfo_GUI_23.10_Windows_x64_WithoutInstaller.7z">64 bit only without installer</a>)</small></td>
     <td></td>
 </tr>
 <tr>
     <th><abbr title="Graph visualization plugin for the GUI (3D audio only)">Graph</abbr></th>
-    <td><a href="//mediaarea.net/download/binary/mediainfo-graph-plugin/23.09/MediaInfo_GraphPlugin_23.09_Windows.exe">v23.09</a></td>
+    <td><a href="//mediaarea.net/download/binary/mediainfo-graph-plugin/23.10/MediaInfo_GraphPlugin_23.10_Windows.exe">v23.10</a></td>
     <td>Manual download in case the automatic install from the GUI does not work.</td>
 </tr>
 <tr>
     <th><abbr title="Command Line Interface">CLI</abbr></th>
-    <td><a href="//mediaarea.net/download/binary/mediainfo/23.09/MediaInfo_CLI_23.09_Windows_x64.zip">v23.09</a><small> (graph plugin: <a href="//mediaarea.net/download/binary/mediainfo-graph-plugin/23.09/MediaInfo_GraphPlugin_CLI_23.09_Windows_x64.zip">zip</a>)</small></td>
+    <td><a href="//mediaarea.net/download/binary/mediainfo/23.10/MediaInfo_CLI_23.10_Windows_x64.zip">v23.10</a><small> (graph plugin: <a href="//mediaarea.net/download/binary/mediainfo-graph-plugin/23.10/MediaInfo_GraphPlugin_CLI_23.10_Windows_x64.zip">zip</a>)</small></td>
     <td>&nbsp;</td>
 </tr>
 <tr>
     <th><abbr title="Dynamic Link Library">DLL</abbr></th>
-    <td><a href="//mediaarea.net/download/binary/libmediainfo0/23.09/MediaInfo_DLL_23.09_Windows_x64.exe">v23.09</a><small> (without installer: <a href="//mediaarea.net/download/binary/libmediainfo0/23.09/MediaInfo_DLL_23.09_Windows_x64_WithoutInstaller.7z">7z</a>, <a href="//mediaarea.net/download/binary/libmediainfo0/23.09/MediaInfo_DLL_23.09_Windows_x64_WithoutInstaller.zip">zip</a>)</small></td>
+    <td><a href="//mediaarea.net/download/binary/libmediainfo0/23.10/MediaInfo_DLL_23.10_Windows_x64.exe">v23.10</a><small> (without installer: <a href="//mediaarea.net/download/binary/libmediainfo0/23.10/MediaInfo_DLL_23.10_Windows_x64_WithoutInstaller.7z">7z</a>, <a href="//mediaarea.net/download/binary/libmediainfo0/23.10/MediaInfo_DLL_23.10_Windows_x64_WithoutInstaller.zip">zip</a>)</small></td>
     <td>&nbsp;</td>
 </tr>
 
 <tr>
     <th rowspan="4">32 bit</th>
     <th><abbr title="Graphical User Interface">GUI</abbr></th>
-    <td><a href="{{ downloadLink }}">v23.09 Universal (32/64 bit)</a> <small> (<a href="//mediaarea.net/download/binary/mediainfo-gui/23.09/MediaInfo_GUI_23.09_Windows_i386_WithoutInstaller.7z">32 bit only without installer</a>)</small></td>
+    <td><a href="{{ downloadLink }}">v23.10 Universal (32/64 bit)</a> <small> (<a href="//mediaarea.net/download/binary/mediainfo-gui/23.10/MediaInfo_GUI_23.10_Windows_i386_WithoutInstaller.7z">32 bit only without installer</a>)</small></td>
     <td></td>
 </tr>
 <tr>
     <th><abbr title="Graph visualization plugin for the GUI (3D audio only)">Graph</abbr></th>
-    <td><a href="//mediaarea.net/download/binary/mediainfo-graph-plugin/23.09/MediaInfo_GraphPlugin_23.09_Windows.exe">v23.09</a></td>
+    <td><a href="//mediaarea.net/download/binary/mediainfo-graph-plugin/23.10/MediaInfo_GraphPlugin_23.10_Windows.exe">v23.10</a></td>
     <td>Manual download in case the automatic install from the GUI does not work.</td>
 </tr>
 <tr>
     <th><abbr title="Command Line Interface">CLI</abbr></th>
-    <td><a href="//mediaarea.net/download/binary/mediainfo/23.09/MediaInfo_CLI_23.09_Windows_i386.zip">v23.09</a><small> (graph plugin: <a href="//mediaarea.net/download/binary/mediainfo-graph-plugin/23.09/MediaInfo_GraphPlugin_CLI_23.09_Windows_Win32.zip">zip</a>)</small></td>
+    <td><a href="//mediaarea.net/download/binary/mediainfo/23.10/MediaInfo_CLI_23.10_Windows_i386.zip">v23.10</a><small> (graph plugin: <a href="//mediaarea.net/download/binary/mediainfo-graph-plugin/23.10/MediaInfo_GraphPlugin_CLI_23.10_Windows_Win32.zip">zip</a>)</small></td>
     <td>&nbsp;</td>
 </tr>
 <tr>
     <th><abbr title="Dynamic Link Library">DLL</abbr></th>
-    <td><a href="//mediaarea.net/download/binary/libmediainfo0/23.09/MediaInfo_DLL_23.09_Windows_i386.exe">v23.09</a><small> (without installer: <a href="//mediaarea.net/download/binary/libmediainfo0/23.09/MediaInfo_DLL_23.09_Windows_i386_WithoutInstaller.7z">7z</a>, <a href="//mediaarea.net/download/binary/libmediainfo0/23.09/MediaInfo_DLL_23.09_Windows_i386_WithoutInstaller.zip">zip</a>)</small></td>
+    <td><a href="//mediaarea.net/download/binary/libmediainfo0/23.10/MediaInfo_DLL_23.10_Windows_i386.exe">v23.10</a><small> (without installer: <a href="//mediaarea.net/download/binary/libmediainfo0/23.10/MediaInfo_DLL_23.10_Windows_i386_WithoutInstaller.7z">7z</a>, <a href="//mediaarea.net/download/binary/libmediainfo0/23.10/MediaInfo_DLL_23.10_Windows_i386_WithoutInstaller.zip">zip</a>)</small></td>
     <td>&nbsp;</td>
 </tr>
 
