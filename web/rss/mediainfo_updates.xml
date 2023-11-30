@@ -5,7 +5,31 @@
         <link>https://mediaarea.net/MediaInfo</link>
         <description>MediaInfo updates feed</description>
         <language>en-us</language>
-        <lastBuildDate>Wed, 04 Oct 2023 08:00:00 +0000</lastBuildDate>
+        <lastBuildDate>Thu, 30 Nov 2023 12:00:00 +0000</lastBuildDate>
+         <item>
+            <title>MediaInfo 23.11</title>
+            <description>
+                <![CDATA[+ XMP: support of a couple of additional metadata<br />
+                         + PNG: pixel aspect ratio, gamma, active bit depth<br />
+                         + PNG: support of textual metadata<br />
+                         + Detection of active width/height/DAR (based on FFmpeg), Windows only<br />
+                         + Matroska: show ST-12 timecode of first frame<br />
+                         + ADM: rounding of FFoA to 0 decimal and Start/End time codes to 2 decimals<br />
+                         + WAV: support of big (1+ GB) axml chunks<br />
+                         + ADM: support of big (1+ GB) files on 32-bit systems<br />
+                         x I1876, BWF: fix missing precision in TimeReference export<br />
+                         x I1607, MPEG-TS/PS: Less Inform() with Open(memory) than Open(file)<br />
+                         x MP4/MOV: show right time code of last frame with complex time code tracks<br />
+                         x Duration: timecode output should not use drop frame for 23.976fps<br />
+                         x AVC+HEVC: fix handling of DF timestamps<br />
+                         x SF1188, ID3v2: fix wrong handling of chunks having padding<br />
+                         x I1887, TS DVB: fix wrong handling of UTF-8 strings in service name<br />
+                         x I1892, Matroska: fix date readout if before the millennium]]>
+            </description>
+            <link>https://mediaarea.net/MediaInfo</link>
+            <pubDate>Thu, 30 Nov 2023 12:00:00 +0000</pubDate>
+            <guid>MediaInfo-23.11</guid>
+         </item>
          <item>
             <title>MediaInfo 23.10</title>
             <description>
