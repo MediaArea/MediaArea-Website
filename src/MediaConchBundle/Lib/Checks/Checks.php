@@ -1117,6 +1117,1837 @@ $GLOBALS['dbChecks'] =
         ],
         [ 'General_compliance', 'Best_practice' ]
     ),
+    new Check(
+        '<code>(attribute name)</code> attribute is not part of specs',
+        'Warning',
+        [
+            new Reference(
+                'ITU-R_BS.2076',
+                'audioChannelFormat'
+            ),
+        ],
+        [ 'General_compliance' ]
+    ),
+    new Check(
+        '<code>(element name)</code> element is not part of specs',
+        'Warning',
+        [
+            new Reference(
+                'ITU-R_BS.2076',
+                'audioProgramme'
+            ),
+            new Reference(
+                'ITU-R_BS.2076',
+                'audioContent'
+            ),
+            new Reference(
+                'ITU-R_BS.2076',
+                'audioObject'
+            ),
+            new Reference(
+                'ITU-R_BS.2076',
+                ''
+            ),
+            new Reference(
+                'ITU-R_BS.2076',
+                'audioChannelFormat'
+            ),
+            new Reference(
+                'ITU-R_BS.2076',
+                'audioPackFormat'
+            ),
+            new Reference(
+                'ITU-R_BS.2076',
+                'audioTrackUID'
+            ),
+            new Reference(
+                'ITU-R_BS.2076',
+                'audioTrackFormat'
+            ),
+            new Reference(
+                'ITU-R_BS.2076',
+                'audioStreamFormat'
+            ),
+            new Reference(
+                'ITU-R_BS.2076',
+                'audioChannelFormat/audioBlockFormat'
+            ),
+            new Reference(
+                'ITU-R_BS.2076',
+                'audioChannelFormat/audioBlockFormat/position'
+            ),
+        ],
+        [ 'General_compliance' ]
+    ),
+    new Check(
+        '<code>(attribute name)</code> attribute is not present<code> (extra spec name if needed)</code>',
+        'Error',
+        [
+            new Reference(
+                'ITU-R_BS.2076',
+                'audioProgramme',
+                'audioProgrammeID',
+                '"audioProgramme attributes [...] audioProgrammeID [...] Required [...] Yes"',
+                'Update the encoder to write this element, then reencode the content.'
+            ),
+            new Reference(
+                'ITU-R_BS.2076',
+                'audioProgramme',
+                'audioProgrammeName',
+                '"audioProgramme attributes [...] audioProgrammeName [...] Required [...] Yes"'
+            ),
+            new Reference(
+                'Dolby_Atmos_Master_ADM_Profile',
+                'audioProgramme',
+                'start',
+                '"audioProgramme attributes [...] start [...] Required [...] Yes"',
+                'Update the encoder to write this element, then reencode the content.'
+            ),
+            new Reference(
+                'Dolby_Atmos_Master_ADM_Profile',
+                'audioProgramme',
+                'end',
+                '"audioProgramme attributes [...] end [...] Required [...] Yes"'
+            ),
+            new Reference(
+                'Dolby_Atmos_Master_ADM_Profile',
+                'audioProgramme',
+                'maxDuckingDepth',
+                '"audioProgramme attributes [...] maxDuckingDepth [...] This attribute shall not be present"'
+            ),
+            new Reference(
+                'ITU-R_BS.2076',
+                'audioContent',
+                'audioContentID',
+                '"audioContent attributes [...] audioContentID [...] Required [...] Yes"'
+            ),
+            new Reference(
+                'ITU-R_BS.2076',
+                'audioContent',
+                'audioContentName',
+                '"audioContent attributes [...] audioContentName [...] Required [...] Yes"'
+            ),
+            new Reference(
+                'ITU-R_BS.2076',
+                'audioObject',
+                'audioObjectID',
+                '"audioObject attributes [...] audioObjectID [...] Required [...] Yes"'
+            ),
+            new Reference(
+                'ITU-R_BS.2076',
+                'audioObject',
+                'audioObjectName',
+                '"audioObject attributes [...] audioObjectName [...] Required [...] Yes"'
+            ),
+            new Reference(
+                'Dolby_Atmos_Master_ADM_Profile',
+                'audioObject',
+                'duration',
+                '"audioObject attributes [...] duration [...] Required [...] Yes"'
+            ),
+            new Reference(
+                'ITU-R_BS.2076',
+                'audioPackFormat',
+                'audioPackFormatID',
+                '"audioPackFormat attributes [...] audioPackFormatID [...] Required [...] Yes"'
+            ),
+            new Reference(
+                'ITU-R_BS.2076',
+                'audioPackFormat',
+                'audioPackFormatName',
+                '"audioPackFormat attributes [...] audioPackFormatName [...] Required [...] Yes"'
+            ),
+            new Reference(
+                'Dolby_Atmos_Master_ADM_Profile',
+                'audioPackFormat',
+                'typeDefinition',
+                '"audioPackFormat attributes [...] typeDefinition [...] Required [...] Yes"'
+            ),
+            new Reference(
+                'Dolby_Atmos_Master_ADM_Profile',
+                'audioPackFormat',
+                'typeLabel',
+                '"audioPackFormat attributes [...] typeLabel [...] Required [...] Yes"'
+            ),
+            new Reference(
+                'ITU-R_BS.2076',
+                'audioChannelFormat',
+                'audioChannelFormatID',
+                '"audioChannelFormat attributes [...] audioChannelFormatID [...] Required [...] Yes"'
+            ),
+            new Reference(
+                'ITU-R_BS.2076',
+                'audioChannelFormat',
+                'audioChannelFormatName',
+                '"audioChannelFormat attributes [...] audioChannelFormatName [...] Required [...] Yes"'
+            ),
+            new Reference(
+                'Dolby_Atmos_Master_ADM_Profile',
+                'audioChannelFormat',
+                'typeDefinition',
+                '"audioChannelFormat attributes [...] typeDefinition [...] Required [...] Yes"'
+            ),
+            new Reference(
+                'Dolby_Atmos_Master_ADM_Profile',
+                'audioChannelFormat',
+                'typeLabel',
+                '"audioChannelFormat attributes [...] typeLabel [...] Required [...] Yes"'
+            ),
+            new Reference(
+                'ITU-R_BS.2076',
+                'audioTrackUID',
+                'UID',
+                '"audioTrackUID attributes [...] UID [...] Required [...] Yes"'
+            ),
+            new Reference(
+                'Dolby_Atmos_Master_ADM_Profile',
+                'audioTrackUID',
+                'sampleRate',
+                '"audioTrackUID attributes [...] sampleRate [...] Required [...] Yes"'
+            ),
+            new Reference(
+                'Dolby_Atmos_Master_ADM_Profile',
+                'audioTrackUID',
+                'bitDepth',
+                '"audioTrackUID attributes [...] bitDepth [...] Required [...] Yes"'
+            ),
+            new Reference(
+                'ITU-R_BS.2076',
+                'audioTrackFormat',
+                'audioTrackFormatID',
+                '"audioTrackFormat attributes [...] audioTrackFormatID [...] Required [...] Yes"'
+            ),
+            new Reference(
+                'ITU-R_BS.2076',
+                'audioTrackFormat',
+                'audioTrackFormatName',
+                '"audioTrackFormat attributes [...] audioTrackFormatName [...] Required [...] Yes"'
+            ),
+            new Reference(
+                'Dolby_Atmos_Master_ADM_Profile',
+                'audioTrackFormat',
+                'formatLabel',
+                '"audioTrackFormat attributes [...] formatLabel [...] Required [...] Yes"'
+            ),
+            new Reference(
+                'Dolby_Atmos_Master_ADM_Profile',
+                'audioTrackFormat',
+                'formatDefinition',
+                '"audioTrackFormat attributes [...] formatDefinition [...] Required [...] Yes"'
+            ),
+            new Reference(
+                'ITU-R_BS.2076',
+                'audioStreamFormat',
+                'audioStreamFormatID',
+                '"audioStreamFormat attributes [...] audioStreamFormatID [...] Required [...] Yes"'
+            ),
+            new Reference(
+                'ITU-R_BS.2076',
+                'audioStreamFormat',
+                'audioStreamFormatName',
+                '"audioStreamFormat attributes [...] audioStreamFormatName [...] Required [...] Yes"'
+            ),
+            new Reference(
+                'Dolby_Atmos_Master_ADM_Profile',
+                'audioStreamFormat',
+                'formatLabel',
+                '"audioStreamFormat attributes [...] formatLabel [...] Required [...] Yes"'
+            ),
+            new Reference(
+                'Dolby_Atmos_Master_ADM_Profile',
+                'audioStreamFormat',
+                'formatDefinition',
+                '"audioStreamFormat attributes [...] formatDefinition [...] Required [...] Yes"'
+            ),
+            new Reference(
+                'ITU-R_BS.2076',
+                'audioChannelFormat/audioBlockFormat',
+                'audioBlockFormatID',
+                '"audioBlockFormat attributes [...] audioBlockFormatID [...] Required [...] Yes"'
+            ),
+        ]
+    ),
+    new Check(
+        '<code>(attribute name)</code> attribute is present<code> (extra spec name if needed)</code>',
+        'Error',
+        [
+            new Reference(
+                'Dolby_Atmos_Master_ADM_Profile',
+                'audioProgramme',
+                'typeLabel',
+                '"Known issues with Dolby Atmos Master ADM files [...] audioProgramme [...] typeLabel [...] This attribute is present only in the appropriate elements"',
+                'Update the encoder to write this element, then reencode the content.'
+            ),
+            new Reference(
+                'Dolby_Atmos_Master_ADM_Profile',
+                'audioContent',
+                'typeLabel',
+                '"Known issues with Dolby Atmos Master ADM files [...] audioContent [...] typeLabel [...] This attribute is present only in the appropriate elements"'
+            ),
+            new Reference(
+                'Dolby_Atmos_Master_ADM_Profile',
+                'audioTrackUID',
+                'typeLabel',
+                '"Known issues with Dolby Atmos Master ADM files [...] audioTrackUID [...] typeLabel [...] This attribute is present only in the appropriate elements"'
+            ),
+            new Reference(
+                'Dolby_Atmos_Master_ADM_Profile',
+                'audioTrackFormat',
+                'typeLabel',
+                '"Known issues with Dolby Atmos Master ADM files [...] audioTrackFormat [...] typeLabel [...] This attribute is present only in the appropriate elements"'
+            ),
+            new Reference(
+                'Dolby_Atmos_Master_ADM_Profile',
+                'audioTrackFormat',
+                'typeDefinition',
+                '"Known issues with Dolby Atmos Master ADM files [...] audioTrackFormat [...] typeDefinition [...] This attribute is present only in the appropriate elements"'
+            ),
+            new Reference(
+                'Dolby_Atmos_Master_ADM_Profile',
+                'audioStreamFormat',
+                'typeLabel',
+                '"Known issues with Dolby Atmos Master ADM files [...] audioStreamFormat [...] typeLabel [...] This attribute is present only in the appropriate elements"'
+            ),
+            new Reference(
+                'Dolby_Atmos_Master_ADM_Profile',
+                'audioStreamFormat',
+                'typeDefinition',
+                '"Known issues with Dolby Atmos Master ADM files [...] audioStreamFormat [...] typeDefinition [...] This attribute is present only in the appropriate elements"'
+            ),
+            new Reference(
+                'Dolby_Atmos_Master_ADM_Profile',
+                'audioChannelFormat/audioBlockFormat',
+                'lstart',
+                'audioBlockFormat requirements [...] rtime [...] This attribute shall not be used for DirectSpeakers type'
+            ),
+            new Reference(
+                'Dolby_Atmos_Master_ADM_Profile',
+                'audioChannelFormat/audioBlockFormat',
+                'duration',
+                'audioBlockFormat requirements [...] duration [...] This attribute shall not be used for DirectSpeakers type'
+            ),
+            new Reference(
+                'Dolby_Atmos_Master_ADM_Profile',
+                'audioChannelFormat/audioBlockFormat',
+                'rtime',
+                'This field is from S-ADM and not listed in the specification'
+            ),
+            new Reference(
+                'Dolby_Atmos_Master_ADM_Profile',
+                'audioChannelFormat/audioBlockFormat',
+                'lduration',
+                'This field is from S-ADM and not listed in the specification'
+            ),
+            new Reference(
+                'Dolby_Atmos_Master_ADM_Profile',
+                'audioChannelFormat/audioBlockFormat',
+                'initializeBlock',
+                'This field is from S-ADM and not listed in the specification'
+            ),
+            new Reference(
+                'Dolby_Atmos_Master_ADM_Profile',
+                'audioChannelFormat/audioBlockFormat/position',
+                'bound',
+                'This field is not listed in the spec'
+            ),
+            new Reference(
+                'Dolby_Atmos_Master_ADM_Profile',
+                'audioChannelFormat/audioBlockFormat/position',
+                'screenEdgeLock',
+                '"The screenEdgeLock attribute of the position subelement shall not be used"'
+            ),
+        ]
+    ),
+    new Check(
+        '<code>(element name)</code> element is not present<code> (extra spec name if needed)</code>',
+        'Error',
+        [
+            new Reference(
+                'ITU-R_BS.2076',
+                'audioProgramme',
+                'audioContentIDRef',
+                '"audioProgramme elements [...] audioContentIDRef [...] Quantity [...] 1...*"',
+                'Update the encoder to write this element, then reencode the content.'
+            ),
+            new Reference(
+                'ITU-R_BS.2076',
+                'audioContent',
+                'audioObjectIDRef',
+                '"audioContent elements [...] audioObjectIDRef [...] Quantity [...] 1...*"'
+            ),
+            new Reference(
+                'Dolby_Atmos_Master_ADM_Profile',
+                'audioContent',
+                'dialogue',
+                '"audioContent elements [...] dialogue [...] Quantity [...] 1"',
+                'Update the encoder to write this element, then reencode the content.'
+            ),
+            new Reference(
+                'Dolby_Atmos_Master_ADM_Profile',
+                'audioObject',
+                'audioPackFormatIDRef',
+                '"audioObject elements [...] audioPackFormatIDRef [...] Quantity [...] 1"'
+            ),
+            new Reference(
+                'Dolby_Atmos_Master_ADM_Profile',
+                'audioObject',
+                'audioTrackUIDRef',
+                '"audioObject elements [...] audioTrackUIDRef [...] Quantity [...] 1 to"'
+            ),
+            new Reference(
+                'Dolby_Atmos_Master_ADM_Profile',
+                'audioPackFormat',
+                'audioChannelFormatIDRef',
+                '"audioPackFormat elements [...] audioChannelFormatIDRef [...] Quantity [...] 1 to"'
+            ),
+            new Reference(
+                'ITU-R_BS.2076',
+                'audioChannelFormat',
+                'audioChannelFormat/audioBlockFormat',
+                '"audioChannelFormat elements [...] audioBlockFormat [...] Quantity [...] 1...*"'
+            ),
+            new Reference(
+                'Dolby_Atmos_Master_ADM_Profile',
+                'audioTrackUID',
+                'audioTrackFormatIDRef',
+                '"audioTrackUID elements [...] audioTrackFormatIDRef [...] Quantity [...] 1"'
+            ),
+            new Reference(
+                'Dolby_Atmos_Master_ADM_Profile',
+                'audioTrackUID',
+                'audioPackFormatIDRef',
+                '"audioTrackUID elements [...] audioPackFormatIDRef [...] Quantity [...] 1"'
+            ),
+            new Reference(
+                'ITU-R_BS.2076',
+                'audioTrackFormat',
+                'audioStreamFormatIDRef',
+                '"audioTrackFormat elements [...] audioStreamFormatIDRef [...] Quantity [...] 1"'
+            ),
+            new Reference(
+                'Dolby_Atmos_Master_ADM_Profile',
+                'audioStreamFormat',
+                'audioChannelFormatIDRef',
+                '"audioStreamFormat elements [...] audioChannelFormatIDRef [...] Quantity [...] 1"'
+            ),
+            new Reference(
+                'Dolby_Atmos_Master_ADM_Profile',
+                'audioStreamFormat',
+                'audioPackFormatIDRef',
+                '"audioStreamFormat elements [...] audioPackFormatIDRef [...] Quantity [...] 1"'
+            ),
+            new Reference(
+                'Dolby_Atmos_Master_ADM_Profile',
+                'audioStreamFormat',
+                'audioTrackFormatIDRef',
+                '"audioStreamFormat elements [...] audioTrackFormatIDRef [...] Quantity [...] 1"'
+            ),
+            new Reference(
+                'ITU-R_BS.2076',
+                'audioChannelFormat/audioBlockFormat',
+                'cartesian',
+                '"audioBlockFormat elements [...] cartesian [...] Default [...] 0" with cartesian positions'
+            ),
+            new Reference(
+                'Dolby_Atmos_Master_ADM_Profile',
+                'audioChannelFormat/audioBlockFormat',
+                'cartesian',
+                '"audioBlockFormat elements [...] cartesian [...] Quantity [...] 1"'
+            ),
+            new Reference(
+                'Dolby_Atmos_Master_ADM_Profile',
+                'audioChannelFormat/audioBlockFormat',
+                'speakerLabel',
+                '"audioBlockFormat elements [...] speakerLabel [...] Quantity [...] 1"'
+            ),
+            new Reference(
+                'Dolby_Atmos_Master_ADM_Profile',
+                'audioChannelFormat/audioBlockFormat',
+                'position',
+                '"audioBlockFormat Objects type subelement requirements [...] position [...] Quantity [...]" then "1" for "X" and "Y", "0 or 1" for Z'
+            ),
+            new Reference(
+                'ITU-R_BS.2076',
+                'audioChannelFormat/audioBlockFormat',
+                'position',
+                '"audioBlockFormat sub-elements [...] position [...] Default [...] (empty)"'
+            ),
+            new Reference(
+                'Dolby_Atmos_Master_ADM_Profile',
+                'audioChannelFormat/audioBlockFormat',
+                'width',
+                '"audioBlockFormat elements [...] width [...] Quantity [...] 1"'
+            ),
+        ]
+    ),
+    new Check(
+        '<code>(element name)</code> element is present<code> (extra spec name if needed)</code>',
+        'Error',
+        [
+            new Reference(
+                'Dolby_Atmos_Master_ADM_Profile',
+                'audioProgramme',
+                'audioProgrammeLabel',
+                'This field is from ADM v2 and not listed in the specification',
+                'Update the encoder to write this element, then reencode the content.'
+            ),
+            new Reference(
+                'Dolby_Atmos_Master_ADM_Profile',
+                'audioProgramme',
+                'authoringInformation',
+                'This field is from ADM v2 and not listed in the specification'
+            ),
+            new Reference(
+                'Dolby_Atmos_Master_ADM_Profile',
+                'audioProgramme',
+                'referenceLayout',
+                'This field is from ADM v2 and not listed in the specification'
+            ),
+            new Reference(
+                'Dolby_Atmos_Master_ADM_Profile',
+                'audioProgramme',
+                'audioPackFormatIDRef',
+                'This field is from ADM v2 and not listed in the specification'
+            ),
+            new Reference(
+                'Dolby_Atmos_Master_ADM_Profile',
+                'audioProgramme',
+                'alternativeValueSetIDRef',
+                'This field is from ADM v2 and not listed in the specification'
+            ),
+            new Reference(
+                'Dolby_Atmos_Master_ADM_Profile',
+                'audioContent',
+                'audioContentLabel',
+                'This field is from ADM v2 and not listed in the specification'
+            ),
+            new Reference(
+                'Dolby_Atmos_Master_ADM_Profile',
+                'audioContent',
+                'alternativeValueSetIDRef',
+                'This field is from ADM v2 and not listed in the specification'
+            ),
+            new Reference(
+                'Dolby_Atmos_Master_ADM_Profile',
+                'audioObject',
+                'audioObjectIDRef',
+                '"audioObject elements [...] audioObjectIDRef [...] Quantity [...] 0"'
+            ),
+            new Reference(
+                'Dolby_Atmos_Master_ADM_Profile',
+                'audioObject',
+                'audioObjectLabel',
+                'This field is from ADM v2 and not listed in the specification'
+            ),
+            new Reference(
+                'Dolby_Atmos_Master_ADM_Profile',
+                'audioObject',
+                'audioComplementaryObjectGroupLabel',
+                'This field is from ADM v2 and not listed in the specification'
+            ),
+            new Reference(
+                'Dolby_Atmos_Master_ADM_Profile',
+                'audioObject',
+                'audioComplementaryObjectIDRef',
+                '"audioObject elements [...] audioComplementaryObjectIDRef [...] Quantity [...] 0"'
+            ),
+            new Reference(
+                'Dolby_Atmos_Master_ADM_Profile',
+                'audioObject',
+                'audioObjectInteraction',
+                '"audioObject elements [...] audioObjectInteraction [...] Quantity [...] 0"'
+            ),
+            new Reference(
+                'Dolby_Atmos_Master_ADM_Profile',
+                'audioObject',
+                'gain',
+                'This field is from ADM v2 and not listed in the specification'
+            ),
+            new Reference(
+                'Dolby_Atmos_Master_ADM_Profile',
+                'audioObject',
+                'headLocked',
+                'This field is from ADM v2 and not listed in the specification'
+            ),
+            new Reference(
+                'Dolby_Atmos_Master_ADM_Profile',
+                'audioObject',
+                'positionOffset',
+                'This field is from ADM v2 and not listed in the specification'
+            ),
+            new Reference(
+                'Dolby_Atmos_Master_ADM_Profile',
+                'audioObject',
+                'mute',
+                'This field is from ADM v2 and not listed in the specification'
+            ),
+            new Reference(
+                'Dolby_Atmos_Master_ADM_Profile',
+                'audioObject',
+                'alternativeValueSet',
+                'This field is from ADM v2 and not listed in the specification'
+            ),
+            new Reference(
+                'Dolby_Atmos_Master_ADM_Profile',
+                'audioPackFormat',
+                'audioPackFormatIDRef',
+                '"audioPackFormat elements [...] audioPackFormatIDRef [...] Quantity [...] 0"'
+            ),
+            new Reference(
+                'Dolby_Atmos_Master_ADM_Profile',
+                'audioPackFormat',
+                'absoluteDistance',
+                '"audioPackFormat elements [...] absoluteDistance [...] Quantity [...] 0"'
+            ),
+            new Reference(
+                'Dolby_Atmos_Master_ADM_Profile',
+                'audioPackFormat',
+                'encodePackFormatIDRef',
+                '"audioPackFormat elements [...] encodePackFormatIDRef [...] Quantity [...] 0"'
+            ),
+            new Reference(
+                'Dolby_Atmos_Master_ADM_Profile',
+                'audioPackFormat',
+                'decodePackFormatIDRef',
+                '"audioPackFormat elements [...] decodePackFormatIDRef [...] Quantity [...] 0"'
+            ),
+            new Reference(
+                'Dolby_Atmos_Master_ADM_Profile',
+                'audioPackFormat',
+                'inputPackFormatIDRef',
+                '"audioPackFormat elements [...] inputPackFormatIDRef [...] Quantity [...] 0"'
+            ),
+            new Reference(
+                'Dolby_Atmos_Master_ADM_Profile',
+                'audioPackFormat',
+                'outputPackFormatIDRef',
+                '"audioPackFormat elements [...] outputPackFormatIDRef [...] Quantity [...] 0"'
+            ),
+            new Reference(
+                'Dolby_Atmos_Master_ADM_Profile',
+                'audioPackFormat',
+                'normalization',
+                '"audioPackFormat elements [...] normalization [...] Quantity [...] 0"'
+            ),
+            new Reference(
+                'Dolby_Atmos_Master_ADM_Profile',
+                'audioPackFormat',
+                'nfcRefDist',
+                '"audioPackFormat elements [...] nfcRefDist [...] Quantity [...] 0"'
+            ),
+            new Reference(
+                'Dolby_Atmos_Master_ADM_Profile',
+                'audioPackFormat',
+                'screenRef',
+                '"audioPackFormat elements [...] screenRef [...] Quantity [...] 0"'
+            ),
+            new Reference(
+                'Dolby_Atmos_Master_ADM_Profile',
+                'audioChannelFormat',
+                'frequency',
+                '"audioChannelFormat elements [...] frequency [...] Quantity [...] 0"'
+            ),
+            new Reference(
+                'Dolby_Atmos_Master_ADM_Profile',
+                'audioTrackUID',
+                'audioMXFLookUp',
+                '"audioTrackUID elements [...] audioMXFLookUp [...] Quantity [...] 0"'
+            ),
+            new Reference(
+                'Dolby_Atmos_Master_ADM_Profile',
+                'audioTrackUID',
+                'audioChannelFormatIDRef',
+                'This field is from ADM v2 and not listed in the specification'
+            ),
+            new Reference(
+                'Dolby_Atmos_Master_ADM_Profile',
+                'audioChannelFormat/audioBlockFormat',
+                'headLocked',
+                'This field is from ADM v2 and not listed in the specification'
+            ),
+            new Reference(
+                'Dolby_Atmos_Master_ADM_Profile',
+                'audioChannelFormat/audioBlockFormat',
+                'headphoneVirtualise',
+                'This field is from ADM v2 and not listed in the specification'
+            ),
+            new Reference(
+                'Dolby_Atmos_Master_ADM_Profile',
+                'audioChannelFormat/audioBlockFormat',
+                'outputChannelFormatIDRef',
+                '"audioBlockFormat elements [...] outputChannelFormatIDRef [...] Quantity [...] 0"'
+            ),
+            new Reference(
+                'Dolby_Atmos_Master_ADM_Profile',
+                'audioChannelFormat/audioBlockFormat',
+                'outputChannelIDRef,',
+                '"audioBlockFormat elements [...] outputChannelIDRef, [...] Quantity [...] 0"'
+            ),
+            new Reference(
+                'Dolby_Atmos_Master_ADM_Profile',
+                'audioChannelFormat/audioBlockFormat',
+                'jumpPosition',
+                '"audioBlockFormat elements [...] jumpPosition [...] Quantity [...] 0"'
+            ),
+            new Reference(
+                'Dolby_Atmos_Master_ADM_Profile',
+                'audioChannelFormat/audioBlockFormat',
+                'matrix',
+                '"audioBlockFormat elements [...] matrix [...] Quantity [...] 0"'
+            ),
+            new Reference(
+                'Dolby_Atmos_Master_ADM_Profile',
+                'audioChannelFormat/audioBlockFormat',
+                'coefficient',
+                '"audioBlockFormat elements [...] coefficient [...] Quantity [...] 0"'
+            ),
+            new Reference(
+                'Dolby_Atmos_Master_ADM_Profile',
+                'audioChannelFormat/audioBlockFormat',
+                'objectDivergence',
+                '"audioBlockFormat elements [...] objectDivergence [...] Quantity [...] 0"'
+            ),
+            new Reference(
+                'Dolby_Atmos_Master_ADM_Profile',
+                'audioChannelFormat/audioBlockFormat',
+                'equation',
+                '"audioBlockFormat elements [...] equation [...] Quantity [...] 0"'
+            ),
+            new Reference(
+                'Dolby_Atmos_Master_ADM_Profile',
+                'audioChannelFormat/audioBlockFormat',
+                'order',
+                '"audioBlockFormat elements [...] order [...] Quantity [...] 0"'
+            ),
+            new Reference(
+                'Dolby_Atmos_Master_ADM_Profile',
+                'audioChannelFormat/audioBlockFormat',
+                'degree',
+                '"audioBlockFormat elements [...] degree [...] Quantity [...] 0"'
+            ),
+            new Reference(
+                'Dolby_Atmos_Master_ADM_Profile',
+                'audioChannelFormat/audioBlockFormat',
+                'normalization',
+                '"audioBlockFormat elements [...] normalization [...] Quantity [...] 0"'
+            ),
+            new Reference(
+                'Dolby_Atmos_Master_ADM_Profile',
+                'audioChannelFormat/audioBlockFormat',
+                'nfcRefDist',
+                '"audioBlockFormat elements [...] nfcRefDist [...] Quantity [...] 0"'
+            ),
+            new Reference(
+                'Dolby_Atmos_Master_ADM_Profile',
+                'audioChannelFormat/audioBlockFormat',
+                'screenRef',
+                '"audioBlockFormat elements [...] screenRef [...] Quantity [...] 0"'
+            ),
+        ]
+    ),
+    new Check(
+        '<code>(element name)</code> element should not be present<code> (extra spec name if needed)</code>',
+        'Warning',
+        [
+            new Reference(
+                'Dolby_Atmos_Master_ADM_Profile',
+                'audioChannelFormat',
+                'frequency',
+                '"audioChannelFormat subelement requirements [...] frequency [...] This subelement should not be used"',
+                'Update the encoder to write this element, then reencode the content.'
+            ),
+        ]
+    ),
+    new Check(
+        '<code>(subelement name)</code> subelement count <code>(subelement count)</code> is not permitted, <code>(min or max)</code> is <code>(max count)</code><code> (extra spec name if needed)</code>',
+        'Error',
+        [
+            new Reference(
+                'ITU-R_BS.2076',
+                'audioTrackFormat',
+                'audioStreamFormatIDRef',
+                '"audioTrackFormat elements [...] audioStreamFormatIDRef [...] Quantity [...] 1"',
+                'Update the encoder to write this element, then reencode the content.'
+            ),
+            new Reference(
+                'Dolby_Atmos_Master_ADM_Profile',
+                'audioChannelFormat/audioBlockFormat',
+                null,
+                '"audioChannelFormat subelement requirements [...] audioBlockFormat [...] 1 (for type DirectSpeakers)"'
+            ),
+            new Reference(
+                'Dolby_Atmos_Master_ADM_Profile',
+                'audioProgramme',
+                'loudnessMetadata',
+                '"audioProgramme elements [...] loudnessMetadata [...] Quantity [...] 0 or 1"',
+                'Update the encoder to write this element, then reencode the content.'
+            ),
+            new Reference(
+                'Dolby_Atmos_Master_ADM_Profile',
+                'audioProgramme',
+                'audioProgrammeReferenceScreen',
+                '"audioProgramme elements [...] audioProgrammeReferenceScreen [...] Quantity [...] 0 or 1"'
+            ),
+            new Reference(
+                'Dolby_Atmos_Master_ADM_Profile',
+                'audioProgramme',
+                'authoringInformation',
+                '"audioProgramme elements [...] authoringInformation [...] Quantity [...] 0 or 1"'
+            ),
+            new Reference(
+                'Dolby_Atmos_Master_ADM_Profile',
+                'audioProgramme',
+                'audioContentIDRef',
+                '"audioProgramme elements [...] audioContentIDRef  [...] 1 to MAX_ELEMENT_COUNT"'
+            ),
+            new Reference(
+                'Dolby_Atmos_Master_ADM_Profile',
+                'audioContent',
+                'loudnessMetadata',
+                '"audioContent elements [...] loudnessMetadata [...] Quantity [...] 0 or 1"'
+            ),
+            new Reference(
+                'Dolby_Atmos_Master_ADM_Profile',
+                'audioContent',
+                'dialogue',
+                '"audioContent elements [...] dialogue [...] Quantity [...] 1"'
+            ),
+            new Reference(
+                'Dolby_Atmos_Master_ADM_Profile',
+                'audioObject',
+                'audioPackFormatIDRef',
+                '"audioObject elements [...] audioPackFormatIDRef [...] Quantity [...] 1"'
+            ),
+            new Reference(
+                'Dolby_Atmos_Master_ADM_Profile',
+                'audioObject',
+                'audioObjectInteraction',
+                '"audioObject elements [...] audioObjectInteraction [...] Quantity [...] 0 or 1"'
+            ),
+            new Reference(
+                'Dolby_Atmos_Master_ADM_Profile',
+                'audioObject',
+                'gain',
+                '"audioObject elements [...] gain [...] Quantity [...] 0 or 1"'
+            ),
+            new Reference(
+                'Dolby_Atmos_Master_ADM_Profile',
+                'audioObject',
+                'headLocked',
+                '"audioObject elements [...] headLocked [...] Quantity [...] 0 or 1"'
+            ),
+            new Reference(
+                'Dolby_Atmos_Master_ADM_Profile',
+                'audioObject',
+                'positionOffset',
+                '"audioObject elements [...] positionOffset [...] Quantity [...] 0 or 1"'
+            ),
+            new Reference(
+                'Dolby_Atmos_Master_ADM_Profile',
+                'audioObject',
+                'mute',
+                '"audioObject elements [...] mute [...] Quantity [...] 0 or 1"'
+            ),
+            new Reference(
+                'Dolby_Atmos_Master_ADM_Profile',
+                'audioPackFormat',
+                'absoluteDistance',
+                '"audioPackFormat elements [...] absoluteDistance [...] Quantity [...] 0 or 1"'
+            ),
+            new Reference(
+                'Dolby_Atmos_Master_ADM_Profile',
+                'audioPackFormat',
+                'inputPackFormatIDRef',
+                '"audioPackFormat elements [...] inputPackFormatIDRef [...] Quantity [...] 0 or 1"'
+            ),
+            new Reference(
+                'Dolby_Atmos_Master_ADM_Profile',
+                'audioPackFormat',
+                'outputPackFormatIDRef',
+                '"audioPackFormat elements [...] outputPackFormatIDRef [...] Quantity [...] 0 or 1"'
+            ),
+            new Reference(
+                'Dolby_Atmos_Master_ADM_Profile',
+                'audioPackFormat',
+                'normalization',
+                '"audioPackFormat elements [...] normalization [...] Quantity [...] 0 or 1"'
+            ),
+            new Reference(
+                'Dolby_Atmos_Master_ADM_Profile',
+                'audioPackFormat',
+                'nfcRefDist',
+                '"audioPackFormat elements [...] nfcRefDist [...] Quantity [...] 0 or 1"'
+            ),
+            new Reference(
+                'Dolby_Atmos_Master_ADM_Profile',
+                'audioPackFormat',
+                'screenRef',
+                '"audioPackFormat elements [...] screenRef [...] Quantity [...] 0 or 1"'
+            ),
+            new Reference(
+                'Dolby_Atmos_Master_ADM_Profile',
+                'audioTrackUID',
+                'audioMXFLookUp',
+                '"audioTrackUID elements [...] audioMXFLookUp [...] Quantity [...] 0 or 1"'
+            ),
+            new Reference(
+                'Dolby_Atmos_Master_ADM_Profile',
+                'audioTrackUID',
+                'audioTrackFormatIDRef',
+                '"audioTrackUID elements [...] audioTrackFormatIDRef [...] Quantity [...] 1"'
+            ),
+            new Reference(
+                'Dolby_Atmos_Master_ADM_Profile',
+                'audioTrackUID',
+                'audioChannelFormatIDRef',
+                '"audioTrackUID elements [...] audioChannelFormatIDRef [...] Quantity [...] 0 or 1"'
+            ),
+            new Reference(
+                'Dolby_Atmos_Master_ADM_Profile',
+                'audioTrackUID',
+                'audioPackFormatIDRef',
+                '"audioTrackUID elements [...] audioPackFormatIDRef [...] Quantity [...] 1"'
+            ),
+            new Reference(
+                'Dolby_Atmos_Master_ADM_Profile',
+                'audioStreamFormat',
+                'audioChannelFormatIDRef',
+                '"audioStreamFormat elements [...] audioChannelFormatIDRef [...] Quantity [...] 1"'
+            ),
+            new Reference(
+                'Dolby_Atmos_Master_ADM_Profile',
+                'audioStreamFormat',
+                'audioPackFormatIDRef',
+                '"audioStreamFormat elements [...] audioPackFormatIDRef [...] Quantity [...] 1"'
+            ),
+            new Reference(
+                'Dolby_Atmos_Master_ADM_Profile',
+                'audioStreamFormat',
+                'audioTrackFormatIDRef',
+                '"audioStreamFormat elements [...] audioTrackFormatIDRef [...] Quantity [...] 1"'
+            ),
+            new Reference(
+                'Dolby_Atmos_Master_ADM_Profile',
+                'audioChannelFormat/audioBlockFormat',
+                'gain',
+                '"audioBlockFormat elements [...] gain [...] Quantity [...] 0 or 1"'
+            ),
+            new Reference(
+                'Dolby_Atmos_Master_ADM_Profile',
+                'audioChannelFormat/audioBlockFormat',
+                'importance',
+                '"audioBlockFormat elements [...] importance [...] Quantity [...] 0 or 1"'
+            ),
+            new Reference(
+                'Dolby_Atmos_Master_ADM_Profile',
+                'audioChannelFormat/audioBlockFormat',
+                'headLocked',
+                '"audioBlockFormat elements [...] headLocked [...] Quantity [...] 0 or 1"'
+            ),
+            new Reference(
+                'Dolby_Atmos_Master_ADM_Profile',
+                'audioChannelFormat/audioBlockFormat',
+                'headphoneVirtualise',
+                '"audioBlockFormat elements [...] headphoneVirtualise [...] Quantity [...] 0 or 1"'
+            ),
+            new Reference(
+                'Dolby_Atmos_Master_ADM_Profile',
+                'audioChannelFormat/audioBlockFormat',
+                'speakerLabel',
+                '"audioBlockFormat elements [...] speakerLabel [...] Quantity [...] 1"'
+            ),
+            new Reference(
+                'Dolby_Atmos_Master_ADM_Profile',
+                'audioChannelFormat/audioBlockFormat',
+                'outputChannelFormatIDRef',
+                '"audioBlockFormat elements [...] outputChannelFormatIDRef [...] Quantity [...] 0 or 1"'
+            ),
+            new Reference(
+                'Dolby_Atmos_Master_ADM_Profile',
+                'audioChannelFormat/audioBlockFormat',
+                'outputChannelIDRef,',
+                '"audioBlockFormat elements [...] outputChannelIDRef, [...] Quantity [...] 0 or 1"'
+            ),
+            new Reference(
+                'Dolby_Atmos_Master_ADM_Profile',
+                'audioChannelFormat/audioBlockFormat',
+                'jumpPosition',
+                '"audioBlockFormat elements [...] jumpPosition [...] Quantity [...] 0 or 1"'
+            ),
+            new Reference(
+                'Dolby_Atmos_Master_ADM_Profile',
+                'audioChannelFormat/audioBlockFormat',
+                'matrix',
+                '"audioBlockFormat elements [...] matrix [...] Quantity [...] 0 or 1"'
+            ),
+            new Reference(
+                'Dolby_Atmos_Master_ADM_Profile',
+                'audioChannelFormat/audioBlockFormat',
+                'coefficient',
+                '"audioBlockFormat elements [...] coefficient [...] Quantity [...] 0 or 1"'
+            ),
+            new Reference(
+                'Dolby_Atmos_Master_ADM_Profile',
+                'audioChannelFormat/audioBlockFormat',
+                'width',
+                '"audioBlockFormat elements [...] width [...] Quantity [...] 1"'
+            ),
+            new Reference(
+                'Dolby_Atmos_Master_ADM_Profile',
+                'audioChannelFormat/audioBlockFormat',
+                'depth',
+                '"audioBlockFormat elements [...] depth [...] Quantity [...] 0 or 1"'
+            ),
+            new Reference(
+                'Dolby_Atmos_Master_ADM_Profile',
+                'audioChannelFormat/audioBlockFormat',
+                'height',
+                '"audioBlockFormat elements [...] height [...] Quantity [...] 0 or 1"'
+            ),
+            new Reference(
+                'Dolby_Atmos_Master_ADM_Profile',
+                'audioChannelFormat/audioBlockFormat',
+                'cartesian',
+                '"audioBlockFormat elements [...] cartesian [...] Quantity [...] 0 or 1"'
+            ),
+            new Reference(
+                'Dolby_Atmos_Master_ADM_Profile',
+                'audioChannelFormat/audioBlockFormat',
+                'diffuse',
+                '"audioBlockFormat elements [...] diffuse [...] Quantity [...] 0 or 1"'
+            ),
+            new Reference(
+                'Dolby_Atmos_Master_ADM_Profile',
+                'audioChannelFormat/audioBlockFormat',
+                'channelLock',
+                '"audioBlockFormat elements [...] channelLock [...] Quantity [...] 0 or 1"'
+            ),
+            new Reference(
+                'Dolby_Atmos_Master_ADM_Profile',
+                'audioChannelFormat/audioBlockFormat',
+                'zoneExclusion',
+                '"audioBlockFormat elements [...] zoneExclusion [...] Quantity [...] 0 or 1"'
+            ),
+        ]
+    ),
+    new Check(
+        '<code>(element name)</code> <code>(topic name)</code> value <code>(actual value)</code> is not permitted, permitted value<code>(permitted values)</code><code> (extra spec name if needed)</code>',
+        'Error',
+        [
+            new Reference(
+                'Dolby_Atmos_Master_ADM_Profile',
+                'audioProgramme',
+                'audioProgrammeID',
+                '"audioProgrammeID This attribute shall be APR_1001"',
+                'Configure or update the encoder to write this value, then reencode the content.'
+            ),
+            new Reference(
+                'ITU-R_BS.2076',
+                'audioChannelFormat/audioBlockFormat',
+                'cartesian',
+                '"cartesian [...] 1/0 flag"'
+            ),
+            new Reference(
+                'ITU-R_BS.2076',
+                'audioChannelFormat/audioBlockFormat',
+                'depth',
+                '"depth [...] Relative Units (0 to 1)" or "depth [...] Ratio (0 to 1)"'
+            ),
+            new Reference(
+                'ITU-R_BS.2076',
+                'audioChannelFormat/audioBlockFormat',
+                'width',
+                '"width [...] Relative Units (0 to 1)" or "width [...] degrees (0 to 360)"'
+            ),
+            new Reference(
+                'ITU-R_BS.2076',
+                'audioChannelFormat/audioBlockFormat',
+                'height',
+                '"height [...] Relative Units (0 to 1)" or "height [...] degrees (0 to 360)"'
+            ),
+            new Reference(
+                'Dolby_Atmos_Master_ADM_Profile',
+                'audioTrackUID',
+                'UID',
+                '"UID [...] This attribute shall be ATU_nnnnnnnn, where nnnnnnnn is a unique hex value in range [0x00000001,0xFFFFFFFF]"',
+                'Configure or update the encoder to write this value, then reencode the content.'
+            ),
+        ]
+    ),
+    new Check(
+        '<code>(element name)</code> element count <code>(element count)</code> is not permitted, <code>(min or max)</code> is <code>(max count)</code><code> (extra spec name if needed)</code>',
+        'Error',
+        [
+            new Reference(
+                'ITU-R_BS.2076',
+                'audioProgramme',
+                null,
+                'For min, common sense, entry point is audioProgramme',
+                'Update the encoder to create an audioProgramme element, then reencode the content.'
+            ),
+            new Reference(
+                'Dolby_Atmos_Master_ADM_Profile',
+                'audioProgramme',
+                null,
+                '"XML element [...] Maximum count [...] audioProgramme [...] 1"',
+                'Configure or update the encoder to conform to this limitation, then reencode the content.'
+            ),
+            new Reference(
+                'Dolby_Atmos_Master_ADM_Profile',
+                'audioContent',
+                null,
+                '"XML element [...] Maximum count [...] audioContent [...] MAX_ELEMENT_COUNT"'
+            ),
+            new Reference(
+                'Dolby_Atmos_Master_ADM_Profile',
+                'audioObject',
+                null,
+                '"XML element [...] Maximum count [...] audioObject [...] MAX_ELEMENT_COUNT" or "objects (typeDefinition=”Objects”) [...] there shall be a maximum of 118 objects"'
+            ),
+            new Reference(
+                'Dolby_Atmos_Master_ADM_Profile',
+                'audioPackFormat',
+                null,
+                '"XML element [...] Maximum count [...] audioPackFormat [...] MAX_ELEMENT_COUNT"'
+            ),
+            new Reference(
+                'Dolby_Atmos_Master_ADM_Profile',
+                'audioChannelFormat',
+                null,
+                '"XML element [...] Maximum count [...] audioChannelFormat [...] MAX_CHANNEL_COUNT"'
+            ),
+            new Reference(
+                'Dolby_Atmos_Master_ADM_Profile',
+                'audioStreamFormat',
+                null,
+                '"XML element [...] Maximum count [...] audioStreamFormat [...] MAX_CHANNEL_COUNT"'
+            ),
+            new Reference(
+                'Dolby_Atmos_Master_ADM_Profile',
+                'audioTrackFormat',
+                null,
+                '"XML element [...] Maximum count [...] audioTrackFormat [...] MAX_CHANNEL_COUNT"'
+            ),
+            new Reference(
+                'Dolby_Atmos_Master_ADM_Profile',
+                'audioTrackUID',
+                null,
+                '"XML element [...] Maximum count [...] audioTrackUID [...] MAX_CHANNEL_COUNT"'
+            ),
+        ],
+        [ 'General_compliance']
+    ),
+    new Check(
+        '<code>(element name)</code> value <code>(element value)</code> shall match the <code>(target attribue name)</code> attribute of an <code>(target element name)</code> element',
+        'Error',
+        [
+            new Reference(
+                'ITU-R_BS.2076',
+                'audioProgramme',
+                'audioContentIDRef',
+                'Common sense: impossible to know what to do with the content without its description',
+                'Update the encoder to write the expected content, then reencode the content.'
+            ),
+            new Reference(
+                'ITU-R_BS.2076',
+                'audioProgramme',
+                'audioPackFormatIDRef',
+                'Common sense: impossible to know what to do with the content without its description'
+            ),
+            new Reference(
+                'ITU-R_BS.2076',
+                'audioProgramme',
+                'alternativeValueSetIDRef',
+                'Common sense: impossible to know what to do with the content without its description'
+            ),
+            new Reference(
+                'ITU-R_BS.2076',
+                'audioContent',
+                'audioObjectIDRef',
+                'Common sense: impossible to know what to do with the content without its description'
+            ),
+            new Reference(
+                'ITU-R_BS.2076',
+                'audioContent',
+                'alternativeValueSetIDRef',
+                'Common sense: impossible to know what to do with the content without its description'
+            ),
+            new Reference(
+                'ITU-R_BS.2076',
+                'audioObject',
+                'audioPackFormatIDRef',
+                'Common sense: impossible to know what to do with the content without its description'
+            ),
+            new Reference(
+                'ITU-R_BS.2076',
+                'audioObject',
+                'audioObjectIDRef',
+                'Common sense: impossible to know what to do with the content without its description'
+            ),
+            new Reference(
+                'ITU-R_BS.2076',
+                'audioObject',
+                'audioComplementaryObjectIDRef',
+                'Common sense: impossible to know what to do with the content without its description'
+            ),
+            new Reference(
+                'ITU-R_BS.2076',
+                'audioObject',
+                'audioTrackUIDRef',
+                'Common sense: impossible to know what to do with the content without its description'
+            ),
+            new Reference(
+                'ITU-R_BS.2076',
+                'audioObject',
+                'audioComplementaryObjectIDRef',
+                'Common sense: impossible to know what to do with the content without its description'
+            ),
+            new Reference(
+                'ITU-R_BS.2076',
+                'audioObject',
+                'audioTrackUIDRef',
+                'Common sense: impossible to know what to do with the content without its description'
+            ),
+            new Reference(
+                'ITU-R_BS.2076',
+                'audioPackFormat',
+                'audioChannelFormatIDRef',
+                'Common sense: impossible to know what to do with the content without its description'
+            ),
+            new Reference(
+                'ITU-R_BS.2076',
+                'audioPackFormat',
+                'encodePackFormatIDRef',
+                'Common sense: impossible to know what to do with the content without its description'
+            ),
+            new Reference(
+                'ITU-R_BS.2076',
+                'audioPackFormat',
+                '',
+                'Common sense: impossible to know what to do with the content without its description'
+            ),
+            new Reference(
+                'ITU-R_BS.2076',
+                'audioPackFormat',
+                'decodePackFormatIDRef',
+                'Common sense: impossible to know what to do with the content without its description'
+            ),
+            new Reference(
+                'ITU-R_BS.2076',
+                'audioPackFormat',
+                'inputPackFormatIDRef',
+                'Common sense: impossible to know what to do with the content without its description'
+            ),
+            new Reference(
+                'ITU-R_BS.2076',
+                'audioPackFormat',
+                'outputPackFormatIDRef',
+                'Common sense: impossible to know what to do with the content without its description'
+            ),
+            new Reference(
+                'ITU-R_BS.2076',
+                'audioTrackUID',
+                'audioTrackFormatIDRef',
+                'Common sense: impossible to know what to do with the content without its description'
+            ),
+            new Reference(
+                'ITU-R_BS.2076',
+                'audioTrackUID',
+                'audioChannelFormatIDRef',
+                'Common sense: impossible to know what to do with the content without its description'
+            ),
+            new Reference(
+                'ITU-R_BS.2076',
+                'audioTrackUID',
+                'audioPackFormatIDRef',
+                'Common sense: impossible to know what to do with the content without its description'
+            ),
+            new Reference(
+                'ITU-R_BS.2076',
+                'audioTrackFormat',
+                'audioStreamFormatIDRef',
+                'Common sense: impossible to know what to do with the content without its description'
+            ),
+            new Reference(
+                'ITU-R_BS.2076',
+                'audioStreamFormat',
+                'audioChannelFormatIDRef',
+                'Common sense: impossible to know what to do with the content without its description'
+            ),
+            new Reference(
+                'ITU-R_BS.2076',
+                'audioStreamFormat',
+                'audioPackFormatIDRef',
+                'Common sense: impossible to know what to do with the content without its description'
+            ),
+            new Reference(
+                'ITU-R_BS.2076',
+                'audioStreamFormat',
+                'audioTrackFormatIDRef',
+                'Common sense: impossible to know what to do with the content without its description'
+            ),
+            new Reference(
+                'ITU-R_BS.2076',
+                'audioChannelFormat/audioBlockFormat',
+                'outputChannelFormatIDRef',
+                'Common sense: impossible to know what to do with the content without its description'
+            ),
+            new Reference(
+                'ITU-R_BS.2076',
+                'audioChannelFormat/audioBlockFormat',
+                'outputChannelIDRef',
+                'Common sense: impossible to know what to do with the content without its description'
+            ),
+        ]
+    ),
+    new Check(
+        '<code>(element name)</code> value <code>(element value)</code> shall be unique',
+        'Error',
+        [
+            new Reference(
+                'ITU-R_BS.2076',
+                'audioProgramme',
+                'audioProgrammeID',
+                '"Use of IDs [...] provide a unique identification"',
+                'Update the encoder to avoid duplicate ID values, then reencode the content.'
+            ),
+            new Reference(
+                'ITU-R_BS.2076',
+                'audioContent',
+                'audioContentID',
+                '"Use of IDs [...] provide a unique identification"'
+            ),
+            new Reference(
+                'ITU-R_BS.2076',
+                'audioObject',
+                'audioObjectID',
+                '"Use of IDs [...] provide a unique identification"'
+            ),
+            new Reference(
+                'ITU-R_BS.2076',
+                'audioPackFormat',
+                'audioPackFormatID',
+                '"Use of IDs [...] provide a unique identification"'
+            ),
+            new Reference(
+                'ITU-R_BS.2076',
+                'audioChannelFormat',
+                'audioChannelFormatID',
+                '"Use of IDs [...] provide a unique identification"'
+            ),
+            new Reference(
+                'ITU-R_BS.2076',
+                'audioTrackUID',
+                'UID',
+                '"Use of IDs [...] provide a unique identification"'
+            ),
+            new Reference(
+                'ITU-R_BS.2076',
+                'audioTrackFormat',
+                'audioTrackFormatID',
+                '"Use of IDs [...] provide a unique identification"'
+            ),
+            new Reference(
+                'ITU-R_BS.2076',
+                'audioStreamFormat',
+                'audioStreamFormatID',
+                '"Use of IDs [...] provide a unique identification"'
+            ),
+            new Reference(
+                'ITU-R_BS.2076',
+                'audioChannelFormat/audioBlockFormat',
+                'audioBlockFormatID',
+                '"Use of IDs [...] provide a unique identification"'
+            ),
+        ]
+    ),
+    new Check(
+        '<code>(attribute name)</code> attribute with <code>(substring)</code> value <code>(attribute value)</code> not same as <code>(attribute name)</code> attribute <code>(substring)</code> value <code>(attribute value)</code><code> (extra spec name if needed)</code>',
+        'Error',
+        [
+            new Reference(
+                'Dolby_Atmos_Master_ADM_Profile',
+                'audioChannelFormat/audioBlockFormat',
+                'audioBlockFormatID',
+                '"audioBlockFormat requirements [...] audioBlockFormatID [...] where xxxx is a unique hex value matching the parent audioChannelFormat value"',
+                'Update the encoder to write the expected content, then reencode the content.'
+            ),
+        ]
+    ),
+    new Check(
+        '<code>(attribute name)</code> attribute with <code>(substring)</code> value <code>(attribute value)</code> not same as <code>(attribute name)</code> attribute <code>(substring)</code> value <code>(attribute value)</code>',
+        'Warning',
+        [
+            new Reference(
+                'ITU-R_BS.2076',
+                'audioChannelFormat/audioBlockFormat',
+                'audioBlockFormatID',
+                '"In audioBlockFormat [...] The yyyyxxxx values should match those of the parent audioChannelFormat ID"',
+                'Update the encoder to write the expected content, then reencode the content.'
+            ),
+        ]
+    ),
+    new Check(
+        '<code>(subelement name)</code> subelement with <code>(substring)</code> value <code>(subelement value)</code> not same as <code>(attribute name)</code> attribute <code>(substring)</code> value <code>(attribute value)</code><code> (extra spec name if needed)</code>',
+        'Error',
+        [
+            new Reference(
+                'Dolby_Atmos_Master_ADM_Profile',
+                'audioStreamFormat',
+                'audioChannelFormatIDRef',
+                '"audioPackFormat subelement [...] audioChannelFormatIDRef [...] This subelement shall match the audioChannelFormatID of the corresponding audioChannelFormat"',
+                'Update the encoder to write the expected content, then reencode the content.'
+            ),
+            new Reference(
+                'Dolby_Atmos_Master_ADM_Profile',
+                'audioTrackFormat',
+                'audioStreamFormatIDRef',
+                '"audioTrackFormat subelement [...] audioStreamFormatIDRef [...] This subelement shall match the audioStreamFormatID of the corresponding audioStreamFormat"'
+            ),
+        ]
+    ),
+    new Check(
+        '<code>(subelement name)</code> subelement with <code>(substring)</code> value <code>(subelement value)</code> not same as <code>(attribute name)</code> attribute <code>(substring)</code> value <code>(attribute value)</code>',
+        'Warning',
+        [
+            new Reference(
+                'ITU-R_BS.2076',
+                'audioStreamFormat',
+                'audioChannelFormatIDRef',
+                '"audioStreamFormat attributes [...] audioStreamFormatID [...] The xxxx digits should match the audioChannelFormat xxxx digits."',
+                'Update the encoder to write the expected content, then reencode the content.'
+            ),
+        ]
+    ),
+    new Check(
+        '<code>(attribute name)</code> attribute value <code>(attribute value)</code> is not a valid form (<code>(the valid form)</code>)',
+        'Error',
+        [
+            new Reference(
+                'ITU-R_BS.2076',
+                'audioTrackFormat',
+                'formatLabel',
+                '"typeDefinitions [...] typeLabel [...] to Fyyy"',
+                'Update the encoder to write the expected content, then reencode the content.'
+            ),
+        ]
+    ),
+    new Check(
+        '<code>(attribute name)</code> attribute value <code>(attribute value)</code> is not a known value',
+        'Warning',
+        [
+            new Reference(
+                'ITU-R_BS.2076',
+                'audioPackFormat',
+                'typeLabel',
+                '"typeDefinitions [...] typeDefinition [...] typeLabel" (table with a list of known values)',
+                'Check that this is intended'
+            ),
+            new Reference(
+                'ITU-R_BS.2076',
+                'audioPackFormat',
+                'formatDefinition',
+                '"typeDefinitions [...] typeDefinition [...] typeLabel" (table with a list of known values)'
+            ),
+            new Reference(
+                'ITU-R_BS.2076',
+                'audioChannelFormat',
+                'typeLabel',
+                '"typeDefinitions [...] typeDefinition [...] typeLabel" (table with a list of known values)'
+            ),
+            new Reference(
+                'ITU-R_BS.2076',
+                'audioChannelFormat',
+                'formatDefinition',
+                '"typeDefinitions [...] typeDefinition [...] typeLabel" (table with a list of known values)',
+                'Check that this is intended'
+            ),
+            new Reference(
+                'ITU-R_BS.2076',
+                'audioTrackFormat',
+                'typeLabel',
+                '"typeDefinitions [...] typeDefinition [...] typeLabel" (table with a list of known values)'
+            ),
+            new Reference(
+                'ITU-R_BS.2076',
+                'audioTrackFormat',
+                'formatDefinition',
+                '"typeDefinitions [...] typeDefinition [...] typeLabel" (table with a list of known values)',
+                'Check that this is intended'
+            ),
+            new Reference(
+                'ITU-R_BS.2076',
+                'audioStreamFormat',
+                'typeLabel',
+                '"typeDefinitions [...] typeDefinition [...] typeLabel" (table with a list of known values)'
+            ),
+            new Reference(
+                'ITU-R_BS.2076',
+                'audioStreamFormat',
+                'formatDefinition',
+                '"typeDefinitions [...] typeDefinition [...] typeLabel" (table with a list of known values)',
+                'Check that this is intended'
+            ),
+        ]
+    ),
+    new Check(
+        '<code>(attribute name)</code> attribute value <code>(attribute value)</code> shall be <code>(expected value)</code> in order to match the term corresponding to <code>(other attribute name)</code> attribute value <code>(other attribute value)</code>',
+        'Error',
+        [
+            new Reference(
+                'ITU-R_BS.2076',
+                'audioPackFormat',
+                'typeLabel',
+                '"typeDefinitions [...] typeDefinition [...] typeLabel" (table with both value on the same line)',
+                'Update the encoder to write the expected content, then reencode the content.'
+            ),
+            new Reference(
+                'ITU-R_BS.2076',
+                'audioPackFormat',
+                'typeDefinition',
+                '"typeDefinitions [...] typeDefinition [...] typeLabel" (table with both value on the same line)'
+            ),
+            new Reference(
+                'ITU-R_BS.2076',
+                'audioChannelFormat',
+                'typeLabel',
+                '"typeDefinitions [...] typeDefinition [...] typeLabel" (table with both value on the same line)'
+            ),
+            new Reference(
+                'ITU-R_BS.2076',
+                'audioChannelFormat',
+                'typeDefinition',
+                '"typeDefinitions [...] typeDefinition [...] typeLabel" (table with both value on the same line)'
+            ),
+            new Reference(
+                'ITU-R_BS.2076',
+                'audioTrackFormat',
+                'formatLabel',
+                '"formatDefinitions [...] formatDefinition [...] formatLabel" (table with both value on the same line)'
+            ),
+            new Reference(
+                'ITU-R_BS.2076',
+                'audioTrackFormat',
+                'formatDefinition',
+                '"formatDefinitions [...] formatDefinition [...] formatLabel" (table with both value on the same line)'
+            ),
+            new Reference(
+                'ITU-R_BS.2076',
+                'audioStreamFormat',
+                'formatLabel',
+                '"formatDefinitions [...] formatDefinition [...] formatLabel" (table with both value on the same line)'
+            ),
+            new Reference(
+                'ITU-R_BS.2076',
+                'audioStreamFormat',
+                'formatDefinition',
+                '"formatDefinitions [...] formatDefinition [...] formatLabel" (table with both value on the same line)'
+            ),
+        ]
+    ),
+    new Check(
+        '<code>(attribute name)</code> attribute value <code>(attribute value)</code> is not permitted, permitted value<code>(permitted values)</code><code> (extra spec name if needed)</code>',
+        'Error',
+        [
+            new Reference(
+                'Dolby_Atmos_Master_ADM_Profile',
+                'audioPackFormat',
+                'typeLabel',
+                '"audioPackFormat attribute requirements [...] typeLabel [...] This attribute shall be either 0001 or 0003"',
+                'Configure or update the encoder to write the expected content, then reencode the content.'
+            ),
+            new Reference(
+                'Dolby_Atmos_Master_ADM_Profile',
+                'audioPackFormat',
+                'formatDefinition',
+                '"audioPackFormat attribute requirements [...] formatDefinition [...] This attribute shall be either DirectSpeakers or Objects."'
+            ),
+            new Reference(
+                'Dolby_Atmos_Master_ADM_Profile',
+                'audioChannelFormat',
+                'typeLabel',
+                '"audioChannelFormat attribute requirements [...] typeLabel [...] The label shall be either 0001 or 0003."',
+                'Configure or update the encoder to write the expected content, then reencode the content.'
+            ),
+            new Reference(
+                'Dolby_Atmos_Master_ADM_Profile',
+                'audioChannelFormat',
+                'formatDefinition',
+                '"audioChannelFormat attribute requirements [...] formatDefinition [...] The definition shall be either DirectSpeakers or Objects"',
+                'Configure or update the encoder to write the expected content, then reencode the content.'
+            ),
+            new Reference(
+                'Dolby_Atmos_Master_ADM_Profile',
+                'audioTrackFormat',
+                'formatLabel',
+                '"audioTrackFormat attribute requirements [...] formatLLabel [...] This label shall be 0001"',
+                'Configure or update the encoder to write the expected content, then reencode the content.'
+            ),
+            new Reference(
+                'Dolby_Atmos_Master_ADM_Profile',
+                'audioTrackFormat',
+                'formatDefinition',
+                '"audioTrackFormat attribute requirements [...] formatDefinition [...] This definition shall be PCM"',
+                'Configure or update the encoder to write the expected content, then reencode the content.'
+            ),
+            new Reference(
+                'Dolby_Atmos_Master_ADM_Profile',
+                'audioStreamFormat',
+                'formatLabel',
+                '"audioStreamFormat attribute requirements [...] formatLabel [...] This label shall be 0001"',
+                'Configure or update the encoder to write the expected content, then reencode the content.'
+            ),
+            new Reference(
+                'Dolby_Atmos_Master_ADM_Profile',
+                'audioStreamFormat',
+                'formatDefinition',
+                '"audioStreamFormat attribute requirements [...] formatDefinition [...] This definition shall be PCM"',
+                'Configure or update the encoder to write the expected content, then reencode the content.'
+            ),
+        ]
+    ),
+    new Check(
+        '<code>(subelement name)</code> order <code>(computed target order)</code> is not permitted<code> (extra spec name if needed)</code>',
+        'Error',
+        [
+            new Reference(
+                'Dolby_Atmos_Master_ADM_Profile',
+                'audioPackFormat',
+                'audioChannelFormatIDRef',
+                '"only certain channel configuration sets shall be used, with each set having a specific ordering of channels"',
+                'Configure or update the encoder to write the expected content, then reencode the content.'
+            ),
+        ]
+    ),
+    new Check(
+        '<code>(attribute name)</code> attribute value <code>(attribute value)</code> is long<code> (extra spec name if needed)</code>',
+        'Warning',
+        [
+            new Reference(
+                'ITU-R_BS.2076',
+                'audioProgramme',
+                'audioProgrammeName',
+                'Common sense: it is difficult to display it in an UI',
+                'Configure the encoder to write a shorter name, then reencode the content.'
+            ),
+            new Reference(
+                'ITU-R_BS.2076',
+                'audioContent',
+                'audioContentName',
+                'Common sense: it is difficult to display it in an UI'
+            ),
+            new Reference(
+                'ITU-R_BS.2076',
+                'audioObject',
+                'audioObjectName',
+                'Common sense: it is difficult to display it in an UI'
+            ),
+            new Reference(
+                'ITU-R_BS.2076',
+                'audioPackFormat',
+                'audioPackFormatName',
+                'Common sense: it is difficult to display it in an UI'
+            ),
+            new Reference(
+                'ITU-R_BS.2076',
+                'audioChannelFormat',
+                'audioChannelFormatName',
+                'Common sense: it is difficult to display it in an UI'
+            ),
+            new Reference(
+                'ITU-R_BS.2076',
+                'audioTrackFormat',
+                'audioTrackFormatName',
+                'Common sense: it is difficult to display it in an UI'
+            ),
+            new Reference(
+                'ITU-R_BS.2076',
+                'audioStreamFormat',
+                'audioStreamFormatName',
+                'Common sense: it is difficult to display it in an UI'
+            ),
+            new Reference(
+                'Dolby_Atmos_Master_ADM_Profile',
+                'audioProgramme',
+                'audioProgrammeName',
+                '"audioProgramme attribute requirements" [...] audioProgrammeName [...] max length should not exceed 64 chars',
+                'Configure the encoder to write a shorter name, then reencode the content.'
+            ),
+            new Reference(
+                'Dolby_Atmos_Master_ADM_Profile',
+                'audioContent',
+                'audioContentName',
+                '"audioContent attribute requirements" [...] audioProgrammeName [...] max length should not exceed 64 chars'
+            ),
+            new Reference(
+                'Dolby_Atmos_Master_ADM_Profile',
+                'audioObject',
+                'audioObjectName',
+                '"audioObject attribute requirements" [...] audioProgrammeName [...] max length should not exceed 64 chars'
+            ),
+            new Reference(
+                'Dolby_Atmos_Master_ADM_Profile',
+                'audioPackFormat',
+                'audioPackFormatName',
+                '"audioPackFormat attribute requirements" [...] audioProgrammeName [...] max length should not exceed 64 chars'
+            ),
+            new Reference(
+                'Dolby_Atmos_Master_ADM_Profile',
+                'audioChannelFormat',
+                'audioChannelFormatName',
+                '"audioChannelFormat attribute requirements" [...] audioProgrammeName [...] max length should not exceed 64 chars'
+            ),
+            new Reference(
+                'Dolby_Atmos_Master_ADM_Profile',
+                'audioTrackFormat',
+                'audioTrackFormatName',
+                '"audioTrackFormat attribute requirements" [...] audioProgrammeName [...] max length should not exceed 64 chars'
+            ),
+            new Reference(
+                'Dolby_Atmos_Master_ADM_Profile',
+                'audioStreamFormat',
+                'audioStreamFormatName',
+                '"audioStreamFormat attribute requirements" [...] audioProgrammeName [...] max length should not exceed 64 chars'
+            ),
+        ]
+    ),
+    new Check(
+        '<code>(attribute name)</code> attribute is present but empty',
+        'Error',
+        [
+            new Reference(
+                'Dolby_Atmos_Master_ADM_Profile',
+                'audioProgramme',
+                'audioProgrammeName',
+                '"audioProgramme attribute requirements" [...] audioProgrammeName [...] Min length 1 char',
+                'Configure the encoder to write a relevant name, then reencode the content.'
+            ),
+            new Reference(
+                'Dolby_Atmos_Master_ADM_Profile',
+                'audioContent',
+                'audioContentName',
+                '"audioContent attribute requirements" [...] audioProgrammeName [...] Min length 1 char'
+            ),
+            new Reference(
+                'Dolby_Atmos_Master_ADM_Profile',
+                'audioObject',
+                'audioObjectName',
+                '"audioObject attribute requirements" [...] audioProgrammeName [...] Min length 1 char'
+            ),
+            new Reference(
+                'Dolby_Atmos_Master_ADM_Profile',
+                'audioPackFormat',
+                'audioPackFormatName',
+                '"audioPackFormat attribute requirements" [...] audioProgrammeName [...] Min length 1 char'
+            ),
+            new Reference(
+                'Dolby_Atmos_Master_ADM_Profile',
+                'audioChannelFormat',
+                'audioChannelFormatName',
+                '"audioChannelFormat attribute requirements" [...] audioProgrammeName [...] Min length 1 char'
+            ),
+            new Reference(
+                'Dolby_Atmos_Master_ADM_Profile',
+                'audioTrackFormat',
+                'audioTrackFormatName',
+                '"audioTrackFormat attribute requirements" [...] audioProgrammeName [...] Min length 1 char'
+            ),
+            new Reference(
+                'Dolby_Atmos_Master_ADM_Profile',
+                'audioStreamFormat',
+                'audioStreamFormatName',
+                '"audioStreamFormatName attribute requirements" [...] audioProgrammeName [...] Min length 1 char'
+            ),
+        ]
+    ),
+    new Check(
+        '<code>(attribute name)</code> attribute is present but empty',
+        'Warning',
+        [
+            new Reference(
+                'ITU-R_BS.2076',
+                'audioProgramme',
+                'audioProgrammeName',
+                'Common sense: it is not useful for the operator to have an empty value',
+                'Configure the encoder to write a relevant name, then reencode the content.'
+            ),
+            new Reference(
+                'ITU-R_BS.2076',
+                'audioContent',
+                'audioContentName',
+                'Common sense: it is not useful for the operator to have an empty value'
+            ),
+            new Reference(
+                'ITU-R_BS.2076',
+                'audioObject',
+                'audioObjectName',
+                'Common sense: it is not useful for the operator to have an empty value'
+            ),
+            new Reference(
+                'ITU-R_BS.2076',
+                'audioPackFormat',
+                'audioPackFormatName',
+                'Common sense: it is not useful for the operator to have an empty value'
+            ),
+            new Reference(
+                'ITU-R_BS.2076',
+                'audioChannelFormat',
+                'audioChannelFormatName',
+                'Common sense: it is not useful for the operator to have an empty value'
+            ),
+            new Reference(
+                'ITU-R_BS.2076',
+                'audioTrackFormat',
+                'audioTrackFormatName',
+                'Common sense: it is not useful for the operator to have an empty value'
+            ),
+            new Reference(
+                'ITU-R_BS.2076',
+                'audioStreamFormat',
+                'audioStreamFormatName',
+                'Common sense: it is not useful for the operator to have an empty value'
+            ),
+        ]
+    ),
+    new Check(
+        '<code>(element name)</code> element value <code>(element value)</code> does not match corresponding<code>(element name)</code> element value <code>(element value)</code><code> (extra spec name if needed)</code>',
+        'Error',
+        [
+            new Reference(
+                'ITU-R_BS.2076',
+                'audioChannelFormat/audioBlockFormat',
+                'position'
+            ),
+        ]
+    ),
+    new Check(
+        '<code>(element names)</code> element values are not same<code> (extra spec name if needed)</code>',
+        'Error',
+        [
+            new Reference(
+                'Dolby_Atmos_Master_ADM_Profile',
+                'audioChannelFormat/audioBlockFormat',
+                null,
+                '"If any size sub-elements [width, depth, height] are present, then all three sub-elements must be present and set to the same value"',
+                'Configure the encoder to write a same values, then reencode the content.'
+            ),
+            new Reference(
+                'Dolby_Atmos_Master_ADM_Profile',
+                'audioChannelFormat/audioBlockFormat',
+                'width'
+            ),
+            new Reference(
+                'Dolby_Atmos_Master_ADM_Profile',
+                'audioChannelFormat/audioBlockFormat',
+                'height'
+            ),
+            new Reference(
+                'Dolby_Atmos_Master_ADM_Profile',
+                'audioChannelFormat/audioBlockFormat',
+                'depth'
+            ),
+        ]
+    ),
 ];
 
 $GLOBALS['dbFormatToSpecs'] =
@@ -1126,6 +2957,12 @@ $GLOBALS['dbFormatToSpecs'] =
     'E-AC-3' => [ 'ETSI_TS_102_366' ],
     'MP4' => [ 'ISO_IEC_14496-1', 'ISO_IEC_14496-3', 'ISO_IEC_14496-12' ],
     'USAC' => [ 'ISO_IEC_23003-3', 'ISO_IEC_23003-4' ],
+    'ADM' => [ 'ITU-R_BS.2076', 'Dolby_Atmos_Master_ADM_Profile' ],
+];
+
+$GLOBALS['dbProfileToSpec'] =
+[
+    'Dolby_Atmos_Master_ADM_Profile' => 'ITU-R_BS.2076',
 ];
 
 function is_spec_in_formats($specId, $formats)
@@ -1143,17 +2980,24 @@ function is_spec_in_formats($specId, $formats)
 
 /**
  * @SuppressWarnings(PHPMD.CyclomaticComplexity)
+ * @SuppressWarnings(PHPMD.NPathComplexity)
  */
 function get_references($checkId, $urlPrefix, $formats = null, $elementId = null, $fieldId = null)
 {
     $dbSpecs = (new Specs)->getSpecs();
     global $dbChecks;
+    global $dbProfileToSpec;
     
     foreach ($dbChecks[$checkId]->references as $checkToDetail) {
         if ((!$formats || is_spec_in_formats($checkToDetail->specId, $formats)) && (!$elementId || $elementId == end(explode('/', $checkToDetail->elementId))) && (!$fieldId || $fieldId == $checkToDetail->fieldId)) {
             $spec = $dbSpecs[$checkToDetail->specId];
             if ($spec) {
-                $url = $urlPrefix . 'Specs/' . $checkToDetail->specId;
+                $url = $urlPrefix . 'Specs/';
+                if (array_key_exists($checkToDetail->specId, $dbProfileToSpec)) {
+                    $url .= $dbProfileToSpec[$checkToDetail->specId];
+                } else {
+                    $url .= $checkToDetail->specId;
+                }
                 $name = $checkToDetail->specId;
                 $description = null;
                 if ($checkToDetail->elementId) {
@@ -1189,7 +3033,7 @@ function get_references($checkId, $urlPrefix, $formats = null, $elementId = null
     }
     
     foreach ($temp as $key => $value) {
-        $references[] = [ '<a href="' . $urlPrefix . 'Specs/' . $key . '">' . str_replace('_', ' ', $key) . '</a> (' . $dbSpecs[$key]->shortName . ')', $value ];
+        $references[] = [ '<a href="' . $urlPrefix . 'Specs/' . $key . '">' . str_replace('_', ' ', $key) . '</a>' . ($dbSpecs[$key]->shortName ? (' (' . $dbSpecs[$key]->shortName . ')') : ''), $value ];
     }
     
     return $references;
@@ -1334,48 +3178,76 @@ function map_messages_to_references($formats, $groupId, $elementId, $fieldId, $m
  * @SuppressWarnings(PHPMD.CyclomaticComplexity)
  */
 
+function manage_conformance_per_key($formats, $key0, $error0)
+{
+    $data = [];
+
+    if (is_object($error0)) {
+        foreach ($error0 as $key1 => $error1) {
+            unset($groupId);
+            if (is_object($error1)) {
+                foreach ($error1 as $key2 => $error2) {
+                    if (is_object($error2)) {
+                        // Not supported
+                    } else {
+                        foreach ($error1 as $key2 => $error2) {
+                            if ($key0 == "Crosscheck") {
+                                $groupId = $key0;
+                                $pos2 = strpos($error2, ' ');
+                                if ($pos2 !== false) {
+                                    $formats2 = [ substr($error2, 0, $pos2) ];
+                                } else {
+                                    $formats2 = null;
+                                }
+                                $elementId = '';
+                            } else {
+                                $elementId = $key0 . '/';
+                                $formats2 = $formats;
+                            }
+                            $elementId .= $key1;
+                            array_push($data, ...map_messages_to_references($formats2, $groupId, $elementId, $key2, $error2));
+                        }
+                    }
+                }
+            } else {
+                if ($key1 == 'GeneralCompliance' || $key1 == 'General' ||  $key1 == 'Coherency') {
+                    $groupId = 'General_compliance';
+                    $fieldId = null;
+                } else {
+                    $fieldId = $key1;
+                }
+                array_push($data, ...map_messages_to_references($formats, $groupId, $key0, $fieldId, $error1));
+            }
+        }
+    } else {
+        array_push($data, ...map_messages_to_references($formats, null, $key0, null, $error0));
+    }
+
+    return $data;
+}
+
+/**
+ * @SuppressWarnings(PHPMD.CyclomaticComplexity)
+ */
+
 function manage_conformance($formats, $conformance)
 {
     $data = [];
     foreach ($conformance as $key0 => $error0) {
-        if (is_object($error0)) {
-            foreach ($error0 as $key1 => $error1) {
-                if (is_object($error1)) {
-                    foreach ($error1 as $key2 => $error2) {
-                        if (is_object($error2)) {
-                            // Not supported
-                        } else {
-                            foreach ($error1 as $key2 => $error2) {
-                                if ($key0 == "Crosscheck") {
-                                    $groupId = $key0;
-                                    $pos2 = strpos($error2, ' ');
-                                    if ($pos2 !== false) {
-                                        $formats2 = [ substr($error2, 0, $pos2) ];
-                                    } else {
-                                        $formats2 = null;
-                                    }
-                                    $elementId = '';
-                                } else {
-                                    $elementId = $key0 . '/';
-                                    $formats2 = $formats;
-                                }
-                                $elementId .= $key1;
-                                array_push($data, ...map_messages_to_references($formats2, $groupId, $elementId, $key2, $error2));
-                            }
+        if (is_array($error0)) {
+            foreach ($error0 as $error0Value) {
+                foreach ($error0Value as $key1 => $error1) {
+                    if (is_array($error1)) {
+                        foreach ($error1 as $error1Value) {
+                            array_push($data, ...manage_conformance_per_key($formats, $key1, $error1Value));
                         }
-                    }
-                } else {
-                    if ($key1 == 'GeneralCompliance' || $key1 == 'Coherency') {
-                        $groupId = 'General_compliance';
-                        $fieldId = null;
                     } else {
-                        $fieldId = $key1;
+                        array_push($data, ...manage_conformance_per_key($formats, $key0, $error1));
                     }
-                    array_push($data, ...map_messages_to_references($formats, $groupId, $key0, $fieldId, $error1));
                 }
             }
         } else {
-            array_push($data, ...map_messages_to_references($formats, null, $key0, null, $error0));
+            array_push($data, ...manage_conformance_per_key($formats, $key0, $error0));
         }
     }
 
@@ -1411,7 +3283,7 @@ class Checks
                         $checks [count($checks)-1] .= $sub;
                     }
                 }
-                if ($pos2 != $testLen && $check->description[$pos2 + 6] == '(') {
+                if ($pos2 != $testLen && ($check->description[$pos2 + 6] == '(' || ($check->description[$pos2 + 6] == ' ' && $check->description[$pos2 + 7] == '('))) {
                     $pos = strpos($check->description, ')</code>', $pos2 + 1);
                     if ($pos === false) {
                         break;
@@ -1441,15 +3313,27 @@ class Checks
         $data = [];
         foreach (json_decode($miReport) as $media) {
             foreach ($media as $tracks) {
+                unset($isNotFirst);
                 foreach ($tracks as $track) {
-                    if ($track->{'@type'} == "General") {
+                    if (!isset($isNotFirst) || $track->{'@type'} == "General") {
                         $generalFormat = $track->Format;
                         if ($generalFormat == "MPEG-4") {
                             $generalFormat = "MP4";
                         }
                     }
+                    $isNotFirst = true;
                     if ($track->extra) {
                         $formats = [];
+                        if (isset($track->extra) && isset($track->extra->Metadata_Format)) {
+                            $metadataFormat = $track->extra->Metadata_Format;
+                            $metadataFormatPos = strpos($metadataFormat, ",");
+                            if ($metadataFormatPos !== false) {
+                                $metadataFormat = substr($metadataFormat, 0, $metadataFormatPos);
+                                if ($metadataFormat != $track->Format) {
+                                    $formats [] = $metadataFormat;
+                                }
+                            }
+                        }
                         $formats [] = $track->Format;
                         if ($generalFormat != $track->Format) {
                             $formats [] = $generalFormat;
@@ -1543,12 +3427,14 @@ class Checks
     public static function getSpecChecks($specId)
     {
         global $dbChecks;
-        
+        global $dbProfileToSpec;
+
         // Checks
         foreach ($dbChecks as $checkId => $check) {
             foreach ($check->references as $reference) {
-                if ($reference->specId == $specId) {
-                    $references[] = '<a href="../Checks/' . $checkId . '">' . $check->description . '</a>';
+                if ($reference->specId == $specId || $dbProfileToSpec[$reference->specId] == $specId) {
+                    $references[] = '<a href="../Checks/' . $checkId . '">' . $check->description . '</a>' . ($reference->specId == $specId ? '' : (' (' . str_replace('_', ' ', $reference->specId) . ' addition)'));
+                    break;
                 }
             }
         }
@@ -1559,7 +3445,8 @@ class Checks
     public static function getSpecElementChecks($specId, $elementId, $urlPrefix)
     {
         global $dbChecks;
-        
+        global $dbProfileToSpec;
+         
         // Checks
         $urlPrefix = '<a href="' . $urlPrefix . 'Checks/';
         if ($specId =="QC.EBU.IO") {
@@ -1573,8 +3460,9 @@ class Checks
         } else {
             foreach ($dbChecks as $checkID => $check) {
                 foreach ($check->references as $reference) {
-                    if ($reference->specId == $specId && $reference->elementId == $elementId) {
-                        $checks[] = $urlPrefix . $checkID . '">' . $check->description . '</a>';
+                    if (($reference->specId == $specId || $dbProfileToSpec[$reference->specId] == $specId) && $reference->elementId == $elementId) {
+                        $checks[] = $urlPrefix . $checkID . '">' . $check->description . '</a>' . ($reference->specId == $specId ? '' : (' (' . str_replace('_', ' ', $reference->specId) . ' addition)'));
+                        break;
                     }
                 }
             }
@@ -1586,13 +3474,15 @@ class Checks
     public static function getSpecFieldChecks($specId, $elementId, $fieldId, $urlPrefix)
     {
         global $dbChecks;
-        
+        global $dbProfileToSpec;
+         
         // Checks
         $urlPrefix = '<a href="' . $urlPrefix . 'Checks/';
         foreach ($dbChecks as $checkID => $check) {
             foreach ($check->references as $reference) {
-                if ($reference->specId == $specId && $reference->elementId == $elementId && $reference->fieldId == $fieldId) {
-                    $checks[] = $urlPrefix . $checkID . '">' . $check->description . '</a>';
+                if (($reference->specId == $specId || $dbProfileToSpec[$reference->specId] == $specId) && $reference->elementId == $elementId && $reference->fieldId == $fieldId) {
+                    $checks[] = $urlPrefix . $checkID . '">' . $check->description . '</a>' . ($reference->specId == $specId ? '' : (' (' . str_replace('_', ' ', $reference->specId) . ' addition)'));
+                    break;
                 }
             }
         }
