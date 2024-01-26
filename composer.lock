@@ -6780,13 +6780,13 @@
             "target-dir": "TFox/MpdfPortBundle",
             "source": {
                 "type": "git",
-                "url": "https://github.com/dontpullthis/MpdfPortBundle.git",
-                "reference": "105089addc7f8b8da78c35f24f2445b63fe24652"
+                "url": "https://github.com/MediaArea-Mirrors/MpdfPortBundle.git",
+                "reference": "b0a7e2b9d78c55929b889d66b52a8c7c612af5f9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dontpullthis/MpdfPortBundle/zipball/105089addc7f8b8da78c35f24f2445b63fe24652",
-                "reference": "105089addc7f8b8da78c35f24f2445b63fe24652",
+                "url": "https://api.github.com/repos/MediaArea-Mirrors/MpdfPortBundle/zipball/b0a7e2b9d78c55929b889d66b52a8c7c612af5f9",
+                "reference": "b0a7e2b9d78c55929b889d66b52a8c7c612af5f9",
                 "shasum": ""
             },
             "require": {
@@ -6823,7 +6823,7 @@
                 }
             ],
             "description": "A wrapper for mPDF class which allows to use mPDF in Symfony2 projects",
-            "homepage": "http://github.com/tasmanianfox/MpdfPortBundle",
+            "homepage": "http://github.com/MediaArea-Mirrors/MpdfPortBundle",
             "keywords": [
                 "mpdf",
                 "pdf"
