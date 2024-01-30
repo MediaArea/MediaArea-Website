@@ -458,6 +458,495 @@ $GLOBALS['dbSpecs'] =
         ],
         1
     ),
+    'ITU-R_BS.2076' => new Spec(
+        "-2",
+        "ADM",
+        'Audio Definition Model',
+        false,
+        '//www.itu.int/rec/R-REC-BS.2076',
+        'This Recommendation describes the structure of a metadata model that allows the format and content of audio files to be reliably described. This model, called the Audio Definition Model (ADM), specifies how XML metadata can be generated to provide the definitions of tracks in an audio file',
+        [
+            'audioProgramme' => new Element(
+                'An audioProgramme element refers to a set of one or more audioContents that are combined to create a full audio programme',
+                [
+                    'audioProgrammeID' => new Field(
+                        '(Attribute) ID of the programme'
+                    ),
+                    'audioProgrammeName' => new Field(
+                        '(Attribute) Name of the programme'
+                    ),
+                    'audioProgrammeLanguage' => new Field(
+                        '(Attribute) Language of the dialogue content contained in this programme'
+                    ),
+                    'start' => new Field(
+                        '(Attribute) Start time for the programme'
+                    ),
+                    'end' => new Field(
+                        '(Attribute) End time for the programme'
+                    ),
+                    'typeLabel' => new Field(
+                        '(Attribute) (Unused)'
+                    ),
+                    'typeDefinition' => new Field(
+                        '(Attribute) (Unused)'
+                    ),
+                    'typeLink' => new Field(
+                        '(Attribute) (Unused)'
+                    ),
+                    'typeLanguage' => new Field(
+                        '(Attribute) (Unused)'
+                    ),
+                    'formatLabel' => new Field(
+                        '(Attribute) (Unused)'
+                    ),
+                    'formatDefinition' => new Field(
+                        '(Attribute) (Unused)'
+                    ),
+                    'formatLink' => new Field(
+                        '(Attribute) (Unused)'
+                    ),
+                    'formatLanguage' => new Field(
+                        '(Attribute) (Unused)'
+                    ),
+                    'maxDuckingDepth' => new Field(
+                        '(Attribute) Indicates the maximum amount of automatic ducking allowed for every audioObject in the programme'
+                    ),
+                    'audioProgrammeLabel' => new Field(
+                        'Definition of audioProgramme label'
+                    ),
+                    'audioContentIDRef' => new Field(
+                        'Reference to content'
+                    ),
+                    'loudnessMetadata' => new Field(
+                        'The audio could be corrected or normalized by numerous means, relating to loudness algorithm, regional recommended practice followed, and by what correction type'
+                    ),
+                    'integratedLoudness' => new Field(
+                        '(loudnessMetadata) Integrated loudness value'
+                    ),
+                    'audioProgrammeReferenceScreen' => new Field(
+                        'Specification of a reference/ production/monitoring screen size for the audioProgramme,'
+                    ),
+                    'authoringInformation' => new Field(
+                        ''
+                    ),
+                    'referenceLayout' => new Field(
+                        '(authoringInformation) (Attribute) The reference layout describes the loudspeaker layout for which the content of the audioProgramme was originally produced for'
+                    ),
+                    'audioPackFormatIDRef' => new Field(
+                        '(authoringInformation) Reference to an audioPackFormat used as the reference layout during production'
+                    ),
+                    'alternativeValueSetIDRef' => new Field(
+                        'Reference to an alternativeValueSet within an audioObject'
+                    ),
+                ]
+            ),
+            'audioContent' => new Element(
+                '',
+                [
+                    'audioContentID' => new Field(
+                        '(Attribute) '
+                    ),
+                    'audioContentName' => new Field(
+                        '(Attribute) '
+                    ),
+                    'audioContentLanguage' => new Field(
+                        '(Attribute) '
+                    ),
+                    'typeLabel' => new Field(
+                        '(Attribute) '
+                    ),
+                    'audioContentLabel' => new Field(
+                        ''
+                    ),
+                    'audioObjectIDRef' => new Field(
+                        ''
+                    ),
+                    'loudnessMetadata' => new Field(
+                        ''
+                    ),
+                    'loudnessMetadata_integratedLoudness' => new Field(
+                        ''
+                    ),
+                    'dialogue' => new Field(
+                        ''
+                    ),
+                    'alternativeValueSetIDRef' => new Field(
+                        ''
+                    ),
+                ]
+            ),
+            'audioObject' => new Element(
+                '',
+                [
+                    'audioObjectID' => new Field(
+                        '(Attribute) '
+                    ),
+                    'audioObjectName' => new Field(
+                        '(Attribute) '
+                    ),
+                    'start' => new Field(
+                        '(Attribute) '
+                    ),
+                    'startTime' => new Field(
+                        '(Attribute) '
+                    ),
+                    'duration' => new Field(
+                        '(Attribute) '
+                    ),
+                    'dialogue' => new Field(
+                        '(Attribute) '
+                    ),
+                    'importance' => new Field(
+                        '(Attribute) '
+                    ),
+                    'interact' => new Field(
+                        '(Attribute) '
+                    ),
+                    'disableDucking' => new Field(
+                        '(Attribute) '
+                    ),
+                    'typeLabel' => new Field(
+                        '(Attribute) '
+                    ),
+                    'audioPackFormatIDRef' => new Field(
+                        ''
+                    ),
+                    'audioObjectIDRef' => new Field(
+                        ''
+                    ),
+                    'audioObjectLabel' => new Field(
+                        ''
+                    ),
+                    'audioComplementaryObjectGroupLabel' => new Field(
+                        ''
+                    ),
+                    'audioComplementaryObjectIDRef' => new Field(
+                        ''
+                    ),
+                    'audioTrackUIDRef' => new Field(
+                        ''
+                    ),
+                    'audioObjectInteraction' => new Field(
+                        ''
+                    ),
+                    'gain' => new Field(
+                        ''
+                    ),
+                    'headLocked' => new Field(
+                        ''
+                    ),
+                    'positionOffset' => new Field(
+                        ''
+                    ),
+                    'mute' => new Field(
+                        ''
+                    ),
+                    'alternativeValueSet' => new Field(
+                        ''
+                    ),
+                ]
+            ),
+            'audioPackFormat' => new Element(
+                '',
+                [
+                    'audioPackFormatID' => new Field(
+                        '(Attribute) '
+                    ),
+                    'audioPackFormatName' => new Field(
+                        '(Attribute) '
+                    ),
+                    'typeDefinition' => new Field(
+                        '(Attribute) '
+                    ),
+                    'typeLabel' => new Field(
+                        '(Attribute) '
+                    ),
+                    'typeLink' => new Field(
+                        '(Attribute) '
+                    ),
+                    'typeLanguage' => new Field(
+                        '(Attribute) '
+                    ),
+                    'importance' => new Field(
+                        '(Attribute) '
+                    ),
+                    'audioChannelFormatIDRef' => new Field(
+                        ''
+                    ),
+                    'audioPackFormatIDRef' => new Field(
+                        ''
+                    ),
+                    'absoluteDistance' => new Field(
+                        ''
+                    ),
+                    'encodePackFormatIDRef' => new Field(
+                        ''
+                    ),
+                    'decodePackFormatIDRef' => new Field(
+                        ''
+                    ),
+                    'inputPackFormatIDRef' => new Field(
+                        ''
+                    ),
+                    'outputPackFormatIDRef' => new Field(
+                        ''
+                    ),
+                    'normalization' => new Field(
+                        ''
+                    ),
+                    'nfcRefDist' => new Field(
+                        ''
+                    ),
+                    'screenRef' => new Field(
+                        ''
+                    ),
+                ]
+            ),
+            'audioChannelFormat' => new Element(
+                '',
+                [
+                    'audioChannelFormatID' => new Field(
+                        '(Attribute) '
+                    ),
+                    'audioChannelFormatName' => new Field(
+                        '(Attribute) '
+                    ),
+                    'typeDefinition' => new Field(
+                        '(Attribute) '
+                    ),
+                    'typeLabel' => new Field(
+                        '(Attribute) '
+                    ),
+                    'typeLink' => new Field(
+                        '(Attribute) '
+                    ),
+                    'typeLanguage' => new Field(
+                        '(Attribute) '
+                    ),
+                    'audioBlockFormat' => new Field(
+                        ''
+                    ),
+                    'frequency' => new Field(
+                        ''
+                    ),
+                ]
+            ),
+            'audioTrackUID' => new Element(
+                '',
+                [
+                    'UID' => new Field(
+                        '(Attribute) '
+                    ),
+                    'sampleRate' => new Field(
+                        '(Attribute) '
+                    ),
+                    'bitDepth' => new Field(
+                        '(Attribute) '
+                    ),
+                    'typeLabel' => new Field(
+                        '(Attribute) '
+                    ),
+                    'audioMXFLookUp' => new Field(
+                        ''
+                    ),
+                    'audioTrackFormatIDRef' => new Field(
+                        ''
+                    ),
+                    'audioChannelFormatIDRef' => new Field(
+                        ''
+                    ),
+                    'audioPackFormatIDRef' => new Field(
+                        ''
+                    ),
+                ]
+            ),
+            'audioTrackFormat' => new Element(
+                '',
+                [
+                    'audioTrackFormatID' => new Field(
+                        '(Attribute) '
+                    ),
+                    'audioTrackFormatName' => new Field(
+                        '(Attribute) '
+                    ),
+                    'typeLabel' => new Field(
+                        '(Attribute) '
+                    ),
+                    'typeDefinition' => new Field(
+                        '(Attribute) '
+                    ),
+                    'formatLabel' => new Field(
+                        '(Attribute) '
+                    ),
+                    'formatDefinition' => new Field(
+                        '(Attribute) '
+                    ),
+                    'formatLink' => new Field(
+                        '(Attribute) '
+                    ),
+                    'formatLanguage' => new Field(
+                        '(Attribute) '
+                    ),
+                    'audioStreamFormatIDRef' => new Field(
+                        ''
+                    ),
+                ]
+            ),
+            'audioStreamFormat' => new Element(
+                '',
+                [
+                    'audioStreamFormatID' => new Field(
+                        '(Attribute) '
+                    ),
+                    'audioStreamFormatName' => new Field(
+                        '(Attribute) '
+                    ),
+                    'typeLabel' => new Field(
+                        '(Attribute) '
+                    ),
+                    'typeDefinition' => new Field(
+                        '(Attribute) '
+                    ),
+                    'formatLabel' => new Field(
+                        '(Attribute) '
+                    ),
+                    'formatDefinition' => new Field(
+                        '(Attribute) '
+                    ),
+                    'formatLink' => new Field(
+                        '(Attribute) '
+                    ),
+                    'formatLanguage' => new Field(
+                        '(Attribute) '
+                    ),
+                    'audioChannelFormatIDRef' => new Field(
+                        ''
+                    ),
+                    'audioPackFormatIDRef' => new Field(
+                        ''
+                    ),
+                    'audioTrackFormatIDRef' => new Field(
+                        ''
+                    ),
+                ]
+            ),
+            'audioBlockFormat' => new Element(
+                '',
+                [
+                    'audioBlockFormatID' => new Field(
+                        '(Attribute) '
+                    ),
+                    'rtime' => new Field(
+                        '(Attribute) '
+                    ),
+                    'duration' => new Field(
+                        '(Attribute) '
+                    ),
+                    'lstart' => new Field(
+                        '(Attribute) '
+                    ),
+                    'lduration' => new Field(
+                        '(Attribute) '
+                    ),
+                    'initializeBlock' => new Field(
+                        '(Attribute) '
+                    ),
+                    'gain' => new Field(
+                        ''
+                    ),
+                    'importance' => new Field(
+                        ''
+                    ),
+                    'headLocked' => new Field(
+                        ''
+                    ),
+                    'headphoneVirtualise' => new Field(
+                        ''
+                    ),
+                    'speakerLabel' => new Field(
+                        ''
+                    ),
+                    'position' => new Field(
+                        ''
+                    ),
+                    'outputChannelFormatIDRef' => new Field(
+                        ''
+                    ),
+                    'outputChannelIDRef,' => new Field(
+                        ''
+                    ),
+                    'jumpPosition' => new Field(
+                        ''
+                    ),
+                    'matrix' => new Field(
+                        ''
+                    ),
+                    'coefficient' => new Field(
+                        ''
+                    ),
+                    'width' => new Field(
+                        ''
+                    ),
+                    'depth' => new Field(
+                        ''
+                    ),
+                    'height' => new Field(
+                        ''
+                    ),
+                    'cartesian' => new Field(
+                        ''
+                    ),
+                    'diffuse' => new Field(
+                        ''
+                    ),
+                    'channelLock' => new Field(
+                        ''
+                    ),
+                    'objectDivergence' => new Field(
+                        ''
+                    ),
+                    'zoneExclusion' => new Field(
+                        ''
+                    ),
+                    'equation' => new Field(
+                        ''
+                    ),
+                    'order' => new Field(
+                        ''
+                    ),
+                    'degree' => new Field(
+                        ''
+                    ),
+                    'normalization' => new Field(
+                        ''
+                    ),
+                    'nfcRefDist' => new Field(
+                        ''
+                    ),
+                    'screenRef' => new Field(
+                        ''
+                    ),
+                ]
+            ),
+            'audioalternativeValueSet' => new Element(
+                '',
+                [
+                ]
+            ),
+        ],
+        1
+    ),
+    'Dolby_Atmos_Master_ADM_Profile' => new Spec(
+        " v1.1",
+        null,
+        'This documentation specifies requirements, recommendations, and constraints for the Dolby Atmos Master ADM Profile',
+        false,
+        '//professionalsupport.dolby.com/s/article/Dolby-Atmos-ADM-Profile-specification',
+        'This documentation specifies a required subset of ADM to define a Dolby Atmos master ADM profile. The profile is intended to support easier use and implementation of ADM and ensure interoperability among ADM-capable systems ingesting or outputting Dolby Atmos content. Check <a href="./ITU-R_BS.2076">ITU-R BS.2076 (ADM)</a> page for the list of checked elements.',
+        [
+        ],
+        1
+    ),
 ];
 
 /**
