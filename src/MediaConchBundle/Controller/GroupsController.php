@@ -31,8 +31,6 @@ class GroupsController extends Controller
      */
     public function group1Action(Groups $groups, $groupId)
     {
-        header('X-Robots-Tag: none');
-
         $items = $groups->listGroupInfo($groupId);
         if (!$items) {
             throw $this->createNotFoundException('This group is not found in our database');
