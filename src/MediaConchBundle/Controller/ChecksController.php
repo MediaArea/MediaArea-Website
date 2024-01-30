@@ -18,8 +18,6 @@ class ChecksController extends Controller
      */
     public function checksAction(Checks $checks)
     {
-        header('X-Robots-Tag: none');
-
         return $this->render('@MediaConch/Default/checks.html.twig', [ 'items' => $checks->listChecks() ]);
     }
     

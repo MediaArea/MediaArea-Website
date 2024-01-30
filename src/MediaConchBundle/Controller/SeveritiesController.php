@@ -30,8 +30,6 @@ class SeveritiesController extends Controller
      */
     public function severity1Action($severityId, Severities $severities)
     {
-        header('X-Robots-Tag: none');
-
         $items = $severities->listSeverityInfo($severityId);
         if (!$items) {
             throw $this->createNotFoundException('The severity is not found in our database');

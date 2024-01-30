@@ -18,8 +18,6 @@ class SpecsController extends Controller
      */
     public function specsAction(Specs $specs)
     {
-        header('X-Robots-Tag: none');
-
         return $this->render('@MediaConch/Default/checks.html.twig', [ 'items' => $specs->listSpecs() ]);
     }
     
@@ -29,8 +27,6 @@ class SpecsController extends Controller
      */
     public function specs1Action(Specs $specs, $specId)
     {
-        header('X-Robots-Tag: none');
-
         $items = $specs->listSpecInfo($specId);
         if (!$items) {
             throw $this->createNotFoundException('This specification is not found in our database');
@@ -44,8 +40,6 @@ class SpecsController extends Controller
      */
     public function specs2Action(Specs $specs, $specId, $specId2)
     {
-        header('X-Robots-Tag: none');
-
         $items = $specs->listElementInfo($specId, $specId2, '../../');
         if (!$items) {
             throw $this->createNotFoundException('This specification is not found in our database');
@@ -59,8 +53,6 @@ class SpecsController extends Controller
      */
     public function specs3Action(Specs $specs, $specId, $specId2, $specId3)
     {
-        header('X-Robots-Tag: none');
-
         $items = $specs->listFieldInfo($specId, $specId2, $specId3, '../../../');
         if (!$items) {
             throw $this->createNotFoundException('This specification is not found in our database');
@@ -74,8 +66,6 @@ class SpecsController extends Controller
      */
     public function specs4Action(Specs $specs, $specId, $specId2, $specId3, $specId4)
     {
-        header('X-Robots-Tag: none');
-
         $items = $specs->listFieldInfo($specId, $specId2 . '/' . $specId3, $specId4, '../../../../');
         if (!$items) {
             throw $this->createNotFoundException('This specification is not found in our database');
@@ -89,8 +79,6 @@ class SpecsController extends Controller
      */
     public function specs5Action(Specs $specs, $specId, $specId2, $specId3, $specId4, $specId5)
     {
-        header('X-Robots-Tag: none');
-
         $items = $specs->listFieldInfo($specId, $specId2 . '/' . $specId3 . '/' . $specId4, $specId5, '../../../../../');
         if (!$items) {
             throw $this->createNotFoundException('This specification is not found in our database');
@@ -104,8 +92,6 @@ class SpecsController extends Controller
      */
     public function specs6Action(Specs $specs, $specId, $specId2, $specId3, $specId4, $specId5, $specId6)
     {
-        header('X-Robots-Tag: none');
-
         $items = $specs->listFieldInfo($specId, $specId2 . '/' . $specId3 . '/' . $specId4 . '/' . $specId5, $specId6, '../../../../../../');
         if (!$items) {
             throw $this->createNotFoundException('This specification is not found in our database');
@@ -119,8 +105,6 @@ class SpecsController extends Controller
      */
     public function specs7Action(Specs $specs, $specId, $specId2, $specId3, $specId4, $specId5, $specId6, $specId7)
     {
-        header('X-Robots-Tag: none');
-
         $items = $specs->listFieldInfo($specId, $specId2 . '/' . $specId3 . '/' . $specId4 . '/' . $specId5 . '/' . $specId6, $specId7, '../../../../../../../');
         if (!$items) {
             throw $this->createNotFoundException('This specification is not found in our database');
@@ -134,8 +118,6 @@ class SpecsController extends Controller
      */
     public function specs8Action(Specs $specs, $specId, $specId2, $specId3, $specId4, $specId5, $specId6, $specId7, $specId8)
     {
-        header('X-Robots-Tag: none');
-
         $items = $specs->listFieldInfo($specId, $specId2 . '/' . $specId3 . '/' . $specId4 . '/' . $specId5 . '/' . $specId6 . '/' . $specId7, $specId8, '../../../../../../../../');
         if (!$items) {
             throw $this->createNotFoundException('This specification is not found in our database');
