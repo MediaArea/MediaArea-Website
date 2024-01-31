@@ -5,7 +5,29 @@
         <link>https://mediaarea.net/MediaInfo</link>
         <description>MediaInfo updates feed</description>
         <language>en-us</language>
-        <lastBuildDate>Thu, 30 Nov 2023 12:00:00 +0000</lastBuildDate>
+        <lastBuildDate>Wed, 31 Jan 2024 12:00:00 +0000</lastBuildDate>
+         <item>
+            <title>MediaInfo 24.01</title>
+            <description>
+                <![CDATA[+ ADM: Dolby Atmos Master ADM Profile conformance checker (technology preview)<br />
+                         + Dolby Vision: support of version 3, with compression info, and profile 20<br />
+                         + Dolby Vision: explicit display of profile<br />
+                         + HEVC: support of multiview profile signaled in VPS extension<br />
+                         + MP4: parsing of vexu (Video Extended Usage) box<br />
+                         + ICC: support of CCIP in ICC in JPEG, PNG, TIFF, MP4, raw files<br />
+                         + MPEG-TS: detection of VVC and EVC<br />
+                         + AVC: count of slices<br />
+                         + PNG: support of color description chunks (CCIP CLLI MDCV)<br />
+                         + GXF: support of AVC and VC-3<br />
+                         + TrueHD: display of Dolby Surround EX & Dolby Pro Logic IIz<br />
+                         x Matroska: better fallback in case of buggy timecode<br />
+                         x I1940, MOV/MP4: fix slowness with some unrecognized metadata atoms<br />
+                         x HDR10/HDR10+: fix HDR10 info even if some characteristics are not met]]>
+            </description>
+            <link>https://mediaarea.net/MediaInfo</link>
+            <pubDate>Wed, 31 Jan 2024 12:00:00 +0000</pubDate>
+            <guid>MediaInfo-24.01</guid>
+         </item>
          <item>
             <title>MediaInfo 23.11</title>
             <description>
