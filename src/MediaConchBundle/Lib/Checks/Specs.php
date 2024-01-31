@@ -541,396 +541,385 @@ $GLOBALS['dbSpecs'] =
                 ]
             ),
             'audioContent' => new Element(
-                '',
+                'An audioContent element describes the content of one component of a programme (e.g. background music), and refers to audioObjects to tie the content to its format. This element includes loudness metadata',
                 [
                     'audioContentID' => new Field(
-                        '(Attribute) '
+                        '(Attribute) ID of the content'
                     ),
                     'audioContentName' => new Field(
-                        '(Attribute) '
+                        '(Attribute) Name of the content'
                     ),
                     'audioContentLanguage' => new Field(
-                        '(Attribute) '
+                        '(Attribute) Language of the content'
                     ),
                     'typeLabel' => new Field(
-                        '(Attribute) '
+                        '(Attribute) (Only in buggy files)'
                     ),
                     'audioContentLabel' => new Field(
-                        ''
+                        'Definition of an audioContent label'
                     ),
                     'audioObjectIDRef' => new Field(
-                        ''
+                        'Reference to audioObject'
                     ),
                     'loudnessMetadata' => new Field(
-                        ''
-                    ),
-                    'loudnessMetadata_integratedLoudness' => new Field(
-                        ''
+                        'Loudness'
                     ),
                     'dialogue' => new Field(
-                        ''
+                        'If the audio is not dialogue set a value of 0; if it contains only dialogue set a value of 1; if it contains both then set a value of 2.'
                     ),
                     'alternativeValueSetIDRef' => new Field(
-                        ''
+                        'Reference to an alternativeValueSet within an audioObject'
                     ),
                 ]
             ),
             'audioObject' => new Element(
-                '',
+                'An audioObject establishes the relationship between the content, the format via audio packs, and the assets using the track UIDs',
                 [
                     'audioObjectID' => new Field(
-                        '(Attribute) '
+                        '(Attribute) ID of the object'
                     ),
                     'audioObjectName' => new Field(
-                        '(Attribute) '
+                        '(Attribute) Name of the object'
                     ),
                     'start' => new Field(
-                        '(Attribute) '
+                        '(Attribute) Start time for the object, relative to the start of the audioProgramme'
                     ),
                     'startTime' => new Field(
-                        '(Attribute) '
+                        '(Attribute) (only in legacy files)'
                     ),
                     'duration' => new Field(
-                        '(Attribute) '
+                        '(Attribute)  Duration of object'
                     ),
                     'dialogue' => new Field(
-                        '(Attribute) '
+                        '(Attribute) If the audio is not dialogue set a value of 0; if it contains only dialogue a value of 1; if it contains both then a value of 2.'
                     ),
                     'importance' => new Field(
-                        '(Attribute) '
+                        '(Attribute) Importance of an object'
                     ),
                     'interact' => new Field(
-                        '(Attribute) '
+                        '(Attribute) Set to 1 if a user can interact with the object, 0 if not'
                     ),
                     'disableDucking' => new Field(
-                        '(Attribute) '
+                        '(Attribute) Set to 1 to disallow automatic ducking of object, 0 to allow ducking'
                     ),
                     'typeLabel' => new Field(
-                        '(Attribute) '
+                        '(Attribute) (Only in buggy files)'
                     ),
                     'audioPackFormatIDRef' => new Field(
-                        ''
+                        'Reference to an audioPackFormat for format description'
                     ),
                     'audioObjectIDRef' => new Field(
-                        ''
+                        'Reference to another audioObject'
                     ),
                     'audioObjectLabel' => new Field(
-                        ''
+                        'Definition of audioObject label'
                     ),
                     'audioComplementaryObjectGroupLabel' => new Field(
-                        ''
+                        'Definition of a label for a group of complementary audioObjects'
                     ),
                     'audioComplementaryObjectIDRef' => new Field(
-                        ''
+                        'Reference to another audioObject that is complementary to the object, e.g. to describe mutually exclusive languages'
                     ),
                     'audioTrackUIDRef' => new Field(
-                        ''
+                        'Reference to an audioTrackUID'
                     ),
                     'audioObjectInteraction' => new Field(
-                        ''
+                        'Specification of possible user interaction with the object'
                     ),
                     'gain' => new Field(
-                        ''
+                        'Definition of a gain value to be applied to all audio samples referenced by the audioObject'
                     ),
                     'headLocked' => new Field(
-                        ''
+                        'Indicates if the perceived location of the audio element is locked to the head or not locked'
                     ),
                     'positionOffset' => new Field(
-                        ''
+                        'Apply an offset to all elements in the audioObjects'
                     ),
                     'mute' => new Field(
-                        ''
+                        'Status of the audioObject to play back or not.'
                     ),
                     'alternativeValueSet' => new Field(
-                        ''
+                        'An alternative set of parameters that will be used if the alternativeValueSetID is referenced by an audioProgramme or audioContent element'
                     ),
                 ]
             ),
             'audioPackFormat' => new Element(
-                '',
+                'The audioPackFormat groups together one or more audioChannelFormats that belong together',
                 [
                     'audioPackFormatID' => new Field(
-                        '(Attribute) '
+                        '(Attribute) ID for the pack'
                     ),
                     'audioPackFormatName' => new Field(
-                        '(Attribute) '
-                    ),
-                    'typeDefinition' => new Field(
-                        '(Attribute) '
+                        '(Attribute) Name for the pack'
                     ),
                     'typeLabel' => new Field(
-                        '(Attribute) '
+                        '(Attribute) Descriptor of the type of channel'
+                    ),
+                    'typeDefinition' => new Field(
+                        '(Attribute) Description of the type of channel'
                     ),
                     'typeLink' => new Field(
-                        '(Attribute) '
+                        '(Attribute) (Unused)'
                     ),
                     'typeLanguage' => new Field(
-                        '(Attribute) '
+                        '(Attribute) (Unused)'
                     ),
                     'importance' => new Field(
-                        '(Attribute) '
+                        '(Attribute) Importance of a pack'
                     ),
                     'audioChannelFormatIDRef' => new Field(
-                        ''
+                        'Reference to an audioChannelFormat'
                     ),
                     'audioPackFormatIDRef' => new Field(
-                        ''
+                        'Reference to an audioPackFormat'
                     ),
                     'absoluteDistance' => new Field(
-                        ''
+                        'Absolute distance'
                     ),
                     'encodePackFormatIDRef' => new Field(
-                        ''
+                        '(Matrix) Reference to an encoding matrix audioPackFormat from a decoding matrix'
                     ),
                     'decodePackFormatIDRef' => new Field(
-                        ''
+                        '(Matrix) Reference to a decoding matrix audioPackFormat from an encoding matrix'
                     ),
                     'inputPackFormatIDRef' => new Field(
-                        ''
+                        '(Matrix) Reference to a channel-based (DirectSpeakers) input audioPackFormat'
                     ),
                     'outputPackFormatIDRef' => new Field(
-                        ''
+                        '(Matrix) Reference to a channel-based (DirectSpeakers) matrix decoded audioPackFormat'
                     ),
                     'normalization' => new Field(
-                        ''
+                        '(HOA) Indicates the normalization scheme of the HOA content (N3D, SN3D, FuMa)'
                     ),
                     'nfcRefDist' => new Field(
-                        ''
+                        '(HOA) Indicates the reference distance of the loudspeaker setup for near-field compensation (NFC)'
                     ),
                     'screenRef' => new Field(
-                        ''
+                        '(HOA) Indicates whether the content is screen-related or not'
                     ),
                 ]
             ),
             'audioChannelFormat' => new Element(
-                '',
+                'An audioChannelFormat represents a single sequence of audio samples on which some action may be performed, such as movement of an object, which is rendered in a scene. It is sub-divided in the time domain into one or more audioBlockFormats',
                 [
                     'audioChannelFormatID' => new Field(
-                        '(Attribute) '
+                        '(Attribute) ID of the channel'
                     ),
                     'audioChannelFormatName' => new Field(
-                        '(Attribute) '
-                    ),
-                    'typeDefinition' => new Field(
-                        '(Attribute) '
+                        '(Attribute) Name of the channel'
                     ),
                     'typeLabel' => new Field(
-                        '(Attribute) '
+                        '(Attribute) Descriptor of the type of channel'
+                    ),
+                    'typeDefinition' => new Field(
+                        '(Attribute) Description of the type of channel'
                     ),
                     'typeLink' => new Field(
-                        '(Attribute) '
+                        '(Attribute) (Unused)'
                     ),
                     'typeLanguage' => new Field(
-                        '(Attribute) '
-                    ),
-                    'audioBlockFormat' => new Field(
-                        ''
+                        '(Attribute) (Unused)'
                     ),
                     'frequency' => new Field(
-                        ''
+                        'frequency'
                     ),
                 ]
             ),
-            'audioTrackUID' => new Element(
-                '',
-                [
-                    'UID' => new Field(
-                        '(Attribute) '
-                    ),
-                    'sampleRate' => new Field(
-                        '(Attribute) '
-                    ),
-                    'bitDepth' => new Field(
-                        '(Attribute) '
-                    ),
-                    'typeLabel' => new Field(
-                        '(Attribute) '
-                    ),
-                    'audioMXFLookUp' => new Field(
-                        ''
-                    ),
-                    'audioTrackFormatIDRef' => new Field(
-                        ''
-                    ),
-                    'audioChannelFormatIDRef' => new Field(
-                        ''
-                    ),
-                    'audioPackFormatIDRef' => new Field(
-                        ''
-                    ),
-                ]
-            ),
-            'audioTrackFormat' => new Element(
-                '',
-                [
-                    'audioTrackFormatID' => new Field(
-                        '(Attribute) '
-                    ),
-                    'audioTrackFormatName' => new Field(
-                        '(Attribute) '
-                    ),
-                    'typeLabel' => new Field(
-                        '(Attribute) '
-                    ),
-                    'typeDefinition' => new Field(
-                        '(Attribute) '
-                    ),
-                    'formatLabel' => new Field(
-                        '(Attribute) '
-                    ),
-                    'formatDefinition' => new Field(
-                        '(Attribute) '
-                    ),
-                    'formatLink' => new Field(
-                        '(Attribute) '
-                    ),
-                    'formatLanguage' => new Field(
-                        '(Attribute) '
-                    ),
-                    'audioStreamFormatIDRef' => new Field(
-                        ''
-                    ),
-                ]
-            ),
-            'audioStreamFormat' => new Element(
-                '',
-                [
-                    'audioStreamFormatID' => new Field(
-                        '(Attribute) '
-                    ),
-                    'audioStreamFormatName' => new Field(
-                        '(Attribute) '
-                    ),
-                    'typeLabel' => new Field(
-                        '(Attribute) '
-                    ),
-                    'typeDefinition' => new Field(
-                        '(Attribute) '
-                    ),
-                    'formatLabel' => new Field(
-                        '(Attribute) '
-                    ),
-                    'formatDefinition' => new Field(
-                        '(Attribute) '
-                    ),
-                    'formatLink' => new Field(
-                        '(Attribute) '
-                    ),
-                    'formatLanguage' => new Field(
-                        '(Attribute) '
-                    ),
-                    'audioChannelFormatIDRef' => new Field(
-                        ''
-                    ),
-                    'audioPackFormatIDRef' => new Field(
-                        ''
-                    ),
-                    'audioTrackFormatIDRef' => new Field(
-                        ''
-                    ),
-                ]
-            ),
-            'audioBlockFormat' => new Element(
-                '',
+            'audioChannelFormat/audioBlockFormat' => new Element(
+                'An audioBlockFormat represents a single sequence of audioChannelFormat samples with fixed parameters, including position, within a specified time interval',
                 [
                     'audioBlockFormatID' => new Field(
-                        '(Attribute) '
+                        '(Attribute) ID for block'
                     ),
                     'rtime' => new Field(
-                        '(Attribute) '
+                        '(Attribute) Start time of block'
                     ),
                     'duration' => new Field(
-                        '(Attribute) '
+                        '(Attribute) Duration of block'
                     ),
                     'lstart' => new Field(
                         '(Attribute) '
                     ),
                     'lduration' => new Field(
-                        '(Attribute) '
+                        '(Attribute) (S-ADM) Duration of block in the S-ADM metadata frame'
                     ),
                     'initializeBlock' => new Field(
-                        '(Attribute) '
+                        '(Attribute) (S-ADM) If the initializeBlock is set to ‘1’, it indicates the audioBlockFormat of ‘AB_xxxxyyyy_00000000’ is used to specify initial values of all elements for the first audio block in the frame'
                     ),
                     'gain' => new Field(
-                        ''
+                        'Definition of a gain value to be applied to all audio samples corresponding to the audioBlockFormat'
                     ),
                     'importance' => new Field(
-                        ''
+                        'Importance of the audioChannelFormat, defined for the duration of the current audioBlockFormat'
                     ),
                     'headLocked' => new Field(
-                        ''
+                        'Indicates if the perceived location of the audio element is locked to the head or not locked'
                     ),
                     'headphoneVirtualise' => new Field(
-                        ''
+                        'Specifies whether the object should be virtualised using a headphone virtualiser or not'
                     ),
                     'speakerLabel' => new Field(
-                        ''
+                        'A reference to the label of the speaker position'
                     ),
                     'position' => new Field(
-                        ''
+                        'Exact location of sound'
                     ),
                     'outputChannelFormatIDRef' => new Field(
-                        ''
+                        '(Matrix) For defining a decoding or direct matrix, this is the output audioChannelFormat that defines the channel being decoded to'
                     ),
                     'outputChannelIDRef,' => new Field(
-                        ''
+                        '(Only in legacy files)'
                     ),
                     'jumpPosition' => new Field(
-                        ''
+                        '(Matrix, Objects) If jumpPosition is set to 1 the position will change instantly from the previous block’s position. If set to 0 then interpolation of the position will take the entire length of the block'
                     ),
                     'matrix' => new Field(
-                        ''
+                        '(Matrix) Matrix'
                     ),
                     'coefficient' => new Field(
-                        ''
+                        '(Matrix) Multiplication factor of another channel'
                     ),
                     'width' => new Field(
-                        ''
+                        '(Objects) horizontal extent'
                     ),
                     'depth' => new Field(
-                        ''
+                        '(Objects) vertical extent'
                     ),
                     'height' => new Field(
-                        ''
+                        '(Objects) distance extent'
                     ),
                     'cartesian' => new Field(
-                        ''
+                        'Specifies coordinate system'
                     ),
                     'diffuse' => new Field(
-                        ''
+                        'Describes the diffuseness of an audioObject (if it is diffuse or direct sound)'
                     ),
                     'channelLock' => new Field(
-                        ''
+                        'If set to 1 a renderer can lock the object to the nearest channel or speaker, rather than normal rendering'
                     ),
                     'objectDivergence' => new Field(
-                        ''
+                        'Adjusts the balance between the object’s specified position and two other positions specified by the azimuthRange value'
                     ),
                     'zoneExclusion' => new Field(
-                        ''
+                        'Indicates which speaker/room zones the object should not be rendered through'
                     ),
                     'equation' => new Field(
-                        ''
+                        '(HOA) An equation to describe the HOA component'
                     ),
                     'order' => new Field(
-                        ''
+                        '(HOA) Order of the HOA component'
                     ),
                     'degree' => new Field(
-                        ''
+                        '(HOA) Degree of the HOA component'
                     ),
                     'normalization' => new Field(
-                        ''
+                        '(HOA) Indicates the normalization scheme of the HOA component (N3D, SN3D, FuMa)'
                     ),
                     'nfcRefDist' => new Field(
-                        ''
+                        '(HOA) Indicates the reference distance of the loudspeaker setup for near-field compensation (NFC)'
                     ),
                     'screenRef' => new Field(
-                        ''
+                        '(Objects, HOA) Indicates whether the object is screen-related or not'
                     ),
                 ]
             ),
-            'audioalternativeValueSet' => new Element(
-                '',
+            'audioTrackUID' => new Element(
+                'The audioTrackUID uniquely identifies a track or asset within a file or recording of an audio scene',
                 [
+                    'UID' => new Field(
+                        '(Attribute) The actual UID value'
+                    ),
+                    'sampleRate' => new Field(
+                        '(Attribute) Sample rate of track'
+                    ),
+                    'bitDepth' => new Field(
+                        '(Attribute) Bit-depth of track'
+                    ),
+                    'typeLabel' => new Field(
+                        '(Attribute) (Only in buggy files)'
+                    ),
+                    'audioMXFLookUp' => new Field(
+                        'MXF sub-elements'
+                    ),
+                    'audioTrackFormatIDRef' => new Field(
+                        'Reference to an audioTrackFormat description'
+                    ),
+                    'audioChannelFormatIDRef' => new Field(
+                        'Reference to an audioChannelFormat description'
+                    ),
+                    'audioPackFormatIDRef' => new Field(
+                        'Reference to an audioPackFormat description'
+                    ),
+                ]
+            ),
+            'audioTrackFormat' => new Element(
+                'The audioTrackFormat element corresponds to a single set of samples or data in a single track in a storage medium',
+                [
+                    'audioTrackFormatID' => new Field(
+                        '(Attribute) ID for track'
+                    ),
+                    'audioTrackFormatName' => new Field(
+                        '(Attribute) Name for track'
+                    ),
+                    'typeLabel' => new Field(
+                        '(Attribute) (Only in buggy files)'
+                    ),
+                    'typeDefinition' => new Field(
+                        '(Attribute) (Only in buggy files)'
+                    ),
+                    'formatLabel' => new Field(
+                        '(Attribute) Descriptor of the format'
+                    ),
+                    'formatDefinition' => new Field(
+                        '(Attribute) Description of the format'
+                    ),
+                    'formatLink' => new Field(
+                        '(Attribute) (Unused)'
+                    ),
+                    'formatLanguage' => new Field(
+                        '(Attribute) (Unused)'
+                    ),
+                    'audioStreamFormatIDRef' => new Field(
+                        'Reference to an audioStreamFormat'
+                    ),
+                ]
+            ),
+            'audioStreamFormat' => new Element(
+                'A stream is a combination of tracks (or one track) required to render a channel, object, HOA component or pack',
+                [
+                    'audioStreamFormatID' => new Field(
+                        '(Attribute) ID for the stream'
+                    ),
+                    'audioStreamFormatName' => new Field(
+                        '(Attribute) Name of the stream'
+                    ),
+                    'typeLabel' => new Field(
+                        '(Attribute) (Only in buggy files)'
+                    ),
+                    'typeDefinition' => new Field(
+                        '(Attribute) (Only in buggy files)'
+                    ),
+                    'formatLabel' => new Field(
+                        '(Attribute) Descriptor of the format'
+                    ),
+                    'formatDefinition' => new Field(
+                        '(Attribute) Description of the format'
+                    ),
+                    'formatLink' => new Field(
+                        '(Attribute) (Unused)'
+                    ),
+                    'formatLanguage' => new Field(
+                        '(Attribute) (Unused)'
+                    ),
+                    'audioChannelFormatIDRef' => new Field(
+                        'Reference to audioChannelFormat'
+                    ),
+                    'audioPackFormatIDRef' => new Field(
+                        'Reference to audioPackFormat'
+                    ),
+                    'audioTrackFormatIDRef' => new Field(
+                        'Reference to audioTrackFormat'
+                    ),
                 ]
             ),
         ],
