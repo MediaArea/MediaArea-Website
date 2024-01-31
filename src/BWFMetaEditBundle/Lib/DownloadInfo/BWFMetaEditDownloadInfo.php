@@ -44,7 +44,7 @@ class BWFMetaEditDownloadInfo extends AbstractDownloadInfo
     public function parse()
     {
         $this->downloadInfo = $this->detectOS();
-        $this->downloadInfo['version'] = '23.04';
-        $this->downloadInfo['date'] = '2023-04-10';
+        $this->downloadInfo['version'] = '24.01';
+        $this->downloadInfo['date'] = '2024-01-31';
     }
 }
