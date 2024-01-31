@@ -2238,7 +2238,7 @@ $GLOBALS['dbChecks'] =
         [ 'General_compliance']
     ),
     new Check(
-        '<code>(element name)</code> value <code>(element value)</code> shall match the <code>(target attribue name)</code> attribute of an <code>(target element name)</code> element',
+        '<code>(element name)</code> value <code>(element value)</code> shall match the <code>(target attribue name)</code> attribute of a<code>(target element name)</code> element',
         'Error',
         [
             new Reference(
@@ -2917,6 +2917,34 @@ $GLOBALS['dbChecks'] =
                 'ITU-R_BS.2076',
                 'audioChannelFormat/audioBlockFormat',
                 'position'
+            ),
+        ]
+    ),
+    new Check(
+        '<code>(element names)</code> elements are not all present<code> (extra spec name if needed)</code>',
+        'Error',
+        [
+            new Reference(
+                'Dolby_Atmos_Master_ADM_Profile',
+                'audioChannelFormat/audioBlockFormat',
+                null,
+                '"If any size sub-elements [width, depth, height] are present, then all three sub-elements must be present and set to the same value"',
+                'Configure the encoder to write a same values, then reencode the content.'
+            ),
+            new Reference(
+                'Dolby_Atmos_Master_ADM_Profile',
+                'audioChannelFormat/audioBlockFormat',
+                'width'
+            ),
+            new Reference(
+                'Dolby_Atmos_Master_ADM_Profile',
+                'audioChannelFormat/audioBlockFormat',
+                'height'
+            ),
+            new Reference(
+                'Dolby_Atmos_Master_ADM_Profile',
+                'audioChannelFormat/audioBlockFormat',
+                'depth'
             ),
         ]
     ),
