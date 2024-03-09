@@ -5,3 +5,5 @@ User-agent: *
 Disallow: /MediaBin/
 Disallow: /download/source/
 Disallow: /download/binary/
+Disallow: /download/snapshots/
+
