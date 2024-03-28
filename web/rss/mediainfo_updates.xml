@@ -5,7 +5,25 @@
         <link>https://mediaarea.net/MediaInfo</link>
         <description>MediaInfo updates feed</description>
         <language>en-us</language>
-        <lastBuildDate>Wed, 31 Jan 2024 12:00:00 +0000</lastBuildDate>
+        <lastBuildDate>Thu, 28 Mar 2024 08:00:00 +0000</lastBuildDate>
+         <item>
+            <title>MediaInfo 24.03</title>
+            <description>
+                <![CDATA[+ French, Italian, Russian and Ukrainian translations update<br />
+                         + ADM: ADM v3, including profile element, support<br />
+                         + ADM: conformance checks on AdvSS Emission profile<br />
+                         + Dolby E: display more AC-3 metadata items<br />
+                         + MOV/MP4: parsing of rtmd (real time metadata) tracks<br />
+                         + PNG: packing kind (linear or indexed)<br />
+                         x WAV: support of 4+ GiB axml (useful for huge ADM content)<br />
+                         x MPEG-H: fix uninitialized values leading to random behavior<br />
+                         x PDF: fix crash with corrupted files<br />
+                         x MOV/MP4: fix bit depth info for some PCM tracks with pcmC box]]>
+            </description>
+            <link>https://mediaarea.net/MediaInfo</link>
+            <pubDate>Thu, 28 Mar 2024 08:00:00 +0000</pubDate>
+            <guid>MediaInfo-24.03</guid>
+         </item>
          <item>
             <title>MediaInfo 24.01</title>
             <description>
