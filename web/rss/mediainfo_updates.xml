@@ -5,7 +5,25 @@
         <link>https://mediaarea.net/MediaInfo</link>
         <description>MediaInfo updates feed</description>
         <language>en-us</language>
-        <lastBuildDate>Thu, 28 Mar 2024 08:00:00 +0000</lastBuildDate>
+        <lastBuildDate>Thu, 18 Apr 2024 08:00:00 +0000</lastBuildDate>
+         <item>
+            <title>MediaInfo 24.04</title>
+            <description>
+                <![CDATA[+ ADM: more AdvSS Emission profile checks<br />
+                         + AC-3 & Dolby E: more AC-3 metadata readouts<br />
+                         + AV1: support of chroma_sample_position<br />
+                         + I1999, WAV: support of BS.2088 BW64 chunkId<br />
+                         + I2008, Wavpack: support of DSD<br />
+                         + I1882, CEA-608/708: options for ignoring command only streams<br />
+                         + I1990, FLV: support of enhanced RTMP<br />
+                         x WAV: fix support of 4+ GB ADM<br />
+                         x I2005, WavPack: fix duration with small files<br />
+                         x I2009, IVF: fix division by zero with buggy files]]>
+            </description>
+            <link>https://mediaarea.net/MediaInfo</link>
+            <pubDate>Thu, 18 Apr 2024 08:00:00 +0000</pubDate>
+            <guid>MediaInfo-24.04</guid>
+         </item>
          <item>
             <title>MediaInfo 24.03</title>
             <description>
