@@ -49,7 +49,7 @@ class MediaInfoDownloadInfo extends AbstractDownloadInfo
     public function parse()
     {
         $this->downloadInfo = $this->detectOS();
-        $this->downloadInfo['version'] = '24.03';
-        $this->downloadInfo['date'] = '2024-03-28';
+        $this->downloadInfo['version'] = '24.04';
+        $this->downloadInfo['date'] = '2024-04-18';
     }
 }
