@@ -6,11 +6,50 @@
         <description>MediaInfo updates feed</description>
         <language>en-us</language>
         <lastBuildDate>Thu, 18 Apr 2024 08:00:00 +0000</lastBuildDate>
+        <lastBuildDate>Fri, 31 May 2024 08:00:00 +0000</lastBuildDate>
+         <item>
+            <title>MediaInfo 24.05</title>
+            <description>
+                <![CDATA[+ Italian translation updated<br />
+                         + Windows GUI: Dark theme<br />
+                         + Windows GUI: Support of high DPI<br />
+                         + Windows GUI: Sheet view is resizable<br />
+                         + Windows GUI: Allow selecting multiple files in open file dialog<br />
+                         + Windows GUI: Use system dialog for opening folders<br />
+                         + I2029, MXF: decode of VBI (Line 21 &amp; VITC)<br />
+                         + I2058, VorbisCom: show MusicBrainz IDs in XML or full text output<br />
+                         + I1881, MXF &amp; MOV: customizable seek pos and duration of caption probe<br />
+                         + I2005, WavPack: support of non-standard sampling rate<br />
+                         + I2021, MP4: support of Qt style AudioSampleEntry in ISO MP4<br />
+                         + Conformance checker: report of malformed frames for AVC &amp; HEVC &amp; AAC<br />
+                         + Conformance checker: an element is indicated bigger than its upper element<br />
+                         + Conformance checker: Add more stream synchronization related checks<br />
+                         + Conformance checker: Check coherency of MXF elements having vectors<br />
+                         + Conformance checker: check of MPEG Audio sync loss in raw MP3 &amp; truncated file<br />
+                         + Conformance checker: FFV1 checks also when in AVI and MOV/MP4<br />
+                         + Conformance checker: check if a TIFF file is complete<br />
+                         + Conformance checker: span of frames &amp; frame/timestamp/byte offset<br />
+                         x Windows GUI: Fix position of open folder dialog<br />
+                         x Windows GUI: Fix text view strings after e.g. XML view<br />
+                         x Linux GUI: Use transparent icons<br />
+                         x Avoid infinite loop with distant files<br />
+                         x MXF: Support of SMPTE ST 422-2019 I2<br />
+                         x I2055, Dolby Vision: fix crash with some files<br />
+                         x I2054, ID3v2: fix crash with some malformed files<br />
+                         x FFV1: fix conformance checker crash with Golomb Rice parsing<br />
+                         x AC-3: fix crash with some TrueHD files<br />
+                         x I2005, WavPack: handle of small files<br />
+                         x BMP: fix bitdepth info]]>
+            </description>
+            <link>https://mediaarea.net/MediaInfo</link>
+            <pubDate>Fri, 31 May 2024 08:00:00 +0000</pubDate>
+            <guid>MediaInfo-24.05</guid>
+         </item>
          <item>
             <title>MediaInfo 24.04</title>
             <description>
                 <![CDATA[+ ADM: more AdvSS Emission profile checks<br />
-                         + AC-3 & Dolby E: more AC-3 metadata readouts<br />
+                         + AC-3 &amp; Dolby E: more AC-3 metadata readouts<br />
                          + AV1: support of chroma_sample_position<br />
                          + I1999, WAV: support of BS.2088 BW64 chunkId<br />
                          + I2008, Wavpack: support of DSD<br />
@@ -55,7 +94,7 @@
                          + AVC: count of slices<br />
                          + PNG: support of color description chunks (CCIP CLLI MDCV)<br />
                          + GXF: support of AVC and VC-3<br />
-                         + TrueHD: display of Dolby Surround EX & Dolby Pro Logic IIz<br />
+                         + TrueHD: display of Dolby Surround EX &amp; Dolby Pro Logic IIz<br />
                          x Matroska: better fallback in case of buggy timecode<br />
                          x I1940, MOV/MP4: fix slowness with some unrecognized metadata atoms<br />
                          x HDR10/HDR10+: fix HDR10 info even if some characteristics are not met]]>
