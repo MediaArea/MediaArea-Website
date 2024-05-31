@@ -1,21 +1,21 @@
 {% if 'Y' == app.request.attributes.get('donated') or (app.user and app.user.isDonor) %}
-    {% set downloadLink = '//mediaarea.net/download/donors/24.05/MediaInfo_GUI_24.05_Windows.exe' %}
+    {% set downloadLink = '//mediaarea.net/download/donors/24.05.1/MediaInfo_GUI_24.05.1_Windows.exe' %}
 {% elseif 1 <= app.request.attributes.get('donated', -1) %}
-    {% set downloadLink = '//mediaarea.net/download/current/MediaInfo_GUI_24.05_Windows.exe' %}
+    {% set downloadLink = '//mediaarea.net/download/current/MediaInfo_GUI_24.05.1_Windows.exe' %}
 {% else %}
-    {% set downloadLink = '//mediaarea.net/download/binary/mediainfo-gui/24.05/MediaInfo_GUI_24.05_Windows.exe' %}
+    {% set downloadLink = '//mediaarea.net/download/binary/mediainfo-gui/24.05.1/MediaInfo_GUI_24.05.1_Windows.exe' %}
 {% endif %}
 <tr>
     <th rowspan="10">Windows Vista, 7, 8, 10, 11</th>
     <th>Universal installer (32/64 bit)</th>
     <th><abbr title="Graphical User Interface">GUI</abbr></th>
-    <td><a href="{{ downloadLink }}">v24.05</a></td>
+    <td><a href="{{ downloadLink }}">v24.05.1</a></td>
     <td>If you don't know which one to download, download this one</td>
 </tr>
 <tr>
     <th rowspan="5">64 bit</th>
     <th><abbr title="Graphical User Interface">GUI</abbr></th>
-    <td><a href="{{ downloadLink }}">v24.05 Universal (32/64 bit)</a> <small>(<a href="//mediaarea.net/download/binary/mediainfo-gui/24.05/MediaInfo_GUI_24.05_Windows_x64_WithoutInstaller.7z">64 bit only without installer</a>)</small></td>
+    <td><a href="{{ downloadLink }}">v24.05.1 Universal (32/64 bit)</a> <small>(<a href="//mediaarea.net/download/binary/mediainfo-gui/24.05.1/MediaInfo_GUI_24.05.1_Windows_x64_WithoutInstaller.7z">64 bit only without installer</a>)</small></td>
     <td></td>
 </tr>
 <tr>
@@ -41,7 +41,7 @@
 <tr>
     <th rowspan="4">32 bit</th>
     <th><abbr title="Graphical User Interface">GUI</abbr></th>
-    <td><a href="{{ downloadLink }}">v24.05 Universal (32/64 bit)</a> <small> (<a href="//mediaarea.net/download/binary/mediainfo-gui/24.05/MediaInfo_GUI_24.05_Windows_i386_WithoutInstaller.7z">32 bit only without installer</a>)</small></td>
+    <td><a href="{{ downloadLink }}">v24.05.1 Universal (32/64 bit)</a> <small> (<a href="//mediaarea.net/download/binary/mediainfo-gui/24.05.1/MediaInfo_GUI_24.05.1_Windows_i386_WithoutInstaller.7z">32 bit only without installer</a>)</small></td>
     <td></td>
 </tr>
 <tr>
