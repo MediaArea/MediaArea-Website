@@ -17,6 +17,7 @@ class MOVMetaEditDownloadInfo extends AbstractDownloadInfo
         'Mac' => array('name' => 'macOS', 'route' => 'mov_download_mac'),
         'Mint' => array('name' => 'Linux Mint', 'route' => 'mov_download_ubuntu'),
         'Red Hat' => array('name' => 'RHEL', 'route' => 'mov_download_rhel'),
+        'RockyLinux' => array('name' => 'RockyLinux', 'route' => 'mov_download_rockylinux'),
         'SUSE' => array('name' => 'openSUSE', 'route' => 'mov_download_opensuse'),
         'Ubuntu' => array('name' => 'Ubuntu', 'route' => 'mov_download_ubuntu'),
         'Windows' => array('name' => 'Windows', 'route' => 'mov_download_windows'),

@@ -106,6 +106,18 @@ class DownloadController extends Controller
 
     /**
      * @Route(
+     *     "/MOVMetaEdit/Download/RockyLinux",
+     *     name="mov_download_rockylinux"
+     * )
+     * @Template()
+     */
+    public function rockylinuxAction()
+    {
+        return array();
+    }
+
+    /**
+     * @Route(
      *     "/MOVMetaEdit/Download/Fedora",
      *     name="mov_download_fedora"
      * )

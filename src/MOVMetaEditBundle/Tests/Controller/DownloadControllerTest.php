@@ -30,6 +30,14 @@ class DownloadControllerTest extends WebTestCase
         $this->assertEquals(200, $client->getResponse()->getStatusCode());
     }
 
+    public function testRockylinux()
+    {
+        $client = static::createClient();
+
+        $client->request('GET', '/MOVMetaEdit/Download/RockyLinux');
+        $this->assertEquals(200, $client->getResponse()->getStatusCode());
+    }
+
     public function testDebian()
     {
         $client = static::createClient();
