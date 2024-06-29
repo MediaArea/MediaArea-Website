@@ -45,7 +45,7 @@ class MediaConchDownloadInfo extends AbstractDownloadInfo
     public function parse()
     {
         $this->downloadInfo = $this->detectOS();
-        $this->downloadInfo['version'] = '23.10';
-        $this->downloadInfo['date'] = '2023-10-04';
+        $this->downloadInfo['version'] = '24.06';
+        $this->downloadInfo['date'] = '2024-06-29';
     }
 }
