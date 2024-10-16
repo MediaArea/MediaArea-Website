@@ -97,4 +97,13 @@ class DefaultController extends Controller
     {
         return ['noAds' => true];
     }
+
+    /**
+     * @Route("/NoTimeToWait9", name="notimetowait_9")
+     * @Template()
+     */
+    public function nttw9Action()
+    {
+        return ['noAds' => true];
+    }
 }
