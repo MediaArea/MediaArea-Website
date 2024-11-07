@@ -5,7 +5,41 @@
         <link>https://mediaarea.net/MediaInfo</link>
         <description>MediaInfo updates feed</description>
         <language>en-us</language>
-        <lastBuildDate>Thu, 27 Jun 2024 14:00:00 +0000</lastBuildDate>
+        <lastBuildDate>Thu, 07 Nov 2024 12:00:00 +0000</lastBuildDate>
+         <item>
+            <title>MediaInfo 24.10</title>
+            <description>
+                <![CDATA[+ New Indonesian (bahasa Indonesia) translation<br />
+                         + Update Belarusian translation<br />
+                         + Windows: Full 64-bit version (thanks to cjee21)<br />
+                         + Windows: Improved support of High DPI (thanks to cjee21)<br />
+                         + Windows: Improved support of Dark Theme (thanks to cjee21)<br />
+                         + Windows: Improved HTML view (thanks to cjee21)<br />
+                         + Windows: Upgrade file open dialog (thanks to cjee21)<br />
+                         + Windows: SemiBold monospaced font(thanks to cjee21)<br />
+                         + I1945, PAC subtitle format support<br />
+                         + I2130, EXR: support of time code and frame rate<br />
+                         + MXF: Support of more flavors of ISXD, IAB, Dolby Vision Metadata<br />
+                         + MXF: Support of all known ULs in MediaTrace output<br />
+                         + AVC: Improved detection of AVC-Intra<br />
+                         + TTML: Add Duration_Start_Command/Duration_End_Command<br />
+                         x IMF: Allow XML documents larger than 16 MB<br />
+                         x I2133, TTML: Fix timecode when timeBase is media<br />
+                         x I2110, MXF: Fix wrong Delay field with NDF timecodes<br />
+                         x I2094, MXF: Sony Real Time Metadata: fix timecode drop frame flag<br />
+                         x S1194, Fix random behavior due to uninitialised value<br />
+                         x MPEG-TS: Increase probing at end for getting duration<br />
+                         x PNG: Fix buffer leak<br />
+                         x IAB: Fix bug in IAB channel code mapping<br />
+                         x HTML output: Better escape of HTML strings<br />
+                         x XML output: Fix comment in comment<br />
+                         x MXF: Avoid crash in mxf assets on unsupported audio<br />
+                         x HEVC: Add missing parsing of some multilayer SPS elements]]>
+            </description>
+            <link>https://mediaarea.net/MediaInfo</link>
+            <pubDate>Thu, 07 Nov 2024 12:00:00 +0000</pubDate>
+            <guid>MediaInfo-24.10</guid>
+         </item>
          <item>
             <title>MediaInfo 24.06</title>
             <description>
