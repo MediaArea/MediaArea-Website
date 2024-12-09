@@ -5,7 +5,27 @@
         <link>https://mediaarea.net/MediaInfo</link>
         <description>MediaInfo updates feed</description>
         <language>en-us</language>
-        <lastBuildDate>Thu, 07 Nov 2024 12:00:00 +0000</lastBuildDate>
+        <lastBuildDate>Mon, 09 Dec 2024 12:00:00 +0000</lastBuildDate>
+         <item>
+            <title>MediaInfo 24.12</title>
+            <description>
+                <![CDATA[+ Windows: Windows Explorer context menu and tooltip on Windows 11 (thanks to cjee21)<br />
+                         + Windows: native ARM64 library for an overall improved performance (thanks to cjee21)<br />
+                         + Windows: implement signing of uninstaller (thanks to cjee21)<br />
+                         + Windows: add legacy stream display option (thanks to cjee21)<br />
+                         + Windows: ARM64X DLL is available separately<br />
+                         + AVC: Chroma Subsampling Position<br />
+                         + PNG: adapt cLLi/mdCv letter case due to spec draft update<br />
+                         + Windows: enforce more security compilation flags (thanks to cjee21)<br />
+                         x Windows: text output is editable again (thanks to cjee21)<br />
+                         x RIFF: fix bad seek in big chunks e.g. aXML with odd size<br />
+                         x ADM: fix buffer over-read<br />
+                         x FFV1: MaxSliceCount was not in XML or JSON report]]>
+            </description>
+            <link>https://mediaarea.net/MediaInfo</link>
+            <pubDate>Mon, 09 Dec 2024 12:00:00 +0000</pubDate>
+            <guid>MediaInfo-24.12</guid>
+         </item>
          <item>
             <title>MediaInfo 24.11</title>
             <description>
