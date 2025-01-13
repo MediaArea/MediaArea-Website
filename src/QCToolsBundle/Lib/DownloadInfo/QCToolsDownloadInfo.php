@@ -41,7 +41,7 @@ class QCToolsDownloadInfo extends AbstractDownloadInfo
     public function parse()
     {
         $this->downloadInfo = $this->detectOS();
-        $this->downloadInfo['version'] = '1.4';
-        $this->downloadInfo['date'] = '2024-12-30';
+        $this->downloadInfo['version'] = '1.4.1';
+        $this->downloadInfo['date'] = '2025-01-13';
     }
 }
