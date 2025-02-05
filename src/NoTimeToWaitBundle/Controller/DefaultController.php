@@ -6,6 +6,9 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 
+/**
+ * @SuppressWarnings(PHPMD.TooManyPublicMethods)
+ */
 class DefaultController extends Controller
 {
     /**
@@ -94,6 +97,15 @@ class DefaultController extends Controller
      * @Template()
      */
     public function nttw8Action()
+    {
+        return ['noAds' => true];
+    }
+
+    /**
+     * @Route("/NoTimeToWait9", name="notimetowait_9")
+     * @Template()
+     */
+    public function nttw9Action()
     {
         return ['noAds' => true];
     }
