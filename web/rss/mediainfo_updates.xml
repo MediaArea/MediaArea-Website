@@ -5,7 +5,44 @@
         <link>https://mediaarea.net/MediaInfo</link>
         <description>MediaInfo updates feed</description>
         <language>en-us</language>
-        <lastBuildDate>Mon, 09 Dec 2024 12:00:00 +0000</lastBuildDate>
+        <lastBuildDate>Fri, 21 Mar 2025 12:00:00 +0000</lastBuildDate>
+         <item>
+            <title>MediaInfo 25.03</title>
+            <description>
+                <![CDATA[+ Italian translation update<br />
+                         + Windows shell extension: Handle .url files, thanks to cjee21<br />
+                         + Windows shell extension: Option for separate instance, thanks to cjee21<br />
+                         + I2218, TTML: detect IMSC Rosetta<br />
+                         + MXF: support of HDR Vivid Metadata<br />
+                         + AVS3 Video: support for AVS3 Video according to T/AI 109.2<br />
+                         + MP4: Display of operating system and hardware e.g. Android or iOS<br />
+                         + MP4: Handle loci and @xyz metadata<br />
+                         + MP4: Handle more metadata<br />
+                         + DAT: recording date &amp; misc<br />
+                         + 3D Audio: Enable graph also on Linux<br />
+                         x macOS GUI: Fix HTML background color on macOS 11 and earlier<br />
+                         x macOS GUI: Update macOS app icon to match new UI guidelines<br />
+                         x iOS: prevent crash when receiving invalid event<br />
+                         x iOS: Update iOS icon to match new UI guidelines<br />
+                         x iOS: Open from media gallery<br />
+                         x iOS: Prevent out-of-memory when parsing large file<br />
+                         x Android: Fix square adaptive icon<br />
+                         x Android: Update AppIcon<br />
+                         x Qt GUI: several improvements for matching the current windows version, thanks to cjee21<br />
+                         x I1042, Windows GUI: Fix menubar/toolbar visibility<br />
+                         x I2199, MP4: fix moov meta support<br />
+                         x I2213, MXF: better handling of bad LinkedTrackID in descriptors<br />
+                         x I2191, PAC: fix crash with some W16 blocs<br />
+                         x I2223, DVD-Video: fix crash<br />
+                         x AVC: fix GOP computing sometimes half of actual GOP<br />
+                         x AC3: Fix wrong read of mixlevel<br />
+                         x MPEG-4: Handle correctly mett track format<br />
+                         x Fix alignment of text output for CJK languages]]>
+            </description>
+            <link>https://mediaarea.net/MediaInfo</link>
+            <pubDate>Fri, 21 Mar 2025 12:00:00 +0000</pubDate>
+            <guid>MediaInfo-25.03</guid>
+         </item>
          <item>
             <title>MediaInfo 24.12</title>
             <description>
