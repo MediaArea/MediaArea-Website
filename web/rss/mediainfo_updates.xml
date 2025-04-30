@@ -5,7 +5,38 @@
         <link>https://mediaarea.net/MediaInfo</link>
         <description>MediaInfo updates feed</description>
         <language>en-us</language>
-        <lastBuildDate>Fri, 21 Mar 2025 12:00:00 +0000</lastBuildDate>
+        <lastBuildDate>Wed, 30 Apr 2025 12:00:00 +0000</lastBuildDate>
+         <item>
+            <title>MediaInfo 25.04</title>
+            <description>
+                <![CDATA[+ MP4: Detect caption presence in the middle of the file for AVC with CEA-608 in SEI<br />
+                         + MP4: Support of Spherical Video metadata<br />
+                         + MP4: support of com.apple.quicktime.location.ISO6709<br />
+                         + IAMF: Basic (name, sampling rate, audio format used) support of IAMF (raw, in MP4), thanks to cjee21<br />
+                         + JPEG: read XMP metadata, thanks to cjee21<br />
+                         + XMP metadata: Display photoshop:Credit, xmp:CreatorTool<br />
+                         + Mach-O: Basic Mach-O (including Universal) binary support, thanks to cjee21<br />
+                         + MZ: Add more archs<br />
+                         + WepP: Support of WebP, thanks to bitplane<br />
+                         + FLAC: Add picture information<br />
+                         + FLAC: Add muxing method of images<br />
+                         + DVB: Update MJD parsing for accepting dates after 2038<br />
+                         + Input: Accept literal IPv6 addresses, thanks to cjee21<br />
+                         + I2231, 2vuy: Bit depth<br />
+                         x ADM: fix crash and wrong conformance issue report with specific files<br />
+                         x MPEG-4: avoid nearly infinite loops with buggy streams<br />
+                         x HEVC: fix false positive conformance issue with LHEVC SPS<br />
+                         x I2248, FLAC: fix format name in case of image in metadata<br />
+                         x I2240, Aspect ratio: Add display aspect ratio 9:16<br />
+                         x Windows: Fix installation of plugins in custom destination<br />
+                         x Windows: fix transparency issue with pinned app on Windows 10<br />
+                         x Fix non-MSVC builds with AES NI enabled, thanks to cjee21<br />
+                         x JavaScript build: Set locale to UTF-8]]>
+            </description>
+            <link>https://mediaarea.net/MediaInfo</link>
+            <pubDate>Wed, 30 Apr 2025 12:00:00 +0000</pubDate>
+            <guid>MediaInfo-25.04</guid>
+         </item>
          <item>
             <title>MediaInfo 25.03</title>
             <description>
