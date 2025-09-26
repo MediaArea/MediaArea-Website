@@ -20,7 +20,7 @@ class ApiKeyManager
         RequestStack $requestStack,
         TokenGeneratorInterface $tokenGenerator,
         EncoderFactoryInterface $encoderFactory
-        ) {
+    ) {
         $this->em = $em;
         $this->requestStack = $requestStack;
         $this->tokenGenerator = $tokenGenerator;

@@ -26,7 +26,7 @@ class SettingsFormType extends AbstractType
         EntityManagerInterface $em,
         SettingsManager $settings,
         XslPolicyGetPoliciesNamesList $policyList
-        ) {
+    ) {
         $token = $tokenStorage->getToken();
         if (null !== $token && $token->getUser() instanceof UserInterface) {
             $this->user = $token->getUser();
