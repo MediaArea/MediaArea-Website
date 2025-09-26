@@ -25,7 +25,7 @@ jobs:
           php-version: 7.2
           extensions: gd
           ini-values: memory_limit=-1
-          tools: composer:v1
+          tools: composer:2.2
           coverage: none
       - name: Get composer cache directory
         id: composer-cache
@@ -41,7 +41,7 @@ jobs:
           cp app/config/parameters.yml.ci app/config/parameters.yml
       - name: Install dependencies
         run: |
-          composer require --no-progress --dev friendsofphp/php-cs-fixer:2.13.* phpmd/phpmd:2.7.* --prefer-dist --no-suggest --ansi
+          composer require --no-progress --dev friendsofphp/php-cs-fixer:2.15.* phpmd/phpmd:2.7.* --prefer-dist --no-suggest --ansi
       - name: Configure
         run: |
           php bin/console doctrine:database:create --env=test --if-not-exists
@@ -53,7 +53,7 @@ jobs:
           php bin/console mediaarea:user:donor beta@mediaarea.net 30
       - name: Check
         run: |
-          vendor/bin/php-cs-fixer --dry-run --stop-on-violation --using-cache=no fix src/
+          vendor/bin/php-cs-fixer --verbose --dry-run --using-cache=no fix src/
           vendor/bin/phpmd src/ text phpmd.xml
           php bin/console lint:twig app/ src/
           # php bin/console lint:xliff src/

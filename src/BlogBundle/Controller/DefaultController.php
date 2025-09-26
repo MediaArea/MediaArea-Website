@@ -63,10 +63,10 @@ class DefaultController extends Controller
     {
         $posts = new Posts($this->getParameter('blog.files.path'));
         $showPosts = new LimitIterator(
-                $posts,
-                0,
-                self::POSTS_PER_PAGE
-            );
+            $posts,
+            0,
+            self::POSTS_PER_PAGE
+        );
 
         // Throw 404 if there is no post
         if (0 == iterator_count($showPosts)) {
@@ -85,10 +85,10 @@ class DefaultController extends Controller
     {
         $posts = new PostsTagFilter(new Posts($this->getParameter('blog.files.path')), $tag);
         $showPosts = new LimitIterator(
-                $posts,
-                ($page - 1) * self::POSTS_PER_PAGE,
-                self::POSTS_PER_PAGE
-            );
+            $posts,
+            ($page - 1) * self::POSTS_PER_PAGE,
+            self::POSTS_PER_PAGE
+        );
 
         // Throw 404 if there is no post
         if (0 == iterator_count($showPosts)) {
@@ -129,10 +129,10 @@ class DefaultController extends Controller
     {
         $posts = new PostsTagFilter(new Posts($this->getParameter('blog.files.path')), $tag);
         $showPosts = new LimitIterator(
-                    $posts,
-                    0,
-                    self::POSTS_PER_PAGE
-                );
+            $posts,
+            0,
+            self::POSTS_PER_PAGE
+        );
 
         // Throw 404 if there is no post
         if (0 == iterator_count($showPosts)) {

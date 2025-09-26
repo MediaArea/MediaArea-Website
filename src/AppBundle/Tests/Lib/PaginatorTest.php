@@ -20,11 +20,11 @@ class PaginatorTest extends TestCase
     public function totalPagesProvider()
     {
         return [
-                [100, 10, 10],
-                [101, 10, 11],
-                [109, 10, 11],
-                [5, 10, 1],
-            ];
+            [100, 10, 10],
+            [101, 10, 11],
+            [109, 10, 11],
+            [5, 10, 1],
+        ];
     }
 
     /**
@@ -110,9 +110,9 @@ class PaginatorTest extends TestCase
 
         $this->assertEquals($expectedRoute, $paginator->getPageRoute($currentPage));
         $this->assertEquals(
-                array_merge($routeParams, $expectedRouteParams),
-                $paginator->getPageRouteParams($currentPage)
-            );
+            array_merge($routeParams, $expectedRouteParams),
+            $paginator->getPageRouteParams($currentPage)
+        );
     }
 
     /**
@@ -128,12 +128,12 @@ class PaginatorTest extends TestCase
     public function isCurrentProvider()
     {
         return [
-                [95, 1, 1, true],
-                [95, 1, 2, false],
-                [95, 2, 1, false],
-                [95, 2, 2, true],
-                [95, 10, 1, false],
-                [95, 10, 10, true],
-            ];
+            [95, 1, 1, true],
+            [95, 1, 2, false],
+            [95, 2, 1, false],
+            [95, 2, 2, true],
+            [95, 10, 1, false],
+            [95, 10, 10, true],
+        ];
     }
 }

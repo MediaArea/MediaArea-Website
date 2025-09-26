@@ -2,7 +2,6 @@
 
 namespace PaymentBundle\Lib;
 
-use BrightNucleus\GeoLite2Country\Database;
 use GeoIp2\Database\Reader;
 use GeoIp2\Exception\AddressNotFoundException;
 

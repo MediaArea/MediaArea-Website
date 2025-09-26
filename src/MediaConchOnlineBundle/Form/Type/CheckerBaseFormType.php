@@ -25,7 +25,7 @@ class CheckerBaseFormType extends AbstractType
         EntityManagerInterface $em,
         SettingsManager $settings,
         XslPolicyGetPoliciesNamesList $policyList
-        ) {
+    ) {
         $token = $tokenStorage->getToken();
         if (null !== $token && $token->getUser() instanceof UserInterface) {
             $this->user = $token->getUser();
@@ -75,7 +75,8 @@ class CheckerBaseFormType extends AbstractType
                     1 => 1,
                     2 => 2,
                     3 => 3,
-                    4 => 4, '5 (most verbose)' => 5,
+                    4 => 4,
+                    '5 (most verbose)' => 5,
                     ],
                 'placeholder' => false,
                 'required' => false,

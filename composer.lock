@@ -52,46 +52,6 @@
             "time": "2022-03-30T09:27:43+00:00"
         },
         {
-            "name": "brightnucleus/geolite2-country",
-            "version": "v0.2.3",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/brightnucleus/geolite2-country.git",
-                "reference": "b1a0283f724de01fcf9a68a358a1be59ba03c9b8"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/brightnucleus/geolite2-country/zipball/b1a0283f724de01fcf9a68a358a1be59ba03c9b8",
-                "reference": "b1a0283f724de01fcf9a68a358a1be59ba03c9b8",
-                "shasum": ""
-            },
-            "require": {
-                "composer-plugin-api": "^1",
-                "php": ">=5.4"
-            },
-            "type": "composer-plugin",
-            "extra": {
-                "class": "BrightNucleus\\GeoLite2Country\\DatabaseUpdater"
-            },
-            "autoload": {
-                "psr-4": {
-                    "BrightNucleus\\GeoLite2Country\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Alain Schlesser",
-                    "email": "alain.schlesser@gmail.com"
-                }
-            ],
-            "description": "Composer-packaged version of the free MaxMind GeoLite2 Country database.",
-            "time": "2017-02-10T16:03:46+00:00"
-        },
-        {
             "name": "composer/ca-bundle",
             "version": "1.3.5",
             "source": {
