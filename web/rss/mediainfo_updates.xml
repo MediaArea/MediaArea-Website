@@ -5,7 +5,40 @@
         <link>https://mediaarea.net/MediaInfo</link>
         <description>MediaInfo updates feed</description>
         <language>en-us</language>
-        <lastBuildDate>Tue, 29 Jul 2025 10:00:00 +0000</lastBuildDate>
+        <lastBuildDate>Tue, 30 Sep 2025 08:00:00 +0000</lastBuildDate>
+         <item>
+            <title>MediaInfo 25.09</title>
+            <description>
+                <![CDATA[+ Italian, Russian translations update<br />
+                         + Windows: tweak the ads height for avoiding too big ads in when the window is maximized<br />
+                         + Android: Migrate to Material Design 3 (thanks to cjee21)<br />
+                         + ADM: Dolby E profile for emission conformance checker<br />
+                         + AAC: show when PNS is ued<br />
+                         + MPEG-TS: map message_id code to the stored message character string<br />
+                         + AC-4: Enhancement to Presentation Role display<br />
+                         + AC-4: Add Bitstream level and Presentation level<br />
+                         + MXF: support of experimental ARRI ULs<br />
+                         + WavPack: fix duration for long duration<br />
+                         + WAV: detection of C2PA + display of thumbnails characteristics<br />
+                         + MasteringDisplay_Luminance: split Min and Max<br />
+                         + Dolby Vision: Fill colour, transfer &amp; matrix for profile 5 (thanks to cjee21)<br />
+                         + JPEG: Detect lossless (thanks to cjee21)<br />
+                         + MPEG-TS: update DVB descriptors and service types for NGVC and NGA (thanks to paulhiggs)<br />
+                         + Reset MXF status based on footer partition (thanks to ammonriley)<br />
+                         + VP9: VP9 in MP4 support (thanks to cjee21)<br />
+                         + SphericalVideo: use StereoMode instead of of SourceCount<br />
+                         + I2400, Fix crashes with some malformed files<br />
+                         x Android GUI: fix some display issues with the billing and preference windows<br />
+                         x MaxCLL/MaxFALL: value without unit in the XML/JSON output<br />
+                         x Fix infinite loop in UTF8 (e.g. JavaScript) build<br />
+                         x HDR: fix random crash with multiple HDR formats<br />
+                         x PAC: Fix duration/timestamps<br />
+                         x Spherical Video 2 support, fix BF4 support with 0.32 readout, update]]>
+            </description>
+            <link>https://mediaarea.net/MediaInfo</link>
+            <pubDate>Tue, 30 Sep 2025 08:00:00 +0000</pubDate>
+            <guid>MediaInfo-25.09</guid>
+         </item>
          <item>
             <title>MediaInfo 25.07</title>
             <description>
