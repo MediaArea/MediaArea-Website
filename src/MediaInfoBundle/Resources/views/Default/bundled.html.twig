@@ -5,40 +5,40 @@
 {% block keywords %}{% trans %}about.page.keywords{% endtrans %}{% endblock %}
 
 {% block body %}
-<h2>MediaArea products with 3rd party sponsored offers during the installation</h2>
-Sometimes (returning visitor), MediaArea uses installCore advertising module from IronSource in its sponsored installation package. By using this version of the installer you support MediaArea products development. Thanks you!<br />
-The software distributor displays advertisements during the <strong>installation</strong> of our software.<br />
-These ads enable the end user to install the advertisers' programs if they want to. When you choose to install an advertised package, the generated revenue is shared between the distributor and MediaArea.<br/>
-Nor is there any "call home" (except if you want to be informed of new releases - you can uncheck the corresponding checkbox in the preference screen, at any time, if you don't want to be informed of new versions).<br/>
+<h2>MediaInfo may be bundled with 3rd party sponsored offers</h2>
+In order to support MediaInfo development, MediaInfo may provide ads during installation and/or usage.
+These ads may allow end users to install advertisers' programs or redirect them to the advertisers' websites. If you choose to install an advertised package or click on an ad, the generated revenue is shared between the distributor (if applicable) and MediaArea, the company that develops MediaInfo.
 
-<h2>Why did you partner with them?</h2>
-In order to generate a little bit of revenue to help continue developing, offering, and supporting our software to our users - you.
-
-<h2>Where can I learn more about the software distribution network?</h2>
-Software distribution network website is located at <a href="//www.installcore.com">http://www.installcore.com</a>.<br/>
-Their privacy policy is available at <a href="//www.installcore.com/legal/privacy/">http://www.installcore.com/legal/privacy/</a>.<br/>
+<h2>Why do you do that?</h2>
+In order to generate a little bit of revenue to help continue developing, offering, and supporting our software for our users - you.
 
 <h2>Is it adware?</h2>
-Some may consider this distribution "bundling" as adware. On the other hand, the distributor does not show the usual nasty negative traits of adware:
+Some people might consider this type of software distribution to be adware. However, the distributor does not exhibit the typical negative characteristics associated with adware:
 <ul>
-    <li>No unwanted software is installed - sponsored offer is explicitely indicated as such. Totally your choice!</li>
-    <li>No private information is gathered from you except for basic data polling such as language, OS and geographic location for advertisement selection during installation.</li>
+    <li>No unwanted software is installed and the sponsored offer is explicitly indicated as such. It's totally your choice!</li>
+    <li>No private information is gathered from you except for basic data such as language, operating system and geographic location, which are used for selecting advertisements during installation and/or usage.</li>
 </ul>
-For details see the <a href="//www.installcore.com/legal/privacy/">software distribution network privacy policy</a>.
+Additionally, we aim to strike a balance between not annoying users and generating revenue.
 
-<h2>What if I have another ad or if I have an adware/spyware after installation?</h2>
-There are great chances you don't have an installer published by us, trash this installer and use our installer. Verify the publisher name is "MediaArea.net":<br/>
+<h2>What if I have aggressive agressive ads?</h2>
+There's a good chance that you don't have an installer published by us, delete this installer and use ours instead. Make sure the publisher name is "MediaArea.net":<br/>
 {% image '@MediaInfoBundle/Resources/public/img/Bundled/MediaInfo_UAC.png' %}
 <img class="center-img" src="{{ asset_url }}" width="460" height="259" alt="Bundled">
-{% endimage %}
+{% endimage %}<br/>
 
-<h2>What if I still don't want to be pestered by these ads?</h2>
-If you still don't want the software distribution network stuff, you can:
-<ul>
-    <li><a href="{{ path('mi_donate') }}">Donate</a>. With $1/1€ (is it so expensive? Really?), you will have an installer without the software distribution network and no ads on the website.</li>
-    <li>Use the package without the installer in the download section (<a href="{{ path('mi_download_windows') }}">MediaInfo download section for Windows</a>)</li>
-</ul>
+<h2>But isn't it open-source software?</h2>
+It has been open-source software since day one and still is today, as you can see in the <a href="https://mediaarea.net/en/MediaInfo/License">license</a>.<br/>
+<a href="https://en.wikipedia.org/wiki/Open_source">Open-source</a> doesn't prohibit ads.<br/>
+
+<h2>This is always displayed!</h2>
+For the largest ads, there is an "X" on the top right of the ad in the MediaInfo interface that you can click to close it (it won't reappear quickly).<br/>
+
+<h2>This is an anti-feature!</h2>
+It depends on your point of view. Empty software or software with fewer features may be considered less good than software with an ad.
+
+<h2>What if I still don't want to be bothered by these ads?</h2>
+If you still don't want the software distribution network stuff, you can <a href="{{ path('mi_donate') }}">donate</a>. For $1/1€ (is that so expensive? Really?), you will have an installer without the software distribution network and no ads on the website.<br/>
 
 <h2>What if I have questions?</h2>
-If you have any questions, please feel free to contact the <a href="{{ path('ma_contact') }}">MediaArea team</a>.
+feel free to <a href="{{ path('ma_contact') }}">contact the team</a> with any questions.
 {% endblock %}
