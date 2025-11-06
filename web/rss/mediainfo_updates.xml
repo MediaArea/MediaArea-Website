@@ -5,7 +5,25 @@
         <link>https://mediaarea.net/MediaInfo</link>
         <description>MediaInfo updates feed</description>
         <language>en-us</language>
-        <lastBuildDate>Tue, 30 Sep 2025 08:00:00 +0000</lastBuildDate>
+        <lastBuildDate>Wed, 05 Nov 2025 12:00:00 +0000</lastBuildDate>
+         <item>
+            <title>MediaInfo 25.10</title>
+            <description>
+                <![CDATA[+ MXF: crosscheck of ADM profiles<br />
+                         + MXF: experimental ARRI UL support, more video streams detected<br />
+                         + TTML: better support files with SMPTE timecode and ticks instead of frame rate<br />
+                         + MXF: update UL names from the MXF registry (details view)<br />
+                         x AC-4: Add Bitstream level and Presentation level, fix<br />
+                         x MXF: Fix infinite loop in some ARRI files<br />
+                         x ADM: fix tagList related false positive conformance errors<br />
+                         x WAV: fix buggy non word aligned files check with 4 GB+ files<br />
+                         x I2452, PAC: skip '\0' prefix in content<br />
+                         x I2451, TTML: change timecode output "format" from TTML style to classic timecode]]>
+            </description>
+            <link>https://mediaarea.net/MediaInfo</link>
+            <pubDate>Wed, 05 Nov 2025 12:00:00 +0000</pubDate>
+            <guid>MediaInfo-25.10</guid>
+         </item>
          <item>
             <title>MediaInfo 25.09</title>
             <description>
