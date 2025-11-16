@@ -30,13 +30,6 @@
 <h2>{% trans %}donate.bank.title{% endtrans %}</h2>
 {% trans %}donate.bank.content{% endtrans %}
 
-{% if 'fr' == app.request.locale %}
-    <h2>Par chèque (France uniquement)</h2>
-    Il est possible d'envoyer un chèque à l'ordre de Jérôme Martinez (créateur du projet), adressé à l'adresse suivante :
-    <div><div class="address">Jérôme Martinez<br/>Chemin du Vernay<br/>73190 Curienne<br/>France</div></div>
-    N'oubliez pas de mettre un petit mot avec votre adresse e-mail afin que je vous confirme la réception!
-{% endif %}
-
 <h2>{% trans %}donate.other.title{% endtrans %}</h2>
 {% trans with {'%contact%': path('ma_contact')} %}donate.other.content{% endtrans %}
 {% endblock %}
