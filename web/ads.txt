@@ -644,4 +644,10 @@ visiblemeasures.com, 1041, DIRECT #yieldmo
 krushmedia.com, AJxF6R537a9M6CaTvK, RESELLER
 consumable.com, 2001460, DIRECT, aefcd3d2f45b5070
 
+onetag.com, 94b85023dc71f00, DIRECT
+appnexus.com, 13099, RESELLER
+pubmatic.com, 161593, RESELLER, 5d62403b186f2ace
+rubiconproject.com, 11006, RESELLER, 0bfd66d529a55807
+video.unrulymedia.com, 586616193, RESELLER
+
 google.com, pub-7849269530484133, DIRECT, f08c47fec0942fa0
