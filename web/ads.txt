@@ -650,4 +650,51 @@ pubmatic.com, 161593, RESELLER, 5d62403b186f2ace
 rubiconproject.com, 11006, RESELLER, 0bfd66d529a55807
 video.unrulymedia.com, 586616193, RESELLER
 
+appnexus.com, 11451, RESELLER
+smartadserver.com, 1976, RESELLER
+adform.com, 984, RESELLER
+# ConnectAd Core
+connectad.io, 205, RESELLER, 85ac85a30c93b3e5
+adform.com, 768, RESELLER, 9f5210a2f0999e32
+rubiconproject.com, 26800, RESELLER, 0bfd66d529a55807
+# ConnectAd Extended
+pubmatic.com, 156077, RESELLER, 5d62403b186f2ace
+openx.com, 537145117, RESELLER, 6a698e2ec38604c6
+lijit.com, 244287, RESELLER, fafdf38b16bf6b2b
+openx.com, 538959099, RESELLER, 6a698e2ec38604c6
+pubmatic.com, 137711, RESELLER, 5d62403b186f2ace
+pubmatic.com, 156212, RESELLER, 5d62403b186f2ace
+appnexus.com, 1019, RESELLER, f5ab79cb980f11d1
+
+kueez.com,d160eced488722bf1be7bb56d2c68f06, DIRECT
+rubiconproject.com,16920,RESELLER,0bfd66d529a55807
+media.net,8cu4jtrf9,RESELLER
+pubmatic.com,162110,RESELLER,5d62403b186f2ace
+sharethrough.com,n98xdzel,RESELLER,d53b998a7bd4ecd2
+openx.com, 557564833, RESELLER, 6a698e2ec38604c6
+lijit.com,407406,RESELLER,fafdf38b16bf6b2b
+33across.com, 0010b00002ODU4HAAX,RESELLER, bbea06d9c4d2853c
+yieldmo.com,3133660606033240149,RESELLER
+Triplelift.com,14670,RESELLER, 6c33edb13117fd86
+onetag.com,6e053d779444c00,RESELLER
+video.unrulymedia.com,3486482593,RESELLER
+sonobi.com,4c4fba1717,RESELLER,d1a215d9eb5aee9e
+smartadserver.com,4288,RESELLER,060d053dcf45cbf3
+zetaglobal.com,108,RESELLER
+improvedigital.com,2106,RESELLER
+adform.com,2926,RESELLER,9f5210a2f0999e32
+loopme.com,11576,RESELLER,6c8d5f95897a5a3b
+themediagrid.com,uot45z,RESELLER,35d5010d7789b49d
+trustedstack.com, TSIO6G4I5, RESELLER
+smaato.com, 1100059464, RESELLER, 07bcf65f187117b4
+smaato.com, 1100004890, RESELLER, 07bcf65f187117b4
+themediagrid.com, 7H3QAS, RESELLER, 35d5010d7789b49d
+start.io, 185522363, RESELLER
+
+smilewanted.com, 5899, RESELLER
+pubmatic.com, 158810, RESELLER, 5d62403b186f2ace
+appnexus.com, 10040, RESELLER
+openx.com, 557083110, RESELLER, 6a698e2ec38604c6
+sharethrough.com, TZ1ahFV8, RESELLER, d53b998a7bd4ecd2
+
 google.com, pub-7849269530484133, DIRECT, f08c47fec0942fa0
