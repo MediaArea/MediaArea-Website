@@ -7,6 +7,10 @@
 <html{% if rtl is defined and true == rtl %} dir="rtl"{% endif %} lang="{{ app.request.locale }}">
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+{% if ads %}
+        <link rel="preload" as="script" href="https://www.googletagservices.com/tag/js/gpt.js" />
+        <link rel="preconnect" href="//htlbid.com" crossorigin>
+{% endif %}
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>{% block title %}MediaInfo{% endblock %}</title>
