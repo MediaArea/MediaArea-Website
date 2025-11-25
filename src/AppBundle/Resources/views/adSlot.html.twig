@@ -1,10 +1,12 @@
-<div>
-    <ins class="adsbygoogle"
-         style="display:block;"
-         data-ad-client="ca-pub-8386011224798635"
-         data-ad-slot="{{ adSlotId }}"
-         data-ad-format="horizontal"></ins>
-    <script>
-    (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>
-</div>
+<div id="ad_{{ adSlotId }}"></div>
+<script>
+  window.tude = window.tude || { cmd: [] };
+  tude.cmd.push(function() {
+    tude.refreshAdsViaDivMappings([
+      {
+        divId: 'ad_{{ adSlotId }}',
+        baseDivId: '{{ adSlotId }}',
+      }
+    ]);
+  });
+</script>
