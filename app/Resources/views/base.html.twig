@@ -8,8 +8,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 {% if ads %}
-        <link rel="preload" as="script" href="https://securepubads.g.doubleclick.net/tag/js/gpt.js" />
-        <link rel="preconnect" href="//htlbid.com" crossorigin>
+        <link rel="preload" as="script" href="https://vertex-cdn.relevant-digital.com/static/tags/692817b31f4d475762e8cd3c.js" />
 {% endif %}
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -91,7 +90,8 @@
                     {% endfor %}
 
                     {% if ads %}
-                        {{ include('@App/adSlot.html.twig', { adSlotId: 'desktop-1fixedfooter-ros' }, with_context = false) }}
+                        {{ include('@App/adSlot.html.twig', { adSlotId: 'desktop_leaderboard_atf_ros' }, with_context = false) }}
+                        {{ include('@App/adSlot.html.twig', { adSlotId: 'mobile_leaderboard_atf_ros' }, with_context = false) }}
                     {% endif %}
 
                     {% block body %}{% endblock %}
@@ -102,7 +102,8 @@
         <div class="clearfix"></div>
         {% if ads %}
             <div class="container">
-                {{ include('@App/adSlot.html.twig', { adSlotId: 'desktop-2fixedfooter-ros' }, with_context = false) }}
+                {{ include('@App/adSlot.html.twig', { adSlotId: 'desktop_fixedfooter_ros' }, with_context = false) }}
+                {{ include('@App/adSlot.html.twig', { adSlotId: 'Mobile_fixedfooter_ros' }, with_context = false) }}
             </div>
         {% endif %}
         <footer id="footer">
@@ -132,7 +133,21 @@
         {{ include('@App/socialShare.html.twig') }}
         {% block javascripts %}{% endblock %}
         {% if ads %}
-            <script async src="//htlbid.com/v3/mediaarea.net/htlbid.js"></script>
+            <script async src="https://vertex-cdn.relevant-digital.com/static/tags/692817b31f4d475762e8cd3c.js"></script>
+            <script>
+            function loadAds(ids) {
+            window.relevantDigital = window.relevantDigital || {}; relevantDigital.cmd = relevantDigital.cmd || []; relevantDigital.cmd.push(function () {
+            relevantDigital.loadPrebid({ configId: '6928818d359be190f5e8cd9f', manageAdserver: true, collapseEmptyDivs: true, collapseBeforeAdFetch: false,
+            allowedDivIds: null,
+            noSlotReload: true,
+            noGpt: true
+            });
+            });
+            };
+            </script>
+            <script>
+            loadAds();
+            </script>            
         {% endif %}
     </body>
 </html>
