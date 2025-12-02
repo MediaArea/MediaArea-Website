@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="en" datatype="plaintext" original="file.ext" target-language="en">
+    <body>
+      <trans-unit id="menu.embarc" approved="yes">
+        <source><![CDATA[menu.embarc]]></source>
+        <target><![CDATA[embARC]]></target>
+      </trans-unit>
+      <trans-unit id="menu.embarc.about" approved="yes">
+        <source><![CDATA[menu.embarc.about]]></source>
+        <target><![CDATA[About]]></target>
+      </trans-unit>
+      <trans-unit id="menu.embarc.download" approved="yes">
+        <source><![CDATA[menu.embarc.download]]></source>
+        <target><![CDATA[Download]]></target>
+      </trans-unit>
+      <trans-unit id="menu.embarc.man" approved="yes">
+        <source><![CDATA[menu.embarc.man]]></source>
+        <target><![CDATA[Command line manual]]></target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

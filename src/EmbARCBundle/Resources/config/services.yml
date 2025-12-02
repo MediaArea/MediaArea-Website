@@ -1,0 +1,8 @@
+services:
+#    embarc.example:
+#        class: EmbARCBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]
+
+    embarc.download_info:
+        class: EmbARCBundle\Lib\DownloadInfo\EmbARCDownloadInfo
+        public: true

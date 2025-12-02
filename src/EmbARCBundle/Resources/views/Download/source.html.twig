@@ -1,0 +1,24 @@
+{% extends 'EmbARCBundle::base.html.twig' %}
+
+{% block title %}embARC - Download embARC Sources{% endblock %}
+
+{% block body %}
+<h1>Download - Sources</h1>
+
+<div class="table-responsive">
+<table class="download table table-bordered table-condensed">
+<thead>
+<tr class="table-header">
+    <th>Version</th>
+    <th>Interface</th>
+    <th>&nbsp;</th>
+    <th>Version</th>
+    <th>Comment</th>
+</tr>
+</thead>
+<tbody>
+{{ include('@EmbARC/Download/sourceTable.html.twig') }}
+</tbody>
+</table>
+</div>
+{% endblock %}

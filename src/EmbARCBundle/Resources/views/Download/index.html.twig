@@ -1,0 +1,36 @@
+{% extends 'EmbARCBundle::base.html.twig' %}
+
+{% block title %}embARC - Download{% endblock %}
+
+{% block body %}
+<h1>Download</h1>
+
+<div class="table-responsive">
+<table class="download table table-bordered table-condensed">
+<tr class="table-header">
+    <th>Operating system</th>
+    <td>Link</td>
+</tr>
+<tr>
+    {% image '@AppBundle/Resources/public/img/OS/Windows.png' %}
+    <th><a href="{{ path('embarc_download_windows') }}"><img src="{{ asset_url }}" width="288" height="76" alt="Microsoft Windows" title="Microsoft Windows"></a></th>
+    {% endimage %}
+    <td><a href="{{ path('embarc_download_windows') }}">MediaArea releases</a></td>
+</tr>
+<tr>
+    {% image '@AppBundle/Resources/public/img/OS/Mac_OS.png' %}
+    <th><a href="{{ path('embarc_download_mac') }}"><img src="{{ asset_url }}" width="250" height="100" alt="macOS" title="macOS"></a></th>
+    {% endimage %}
+    <td><a href="{{ path('embarc_download_mac') }}">{% trans %}download.table.official_release{% endtrans %}</a></td>
+</tr>
+<tr>
+    <th><a href="{{ path('embarc_download_linux') }}">Linux</a></th>
+    <td><a href="{{ path('embarc_download_linux') }}">{% trans %}download.table.official_release{% endtrans %}</a></td>
+</tr>
+<tr>
+    <th><a href="{{ path('embarc_download_source') }}">From source<br>(for other distributions or/and CPU)</a></th>
+    <td><a href="{{ path('embarc_download_source') }}">MediaArea releases</a></td>
+</tr>
+</table>
+</div>
+{% endblock %}

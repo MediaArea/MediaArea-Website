@@ -73,6 +73,10 @@ leavesd:
     resource: "@LeaveSDBundle/Controller/"
     type:     annotation
 
+embarc:
+    resource: "@EmbARCBundle/Controller/"
+    type:     annotation
+
 support_us:
     resource: "@SupportUsBundle/Controller/"
     type:     annotation
