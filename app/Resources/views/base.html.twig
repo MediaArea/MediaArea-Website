@@ -8,7 +8,25 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 {% if ads %}
-        <link rel="preload" as="script" href="https://vertex-cdn.relevant-digital.com/static/tags/692817b31f4d475762e8cd3c.js" />
+        <script async src='https://securepubads.g.doubleclick.net/tag/js/gpt.js'></script>
+        <script async src="https://vertex-cdn.relevant-digital.com/static/tags/69272294e5bf2fc30d50f89e.js"></script>
+        <script>
+            function loadAds() {
+                window.relevantDigital = window.relevantDigital || {};
+                relevantDigital.cmd = relevantDigital.cmd || [];
+                relevantDigital.cmd.push(function () {
+                    relevantDigital.loadPrebid({
+                        configId: '69272d28f64d523c9b50f90d',
+                        manageAdserver: true,
+                        collapseEmptyDivs: true,
+                        collapseBeforeAdFetch: false,
+                        allowedDivIds: null,
+                        noSlotReload: true,
+                        noGpt: true
+                    });
+                });
+            };
+        </script>
 {% endif %}
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -133,18 +151,6 @@
         {{ include('@App/socialShare.html.twig') }}
         {% block javascripts %}{% endblock %}
         {% if ads %}
-            <script async src="https://vertex-cdn.relevant-digital.com/static/tags/692817b31f4d475762e8cd3c.js"></script>
-            <script>
-            function loadAds(ids) {
-            window.relevantDigital = window.relevantDigital || {}; relevantDigital.cmd = relevantDigital.cmd || []; relevantDigital.cmd.push(function () {
-            relevantDigital.loadPrebid({ configId: '6928818d359be190f5e8cd9f', manageAdserver: true, collapseEmptyDivs: true, collapseBeforeAdFetch: false,
-            allowedDivIds: null,
-            noSlotReload: true,
-            noGpt: true
-            });
-            });
-            };
-            </script>
             <script>
             loadAds();
             </script>            
