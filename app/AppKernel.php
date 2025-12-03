@@ -50,6 +50,7 @@ class AppKernel extends Kernel
             new MediaBinBundle\MediaBinBundle(),
             new MediaConchOnlineBundle\MediaConchOnlineBundle(),
             new LeaveSDBundle\LeaveSDBundle(),
+            new EmbARCBundle\EmbARCBundle(),
         ];
 
         if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {

@@ -138,6 +138,10 @@
         <source><![CDATA[menu.projects.leavesd]]></source>
         <target><![CDATA[LeaveSD]]></target>
       </trans-unit>
+      <trans-unit id="menu.projects.embarc" approved="yes">
+        <source><![CDATA[menu.projects.embarc]]></source>
+        <target><![CDATA[embARC]]></target>
+      </trans-unit>
       <trans-unit id="menu.supportUs" approved="yes">
         <source><![CDATA[menu.supportUs]]></source>
         <target><![CDATA[Support Us!]]></target>
