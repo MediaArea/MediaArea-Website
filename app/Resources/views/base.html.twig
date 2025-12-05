@@ -7,27 +7,6 @@
 <html{% if rtl is defined and true == rtl %} dir="rtl"{% endif %} lang="{{ app.request.locale }}">
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-{% if ads %}
-        <script async src='https://securepubads.g.doubleclick.net/tag/js/gpt.js'></script>
-        <script async src="https://vertex-cdn.relevant-digital.com/static/tags/69272294e5bf2fc30d50f89e.js"></script>
-        <script>
-            function loadAds() {
-                window.relevantDigital = window.relevantDigital || {};
-                relevantDigital.cmd = relevantDigital.cmd || [];
-                relevantDigital.cmd.push(function () {
-                    relevantDigital.loadPrebid({
-                        configId: '69272d28f64d523c9b50f90d',
-                        manageAdserver: true,
-                        collapseEmptyDivs: true,
-                        collapseBeforeAdFetch: false,
-                        allowedDivIds: null,
-                        noSlotReload: true,
-                        noGpt: true
-                    });
-                });
-            };
-        </script>
-{% endif %}
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>{% block title %}MediaInfo{% endblock %}</title>
@@ -108,8 +87,7 @@
                     {% endfor %}
 
                     {% if ads %}
-                        {{ include('@App/adSlot.html.twig', { adSlotId: 'desktop_leaderboard_atf_ros' }, with_context = false) }}
-                        {{ include('@App/adSlot.html.twig', { adSlotId: 'mobile_leaderboard_atf_ros' }, with_context = false) }}
+                        {{ include('@App/adSlot.html.twig', { adSlotId: 5930355910 }, with_context = false) }}
                     {% endif %}
 
                     {% block body %}{% endblock %}
@@ -120,8 +98,7 @@
         <div class="clearfix"></div>
         {% if ads %}
             <div class="container">
-                {{ include('@App/adSlot.html.twig', { adSlotId: 'desktop_fixedfooter_ros' }, with_context = false) }}
-                {{ include('@App/adSlot.html.twig', { adSlotId: 'Mobile_fixedfooter_ros' }, with_context = false) }}
+                {{ include('@App/adSlot.html.twig', { adSlotId: 8744221512 }, with_context = false) }}
             </div>
         {% endif %}
         <footer id="footer">
@@ -151,9 +128,7 @@
         {{ include('@App/socialShare.html.twig') }}
         {% block javascripts %}{% endblock %}
         {% if ads %}
-            <script>
-            loadAds();
-            </script>            
+            <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
         {% endif %}
     </body>
 </html>

@@ -154,9 +154,6 @@
                     <br>
                     You can also use <a href="{{ path('mi_online') }}" target="_blank">MediaInfoOnline</a> to test MediaInfo without installing any software on your computer.
                     </div>
-                    {% if ads %}
-                        {{ include('@App/adSlot.html.twig', { adSlotId: 'mediaarea.net_mobile-square-btf-ros' }, with_context = false) }}
-                    {% endif %}
                     <div class="alert alert-info text-center">
                         {% trans with {'%donateRoute%': path('supportUs_individual')} %}about.what.donate{% endtrans %}
                     </div>

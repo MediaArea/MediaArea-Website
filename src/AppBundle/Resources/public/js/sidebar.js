@@ -47,7 +47,11 @@ var sidebar = (function () {
 
     var ads = function() {
         if (1 == $('#sidebar .sidebar-ads').length) {
-            var slot = '<div id="placement" data-ad-unit-id="/78655843/Mediaarea/mediaarea.net_desktop_sticky_side_left"></div>';
+            var slot = '<ins class="adsbygoogle"\
+                 style="display:block;"\
+                 data-ad-client="ca-pub-8386011224798635"\
+                 data-ad-slot="3057614716"\
+                 data-ad-format="auto"></ins>';
 
             $('#sidebar .sidebar-ads').append(slot);
             (adsbygoogle = window.adsbygoogle || []).push({});
