@@ -5,7 +5,34 @@
         <link>https://mediaarea.net/MediaInfo</link>
         <description>MediaInfo updates feed</description>
         <language>en-us</language>
-        <lastBuildDate>Wed, 05 Nov 2025 12:00:00 +0000</lastBuildDate>
+        <lastBuildDate>Mon, 02 Jan 2026 12:00:00 +0000</lastBuildDate>
+         <item>
+            <title>MediaInfo 26.01</title>
+            <description>
+                <![CDATA[+ Android: dark mode rework, thanks to cjee21<br />
+                         + Android: modernize the backend, thanks to cjee21<br />
+                         + More coherency/integrity checks, sponsored by Austrian Mediathek<br />
+                         + MXF: fix crash with some 0 byte audio packets<br />
+                         + MPEG-4: C2PA support<br />
+                         + ID3v2: support of Olympus voice recorder metadata<br />
+                         + Matroska: show block addition tracks<br />
+                         + Matroska: add timecode label readout<br />
+                         + Add default language string for ISO 639-2 special codes, thanks to cjee21<br />
+                         + AVI/WAV: add support for WAVE_FORMAT_MPEG_HEAAC (0x1610)<br />
+                         + AV1: Enable parsing raw OBU from network, thanks to cjee21<br />
+                         + AV1: Indicate usage of Film Grain Synthesis, thanks to cjee21<br />
+                         + Matroska/TimeCodeXML: add frame rate<br />
+                         + Bindings: add C#/PowerShell (Windows/Linux) support, thanks to cjee21<br />
+                         x Matroska: fix incoherent readout of unordered tag elements<br />
+                         x TimeCodeXml output: fix lack of frame number with some MXF SDTI timecodes<br />
+                         x AVI/WAV: fix crash with some invalid FourCC<br />
+                         x SDP: fix false-positive detection<br />
+                         x I2469, CDP: fix handling of 708 streams caught in the middle]]>
+            </description>
+            <link>https://mediaarea.net/MediaInfo</link>
+            <pubDate>Mon, 02 Jan 2026 12:00:00 +0000</pubDate>
+            <guid>MediaInfo-26.01</guid>
+         </item>
          <item>
             <title>MediaInfo 25.10</title>
             <description>
