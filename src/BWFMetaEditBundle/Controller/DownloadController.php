@@ -106,6 +106,18 @@ class DownloadController extends Controller
 
     /**
      * @Route(
+     *     "/BWFMetaEdit/Download/AlmaLinux",
+     *     name="bwf_download_almalinux"
+     * )
+     * @Template()
+     */
+    public function almalinuxAction()
+    {
+        return array();
+    }
+
+    /**
+     * @Route(
      *     "/BWFMetaEdit/Download/RockyLinux",
      *     name="bwf_download_rockylinux"
      * )
