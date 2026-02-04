@@ -59,7 +59,15 @@ class DownloadControllerTest extends WebTestCase
         $this->assertEquals(200, $client->getResponse()->getStatusCode());
     }
 
-    public function testRockylinux()
+    public function testAlmalinux()
+    {
+        $client = static::createClient();
+
+        $client->request('GET', '/en/MediaInfo/Download/AlmaLinux');
+        $this->assertEquals(200, $client->getResponse()->getStatusCode());
+    }
+
+    public function testRockyLinux()
     {
         $client = static::createClient();
 
