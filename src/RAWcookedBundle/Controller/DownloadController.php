@@ -94,6 +94,18 @@ class DownloadController extends Controller
 
     /**
      * @Route(
+     *     "/RAWcooked/Download/AlmaLinux",
+     *     name="rawcooked_download_almalinux"
+     * )
+     * @Template()
+     */
+    public function almalinuxAction()
+    {
+        return array();
+    }
+
+    /**
+     * @Route(
      *     "/RAWcooked/Download/RockyLinux",
      *     name="rawcooked_download_rockylinux"
      * )

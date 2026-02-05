@@ -10,6 +10,7 @@ class RAWcookedDownloadInfo extends AbstractDownloadInfo
     protected $supportedOS = array(
         'Arch Linux' => array('name' => 'Arch Linux', 'route' => 'rawcooked_download_archlinux'),
         'CentOS' => array('name' => 'CentOS', 'route' => 'rawcooked_download_centos'),
+        'AlmaLinux' => array('name' => 'AlmaLinux', 'route' => 'rawcooked_download_almalinux'),
         'Rocky Linux' => array('name' => 'Rocky Linux', 'route' => 'rawcooked_download_rockylinux'),
         'Debian' => array('name' => 'Debian', 'route' => 'rawcooked_download_debian'),
         'Fedora' => array('name' => 'Fedora', 'route' => 'rawcooked_download_fedora'),

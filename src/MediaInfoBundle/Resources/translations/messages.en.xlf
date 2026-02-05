@@ -709,13 +709,21 @@ MediaInfo can be used in your own program without any difficulties, with a stati
         <source><![CDATA[download.centos.title]]></source>
         <target><![CDATA[Download - CentOS]]></target>
       </trans-unit>
+      <trans-unit id="download.almalinux.page.title" approved="yes">
+        <source><![CDATA[download.almalinux.page.title]]></source>
+        <target><![CDATA[MediaInfo - Download MediaInfo for AlmaLinux]]></target>
+      </trans-unit>
+      <trans-unit id="download.almalinux.title" approved="yes">
+        <source><![CDATA[download.almalinux.title]]></source>
+        <target><![CDATA[Download - AlmaLinux]]></target>
+      </trans-unit>
       <trans-unit id="download.rockylinux.page.title" approved="yes">
         <source><![CDATA[download.rockylinux.page.title]]></source>
-        <target><![CDATA[MediaInfo - Download MediaInfo for Rocky Linux]]></target>
+        <target><![CDATA[MediaInfo - Download MediaInfo for RockyLinux]]></target>
       </trans-unit>
       <trans-unit id="download.rockylinux.title" approved="yes">
         <source><![CDATA[download.rockylinux.title]]></source>
-        <target><![CDATA[Download - Rocky Linux]]></target>
+        <target><![CDATA[Download - RockyLinux]]></target>
       </trans-unit>
       <trans-unit id="137" approved="yes">
         <source><![CDATA[download.debian.page.title]]></source>

@@ -203,6 +203,20 @@ class DownloadController extends Controller
 
     /**
      * @Route(
+     *     "/{_locale}/MediaInfo/Download/AlmaLinux",
+     *     name="mi_download_almalinux",
+     *     requirements={"_locale": "%app.locales%"
+     *     }
+     * )
+     * @Template()
+     */
+    public function almalinuxAction()
+    {
+        return array();
+    }
+
+    /**
+     * @Route(
      *     "/{_locale}/MediaInfo/Download/RockyLinux",
      *     name="mi_download_rockylinux",
      *     requirements={"_locale": "%app.locales%"
