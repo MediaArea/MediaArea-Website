@@ -1,0 +1,21 @@
+# net.mediaarea.MediaInfo
+2b6871dc-98e9-4f69-b532-d0e702fd1e61
+
+# net.mediaarea.MediaConch
+f239ca07-209d-48e8-a912-37d2c29c3f67
+
+# net.mediaarea.BWFMetaEdit
+95de39e5-6e2d-42e6-89c7-8fc22f446c5c
+
+# net.mediaarea.MOVMetaEdit
+e579779b-3884-4f8a-8c57-6c088773ab8c
+
+# net.mediaarea.AVIMetaEdit
+6ed46998-c93b-4082-bcf4-ab9c33558508
+
+# net.mediaarea.QCools
+ab5494d2-483d-417d-8667-b503ff556933
+
+# net.mediaarea.DVAnalyzer
+ef49f1b5-4134-4348-b958-08609aa64e92
+
