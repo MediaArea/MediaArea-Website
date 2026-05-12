@@ -5,8 +5,70 @@
         <link>https://mediaarea.net/MediaInfo</link>
         <description>MediaInfo updates feed</description>
         <language>en-us</language>
-        <lastBuildDate>Mon, 02 Jan 2026 12:00:00 +0000</lastBuildDate>
-         <item>
+        <lastBuildDate>Tue, 12 May 2026 06:00:00 +0000</lastBuildDate>
+        <item>
+            <title>MediaInfo 26.05</title>
+            <description>
+                <![CDATA[+ Update Spanish, Chinese, German translations<br />
+                         + Windows 11 Explorer: Optimize for ShellExt early return.<br />
+                         + Windows: Add dark icon<br />
+                         + KDE: Add support for context menu entry on KDE 6<br />
+                         + iOS GUI: Explicitly release iCloud-downloaded files (feedback requested)<br />
+                         + iOS GUI: Add dark/tinted icons<br />
+                         + macOS GUI: Add light/dark icon variant according to the latest macOS guidelines<br />
+                         + Android GUI: Permission request explanation for media location<br />
+                         + Android GUI: Improve listing performance with hundreds of files<br />
+                         + Android GUI: Improve colour contrast of button<br />
+                         + Android GUI: Slightly reducing release size<br />
+                         + Amiga .info: Initial and complete support<br />
+                         + APV: Initial support, raw and in MP4<br />
+                         + AV2: Initial support, raw and in MP4/AVIF<br />
+                         + AV1: Support of Annex B (raw) streams<br />
+                         + JPEG: Support of MotionPhoto<br />
+                         + PNG: Support of animated PNG<br />
+                         + HEVC/AV1: Support of HLG+<br />
+                         + IAMF: Support of IAMF v2.0.0 test files<br />
+                         + XMP: Support new GContainer format in JPEG files<br />
+                         + HEVC: Show the precise profile for Format Range generic profile<br />
+                         + Matroska: support RFC 9559 track flags (SDH, audio description, original, commentary)<br />
+                         + Matroska: Map Performer, Podcast URL, Genre tags<br />
+                         + MPEG-4: handle better some malformed stsd compressor names<br />
+                         + MP4/MOV: handle presence or lack (heuristic) of version/flags in meta boxes<br />
+                         + VorbisCom &amp; MKV: Map ENCODER_OPTIONS from opusenc<br />
+                         + APE: Read DISC and DISCSUBTITLE tag<br />
+                         + WM: Read WM/SetSubTitle and WM/PartOfSet as part and part number<br />
+                         + MPEG-4: Read the com.apple.iTunes:DISCSUBTITLE tag<br />
+                         + Vorbis: Read the DISCSUBTITLE tag<br />
+                         + Vorbis: Write disc numbers into Part/Position and Part/Position_Total<br />
+                         + ID3v2: Map TSST to Part<br />
+                         + MZ/PE: Identify presence of Cargo Auditable data<br />
+                         + SMPTE registers: add more items<br />
+                         + MZ/PE: Get Extended DLLCharacteristics / CETCOMPAT<br />
+                         + MZ/PE: Extract SBAT from EFI files<br />
+                         + MZ/PE: Parse resources, Optional Header and Section Headers<br />
+                         x LXF: fix crashes with buggy files<br />
+                         x ID3v2: fix crashes with buggy content<br />
+                         x Channel splitting: fix crashes with buggy content<br />
+                         x Channel grouping: fix crashes with buggy content<br />
+                         x ID3v2: fix not skipping unknown character encoding<br />
+                         x MPEG-4: does not parse boxes with unknown version<br />
+                         x Filter C0 controls, DEL, and C1 controls<br />
+                         x DLL: Fix missing const in buffer API<br />
+                         x I2561, Dirac: fix freeze with some malformed content<br />
+                         x I2578, Matroska: fix bad behavior with content having more then 126 tracks<br />
+                         x I2557, Matroska: fix false positive cover detection<br />
+                         x I2506, Matroska: fix false positive cover detection<br />
+                         x MPEG-4 Visual: less false-positive detection<br />
+                         x AAC: fix false-positive display of gain_control with corrupted frames<br />
+                         x VP9: fix frame info with RGB content<br />
+                         x DV DIF: fix recorded date century<br />
+                         x ADM: fix potential crash]]>
+            </description>
+            <link>https://mediaarea.net/MediaInfo</link>
+            <pubDate>Tue, 12 May 2026 06:00:00 +0000</pubDate>
+            <guid>MediaInfo-26.05</guid>
+        </item>
+        <item>
             <title>MediaInfo 26.01</title>
             <description>
                 <![CDATA[+ Android: dark mode rework, thanks to cjee21<br />
@@ -32,8 +94,8 @@
             <link>https://mediaarea.net/MediaInfo</link>
             <pubDate>Mon, 02 Jan 2026 12:00:00 +0000</pubDate>
             <guid>MediaInfo-26.01</guid>
-         </item>
-         <item>
+        </item>
+        <item>
             <title>MediaInfo 25.10</title>
             <description>
                 <![CDATA[+ MXF: crosscheck of ADM profiles<br />
@@ -50,8 +112,8 @@
             <link>https://mediaarea.net/MediaInfo</link>
             <pubDate>Wed, 05 Nov 2025 12:00:00 +0000</pubDate>
             <guid>MediaInfo-25.10</guid>
-         </item>
-         <item>
+        </item>
+        <item>
             <title>MediaInfo 25.09</title>
             <description>
                 <![CDATA[+ Italian, Russian translations update<br />
@@ -83,8 +145,8 @@
             <link>https://mediaarea.net/MediaInfo</link>
             <pubDate>Tue, 30 Sep 2025 08:00:00 +0000</pubDate>
             <guid>MediaInfo-25.09</guid>
-         </item>
-         <item>
+        </item>
+        <item>
             <title>MediaInfo 25.07</title>
             <description>
                 <![CDATA[+ Update Italian translation<br />
@@ -134,8 +196,8 @@
             <link>https://mediaarea.net/MediaInfo</link>
             <pubDate>Tue, 29 Jul 2025 10:00:00 +0000</pubDate>
             <guid>MediaInfo-25.07</guid>
-         </item>
-         <item>
+        </item>
+        <item>
             <title>MediaInfo 25.04</title>
             <description>
                 <![CDATA[+ MP4: Detect caption presence in the middle of the file for AVC with CEA-608 in SEI<br />
@@ -165,8 +227,8 @@
             <link>https://mediaarea.net/MediaInfo</link>
             <pubDate>Wed, 30 Apr 2025 12:00:00 +0000</pubDate>
             <guid>MediaInfo-25.04</guid>
-         </item>
-         <item>
+        </item>
+        <item>
             <title>MediaInfo 25.03</title>
             <description>
                 <![CDATA[+ Italian translation update<br />
@@ -202,8 +264,8 @@
             <link>https://mediaarea.net/MediaInfo</link>
             <pubDate>Fri, 21 Mar 2025 12:00:00 +0000</pubDate>
             <guid>MediaInfo-25.03</guid>
-         </item>
-         <item>
+        </item>
+        <item>
             <title>MediaInfo 24.12</title>
             <description>
                 <![CDATA[+ Windows: Windows Explorer context menu and tooltip on Windows 11 (thanks to cjee21)<br />
@@ -222,8 +284,8 @@
             <link>https://mediaarea.net/MediaInfo</link>
             <pubDate>Mon, 09 Dec 2024 12:00:00 +0000</pubDate>
             <guid>MediaInfo-24.12</guid>
-         </item>
-         <item>
+        </item>
+        <item>
             <title>MediaInfo 24.11</title>
             <description>
                 <![CDATA[+ New Indonesian (bahasa Indonesia) translation<br />
@@ -256,8 +318,8 @@
             <link>https://mediaarea.net/MediaInfo</link>
             <pubDate>Thu, 07 Nov 2024 12:00:00 +0000</pubDate>
             <guid>MediaInfo-24.11</guid>
-         </item>
-         <item>
+        </item>
+        <item>
             <title>MediaInfo 24.06</title>
             <description>
                 <![CDATA[+ Windows GUI: Dark/Light theme preference is saved<br />
@@ -285,8 +347,8 @@
             <link>https://mediaarea.net/MediaInfo</link>
             <pubDate>Thu, 27 Jun 2024 14:00:00 +0000</pubDate>
             <guid>MediaInfo-24.06</guid>
-         </item>
-         <item>
+        </item>
+        <item>
             <title>MediaInfo 24.05</title>
             <description>
                 <![CDATA[+ Italian translation updated<br />
@@ -323,8 +385,8 @@
             <link>https://mediaarea.net/MediaInfo</link>
             <pubDate>Fri, 31 May 2024 08:00:00 +0000</pubDate>
             <guid>MediaInfo-24.05</guid>
-         </item>
-         <item>
+        </item>
+        <item>
             <title>MediaInfo 24.04</title>
             <description>
                 <![CDATA[+ ADM: more AdvSS Emission profile checks<br />
@@ -341,8 +403,8 @@
             <link>https://mediaarea.net/MediaInfo</link>
             <pubDate>Thu, 18 Apr 2024 08:00:00 +0000</pubDate>
             <guid>MediaInfo-24.04</guid>
-         </item>
-         <item>
+        </item>
+        <item>
             <title>MediaInfo 24.03</title>
             <description>
                 <![CDATA[+ French, Italian, Russian and Ukrainian translations update<br />
@@ -359,8 +421,8 @@
             <link>https://mediaarea.net/MediaInfo</link>
             <pubDate>Thu, 28 Mar 2024 08:00:00 +0000</pubDate>
             <guid>MediaInfo-24.03</guid>
-         </item>
-         <item>
+        </item>
+        <item>
             <title>MediaInfo 24.01</title>
             <description>
                 <![CDATA[+ ADM: Dolby Atmos Master ADM Profile conformance checker (technology preview)<br />
@@ -381,8 +443,8 @@
             <link>https://mediaarea.net/MediaInfo</link>
             <pubDate>Wed, 31 Jan 2024 12:00:00 +0000</pubDate>
             <guid>MediaInfo-24.01</guid>
-         </item>
-         <item>
+        </item>
+        <item>
             <title>MediaInfo 23.11</title>
             <description>
                 <![CDATA[+ XMP: support of a couple of additional metadata<br />
@@ -405,8 +467,8 @@
             <link>https://mediaarea.net/MediaInfo</link>
             <pubDate>Thu, 30 Nov 2023 12:00:00 +0000</pubDate>
             <guid>MediaInfo-23.11</guid>
-         </item>
-         <item>
+        </item>
+        <item>
             <title>MediaInfo 23.10</title>
             <description>
                 <![CDATA[+ Italian language update<br />
@@ -421,8 +483,8 @@
             <link>https://mediaarea.net/MediaInfo</link>
             <pubDate>Wed, 04 Oct 2023 08:00:00 +0000</pubDate>
             <guid>MediaInfo-23.10</guid>
-         </item>
-         <item>
+        </item>
+        <item>
             <title>MediaInfo 23.09</title>
             <description>
                 <![CDATA[+ DTS-UHD support (contribution from Xperi)<br />
@@ -436,8 +498,8 @@
             <link>https://mediaarea.net/MediaInfo</link>
             <pubDate>Thu, 14 Sep 2023 08:00:00 +0000</pubDate>
             <guid>MediaInfo-23.09</guid>
-         </item>
-         <item>
+        </item>
+        <item>
             <title>MediaInfo 23.07</title>
             <description>
                 <![CDATA[+ USAC conformance checker: update DRC presence check<br />
@@ -455,8 +517,8 @@
             <link>https://mediaarea.net/MediaInfo</link>
             <pubDate>Wed, 12 Jul 2023 08:00:00 +0000</pubDate>
             <guid>MediaInfo-23.07</guid>
-         </item>
-         <item>
+        </item>
+        <item>
             <title>MediaInfo 23.06</title>
             <description>
                 <![CDATA[+ USAC/xHE-AAC conformance checker<br />
@@ -491,8 +553,8 @@
             <link>https://mediaarea.net/MediaInfo</link>
             <pubDate>Wed, 28 Jun 2023 08:00:00 +0000</pubDate>
             <guid>MediaInfo-23.06</guid>
-         </item>
-         <item>
+        </item>
+        <item>
             <title>MediaInfo 23.04</title>
             <description>
                 <![CDATA[+ MXF: support of SMPTE ST 381-4 (AAC in MXF)<br />
@@ -515,8 +577,8 @@
             <link>https://mediaarea.net/MediaInfo</link>
             <pubDate>Wed, 26 Apr 2023 08:00:00 +0000</pubDate>
             <guid>MediaInfo-23.04</guid>
-         </item>
-         <item>
+        </item>
+        <item>
             <title>MediaInfo 23.03</title>
             <description>
                 <![CDATA[+ DTS: Detection of IMAX Enhanced<br />
@@ -558,8 +620,8 @@
             <link>https://mediaarea.net/MediaInfo</link>
             <pubDate>Wed, 29 Mar 2023 08:00:00 +0000</pubDate>
             <guid>MediaInfo-23.03</guid>
-         </item>
-         <item>
+        </item>
+        <item>
             <title>MediaInfo 22.12</title>
             <description>
                 <![CDATA[+ WebVTT: more information (duration, start/end timestamp, count of lines...)<br />
@@ -586,8 +648,8 @@
             <link>https://mediaarea.net/MediaInfo</link>
             <pubDate>Thu, 22 Dec 2022 08:00:00 +0000</pubDate>
             <guid>MediaInfo-22.12</guid>
-         </item>
-         <item>
+        </item>
+        <item>
             <title>MediaInfo 22.09</title>
             <description>
                 <![CDATA[+ Italian language update<br />
@@ -611,8 +673,8 @@
             <link>https://mediaarea.net/MediaInfo</link>
             <pubDate>Tue, 04 Oct 2022 08:00:00 +0000</pubDate>
             <guid>MediaInfo-22.09</guid>
-         </item>
-         <item>
+        </item>
+        <item>
             <title>MediaInfo 22.06</title>
             <description>
                 <![CDATA[+ MXF: FFV1 support<br />
@@ -638,8 +700,8 @@
             <link>https://mediaarea.net/MediaInfo</link>
             <pubDate>Thu, 23 Jun 2022 17:00:00 +0000</pubDate>
             <guid>MediaInfo-22.06</guid>
-         </item>
-         <item>
+        </item>
+        <item>
             <title>MediaInfo 22.03</title>
             <description>
                 <![CDATA[+ NSV (Nullsoft Video): full featured support<br />
@@ -679,8 +741,8 @@
             <link>https://mediaarea.net/MediaInfo</link>
             <pubDate>Thu, 31 Mar 2022 08:00:00 +0000</pubDate>
             <guid>MediaInfo-22.03</guid>
-         </item>
-         <item>
+        </item>
+        <item>
             <title>MediaInfo 21.09</title>
             <description>
                 <![CDATA[+ Graph view for 3D audio streams (thanks to graphviz)<br />
@@ -699,8 +761,8 @@
             <link>https://mediaarea.net/MediaInfo</link>
             <pubDate>Fri, 17 Sep 2021 08:00:00 +0000</pubDate>
             <guid>MediaInfo-21.09</guid>
-         </item>
-         <item>
+        </item>
+        <item>
             <title>MediaInfo 21.03</title>
             <description>
                 <![CDATA[+ WAV: ADM profile detection of Dolby Atmos Master or MPEG-H<br />
@@ -733,8 +795,8 @@
             <link>https://mediaarea.net/MediaInfo</link>
             <pubDate>Fri, 26 Mar 2021 08:00:00 +0000</pubDate>
             <guid>MediaInfo-21.03</guid>
-         </item>
-         <item>
+        </item>
+        <item>
             <title>MediaInfo 20.09</title>
             <description>
                 <![CDATA[+ Dolby ED2: full featured support (presentations, presentation targets, beds, objects)<br />
@@ -754,8 +816,8 @@
             <link>https://mediaarea.net/MediaInfo</link>
             <pubDate>Fri, 09 Oct 2020 12:00:00 +0000</pubDate>
             <guid>MediaInfo-20.09</guid>
-         </item>
-         <item>
+        </item>
+        <item>
             <title>MediaInfo 20.08</title>
             <description>
                 <![CDATA[+ MPEG-H 3D Audio full featured support (group presets, switch groups, groups, signal groups)<br />
@@ -773,8 +835,8 @@
             <link>https://mediaarea.net/MediaInfo</link>
             <pubDate>Tue, 11 Aug 2020 12:00:00 +0000</pubDate>
             <guid>MediaInfo-20.08</guid>
-         </item>
-         <item>
+        </item>
+        <item>
             <title>MediaInfo 20.03</title>
             <description>
                 <![CDATA[+ AC-4 full featured support (presentations, groups, substreams)<br />
@@ -790,8 +852,8 @@
             <link>https://mediaarea.net/MediaInfo</link>
             <pubDate>Wed, 03 Apr 2020 12:00:00 +0000</pubDate>
             <guid>MediaInfo-20.03</guid>
-         </item>
-         <item>
+        </item>
+        <item>
             <title>MediaInfo 19.09</title>
             <description>
                 <![CDATA[+ AC-4: basic detection, raw, in MP4 or TS<br />
@@ -809,8 +871,8 @@
             <link>https://mediaarea.net/MediaInfo</link>
             <pubDate>Tue, 10 Sep 2019 12:00:00 +0000</pubDate>
             <guid>MediaInfo-19.09</guid>
-         </item>
-         <item>
+        </item>
+        <item>
             <title>MediaInfo 19.07</title>
             <description>
                 <![CDATA[+ Mac App Store version: File comparison (InApp purchase)<br />
@@ -834,8 +896,8 @@
             <link>https://mediaarea.net/MediaInfo</link>
             <pubDate>Tue, 16 Jul 2019 12:00:00 +0000</pubDate>
             <guid>MediaInfo-19.07</guid>
-         </item>
-         <item>
+        </item>
+        <item>
             <title>MediaInfo 19.04</title>
             <description>
                 <![CDATA[+ USAC: DRC effect types, Sample peak level, True peak level, Program loudness<br />
@@ -864,8 +926,8 @@
             <link>https://mediaarea.net/MediaInfo</link>
             <pubDate>Tue, 23 Apr 2019 12:00:00 +0000</pubDate>
             <guid>MediaInfo-19.04</guid>
-         </item>
-         <item>
+        </item>
+        <item>
             <title>MediaInfo 18.12</title>
             <description>
                 <![CDATA[+ Android version: https://play.google.com/store/apps/details?id=net.mediaarea.mediainfo<br />
@@ -889,8 +951,8 @@
             <link>https://mediaarea.net/MediaInfo</link>
             <pubDate>Mon, 10 Dec 2018 12:00:00 +0000</pubDate>
             <guid>MediaInfo-18.12</guid>
-         </item>
-         <item>
+        </item>
+        <item>
             <title>MediaInfo 18.08.1</title>
             <description>
                 <![CDATA[x Fix XML/MPEG-7/PBCore2 output discarding non ANSI characters]]>
@@ -898,8 +960,8 @@
             <link>https://mediaarea.net/MediaInfo</link>
             <pubDate>Mon, 10 Sep 2018 12:00:00 +0000</pubDate>
             <guid>MediaInfo-18.08.1</guid>
-         </item>
-         <item>
+        </item>
+        <item>
             <title>MediaInfo 18.08</title>
             <description>
                 <![CDATA[+ Dolby Atmos (in E-AC-3 or TrueHD): support of bed channel count/configuration + objects count + complexity index<br />
@@ -931,8 +993,8 @@
             <link>https://mediaarea.net/MediaInfo</link>
             <pubDate>Fri, 31 Aug 2018 12:00:00 +0000</pubDate>
             <guid>MediaInfo-18.08</guid>
-         </item>
-         <item>
+        </item>
+        <item>
             <title>MediaInfo 18.05</title>
             <description>
                 <![CDATA[+ PBCore 2.1 export update, sponsored by WGBH as part of the NEH-funded PBCore Development and Preservation Project<br />
@@ -944,8 +1006,8 @@
             <link>https://mediaarea.net/MediaInfo</link>
             <pubDate>Wed, 09 May 2018 12:00:00 +0000</pubDate>
             <guid>MediaInfo-18.05</guid>
-         </item>
-         <item>
+        </item>
+        <item>
             <title>MediaInfo 18.03.1</title>
             <description>
                 <![CDATA[x Fix regression on Windows with directory names beginning by n or r.]]>
@@ -953,8 +1015,8 @@
             <link>https://mediaarea.net/MediaInfo</link>
             <pubDate>Mon, 26 Mar 2018 12:00:00 +0000</pubDate>
             <guid>MediaInfo-18.03.1</guid>
-         </item>
-         <item>
+        </item>
+        <item>
             <title>MediaInfo 18.03</title>
             <description>
                 <![CDATA[+ AV1: support of AOmedia AV1 based on latest specifications draft, raw (OBU) and in MKV<br />
@@ -980,8 +1042,8 @@
             <link>https://mediaarea.net/MediaInfo</link>
             <pubDate>Mon, 19 Mar 2018 12:00:00 +0000</pubDate>
             <guid>MediaInfo-18.03</guid>
-         </item>
-         <item>
+        </item>
+        <item>
             <title>MediaInfo 17.12</title>
             <description>
                 <![CDATA[+ MediaInfoOnline: https://mediaarea.net/MediaInfoOnline<br />
@@ -1008,8 +1070,8 @@
             <link>https://mediaarea.net/MediaInfo</link>
             <pubDate>Thu, 21 Dec 2017 12:00:00 +0000</pubDate>
             <guid>MediaInfo-17.12</guid>
-         </item>
-         <item>
+        </item>
+        <item>
             <title>MediaInfo 17.10</title>
             <description>
                 <![CDATA[+ We need your support! Visit https://mediaarea.net/SupportUs<br />
@@ -1057,7 +1119,7 @@
            <pubDate>Mon, 11 Sep 2017 14:00:00 +0000</pubDate>
            <guid>MediaInfo-0.7.99</guid>
        </item>
-         <item>
+       <item>
             <title>MediaInfo 0.7.98</title>
             <description>
                 <![CDATA[+ Matroska: handling of files with Tracks element after Cluster elements<br />
@@ -1072,7 +1134,7 @@
             <pubDate>Tue, 08 Aug 2017 18:00:00 +0000</pubDate>
             <guid>MediaInfo-0.7.98</guid>
         </item>
-         <item>
+        <item>
             <title>MediaInfo 0.7.97</title>
             <description>
                 <![CDATA[+ Ubuntu 17.04 packages<br />
@@ -1098,7 +1160,7 @@
             <pubDate>Fri, 30 Jun 2017 08:00:00 +0000</pubDate>
             <guid>MediaInfo-0.7.97</guid>
         </item>
-         <item>
+        <item>
             <title>MediaInfo 0.7.96</title>
             <description>
                 <![CDATA[+ MPEG-4: display of recorded date from DV substream<br />
@@ -1114,7 +1176,7 @@
             <pubDate>Thu, 01 Jun 2017 14:00:00 +0000</pubDate>
             <guid>MediaInfo-0.7.96</guid>
         </item>
-         <item>
+        <item>
             <title>MediaInfo 0.7.95</title>
             <description>
                 <![CDATA[+ EBUCore: EBUCore 1.8 with acquisition metadata output.<br />
@@ -1139,7 +1201,7 @@
             <pubDate>Thu, 04 May 2017 14:00:00 +0000</pubDate>
             <guid>MediaInfo-0.7.95</guid>
         </item>
-         <item>
+        <item>
             <title>MediaInfo 0.7.94</title>
             <description>
                 <![CDATA[+ VC-3: detection of embedded time code<br />
@@ -1155,7 +1217,7 @@
             <pubDate>Thu, 30 Mar 2017 13:00:00 +0000</pubDate>
             <guid>MediaInfo-0.7.94</guid>
         </item>
-         <item>
+        <item>
             <title>MediaInfo 0.7.93</title>
             <description>
                 <![CDATA[+ Matroska: detection of native FFV1 CodecID ("V_FFV1")<br />
@@ -1177,7 +1239,7 @@
             <pubDate>Wed, 01 Mar 2017 16:00:00 +0000</pubDate>
             <guid>MediaInfo-0.7.93</guid>
         </item>
-         <item>
+        <item>
             <title>MediaInfo 0.7.92</title>
             <description>
                 <![CDATA[+ #F507, MXF: detection of HLG Transfer Characteristic<br />
@@ -1199,7 +1261,7 @@
             <pubDate>Tue, 31 Jan 2017 16:00:00 +0000</pubDate>
             <guid>MediaInfo-0.7.92</guid>
         </item>
-       <item>
+        <item>
             <title>MediaInfo 0.7.91</title>
             <description>
                 <![CDATA[+ Add TIFF extension to Windows shell extension<br />
