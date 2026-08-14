@@ -2,7 +2,10 @@
 
 namespace UserBundle\Controller;
 
+use EWZ\Bundle\RecaptchaBundle\Form\Type\EWZRecaptchaType;
+use EWZ\Bundle\RecaptchaBundle\Validator\Constraints\IsTrue as RecaptchaTrue;
 use FOS\UserBundle\Controller\SecurityController as BaseController;
+use Symfony\Component\Form\Extension\Core\Type\FormType;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 
@@ -26,5 +29,30 @@ class SecurityController extends BaseController
         }
 
         return parent::loginAction($request);
+    }
+
+    protected function renderLogin(array $data)
+    {
+        $form = $this->get('form.factory')->createNamed('', FormType::class, null, [
+            'csrf_protection' => false,
+        ]);
+        $form->add('recaptcha', EWZRecaptchaType::class, [
+            'attr' => [
+                'options' => [
+                    'theme' => 'light',
+                    'type' => 'image',
+                    'size' => 'invisible',
+                    'bind' => 'btn-login-cb',
+                ],
+            ],
+            'mapped' => false,
+            'constraints' => [
+                new RecaptchaTrue(),
+            ],
+        ]);
+
+        $data['captcha_form'] = $form->createView();
+
+        return $this->render('@FOSUser/Security/login.html.twig', $data);
     }
 }
