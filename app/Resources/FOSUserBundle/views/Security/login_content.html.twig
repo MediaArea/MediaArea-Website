@@ -4,7 +4,13 @@
     <div>{{ error.messageKey|trans(error.messageData, 'security') }}</div>
 {% endif %}
 
-<form action="{{ path("fos_user_security_check") }}" method="post">
+<script type="text/javascript">
+    var onLoginReCaptchaSuccess = function() {
+        document.getElementById('login-form').submit();
+    };
+</script>
+
+<form action="{{ path("fos_user_security_check") }}" method="post" class="recaptcha-form" id="login-form">
     {% if csrf_token %}
         <input type="hidden" name="_csrf_token" value="{{ csrf_token }}" />
     {% endif %}

@@ -43,6 +43,7 @@ class SecurityController extends BaseController
                     'type' => 'image',
                     'size' => 'invisible',
                     'bind' => 'btn-login-cb',
+                    'callback' => 'onLoginReCaptchaSuccess',
                 ],
             ],
             'mapped' => false,

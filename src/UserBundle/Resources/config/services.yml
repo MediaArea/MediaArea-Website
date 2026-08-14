@@ -8,6 +8,12 @@ services:
         resource: '../../*'
         exclude: '../../{Entity,Repository,Tests,Controller}'
 
+    UserBundle\EventSubscriber\LoginCaptchaSubscriber:
+        arguments:
+            - '%ewz_recaptcha.private_key%'
+            - '@router'
+        tags: ['kernel.event_subscriber']
+
     UserBundle\Controller\UserController:
         tags: ['controller.service_arguments']
 
