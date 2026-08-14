@@ -1,13 +1,13 @@
 {% trans_default_domain 'FOSUserBundle' %}
 
-<form action="{{ path('fos_user_resetting_send_email') }}" method="POST" class="fos_user_resetting_request">
+{{ form_start(form, {'action': path('fos_user_resetting_send_email'), 'attr': {'class': 'fos_user_resetting_request recaptcha-form'}}) }}
     <div>
-        <label for="username">{{ 'resetting.request.username'|trans }}</label>
-        <input type="text" id="username" name="username" required="required" value="{{ email }}" />
+        {{ form_row(form.username) }}
+        {{ form_widget(form.recaptcha) }}
 
-        <input type="submit" value="{{ 'resetting.request.submit'|trans }}" class="btn btn-default" />
+        <input type="submit" value="{{ 'resetting.request.submit'|trans }}" class="btn btn-default" id="btn-reset-cb" />
     </div>
-</form>
+{{ form_end(form) }}
 <hr>
 <p>
     <a href="{{ path('ma_contact') }}">Contact us</a> if you do not receive the email to reset your password.

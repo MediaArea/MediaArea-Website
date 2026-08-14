@@ -2,21 +2,24 @@
 
 namespace UserBundle\Tests\Form\Type;
 
+use EWZ\Bundle\RecaptchaBundle\Form\Type\EWZRecaptchaType;
+use EWZ\Bundle\RecaptchaBundle\Locale\LocaleResolver;
+use Symfony\Component\HttpFoundation\RequestStack;
 use UserBundle\Form\Type\RegistrationFormType;
 use UserBundle\Tests\TestUser;
 
 class RegistrationFormTypeTest extends ValidatorExtensionTypeTestCase
 {
-    public function testSubmitWithoutUsername()
+    public function testSubmitWithoutUsername(): void
     {
         $user = new TestUser();
         $form = $this->factory->create(RegistrationFormType::class, $user);
-        $formData = array(
+        $formData = [
             'email' => 'usertest@mediaarea.net',
-            'plainPassword' => array(
+            'plainPassword' => [
                 'first' => 'test123',
                 'second' => 'test123',
-            ),
+            ],
             'name' => 'test',
             'country' => 'GB',
             'language' => 'en_US',
@@ -24,7 +27,7 @@ class RegistrationFormTypeTest extends ValidatorExtensionTypeTestCase
             'companyName' => 'test',
             'newsletter' => 0,
             'companyUrl' => '',
-        );
+        ];
         $form->submit($formData);
         $this->assertTrue($form->isSynchronized());
         $this->assertTrue($form->isValid());
@@ -41,19 +44,19 @@ class RegistrationFormTypeTest extends ValidatorExtensionTypeTestCase
         $this->assertEquals(0, $user->getNewsletter());
     }
 
-    public function testSubmitWithUsername()
+    public function testSubmitWithUsername(): void
     {
         $user = new TestUser();
         $form = $this->factory->create(RegistrationFormType::class, $user);
-        $formData = array(
+        $formData = [
             'username' => 'usertest',
             'email' => 'usertest@mediaarea.net',
-            'plainPassword' => array(
+            'plainPassword' => [
                 'first' => 'test123',
                 'second' => 'test123',
-            ),
+            ],
             'companyUrl' => '',
-        );
+        ];
         $form->submit($formData);
         $this->assertTrue($form->isSynchronized());
         $this->assertTrue($form->isValid());
@@ -68,19 +71,19 @@ class RegistrationFormTypeTest extends ValidatorExtensionTypeTestCase
         $this->assertNull($user->getCompanyName());
     }
 
-    public function testSubmitWithCompanyUrl()
+    public function testSubmitWithCompanyUrl(): void
     {
         $user = new TestUser();
         $form = $this->factory->create(RegistrationFormType::class, $user);
-        $formData = array(
+        $formData = [
             'username' => 'usertest',
             'email' => 'usertest@mediaarea.net',
-            'plainPassword' => array(
+            'plainPassword' => [
                 'first' => 'test123',
                 'second' => 'test123',
-            ),
+            ],
             'companyUrl' => 'my company',
-        );
+        ];
         $form->submit($formData);
         $this->assertTrue($form->isSynchronized());
         $this->assertFalse($form->isValid());
@@ -91,9 +94,12 @@ class RegistrationFormTypeTest extends ValidatorExtensionTypeTestCase
      */
     protected function getTypes()
     {
-        return array_merge(parent::getTypes(), array(
+        $localeResolver = new LocaleResolver('en', false, new RequestStack());
+
+        return \array_merge(parent::getTypes(), [
             new RegistrationFormType('UserBundle\Tests\TestUser'),
             new \FOS\UserBundle\Form\Type\RegistrationFormType('UserBundle\Tests\TestUser'),
-        ));
+            new EWZRecaptchaType('test-key', false, false, $localeResolver),
+        ]);
     }
 }

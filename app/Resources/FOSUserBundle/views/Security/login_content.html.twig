@@ -23,6 +23,7 @@
             <input type="hidden" name="_target_path" value="{{ app.session.get('loginRedirect') }}" />
         {% endif %}
 
-        <input type="submit" id="_submit" name="_submit" value="{{ 'security.login.submit'|trans }}" class="btn btn-default" />
+        {{ form_widget(captcha_form.recaptcha) }}
+        <input type="submit" id="btn-login-cb" name="_submit" value="{{ 'security.login.submit'|trans }}" class="btn btn-default" />
     </div>
 </form>
