@@ -2,11 +2,8 @@
 
 namespace UserBundle\EventSubscriber;
 
-use EWZ\Bundle\RecaptchaBundle\Form\Type\EWZRecaptchaType;
-use EWZ\Bundle\RecaptchaBundle\Validator\Constraints\IsTrue as RecaptchaTrue;
+use ReCaptcha\ReCaptcha;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
-use Symfony\Component\Form\Extension\Core\Type\FormType;
-use Symfony\Component\Form\FormFactoryInterface;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpKernel\Event\GetResponseEvent;
 use Symfony\Component\HttpKernel\KernelEvents;
@@ -16,12 +13,12 @@ use Symfony\Component\Security\Core\Security;
 
 class LoginCaptchaSubscriber implements EventSubscriberInterface
 {
-    private $formFactory;
+    private $privateKey;
     private $router;
 
-    public function __construct(FormFactoryInterface $formFactory, RouterInterface $router)
+    public function __construct($privateKey, RouterInterface $router)
     {
-        $this->formFactory = $formFactory;
+        $this->privateKey = $privateKey;
         $this->router = $router;
     }
 
@@ -43,19 +40,16 @@ class LoginCaptchaSubscriber implements EventSubscriberInterface
             return;
         }
 
-        $form = $this->formFactory->createNamed('', FormType::class, null, [
-            'allow_extra_fields' => true,
-            'csrf_protection' => false,
-        ]);
-        $form->add('recaptcha', EWZRecaptchaType::class, [
-            'mapped' => false,
-            'constraints' => [
-                new RecaptchaTrue(),
-            ],
-        ]);
-        $form->handleRequest($request);
+        if ($request->attributes->get('_login_captcha_checked')) {
+            return;
+        }
+        $request->attributes->set('_login_captcha_checked', true);
 
-        if ($form->isSubmitted() && $form->isValid()) {
+        $recaptcha = new ReCaptcha($this->privateKey);
+        $recaptcha->setExpectedHostname($request->getHost());
+        $response = $recaptcha->verify($request->request->get('g-recaptcha-response'), $request->getClientIp());
+
+        if ($response->isSuccess()) {
             return;
         }
 
