@@ -31,9 +31,9 @@ class EmbARCDownloadInfo extends AbstractDownloadInfo
     public function parse()
     {
         $this->downloadInfo = $this->detectOS();
-        $this->downloadInfo['version'] = '1.4.1';
-        $this->downloadInfo['date'] = '2026-04-13';
-        $this->downloadInfo['versionPath'] = '1.4.1';
+        $this->downloadInfo['version'] = '1.4.2';
+        $this->downloadInfo['date'] = '2026-08-31';
+        $this->downloadInfo['versionPath'] = '1.4.2';
     }
 
     public function getVersionPath()
