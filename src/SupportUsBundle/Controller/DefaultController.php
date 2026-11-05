@@ -2,8 +2,6 @@
 
 namespace SupportUsBundle\Controller;
 
-use EWZ\Bundle\RecaptchaBundle\Form\Type\EWZRecaptchaType;
-use EWZ\Bundle\RecaptchaBundle\Validator\Constraints\IsTrue as RecaptchaTrue;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
@@ -212,7 +210,8 @@ class DefaultController extends Controller
             'amount_field_type' => 'text',
             'amount' => $amount,
             'currency' => $currency,
-            'default_method' => 'stripe_credit_card',
+            // 'default_method' => 'stripe_credit_card',
+            'default_method' => 'paypal_express_checkout',
             'predefined_data' => [
                 'adyen_credit_card' => [
                     'return_url' => $returnUrl ?? '',
@@ -227,30 +226,13 @@ class DefaultController extends Controller
                 'paypal_express_checkout' => [
                     'label' => false,
                 ],
+                /*
                 'stripe_credit_card' => [
                     'data' => ['name' => (null !== $this->getUser()) ? $this->getUser()->getNameForDisplay() : ''],
                 ],
+                */
             ],
-            'allowed_methods' => ['paypal_express_checkout', 'stripe_credit_card'],
-        ]);
-
-        // Do not validate recaptcha for paypal payment method
-        $captchaConstraints = [new RecaptchaTrue()];
-        if (isset($payment) && isset($payment['method']) && 'paypal_express_checkout' == $payment['method']) {
-            $captchaConstraints = [];
-        }
-
-        $form->add('recaptcha', EWZRecaptchaType::class, [
-            'attr' => [
-                'options' => [
-                    'theme' => 'light',
-                    'type' => 'image',
-                    'size' => 'invisible',
-                    'bind' => 'btn-pay-cb',
-                ],
-            ],
-            'mapped' => false,
-            'constraints' => $captchaConstraints,
+            'allowed_methods' => ['paypal_express_checkout'/*, 'stripe_credit_card'*/],
         ]);
 
         $form->handleRequest($request);

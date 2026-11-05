@@ -102,7 +102,8 @@ class DefaultController extends Controller
         $form = $this->createForm(ChoosePaymentMethodType::class, null, [
             'amount' => $amount ?? 1,
             'currency' => $ipToCurrency->getCurrency(),
-            'default_method' => 'stripe_credit_card',
+            //'default_method' => 'stripe_credit_card',
+            'default_method' => 'paypal_express_checkout',
             'predefined_data' => [
                 'adyen_credit_card' => [
                     'return_url' => $returnUrl ?? '',
@@ -117,11 +118,13 @@ class DefaultController extends Controller
                 'paypal_express_checkout' => [
                     'label' => false,
                 ],
+                /*
                 'stripe_credit_card' => [
                     'data' => ['name' => (null !== $this->getUser()) ? $this->getUser()->getNameForDisplay() : ''],
                 ],
+                */
             ],
-            'allowed_methods' => ['paypal_express_checkout', 'stripe_credit_card'],
+            'allowed_methods' => ['paypal_express_checkout'/*, 'stripe_credit_card'*/],
         ]);
 
         $form->add('recaptcha', EWZRecaptchaType::class, [

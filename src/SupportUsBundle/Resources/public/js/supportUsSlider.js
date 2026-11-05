@@ -305,7 +305,8 @@ var supportUs = (function () {
 
     var updatePaymentButtons = function(amount) {
         $('.btn-paypal').text('Pay ' + displayAmountWithCurrency(amount) + ' with Paypal');
-        $('.btn-cb').val('Pay ' + displayAmountWithCurrency(amount) + ' by Credit Card');
+        // Disabling stripe
+        // $('.btn-cb').val('Pay ' + displayAmountWithCurrency(amount) + ' by Credit Card');
         $('#ma_choose_payment_method_amount').val(amount);
         if ($('.btn-bank-wire').length) {
             $('.btn-bank-wire').text(displayAmountWithCurrency(amount) + ' by bank wire');
@@ -313,9 +314,10 @@ var supportUs = (function () {
     };
 
     var paymentButtonsBindings = function() {
-        $('.btn-cb').click(function () {
-            $('input[type="radio"][name="ma_choose_payment_method[method]"][value="stripe_credit_card"]').prop('checked', true);
-        });
+        // Disabling stripe
+        // $('.btn-cb').click(function () {
+        //     $('input[type="radio"][name="ma_choose_payment_method[method]"][value="stripe_credit_card"]').prop('checked', true);
+        // });
         $('.btn-paypal').click(function () {
             $('input[type="radio"][name="ma_choose_payment_method[method]"][value="paypal_express_checkout"]').prop('checked', true);
             $('form[name="ma_choose_payment_method"]').submit();
