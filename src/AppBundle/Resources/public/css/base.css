@@ -914,6 +914,11 @@ ul.events-list li {
     margin-bottom: 20px;
 }
 
+ul.events-list li.events-section > ul.events-list {
+    margin-top: 10px;
+    margin-left: 2em;
+}
+
 .scrollable-menu {
     height: auto;
     max-height: 192px;
