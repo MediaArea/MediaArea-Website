@@ -907,11 +907,139 @@ ul.thumbnails li {
     list-style-type: none;
 }
 
+/* Events page */
+.events-intro {
+    color: #666;
+    margin-bottom: 16px;
+}
+
+ul.events-list {
+    margin: 0;
+    padding: 0;
+}
+
 ul.events-list li {
     list-style-type: none;
-    padding-bottom: 0;
-    margin-left: 0;
-    margin-bottom: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+ul.events-list li.event {
+    display: flex;
+    align-items: flex-start;
+    padding: 12px 0;
+    border-bottom: 1px solid #e6e6e6;
+}
+
+.event-date {
+    flex: 0 0 96px;
+    padding-top: 2px;
+    color: #666;
+    font-size: 13px;
+    white-space: nowrap;
+}
+
+.event-body {
+    flex: 1 1 auto;
+    min-width: 0;
+}
+
+h3.event-title {
+    margin: 0 0 6px 0;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 1.4;
+}
+
+h3.event-title a {
+    color: #1a6faf;
+}
+
+.event-links {
+    font-size: 13px;
+    line-height: 1.9;
+}
+
+.event-links a {
+    display: inline-block;
+    margin-right: 4px;
+    padding: 0 9px;
+    border: 1px solid #ccc;
+    border-radius: 11px;
+    line-height: 20px;
+    white-space: nowrap;
+}
+
+.event-links a:hover {
+    border-color: #1a6faf;
+    color: #1a6faf;
+    text-decoration: none;
+}
+
+.event-photo {
+    flex: 0 0 auto;
+    margin-left: 16px;
+}
+
+.event-photo img {
+    display: block;
+    max-width: 120px;
+    max-height: 90px;
+    border-radius: 3px;
+}
+
+ul.events-list li.events-section {
+    margin: 20px 0 4px 0;
+}
+
+li.events-section > h2 {
+    margin: 0;
+    padding: 6px 10px;
+    font-size: 18px;
+}
+
+li.events-section > ul.events-list {
+    margin-left: 10px;
+    padding-left: 14px;
+    border-left: 3px solid #e6e6e6;
+}
+
+@media (max-width: 600px) {
+    ul.events-list li.event {
+        flex-wrap: wrap;
+    }
+
+    .event-date {
+        flex-basis: 100%;
+        padding: 0 0 2px 0;
+    }
+
+    .event-photo {
+        margin: 6px 0 0 0;
+    }
+}
+
+@media(prefers-color-scheme: dark) {
+    .events-intro, .event-date {
+        color: #999;
+    }
+
+    ul.events-list li.event, li.events-section > ul.events-list {
+        border-color: #3a3f44;
+    }
+
+    h3.event-title a {
+        color: #6cb4ee;
+    }
+
+    .event-links a {
+        border-color: #555;
+    }
+
+    .event-links a:hover {
+        border-color: #6cb4ee;
+        color: #6cb4ee;
+    }
 }
 
 .scrollable-menu {
