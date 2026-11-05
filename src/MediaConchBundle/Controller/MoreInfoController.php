@@ -21,6 +21,9 @@ class MoreInfoController extends Controller
     {
         header('X-Robots-Tag: none');
 
-        return $this->render('@MediaConch/Default/checks.html.twig', [ 'items' => $checks->analyzeMediaInfoReport($request->query->get('mi')) ]);
+        return $this->render('@MediaConch/Default/checks.html.twig', [
+            'title' => 'MediaConch, more information',
+            'items' => $checks->analyzeMediaInfoReport($request->query->get('mi')),
+        ]);
     }
 }

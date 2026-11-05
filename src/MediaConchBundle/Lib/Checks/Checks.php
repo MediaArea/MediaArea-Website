@@ -3130,7 +3130,8 @@ function map_message_to_references($formats, $groupId, $elementId, $fieldId, $me
     global $dbChecks;
     global $dbChecksSplitDescription;
 
-    $errorsList [] = [ null, [ $message ] ];
+    // Text from the report, shown as HTML
+    $errorsList [] = [ null, [ htmlspecialchars($message) ] ];
     $previousCheckId = null;
     foreach ($dbChecksSplitDescription as $checkId => $checkItem) {
         // Check match between message and check item
@@ -3188,7 +3189,7 @@ function map_message_to_references($formats, $groupId, $elementId, $fieldId, $me
         }
     }
 
-    $errorKey = ($groupId ? ('(' . str_replace('_', ' ', $groupId) . ') ') : null) . $elementId . ($fieldId ? ('/' . $fieldId) : null);
+    $errorKey = htmlspecialchars(($groupId ? ('(' . str_replace('_', ' ', $groupId) . ') ') : null) . $elementId . ($fieldId ? ('/' . $fieldId) : null));
 
     return [ $errorKey, $errorsList ];
 }
