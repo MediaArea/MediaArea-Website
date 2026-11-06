@@ -50,6 +50,10 @@
         <source><![CDATA[menu.notimetowait.10]]></source>
         <target><![CDATA[No Time To Wait 10 (2026, Warsaw)]]></target>
       </trans-unit>
+      <trans-unit id="menu.notimetowait.11" approved="yes">
+        <source><![CDATA[menu.notimetowait.11]]></source>
+        <target><![CDATA[No Time To Wait 11 (2027, Helsinki)]]></target>
+      </trans-unit>
     </body>
   </file>
 </xliff>
