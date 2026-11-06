@@ -14,12 +14,17 @@
             <p>Make a payment of {{ amount }} {{ currency }} to MediaArea</p>
         </div>
         <div class="row">
+            {# Disabling stripe
             <div class="col-sm-6 individual-payment">
                 <div class="col-sm-12 support-us-features-list">
                     {{ include('@SupportUs/individualPaymentForm.html.twig') }}
                 </div>
             </div>
-            <div class="col-sm-6">
+            #}
+            <div class="hidden individual-payment">
+                {{ include('@SupportUs/individualPaymentForm.html.twig') }}
+            </div>
+            <div class="{# col-sm-6 #} col-sm-12">
                 <div class="col-sm-12 support-us-features-list">
                     <button type="submit" class="btn btn-default btn-lg btn-block btn-paypal">Pay with Paypal</button>
                 </div>

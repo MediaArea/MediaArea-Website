@@ -4,6 +4,7 @@
             {{ form_row(form.amount) }}
             {{ form_row(form.method) }}
         </div>
+        {# Disabling stripe
         <div class="col-md-12 stripe-form">
             {{ form_row(form.data_stripe_credit_card.name) }}
             {{ form_row(form.data_stripe_credit_card.number) }}
@@ -40,5 +41,6 @@
         <div class="col-md-12 text-center">
             <input type="submit" value="Pay by Credit Card" class="btn btn-default btn-lg btn-block btn-cb" id="btn-pay-cb" />
         </div>
+        #}
     </div>
 {{ form_end(form) }}
