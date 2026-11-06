@@ -3017,7 +3017,7 @@ function get_references($checkId, $urlPrefix, $formats = null, $elementId = null
     global $dbProfileToSpec;
     
     foreach ($dbChecks[$checkId]->references as $checkToDetail) {
-        if ((!$formats || is_spec_in_formats($checkToDetail->specId, $formats)) && (!$elementId || $elementId == end(explode('/', $checkToDetail->elementId))) && (!$fieldId || $fieldId == $checkToDetail->fieldId)) {
+        if ((!$formats || is_spec_in_formats($checkToDetail->specId, $formats)) && (!$elementId || $elementId == $checkToDetail->elementId || $elementId == end(explode('/', $checkToDetail->elementId))) && (!$fieldId || $fieldId == $checkToDetail->fieldId)) {
             $spec = $dbSpecs[$checkToDetail->specId];
             if ($spec) {
                 $url = $urlPrefix . 'Specs/';
@@ -3161,7 +3161,7 @@ function map_message_to_references($formats, $groupId, $elementId, $fieldId, $me
         }
         foreach ($dbChecks[$checkId]->references as $checkToDetail) {
             // Check match
-            if ((!$formats || is_spec_in_formats($checkToDetail->specId, $formats)) && (!$elementId || $elementId == end(explode('/', $checkToDetail->elementId))) && (!$fieldId || $fieldId == $checkToDetail->fieldId)) {
+            if ((!$formats || is_spec_in_formats($checkToDetail->specId, $formats)) && (!$elementId || $elementId == $checkToDetail->elementId || $elementId == end(explode('/', $checkToDetail->elementId))) && (!$fieldId || $fieldId == $checkToDetail->fieldId)) {
                 // Special case, if 2 matching item, ugly algo for selecting the best one
                 if ($previousCheckId !== null) {
                     $previous = get_message_complexity($dbChecksSplitDescription[$previousCheckId]);
@@ -3252,6 +3252,61 @@ function manage_conformance_per_key($formats, $key0, $error0)
     }
 
     return $data;
+}
+
+/**
+ * Merge 2 objects of conformance messages, distinct messages of a same key are joined with " / "
+ */
+function merge_conformance($into, $from)
+{
+    foreach ($from as $key => $value) {
+        if (!isset($into->$key)) {
+            $into->$key = $value;
+        } elseif (is_object($into->$key) && is_object($value)) {
+            $into->$key = merge_conformance($into->$key, $value);
+        } elseif (is_string($into->$key) && is_string($value)) {
+            $messages = explode(' / ', $into->$key);
+            foreach (explode(' / ', $value) as $message) {
+                if (!in_array($message, $messages, true)) {
+                    $messages[] = $message;
+                }
+            }
+            $into->$key = implode(' / ', $messages);
+        }
+    }
+
+    return $into;
+}
+
+/**
+ * Current MediaInfo reports have lists of objects, e.g. [{"MXF":[{"Element":"Message"}]}],
+ * converted to the objects expected by the analysis, e.g. {"MXF":{"Element":"Message"}}
+ */
+function normalize_conformance($value)
+{
+    if (is_object($value)) {
+        $normalized = new \stdClass();
+        foreach ($value as $key => $item) {
+            $normalized->$key = normalize_conformance($item);
+        }
+
+        return $normalized;
+    }
+
+    if (!is_array($value) || empty($value)) {
+        return $value;
+    }
+    foreach ($value as $item) {
+        if (!is_object($item)) {
+            return $value;
+        }
+    }
+    $merged = new \stdClass();
+    foreach ($value as $item) {
+        $merged = merge_conformance($merged, normalize_conformance($item));
+    }
+
+    return $merged;
 }
 
 /**
@@ -3367,13 +3422,13 @@ class Checks
                             $formats [] = $generalFormat;
                         }
                         if ($track->extra->ConformanceErrors) {
-                            array_push($data, ...manage_conformance($formats, $track->extra->ConformanceErrors));
+                            array_push($data, ...manage_conformance($formats, normalize_conformance($track->extra->ConformanceErrors)));
                         }
                         if ($track->extra->ConformanceWarnings) {
-                            array_push($data, ...manage_conformance($formats, $track->extra->ConformanceWarnings));
+                            array_push($data, ...manage_conformance($formats, normalize_conformance($track->extra->ConformanceWarnings)));
                         }
                         if ($track->extra->ConformanceInfos) {
-                            array_push($data, ...manage_conformance($formats, $track->extra->ConformanceInfos));
+                            array_push($data, ...manage_conformance($formats, normalize_conformance($track->extra->ConformanceInfos)));
                         }
                     }
                 }
