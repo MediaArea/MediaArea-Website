@@ -1252,16 +1252,94 @@ form[name="vote"] {
     margin-top: 50px;
 }
 
+/* Support levels of formats and flavors */
 .supported-default {
-    background-color: #00FF80;
+    background-color: #b9f1cd;
 }
 
 .supported-key {
-    background-color: #FF8040;
+    background-color: #ffd2a8;
 }
 
 .supported-needfile {
-    background-color: #FF00FF;
+    background-color: #f5c6f1;
+}
+
+@media(prefers-color-scheme: dark) {
+    .supported-default {
+        background-color: #1f6b3f;
+    }
+
+    .supported-key {
+        background-color: #8a4a14;
+    }
+
+    .supported-needfile {
+        background-color: #6b2a66;
+    }
+}
+
+span.supported-default, span.supported-key, span.supported-needfile {
+    display: inline-block;
+    margin: 2px 0;
+    padding: 1px 8px;
+    border-radius: 3px;
+}
+
+span.supported-default a, span.supported-key a, span.supported-needfile a {
+    color: inherit;
+    text-decoration: underline;
+}
+
+.supported-new {
+    display: inline-block;
+    padding: 0 4px;
+    border-radius: 3px;
+    background-color: #0070bb;
+    color: white;
+    font-size: 10px;
+    font-weight: bold;
+    line-height: 15px;
+    text-transform: uppercase;
+    vertical-align: middle;
+    cursor: help;
+}
+
+table.flavors > tbody > tr > td {
+    text-align: center;
+}
+
+table.flavors > tbody > tr > td.flavors-text {
+    text-align: left;
+}
+
+.table-responsive > table.flavors > tbody > tr > td, .table-responsive > table.flavors > tbody > tr > th {
+    white-space: normal;
+}
+
+.flavors-notes {
+    margin-bottom: 16px;
+}
+
+.flavors-notes li {
+    line-height: 20px;
+}
+
+.flavors-notes code, dl.commands code, table.flavors code {
+    white-space: nowrap;
+}
+
+dl.commands dt {
+    margin-top: 8px;
+}
+
+dl.commands dd {
+    margin: 2px 0 0 18px;
+    line-height: 20px;
+}
+
+h2:target, h3:target, dt:target {
+    scroll-margin-top: 70px;
 }
 
 .feature-description p {
