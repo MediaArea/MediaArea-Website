@@ -1321,10 +1321,6 @@ table.flavors > tbody > tr > td.flavors-text {
     margin-bottom: 16px;
 }
 
-.flavors-notes li {
-    line-height: 20px;
-}
-
 .flavors-notes code, dl.commands code, table.flavors code {
     white-space: nowrap;
 }
@@ -1340,6 +1336,122 @@ dl.commands dd {
 
 h2:target, h3:target, dt:target {
     scroll-margin-top: 70px;
+}
+
+/* Page of a product with a lot of text: links to the parts of the page, text easier to read */
+ul.page-nav {
+    margin: 0 0 4px 0;
+    padding: 8px 0;
+    border-top: 1px solid #e6e6e6;
+    border-bottom: 1px solid #e6e6e6;
+    text-align: center;
+}
+
+.content ul.page-nav li {
+    display: inline-block;
+    margin: 0 10px;
+    padding: 0;
+    list-style-type: none;
+    font-size: 15px;
+    line-height: 26px;
+}
+
+@media(prefers-color-scheme: dark) {
+    ul.page-nav {
+        border-color: #444;
+    }
+}
+
+.page-text p, .page-text li, .page-text dd {
+    font-family: inherit;
+    font-size: 15px;
+    line-height: 23px;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+}
+
+.page-text p {
+    margin-bottom: 8px;
+    padding: 0;
+}
+
+.page-text section > p, .page-text section > ul, .page-text section > dl {
+    max-width: 800px;
+}
+
+.page-text h2 {
+    margin-top: 28px;
+    margin-bottom: 10px;
+    padding: 7px 10px;
+}
+
+.page-text h3 {
+    margin-top: 14px;
+    margin-bottom: 6px;
+}
+
+.page-text [id] {
+    scroll-margin-top: 70px;
+}
+
+.download-wrapper ul.key-points {
+    margin-top: 10px;
+    margin-bottom: 14px;
+}
+
+.download-wrapper ul.key-points li {
+    padding-bottom: 6px;
+}
+
+.download-wrapper .key-points + .projectDescription {
+    margin-bottom: 12px;
+}
+
+.sponsors-block {
+    margin-top: 24px;
+    scroll-margin-top: 70px;
+}
+
+ul.sponsors {
+    margin-bottom: 8px;
+    -webkit-column-count: 3;
+    -moz-column-count: 3;
+    column-count: 3;
+    -webkit-column-gap: 30px;
+    -moz-column-gap: 30px;
+    column-gap: 30px;
+}
+
+ul.sponsors li {
+    -webkit-column-break-inside: avoid;
+    page-break-inside: avoid;
+    break-inside: avoid;
+}
+
+@media (max-width: 991px) {
+    ul.sponsors {
+        -webkit-column-count: 2;
+        -moz-column-count: 2;
+        column-count: 2;
+    }
+}
+
+@media (max-width: 600px) {
+    ul.sponsors {
+        -webkit-column-count: 1;
+        -moz-column-count: 1;
+        column-count: 1;
+    }
+
+    .content ul.sponsors li {
+        display: inline;
+        margin-left: 0;
+        list-style-type: none;
+    }
+
+    .content ul.sponsors li:not(:last-child)::after {
+        content: " \00B7 ";
+    }
 }
 
 .feature-description p {
