@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+  <title>RAWcooked</title>
+  <style>
+    .pot { fill: #262626; }
+    .steam { fill: none; stroke-width: 11; stroke-linecap: round; }
+    .r { stroke: #E5484D; }
+    .g { stroke: #2FA968; }
+    .b { stroke: #3B7DF0; }
+    @media (prefers-color-scheme: dark) {
+      .pot { fill: #ECECEC; }
+      .r { stroke: #FF6B70; }
+      .g { stroke: #46C487; }
+      .b { stroke: #5C9DFF; }
+    }
+  </style>
+  <defs>
+    <!-- Holes of the film: perforations and outline of the frame -->
+    <mask id="film" maskUnits="userSpaceOnUse" x="0" y="0" width="256" height="256">
+      <rect width="256" height="256" fill="#fff"/>
+      <g fill="#000">
+        <rect x="62" y="136" width="12" height="12" rx="3"/>
+        <rect x="82" y="136" width="12" height="12" rx="3"/>
+        <rect x="102" y="136" width="12" height="12" rx="3"/>
+        <rect x="122" y="136" width="12" height="12" rx="3"/>
+        <rect x="142" y="136" width="12" height="12" rx="3"/>
+        <rect x="162" y="136" width="12" height="12" rx="3"/>
+        <rect x="182" y="136" width="12" height="12" rx="3"/>
+        <rect x="62" y="190" width="12" height="12" rx="3"/>
+        <rect x="82" y="190" width="12" height="12" rx="3"/>
+        <rect x="102" y="190" width="12" height="12" rx="3"/>
+        <rect x="122" y="190" width="12" height="12" rx="3"/>
+        <rect x="142" y="190" width="12" height="12" rx="3"/>
+        <rect x="162" y="190" width="12" height="12" rx="3"/>
+        <rect x="182" y="190" width="12" height="12" rx="3"/>
+      </g>
+      <rect x="64" y="156" width="128" height="26" rx="5" fill="none" stroke="#000" stroke-width="4"/>
+    </mask>
+  </defs>
+  <!-- A cooking pot which is a film frame, with R, G and B steam -->
+  <g transform="translate(0 12)">
+    <path class="steam r" d="M88 100c-12-9 12-19 0-28c-12-9 12-19 0-28"/>
+    <path class="steam g" d="M128 100c-14-12 14-26 0-38c-14-12 14-26 0-38"/>
+    <path class="steam b" d="M168 100c-12-9 12-19 0-28c-12-9 12-19 0-28"/>
+    <g class="pot">
+      <rect x="20" y="130" width="36" height="16" rx="8"/>
+      <rect x="200" y="130" width="36" height="16" rx="8"/>
+      <rect x="40" y="112" width="176" height="14" rx="7"/>
+      <path d="M52 120H204V188a26 26 0 0 1-26 26H78a26 26 0 0 1-26-26Z" mask="url(#film)"/>
+    </g>
+  </g>
+</svg>
