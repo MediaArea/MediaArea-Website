@@ -23,7 +23,26 @@
 </script>
 {% endblock %}
 
+{# Cell of a table of flavors: level is D (default), K (key) or N (need file), new is the title of the "new" mark if any #}
+{% macro cell(level, new, colspan) %}
+{%- set levels = {
+    'D': ['supported-default', 'Supported by default'],
+    'K': ['supported-key', 'Supported with a key, please contact us'],
+    'N': ['supported-needfile', 'Need file & development if interest, please contact us'],
+} -%}
+<td class="{{ levels[level][0] }}"{% if colspan|default(1) > 1 %} colspan="{{ colspan }}"{% endif %}><abbr title="{{ levels[level][1] }}">{{ level }}</abbr>{% if new|default('') %} <span class="supported-new" title="{{ new }}">new</span>{% endif %}</td>
+{%- endmacro %}
+
+{% macro newMark(title) %}<span class="supported-new" title="{{ title }}">new</span>{% endmacro %}
+
 {% block body %}
+{% import _self as rc %}
+
+{% set new = 'New in version ' ~ downloadInfo.version %}
+{% set snapshotsUrl = '/download/snapshots/binary/rawcooked/' %}
+{% set docUrl = 'https://github.com/MediaArea/RAWcooked/blob/main/' %}
+{% set ffmpegUrl = 'https://mediaarea.net/download/snapshots/binary/ffmpeg/latest/' %}
+
 <section class="download-wrapper">
     <div class="row reorder-xs">
         <div class="v-align carousel-padding-xs col-xs-12 col-sm-5">
@@ -43,39 +62,26 @@
             </div>
             <br>
             <div class="projectDescription center-font-xs">
-                Sponsored by <a href="https://reto.ch">AV Preservation by reto.ch</a> with support from <a href="http://www.cna.public.lu">CNA (National Audiovisual Centre of Luxembourg)</a>, <a href="http://ifi.ie">IFI (Irish Film Institute)</a>, <a href="https://www.nb.no">Nasjonalbiblioteket (National Library of Norway)</a>, <a href="http://www.library.northwestern.edu">Northwestern University Libraries</a>, <a href="https://www.library.wales">National Library of Wales</a>, <a href="https://bmac.libs.uga.edu/pawtucket2/">Walter J. Brown Media Archives</a>, <a href="https://ptlp.com/en/mediapreserve/overview/latest-news/">The MediaPreserve</a>, <a href="https://www.bfi.org.uk">British Film Institute</a>, <a href="https://www.nypl.org/">New York Public Library</a>, <a href="https://nfa.cz">National Film Archive Prague</a>, <a href="https://www.preservesouth.com">Preserve South</a>, <a href="https://memnon.com">Memnon</a>, <a href="https://elements.tv">ELEMENTS</a>, <a href="ttps://library.stanford.edu">Stanford Libraries</a>, <a href="https://www.fes.de">Friedrich-Ebert-Stiftung</a>, <a href="https://nfi.hu/en/film-archive">National Film Archive Hungary</a>, <a href="https://www.sl.nsw.gov.au">State Library of New South Wales</a>, <a href="https://www.vrt.be">VRT</a>, <a href="https://jfc.org.il/en">Jerusalem Cinematheque</a>, <a href="https://www.oscars.org">Academy of Motion Picture Arts and Sciences</a>, <a href="https://mwa-services.net">MWA Services</a>, <a href="https://www.nls.uk">National Library of Scotland</a>; designed, led and fully developed by MediaArea.
+                Sponsored by <a href="https://reto.ch">AV Preservation by reto.ch</a> with support from <a href="http://www.cna.public.lu">CNA (National Audiovisual Centre of Luxembourg)</a>, <a href="http://ifi.ie">IFI (Irish Film Institute)</a>, <a href="https://www.nb.no">Nasjonalbiblioteket (National Library of Norway)</a>, <a href="http://www.library.northwestern.edu">Northwestern University Libraries</a>, <a href="https://www.library.wales">National Library of Wales</a>, <a href="https://bmac.libs.uga.edu/pawtucket2/">Walter J. Brown Media Archives</a>, <a href="https://ptlp.com/en/mediapreserve/overview/latest-news/">The MediaPreserve</a>, <a href="https://www.bfi.org.uk">British Film Institute</a>, <a href="https://www.nypl.org/">New York Public Library</a>, <a href="https://nfa.cz">National Film Archive Prague</a>, <a href="https://www.preservesouth.com">Preserve South</a>, <a href="https://memnon.com">Memnon</a>, <a href="https://elements.tv">ELEMENTS</a>, <a href="https://library.stanford.edu">Stanford Libraries</a>, <a href="https://www.fes.de">Friedrich-Ebert-Stiftung</a>, <a href="https://nfi.hu/en/film-archive">National Film Archive Hungary</a>, <a href="https://www.sl.nsw.gov.au">State Library of New South Wales</a>, <a href="https://www.vrt.be">VRT</a>, <a href="https://jfc.org.il/en">Jerusalem Cinematheque</a>, <a href="https://www.oscars.org">Academy of Motion Picture Arts and Sciences</a>, <a href="https://mwa-services.net">MWA Services</a>, <a href="https://www.nls.uk">National Library of Scotland</a>; designed, led and fully developed by MediaArea.
             </div>
             <br>
             <div class="projectDescription center-font-xs">
-                {% if 'Windows' == downloadInfo.name %}
-                    You need to download and install <a href="https://ffmpeg.zeranoe.com">FFmpeg</a> to use RAWcooked.
-                {% else %}
-                    {% if 'macOS' == downloadInfo.name %}
-                        You need to download and install <a href="https://evermeet.cx/ffmpeg/">FFmpeg</a> to use RAWcooked.
-                    {% else %}
-                        You need to download and install FFmpeg to use RAWcooked.
-                    {% endif %}
-                {% endif %}
-
+                RAWcooked uses FFmpeg for the encoding, see <a href="#ffmpeg">how to install FFmpeg</a>.
             </div>
 
             {% if 'Windows' == downloadInfo.name %}
                 {% set downloadLink = '//mediaarea.net/download/binary/rawcooked/' ~ downloadInfo.version ~ '/RAWcooked_CLI_' ~ downloadInfo.version ~ '_Windows_x64.zip' %}
+            {% elseif 'macOS' == downloadInfo.name %}
+                {% set downloadLink = '//mediaarea.net/download/binary/rawcooked/' ~ downloadInfo.version ~ '/RAWcooked_CLI_' ~ downloadInfo.version ~ '_Mac.dmg' %}
             {% else %}
                 {% set downloadLink = path(downloadInfo.route) %}
             {% endif %}
 
             <div class="inner center-xs center-font-xs">
                 <div class="btn-group hidden-xs">
-                    {% if 'macOS' == downloadInfo.name %}
-                    <a class="btn btn-default btn-lg btn-dl" href="http://mediaarea.net/download/binary/rawcooked/25.12/RAWcooked_CLI_25.12_Mac.dmg" target="_blank">
-                        <span class="downloadText">Download RAWcooked</span>
-                    </a>
-                    {% else %}
                     <a class="btn btn-default btn-lg btn-dl " href="{{ downloadLink }}">
                         <span class="downloadText">Download RAWcooked</span>
                     </a>
-                    {% endif %}
                     <a href="{{ path('rawcooked_download') }}" class="btn btn-default btn-lg dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
                         <span class="caret"></span>
                     </a>
@@ -119,7 +125,7 @@
                     <a href="{{ path('rawcooked_download_archlinux') }}"><img src="{{ asset_url }}" width="16" height="16" alt="ArchLinux" title="ArchLinux" class="sprite ArchLinux"></a>)
                     {% endimage %}
                     <br>
-                    See <a href="https://github.com/MediaArea/RAWcooked/blob/master/History_CLI.txt">ChangeLog</a> or <a href="/download/snapshots/binary/rawcooked">very latest snapshots</a>
+                    See <a href="{{ docUrl }}History_CLI.txt">ChangeLog</a> or <a href="{{ snapshotsUrl }}">very latest snapshots</a>
                     </div>
                 </div>
             </div>
@@ -139,7 +145,7 @@
 <p>The solution MediaArea have created to meet this need is <i>RAWcooked</i>. This software encodes from, and decodes to, «raw» audio-visual image sequences in a revolutionary and transparent way. The image and/or sound content, including all the embedded metadata and sidecar files, are fully preserved at the bit level.<br>
 An otherwise unviewable image sequence can be viewed easily with VLC or MPV when encoded as a Matroska file. Plus this process is fully reversible returning your image sequence back to its original package content.</p>
 <h2>Matroska file complete reversibility</h2>
-<p>Whenever necessary, <i>RAWcooked</i> can decode the Matroska file back to the original RAW image sequence, including restoration of the original metadata and sidecar files. It is important to stress that the encoded files can be fully decoded, and that this process will be created bit-by-bit identical files to the originals. Not only is the image and/or sound content fully preserved, but also all enclosed metadata and the all of the file’s characteristics. Therefore, an encoded and decoded RAW file cannot be differentiated from its original.</p>
+<p>Whenever necessary, <i>RAWcooked</i> can decode the Matroska file back to the original RAW image sequence, including restoration of the original metadata and sidecar files. It is important to stress that the encoded files can be fully decoded, and that this process creates files which are bit-by-bit identical to the originals. Not only is the image and/or sound content fully preserved, but also all enclosed metadata and all of the file’s characteristics. Therefore, an encoded and decoded RAW file cannot be differentiated from its original.</p>
 <h2>A complete ecosystem</h2>
 <p>The Matroska files that have been encoded by <i>RAWcooked</i> can be used with many popular open source softwares which support FFV1 and FLAC playback, including:</p>
 <ul>
@@ -150,373 +156,383 @@ An otherwise unviewable image sequence can be viewed easily with VLC or MPV when
 <li><a href="{{ path('mc_home') }}">MediaConch</a> for checking the conformance of a file</li>
 </ul>
 <p>Being open source, they’re low cost (and free for the many commonly used flavors) allowing archives with limited resources to process the files encoded by <i>RAWcooked</i> on any computer, such as for cataloging or access purposes.</p>
-<h2>Funding plan</h2>
-<p>MediaArea.net has achieved implementation of RAWcooked’s basic module with thanks to AV Preservation reto.ch, who has guaranteed software development with funding of 10&thinsp;000&nbsp;&euro;.</p>
-<p>The archive community or interested industry users are invited to <a href="{{ path('ma_contact') }}">buy</a> additional flavors required by their institution - such as components, bit depths, endianness, packing, etc. in order to help the long-term sustainability of the project and its further development. Required flavors will be fully tested by MediaArea.net to exact specification before being implemented into the software.</p>
-<p>This model allows contributors the assurance that their files will work seamlessly with the software from the outset.</p>
-<p>The price is 1000&nbsp;&euro; for basic support including bug fixes and one additional flavor, then 500&nbsp;&euro; for each following flavor which can be added later if you are not sure of how many you need immediately.</p>
-<h2>Status</h2>
-<p>RAWcooked had its first official release October 2018, with support for a limited number of DPX flavors. To use RAWcooked simply type <code>rawcooked /RAWsequenceDPX/</code> which begins the encoding using FFmpeg, creating an MKV encoded file in the same folder, leaving the original DPX sequence intact. You can also use this command <code>rawcooked yourdpx.dpx</code> using the first DPX file in a sequence within your folder. To return the MKV back to its RAW source format use <code>rawcooked yourdpx.mkv</code> which uses RAWcooked software to unpack your RAW sequence bit-by-bit, including all original metadata and sidecar files.<br>
-Developments are still ongoing for a future version that will implement checksum hash embedding and reversibility check functions. <a href="/download/snapshots/binary/rawcooked/">Development snapshots</a> are available and you are welcome to contribute to this process by testing the code.</p>
 </section>
 
 <section>
-<h2>Supported input flavors</h2>
-<p><span class="supported-default">D = Supported by default</span> /
-<span class="supported-key">K = Supported with a key, please <a href="{{ path('ma_contact') }}">contact us</a></span> /
-<span class="supported-needfile">N = Need file &amp; development if interest, please <a href="{{ path('ma_contact') }}">contact us</a></span></p>
+<h2 id="status">Status</h2>
+<p>RAWcooked is ready for production. As with any other tool, keep doing basic checks, e.g. testing reversibility with your own files.</p>
+<dl class="commands">
+    <dt><code>rawcooked --all /path/to/sequence/</code></dt>
+    <dd>Encodes the image sequence and the audio files of the folder into <code>sequence.mkv</code>, stores the hashes of the source files in it and checks that the Matroska file can be decoded back to the source files. The source files are left intact.</dd>
+    <dt><code>rawcooked sequence.mkv</code></dt>
+    <dd>Decodes the Matroska file back to the original files (image sequence, audio files, sidecar files), bit-by-bit, and checks them against the stored hashes.</dd>
+    <dt><code>rawcooked --check sequence.mkv</code></dt>
+    <dd>Checks that the Matroska file would be decoded to the original files, without writing them.</dd>
+</dl>
+<p>More in the <a href="{{ docUrl }}Doc/User_Manual.md">user manual</a>, in the <a href="{{ path('rawcooked_man') }}">man page</a> (<code>rawcooked --help</code>) and in the <a href="{{ docUrl }}Doc/Case_study.md">case study of the BFI National Archive</a>.</p>
 
+<h2 id="ffmpeg">FFmpeg</h2>
+<p>RAWcooked needs FFmpeg for the encoding. Any FFmpeg with the FFV1 and FLAC encoders may be used if <code>ffmpeg</code> is in the PATH (e.g. the FFmpeg of your Linux distribution or of Homebrew), and the <code>-b</code> option selects another FFmpeg binary.</p>
+<p>{{ rc.newMark(new) }} We recommend the <a href="{{ ffmpegUrl }}">FFmpeg builds of MediaArea</a>: they have GPU support and RAWcooked finds them automatically. Their libraries are also used by RAWcooked for decoding with the GPU.</p>
+<ul class="flavors-notes">
+<li><b>Windows</b>: create a <code>ffmpeg</code> directory beside <code>rawcooked.exe</code> and put the content of <a href="{{ ffmpegUrl }}FFmpeg_Bin_Latest_Windows_Shared_x64.zip">FFmpeg_Bin_Latest_Windows_Shared_x64.zip</a> in it (<code>ffmpeg.exe</code> is then in <code>ffmpeg\bin</code>). The Static package has no library, so no decoding with the GPU. The GPU support uses the Vulkan driver installed with the driver of the graphics card (NVIDIA, AMD or Intel).</li>
+<li><b>macOS</b>: create a <code>ffmpeg</code> directory beside <code>rawcooked</code> and put the content of <a href="{{ ffmpegUrl }}FFmpeg_Bin_Latest_Mac_Shared_universal.zip">FFmpeg_Bin_Latest_Mac_Shared_universal.zip</a> in it (<code>ffmpeg</code> is then in <code>ffmpeg/bin</code>), or run the installer of <a href="{{ ffmpegUrl }}ffmpeg-ma_Latest_Mac.dmg">ffmpeg-ma_Latest_Mac.dmg</a>. The GPU support needs a Mac with Apple silicon and macOS 26 or later, the Vulkan driver is in both packages.</li>
+<li><b>Linux</b>: install the <code>ffmpeg-ma</code> package of your distribution from <a href="{{ ffmpegUrl }}">the list of builds</a>, it does not replace the FFmpeg of the distribution. The GPU support uses the Vulkan driver of the graphics card (driver of NVIDIA, or Mesa for AMD and Intel).</li>
+</ul>
+<p>More details are in the <a href="https://github.com/MediaArea/RAWcooked#ffmpeg">README</a>, and <code>--show-stats</code> shows if the GPU is used.</p>
+</section>
+
+<section>
+<h2 id="input">Supported input formats</h2>
+<p><span class="supported-default">D = Supported by default</span>
+<span class="supported-key">K = Supported with a key, please <a href="{{ path('ma_contact') }}">contact us</a></span>
+<span class="supported-needfile">N = Need file &amp; development if interest, please <a href="{{ path('ma_contact') }}">contact us</a></span></p>
+<p>A key for a flavor is needed only for encoding: decoding a file back to the original files and checking it never need a key.</p>
+
+<div class="row">
+<div class="col-md-6">
+<h3 id="dpx">DPX</h3>
+<p>Uncompressed, 1 image element, unsigned samples, left to right and top to bottom.</p>
 <div class="table-responsive">
-<table class="download table table-bordered table-condensed">
+<table class="download table table-bordered table-condensed flavors">
   <tr class="table-header">
-    <th style="width: 40%">Video format</th>
-    <th style="width: 10%">Components</th>
     <th>Bit depth</th>
     <th>Packing</th>
-    <th>Endianness</th>
-    <th style="width: 5%">Support</th>
+    <th>Endian&shy;ness</th>
+    <th>Y</th>
+    <th>RGB</th>
+    <th>RGBA</th>
   </tr>
   <tr>
-    <td rowspan="31"><b>DPX</b><br>left to right<br>top to bottom<br>1 image element<br>unsigned<br>without encoding</td>
-    <td rowspan="11">RGB</td>
     <td>8-bit</td>
     <td></td>
     <td></td>
-    <td class="supported-default"><abbr title="Supported by default">D</abbr></td>
-  </tr>
-  <tr>
-    <td rowspan="2">10-bit</td>
-    <td rowspan="2">Filled A</td>
-    <td><abbr title="Big Endian">BE</abbr></td>
-    <td class="supported-default"><abbr title="Supported by default">D</abbr></td>
-  </tr>
-  <tr>
-    <td><abbr title="Little Endian">LE</abbr></td>
-    <td class="supported-default"><abbr title="Supported by default">D</abbr></td>
-  </tr>
-  <tr>
-    <td rowspan="4">12-bit</td>
-    <td rowspan="2">Packed</td>
-    <td><abbr title="Big Endian">BE</abbr></td>
-    <td class="supported-key"><abbr title="Supported with a key, please contact us">K</abbr></td>
-  </tr>
-  <tr>
-    <td><abbr title="Little Endian">LE</abbr></td>
-    <td class="supported-needfile"><abbr title="Need file &amp; development if interest, please contact us">N</abbr></td>
-  </tr>
-  <tr>
-    <td rowspan="2">Filled A</td>
-    <td><abbr title="Big Endian">BE</abbr></td>
-    <td class="supported-key"><abbr title="Supported with a key, please contact us">K</abbr></td>
-  </tr>
-  <tr>
-    <td><abbr title="Little Endian">LE</abbr></td>
-    <td class="supported-key"><abbr title="Supported with a key, please contact us">K</abbr></td>
-  </tr>
-  <tr>
-    <td rowspan="2">16-bit</td>
-    <td rowspan="2"></td>
-    <td><abbr title="Big Endian">BE</abbr></td>
-    <td class="supported-key"><abbr title="Supported with a key, please contact us">K</abbr></td>
-  </tr>
-  <tr>
-    <td><abbr title="Little Endian">LE</abbr></td>
-    <td class="supported-key"><abbr title="Supported with a key, please contact us">K</abbr></td>
-  </tr>
-  <tr>
-    <td rowspan="2">16-bit Float (out of FFV1 specs)</td>
-    <td rowspan="2"></td>
-    <td><abbr title="Big Endian">BE</abbr></td>
-    <td class="supported-needfile"><abbr title="Need file &amp; development if interest, please contact us">N</abbr></td>
-  </tr>
-  <tr>
-    <td><abbr title="Little Endian">LE</abbr></td>
-    <td class="supported-needfile"><abbr title="Need file &amp; development if interest, please contact us">N</abbr></td>
-  </tr>
-  <tr>
-    <td rowspan="9">RGBA</td>
-    <td>8-bit</td>
-    <td></td>
-    <td></td>
-    <td class="supported-key"><abbr title="Supported with a key, please contact us">K</abbr></td>
-  </tr>
-  <tr>
-    <td rowspan="2">10-bit</td>
-    <td rowspan="2">Filled A</td>
-    <td><abbr title="Big Endian">BE</abbr></td>
-    <td class="supported-key"><abbr title="Supported with a key, please contact us">K</abbr></td>
-  </tr>
-  <tr>
-    <td><abbr title="Little Endian">LE</abbr></td>
-    <td class="supported-key"><abbr title="Supported with a key, please contact us">K</abbr></td>
-  </tr>
-  <tr>
-    <td rowspan="4">12-bit</td>
-    <td rowspan="2">Packed</td>
-    <td><abbr title="Big Endian">BE</abbr></td>
-    <td class="supported-key"><abbr title="Supported with a key, please contact us">K</abbr></td>
-  </tr>
-  <tr>
-    <td><abbr title="Little Endian">LE</abbr></td>
-    <td class="supported-needfile"><abbr title="Need file &amp; development if interest, please contact us">N</abbr></td>
-  </tr>
-  <tr>
-    <td rowspan="2">Filled A</td>
-    <td><abbr title="Big Endian">BE</abbr></td>
-    <td class="supported-key"><abbr title="Supported with a key, please contact us">K</abbr></td>
-  </tr>
-  <tr>
-    <td><abbr title="Little Endian">LE</abbr></td>
-    <td class="supported-key"><abbr title="Supported with a key, please contact us">K</abbr></td>
-  </tr>
-  <tr>
-    <td rowspan="2">16-bit</td>
-    <td rowspan="2"></td>
-    <td><abbr title="Big Endian">BE</abbr></td>
-    <td class="supported-key"><abbr title="Supported with a key, please contact us">K</abbr></td>
-  </tr>
-  <tr>
-    <td><abbr title="Little Endian">LE</abbr></td>
-    <td class="supported-key"><abbr title="Supported with a key, please contact us">K</abbr></td>
-  </tr>
-  <tr>
-    <td rowspan="11">Y</td>
-    <td>8-bit</td>
-    <td></td>
-    <td></td>
-    <td class="supported-key"><abbr title="Supported with a key, please contact us">K</abbr></td>
+    {{ rc.cell('K') }}
+    {{ rc.cell('D') }}
+    {{ rc.cell('K') }}
   </tr>
   <tr>
     <td rowspan="4">10-bit</td>
     <td rowspan="2">Filled A</td>
-    <td><abbr title="Big Endian">BE</abbr></td>
-    <td class="supported-key"><abbr title="Supported with a key, please contact us">K</abbr></td>
+    <td><abbr title="Little endian">LE</abbr></td>
+    {{ rc.cell('N') }}
+    {{ rc.cell('D') }}
+    {{ rc.cell('K') }}
   </tr>
   <tr>
-    <td><abbr title="Little Endian">LE</abbr></td>
-    <td class="supported-needfile"><abbr title="Need file &amp; development if interest, please contact us">N</abbr></td>
+    <td><abbr title="Big endian">BE</abbr></td>
+    {{ rc.cell('K') }}
+    {{ rc.cell('D') }}
+    {{ rc.cell('K') }}
   </tr>
   <tr>
     <td rowspan="2">Filled B</td>
-    <td><abbr title="Big Endian">BE</abbr></td>
-    <td class="supported-key"><abbr title="Supported with a key, please contact us">K</abbr></td>
+    <td><abbr title="Little endian">LE</abbr></td>
+    {{ rc.cell('N') }}
+    {{ rc.cell('N') }}
+    {{ rc.cell('N') }}
   </tr>
   <tr>
-    <td><abbr title="Little Endian">LE</abbr></td>
-    <td class="supported-needfile"><abbr title="Need file &amp; development if interest, please contact us">N</abbr></td>
+    <td><abbr title="Big endian">BE</abbr></td>
+    {{ rc.cell('K') }}
+    {{ rc.cell('N') }}
+    {{ rc.cell('N') }}
   </tr>
   <tr>
     <td rowspan="4">12-bit</td>
     <td rowspan="2">Packed</td>
-    <td><abbr title="Big Endian">BE</abbr></td>
-    <td class="supported-key"><abbr title="Supported with a key, please contact us">K</abbr></td>
+    <td><abbr title="Little endian">LE</abbr></td>
+    {{ rc.cell('N') }}
+    {{ rc.cell('N') }}
+    {{ rc.cell('N') }}
   </tr>
   <tr>
-    <td><abbr title="Little Endian">LE</abbr></td>
-    <td class="supported-needfile"><abbr title="Need file &amp; development if interest, please contact us">N</abbr></td>
+    <td><abbr title="Big endian">BE</abbr></td>
+    {{ rc.cell('K') }}
+    {{ rc.cell('K') }}
+    {{ rc.cell('K') }}
   </tr>
   <tr>
     <td rowspan="2">Filled A</td>
-    <td><abbr title="Big Endian">BE</abbr></td>
-    <td class="supported-needfile"><abbr title="Need file &amp; development if interest, please contact us">N</abbr></td>
+    <td><abbr title="Little endian">LE</abbr></td>
+    {{ rc.cell('N') }}
+    {{ rc.cell('K') }}
+    {{ rc.cell('K') }}
   </tr>
   <tr>
-    <td><abbr title="Little Endian">LE</abbr></td>
-    <td class="supported-needfile"><abbr title="Need file &amp; development if interest, please contact us">N</abbr></td>
+    <td><abbr title="Big endian">BE</abbr></td>
+    {{ rc.cell('N') }}
+    {{ rc.cell('K') }}
+    {{ rc.cell('K') }}
   </tr>
   <tr>
     <td rowspan="2">16-bit</td>
     <td rowspan="2"></td>
-    <td><abbr title="Big Endian">BE</abbr></td>
-    <td class="supported-key"><abbr title="Supported with a key, please contact us">K</abbr></td>
+    <td><abbr title="Little endian">LE</abbr></td>
+    {{ rc.cell('K') }}
+    {{ rc.cell('K') }}
+    {{ rc.cell('K') }}
   </tr>
   <tr>
-    <td><abbr title="Little Endian">LE</abbr></td>
-    <td class="supported-key"><abbr title="Supported with a key, please contact us">K</abbr></td>
+    <td><abbr title="Big endian">BE</abbr></td>
+    {{ rc.cell('K') }}
+    {{ rc.cell('K') }}
+    {{ rc.cell('K') }}
+  </tr>
+  <tr>
+    <td>16-bit float</td>
+    <td></td>
+    <td></td>
+    {{ rc.cell('N') }}
+    {{ rc.cell('N') }}
+    {{ rc.cell('N') }}
   </tr>
 </table>
 </div>
+<ul class="flavors-notes">
+<li>8-bit: files of both byte orders.</li>
+<li>12-bit packed big endian (RGB, Y): also bottom to top.</li>
+<li>Y 10-bit: also the files without padding at the end of the lines of Lasergraphics scanners (Director included {{ rc.newMark(new) }}), DIAMANT-Film and Scanity.</li>
+<li>Padding bits which are not zero are kept (<code>--check-padding</code>).</li>
+<li>Some common non conformities are accepted, e.g. a version number in lowercase or empty, the packing value 3 with Y 16-bit.</li>
+</ul>
+</div>
+
+<div class="col-md-6">
+<h3 id="tiff">TIFF</h3>
+<p>Uncompressed, strips stored one after the other, unsigned integer samples, top left orientation.</p>
 <div class="table-responsive">
-<table class="download table table-bordered table-condensed">
+<table class="download table table-bordered table-condensed flavors">
   <tr class="table-header">
-    <th style="width: 40%">Video format</th>
-    <th style="width: 10%">Components</th>
-    <th>Bit depth</th>
-    <th>Configuration</th>
-    <th>Endianness</th>
-    <th style="width: 5%">Support</th>
+    <th rowspan="2">Bits per sample</th>
+    <th rowspan="2">Y</th>
+    <th colspan="2">RGB</th>
+    <th rowspan="2">RGBA</th>
+  </tr>
+  <tr class="table-header">
+    <th>Chunky</th>
+    <th>Planar</th>
+  </tr>
+  {% for bits in ['2-bit', '4-bit', '6-bit'] %}
+  <tr>
+    <td>{{ bits }}</td>
+    {{ rc.cell('K', new) }}
+    {{ rc.cell('K', new) }}
+    {{ rc.cell('K', new) }}
+    {{ rc.cell('N') }}
+  </tr>
+  {% endfor %}
+  <tr>
+    <td>8-bit</td>
+    {{ rc.cell('K') }}
+    {{ rc.cell('K') }}
+    {{ rc.cell('K', new) }}
+    {{ rc.cell('K') }}
+  </tr>
+  {% for bits in ['10-bit', '12-bit', '14-bit'] %}
+  <tr>
+    <td>{{ bits }}</td>
+    {{ rc.cell('K', new) }}
+    {{ rc.cell('K', new) }}
+    {{ rc.cell('K', new) }}
+    {{ rc.cell('N') }}
+  </tr>
+  {% endfor %}
+  <tr>
+    <td>16-bit <abbr title="Little endian">LE</abbr></td>
+    {{ rc.cell('K') }}
+    {{ rc.cell('K') }}
+    {{ rc.cell('K', new) }}
+    {{ rc.cell('K') }}
   </tr>
   <tr>
-    <td rowspan="9"><b>TIFF</b><br>Raw Compression<br>Continuous StripOffsets</td>
+    <td>16-bit <abbr title="Big endian">BE</abbr></td>
+    {{ rc.cell('K') }}
+    {{ rc.cell('K') }}
+    {{ rc.cell('K', new) }}
+    {{ rc.cell('N') }}
+  </tr>
+</table>
+</div>
+<ul class="flavors-notes">
+<li>2 to 14-bit: files of both byte orders (II and MM); the samples of 2, 4, 6, 10, 12 and 14 bits are packed as in the TIFF specification, the padding bits at the end of the lines are kept if they are not zero.</li>
+<li>RGBA: unassociated alpha.</li>
+<li>XMP, IPTC, Photoshop, Exif, GPS, ICC profile and PrintIM tags are accepted {{ rc.newMark(new) }}.</li>
+<li>The new flavors need a recent FFmpeg, and <code>--check</code> is always done for them.</li>
+</ul>
+
+</div>
+</div>
+
+<div class="row">
+<div class="col-md-6">
+<h3 id="exr">EXR</h3>
+<p>Uncompressed scan lines in increasing Y order, single part, data window same as the display window.</p>
+<div class="table-responsive">
+<table class="download table table-bordered table-condensed flavors">
+  <tr class="table-header">
+    <th>Components</th>
+    <th>Pixel type</th>
+    <th style="width: 20%">Support</th>
+  </tr>
+  <tr>
     <td rowspan="3">RGB</td>
-    <td>8-bit</td>
-    <td>Chunky</td>
-    <td></td>
-    <td class="supported-key"><abbr title="Supported with a key, please contact us">K</abbr></td>
+    <td>16-bit float (half)</td>
+    {{ rc.cell('K') }}
   </tr>
   <tr>
-    <td rowspan="2">16-bit</td>
-    <td rowspan="2">Chunky</td>
-    <td><abbr title="Big Endian">BE</abbr></td>
-    <td class="supported-key"><abbr title="Supported with a key, please contact us">K</abbr></td>
+    <td>32-bit float</td>
+    {{ rc.cell('N') }}
   </tr>
   <tr>
-    <td><abbr title="Little Endian">LE</abbr></td>
-    <td class="supported-key"><abbr title="Supported with a key, please contact us">K</abbr></td>
-  </tr>
-  <tr>
-    <td rowspan="3">RGBA</td>
-    <td>8-bit</td>
-    <td>Chunky</td>
-    <td></td>
-    <td class="supported-key"><abbr title="Supported with a key, please contact us">K</abbr></td>
-  </tr>
-  <tr>
-    <td rowspan="2">16-bit</td>
-    <td rowspan="2">Chunky</td>
-    <td><abbr title="Big Endian">BE</abbr></td>
-    <td class="supported-needfile"><abbr title="Need file &amp; development if interest, please contact us">N</abbr></td>
-  </tr>
-  <tr>
-    <td><abbr title="Little Endian">LE</abbr></td>
-    <td class="supported-key"><abbr title="Supported with a key, please contact us">K</abbr></td>
-  </tr>
-  <tr>
-    <td rowspan="3">Y</td>
-    <td>8-bit</td>
-    <td>Chunky</td>
-    <td></td>
-    <td class="supported-key"><abbr title="Supported with a key, please contact us">K</abbr></td>
-  </tr>
-  <tr>
-    <td rowspan="2">16-bit</td>
-    <td rowspan="2">Chunky</td>
-    <td><abbr title="Big Endian">BE</abbr></td>
-    <td class="supported-key"><abbr title="Supported with a key, please contact us">K</abbr></td>
-  </tr>
-  <tr>
-    <td><abbr title="Little Endian">LE</abbr></td>
-    <td class="supported-key"><abbr title="Supported with a key, please contact us">K</abbr></td>
+    <td>32-bit unsigned integer</td>
+    {{ rc.cell('N') }}
   </tr>
 </table>
 </div>
+<ul class="flavors-notes">
+<li>Common attributes and the attributes of ARRI are accepted, as well as the attributes of FilmLight and DPX metadata {{ rc.newMark(new) }}.</li>
+<li>The support of EXR depends on the FFmpeg version, <code>--check</code> is required.</li>
+</ul>
+
+</div>
+
+<div class="col-md-6">
+<h3 id="avi">AVI</h3>
 <div class="table-responsive">
-<table class="download table table-bordered table-condensed">
+<table class="download table table-bordered table-condensed flavors">
   <tr class="table-header">
-    <th style="width: 40%">Video format</th>
-    <th style="width: 10%">Components</th>
-    <th>Bit depth</th>
-    <th>Endianness</th>
-    <th style="width: 5%">Support</th>
+    <th>Video</th>
+    <th>Audio</th>
+    <th style="width: 20%">Support</th>
   </tr>
   <tr>
-    <td rowspan="3"><b>EXR</b><br>Limitations to be defined</td>
-    <td rowspan="3">RGB</td>
-    <td>16-bit Float (out of FFV1 specs)</td>
-    <td></td>
-    <td class="supported-key"><abbr title="Supported with a key, please contact us">K</abbr></td>
-  </tr>
-  <tr>
-    <td>32-bit</td>
-    <td></td>
-    <td class="supported-needfile"><abbr title="Need file &amp; development if interest, please contact us">N</abbr></td>
-  </tr>
-  <tr>
-    <td>32-bit Float</td>
-    <td></td>
-    <td class="supported-needfile"><abbr title="Need file &amp; development if interest, please contact us">N</abbr></td>
+    <td>v210 (YUV 4:2:2 10-bit)</td>
+    <td>None, or PCM (same flavors as WAV)</td>
+    {{ rc.cell('K') }}
   </tr>
 </table>
 </div>
-<div class="table-responsive">
-<table class="download table table-bordered table-condensed">
-  <tr class="table-header">
-    <th style="width: 40%">Video format</th>
-    <th style="width: 10%">Components</th>
-    <th>Bit depth</th>
-    <th>Endianness</th>
-    <th style="width: 5%">Support</th>
-  </tr>
-  <tr>
-    <td rowspan="1"><b>AVI/v210+PCM</b></td>
-    <td rowspan="1">RGB</td>
-    <td>10-bit</td>
-    <td></td>
-    <td class="supported-key"><abbr title="Supported with a key, please contact us">K</abbr></td>
-  </tr>
-</table>
+<ul class="flavors-notes">
+<li>1 video track, then 1 audio track at most; width multiple of 48 pixels.</li>
+<li><code>--check</code> is always done.</li>
+</ul>
 </div>
+</div>
+
+<h3 id="audio">Audio</h3>
 <div class="table-responsive">
-<table class="download table table-bordered table-condensed">
+<table class="download table table-bordered table-condensed flavors">
   <tr class="table-header">
-    <th style="width: 40%">Audio format</th>
+    <th>PCM in</th>
     <th>Sampling rate</th>
     <th>Bit depth</th>
     <th>Channels</th>
-    <th>Endianness</th>
-    <th style="width: 5%">Support</th>
+    <th>Support</th>
   </tr>
   <tr>
-    <td rowspan="3"><b>PCM</b><br>In WAV, BWF, RF64, AIFF, AVI</td>
-    <td>44.1/48/96 kHz</td>
-    <td>8/16/24-bit</td>
-    <td>2/4/6/8-channel</td>
-    <td><abbr title="Big Endian">BE</abbr>/<abbr title="Little Endian">LE</abbr></td>
-    <td class="supported-key"><abbr title="Supported with a key, please contact us">K</abbr></td>
-  </tr>
-  <tr>
-    <td>Except 48 kHz</td>
+    <td rowspan="2">WAV, BWF, RF64</td>
+    <td>48 kHz</td>
     <td>16-bit</td>
-    <td>2-channel</td>
-    <td><abbr title="Little Endian">LE</abbr></td>
-    <td class="supported-default"><abbr title="Supported by default">D</abbr></td>
+    <td>2</td>
+    {{ rc.cell('D') }}
   </tr>
   <tr>
-    <td>44.1/48/96 kHz</td>
-    <td>32-bit</td>
-    <td>2/4/6/8-channel</td>
-    <td><abbr title="Big Endian">BE</abbr>/<abbr title="Little Endian">LE</abbr></td>
-    <td class="supported-needfile"><abbr title="Need file &amp; development if interest, please contact us">N</abbr></td>
+    <td>44.1, 48, 96 kHz</td>
+    <td>8, 16, 24, 32-bit, 32-bit float</td>
+    <td>1, 2, 4, 6, 8</td>
+    {{ rc.cell('K') }}
+  </tr>
+  <tr>
+    <td>AIFF, AIFF-C</td>
+    <td>44.1, 48, 96 kHz</td>
+    <td>8, 16, 24, 32-bit</td>
+    <td>1, 2, 4, 6, 8</td>
+    {{ rc.cell('K') }}
+  </tr>
+  <tr>
+    <td colspan="4">Other sampling rates, other counts of channels</td>
+    {{ rc.cell('N') }}
   </tr>
 </table>
 </div>
+<ul class="flavors-notes">
+<li>AIFF: big endian, and little endian (<code>sowt</code>) with 16-bit; 8-bit signed or unsigned.</li>
+<li>32-bit audio is stored without compression in the Matroska file.</li>
+</ul>
 
 <p>Another format/flavor you want us to support (e.g. little endian…)? <a href="{{ path('ma_contact') }}">Contact us</a>.</p>
 
-<h2>Supported output formats</h2>
+<h2 id="output">Supported output formats and features</h2>
+<div class="row">
+<div class="col-md-6">
 <div class="table-responsive">
-<table class="download table table-bordered table-condensed">
-<tr class="table-header">
-    <th style="width: 40%">Container format</th>
+<table class="download table table-bordered table-condensed flavors">
+  <tr class="table-header">
+    <th>Container format</th>
     <th>Stream format</th>
-    <th></th>
-    <th></th>
-    <th style="width: 5%">Support</th>
-</tr>
-  <tr>
-    <td rowspan="3">MKV</td>
-    <td>FFV1</td>
-    <td></td>
-    <td></td>
-    <td class="supported-default"><abbr title="Supported by default">D</abbr></td>
+    <th style="width: 20%">Support</th>
   </tr>
   <tr>
-    <td>FLAC</td>
-    <td></td>
-    <td></td>
-    <td class="supported-default"><abbr title="Supported by default">D</abbr></td>
+    <td rowspan="3">Matroska (MKV)</td>
+    <td class="flavors-text">FFV1</td>
+    {{ rc.cell('D') }}
   </tr>
   <tr>
-    <td>PCM</td>
-    <td></td>
-    <td></td>
-    <td class="supported-key"><abbr title="Supported with a key, please contact us">K</abbr></td>
+    <td class="flavors-text">FLAC</td>
+    {{ rc.cell('D') }}
+  </tr>
+  <tr>
+    <td class="flavors-text">PCM (<code>-c:a copy</code>)</td>
+    {{ rc.cell('K') }}
   </tr>
 </table>
 </div>
+</div>
+<div class="col-md-6">
+<div class="table-responsive">
+<table class="download table table-bordered table-condensed flavors">
+  <tr class="table-header">
+    <th>Feature</th>
+    <th style="width: 20%">Support</th>
+  </tr>
+  <tr>
+    <td class="flavors-text">Decoding, checks of reversibility, hashes, conformance and coherency checks, 2 tracks (e.g. 1 video and 1 audio)</td>
+    {{ rc.cell('D') }}
+  </tr>
+  <tr>
+    <td class="flavors-text">More than 2 tracks (e.g. several reels or several audio files)</td>
+    {{ rc.cell('K') }}
+  </tr>
+  <tr>
+    <td class="flavors-text">Encoding and decoding by the GPU</td>
+    {{ rc.cell('K', new) }}
+  </tr>
+  <tr>
+    <td class="flavors-text">Encoding options (<code>-coder</code>, <code>-context</code>, <code>-g</code>, <code>-level</code>, <code>-slicecrc</code>, <code>-slices</code>), input options (<code>-framerate</code>), general options (<code>--attachment-max-size</code>, <code>--display-command</code>, <code>-threads</code>)</td>
+    {{ rc.cell('K') }}
+  </tr>
+  <tr>
+    <td class="flavors-text">Keys for sub-licensees, e.g. your suppliers (<code>--sublicense</code>)</td>
+    {{ rc.cell('K') }}
+  </tr>
+</table>
+</div>
+</div>
+</div>
+<ul class="flavors-notes">
+<li>GPU on macOS: no key is needed, it is sponsored by <a href="http://www.cna.public.lu">CNA (National Audiovisual Centre of Luxembourg)</a>.</li>
+</ul>
 <p>Another format you want us to support (e.g. MOV…)? <a href="{{ path('ma_contact') }}">Contact us</a>.</p>
 
+<h2 id="funding">Funding plan</h2>
+<p>MediaArea.net has achieved implementation of RAWcooked’s basic module with thanks to AV Preservation reto.ch, who has guaranteed software development with funding of 10&thinsp;000&nbsp;&euro;.</p>
+<p>The archive community or interested industry users are invited to <a href="{{ path('ma_contact') }}">buy</a> additional flavors required by their institution - such as components, bit depths, endianness, packing, etc. in order to help the long-term sustainability of the project and its further development. Required flavors will be fully tested by MediaArea.net to exact specification before being implemented into the software.</p>
+<p>This model allows contributors the assurance that their files will work seamlessly with the software from the outset.</p>
+<p>The price is 1000&nbsp;&euro; for basic support including bug fixes and one additional flavor, then 500&nbsp;&euro; for each following flavor which can be added later if you are not sure of how many you need immediately.</p>
+<p>The key is stored with <code>rawcooked --store-license <i>key</i></code>, and <code>rawcooked --show-license</code> lists the licensed flavors and features.</p>
+
     <h2>License:</h2>
-    <p>It is <a href="https://en.wikipedia.org/wiki/Open_source">Open-Source</a> software which means that end users and developers have the freedom to study, improve and redistribute the program (<a href="https://github.com/MediaArea/RAWcooked/blob/master/LICENSE">BSD 2-Clause license</a> for the code developed by MediaArea).</p>
+    <p>It is <a href="https://en.wikipedia.org/wiki/Open_source">Open-Source</a> software which means that end users and developers have the freedom to study, improve and redistribute the program (<a href="{{ docUrl }}LICENSE">BSD 2-Clause license</a> for the code developed by MediaArea).</p>
 </section>
 {% endblock %}

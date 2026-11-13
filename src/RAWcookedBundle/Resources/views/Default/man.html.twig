@@ -26,10 +26,10 @@
 </table>
 <div class="manual-text">
 <h1 class="Sh" title="Sh" id="NAME"><a class="permalink" href="#NAME">NAME</a></h1>
-<b>RAWcooked</b> - encode and decode audio-visual RAW data with Matroska, FFV1
-  and FLAC
+<b>RAWcooked</b> - encode and decode audio-visual RAW data with Matroska,
+  FFV1 and FLAC
 <h1 class="Sh" title="Sh" id="SYNOPSIS"><a class="permalink" href="#SYNOPSIS">SYNOPSIS</a></h1>
-<b>rawcooked </b>[<i>option</i> ...] (<i>folder</i> | <i>file</i> ...)
+<b>rawcooked</b> [<i>option</i> ...] (<i>folder</i> | <i>file</i> ...)
   [<i>option</i> ...]
 <h1 class="Sh" title="Sh" id="DESCRIPTION"><a class="permalink" href="#DESCRIPTION">DESCRIPTION</a></h1>
 <dl class="Bl-tag">
@@ -39,10 +39,10 @@
     video codec FFV1, and audio codec FLAC. The metadata accompanying the RAW
     data is fully preserved, along with additional sidecar files such as MD5
     checksums, LUT or XML if desired. This allows for the management of these
-    audio-visual file formats in an effective and transparent way. The lossless
-    Matroska video stream can be played in VLC or MPV media players, and writing
-    and retrieving from storage devices such as LTO is significantly
-    quicker.</dt>
+    audio-visual file formats in an effective and transparent way. The
+    lossless Matroska video stream can be played in VLC or MPV media players,
+    and writing and retrieving from storage devices such as LTO is
+    significantly quicker.</dt>
   <dd></dd>
 </dl>
 <dl class="Bl-tag">
@@ -54,46 +54,49 @@
 <dl class="Bl-tag">
   <dt><i>folder</i></dt>
   <dd>Every image file within the sequence's <i>folder</i> is encoded into a
-      single FFV1 video stream, and each audio track within the same
-      <i>folder</i> is encoded to the FLAC codec. Both the FFV1 and FLAC
-      contents are then muxed into a single Matroska container (.mkv).
+    single FFV1 video stream, and each audio track within the same
+    <i>folder</i> is encoded to the FLAC codec. Both the FFV1 and FLAC
+    contents are then muxed into a single Matroska container (.mkv).
     <div>&#x00A0;</div>
     The image filenames must end in a complete number sequence, so that
-      <b>RAWcooked</b> can parse each image within the sequence in the correct
-      order.</dd>
+    <b>RAWcooked</b> can parse each image within the sequence in the correct
+    order.</dd>
 </dl>
 <dl class="Bl-tag">
   <dt><i>file</i></dt>
   <dd><b>contains RAW data (e.g. a .dpx or .wav file):</b>
     <div>&#x00A0;</div>
     Every image within a sequence folder containing the <i>file</i> is encoded
-      into a single FFV1 video stream, and each audio track within the folder
-      containing the same <i>file</i> is encoded to the FLAC codec. Both the
-      FFV1 and FLAC contents are then muxed into a single Matroska container
-      (.mkv).
+    into a single FFV1 video stream, and each audio track within the folder
+    containing the same <i>file</i> is encoded to the FLAC codec. Both the
+    FFV1 and FLAC contents are then muxed into a single Matroska container
+    (.mkv).
     <div>&#x00A0;</div>
-    The image filenames must end in a complete number sequence. By entering one
-      <i>file</i> within this sequence <b>RAWcooked</b> will parse every image
-      in the correct order.</dd>
+    The image filenames must end in a complete number sequence. By entering
+    one <i>file</i> within this sequence <b>RAWcooked</b> will parse every
+    image in the correct order.</dd>
 </dl>
 <dl class="Bl-tag">
   <dt><i>file</i></dt>
   <dd><b>is a Matroska container (.mkv):</b>
     <div>&#x00A0;</div>
-    Decodes the Matroska file back to the original RAW image sequence, including
-      restoration of the original metadata and sidecar files. It is important to
-      stress that the encoded files can be fully decoded, and that this process
-      will create bit-by-bit identical files to the originals. Not only is the
-      image and audio content fully restored, but also all enclosed metadata and
-      all of the file's characteristics. Therefore, an encoded and decoded RAW
-      file cannot be differentiated from its original.</dd>
+    Decodes the Matroska file back to the original RAW image sequence,
+    including restoration of the original metadata and sidecar files. It is
+    important to stress that the encoded files can be fully decoded, and that
+    this process will create bit-by-bit identical files to the originals. Not
+    only is the image and audio content fully restored, but also all enclosed
+    metadata and all of the file's characteristics. Therefore, an encoded and
+    decoded RAW file cannot be differentiated from its original.</dd>
 </dl>
 <h1 class="Sh" title="Sh" id="OPTIONS"><a class="permalink" href="#OPTIONS">OPTIONS</a></h1>
-<h2 class="Ss" title="Ss" id="GENERAL_OPTIONS"><a class="permalink" href="#GENERAL_OPTIONS">GENERAL
-  OPTIONS</a></h2>
+<h2 class="Ss" title="Ss" id="GENERAL_OPTIONS"><a class="permalink" href="#GENERAL_OPTIONS">GENERAL OPTIONS</a></h2>
 <dl class="Bl-tag">
-  <dt><b>--help |<b> -h</b></b></dt>
+  <dt><b>--help</b> | <b>-h</b></dt>
   <dd>Displays the help guide.</dd>
+</dl>
+<dl class="Bl-tag">
+  <dt><b>--help-edit</b></dt>
+  <dd>Displays the help guide for edit options.</dd>
 </dl>
 <dl class="Bl-tag">
   <dt><b>--version</b></dt>
@@ -101,64 +104,135 @@
 </dl>
 <dl class="Bl-tag">
   <dt><b>--store-license value</b></dt>
-  <dd>Set the license key to value and store on hard drive. (license is stored
-      in ~/.config/RAWcooked/Config.txt on Linux/Mac,
-      %APPDATA%/RAWcooked/Config.txt on Windows)</dd>
+  <dd>Set the license key to value and store on hard drive.
+    <div>&#x00A0;</div>
+    (License is stored in ~/.config/RAWcooked/Config.txt on Linux/Mac,
+    %APPDATA%/RAWcooked/Config.txt on Windows)</dd>
 </dl>
 <dl class="Bl-tag">
   <dt><b>--show-license</b></dt>
   <dd>Displays information about the installed license.</dd>
 </dl>
 <dl class="Bl-tag">
-  <dt><b>--attachment-max-size <i>value</i> | <b>-s </b><i>value</i></b></dt>
+  <dt><b>--sublicense value</b></dt>
+  <dd>Output a license for a sub-licensee with ID value.</dd>
+</dl>
+<dl class="Bl-tag">
+  <dt><b>--sublicense-dur value</b></dt>
+  <dd>Duration of the sublicense, in months. End date is the last day of the
+    month.
+    <div>&#x00A0;</div>
+    The default value is 1.</dd>
+</dl>
+<dl class="Bl-tag">
+  <dt><b>--attachment-max-size</b> <i>value</i> | <b>-s</b> <i>value</i></dt>
   <dd>Set maximum size of attachments to <i>value</i> (in bytes).
     <div>&#x00A0;</div>
     The default value is <i>1048576</i>.</dd>
 </dl>
 <dl class="Bl-tag">
-  <dt><b>--check <i>value</i></b></dt>
-  <dd>Switch the check function on or off. Be aware check function can be
-      demanding of time and processor usage.
-    <div>&#x00A0;</div>
-     <i>partial</i> (or <i>0</i>) is quicker but may lead to partial
-      reversibility with files that do not conform.
-    <div>&#x00A0;</div>
-     <i>full</i> (or <i>1</i>) is slower but guarantees reversibility, for
-      example with DPX where the bits do not have any zero padding included.
-    <div>&#x00A0;</div>
-    The default value is 'partial'.</dd>
-</dl>
-<dl class="Bl-tag">
-  <dt><b>--display-command |<b> -d</b></b></dt>
+  <dt><b>--display-command</b> | <b>-d</b></dt>
   <dd>When an external encoder/decoder is used, display the command to launch
-      instead of just launching it.</dd>
+    instead of just launching it.</dd>
 </dl>
 <dl class="Bl-tag">
-  <dt><b>--output-name <i>value</i> | <b>-o </b><i>value</i></b></dt>
+  <dt><b>--output-name</b> <i>value</i> | <b>-o</b> <i>value</i></dt>
   <dd>Set the name of the output file or folder to <i>value</i>.
     <div>&#x00A0;</div>
     The default output value is opposite to the input. Expect
-      <i>${Input}.mkv</i> if the input is a folder, or <i>${Input}.RAWcooked</i>
-      if input is a file, such as a DPX.</dd>
+    <i>${Input}.mkv</i> if the input is a folder, or <i>${Input}.RAWcooked</i>
+    if input is a file, such as a DPX.</dd>
 </dl>
 <dl class="Bl-tag">
-  <dt><b>--rawcooked-file-name <i>value</i> | <b>-r </b><i>value</i></b></dt>
+  <dt><b>--compute-output-hash</b></dt>
+  <dd>Compute the hash of the output file while checking it.</dd>
+</dl>
+<dl class="Bl-tag">
+  <dt><b>--output-version</b> <i>value</i></dt>
+  <dd>Set the version of the output.
+    <div>&#x00A0;</div>
+    The default output value is 1.
+    <div>&#x00A0;</div>
+    Other possible value is <i>2</i>. This is a preview release, this value
+    should be used used only when you know why you do it.</dd>
+</dl>
+<dl class="Bl-tag">
+  <dt><b>--bin-name</b> <i>value</i> | <b>-b</b> <i>value</i></dt>
+  <dd>Indicate the name of the encoder to use to <i>value</i>.
+    <div>&#x00A0;</div>
+    The default value is <i>ffmpeg-ma</i> in the directory of the executable,
+    in its ffmpeg, ffmpeg/lib or ffmpeg/bin subdirectory or in PATH, else
+    <i>ffmpeg</i> in the same directories.
+    <div>&#x00A0;</div>
+    If <i>value</i> is the name of a libavcodec library (e.g.
+    libavcodec.62.dylib, libavcodec.so.62 or avcodec-62.dll), it is the
+    library used by the <i>ffmpeg</i> and <i>vulkan</i> decoders instead of
+    the searched one, so the option may be used twice (encoder and library).</dd>
+</dl>
+<dl class="Bl-tag">
+  <dt><b>--rawcooked-file-name</b> <i>value</i> | <b>-r</b> <i>value</i></dt>
   <dd>Set during encoding, or retrieve by decoding, the name of the
-      <b>RAWcooked</b> reversibility data file to <i>value</i>.
+    <b>RAWcooked</b> reversibility data file to <i>value</i>.
     <div>&#x00A0;</div>
     The default name is <i>${Input}.rawcooked_reversibility_data</i>.
     <div>&#x00A0;</div>
-     <b>Note:</b> This file is deleted after encoding if the <b>RAWcooked</b>
-      reversibility data file is embedded in the output Matroska wrapper during
-      encoding.
+    <b>Note:</b> This file is deleted after encoding if the <b>RAWcooked</b>
+    reversibility data file is embedded in the output Matroska wrapper during
+    encoding.
     <div>&#x00A0;</div>
-     <b>Note:</b> Not yet implemented for decoding.</dd>
+    <b>Note:</b> Not yet implemented for decoding.</dd>
+</dl>
+<dl class="Bl-tag">
+  <dt><b>--decoder</b> <i>value</i></dt>
+  <dd>Set the FFV1 decoder used for decoding and checking to <i>value</i>.
+    <div>&#x00A0;</div>
+    Possible values are <i>internal</i> (RAWcooked decoder), <i>ffmpeg</i>
+    (FFmpeg libavcodec decoder), <i>vulkan</i> (FFmpeg libavcodec decoder with
+    Vulkan hardware decoding on the default Vulkan device, <i>vulkanN</i> on
+    the Vulkan device N, e.g. <i>vulkan1</i> on the second device), a
+    combination of them with <i>+</i> (<i>internal+ffmpeg</i>,
+    <i>internal+vulkan</i>, <i>ffmpeg+vulkan</i>,
+    <i>internal+ffmpeg+vulkan</i>, <i>internal+vulkan0+vulkan1</i>...:
+    decoders in parallel, each frame is decoded by the first available
+    decoder; a device twice e.g. <i>internal+vulkan+vulkan</i>: 2 vulkan
+    decoders on the same device, faster with big GPUs) and <i>auto</i>
+    (<i>internal</i> and <i>vulkan</i> on each discrete GPU, else on the first
+    GPU, if FFmpeg libraries and a Vulkan GPU are available, with a second
+    vulkan decoder on NVIDIA GPUs with at least 64 streaming multiprocessors,
+    else <i>internal</i>).
+    <div>&#x00A0;</div>
+    Values with <i>vulkan</i> use any Vulkan device, including a CPU
+    implementation (e.g. lavapipe), <i>auto</i> uses a CPU implementation only
+    if the video encoder is ffv1_vulkan. Values with <i>ffmpeg</i> or
+    <i>vulkan</i> need FFmpeg libavcodec and libavutil libraries, searched in
+    the directory of the executable, in its ffmpeg, ffmpeg/lib and ffmpeg/bin
+    subdirectories, then in PATH on Windows, or in the directory of the
+    executable, in its ffmpeg, ffmpeg/lib and ffmpeg/bin subdirectories, then
+    in the library paths of the system on Linux or in Homebrew and MacPorts
+    library directories on macOS, libraries of the ffmpeg-ma package first,
+    only if available in this build.
+    <div>&#x00A0;</div>
+    The default value is <i>auto</i> if the video encoder is ffv1_vulkan, else
+    <i>internal</i>.</dd>
+</dl>
+<dl class="Bl-tag">
+  <dt><b>--io-threads</b> <i>value</i></dt>
+  <dd>Force the number of IO threads to <i>value</i>.
+    <div>&#x00A0;</div>
+    Default value is found in the system hardware concurrency, if available,
+    otherwise it will default to 4.</dd>
 </dl>
 <dl class="Bl-tag">
   <dt><b>--quiet</b></dt>
   <dd>Do not show information related to RAWcooked.
     <div>&#x00A0;</div>
     External encoder or decoder may need an additional option.</dd>
+</dl>
+<dl class="Bl-tag">
+  <dt><b>--show-stats</b></dt>
+  <dd>Show the CPU and the GPU used, and the speed of the encoding and of the
+    decoding, with the share of each decoder if several decoders are used in
+    parallel (e.g. CPU and GPU).</dd>
 </dl>
 <dl class="Bl-tag">
   <dt><b>-y</b></dt>
@@ -175,31 +249,31 @@
 <h2 class="Ss" title="Ss" id="ACTIONS"><a class="permalink" href="#ACTIONS">ACTIONS</a></h2>
 <dl class="Bl-tag">
   <dt><b>--all</b></dt>
-  <dd>Same as --info --decode --encode --hash --conch --coherency
-      --check-padding --check (see below)</dd>
+  <dd>Same as --info --conch --decode --encode --hash --coherency
+    --check-padding --check --accept-gaps (see below)</dd>
 </dl>
 <dl class="Bl-tag">
   <dt><b>--none</b></dt>
-  <dd>Same as --no-info --no-decode --no-encode --no-hash --no-conch
-      --no-coherency --quick-check-padding --quick-check (see below)</dd>
+  <dd>Same as --no-info --no-conch --no-decode --no-encode --no-hash
+    --no-coherency --quick-check-padding --quick-check (see below)</dd>
 </dl>
 <dl class="Bl-tag">
   <dt><b>--check</b></dt>
   <dd>Check that the encoded file can be correctly decoded.
     <div>&#x00A0;</div>
-    If input is raw content, encode then check that output would be same as the
-      input content.
+    If input is raw content, encode then check that output would be same as
+    the input content.
     <div>&#x00A0;</div>
     If input is compressed content, check that output would be same as the
-      original content.
+    original content.
     <div>&#x00A0;</div>
-    Disable decoding.</dd>
+    Disables decoding.</dd>
 </dl>
 <dl class="Bl-tag">
   <dt><b>--quick-check</b></dt>
-  <dd>Do quick coherency checks of the encoded file. It permits to check that
-      the file seems healthy without the time and processor usage of the full
-      check.
+  <dd>Run quick coherency checks of the encoded file. Allows user to check that
+    the file seems healthy without the additional time taken to process the
+    full check command.
     <div>&#x00A0;</div>
     Is ignored in case of compressed content.
     <div>&#x00A0;</div>
@@ -213,10 +287,10 @@
 </dl>
 <dl class="Bl-tag">
   <dt><b>--info</b></dt>
-  <dd>Provide extra information about the compresssed file, for example the
-      presence of hash of the raw data.
+  <dd>Provides extra information about the compressed file, for example the
+    presence of hashes for the raw data.
     <div>&#x00A0;</div>
-    Disable decoding.</dd>
+    Disables encoding and decoding.</dd>
 </dl>
 <dl class="Bl-tag">
   <dt><b>--no-info</b></dt>
@@ -226,34 +300,36 @@
 </dl>
 <dl class="Bl-tag">
   <dt><b>--check-padding</b></dt>
-  <dd>Run padding checks. Be aware check function can be demanding of time and
-      processor usage.
+  <dd>Runs padding checks for DPX files that have no zero padding. Data found in
+    the padding is stored in the RAWcooked reversibility file. Be aware check
+    function can be demanding of time and processor usage.
     <div>&#x00A0;</div>
-    It is a slower process but guarantees reversibility, for example with DPX
-      files that have bits with no zero padding.</dd>
+    It is a slower process but guarantees reversibility.</dd>
 </dl>
 <dl class="Bl-tag">
   <dt><b>--quick-check-padding</b></dt>
   <dd>Switch to --check-padding or --no-check-padding depending on what is found
-      in the first image.
+    in the first image.
     <div>&#x00A0;</div>
-    The program will stop with an error code if --check is not used at the same
-      time and zero-padding bits are in the content, asking to choose what to
-      do.
+    The program will stop with an error code if --check is not used at the
+    same time and zero-padding bits are in the content, asking to choose what
+    to do.
     <div>&#x00A0;</div>
     This is the default, but may change in the future.</dd>
 </dl>
 <dl class="Bl-tag">
   <dt><b>--no-check-padding</b></dt>
   <dd>Do not run padding checks, as they are demanding of time and processor
-      usage.
+    usage.
     <div>&#x00A0;</div>
     This method is quicker, but be aware it may lead to partial reversibility
-      with files that do no conform.</dd>
+    with files that do no conform.</dd>
 </dl>
 <dl class="Bl-tag">
   <dt><b>--coherency</b></dt>
-  <dd>Checks that the package and contents are coherent.
+  <dd>Checks that the package and contents are coherent. For example, is the
+    audio file duration the same as the image sequence duration, or are there
+    gaps in the sequence numbering.
     <div>&#x00A0;</div>
     This is currently partially implemented.
     <div>&#x00A0;</div>
@@ -267,7 +343,9 @@
   <dt><b>--conch</b></dt>
   <dd>Conformance check of the format, effective only when format is supported.
     <div>&#x00A0;</div>
-    This is currently partially implemented for DPX.</dd>
+    This is currently partially implemented for DPX.
+    <div>&#x00A0;</div>
+    Disable encoding and decoding.</dd>
 </dl>
 <dl class="Bl-tag">
   <dt><b>--no-conch</b></dt>
@@ -296,10 +374,26 @@
   <dd>Do not carry out encode (see above).</dd>
 </dl>
 <dl class="Bl-tag">
-  <dt><b>--hash</b></dt>
-  <dd>Compute the hash of audio-visual RAW data files.
+  <dt><b>--edit</b> <i>key=value</i></dt>
+  <dd>Edit audio-visual RAW data.
     <div>&#x00A0;</div>
-    This permits a reversibility check without the original files.</dd>
+    Valid keys are listed by using --help-edit option.
+    <div>&#x00A0;</div>
+    All other features are deactivated when using this option.</dd>
+</dl>
+<dl class="Bl-tag">
+  <dt><b>--hash</b></dt>
+  <dd>Computes the hash of audio-visual RAW data files.
+    <div>&#x00A0;</div>
+    During encoding it computes a hash for each file within a source folder
+    and stores this within the RAWcooked reversibility metadata for comparison
+    during --check or --check-padding.
+    <div>&#x00A0;</div>
+    During decoding of a matroska with hashes in the metadata the file is
+    decoded and new hashes generated for the which are then tested against the
+    source file hashes stored in the metadata. Any issues raised by this check
+    is considered a decoding error. This permits a reversibility check without
+    the original files.</dd>
 </dl>
 <dl class="Bl-tag">
   <dt><b>--no-hash</b></dt>
@@ -314,105 +408,150 @@
     See FFmpeg framemd5 documentation for more information.</dd>
 </dl>
 <dl class="Bl-tag">
-  <dt><b>--framemd5-name <i>value</i></b></dt>
+  <dt><b>--framemd5-an</b></dt>
+  <dd>Disable audio streams in framemd5 output.
+    <div>&#x00A0;</div>
+    Imply --framemd5.</dd>
+</dl>
+<dl class="Bl-tag">
+  <dt><b>--framemd5-name</b> <i>value</i></dt>
   <dd>Set the name of the framemd5 file to <i>value</i>.
+    <div>&#x00A0;</div>
+    Imply --framemd5.
     <div>&#x00A0;</div>
     Default value is <i>${Input}.framemd5</i>.</dd>
 </dl>
 <dl class="Bl-tag">
   <dt><b>--no-framemd5</b></dt>
-  <dd>Do not compute of framemd5 of input frames. (see above).&quot;
+  <dd>Do not compute the framemd5 of input frames. (see above).
     <div>&#x00A0;</div>
     Is default.</dd>
 </dl>
-<h2 class="Ss" title="Ss" id="INPUT_RELATED_OPTIONS"><a class="permalink" href="#INPUT_RELATED_OPTIONS">INPUT
-  RELATED OPTIONS</a></h2>
+<dl class="Bl-tag">
+  <dt><b>--accept-gaps</b></dt>
+  <dd>Use if there are missing files within the sequence numbering. RAWcooked
+    creates a concatenated list of all files ensuring the sequence can be
+    encoded.</dd>
+</dl>
+<dl class="Bl-tag">
+  <dt><b>--no-accept-gaps</b></dt>
+  <dd>Do not accept-gaps within the sequence numbering. FFmpeg will fail any
+    encoding attempts where gaps are present.</dd>
+</dl>
+<h2 class="Ss" title="Ss" id="INPUT_RELATED_OPTIONS"><a class="permalink" href="#INPUT_RELATED_OPTIONS">INPUT RELATED OPTIONS</a></h2>
 <dl class="Bl-tag">
   <dt><b>--file</b></dt>
   <dd>Unlock the compression of files, for example with .dpx or .wav.</dd>
 </dl>
 <dl class="Bl-tag">
-  <dt><b>-framerate <i>value</i></b></dt>
+  <dt><b>-framerate</b> <i>value</i></dt>
   <dd>Force the video frame rate value to <i>value</i>.
     <div>&#x00A0;</div>
-    Default frame rate value is found in the image file metadata, if available.
-      Otherwise it will default to <i>24</i>.</dd>
+    Default frame rate value is found in the image file metadata, if
+    available. Otherwise it will default to <i>24</i>.</dd>
 </dl>
-<h2 class="Ss" title="Ss" id="ENCODING_RELATED_OPTIONS"><a class="permalink" href="#ENCODING_RELATED_OPTIONS">ENCODING
-  RELATED OPTIONS</a></h2>
+<h2 class="Ss" title="Ss" id="ENCODING_RELATED_OPTIONS"><a class="permalink" href="#ENCODING_RELATED_OPTIONS">ENCODING RELATED OPTIONS</a></h2>
 <dl class="Bl-tag">
-  <dt><b>-c:a <i>value</i></b></dt>
+  <dt><b>-c:a</b> <i>value</i></dt>
   <dd>Use this command to force the audio encoding format to <i>value</i>:
-      <i>copy</i> (for example copy PCM to PCM, without modification),
-      <i>FLAC</i>
+    <i>copy</i> (for example copy PCM to PCM, without modification),
+    <i>FLAC</i>
     <div>&#x00A0;</div>
     The default value is <i>FLAC</i>.</dd>
 </dl>
 <dl class="Bl-tag">
-  <dt><b>-c:v <i>value</i></b></dt>
+  <dt><b>-c:v</b> <i>value</i></dt>
   <dd>Force the video encoding format <i>value</i>: only <i>ffv1</i> is
-      currently allowed, which is the default value.</dd>
+    currently allowed, which is the default value.</dd>
 </dl>
 <dl class="Bl-tag">
-  <dt><b>-coder <i>value</i></b></dt>
+  <dt><b>-coder</b> <i>value</i></dt>
   <dd>If video encoding format is <i>ffv1</i>, set the Coder to <i>value</i>:
-      <i>0</i> (Golomb-Rice), <i>1</i> (Range Coder), <i>2</i> (Range Coder with
-      custom state transition table).
+    <i>0</i> (Golomb-Rice), <i>1</i> (Range Coder), <i>2</i> (Range Coder with
+    custom state transition table).
     <div>&#x00A0;</div>
     The default value is <i>1</i>.</dd>
 </dl>
 <dl class="Bl-tag">
-  <dt><b>-context <i>value</i></b></dt>
+  <dt><b>-context</b> <i>value</i></dt>
   <dd>If the video encoding format is <i>ffv1</i>, set the Context to
-      <i>value</i>: <i>0</i> (small), <i>1</i> (large).
+    <i>value</i>: <i>0</i> (small), <i>1</i> (large).
     <div>&#x00A0;</div>
     The default value is <i>0</i>.</dd>
 </dl>
 <dl class="Bl-tag">
-  <dt><b>-format <i>value</i></b></dt>
+  <dt><b>-format</b> <i>value</i></dt>
   <dd>Set the container format to <i>value</i>: only <i>matroska</i> is
-      currently allowed, which is the default value.</dd>
+    currently allowed, which is the default value.</dd>
 </dl>
 <dl class="Bl-tag">
-  <dt><b>-g <i>value</i></b></dt>
+  <dt><b>-g</b> <i>value</i></dt>
   <dd>If video encoding format is <i>ffv1</i>, set the GOP size to <i>value</i>
-      <i>1</i> (generates a strict intra-frame bitstream), <i>0</i> (allows
-      adaptable context model across frames).
+    <i>1</i> (generates a strict intra-frame bitstream), <i>0</i> (allows
+    adaptable context model across frames).
     <div>&#x00A0;</div>
-    The default value is <i>1</i>. Ensure you leave the setting at <i>1</i> for
-      archival use.</dd>
+    The default value is <i>1</i>. Ensure you leave the setting at <i>1</i>
+    for archival use.</dd>
 </dl>
 <dl class="Bl-tag">
-  <dt><b>-level <i>value</i></b></dt>
+  <dt><b>-level</b> <i>value</i></dt>
   <dd>The video encoding format <i>ffv1</i> can have Version set to
-      <i>value</i>: <i>0</i>, <i>1</i>, <i>3</i>.
+    <i>value</i>: <i>0</i>, <i>1</i>, <i>3</i>.
     <div>&#x00A0;</div>
     The default value is the latest version <i>3</i>.</dd>
 </dl>
 <dl class="Bl-tag">
-  <dt><b>-slicecrc <i>value</i></b></dt>
+  <dt><b>-slicecrc</b> <i>value</i></dt>
   <dd>If video encoding format is <i>ffv1</i>, you can set the CRC checksum to
-      <i>value</i>: <i>0</i> (CRC checksums off), <i>1</i> (CRC checksum on).
+    <i>value</i>: <i>0</i> (CRC checksums off), <i>1</i> (CRC checksum on).
     <div>&#x00A0;</div>
     The default value is <i>1</i>.</dd>
 </dl>
 <dl class="Bl-tag">
-  <dt><b>-slices <i>value</i></b></dt>
+  <dt><b>-slices</b> <i>value</i></dt>
   <dd>If the video encoding format is <i>ffv1</i>, you can set the multithreaded
-      encoding slices to <i>value</i>: any integer over 1 (it is recommended to
-      use a figure divisible by your workstations CPU core processors such as 2,
-      4, 6, 9, 16, 24...).
+    encoding slices to <i>value</i>: any integer over 1 (it is recommended to
+    use a figure divisible by your workstations CPU core processors such as 2,
+    4, 6, 9, 16, 24...).
     <div>&#x00A0;</div>
-    The default value is variable between <i>16</i> and <i>512</i>, depending on
-      the video frame size and depth.</dd>
+    The default value is variable between <i>16</i> and <i>512</i>, depending
+    on the video frame size and depth.
+    <div>&#x00A0;</div>
+    If the video encoder is ffv1_vulkan, the default value is the FFmpeg
+    default value.</dd>
 </dl>
+<h1 class="Sh" title="Sh" id="EXAMPLE:_Encoding_using_the_--all_action"><a class="permalink" href="#EXAMPLE:_Encoding_using_the_--all_action">EXAMPLE: Encoding using the --all action</a></h1>
+<b>rawcooked --all /path_to_av_raw_data/</b> This command comprises several
+  commands into one '--all' (see above) that ensures safe image sequence
+  encoding steps are taken. Please see individual flag differences to
+  understand the differences between its use during encoding and decoding.
+  <br>
+  It can be used in conjunction with opposing commands. For example if you
+  want to use this command without --conch, you can add --no-conch after the
+  --all and the conch command will be skipped.
+<h1 class="Sh" title="Sh" id="EXAMPLE:_Custom_encoding_with_export_of_console_messages_to_log_file"><a class="permalink" href="#EXAMPLE:_Custom_encoding_with_export_of_console_messages_to_log_file">EXAMPLE: Custom encoding with export of console messages to log file</a></h1>
+<b>rawcooked --check --coherency --conch --hash --encode -framerate 24
+  /path_to_av_raw_data/ &gt;&gt; RAWcooked_encoding.log</b> If you want to
+  retain the console output of the RAWcooked encoding or decoding processes,
+  you can set the stdout to a separate log file. This option is useful if
+  you're automating batch encodings and need to assess the log outputs to make
+  decisions within the logic of your code.
+<h1 class="Sh" title="Sh" id="EXAMPLE:_Decoding_using_--all_action"><a class="permalink" href="#EXAMPLE:_Decoding_using_--all_action">EXAMPLE: Decoding using --all action</a></h1>
+<b>rawcooked --all &lt;file.mkv&gt;</b> This command works the same as the
+  encoding of raw audio-visual data, but decodes the Matroska file back to
+  it's original raw state. Please see individual flag differences (above) to
+  understand the differences between its use during encoding and decoding.
+  <br>
+  It can be used in conjunction with opposing commands. For example if you
+  want to use this command without --conch, you can add --no-conch after the
+  --all and the conch command will be skipped.
 <h1 class="Sh" title="Sh" id="COPYRIGHT"><a class="permalink" href="#COPYRIGHT">COPYRIGHT</a></h1>
-Copyright (c) 2018-2020 MediaArea.net SARL &amp; AV Preservation by reto.ch
+Copyright (c) 2018-2026 MediaArea.net SARL &amp; Reto Kromer
 <h1 class="Sh" title="Sh" id="LICENSE"><a class="permalink" href="#LICENSE">LICENSE</a></h1>
 <b>RAWcooked</b> is released under a BSD License.
 <h1 class="Sh" title="Sh" id="DISCLAIMER"><a class="permalink" href="#DISCLAIMER">DISCLAIMER</a></h1>
-<b>RAWcooked</b> is provided &quot;as is&quot; without warranty or support of
-  any kind.</div>
+<b>RAWcooked</b> is provided &quot;as is&quot; without warranty or support
+  of any kind.</div>
 <div>
 <br>
 <table class="foot">
