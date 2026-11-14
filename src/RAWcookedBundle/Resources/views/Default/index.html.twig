@@ -43,28 +43,56 @@
 {% set docUrl = 'https://github.com/MediaArea/RAWcooked/blob/main/' %}
 {% set ffmpegUrl = 'https://mediaarea.net/download/snapshots/binary/ffmpeg/latest/' %}
 
+{% set sponsors = [
+    {name: 'CNA (National Audiovisual Centre of Luxembourg)', url: 'http://www.cna.public.lu'},
+    {name: 'IFI (Irish Film Institute)', url: 'http://ifi.ie'},
+    {name: 'Nasjonalbiblioteket (National Library of Norway)', url: 'https://www.nb.no'},
+    {name: 'Northwestern University Libraries', url: 'http://www.library.northwestern.edu'},
+    {name: 'National Library of Wales', url: 'https://www.library.wales'},
+    {name: 'Walter J. Brown Media Archives', url: 'https://bmac.libs.uga.edu/pawtucket2/'},
+    {name: 'The MediaPreserve', url: 'https://ptlp.com/en/mediapreserve/overview/latest-news/'},
+    {name: 'British Film Institute', url: 'https://www.bfi.org.uk'},
+    {name: 'New York Public Library', url: 'https://www.nypl.org/'},
+    {name: 'National Film Archive Prague', url: 'https://nfa.cz'},
+    {name: 'Preserve South', url: 'https://www.preservesouth.com'},
+    {name: 'Memnon', url: 'https://memnon.com'},
+    {name: 'ELEMENTS', url: 'https://elements.tv'},
+    {name: 'Stanford Libraries', url: 'https://library.stanford.edu'},
+    {name: 'Friedrich-Ebert-Stiftung', url: 'https://www.fes.de'},
+    {name: 'National Film Archive Hungary', url: 'https://nfi.hu/en/film-archive'},
+    {name: 'State Library of New South Wales', url: 'https://www.sl.nsw.gov.au'},
+    {name: 'VRT', url: 'https://www.vrt.be'},
+    {name: 'Jerusalem Cinematheque', url: 'https://jfc.org.il/en'},
+    {name: 'Academy of Motion Picture Arts and Sciences', url: 'https://www.oscars.org'},
+    {name: 'MWA Services', url: 'https://mwa-services.net'},
+    {name: 'National Library of Scotland', url: 'https://www.nls.uk'},
+] %}
+
 <section class="download-wrapper">
     <div class="row reorder-xs">
-        <div class="v-align carousel-padding-xs col-xs-12 col-sm-5">
+        <div class="v-align carousel-padding-xs col-xs-12 col-sm-3">
             <div>
-            {% image '@RAWcookedBundle/Resources/public/img/RAWcooked_256.png' %}
-                <img src="{{ asset_url }}" alt="RAWcooked logo" class="img-responsive center-xs" title="RAWcooked logo">
+            {% image '@RAWcookedBundle/Resources/public/img/RAWcooked.svg' %}
+                <img src="{{ asset_url }}" alt="RAWcooked logo" class="img-responsive center-xs" title="RAWcooked logo" width="256" height="256">
             {% endimage %}
             </div>
         </div>
-        <div class="v-align col-sm-7">
+        <div class="v-align col-sm-9">
             <div class="center-font-xs">
                 <h1 class="v-align bigtitle">RAWcooked</h1>
             </div>
             <div class="projectDescription center-font-xs">
-                <strong>RAWcooked</strong> easily encodes RAW audio-visual sequences into a lossless video stream, reducing the file size by between one and two thirds. FFmpeg encodes the audio-visual data into a Matroska container (MKV) using the video codec FFV1, and audio codec FLAC. The metadata accompanying the RAW data is fully preserved, along with additional sidecar files such as MD5 checksums, LUT or XML if desired. This allows for the management of these audio-visual file formats in an effective and transparent way. The lossless Matroska audio and video streams can be played in VLC or MPV media players, and writing and retrieving from storage devices such as LTO is significantly quicker.<br>
-                If you need to use the RAW source in its original form, one line of code will easily restore it <b>bit-by-bit</b>, faster than retrieving the same file from LTO tape storage.
+                <strong>RAWcooked</strong> easily encodes RAW audio-visual sequences into a lossless video stream, reducing the file size by between one and two thirds.
             </div>
-            <br>
+            <ul class="projectDescription key-points">
+                <li>FFmpeg encodes the audio-visual data into a Matroska container (MKV) using the video codec FFV1, and audio codec FLAC.</li>
+                <li>The metadata accompanying the RAW data is fully preserved, along with additional sidecar files such as MD5 checksums, LUT or XML if desired. This allows for the management of these audio-visual file formats in an effective and transparent way.</li>
+                <li>The lossless Matroska audio and video streams can be played in VLC or MPV media players, and writing and retrieving from storage devices such as LTO is significantly quicker.</li>
+                <li>If you need to use the RAW source in its original form, one line of code will easily restore it <b>bit-by-bit</b>, faster than retrieving the same file from LTO tape storage.</li>
+            </ul>
             <div class="projectDescription center-font-xs">
-                Sponsored by <a href="https://reto.ch">AV Preservation by reto.ch</a> with support from <a href="http://www.cna.public.lu">CNA (National Audiovisual Centre of Luxembourg)</a>, <a href="http://ifi.ie">IFI (Irish Film Institute)</a>, <a href="https://www.nb.no">Nasjonalbiblioteket (National Library of Norway)</a>, <a href="http://www.library.northwestern.edu">Northwestern University Libraries</a>, <a href="https://www.library.wales">National Library of Wales</a>, <a href="https://bmac.libs.uga.edu/pawtucket2/">Walter J. Brown Media Archives</a>, <a href="https://ptlp.com/en/mediapreserve/overview/latest-news/">The MediaPreserve</a>, <a href="https://www.bfi.org.uk">British Film Institute</a>, <a href="https://www.nypl.org/">New York Public Library</a>, <a href="https://nfa.cz">National Film Archive Prague</a>, <a href="https://www.preservesouth.com">Preserve South</a>, <a href="https://memnon.com">Memnon</a>, <a href="https://elements.tv">ELEMENTS</a>, <a href="https://library.stanford.edu">Stanford Libraries</a>, <a href="https://www.fes.de">Friedrich-Ebert-Stiftung</a>, <a href="https://nfi.hu/en/film-archive">National Film Archive Hungary</a>, <a href="https://www.sl.nsw.gov.au">State Library of New South Wales</a>, <a href="https://www.vrt.be">VRT</a>, <a href="https://jfc.org.il/en">Jerusalem Cinematheque</a>, <a href="https://www.oscars.org">Academy of Motion Picture Arts and Sciences</a>, <a href="https://mwa-services.net">MWA Services</a>, <a href="https://www.nls.uk">National Library of Scotland</a>; designed, led and fully developed by MediaArea.
+                Sponsored by <a href="https://reto.ch">AV Preservation by reto.ch</a> with support from <a href="#sponsors">several institutions</a>; designed, led and fully developed by MediaArea.
             </div>
-            <br>
             <div class="projectDescription center-font-xs">
                 RAWcooked uses FFmpeg for the encoding, see <a href="#ffmpeg">how to install FFmpeg</a>.
             </div>
@@ -131,9 +159,31 @@
             </div>
         </div>
     </div>
+    <div class="page-text sponsors-block" id="sponsors">
+        <p>Institutions supporting RAWcooked:</p>
+        <ul class="sponsors">
+        {% for sponsor in sponsors %}
+            <li><a href="{{ sponsor.url }}">{{ sponsor.name }}</a></li>
+        {% endfor %}
+            <li>and more</li>
+        </ul>
+    </div>
 </section>
 
-<section>
+<ul class="page-nav">
+    <li><a href="#about">About</a></li>
+    <li><a href="#status">Status</a></li>
+    <li><a href="#ffmpeg">FFmpeg</a></li>
+    <li><a href="#input">Input formats</a></li>
+    <li><a href="#output">Output formats and features</a></li>
+    <li><a href="#funding">Funding plan</a></li>
+    <li><a href="#license">License</a></li>
+</ul>
+
+<div class="page-text">
+<section id="about">
+<div class="row">
+<div class="col-md-6">
 <h2>The challenges of archival storage</h2>
 <p>Many archives preserve their scanned films as TIFF or DPX image sequences. These are grouped as multiple film reels, or individual reels in folders that are often TAR or ZIP wrapped before being copied to longterm storage. Since the beginning of digital moving image preservation it has been the dream of many archives to have a single file format that is suitable for the preservation of both film and video.</p>
 <p>For further context:</p>
@@ -141,11 +191,19 @@
 <li>Reto Kromer: «<a href="https://retokromer.ch/publications/JFP_96.html" target="_blank">Matroska and FFV1: One File Format for Film and Video Archiving?</a>», in <i>Journal of Film Preservation</i>, n. 96 (April 2017)</li>
 <li>Kieran O’Leary: «<a href="https://kieranjol.wordpress.com/2016/10/07/introduction-to-ffv1-and-matroska-for-film-scans/" target="_blank">Introduction to FFV1 and Matroska for Film Scans</a>», 2016–10–07</li>
 </ul>
+</div>
+<div class="col-md-6">
 <h2>The missing piece of software</h2>
 <p>The solution MediaArea have created to meet this need is <i>RAWcooked</i>. This software encodes from, and decodes to, «raw» audio-visual image sequences in a revolutionary and transparent way. The image and/or sound content, including all the embedded metadata and sidecar files, are fully preserved at the bit level.<br>
 An otherwise unviewable image sequence can be viewed easily with VLC or MPV when encoded as a Matroska file. Plus this process is fully reversible returning your image sequence back to its original package content.</p>
+</div>
+</div>
+<div class="row">
+<div class="col-md-6">
 <h2>Matroska file complete reversibility</h2>
 <p>Whenever necessary, <i>RAWcooked</i> can decode the Matroska file back to the original RAW image sequence, including restoration of the original metadata and sidecar files. It is important to stress that the encoded files can be fully decoded, and that this process creates files which are bit-by-bit identical to the originals. Not only is the image and/or sound content fully preserved, but also all enclosed metadata and all of the file’s characteristics. Therefore, an encoded and decoded RAW file cannot be differentiated from its original.</p>
+</div>
+<div class="col-md-6">
 <h2>A complete ecosystem</h2>
 <p>The Matroska files that have been encoded by <i>RAWcooked</i> can be used with many popular open source softwares which support FFV1 and FLAC playback, including:</p>
 <ul>
@@ -156,6 +214,8 @@ An otherwise unviewable image sequence can be viewed easily with VLC or MPV when
 <li><a href="{{ path('mc_home') }}">MediaConch</a> for checking the conformance of a file</li>
 </ul>
 <p>Being open source, they’re low cost (and free for the many commonly used flavors) allowing archives with limited resources to process the files encoded by <i>RAWcooked</i> on any computer, such as for cataloging or access purposes.</p>
+</div>
+</div>
 </section>
 
 <section>
@@ -174,11 +234,23 @@ An otherwise unviewable image sequence can be viewed easily with VLC or MPV when
 <h2 id="ffmpeg">FFmpeg</h2>
 <p>RAWcooked needs FFmpeg for the encoding. Any FFmpeg with the FFV1 and FLAC encoders may be used if <code>ffmpeg</code> is in the PATH (e.g. the FFmpeg of your Linux distribution or of Homebrew), and the <code>-b</code> option selects another FFmpeg binary.</p>
 <p>{{ rc.newMark(new) }} We recommend the <a href="{{ ffmpegUrl }}">FFmpeg builds of MediaArea</a>: they have GPU support and RAWcooked finds them automatically. Their libraries are also used by RAWcooked for decoding with the GPU.</p>
-<ul class="flavors-notes">
-<li><b>Windows</b>: create a <code>ffmpeg</code> directory beside <code>rawcooked.exe</code> and put the content of <a href="{{ ffmpegUrl }}FFmpeg_Bin_Latest_Windows_Shared_x64.zip">FFmpeg_Bin_Latest_Windows_Shared_x64.zip</a> in it (<code>ffmpeg.exe</code> is then in <code>ffmpeg\bin</code>). The Static package has no library, so no decoding with the GPU. The GPU support uses the Vulkan driver installed with the driver of the graphics card (NVIDIA, AMD or Intel).</li>
-<li><b>macOS</b>: create a <code>ffmpeg</code> directory beside <code>rawcooked</code> and put the content of <a href="{{ ffmpegUrl }}FFmpeg_Bin_Latest_Mac_Shared_universal.zip">FFmpeg_Bin_Latest_Mac_Shared_universal.zip</a> in it (<code>ffmpeg</code> is then in <code>ffmpeg/bin</code>), or run the installer of <a href="{{ ffmpegUrl }}ffmpeg-ma_Latest_Mac.dmg">ffmpeg-ma_Latest_Mac.dmg</a>. The GPU support needs a Mac with Apple silicon and macOS 26 or later, the Vulkan driver is in both packages.</li>
-<li><b>Linux</b>: install the <code>ffmpeg-ma</code> package of your distribution from <a href="{{ ffmpegUrl }}">the list of builds</a>, it does not replace the FFmpeg of the distribution. The GPU support uses the Vulkan driver of the graphics card (driver of NVIDIA, or Mesa for AMD and Intel).</li>
-</ul>
+<div class="row">
+<div class="col-md-4">
+<h3>Windows</h3>
+<p>Create a <code>ffmpeg</code> directory beside <code>rawcooked.exe</code> and put the content of <a href="{{ ffmpegUrl }}FFmpeg_Bin_Latest_Windows_Shared_x64.zip">FFmpeg_<wbr>Bin_<wbr>Latest_<wbr>Windows_<wbr>Shared_<wbr>x64.zip</a> in it (<code>ffmpeg.exe</code> is then in <code>ffmpeg\bin</code>).</p>
+<p>The Static package has no library, so no decoding with the GPU. The GPU support uses the Vulkan driver installed with the driver of the graphics card (NVIDIA, AMD or Intel).</p>
+</div>
+<div class="col-md-4">
+<h3>macOS</h3>
+<p>Create a <code>ffmpeg</code> directory beside <code>rawcooked</code> and put the content of <a href="{{ ffmpegUrl }}FFmpeg_Bin_Latest_Mac_Shared_universal.zip">FFmpeg_<wbr>Bin_<wbr>Latest_<wbr>Mac_<wbr>Shared_<wbr>universal.zip</a> in it (<code>ffmpeg</code> is then in <code>ffmpeg/bin</code>), or run the installer of <a href="{{ ffmpegUrl }}ffmpeg-ma_Latest_Mac.dmg">ffmpeg-ma_<wbr>Latest_<wbr>Mac.dmg</a>.</p>
+<p>The GPU support needs a Mac with Apple silicon and macOS 26 or later, the Vulkan driver is in both packages.</p>
+</div>
+<div class="col-md-4">
+<h3>Linux</h3>
+<p>Install the <code>ffmpeg-ma</code> package of your distribution from <a href="{{ ffmpegUrl }}">the list of builds</a>, it does not replace the FFmpeg of the distribution.</p>
+<p>The GPU support uses the Vulkan driver of the graphics card (driver of NVIDIA, or Mesa for AMD and Intel).</p>
+</div>
+</div>
 <p>More details are in the <a href="https://github.com/MediaArea/RAWcooked#ffmpeg">README</a>, and <code>--show-stats</code> shows if the GPU is used.</p>
 </section>
 
@@ -532,7 +604,8 @@ An otherwise unviewable image sequence can be viewed easily with VLC or MPV when
 <p>The price is 1000&nbsp;&euro; for basic support including bug fixes and one additional flavor, then 500&nbsp;&euro; for each following flavor which can be added later if you are not sure of how many you need immediately.</p>
 <p>The key is stored with <code>rawcooked --store-license <i>key</i></code>, and <code>rawcooked --show-license</code> lists the licensed flavors and features.</p>
 
-    <h2>License:</h2>
-    <p>It is <a href="https://en.wikipedia.org/wiki/Open_source">Open-Source</a> software which means that end users and developers have the freedom to study, improve and redistribute the program (<a href="{{ docUrl }}LICENSE">BSD 2-Clause license</a> for the code developed by MediaArea).</p>
+<h2 id="license">License</h2>
+<p>It is <a href="https://en.wikipedia.org/wiki/Open_source">Open-Source</a> software which means that end users and developers have the freedom to study, improve and redistribute the program (<a href="{{ docUrl }}LICENSE">BSD 2-Clause license</a> for the code developed by MediaArea).</p>
 </section>
+</div>
 {% endblock %}
