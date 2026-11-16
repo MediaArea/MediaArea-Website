@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+  <title>RAWcooked</title>
+  <style>
+    .pot { fill: #262626; }
+    .steam { fill: none; stroke-width: 11; stroke-linecap: round; }
+    .r { stroke: #E5484D; }
+    .g { stroke: #2FA968; }
+    .b { stroke: #3B7DF0; }
+    @media (prefers-color-scheme: dark) {
+      .pot { fill: #ECECEC; }
+      .r { stroke: #FF6B70; }
+      .g { stroke: #46C487; }
+      .b { stroke: #5C9DFF; }
+    }
+  </style>
+  <defs>
+    <!-- Holes of the film: perforations, a complete frame in the middle and the frames before and after it, cut as the film runs -->
+    <mask id="film" maskUnits="userSpaceOnUse" x="0" y="0" width="256" height="256">
+      <rect width="256" height="256" fill="#fff"/>
+      <g fill="#000">
+        <rect x="55.5" y="134" width="10" height="10" rx="2.5"/>
+        <rect x="70.5" y="134" width="10" height="10" rx="2.5"/>
+        <rect x="85.5" y="134" width="10" height="10" rx="2.5"/>
+        <rect x="100.5" y="134" width="10" height="10" rx="2.5"/>
+        <rect x="115.5" y="134" width="10" height="10" rx="2.5"/>
+        <rect x="130.5" y="134" width="10" height="10" rx="2.5"/>
+        <rect x="145.5" y="134" width="10" height="10" rx="2.5"/>
+        <rect x="160.5" y="134" width="10" height="10" rx="2.5"/>
+        <rect x="175.5" y="134" width="10" height="10" rx="2.5"/>
+        <rect x="190.5" y="134" width="10" height="10" rx="2.5"/>
+        <rect x="55.5" y="188" width="10" height="10" rx="2.5"/>
+        <rect x="70.5" y="188" width="10" height="10" rx="2.5"/>
+        <rect x="85.5" y="188" width="10" height="10" rx="2.5"/>
+        <rect x="100.5" y="188" width="10" height="10" rx="2.5"/>
+        <rect x="115.5" y="188" width="10" height="10" rx="2.5"/>
+        <rect x="130.5" y="188" width="10" height="10" rx="2.5"/>
+        <rect x="145.5" y="188" width="10" height="10" rx="2.5"/>
+        <rect x="160.5" y="188" width="10" height="10" rx="2.5"/>
+        <rect x="175.5" y="188" width="10" height="10" rx="2.5"/>
+        <rect x="190.5" y="188" width="10" height="10" rx="2.5"/>
+      </g>
+      <g fill="none" stroke="#000" stroke-width="3.5">
+        <path d="M56 153H88a6 6 0 0 1 6 6V173a6 6 0 0 1-6 6H56"/>
+        <rect x="102" y="153" width="52" height="26" rx="6"/>
+        <path d="M200 153H168a6 6 0 0 0-6 6V173a6 6 0 0 0 6 6H200"/>
+      </g>
+    </mask>
+  </defs>
+  <!-- A cooking pot which is a film strip, with R, G and B steam -->
+  <g transform="translate(0 12)">
+    <path class="steam r" d="M88 100c-12-9 12-19 0-28c-12-9 12-19 0-28"/>
+    <path class="steam g" d="M128 100c-14-12 14-26 0-38c-14-12 14-26 0-38"/>
+    <path class="steam b" d="M168 100c-12-9 12-19 0-28c-12-9 12-19 0-28"/>
+    <g class="pot">
+      <!-- Handles: square end into the side of the pot, on the axis of the upper perforations -->
+      <path d="M50 131H20a8 8 0 0 0 0 16H50Z"/>
+      <path d="M206 131H236a8 8 0 0 1 0 16H206Z"/>
+      <rect x="34" y="112" width="188" height="14" rx="7"/>
+      <path d="M46 119H210V188a22 22 0 0 1-22 22H68a22 22 0 0 1-22-22Z" mask="url(#film)"/>
+    </g>
+  </g>
+</svg>
