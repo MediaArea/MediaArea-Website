@@ -2,69 +2,1234 @@
 <xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
   <file source-language="en" datatype="plaintext" original="file.ext" target-language="ja">
     <body>
-      <trans-unit id="1" approved="yes">
-        <source><![CDATA[about.screenshot_img.title]]></source>
-        <target><![CDATA[スクリーン ショット - メイン インターフェイス]]></target>
-      </trans-unit>
-      <trans-unit id="2" approved="yes">
-        <source><![CDATA[about.what.title]]></source>
-        <target><![CDATA[MediaInfo とは?]]></target>
-      </trans-unit>
-      <trans-unit id="3" approved="yes">
-        <source><![CDATA[about.what.content]]></source>
-        <target><![CDATA[<strong>MediaInfo</strong> はビデオ、オーディオ ファイルが使用するコーデックについてのタグ及び技術的な詳細情報を調査し見易くフレンドリーな形式でイクスポートできるツールです<br/>     MediaInfo は<strong>フリー</strong>です ( <strong>無料</strong>で使用できて     <strong>自由</strong>にソースコードへアクセスできることを意味します: 適用ライセンスは <a href="%licenseRoute%">BSD</a> です )]]></target>
-      </trans-unit>
-      <trans-unit id="4" approved="yes">
-        <source><![CDATA[about.data.title]]></source>
-        <target><![CDATA[MediaInfo で調査できる情報は？]]></target>
-      </trans-unit>
-      <trans-unit id="5" approved="yes">
-        <source><![CDATA[about.data.content]]></source>
-        <target><![CDATA[<ul>  <li>全般情報: タイトル, 製作者, ディレクター, アルバム, トラック番号, 日付, プレイ時間...</li>  <li>ビデオ: コーデック, 解像度, fps, ビットレート...</li>  <li>オーディオ: コーデック, サンプル レート, チャンネル, 言語, ビット レート...</li>  <li>テキスト: 字幕の言語</li>  <li>チャプター: チャプター番号、チャプターリスト</li> </ul>]]></target>
-      </trans-unit>
-      <trans-unit id="6" approved="yes">
-        <source><![CDATA[about.analyticals.title]]></source>
-        <target><![CDATA[MediaInfo がサポートするフォーマット（コンテナ）は？]]></target>
-      </trans-unit>
       <trans-unit id="7" approved="yes">
-        <source><![CDATA[about.analyticals.content]]></source>
-        <target><![CDATA[<ul>  <li>ビデオ: MKV, OGM, AVI, DivX, WMV, QuickTime, Real, MPEG-1, MPEG-2, MPEG-4, DVD (VOB)...<br/>      (Codecs: DivX, XviD, MSMPEG4, ASP, H.264/AVC, H.265/HEVC, FFV1...)</li>  <li>オーディオ: OGG, MP3, WAV, RA, AC3, DTS, AAC, M4A, AU, AIFF...</li>  <li>字幕: SRT, SSA, ASS, SAMI...</li> </ul>]]></target>
+        <source><![CDATA[about.page.title]]></source>
+        <target><![CDATA[MediaInfo]]></target>
       </trans-unit>
       <trans-unit id="8" approved="yes">
-        <source><![CDATA[about.features.title]]></source>
-        <target><![CDATA[その他、特長はありますか？]]></target>
+        <source><![CDATA[about.page.description]]></source>
+        <target><![CDATA[MediaInfoは、動画や音声ファイルの主な技術情報とタグ情報を統一された形式で手軽に確認できるツールです]]></target>
       </trans-unit>
       <trans-unit id="9" approved="yes">
-        <source><![CDATA[about.features.content]]></source>
-        <target><![CDATA[<ul>  <li>多彩な<a href="%supportFormatRoute%"> ビデオ、オーディオフォーマット</a>を読み込むことが出来ます</li>  <li>異なるメソッドにて好みのビューで閲覧 （テキスト、 シート、 ツリー、 HTML...）</li>  <li>ビューはカスタマイズ可能です</li>  <li>閲覧情報をテキスト、 CSV、 HTML でイクスポート</li>  <li>グラフィカル インターフェイス、コマンド ライン、DLL を用意</li>  <li>MS-Windows のシェルに統合できます （ドラッグ 'n' ドロップとコンテキスト メニュー）</li>  <li>国際化: あなたの OS 言語に併せた表示が可能です</li>  <li>ローカリゼーション（ボランティア募集中）</li> </ul>]]></target>
+        <source><![CDATA[about.page.keywords]]></source>
+        <target><![CDATA[MediaInfo Media Info DLL 情報 タグ コーデック 映像 音声 字幕 チャプター AVI MKV OGM フリー 無料]]></target>
       </trans-unit>
       <trans-unit id="10" approved="yes">
-        <source><![CDATA[about.download.button.text]]></source>
-        <target><![CDATA[ダウンロード]]></target>
+        <source><![CDATA[about.what.title]]></source>
+        <target><![CDATA[MediaInfoとは？]]></target>
       </trans-unit>
       <trans-unit id="11" approved="yes">
+        <source><![CDATA[about.what.content]]></source>
+        <target><![CDATA[<strong>MediaInfo</strong>は、動画や音声ファイルの主な技術情報とタグ情報を統一された形式で手軽に確認できるツールです。]]></target>
+      </trans-unit>
+      <trans-unit id="12" approved="yes">
+        <source><![CDATA[about.data.title]]></source>
+        <target><![CDATA[MediaInfoで表示できる主な情報：]]></target>
+      </trans-unit>
+      <trans-unit id="13" approved="yes">
+        <source><![CDATA[about.data.content]]></source>
+        <target><![CDATA[<ul>
+    <li>コンテナ：フォーマット、プロファイル、フォーマットの商用名、長さ、総ビットレート、書き込みソフトおよび書き込みライブラリ、タイトル、作成者、監督、アルバム、トラック番号、日付...</li>
+    <li>映像：フォーマット、コーデックID、アスペクト比、フレームレート、ビットレート、色空間、クロマサブサンプリング、ビット深度、走査方式、走査順序...</li>
+    <li>音声：フォーマット、コーデックID、サンプルレート、チャンネル、ビット深度、言語、ビットレート...</li>
+    <li>テキスト（字幕）：フォーマット、コーデックID、字幕の言語...</li>
+    <li>チャプター：チャプター数、チャプター一覧...</li>
+</ul>]]></target>
+      </trans-unit>
+      <trans-unit id="14" approved="yes">
+        <source><![CDATA[about.analyticals.title]]></source>
+        <target><![CDATA[MediaInfoの解析対象：]]></target>
+      </trans-unit>
+      <trans-unit id="15" approved="yes">
+        <source><![CDATA[about.analyticals.content]]></source>
+        <target><![CDATA[<ul>
+    <li>コンテナ：MPEG-4、QuickTime、Matroska、AVI、MPEG-PS（プロテクトされていないDVDを含む）、MPEG-TS（プロテクトされていないBlu-rayを含む）、MXF、GXF、LXF、WMV、FLV、Real...</li>
+    <li>タグ：ID3v1、ID3v2、Vorbisコメント、APEタグ...</li>
+    <li>映像：MPEG-1/2 Video、H.263、MPEG-4 Visual（DivX、XviDを含む）、H.264/AVC、H.265/HEVC、FFV1...</li>
+    <li>音声：MPEG Audio（MP3を含む）、AC3、DTS、AAC、Dolby E、AES3、FLAC...</li>
+    <li>字幕：CEA-608、CEA-708、DTVCC、SCTE-20、SCTE-128、ATSC/53、CDP、DVB字幕、テレテキスト、SRT、SSA、ASS、SAMI...</li>
+</ul>]]></target>
+      </trans-unit>
+      <trans-unit id="16" approved="yes">
+        <source><![CDATA[about.features.title]]></source>
+        <target><![CDATA[MediaInfoの主な機能：]]></target>
+      </trans-unit>
+      <trans-unit id="17" approved="yes">
+        <source><![CDATA[about.features.content]]></source>
+        <target><![CDATA[<ul>    <li>多くの<a href="%supportFormatRoute%">動画・音声ファイルフォーマット</a>の読み込みに対応</li>    <li>さまざまな形式（テキスト、シート、ツリー、HTMLなど）で情報を表示</li>    <li>表示形式のカスタマイズ</li>    <li>情報をテキスト、CSV、HTMLなどとしてエクスポート</li>    <li>GUI版、コマンドライン版（CLI）、またはライブラリ版（.dll / .so / .dylib）を提供</li>    <li>シェル統合（ドラッグ＆ドロップ、右クリックメニュー）</li>    <li>国際化対応：あらゆるOSでさまざまな言語を表示可能</li>    <li>ローカライズ対応（翻訳協力者を募集しています。ぜひ<a href="%contact%">お問い合わせ</a>ください！）</li></ul>]]></target>
+      </trans-unit>
+      <trans-unit id="18" approved="yes">
+        <source><![CDATA[about.license.title]]></source>
+        <target><![CDATA[ライセンス：]]></target>
+      </trans-unit>
+      <trans-unit id="19" approved="yes">
+        <source><![CDATA[about.license.content]]></source>
+        <target><![CDATA[これは<a href="https://en.wikipedia.org/wiki/Open_source">オープンソース</a>ソフトウェアであり、エンドユーザーおよび開発者は、プログラムを自由に調査・改良・再配布することができます（<a href="%licenseRoute%">BSD系ライセンス</a>）。]]></target>
+      </trans-unit>
+      <trans-unit id="22" approved="yes">
+        <source><![CDATA[about.screenshot_img.alt]]></source>
+        <target><![CDATA[メイン画面]]></target>
+      </trans-unit>
+      <trans-unit id="23" approved="yes">
+        <source><![CDATA[about.screenshot_img.title]]></source>
+        <target><![CDATA[スクリーンショット - メイン画面]]></target>
+      </trans-unit>
+      <trans-unit id="24" approved="yes">
+        <source><![CDATA[support.page.title]]></source>
+        <target><![CDATA[MediaInfo - サポート]]></target>
+      </trans-unit>
+      <trans-unit id="25" approved="yes">
+        <source><![CDATA[support.title]]></source>
+        <target><![CDATA[サポート]]></target>
+      </trans-unit>
+      <trans-unit id="26" approved="yes">
+        <source><![CDATA[support.content]]></source>
+        <target><![CDATA[一般ユーザー向け：
+<ul>
+    <li>まずは<a href="%supportFaqRoute%">よくある質問（FAQ）</a>をご確認ください。</li>
+    <li>解決しない場合は、SourceForgeの<a href="https://sourceforge.net/p/mediainfo/bugs/">バグ報告</a>または<a href="https://sourceforge.net/p/mediainfo/feature-requests/">機能リクエスト</a>からご報告いただくか、GitHubの<a href="https://github.com/MediaArea/MediaInfoLib/issues">MediaInfoLib Issueトラッカー</a>（ファイル検出に関する問題）または<a href="https://github.com/MediaArea/MediaInfo/issues">MediaInfo Issueトラッカー</a>（CLIやGUIに関する問題）をご利用ください。</li>
+    <li>その他のご質問には<a href="https://sourceforge.net/p/mediainfo/discussion/">フォーラム</a>もご利用いただけます。</li>
+</ul>
+より詳しい技術情報はこちらをご覧ください：
+<ul>
+    <li><a href="%supportFieldsRoute%">MediaInfoの項目一覧（および他のエクスポート形式へのマッピング）</a></li>
+    <li><a href="%supportFormatRoute%">対応フォーマット一覧</a></li>
+    <li><a href="%supportTagsRoute%">対応タグ一覧</a></li>
+</ul>
+開発者向け：
+<ul>
+    <li>MediaInfo.dllを利用したい開発者向けの<a href="%supportSdkRoute%">ソフトウェア開発キット（SDK）</a></li>
+    <li>MediaInfo.dllやMediaInfo本体を自分でビルドしたい開発者向けの<a href="%supportBuildRoute%">ソースからのビルド方法</a></li>
+</ul>]]></target>
+      </trans-unit>
+      <trans-unit id="27" approved="yes">
+        <source><![CDATA[support.pro.title]]></source>
+        <target><![CDATA[プロフェッショナル向け有償サービス]]></target>
+      </trans-unit>
+      <trans-unit id="28" approved="yes">
+        <source><![CDATA[support.pro.content]]></source>
+        <target><![CDATA[<a href="http://societe.com/societe/mediaarea-net-500291844.html">MediaArea.net</a> <a href="https://en.wikipedia.org/wiki/Societe_a_responsabilite_limitee">SARL</a>（フランスにおける有限責任会社）では、MediaInfoに関するあらゆるご相談を承っております。<br/>
+提供可能なサービスの一例：
+<ul>
+ <li>お客様の情報システムへのMediaInfoまたはMediaInfo.dllの組み込み</li>
+ <li>第三者保守（不具合修正や機能適応など）</li>
+ <li>特定のご要望に対する開発の優先・迅速化（無償サポートでは優先度が低い、または却下された機能など）</li>
+ <li>カスタマイズサポート（APIの使用方法に関する支援など）</li>
+ <li>その他</li>
+</ul>
+ご質問やご依頼がございましたらお気軽に<a href="%contact%">お問い合わせ</a>ください（ただし、その前にFAQをご一読ください）。]]></target>
+      </trans-unit>
+      <trans-unit id="29" approved="yes">
+        <source><![CDATA[support.faq.page.title]]></source>
+        <target><![CDATA[MediaInfo - よくある質問（FAQ）]]></target>
+      </trans-unit>
+      <trans-unit id="30" approved="yes">
+        <source><![CDATA[support.faq.title]]></source>
+        <target><![CDATA[よくある質問（FAQ）]]></target>
+      </trans-unit>
+      <trans-unit id="31" approved="yes">
+        <source><![CDATA[support.faq.analysis]]></source>
+        <target><![CDATA[解析について]]></target>
+      </trans-unit>
+      <trans-unit id="32" approved="yes">
+        <source><![CDATA[support.faq.analysis.BFF_TFF.title]]></source>
+        <target><![CDATA[実際はトップフィールドファースト（TFF）なのに、MediaInfoではボトムフィールドファースト（BFF）と表示されます]]></target>
+      </trans-unit>
+      <trans-unit id="33" approved="yes">
+        <source><![CDATA[support.faq.analysis.BFF_TFF.content]]></source>
+        <target><![CDATA[このようなご指摘のほとんどは、理由は不明ですがProResにおいて表示順序と格納順序が反転していることに起因します。<br/>
+MediaInfoはコンテナ側が指定している表示順序を表示しますが、コンテナによっては格納順序がTFFで表示順序がBFFと記録されている場合があります（QuickTimeヘッダーの「fiel」アトム）。<br/>
+その場合、MediaInfoは次のように表示します：]]></target>
+      </trans-unit>
+      <trans-unit id="34" approved="yes">
+        <source><![CDATA[support.faq.analysis.BFF_TFF.content2]]></source>
+        <target><![CDATA[これは、表示順序がBFFである一方、Rawストリーム側の格納順序はTFFであることを意味します。プレーヤーによってはQuickTimeコンテナの反転メタデータに従わないため、再生時にはTFFとして扱われることがあります。
+更新情報：<a href="https://sourceforge.net/p/mediainfo/bugs/841/">技術レポートに関する議論が行われており</a>、将来的に出力仕様が変更される可能性があります。]]></target>
+      </trans-unit>
+      <trans-unit id="35" approved="yes">
+        <source><![CDATA[support.faq.general]]></source>
+        <target><![CDATA[全般]]></target>
+      </trans-unit>
+      <trans-unit id="36" approved="yes">
+        <source><![CDATA[support.faq.general.URL.title]]></source>
+        <target><![CDATA[このウェブサイトの正規URLは何ですか？]]></target>
+      </trans-unit>
+      <trans-unit id="37" approved="yes">
+        <source><![CDATA[support.faq.general.Internet.title]]></source>
+        <target><![CDATA[MediaInfoがインターネットに接続しようとします！]]></target>
+      </trans-unit>
+      <trans-unit id="38" approved="yes">
+        <source><![CDATA[support.faq.general.Internet.content]]></source>
+        <target><![CDATA[はい、「最新バージョンの確認」がオンになっている場合は接続を試みます。<br/>
+このチェックボックスがオンのとき、MediaInfoは<strong>匿名</strong>の統計情報（MediaInfoの利用頻度、最も多く使われているOS／言語／国など）を送信するためにも mediaarea.net へ接続します。<br/>
+匿名統計の送信を許可したくない場合は、「最新バージョンの確認」のチェックを外してください。]]></target>
+      </trans-unit>
+      <trans-unit id="39" approved="yes">
+        <source><![CDATA[support.faq.general.MultipleNames.title]]></source>
+        <target><![CDATA[SourceForgeのリポジトリに複数のファイル名がありますが、どれをダウンロードすればよいですか？]]></target>
+      </trans-unit>
+      <trans-unit id="40" approved="yes">
+        <source><![CDATA[support.faq.general.MultipleNames.content]]></source>
+        <target><![CDATA[用途に応じてお選びください：
+<ul>
+ <li>グラフィカルユーザーインターフェース：MediaInfo GUI</li>
+ <li>コマンドラインインターフェース：MediaInfo CLI</li>
+ <li>他ソフトと連携するためのDLL：MediaInfo DLL</li>
+</ul>
+<br/>
+次に、お使いのOSを選択してください：
+<ul>
+ <li>Win：Windows 95〜Windows 11</li>
+ <li>Lin：Linuxディストリビューション</li>
+</ul>
+<br/>
+最後に、お使いのプラットフォームを選択してください：
+<ul>
+ <li>686：Intel Pentium、AMD Athlon</li>
+ <li>AMD64：Intel EM64T対応CPU、AMD Athlon 64</li>
+</ul>]]></target>
+      </trans-unit>
+      <trans-unit id="41" approved="yes">
+        <source><![CDATA[support.faq.general.MultipleVersions.title]]></source>
+        <target><![CDATA[SourceForgeのリポジトリに複数のバージョンがありますが、どれをダウンロードすればよいですか？]]></target>
+      </trans-unit>
+      <trans-unit id="42" approved="yes">
+        <source><![CDATA[support.faq.general.MultipleVersions.content]]></source>
+        <target><![CDATA[原則として最新版をダウンロードしてください。ただし、以下の場合を除きます：
+<ul>
+ <li>「beta」タグが付いているバージョン。ダウンロード自体は可能ですが、安定版ではない点にご注意ください。</li>
+ <li>ダウンロードを案内した人が特定のバージョンを指定している場合。その開発者が最新版での動作確認を行っていない可能性があるため、指定されたバージョンをダウンロードしてください。</li>
+</ul>]]></target>
+      </trans-unit>
+      <trans-unit id="43" approved="yes">
+        <source><![CDATA[support.faq.general.NoSupport.title]]></source>
+        <target><![CDATA[なぜ<em>特定のフォーマット</em>に対応していないのですか？]]></target>
+      </trans-unit>
+      <trans-unit id="44" approved="yes">
+        <source><![CDATA[support.faq.general.NoSupport.content]]></source>
+        <target><![CDATA[1つ目の理由は、そのフォーマットの仕様書を私が持っていない可能性があるためです。<br/>
+仕様書やドキュメントをお持ちでしたら、ぜひ<a href="%contact%">お問い合わせ</a>ください。<br/>
+2つ目の理由は、無償サポートの枠内で実装する時間がないためです。<br/>
+開発の優先・迅速化をご希望の場合は、お見積りいたしますので遠慮なく<a href="%contact%">お問い合わせ</a>ください。]]></target>
+      </trans-unit>
+      <trans-unit id="45" approved="yes">
+        <source><![CDATA[support.faq.general.YouShould.title]]></source>
+        <target><![CDATA[<em>然るべき理由</em>があるのだから、<em>そのフォーマット</em>には絶対対応すべきです]]></target>
+      </trans-unit>
+      <trans-unit id="46" approved="yes">
+        <source><![CDATA[support.faq.general.YouShould.content]]></source>
+        <target><![CDATA[<em>そのフォーマット</em>への対応に関する（良質な）パッチの受け入れにはまったく問題ありませんので、ぜひ<a href="https://sourceforge.net/p/mediainfo/patches/">パッチをご提案</a>ください。<br />
+プログラマーではないのですか？それでも<em>その理由</em>が本当に正当なものだと思われるなら、メイン開発者の料金（<a href="#NoSupport">「なぜ<em>特定のフォーマット</em>に対応していないのですか？」</a>をご参照ください。すでにお見積りはご依頼済みですよね？）が高すぎると感じても、この機能を実装してくれる別の開発者を見つけるのは難しくないはずです。<br/>
+開発資金を集められませんか？それはおそらく、<em>その理由</em>が実際には成り立っていないからかもしれません……<br/>
+補足：私としては、あなたにもこの製品のために無償で貢献していただきたいと思っています。本プロジェクトはあなたの力を必要としており、あなたもプロジェクトの一員であるべきだからです。もしあなたが私のために無償で働くつもりがないのであれば、私があなたのために無償で働かなくてもどうか怒らないでください。]]></target>
+      </trans-unit>
+      <trans-unit id="47" approved="yes">
+        <source><![CDATA[support.faq.general.NoDetection.title]]></source>
+        <target><![CDATA[ファイルが正しく検出されません。どうすればよいですか？]]></target>
+      </trans-unit>
+      <trans-unit id="48" approved="yes">
+        <source><![CDATA[support.faq.general.NoDetection.content]]></source>
+        <target><![CDATA[<a href="https://sourceforge.net/p/mediainfo/bugs/">チケットを作成（バグ報告）</a>してください。問題のファイルのコピーをご提供いただけると助かります。]]></target>
+      </trans-unit>
+      <trans-unit id="49" approved="yes">
+        <source><![CDATA[support.faq.general.NoTranslation.title]]></source>
+        <target><![CDATA[MediaInfoを自分の言語に翻訳してほしいのですが、なぜ対応していないのですか？]]></target>
+      </trans-unit>
+      <trans-unit id="50" approved="yes">
+        <source><![CDATA[support.faq.general.NoTranslation.content]]></source>
+        <target><![CDATA[私があなたの言語を話せないからです！ ;-)<br/>
+1時間ほどお時間があれば、ご自身で翻訳し（オプションダイアログから編集できます）、そのファイル（./plugins/ ディレクトリ内）を私宛に送っていただけます。難しい作業ではなく、少しの英語知識があれば十分です。]]></target>
+      </trans-unit>
+      <trans-unit id="51" approved="yes">
+        <source><![CDATA[support.faq.general.BinaryPrefix.title]]></source>
+        <target><![CDATA[KiB、MiB、GiBとは何ですか？]]></target>
+      </trans-unit>
+      <trans-unit id="52" approved="yes">
+        <source><![CDATA[support.faq.general.BinaryPrefix.content]]></source>
+        <target><![CDATA[これらは<a href="https://en.wikipedia.org/wiki/Binary_prefix">2進接頭辞</a>です。<br/>
+たとえば、1 KiBは1024バイト、1 KBは1000バイトです。<br/>
+小さなファイルではその差はわずかですが（「K」では2.4%のみ）、数値が大きくなるほど差は広がります（1 GBは約0.93 GiB、1 TBはわずか0.90 TiBにしかなりません！）。<br/>
+MediaInfoは正確さを最重視しており、たとえMicrosoftが自社OS内でこの表記を混同し続けていたとしても、数値を表示する際にこれほど大きな誤差を許容しません。<br/>
+詳しくは<a href="https://en.wikipedia.org/wiki/Binary_prefix#IEC_standard_prefixes">Wikipediaの2進接頭辞ページ</a>をご覧ください。<br/>
+なお、以下の方法で表示を変更することも可能です：
+<ul>
+ <li>生の値を含む完全出力を使用する（CLIでは -f オプション、GUIでは「詳細モード」）-->「ファイルサイズ : 4.37 GiB」の代わりに「ファイルサイズ : 4700000000」と表示</li>
+ <li>独自の言語ファイルを使用する（CLIでは --Language=file://xxx.csv、GUIでは任意の言語ファイルを選択）。言語ファイルはGUIパッケージに含まれており、「 GiB」などの項目を好みに合わせて編集できます。</li>
+</ul>]]></target>
+      </trans-unit>
+      <trans-unit id="53" approved="yes">
+        <source><![CDATA[support.faq.general.ThousandSeparator.title]]></source>
+        <target><![CDATA[数値の途中にスペースが入っているのはなぜですか？]]></target>
+      </trans-unit>
+      <trans-unit id="54" approved="yes">
+        <source><![CDATA[support.faq.general.ThousandSeparator.content]]></source>
+        <target><![CDATA[はい、英語表記などではたとえば「1 920 pixels」のようにスペースが入ります。<br/>
+これは<a href="https://en.wikipedia.org/wiki/Thousands_separator#Examples_of_use">国際規格</a>（「SIスタイル」）に基づくものです。<br/>
+この規格は世界人口の96%が公式に採用しているものです（<a href="https://en.wikipedia.org/wiki/SI">米国を除くすべての国</a>）。
+この既定の表示仕様を変更する予定はありませんが、以下の方法で変更できます：
+<ul>
+ <li>生の値を含む完全出力を使用する（CLIでは -f オプション、GUIでは「詳細モード」）-->「幅 : 1920」と表示</li>
+ <li>独自の言語ファイルを使用する（CLIでは --Language=file://xxx.csv、GUIでは任意の言語ファイルを選択）。言語ファイルはGUIパッケージに含まれており、「Thousand_Separator」項目を好みに合わせて編集できます。</li>
+</ul>]]></target>
+      </trans-unit>
+      <trans-unit id="55" approved="yes">
+        <source><![CDATA[support.faq.general.NoQuestion.title]]></source>
+        <target><![CDATA[該当する質問が見当たりません。どうすればよいですか？]]></target>
+      </trans-unit>
+      <trans-unit id="56" approved="yes">
+        <source><![CDATA[support.faq.general.NoQuestion.content]]></source>
+        <target><![CDATA[<a href="https://sourceforge.net/p/mediainfo/discussion/">フォーラム</a>で解決策が見つかる場合があります。]]></target>
+      </trans-unit>
+      <trans-unit id="57" approved="yes">
+        <source><![CDATA[support.faq.gui]]></source>
+        <target><![CDATA[MediaInfo グラフィカルユーザーインターフェース（GUI）]]></target>
+      </trans-unit>
+      <trans-unit id="58" approved="yes">
+        <source><![CDATA[support.faq.gui.License_GUI.title]]></source>
+        <target><![CDATA[ライセンスは何ですか？]]></target>
+      </trans-unit>
+      <trans-unit id="59" approved="yes">
+        <source><![CDATA[support.faq.gui.License_GUI.content]]></source>
+        <target><![CDATA[MediaInfoGUIは<a href="%licenseRoute%">BSD系ライセンス</a>のもとで提供されています。]]></target>
+      </trans-unit>
+      <trans-unit id="60" approved="yes">
+        <source><![CDATA[support.faq.gui.BuildFromSources_GUI.title]]></source>
+        <target><![CDATA[ソースコードからコンパイルするにはどうすればよいですか？]]></target>
+      </trans-unit>
+      <trans-unit id="61" approved="yes">
+        <source><![CDATA[support.faq.gui.BuildFromSources_GUI.content]]></source>
+        <target><![CDATA[ソースコードは<a href="%downloadSourceRoute%">こちら</a>からダウンロードできます。<br/>コンパイルするにはBorland C++ 6が必要です。]]></target>
+      </trans-unit>
+      <trans-unit id="62" approved="yes">
+        <source><![CDATA[support.faq.cli]]></source>
+        <target><![CDATA[MediaInfo コマンドラインインターフェース（CLI）]]></target>
+      </trans-unit>
+      <trans-unit id="63" approved="yes">
+        <source><![CDATA[support.faq.cli.License_Cmd.title]]></source>
+        <target><![CDATA[ライセンスは何ですか？]]></target>
+      </trans-unit>
+      <trans-unit id="64" approved="yes">
+        <source><![CDATA[support.faq.cli.License_Cmd.content]]></source>
+        <target><![CDATA[MediaInfoCmdは<a href="%licenseRoute%">BSD系ライセンス</a>のもとで提供されています。]]></target>
+      </trans-unit>
+      <trans-unit id="65" approved="yes">
+        <source><![CDATA[support.faq.cli.Cmd_Options.title]]></source>
+        <target><![CDATA[コマンドライン版のオプションがあまり多くないのはなぜですか？]]></target>
+      </trans-unit>
+      <trans-unit id="66" approved="yes">
+        <source><![CDATA[support.faq.cli.Cmd_Options.content]]></source>
+        <target><![CDATA[ユーザーからの関心が比較的少なかったため、開発にあまり時間を割いていません。<br/>
+ご希望があれば<a href="https://sourceforge.net/p/mediainfo/feature-requests/">機能リクエスト</a>を登録していただけます。]]></target>
+      </trans-unit>
+      <trans-unit id="67" approved="yes">
+        <source><![CDATA[support.faq.cli.BuildFromSources_Cmd.title]]></source>
+        <target><![CDATA[ソースコードからコンパイルするにはどうすればよいですか？]]></target>
+      </trans-unit>
+      <trans-unit id="68" approved="yes">
+        <source><![CDATA[support.faq.cli.BuildFromSources_Cmd.content]]></source>
+        <target><![CDATA[ソースコードは<a href="%downloadSourceRoute%">こちら</a>からダウンロードできます。]]></target>
+      </trans-unit>
+      <trans-unit id="69" approved="yes">
+        <source><![CDATA[support.faq.dll]]></source>
+        <target><![CDATA[MediaInfo ライブラリ（DLL）]]></target>
+      </trans-unit>
+      <trans-unit id="70" approved="yes">
+        <source><![CDATA[support.faq.dll.License_Dll.title]]></source>
+        <target><![CDATA[ライセンスは何ですか？]]></target>
+      </trans-unit>
+      <trans-unit id="71" approved="yes">
+        <source><![CDATA[support.faq.dll.License_Dll.content]]></source>
+        <target><![CDATA[MediaInfoDLLは<a href=".%licenseRoute%">BSD系ライセンス</a>のもとで提供されています。]]></target>
+      </trans-unit>
+      <trans-unit id="72" approved="yes">
+        <source><![CDATA[support.faq.dll.NoSoftware.title]]></source>
+        <target><![CDATA[<em>特定のソフトウェア</em>でDLLが動作しないのはなぜですか？]]></target>
+      </trans-unit>
+      <trans-unit id="73" approved="yes">
+        <source><![CDATA[support.faq.dll.NoSoftware.content]]></source>
+        <target><![CDATA[そのソフトウェアが最新バージョンのDLLに対応していない可能性があります。<br/>
+<ul>
+ <li>ソフトウェアの開発者に、最新DLLに対応するよう修正を依頼してみてください</li>
+ <li>あるいは、古いバージョンのDLLをダウンロードしてみてください</li>
+</ul>]]></target>
+      </trans-unit>
+      <trans-unit id="74" approved="yes">
+        <source><![CDATA[support.faq.dll.SDK.title]]></source>
+        <target><![CDATA[DLLからデータを読み込むにはどうすればよいですか？]]></target>
+      </trans-unit>
+      <trans-unit id="75" approved="yes">
+        <source><![CDATA[support.faq.dll.SDK.content]]></source>
+        <target><![CDATA[DLLパッケージをダウンロードしてください。さまざまな言語（標準C、標準C++、GCC、MinGW、Borland C++ Builder、Microsoft Visual C++、Microsoft Visual Basic、Microsoft C#、Microsoft J#）向けのサンプルが含まれています。<br/>
+また、<a href="%supportSdkRoute%">SDK</a>もご用意しています。]]></target>
+      </trans-unit>
+      <trans-unit id="76" approved="yes">
+        <source><![CDATA[support.faq.dll.StaticLib.title]]></source>
+        <target><![CDATA[静的ライブラリを使用したいのですが]]></target>
+      </trans-unit>
+      <trans-unit id="77" approved="yes">
+        <source><![CDATA[support.faq.dll.StaticLib.content]]></source>
+        <target><![CDATA[静的ライブラリはC++でのみ利用可能です。<br/>
+ダウンロードページでは、以下のパッケージを提供しています：
+<ul>
+ <li>Borland C++ Builder 6でコンパイルされたライブラリ</li>
+ <li>Microsoft Visual C++ 9（別名2005）でコンパイルされたライブラリ。注意：プロジェクトはマルチスレッドC++ライブラリに静的リンクされており、オプションはC++準拠設定となっています（標準C++では wchar_t が short int ではなく独立した型である点にご注意ください）。</li>
+</ul>
+他のコンパイラやオプションを使用したい場合は、<a href="%buildFromSourceRoute%">ソースコードからコンパイル</a>する必要があります。]]></target>
+      </trans-unit>
+      <trans-unit id="78" approved="yes">
+        <source><![CDATA[support.faq.dll.BuildFromSources_DLL.title]]></source>
+        <target><![CDATA[ソースコードからコンパイルするにはどうすればよいですか？]]></target>
+      </trans-unit>
+      <trans-unit id="79" approved="yes">
+        <source><![CDATA[support.faq.dll.BuildFromSources_DLL.content]]></source>
+        <target><![CDATA[ソースコードは<a href="%downloadSourceRoute%">こちら</a>からダウンロードできます。]]></target>
+      </trans-unit>
+      <trans-unit id="80" approved="yes">
+        <source><![CDATA[support.faq.dll.AccessIsDenied.title]]></source>
+        <target><![CDATA[本番サーバー上で「アクセスが拒否されました（Access is denied）」というメッセージが表示されます]]></target>
+      </trans-unit>
+      <trans-unit id="81" approved="yes">
+        <source><![CDATA[support.faq.dll.AccessIsDenied.content]]></source>
+        <target><![CDATA[一部の本番サーバー環境では、以下のメッセージが表示される場合があります：
+<pre>Unable to load DLL 'MediaInfo.dll': Access is denied. (Exception from HRESULT: 0x80070005 (E_ACCESSDENIED))</pre>
+厳格なサーバー構成では、DLLを実行するLocal Serviceアカウントに対して「読み取り」権限のみが許可されていることがあります。一方、個人の開発環境では制限が緩くフルアクセスが付与されている場合が多いため、開発者の環境では問題なく動作してしまいます。<br/>
+デプロイ時には、MediaInfo.dllに対して「読み取りと実行」のアクセス権限を設定する必要があります。<br/>
+HTTP(S)/FTP(S)経由のファイルにアクセスしたい場合は、同梱されているサイドカーファイル libcurl.dll に対しても同じ権限を設定する必要があります。<br/>
+IISを使用している場合は、<code>IIS_IUSRS</code> ユーザーにこれらのファイルへの「読み取りと実行」権限が付与されている必要があります。]]></target>
+      </trans-unit>
+      <trans-unit id="82" approved="yes">
+        <source><![CDATA[support.wip.warning]]></source>
+        <target><![CDATA[警告：作業中のページのため、一部の詳細情報に誤りが含まれる場合があります]]></target>
+      </trans-unit>
+      <trans-unit id="support.fields.page.title" approved="yes">
+        <source><![CDATA[support.fields.page.title]]></source>
+        <target><![CDATA[MediaInfo - 項目一覧]]></target>
+      </trans-unit>
+      <trans-unit id="support.fields.title" approved="yes">
+        <source><![CDATA[support.fields.title]]></source>
+        <target><![CDATA[MediaInfoの項目一覧]]></target>
+      </trans-unit>
+      <trans-unit id="support.fields.status" approved="yes">
+        <source><![CDATA[support.fields.status]]></source>
+        <target><![CDATA[MediaInfoの項目一覧、その説明、および他のエクスポート形式へのマッピングです（バージョン ]]></target>
+      </trans-unit>
+      <trans-unit id="support.fields.status2" approved="yes">
+        <source><![CDATA[support.fields.status2]]></source>
+        <target><![CDATA[ 時点）。<br/>
+<a href="#Details">詳細はこちらをクリックしてください</a>。]]></target>
+      </trans-unit>
+      <trans-unit id="support.fields.how" approved="yes">
+        <source><![CDATA[support.fields.how]]></source>
+        <target><![CDATA[操作方法：
+<ul>
+    <li>列見出し（「MediaInfo」など）をクリックするとその列を非表示にできます</li>
+    <li>グループ見出し（「全般」など）をクリックするとそのグループを非表示にできます</li>
+    <li><a onclick="Fields_Col_Show_All()">すべての列を展開</a></li>
+    <li><a onclick="Fields_Col_Hide_All()">すべての列を折りたたむ</a></li>
+    <li><a onclick="Fields_Line_Show_All()">すべてのグループを展開</a></li>
+    <li><a onclick="Fields_Line_Hide_All()">すべてのグループを折りたたむ</a></li>
+</ul>]]></target>
+      </trans-unit>
+      <trans-unit id="support.fields.details" approved="yes">
+        <source><![CDATA[support.fields.details]]></source>
+        <target><![CDATA[<h1>マッピングに関する情報</h1>
+<p>MediaInfoは、映像・音声ファイルに関する技術情報やタグ情報を汎用的な形式で提供します。できる限り情報の形式を統一することで、ユーザーが解析対象ファイルのフォーマットに依存せずに情報を把握できるようにしています。たとえば、解析対象ファイルのフォーマットや、コンテナフォーマット仕様書の作成者がこの映像トラック形式をどのように記述しているかにかかわらず、映像トラックのフォーマットには常に同じ名称が用いられます。</p>
+<p>MediaInfoの開発者は「ピボット（仲介）」形式を使用しており、ユーザーもこれをXML（MIXMLと呼ばれます）またはJSON形式で利用できます。</p>
+<p>最初のステップは、ファイル解析時に抽出したデータをこのピボット形式の格納構造へ変換することです。（情報はやや古く、すべての項目を網羅したものではありませんが）概要は<a href="MediaInfo/Support/Tags">こちらのページ</a>で確認できます。</p>
+<p>2つ目のステップは、このピボット形式の格納データをユーザーが希望する形式（たとえばMediaInfoが解析した内容をすべて含むMIXML、MPEG-7、EBUCore、PBCoreなど）へ変換することです。</p>
+<p>各フォーマットにはそれぞれ長所と短所があります。たとえば次の通りです：</p>
+<ul>
+  <li>MIXMLは網羅的であり、出力も比較的安定していますが、バージョン間の互換性は保証されておらず、MediaInfo独自の形式であるため公式の定義辞書（ディクショナリ）が存在しません。</li>
+  <li>MPEG-7とEBUCoreはどちらもフォーマット用の辞書を備えていますが、共通の欠点として公式の辞書が整備されていない点があります。</li>
+  <li>MPEG-7は同じ種類の複数トラックの記述に適しておらず、一部のトラック固有データ（GOPや言語など）がトラック要素の外に配置され、またText（字幕）種別を持ちません。</li>
+  <li>EBUCoreは「technicalAttributeString」「technicalAttributeInteger」「TechnicalAttributeBoolean」によって拡張可能であり、PBCoreも同様に「essenceTrackAnnotation」によって拡張できます。</li>
+  <li>また、EBUCoreには他にも「timeCodeTrack」（タイムコードトラック用）や「metadataTrack」（主にAMWA AS/11メタデータを使用）といったトラック種別があります。</li>
+  <li>MPEG-7、EBUCore、PBCoreの3つはすべて事実上「凍結」状態にあり、新たなニーズに合わせて進化していません。たとえばフォーマット一覧は更新されず、3D（映像・音声）やHDRといった新機能にも対応していません。また、字幕のサポートも非常に貧弱で強制字幕（Forced）のようなケースは考慮されておらず、いずれもユーザーにとって有用な要素が不足しています。</li>
+</ul> 
+<p>MediaInfo開発者の観点からすると、EBUCoreはよりオープン（仕様書が誰でも無償で入手可能）であり、他の形式よりも頻繁に更新されているという利点があります。</p>
+<p>以下に、既知のMIXML要素の一覧、簡単な説明、およびMPEG-7、EBUCore、PBCoreへのマッピングを示します。MediaInfo開発者が把握している限り、MIXMLに含まれる情報のうち他の形式へ変換可能なものはすべて変換されています。MediaInfo開発者にとって最大の課題は、ユーザーが求める情報を各形式がサポートしておらず、かつ活動中のワーキンググループも存在しない場合に、それらの情報を各種フォーマットへどのように格納するかを見出すことです。</p>
+<p>この一覧は以下の資料をもとに作成されました：</p>
+<ul>
+  <li><a href="https://github.com/MediaArea/MediaInfoLib/tree/master/Source/Resource/Text/Stream">MediaInfoの項目説明</a></li>
+  <li><a href="https://github.com/MediaArea/MediaInfoLib/tree/master/Source/Resource/Text/Mapping">MediaInfoのエクスポートマッピング定義</a>（<a href="https://github.com/MediaArea/MediaInfoLib/tree/master/Source/MediaInfo/Export">各種エクスポート形式用のMediaInfoソースコード</a>に基づく）</li>
+</ul>
+<p>なお、MediaInfoは出力フォーマットの拡張機能を通じて、MIXML要素を生（Raw）の形式でEBUCoreおよびPBCore形式にも格納しています。現在この拡張機能経由で格納されている要素の一覧は、実用上の意義が薄いため記載していません。これらの要素はスポンサーの要望に応じて個別に選定されたもので、バージョンごとに変更される可能性があり、要望があればMediaInfoの全項目を含めることも可能です。</p>]]></target>
+      </trans-unit>
+      <trans-unit id="83" approved="yes">
+        <source><![CDATA[support.formats.page.title]]></source>
+        <target><![CDATA[MediaInfo - 対応フォーマット]]></target>
+      </trans-unit>
+      <trans-unit id="84" approved="yes">
+        <source><![CDATA[support.formats.title]]></source>
+        <target><![CDATA[対応フォーマット]]></target>
+      </trans-unit>
+      <trans-unit id="85" approved="yes">
+        <source><![CDATA[support.formats.containers]]></source>
+        <target><![CDATA[コンテナ]]></target>
+      </trans-unit>
+      <trans-unit id="86" approved="yes">
+        <source><![CDATA[support.formats.information]]></source>
+        <target><![CDATA[情報]]></target>
+      </trans-unit>
+      <trans-unit id="87" approved="yes">
+        <source><![CDATA[support.formats.table.yes]]></source>
+        <target><![CDATA[対応]]></target>
+      </trans-unit>
+      <trans-unit id="88" approved="yes">
+        <source><![CDATA[support.formats.table.no]]></source>
+        <target><![CDATA[非対応]]></target>
+      </trans-unit>
+      <trans-unit id="89" approved="yes">
+        <source><![CDATA[support.formats.table.partial]]></source>
+        <target><![CDATA[一部対応]]></target>
+      </trans-unit>
+      <trans-unit id="90" approved="yes">
+        <source><![CDATA[support.formats.supported]]></source>
+        <target><![CDATA[現在未対応の情報を取得する方法をご存じでしたら、ぜひ<a href="%contact%">ご連絡ください</a>（英語またはフランス語のみ対応）。]]></target>
+      </trans-unit>
+      <trans-unit id="91" approved="yes">
+        <source><![CDATA[support.tags.page.title]]></source>
+        <target><![CDATA[MediaInfo - タグ]]></target>
+      </trans-unit>
+      <trans-unit id="92" approved="yes">
+        <source><![CDATA[support.tags.title]]></source>
+        <target><![CDATA[タグ]]></target>
+      </trans-unit>
+      <trans-unit id="93" approved="yes">
+        <source><![CDATA[support.tags.how]]></source>
+        <target><![CDATA[操作方法：
+<ul>
+    <li>列見出し（「MediaInfo」など）をクリックするとその列を非表示にできます</li>
+    <li>グループ見出し（「タイトル」など）をクリックするとそのグループを非表示にできます</li>
+    <li><a onclick="Col_Show_All()">すべての列を展開</a></li>
+    <li><a onclick="Col_Hide_All()">すべての列を折りたたむ</a></li>
+    <li><a onclick="Line_Show_All()">すべてのグループを展開</a></li>
+    <li><a onclick="Line_Hide_All()">すべてのグループを折りたたむ</a></li>
+</ul>]]></target>
+      </trans-unit>
+      <trans-unit id="94" approved="yes">
+        <source><![CDATA[support.tags.hidden]]></source>
+        <target><![CDATA[非表示の列：]]></target>
+      </trans-unit>
+      <trans-unit id="95" approved="yes">
+        <source><![CDATA[support.tags.several]]></source>
+        <target><![CDATA[このタグには複数の情報が含まれます]]></target>
+      </trans-unit>
+      <trans-unit id="96" approved="yes">
+        <source><![CDATA[support.sdk.page.title]]></source>
+        <target><![CDATA[MediaInfo - SDK]]></target>
+      </trans-unit>
+      <trans-unit id="97" approved="yes">
+        <source><![CDATA[support.sdk.title]]></source>
+        <target><![CDATA[ソフトウェア開発キット（SDK）]]></target>
+      </trans-unit>
+      <trans-unit id="98" approved="yes">
+        <source><![CDATA[support.sdk.what.title]]></source>
+        <target><![CDATA[SDKとは？]]></target>
+      </trans-unit>
+      <trans-unit id="99" approved="yes">
+        <source><![CDATA[support.sdk.what.content]]></source>
+        <target><![CDATA[MediaInfo（GUI版またはコマンドライン版）は、MediaInfoライブラリ（LibまたはDLL）のユーザーインターフェースであると同時に、その動作実証（概念実証）でもあります。<br/>
+静的ライブラリまたは動的ライブラリのインターフェースを通じて、MediaInfoをお使いのプログラムへ容易に組み込むことができます。]]></target>
+      </trans-unit>
+      <trans-unit id="100" approved="yes">
+        <source><![CDATA[support.sdk.contents.title]]></source>
+        <target><![CDATA[目次]]></target>
+      </trans-unit>
+      <trans-unit id="101" approved="yes">
+        <source><![CDATA[support.sdk.contents.ReadFirst]]></source>
+        <target><![CDATA[最初にお読みください（対応言語、バージョニング、規約）]]></target>
+      </trans-unit>
+      <trans-unit id="102" approved="yes">
+        <source><![CDATA[support.sdk.contents.Means]]></source>
+        <target><![CDATA[ライブラリのさまざまな使用方法]]></target>
+      </trans-unit>
+      <trans-unit id="103" approved="yes">
+        <source><![CDATA[support.sdk.contents.Quick_Start]]></source>
+        <target><![CDATA[MediaInfoをすぐに使い始める方法]]></target>
+      </trans-unit>
+      <trans-unit id="104" approved="yes">
+        <source><![CDATA[support.sdk.contents.More_Info]]></source>
+        <target><![CDATA[プログラミングインターフェースの詳細情報]]></target>
+      </trans-unit>
+      <trans-unit id="105" approved="yes">
+        <source><![CDATA[support.sdk.advanced.title]]></source>
+        <target><![CDATA[高度な機能]]></target>
+      </trans-unit>
+      <trans-unit id="106" approved="yes">
+        <source><![CDATA[support.sdk.advanced.note]]></source>
+        <target><![CDATA[注：これらのAPI機能は予告なく変更される場合があります（ステータス：ベータ版）。]]></target>
+      </trans-unit>
+      <trans-unit id="107" approved="yes">
+        <source><![CDATA[support.sdk.advanced.Buffers]]></source>
+        <target><![CDATA[ファイル名の代わりにバッファーを使用する]]></target>
+      </trans-unit>
+      <trans-unit id="108" approved="yes">
+        <source><![CDATA[support.sdk.advanced.Duplicate]]></source>
+        <target><![CDATA[ストリームの複製]]></target>
+      </trans-unit>
+      <trans-unit id="109" approved="yes">
+        <source><![CDATA[support.sdk.advanced.Filtering]]></source>
+        <target><![CDATA[ストリームのフィルタリング]]></target>
+      </trans-unit>
+      <trans-unit id="110" approved="yes">
+        <source><![CDATA[support.build.page.title]]></source>
+        <target><![CDATA[MediaInfo - ソースからのビルド]]></target>
+      </trans-unit>
+      <trans-unit id="111" approved="yes">
+        <source><![CDATA[support.build.title]]></source>
+        <target><![CDATA[ソースからのビルド]]></target>
+      </trans-unit>
+      <trans-unit id="112" approved="yes">
+        <source><![CDATA[support.buildThirdParty.page.title]]></source>
+        <target><![CDATA[MediaInfo - サードパーティ製ライブラリ]]></target>
+      </trans-unit>
+      <trans-unit id="113" approved="yes">
+        <source><![CDATA[support.buildThirdParty.title]]></source>
+        <target><![CDATA[サードパーティ製ライブラリ]]></target>
+      </trans-unit>
+      <trans-unit id="114" approved="yes">
+        <source><![CDATA[support.buildMil.page.title]]></source>
+        <target><![CDATA[MediaInfo - MediaInfoLib]]></target>
+      </trans-unit>
+      <trans-unit id="115" approved="yes">
+        <source><![CDATA[support.buildMil.title]]></source>
+        <target><![CDATA[MediaInfoLibのビルド]]></target>
+      </trans-unit>
+      <trans-unit id="116" approved="yes">
+        <source><![CDATA[download.page.title]]></source>
+        <target><![CDATA[MediaInfo - ダウンロード]]></target>
+      </trans-unit>
+      <trans-unit id="117" approved="yes">
+        <source><![CDATA[download.title]]></source>
+        <target><![CDATA[ダウンロード]]></target>
+      </trans-unit>
+      <trans-unit id="118" approved="yes">
+        <source><![CDATA[download.table.os]]></source>
+        <target><![CDATA[オペレーティングシステム]]></target>
+      </trans-unit>
+      <trans-unit id="119" approved="yes">
+        <source><![CDATA[download.table.link]]></source>
+        <target><![CDATA[リンク]]></target>
+      </trans-unit>
+      <trans-unit id="120" approved="yes">
+        <source><![CDATA[download.table.official_release]]></source>
+        <target><![CDATA[公式リリース]]></target>
+      </trans-unit>
+      <trans-unit id="121" approved="yes">
+        <source><![CDATA[download.table.distro_release]]></source>
+        <target><![CDATA[ディストリビューションリポジトリ版]]></target>
+      </trans-unit>
+      <trans-unit id="122" approved="yes">
+        <source><![CDATA[download.table.epel_release]]></source>
+        <target><![CDATA[EPELリポジトリ版]]></target>
+      </trans-unit>
+      <trans-unit id="123" approved="yes">
+        <source><![CDATA[download.table.packman_release]]></source>
+        <target><![CDATA[Packmanリリース]]></target>
+      </trans-unit>
+      <trans-unit id="124" approved="yes">
+        <source><![CDATA[download.table.unofficial_release]]></source>
+        <target><![CDATA[非公式リリース]]></target>
+      </trans-unit>
+      <trans-unit id="125" approved="yes">
+        <source><![CDATA[download.table.freshports_release]]></source>
+        <target><![CDATA[FreshPortsリリース]]></target>
+      </trans-unit>
+      <trans-unit id="126" approved="yes">
+        <source><![CDATA[download.table.unsupported_release]]></source>
+        <target><![CDATA[非対応]]></target>
+      </trans-unit>
+      <trans-unit id="download.table.javascript_release" approved="yes">
+        <source><![CDATA[download.table.javascript_release]]></source>
+        <target><![CDATA[MediaInfoLib JavaScriptモジュール]]></target>
+      </trans-unit>
+      <trans-unit id="127" approved="yes">
+        <source><![CDATA[download.table.source_release]]></source>
+        <target><![CDATA[ソースコード<br/>（その他のディストリビューションやCPU向け）]]></target>
+      </trans-unit>
+      <trans-unit id="128" approved="yes">
+        <source><![CDATA[download.table.apt_install]]></source>
+        <target><![CDATA['apt-get install mediainfo-gui'（GUI版）または 'apt-get install mediainfo'（CLI版）]]></target>
+      </trans-unit>
+      <trans-unit id="129" approved="yes">
+        <source><![CDATA[download.table.yum_install]]></source>
+        <target><![CDATA[EPELをインストールしたうえで、'yum install mediainfo-gui'（GUI版）または 'yum install mediainfo'（CLI版）]]></target>
+      </trans-unit>
+      <trans-unit id="130" approved="yes">
+        <source><![CDATA[download.table.dnf_install]]></source>
+        <target><![CDATA['dnf install mediainfo-gui'（GUI版）または 'dnf install mediainfo'（CLI版）]]></target>
+      </trans-unit>
+      <trans-unit id="131" approved="yes">
+        <source><![CDATA[download.appimage.page.title]]></source>
+        <target><![CDATA[MediaInfo - MediaInfo ダウンロード（AppImage）]]></target>
+      </trans-unit>
+      <trans-unit id="132" approved="yes">
+        <source><![CDATA[download.appimage.title]]></source>
+        <target><![CDATA[ダウンロード - AppImage]]></target>
+      </trans-unit>
+      <trans-unit id="download.flatpak.page.title" approved="yes">
+        <source><![CDATA[download.flatpak.page.title]]></source>
+        <target><![CDATA[MediaInfo - MediaInfo ダウンロード（Flatpak）]]></target>
+      </trans-unit>
+      <trans-unit id="download.flatpak.title" approved="yes">
+        <source><![CDATA[download.flatpak.title]]></source>
+        <target><![CDATA[ダウンロード - Flatpak]]></target>
+      </trans-unit>
+      <trans-unit id="download.snap.page.title" approved="yes">
+        <source><![CDATA[download.snap.page.title]]></source>
+        <target><![CDATA[MediaInfo - MediaInfo ダウンロード（Snap）]]></target>
+      </trans-unit>
+      <trans-unit id="download.snap.title" approved="yes">
+        <source><![CDATA[download.snap.title]]></source>
+        <target><![CDATA[ダウンロード - Snap]]></target>
+      </trans-unit>
+      <trans-unit id="download.lambda.page.title" approved="yes">
+        <source><![CDATA[download.lambda.page.title]]></source>
+        <target><![CDATA[MediaInfo - MediaInfo ダウンロード（AWS Lambda）]]></target>
+      </trans-unit>
+      <trans-unit id="download.lambda.title" approved="yes">
+        <source><![CDATA[download.lambda.title]]></source>
+        <target><![CDATA[ダウンロード - AWS Lambda]]></target>
+      </trans-unit>
+      <trans-unit id="133" approved="yes">
+        <source><![CDATA[download.arch.page.title]]></source>
+        <target><![CDATA[MediaInfo - MediaInfo ダウンロード（Arch Linux）]]></target>
+      </trans-unit>
+      <trans-unit id="134" approved="yes">
+        <source><![CDATA[download.arch.title]]></source>
+        <target><![CDATA[ダウンロード - Arch Linux]]></target>
+      </trans-unit>
+      <trans-unit id="135" approved="yes">
+        <source><![CDATA[download.centos.page.title]]></source>
+        <target><![CDATA[MediaInfo - MediaInfo ダウンロード（CentOS）]]></target>
+      </trans-unit>
+      <trans-unit id="136" approved="yes">
+        <source><![CDATA[download.centos.title]]></source>
+        <target><![CDATA[ダウンロード - CentOS]]></target>
+      </trans-unit>
+      <trans-unit id="download.almalinux.page.title" approved="yes">
+        <source><![CDATA[download.almalinux.page.title]]></source>
+        <target><![CDATA[MediaInfo - MediaInfo ダウンロード（AlmaLinux）]]></target>
+      </trans-unit>
+      <trans-unit id="download.almalinux.title" approved="yes">
+        <source><![CDATA[download.almalinux.title]]></source>
+        <target><![CDATA[ダウンロード - AlmaLinux]]></target>
+      </trans-unit>
+      <trans-unit id="download.rockylinux.page.title" approved="yes">
+        <source><![CDATA[download.rockylinux.page.title]]></source>
+        <target><![CDATA[MediaInfo - MediaInfo ダウンロード（RockyLinux）]]></target>
+      </trans-unit>
+      <trans-unit id="download.rockylinux.title" approved="yes">
+        <source><![CDATA[download.rockylinux.title]]></source>
+        <target><![CDATA[ダウンロード - RockyLinux]]></target>
+      </trans-unit>
+      <trans-unit id="137" approved="yes">
+        <source><![CDATA[download.debian.page.title]]></source>
+        <target><![CDATA[MediaInfo - MediaInfo ダウンロード（Debian）]]></target>
+      </trans-unit>
+      <trans-unit id="138" approved="yes">
+        <source><![CDATA[download.debian.title]]></source>
+        <target><![CDATA[ダウンロード - Debian]]></target>
+      </trans-unit>
+      <trans-unit id="download.raspbian.page.title" approved="yes">
+        <source><![CDATA[download.raspbian.page.title]]></source>
+        <target><![CDATA[MediaInfo - MediaInfo ダウンロード（Raspbian）]]></target>
+      </trans-unit>
+      <trans-unit id="download.raspbian.title" approved="yes">
+        <source><![CDATA[download.raspbian.title]]></source>
+        <target><![CDATA[ダウンロード - Raspbian]]></target>
+      </trans-unit>
+      <trans-unit id="139" approved="yes">
+        <source><![CDATA[download.fedora.page.title]]></source>
+        <target><![CDATA[MediaInfo - MediaInfo ダウンロード（Fedora）]]></target>
+      </trans-unit>
+      <trans-unit id="140" approved="yes">
+        <source><![CDATA[download.fedora.title]]></source>
+        <target><![CDATA[ダウンロード - Fedora]]></target>
+      </trans-unit>
+      <trans-unit id="download.gentoo.page.title" approved="yes">
+        <source><![CDATA[download.gentoo.page.title]]></source>
+        <target><![CDATA[MediaInfo - MediaInfo ダウンロード（Gentoo）]]></target>
+      </trans-unit>
+      <trans-unit id="download.gentoo.title" approved="yes">
+        <source><![CDATA[download.gentoo.title]]></source>
+        <target><![CDATA[ダウンロード - Gentoo]]></target>
+      </trans-unit>
+      <trans-unit id="download.android.page.title" approved="yes">
+        <source><![CDATA[download.android.page.title]]></source>
+        <target><![CDATA[MediaInfo - MediaInfo ダウンロード（Android）]]></target>
+      </trans-unit>
+      <trans-unit id="download.android.title" approved="yes">
+        <source><![CDATA[download.android.title]]></source>
+        <target><![CDATA[ダウンロード - Android]]></target>
+      </trans-unit>
+      <trans-unit id="download.ios.page.title" approved="yes">
+        <source><![CDATA[download.ios.page.title]]></source>
+        <target><![CDATA[MediaInfo - MediaInfo ダウンロード（iOS）]]></target>
+      </trans-unit>
+      <trans-unit id="download.ios.title" approved="yes">
+        <source><![CDATA[download.ios.title]]></source>
+        <target><![CDATA[ダウンロード - iOS]]></target>
+      </trans-unit>
+      <trans-unit id="141" approved="yes">
+        <source><![CDATA[download.mac.page.title]]></source>
+        <target><![CDATA[MediaInfo - MediaInfo ダウンロード（macOS）]]></target>
+      </trans-unit>
+      <trans-unit id="142" approved="yes">
+        <source><![CDATA[download.mac.title]]></source>
+        <target><![CDATA[ダウンロード - macOS]]></target>
+      </trans-unit>
+      <trans-unit id="143" approved="yes">
+        <source><![CDATA[download.mageia.page.title]]></source>
+        <target><![CDATA[MediaInfo - MediaInfo ダウンロード（Mageia）]]></target>
+      </trans-unit>
+      <trans-unit id="144" approved="yes">
+        <source><![CDATA[download.mageia.title]]></source>
+        <target><![CDATA[ダウンロード - Mageia]]></target>
+      </trans-unit>
+      <trans-unit id="145" approved="yes">
+        <source><![CDATA[download.mandriva.page.title]]></source>
+        <target><![CDATA[MediaInfo - MediaInfo ダウンロード（Mandriva）]]></target>
+      </trans-unit>
+      <trans-unit id="146" approved="yes">
+        <source><![CDATA[download.mandriva.title]]></source>
+        <target><![CDATA[ダウンロード - Mandriva]]></target>
+      </trans-unit>
+      <trans-unit id="147" approved="yes">
+        <source><![CDATA[download.manjaro.page.title]]></source>
+        <target><![CDATA[MediaInfo - MediaInfo ダウンロード（Manjaro）]]></target>
+      </trans-unit>
+      <trans-unit id="148" approved="yes">
+        <source><![CDATA[download.manjaro.title]]></source>
+        <target><![CDATA[ダウンロード - Manjaro]]></target>
+      </trans-unit>
+      <trans-unit id="149" approved="yes">
+        <source><![CDATA[download.opensuse.page.title]]></source>
+        <target><![CDATA[MediaInfo - MediaInfo ダウンロード（openSUSE）]]></target>
+      </trans-unit>
+      <trans-unit id="150" approved="yes">
+        <source><![CDATA[download.opensuse.title]]></source>
+        <target><![CDATA[ダウンロード - openSUSE]]></target>
+      </trans-unit>
+      <trans-unit id="151" approved="yes">
+        <source><![CDATA[download.pclinuxos.page.title]]></source>
+        <target><![CDATA[MediaInfo - MediaInfo ダウンロード（PCLinuxOS）]]></target>
+      </trans-unit>
+      <trans-unit id="152" approved="yes">
+        <source><![CDATA[download.pclinuxos.title]]></source>
+        <target><![CDATA[ダウンロード - PCLinuxOS]]></target>
+      </trans-unit>
+      <trans-unit id="153" approved="yes">
+        <source><![CDATA[download.redhat.page.title]]></source>
+        <target><![CDATA[MediaInfo - MediaInfo ダウンロード（RHEL）]]></target>
+      </trans-unit>
+      <trans-unit id="154" approved="yes">
+        <source><![CDATA[download.redhat.title]]></source>
+        <target><![CDATA[ダウンロード - RHEL]]></target>
+      </trans-unit>
+      <trans-unit id="155" approved="yes">
+        <source><![CDATA[download.slackware.page.title]]></source>
+        <target><![CDATA[MediaInfo - MediaInfo ダウンロード（Slackware）]]></target>
+      </trans-unit>
+      <trans-unit id="156" approved="yes">
+        <source><![CDATA[download.slackware.title]]></source>
+        <target><![CDATA[ダウンロード - Slackware]]></target>
+      </trans-unit>
+      <trans-unit id="157" approved="yes">
+        <source><![CDATA[download.sle.page.title]]></source>
+        <target><![CDATA[MediaInfo - MediaInfo ダウンロード（SLE）]]></target>
+      </trans-unit>
+      <trans-unit id="158" approved="yes">
+        <source><![CDATA[download.sle.title]]></source>
+        <target><![CDATA[ダウンロード - SLE]]></target>
+      </trans-unit>
+      <trans-unit id="159" approved="yes">
+        <source><![CDATA[download.solaris.page.title]]></source>
+        <target><![CDATA[MediaInfo - MediaInfo ダウンロード（Solaris）]]></target>
+      </trans-unit>
+      <trans-unit id="160" approved="yes">
+        <source><![CDATA[download.solaris.title]]></source>
+        <target><![CDATA[ダウンロード - Solaris]]></target>
+      </trans-unit>
+      <trans-unit id="download.javascript.page.title" approved="yes">
+        <source><![CDATA[download.javascript.page.title]]></source>
+        <target><![CDATA[MediaInfo - MediaInfo ダウンロード（JavaScriptモジュール）]]></target>
+      </trans-unit>
+      <trans-unit id="download.javascript.title" approved="yes">
+        <source><![CDATA[download.javascript.title]]></source>
+        <target><![CDATA[ダウンロード - JavaScriptモジュール]]></target>
+      </trans-unit>
+      <trans-unit id="161" approved="yes">
+        <source><![CDATA[download.source.page.title]]></source>
+        <target><![CDATA[MediaInfo - MediaInfo ダウンロード（ソースコード）]]></target>
+      </trans-unit>
+      <trans-unit id="162" approved="yes">
+        <source><![CDATA[download.source.title]]></source>
+        <target><![CDATA[ダウンロード - ソースコード]]></target>
+      </trans-unit>
+      <trans-unit id="163" approved="yes">
+        <source><![CDATA[download.snapshots.page.title]]></source>
+        <target><![CDATA[MediaInfo - MediaInfo ダウンロード（スナップショット）]]></target>
+      </trans-unit>
+      <trans-unit id="164" approved="yes">
+        <source><![CDATA[download.snapshots.title]]></source>
+        <target><![CDATA[ダウンロード - スナップショット]]></target>
+      </trans-unit>
+      <trans-unit id="165" approved="yes">
+        <source><![CDATA[download.ubuntu.page.title]]></source>
+        <target><![CDATA[MediaInfo - MediaInfo ダウンロード（Ubuntu、Kubuntu、Xubuntuなど／Linux Mint）]]></target>
+      </trans-unit>
+      <trans-unit id="166" approved="yes">
+        <source><![CDATA[download.ubuntu.title]]></source>
+        <target><![CDATA[ダウンロード - Ubuntu（Ubuntu、Kubuntu、Xubuntuなど）および Linux Mint]]></target>
+      </trans-unit>
+      <trans-unit id="167" approved="yes">
+        <source><![CDATA[download.windows.page.title]]></source>
+        <target><![CDATA[MediaInfo - MediaInfo ダウンロード（Microsoft Windows）]]></target>
+      </trans-unit>
+      <trans-unit id="168" approved="yes">
+        <source><![CDATA[download.windows.title]]></source>
+        <target><![CDATA[ダウンロード - Microsoft Windows]]></target>
+      </trans-unit>
+      <trans-unit id="169" approved="yes">
+        <source><![CDATA[screenshots.page.title]]></source>
+        <target><![CDATA[MediaInfo - スクリーンショット]]></target>
+      </trans-unit>
+      <trans-unit id="170" approved="yes">
+        <source><![CDATA[screenshots.title]]></source>
+        <target><![CDATA[スクリーンショット]]></target>
+      </trans-unit>
+      <trans-unit id="171" approved="yes">
+        <source><![CDATA[donate.page.title]]></source>
+        <target><![CDATA[MediaInfo - MediaInfoへの寄付]]></target>
+      </trans-unit>
+      <trans-unit id="172" approved="yes">
+        <source><![CDATA[donate.title]]></source>
+        <target><![CDATA[MediaInfoへのご寄付のお願い]]></target>
+      </trans-unit>
+      <trans-unit id="173" approved="yes">
+        <source><![CDATA[donate.why.title]]></source>
+        <target><![CDATA[MediaInfoはフリーソフトウェアなのに、なぜ寄付が必要なのですか？]]></target>
+      </trans-unit>
+      <trans-unit id="174" approved="yes">
+        <source><![CDATA[donate.why.content]]></source>
+        <target><![CDATA[MediaInfoはフリーウェアであるため、販売収入やその他の収益がありません。
+そのため、皆様からのご寄付は作者を励まし、プロジェクトの開発を継続できるようにする最良の手段となります。<br/>
+MediaInfoの開発をフルタイムで継続していくためには皆様のご支援が必要であり、温かいご助力に心より感謝いたします。]]></target>
+      </trans-unit>
+      <trans-unit id="175" approved="yes">
+        <source><![CDATA[donate.paypal.title]]></source>
+        <target><![CDATA[クレジットカードまたはPayPal経由]]></target>
+      </trans-unit>
+      <trans-unit id="176" approved="yes">
+        <source><![CDATA[donate.paypal.content]]></source>
+        <target><![CDATA[クレジットカードまたはPayPalでのご寄付は、1回限りの単発、または月額の定期支援からお選びいただけます。<br/>
+下記よりご希望の方法をお選びください。]]></target>
+      </trans-unit>
+      <trans-unit id="donate.location_currency" approved="yes">
+        <source><![CDATA[donate.location_currency]]></source>
+        <target><![CDATA[現在地は「%country%」として判定されており、お支払いは「%currency%」で行われます。判定が正しくない場合は<a href="%contact%">お問い合わせ</a>ください。]]></target>
+      </trans-unit>
+      <trans-unit id="donate.not_logged_in" approved="yes">
+        <source><![CDATA[donate.not_logged_in]]></source>
+        <target><![CDATA[現在ログインしていません。このままでは寄付者向けの限定機能（広告非表示など）や新機能をご利用いただけず、請求書（領収書）も発行されません。<a href="%login%">ログイン</a>または<a href="%register%">新規登録</a>を行ってください。]]></target>
+      </trans-unit>
+      <trans-unit id="177" approved="yes">
+        <source><![CDATA[donate.flattr.title]]></source>
+        <target><![CDATA[Flattr経由]]></target>
+      </trans-unit>
+      <trans-unit id="178" approved="yes">
+        <source><![CDATA[donate.liberapay.title]]></source>
+        <target><![CDATA[Liberapay経由]]></target>
+      </trans-unit>
+      <trans-unit id="179" approved="yes">
+        <source><![CDATA[donate.patreon.title]]></source>
+        <target><![CDATA[Patreonでのご支援]]></target>
+      </trans-unit>
+      <trans-unit id="180" approved="yes">
+        <source><![CDATA[donate.bank.title]]></source>
+        <target><![CDATA[銀行振込経由（<a href="https://en.wikipedia.org/wiki/Eurozone" target="_blank">ユーロ圏</a>のみ）]]></target>
+      </trans-unit>
+      <trans-unit id="181" approved="yes">
+        <source><![CDATA[donate.bank.content]]></source>
+        <target><![CDATA[ユーロ圏内からは銀行振込によるご寄付が可能です。
+<br/>振込先口座情報 -
+<div><div class="address">
+名義：Jérôme Martinez<br/>
+IBAN：FR76 3000 3038 4500 0502 5346 889<br/>
+BIC/SWIFT：SOGEFRPP<br/>
+</div><div/>
+振込時の摘要（備考）欄に、ご自身のメールアドレスを忘れずにご記入ください！]]></target>
+      </trans-unit>
+      <trans-unit id="182" approved="yes">
+        <source><![CDATA[donate.other.title]]></source>
+        <target><![CDATA[金銭的な余裕がありませんか？ポケットには指しか入っていませんか？それでも貢献する方法があります！ ;-)]]></target>
+      </trans-unit>
+      <trans-unit id="183" approved="yes">
+        <source><![CDATA[donate.other.content]]></source>
+        <target><![CDATA[金銭的なご支援以外にも、以下のような活動を通じてMediaInfoプロジェクトへ有意義にご参加いただけます：
+<ul>
+    <li>MediaInfo本体を母国語へ翻訳する、または既存の翻訳を改善する</li>
+    <li>このウェブサイトを母国語へ翻訳する、または既存の翻訳を改善する</li>
+    <li>MediaInfoの出力用に美しいHTMLテンプレートを作成する</li>
+    <li>MediaInfo用の美しいアイコンを作成する</li>
+    <li>MediaInfoでうまく処理できないマルチメディアファイルを送付する</li>
+    <li>マルチメディアコンテナの仕様・フォーマット情報を送付する（より適切な実装が可能になります）</li>
+    <li>便利な機能をプログラミングする（最新のSVN版をご利用ください）。MediaInfoはC++で書かれています</li>
+    <li>現在未対応のプラットフォーム（Linux、Win64など）への対応を支援する</li>
+    <li>その他、何かアイデアはありませんか？</li>
+</ul>
+どのような形でも貢献にご興味がございましたら、遠慮なく<a href="%contact%">お問い合わせ</a>ください！]]></target>
+      </trans-unit>
+      <trans-unit id="184" approved="yes">
+        <source><![CDATA[paypal.donation]]></source>
+        <target><![CDATA[MediaInfoへの寄付]]></target>
+      </trans-unit>
+      <trans-unit id="185" approved="yes">
+        <source><![CDATA[paypal.submit.alt]]></source>
+        <target><![CDATA[PayPal - より安全で簡単なオンライン決済！]]></target>
+      </trans-unit>
+      <trans-unit id="186" approved="yes">
+        <source><![CDATA[paypal.subscribe.or]]></source>
+        <target><![CDATA[または]]></target>
+      </trans-unit>
+      <trans-unit id="187" approved="yes">
+        <source><![CDATA[paypal.subscribe.month]]></source>
+        <target><![CDATA[月]]></target>
+      </trans-unit>
+      <trans-unit id="188" approved="yes">
+        <source><![CDATA[testimonials.page.title]]></source>
+        <target><![CDATA[MediaInfo - 導入実績・利用者の声]]></target>
+      </trans-unit>
+      <trans-unit id="189" approved="yes">
+        <source><![CDATA[testimonials.title]]></source>
+        <target><![CDATA[MediaInfoをご利用の皆様]]></target>
+      </trans-unit>
+      <trans-unit id="190" approved="yes">
+        <source><![CDATA[testimonials.technology.title]]></source>
+        <target><![CDATA[テクノロジー]]></target>
+      </trans-unit>
+      <trans-unit id="191" approved="yes">
+        <source><![CDATA[testimonials.broadcasting.title]]></source>
+        <target><![CDATA[放送]]></target>
+      </trans-unit>
+      <trans-unit id="192" approved="yes">
+        <source><![CDATA[testimonials.libraries.title]]></source>
+        <target><![CDATA[図書館・博物館]]></target>
+      </trans-unit>
+      <trans-unit id="193" approved="yes">
+        <source><![CDATA[testimonials.education.title]]></source>
+        <target><![CDATA[教育]]></target>
+      </trans-unit>
+      <trans-unit id="194" approved="yes">
+        <source><![CDATA[testimonials.other.title]]></source>
+        <target><![CDATA[その他のMediaInfoユーザー]]></target>
+      </trans-unit>
+      <trans-unit id="195" approved="yes">
+        <source><![CDATA[license.page.title]]></source>
+        <target><![CDATA[MediaInfo - MediaInfo(Lib) ライセンス]]></target>
+      </trans-unit>
+      <trans-unit id="196" approved="yes">
+        <source><![CDATA[license.title]]></source>
+        <target><![CDATA[MediaInfo(Lib) ライセンス]]></target>
+      </trans-unit>
+      <trans-unit id="197" approved="yes">
+        <source><![CDATA[prices.page.title]]></source>
+        <target><![CDATA[MediaInfo - 料金]]></target>
+      </trans-unit>
+      <trans-unit id="198" approved="yes">
+        <source><![CDATA[prices.title]]></source>
+        <target><![CDATA[MediaInfoの開発およびサポート料金]]></target>
+      </trans-unit>
+      <trans-unit id="199" approved="yes">
+        <source><![CDATA[repos.page.title]]></source>
+        <target><![CDATA[MediaInfo - リポジトリ]]></target>
+      </trans-unit>
+      <trans-unit id="200" approved="yes">
+        <source><![CDATA[repos.title]]></source>
+        <target><![CDATA[ソフトウェアリポジトリ]]></target>
+      </trans-unit>
+      <trans-unit id="201" approved="yes">
+        <source><![CDATA[divx.page.title]]></source>
+        <target><![CDATA[MediaInfo - コーデックID - DIVX]]></target>
+      </trans-unit>
+      <trans-unit id="202" approved="yes">
+        <source><![CDATA[divx.title]]></source>
+        <target><![CDATA[DIVXコーデック識別子：DivX]]></target>
+      </trans-unit>
+      <trans-unit id="203" approved="yes">
+        <source><![CDATA[dx50.page.title]]></source>
+        <target><![CDATA[MediaInfo - コーデックID - DX50]]></target>
+      </trans-unit>
+      <trans-unit id="204" approved="yes">
+        <source><![CDATA[dx50.title]]></source>
+        <target><![CDATA[DX50コーデック識別子：DivX]]></target>
+      </trans-unit>
+      <trans-unit id="205" approved="yes">
+        <source><![CDATA[xvid.page.title]]></source>
+        <target><![CDATA[MediaInfo - コーデックID - XVID]]></target>
+      </trans-unit>
+      <trans-unit id="206" approved="yes">
+        <source><![CDATA[xvid.title]]></source>
+        <target><![CDATA[XVIDコーデック識別子：XviD]]></target>
+      </trans-unit>
+      <trans-unit id="207" approved="yes">
+        <source><![CDATA[about.download.button.text]]></source>
+        <target><![CDATA[MediaInfoをダウンロード]]></target>
+      </trans-unit>
+      <trans-unit id="208" approved="yes">
         <source><![CDATA[about.download.version]]></source>
         <target><![CDATA[バージョン]]></target>
       </trans-unit>
-      <trans-unit id="12" approved="yes">
+      <trans-unit id="209" approved="yes">
         <source><![CDATA[about.download.installer]]></source>
-        <target><![CDATA[GUI グラフィカル ユーザー インターフェイス, インストーラ付き]]></target>
+        <target><![CDATA[インストーラー付きGUI版]]></target>
       </trans-unit>
-      <trans-unit id="13">
+      <trans-unit id="210" approved="yes">
         <source><![CDATA[about.download.for]]></source>
-        <target><![CDATA[]]></target>
+        <target><![CDATA[対象：]]></target>
       </trans-unit>
-      <trans-unit id="14" approved="yes">
+      <trans-unit id="211" approved="yes">
         <source><![CDATA[about.download.other]]></source>
-        <target><![CDATA[全てのバージョン (OS, インターフェイス...) は <a href="%downloadRoute%">こちら</a> へどうぞ]]></target>
+        <target><![CDATA[他のバージョン（パッケージ形式、OS、インターフェースなど）も<a href="%downloadRoute%">こちらから入手できます</a>]]></target>
       </trans-unit>
-      <trans-unit id="15" approved="yes">
+      <trans-unit id="212" approved="yes">
         <source><![CDATA[about.what.changelog]]></source>
-        <target><![CDATA[<a href="%changelogRoute%">モニター</a>]]></target>
+        <target><![CDATA[<a href="%changelogRoute%">更新履歴（チェンジログ）</a>を見る]]></target>
       </trans-unit>
-      <trans-unit id="16" approved="yes">
+      <trans-unit id="213" approved="yes">
         <source><![CDATA[about.what.donate]]></source>
-        <target><![CDATA[開発を加速させる <a href="%donateRoute%" class="alert-link">寄付</a> 歓迎いたします]]></target>
+        <target><![CDATA[今後の開発を支援するため、ぜひ<a href="%donateRoute%" class="alert-link">ご寄付</a>をお願いいたします]]></target>
+      </trans-unit>
+      <trans-unit id="228" approved="yes">
+        <source><![CDATA[about.download.bundled]]></source>
+        <target><![CDATA[（インストーラーにはソフトウェア配信ネットワークが同梱されています。<a href="%bundledRoute%">詳細はこちら</a>）]]></target>
+      </trans-unit>
+      <trans-unit id="about.download.otherOS" approved="yes">
+        <source><![CDATA[about.download.otherOS]]></source>
+        <target><![CDATA[その他のオペレーティングシステム]]></target>
+      </trans-unit>
+      <trans-unit id="mediainfoonline.page.title" approved="yes">
+        <source><![CDATA[mediainfoonline.page.title]]></source>
+        <target><![CDATA[MediaInfoOnline - ブラウザーで使えるMediaInfo]]></target>
+      </trans-unit>
+      <trans-unit id="mediainfoonline.page.description" approved="yes">
+        <source><![CDATA[mediainfoonline.page.description]]></source>
+        <target><![CDATA[MediaInfoOnlineは、お使いのコンピューターにソフトウェアをインストールすることなく、ブラウザー上でMediaInfoを利用できるオンラインファイル解析ツールです]]></target>
+      </trans-unit>
+      <trans-unit id="mediainfoonline.page.keywords" approved="yes">
+        <source><![CDATA[mediainfoonline.page.keywords]]></source>
+        <target><![CDATA[MediaInfoOnline MediaInfo オンライン ファイル解析 メタデータ パーサー ブラウザー]]></target>
+      </trans-unit>
+      <trans-unit id="mediainfoonline.title" approved="yes">
+        <source><![CDATA[mediainfoonline.title]]></source>
+        <target><![CDATA[MediaInfoOnline - ブラウザーで使えるMediaInfo！]]></target>
+      </trans-unit>
+      <trans-unit id="mediainfoonline.about" approved="yes">
+        <source><![CDATA[mediainfoonline.about]]></source>
+        <target><![CDATA[MediaInfoOnlineでは、お使いのコンピューターにソフトウェアをインストールすることなく、ブラウザー上でMediaInfoを利用できます。すべての処理はお客様の端末内で行われ、サーバーには一切アップロードされないため、情報は安全に保たれます。]]></target>
+      </trans-unit>
+      <trans-unit id="mediainfoonline.tp" approved="yes">
+        <source><![CDATA[mediainfoonline.tp]]></source>
+        <target><![CDATA[MediaInfoOnlineは現在テクノロジープレビュー版として提供されています。エラーが見つかった場合やご提案がある場合は、<a href="%contact%">お問い合わせ</a>ください。]]></target>
+      </trans-unit>
+      <trans-unit id="mediainfoonline.help" approved="yes">
+        <source><![CDATA[mediainfoonline.help]]></source>
+        <target><![CDATA[ファイルのメタデータを取得するには、下の枠内にファイルをドラッグ＆ドロップするだけで、数秒以内にMediaInfoのレポートが表示されます。]]></target>
+      </trans-unit>
+      <trans-unit id="mediainfoonline.loading" approved="yes">
+        <source><![CDATA[mediainfoonline.loading]]></source>
+        <target><![CDATA[<i class="glyphicon glyphicon-refresh glyphicon-spin"></i> MediaInfoを読み込んでいます。しばらくお待ちください...]]></target>
+      </trans-unit>
+      <trans-unit id="mediainfoonline.drop.help" approved="yes">
+        <source><![CDATA[mediainfoonline.drop.help]]></source>
+        <target><![CDATA[ここにファイルをドロップするか、下からファイルを選択してください。]]></target>
+      </trans-unit>
+      <trans-unit id="mediainfoonline.output" approved="yes">
+        <source><![CDATA[mediainfoonline.output]]></source>
+        <target><![CDATA[MediaInfoの出力形式を選択：]]></target>
+      </trans-unit>
+      <trans-unit id="mediainfoonline.analyzed.filename" approved="yes">
+        <source><![CDATA[mediainfoonline.analyzed.filename]]></source>
+        <target><![CDATA[MediaInfoレポート：]]></target>
+      </trans-unit>
+      <trans-unit id="mediainfoonline.report.download" approved="yes">
+        <source><![CDATA[mediainfoonline.report.download]]></source>
+        <target><![CDATA[MediaInfoレポートをダウンロード]]></target>
+      </trans-unit>
+      <trans-unit id="mediainfoonline.report.copy" approved="yes">
+        <source><![CDATA[mediainfoonline.report.copy]]></source>
+        <target><![CDATA[クリップボードにコピー]]></target>
+      </trans-unit>
+      <trans-unit id="mediainfoonline.report.copy.tooltip" approved="yes">
+        <source><![CDATA[mediainfoonline.report.copy.tooltip]]></source>
+        <target><![CDATA[クリップボードにコピーしました]]></target>
+      </trans-unit>
+      <trans-unit id="mediainfoonline.mediabin.panel.title" approved="yes">
+        <source><![CDATA[mediainfoonline.mediabin.panel.title]]></source>
+        <target><![CDATA[MediaBin - MediaInfoレポートを共有]]></target>
+      </trans-unit>
+      <trans-unit id="mediainfoonline.mediabin.panel.content" approved="yes">
+        <source><![CDATA[mediainfoonline.mediabin.panel.content]]></source>
+        <target><![CDATA[MediaBinを使用すると、MediaInfoレポートを共有できます。]]></target>
+      </trans-unit>
+      <trans-unit id="mediainfoonline.mediabin.user.not.login" approved="yes">
+        <source><![CDATA[mediainfoonline.mediabin.user.not.login]]></source>
+        <target><![CDATA[現在ログインしていません。すでにアカウントをお持ちの場合は<a href="%login%">ログイン</a>してください。そうでない場合はゲストユーザーが自動的に作成されます（<a href="%guest%">ゲストユーザーの詳細はこちら</a>）。]]></target>
+      </trans-unit>
+      <trans-unit id="mediacompare.page.title" approved="yes">
+        <source><![CDATA[mediacompare.page.title]]></source>
+        <target><![CDATA[MediaCompare - ブラウザー上で複数のファイルをMediaInfoで比較]]></target>
+      </trans-unit>
+      <trans-unit id="mediacompare.page.description" approved="yes">
+        <source><![CDATA[mediacompare.page.description]]></source>
+        <target><![CDATA[MediaCompareは、お使いのコンピューターにソフトウェアをインストールすることなく、ブラウザー上で複数のファイルをMediaInfoで比較できるオンラインファイル解析ツールです]]></target>
+      </trans-unit>
+      <trans-unit id="mediacompare.page.keywords" approved="yes">
+        <source><![CDATA[mediacompare.page.keywords]]></source>
+        <target><![CDATA[MediaCompare MediaInfoCompare MediaInfo 比較 ファイル比較 ファイル解析 メタデータ パーサー ブラウザー]]></target>
+      </trans-unit>
+      <trans-unit id="mediacompare.title" approved="yes">
+        <source><![CDATA[mediacompare.title]]></source>
+        <target><![CDATA[MediaCompare - 複数のファイルをMediaInfoで比較]]></target>
+      </trans-unit>
+      <trans-unit id="mediacompare.about" approved="yes">
+        <source><![CDATA[mediacompare.about]]></source>
+        <target><![CDATA[MediaCompareでは、お使いのコンピューターにソフトウェアをインストールすることなく、ブラウザー上で複数のファイルをMediaInfoで比較できます。すべての処理はお客様の端末内で行われ、サーバーには一切アップロードされないため、情報は安全に保たれます。]]></target>
+      </trans-unit>
+      <trans-unit id="mediacompare.drop.help" approved="yes">
+        <source><![CDATA[mediacompare.drop.help]]></source>
+        <target><![CDATA[ここにファイルをドロップするか、下からファイルを選択してください（1つまたは複数のファイルをドロップ・選択できます）。]]></target>
+      </trans-unit>
+      <trans-unit id="mediacompare.not_logged_in" approved="yes">
+        <source><![CDATA[mediacompare.not_logged_in]]></source>
+        <target><![CDATA[2つのファイルを比較できます。3つ以上のファイルを同時に比較する機能は<a href="%supportfaq%#membership">メンバー</a>限定です。すでにメンバーの方は<a href="%login%">ログイン</a>してください。メンバー登録をご希望の場合は<a href="%supportUs_individual%">料金プラン</a>をご覧ください。]]></target>
+      </trans-unit>
+      <trans-unit id="mediacompare.not_member" approved="yes">
+        <source><![CDATA[mediacompare.not_member]]></source>
+        <target><![CDATA[2つのファイルを比較できます。3つ以上のファイルを同時に比較する機能は<a href="%supportfaq%#membership">メンバー</a>限定です。メンバー登録をご希望の場合は<a href="%supportUs_individual%">料金プラン</a>をご覧ください。]]></target>
+      </trans-unit>
+      <trans-unit id="mediacompare.display.filter.all" approved="yes">
+        <source><![CDATA[mediacompare.display.filter.all]]></source>
+        <target><![CDATA[すべての項目を表示]]></target>
+      </trans-unit>
+      <trans-unit id="mediacompare.display.filter.diff" approved="yes">
+        <source><![CDATA[mediacompare.display.filter.diff]]></source>
+        <target><![CDATA[相違がある項目のみ表示]]></target>
+      </trans-unit>
+      <trans-unit id="mediacompare.display.filter.match" approved="yes">
+        <source><![CDATA[mediacompare.display.filter.match]]></source>
+        <target><![CDATA[一致する項目のみ表示]]></target>
+      </trans-unit>
+      <trans-unit id="support.faq.general.SupportLifecycle.title" approved="yes">
+        <source><![CDATA[support.faq.general.SupportLifecycle.title]]></source>
+        <target><![CDATA[サポートのライフサイクル]]></target>
+      </trans-unit>
+      <trans-unit id="support.faq.general.SupportLifecycle.content" approved="yes">
+        <source><![CDATA[support.faq.general.SupportLifecycle.content]]></source>
+        <target><![CDATA[無償サポートでは、ウェブサイト上で提供されている最新リリースのみがサポート対象となります。すなわち、新しいバージョンが公開された日をもって、それ以前のリリースはサポート終了（End of Life）となります。そのため、特定の不具合の修正を必要とされる場合は、該当する修正が含まれた最新リリースが公開され次第、そちらへアップデートしていただくようご案内しております。<br/>
+これとは異なるサポート終了日の設定や、以前のリリースへの修正のバックポートをご希望の場合は、お見積りいたしますので遠慮なく<a href="%contact%">お問い合わせ</a>ください。]]></target>
       </trans-unit>
     </body>
   </file>
